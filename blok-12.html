@@ -1,49 +1,98 @@
-<!DOCTYPE html><html lang="pl"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Blok 12. Każ komputerowi zrobić to za ciebie</title><link rel="stylesheet" href="style.css"></head><body>
-<header class="top"><a class="brand" href="index.html">Informatyka 2026/2027</a><nav><a href="index.html">Bloki</a><a href="plan.html">Plan roku</a><a href="podstawa.html">Podstawa programowa</a><a href="ocenianie.html">Ocenianie</a><a href="jak-uczyc.html">Jak to prowadzić</a></nav></header>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Przewodnik po bloku 12. Programowanie w Pythonie: od pierwszej linijki kodu, przez pętle, po szyfrowanie wiadomości.">
+    <title>Blok 12. Każ komputerowi zrobić to za ciebie — Informatyka 2026/2027</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+    <a class="brand" href="index.html">Informatyka 2026/2027</a>
+    <nav><a href="index.html" class="active">Bloki</a><a href="plan.html">Plan roku</a><a href="podstawa.html">Podstawa</a><a href="ocenianie.html">Ocenianie</a><a href="jak-uczyc.html">Jak uczyć</a></nav>
+</header>
 <div class="wrap">
-<p style="margin:0"><a href="index.html">← wszystkie bloki</a></p>
-<h1>Blok 12. Każ komputerowi zrobić to za ciebie</h1>
-<div class="meta"><span class="pill">Klasa II</span><span class="pill">11 godzin</span>
-<span class="pill">lekcje 16–26</span><span class="pill">styczeń – kwiecień</span></div>
+    <div class="prevnext" style="margin-top:0; padding-top:0; border:none; margin-bottom: 24px;">
+        <a href="index.html">← Wszystkie bloki</a>
+    </div>
 
-<div class="box hook"><span class="lbl">Zaczynamy od</span>Ochotnik zostaje „robotem”: wykonuje dokładnie to, co mu klasa każe, bez domyślania się. Zadanie: przeprowadzić go od drzwi do tablicy. Robot zwykle wchodzi w ławkę, bo nikt nie powiedział „skręć”. Po trzech próbach klasa sama formułuje wniosek: komputer nie domyśla się niczego.</div>
-<div class="box why"><span class="lbl">Po co to uczniowi</span>Bo programowanie to nie zawód dla wybranych, tylko sposób myślenia: rozbić problem na kroki i sprawdzić, czy działa.</div>
-<div class="box fin"><span class="lbl">Na koniec</span><b>To działa.</b> Każdy pokazuje swój program, ale nie sam go uruchamia — robi to kolega, na swoich danych. Program, który działa tylko u autora i tylko na jednym zestawie liczb, nie zalicza się.</div>
+    <h1>Blok 12. Każ komputerowi zrobić to za ciebie</h1>
+    <p class="lead">Programowanie to nie sztuka dla hakerów. To sposób myślenia, w którym rozbijasz duży problem na bardzo małe, wręcz prostackie kroki, i każesz je wykonać maszynie. Poznasz podstawy języka Python, dzięki czemu napiszesz program, który podejmie za Ciebie decyzję lub zabezpieczy plik.</p>
 
-<h2>Wymagania podstawy programowej realizowane w tym bloku</h2>
-<table><thead><tr><th>Kod</th><th>Treść wymagania (zakres podstawowy)</th></tr></thead><tbody><tr><td style="width:70px"><code class="kod">II.1</code></td><td>Projektuje i programuje rozwiązania problemów z różnych dziedzin, stosując instrukcje wejścia/wyjścia, wyrażenia arytmetyczne i logiczne, instrukcje warunkowe, instrukcje iteracyjne, funkcje z parametrami i bez parametrów; testuje poprawność programów dla różnych danych.</td></tr><tr><td style="width:70px"><code class="kod">II.2</code></td><td>Do realizacji rozwiązań problemów prawidłowo dobiera środowiska informatyczne, aplikacje oraz zasoby, wykorzystuje również elementy robotyki.</td></tr><tr><td style="width:70px"><code class="kod">I.1</code></td><td>Planuje kolejne kroki rozwiązywania problemu, z uwzględnieniem podstawowych etapów myślenia komputacyjnego: określenie problemu, definicja modeli i pojęć, znalezienie rozwiązania, zaprogramowanie i testowanie rozwiązania.</td></tr><tr><td style="width:70px"><code class="kod">I.2a</code></td><td>Stosuje algorytmy na liczbach: badanie pierwszości liczby, zamiana reprezentacji liczb między pozycyjnymi systemami liczbowymi, działania na ułamkach z wykorzystaniem NWD i NWW.</td></tr><tr><td style="width:70px"><code class="kod">I.2b</code></td><td>Stosuje algorytmy na tekstach: porównywanie tekstów, wyszukiwanie wzorca w tekście metodą naiwną, szyfrowanie tekstu metodą Cezara.</td></tr><tr><td style="width:70px"><code class="kod">I.2c</code></td><td>Stosuje algorytmy porządkowania ciągu liczb przez wstawianie i metodą bąbelkową.</td></tr><tr><td style="width:70px"><code class="kod">I.2d</code></td><td>Oblicza wartości elementów ciągu metodą iteracyjną, w tym wartości elementów ciągu Fibonacciego.</td></tr><tr><td style="width:70px"><code class="kod">I.3</code></td><td>Sprawdza poprawność działania algorytmów dla przykładowych danych.</td></tr><tr><td style="width:70px"><code class="kod">V.3</code></td><td>Stosuje dobre praktyki w zakresie ochrony informacji wrażliwych (np. hasła, PIN), danych i bezpieczeństwa systemu operacyjnego, objaśnia rolę szyfrowania informacji.</td></tr><tr><td style="width:70px"><code class="kod">IV.1</code></td><td>Aktywnie uczestniczy w realizacji projektów rozwiązujących problemy z różnych dziedzin.</td></tr></tbody></table>
+    <div class="meta">
+        <span class="pill">Klasa II</span>
+        <span class="pill">11 godzin</span>
+        <span class="pill">Lekcje 16–26</span>
+        <span class="pill">Styczeń – Kwiecień</span>
+    </div>
 
-<h2>Z jaką wiedzą uczeń ma się zderzyć</h2>
-<ul><li>Algorytm jako skończona lista jednoznacznych kroków; specyfikacja: dane wejściowe, wynik, warunki.</li><li>Schemat blokowy: bloki startu i końca, operacji, decyzji, wejścia i wyjścia.</li><li>Zmienna i typ danych; dlaczego wczytana wartość jest tekstem i trzeba ją zamienić na liczbę.</li><li>Operatory arytmetyczne i porównania; kolejność wykonywania działań.</li><li>Instrukcja warunkowa z wieloma gałęziami; wyrażenia logiczne i, lub, nie.</li><li>Pętla o znanej liczbie powtórzeń i pętla warunkowa; licznik; pętla nieskończona i sposób jej przerwania.</li><li>Lista: indeksowanie od zera, długość, suma, wartość największa.</li><li>Funkcja: definicja, parametry, wartość zwracana; po co dzielić program na funkcje.</li><li>Pozycyjne systemy liczbowe: zapis dwójkowy i zamiana na dziesiętny oraz z powrotem; dlaczego komputer używa dwóch stanów.</li><li>Badanie pierwszości liczby i szukanie dzielników.</li><li>Porównywanie tekstów i wyszukiwanie wzorca w tekście metodą naiwną.</li><li>Szyfr Cezara: szyfrowanie, deszyfrowanie i łamanie metodą sprawdzenia wszystkich przesunięć; dlaczego to szyfr słaby.</li><li>Sortowanie bąbelkowe i przez wstawianie — na poziomie zrozumienia mechanizmu.</li><li>Ciąg obliczany iteracyjnie, w tym ciąg Fibonacciego.</li><li>Testowanie: dane typowe, brzegowe i błędne; czym jest debugowanie.</li><li>Dobór narzędzia do problemu: kiedy wystarczy arkusz, a kiedy potrzebny jest program.</li></ul>
+    <div class="two">
+        <div class="box hook">
+            <span class="lbl">Dla nauczyciela: Zaczynamy od</span>
+            Ochotnik zostaje z zamkniętymi oczami "robotem", a klasa steruje nim od drzwi pod tablicę. Robot wpada na ławkę, bo kazali mu "iść", a zapomnieli o komendzie "obróć". Wniosek sam wypływa: komputer nie ma wyobraźni i o niczym się nie domyśli.
+        </div>
+        <div class="box why">
+            <span class="lbl">Dla nauczyciela: Po co to uczniowi</span>
+            Bo niezależnie od tego kim zostaniesz, zdolność analitycznego podzielenia pracy na instrukcje (Algorytmy) rozwiązuje najwięcej życiowych problemów.
+        </div>
+    </div>
 
-<h2>Co uczeń ma umieć po tym bloku</h2>
-<ul><li>Umiem rozpisać zadanie na kroki tak dokładne, żeby wykonał je ktoś bez wyobraźni.</li><li>Umiem napisać program, który pyta i odpowiada.</li><li>Umiem sprawić, żeby program zachował się różnie w różnych sytuacjach.</li><li>Umiem kazać programowi powtórzyć czynność bez przepisywania kodu.</li><li>Umiem policzyć sumę, średnią i największą wartość ze zbioru.</li><li>Umiem nazwać fragment programu i użyć go wiele razy.</li><li>Umiem zamienić liczbę na system dwójkowy i wiem, po co to komu.</li><li>Umiem wyjaśnić, jak komputer porządkuje dane i szuka w nich słowa.</li><li>Umiem zaszyfrować wiadomość i złamać cudzy szyfr.</li><li>Umiem dobrać dane testowe i znaleźć błąd w programie.</li><li>Potrafię pokazać działający program i wyjaśnić, co robi.</li></ul>
+    <h2>Krok 1: Rozmawiaj z maszyną</h2>
+    <div class="step-card">
+        <h3><span class="step-number">1</span> Print i Input</h3>
+        <p class="instruction-text">
+            Napiszmy program, który zapyta użytkownika o imię i się przywita. Będziemy używać języka <strong>Python</strong> (np. na stronie Replit.com lub w programie Thonny). Programowanie w Pythonie opiera się na angielskich słowach i matematyce.
+        </p>
+        <div class="warn">
+            <strong>Błąd nowicjusza:</strong> Funkcja <code>input()</code> zawsze zapisuje to co wpiszesz jako "tekst". Jeśli wpiszesz liczbę "5" to dla Pythona jest to słowo. By mógł na nim liczyć, musisz użyć konwersji używając <code>int()</code> (od ang. integer - liczba całkowita).
+        </div>
+        <ol class="zad">
+            <li>Napisz kod pytający o imię: <code>imie = input("Jak masz na imię? ")</code></li>
+            <li>Wypisz powitanie: <code>print("Witaj", imie)</code></li>
+            <li>Spróbuj napisać mini kalkulator (pytający o 2 liczby, konwertujący je przez <code>int()</code> i wypisujący wynik mnożenia).</li>
+        </ol>
+    </div>
 
-<h2>Przebieg lekcja po lekcji</h2>
-<p class="note">Kolumna „Praca”: I — indywidualnie · P — w parach · G — w grupie · K — cała klasa.</p>
-<table><thead><tr><th style="width:38px">Nr</th><th style="width:24%">Temat i cel lekcji</th><th style="width:22%">Co przekazuje nauczyciel</th><th style="width:24%">Co robią uczniowie</th><th style="width:52px">Praca</th><th style="width:16%">Narzędzie · dowód</th></tr></thead><tbody><tr><td class='n'>16</td><td><b>HACZYK: instrukcja dla kogoś, kto nie myśli</b><br><span class='note'>Umiem rozpisać zadanie na kroki tak dokładne, żeby wykonał je ktoś bez wyobraźni.</span></td><td>Niech „robot” wykonuje polecenia dosłownie. Wejście w ławkę jest częścią lekcji.</td><td><b>Obie klasy:</b> Gra: kierujemy „robotem” (kolegą) po klasie samymi poleceniami</td><td class='w'>G</td><td>Kartka / draw.io · Lista kroków + schemat blokowy<br></td></tr><tr><td class='n'>17</td><td><b>Pierwszy program</b><br><span class='note'>Umiem napisać program, który pyta i odpowiada.</span></td><td>input() zwraca tekst. To pierwszy błąd, który popełnią wszyscy.</td><td><b>Obie klasy:</b> Program pyta o dane i coś liczy</td><td class='w'>I</td><td>Thonny / Replit · Działający program<br></td></tr><tr><td class='n'>18</td><td><b>Program podejmuje decyzję</b><br><span class='note'>Umiem sprawić, żeby program zachował się różnie w różnych sytuacjach.</span></td><td>Warunek zapisujemy najpierw po polsku, dopiero potem w kodzie.</td><td><b>Fryzjerzy:</b> Czy można wykonać zabieg: wiek i brak przeciwwskazań<br><b>Handlowcy:</b> Czy przysługuje rabat: próg wartości zamówienia</td><td class='w'>I</td><td>Thonny · Program z if i else<br><span class="tag" style="background:#fff3d6;color:#8a6d1f">KROK MILOWY</span></td></tr><tr><td class='n'>19</td><td><b>Powtarzanie: pętla</b><br><span class='note'>Umiem kazać programowi powtórzyć czynność bez przepisywania kodu.</span></td><td>Pętla nieskończona to nie awaria komputera. Pokaż, jak przerwać program.</td><td><b>Fryzjerzy:</b> 15 pozycji cennika po podwyżce o 5 procent<br><b>Handlowcy:</b> 15 produktów po rabacie</td><td class='w'>I</td><td>Thonny · Program z pętlą<br></td></tr><tr><td class='n'>20</td><td><b>Lista i statystyki</b><br><span class='note'>Umiem policzyć sumę, średnią i największą wartość ze zbioru.</span></td><td>Lista to jedna zmienna na wiele wartości. Indeksy liczymy od zera.</td><td><b>Obie klasy:</b> Utargi z siedmiu dni</td><td class='w'>I</td><td>Thonny · Program liczący statystyki<br></td></tr><tr><td class='n'>21</td><td><b>Własna funkcja; czym to zrobić</b><br><span class='note'>Umiem nazwać fragment programu i użyć go wiele razy.</span></td><td>Funkcja to nazwana czynność. Czasem lepszym narzędziem jest arkusz niż program — niech uzasadnią wybór.</td><td><b>Obie klasy:</b> Funkcja licz_koszt oraz decyzja: arkusz czy program? Pokaz sterowania w symulatorze</td><td class='w'>P</td><td>Thonny, MakeCode (symulator) · Program z własną funkcją<br><span class="tag" style="background:#fff3d6;color:#8a6d1f">KROK MILOWY</span></td></tr><tr><td class='n'>22</td><td><b>Jak komputer zapisuje liczby</b><br><span class='note'>Umiem zamienić liczbę na system dwójkowy i wiem, po co to komu.</span></td><td>Komputer nie ma dziesięciu palców, tylko dwa stany. Karty pokażą to lepiej niż wzór.</td><td><b>Obie klasy:</b> Karty 1-2-4-8-16 bez komputera, potem program zamieniający</td><td class='w'>G</td><td>Karty + Thonny · Zamiana 5 liczb w obie strony<br></td></tr><tr><td class='n'>23</td><td><b>Sortowanie i szukanie wzorca</b><br><span class='note'>Umiem wyjaśnić, jak komputer porządkuje dane i szuka w nich słowa.</span></td><td>Sortowanie zrób najpierw na ludziach. Dopiero potem kod ma sens.</td><td><b>Fryzjerzy:</b> Sortowanie „na ludziach”, potem kod; szukamy słowa w 50 opiniach klientek<br><b>Handlowcy:</b> Sortowanie produktów; szukamy słowa „reklamacja” w 50 opiniach</td><td class='w'>G</td><td>Karty + Thonny · Program sortujący i wyszukujący<br></td></tr><tr><td class='n'>24</td><td><b>Szyfr, który złamiesz</b><br><span class='note'>Umiem zaszyfrować wiadomość i złamać cudzy szyfr.</span></td><td>Szyfr Cezara jest słaby, bo ma 25 możliwości. To wstęp do rozmowy o prawdziwym szyfrowaniu.</td><td><b>Obie klasy:</b> Szyfrujemy wiadomości do siebie, potem je łamiemy metodą siłową</td><td class='w'>P</td><td>Thonny · Dwa programy + złamany szyfr kolegi<br></td></tr><tr><td class='n'>25</td><td><b>Znajdź błąd</b><br><span class='note'>Umiem dobrać dane testowe i znaleźć błąd w programie.</span></td><td>Testujemy na danych typowych, brzegowych i błędnych. Pokaż, jak wygląda każdy przypadek.</td><td><b>Obie klasy:</b> Testujemy program kolegi na danych brzegowych i błędnych</td><td class='w'>P</td><td>Thonny, Python Tutor · Tabela 5 testów<br></td></tr><tr><td class='n'>26</td><td><b>FINAŁ: to działa</b><br><span class='note'>Potrafię pokazać działający program i wyjaśnić, co robi.</span></td><td>Program działa dopiero wtedy, gdy uruchomi go ktoś inny na swoich danych.</td><td><b>Obie klasy:</b> Pokaz programów; kolega uruchamia twój na swoich danych</td><td class='w'>K</td><td>Thonny · Program + tabela testów<br><span class="tag" style="background:#fbe5e5;color:#c0392b;font-weight:700">OCENA 4</span></td></tr></tbody></table>
+    <h2>Krok 2: Decyzje i Pętle</h2>
+    <div class="step-card">
+        <h3><span class="step-number">2</span> IF oraz FOR</h3>
+        <p class="instruction-text">
+            Chcemy, by program "pomyślał". Instrukcja Warunkowa <code>if / else</code> sprawdza matematycznie, czy coś jest prawdą. Jeśli tak, robi X, w przeciwnym razie robi Y. Pętla <code>for</code> z kolei pozwala wykonać ten sam nudny kod 100 razy z rzędu.
+        </p>
+        <ol class="zad">
+            <li>Napisz program sprawdzający wiek: Zapytaj użytkownika o to, ile ma lat.</li>
+            <li>Użyj instrukcji <code>if wiek >= 18:</code> by wypisać "Możesz wejść", oraz <code>else:</code> z wypisaniem "Zakaz wstępu". (Uwaga na <strong>wcięcia</strong> tekstu pod IF!).</li>
+            <li>Stwórz pętlę <code>for i in range(10):</code> i wypisz 10 razy "Zrobię zadanie domowe". <span class="tag milestone">KROK MILOWY</span></li>
+        </ol>
+    </div>
 
-<h2>Zadania dla uczniów</h2>
-<p class="note">Polecenia gotowe do skopiowania na platformę albo do wyświetlenia na tablicy.</p>
-<ul class="zad"><li>Rozpisz w punktach, jak przeprowadzić kogoś od drzwi do tablicy. Polecenia muszą być jednoznaczne. Narysuj schemat blokowy z jedną decyzją.</li><li>Napisz program, który pyta o dwie liczby i wypisuje ich iloczyn. Sprawdź, co się stanie, gdy wpiszesz literę.</li><li>Napisz program, który na podstawie podanych danych decyduje, czy warunek jest spełniony, i wypisuje różne komunikaty w obu przypadkach.</li><li>Napisz program, który wypisuje piętnaście pozycji cennika po zmianie ceny — używając pętli, nie piętnastu linii.</li><li>Zapisz siedem wartości w liście. Policz sumę, średnią i największą wartość.</li><li>Wydziel powtarzający się fragment programu do własnej funkcji z parametrem. Użyj jej trzy razy.</li><li>Zamień pięć liczb dziesiętnych na dwójkowe ręcznie, kartami. Potem napisz program, który robi to samo.</li><li>Napisz program szukający słowa w tekście i zwracający pozycje wystąpień. Przetestuj go na pięćdziesięciu opiniach klientów.</li><li>Napisz program szyfrujący i deszyfrujący szyfrem Cezara. Zaszyfruj wiadomość dla kolegi. Złam szyfr, który dostałeś od niego.</li><li>Przygotuj tabelę pięciu testów swojego programu: dane wejściowe, oczekiwany wynik, wynik rzeczywisty, ocena.</li><li>FINAŁ: oddaj program koledze. Niech uruchomi go na swoich danych. Zapisz, co się zepsuło.</li></ul>
+    <h2>Krok 3: Szyfrowanie Danych</h2>
+    <div class="step-card">
+        <h3><span class="step-number">3</span> Szyfr Cezara</h3>
+        <p class="instruction-text">
+            Szyfr Cezara przesuwa literę alfabetu o zadaną wartość (np. A staje się D przy przesunięciu o 3). Jak napisać kod, który podmieni każde słowo w tajnej wiadomości?
+        </p>
+        <ol class="zad">
+            <li>W klasie (bez komputerów) stwórzcie krótką tajną wiadomość używając szyfru cezara, gdzie kluczem jest przesunięcie (np. klucz=3).</li>
+            <li>Spróbujcie z nauczycielem napisać program w Pythonie, do którego wrzucicie "zakodowaną wiadomość", a pętla (for) podmieni litery za pomocą wbudowanych w Pythona kodów ASCII (korzystając z funkcji <code>chr()</code> i <code>ord()</code>).</li>
+        </ol>
+    </div>
 
-<h2>Przygotuj przed blokiem</h2>
-<ul><li>Środowisko Pythona na wszystkich stanowiskach (lokalne albo w przeglądarce) — sprawdzone tydzień wcześniej.</li><li>Karty z liczbami 1, 2, 4, 8, 16 dla każdej grupy — lekcja o systemie dwójkowym jest bez komputera.</li><li>Plik z pięćdziesięcioma opiniami klientów do wyszukiwania wzorca.</li><li>Szkielety kodu z komentarzami „tu wpisz” dla każdego zadania programistycznego.</li><li>Wizualizator wykonania programu krok po kroku — bardzo pomaga przy pętlach.</li></ul>
+    <div class="box fin">
+        <span class="lbl">Finał bloku: Program "U mnie działa"</span>
+        <p>Twoim zadaniem jest stworzenie finalnego programu rozwiązującego prosty problem (np. Wyszukiwarka brzydkich słów w tekście klienta, Kalkulator podwyżek dla 10 produktów z użyciem pętli). Co najważniejsze - do programu musisz dołączyć <strong>Tabelę Testów</strong> (gdzie celowo wpisałeś błędne dane - literę zamiast liczby i przewidziałeś jak program ma się zachować).</p>
+        <p>Na finale zamieniacie się miejscami w klasie. Jeśli Twój program wywali się (Crash) pod rękami innej osoby, test jest niezaliczony! "U mnie działało" nie jest dla szefa żadnym tłumaczeniem. <span class="tag grade">OCENA 4</span></p>
+    </div>
 
-<h2>Kryteria sukcesu finału</h2><div class="ok"><ul><li>Program zawiera co najmniej jeden warunek, jedną pętlę i jedną własną funkcję.</li><li>Do programu dołączona jest tabela pięciu testów z oczekiwanym i rzeczywistym wynikiem.</li><li>Program nie kończy się błędem po wpisaniu danych błędnych.</li><li>Program uruchomiony przez inną osobę na innych danych działa poprawnie.</li><li>Autor potrafi wskazać w kodzie miejsce odpowiedzialne za wybrane zachowanie programu.</li></ul></div>
-
-<h2>Różnicowanie</h2>
-<div class="two">
-<div class="card"><h3 style="margin-top:0">Dla uczniów, którzy potrzebują wsparcia</h3><ul><li>Szkielet kodu z komentarzami i jednym gotowym przykładem.</li><li>Programowanie w parach: jedna osoba pisze, druga czyta i pilnuje.</li><li>Wizualizacja wykonania programu krok po kroku dla pętli i warunków.</li><li>Lekcje o algorytmach realizowane najpierw bez komputera, na kartach.</li></ul></div>
-<div class="card"><h3 style="margin-top:0">Dla uczniów, którzy skończą wcześniej</h3><ul><li>Obsługa błędnych danych wejściowych bez przerywania programu.</li><li>Druga wersja tego samego algorytmu i porównanie liczby operacji.</li><li>Zaprogramowanie ciągu Fibonacciego i sprawdzenie, po którym wyrazie liczby stają się bardzo duże.</li><li>Sterowanie urządzeniem w symulatorze zamiast programu konsolowego.</li></ul></div>
+    <div class="prevnext">
+        <div><a href="blok-11.html">← Blok 11. Gdzie właściwie są te dane?</a></div>
+        <div><a href="blok-13.html">Blok 13. Co potrafisz? →</a></div>
+    </div>
 </div>
-
-<h2>Co zwykle idzie nie tak</h2>
-<div class="warn"><ul><li>Wcięcia w Pythonie. Włącz pokazywanie znaków białych i ustal jedną zasadę: cztery spacje, nigdy tabulator.</li><li>Wszyscy potkną się o to, że wczytana wartość jest tekstem. Zaplanuj to jako świadomy element lekcji, a nie awarię.</li><li>Blok trwa jedenaście godzin przy jednej lekcji tygodniowo, czyli prawie trzy miesiące. Na początku każdej lekcji zrób dwuminutowe przypomnienie poprzedniej — bez tego klasa się rozsypie.</li><li>Uczniowie kopiują kod z internetu. Kryterium „autor wskazuje miejsce w kodzie” rozwiązuje to bez konfrontacji.</li></ul></div>
-<div class="prevnext"><div><a href="blok-11.html">← Blok 11. Gdzie właściwie są te dane?</a></div><div><a href="blok-13.html">Blok 13. Co potrafisz? →</a></div></div>
-</div>
-<footer>Rozkład materiału — informatyka, zakres podstawowy, technikum · klasa I (60 h) i klasa II (30 h) · rok szkolny 2026/2027<br>
-Podstawa programowa: rozporządzenie MEN z 30.01.2018 (Dz.U. 2018 poz. 467) w brzmieniu nadanym rozporządzeniem z 28.06.2024 (Dz.U. 2024 poz. 1019).</footer>
-</body></html>
+<footer>
+    Rozkład materiału — informatyka, zakres podstawowy, technikum · klasa I (60 h) i klasa II (30 h) · rok szkolny 2026/2027<br>
+    Podstawa programowa: rozporządzenie MEN z 30.01.2018 (Dz.U. 2018 poz. 467) w brzmieniu nadanym rozporządzeniem z 28.06.2024 (Dz.U. 2024 poz. 1019).
+</footer>
+</body>
+</html>

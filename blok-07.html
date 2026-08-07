@@ -1,49 +1,117 @@
-<!DOCTYPE html><html lang="pl"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Blok 7. Twoja strona w internecie</title><link rel="stylesheet" href="style.css"></head><body>
-<header class="top"><a class="brand" href="index.html">Informatyka 2026/2027</a><nav><a href="index.html">Bloki</a><a href="plan.html">Plan roku</a><a href="podstawa.html">Podstawa programowa</a><a href="ocenianie.html">Ocenianie</a><a href="jak-uczyc.html">Jak to prowadzić</a></nav></header>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Przewodnik po bloku 7. Poznaj tajniki tworzenia stron WWW od zera – od HTML, przez CSS, aż po publikację projektu w prawdziwym internecie.">
+    <title>Blok 7. Twoja strona w internecie — Informatyka 2026/2027</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+    <a class="brand" href="index.html">Informatyka 2026/2027</a>
+    <nav><a href="index.html" class="active">Bloki</a><a href="plan.html">Plan roku</a><a href="podstawa.html">Podstawa</a><a href="ocenianie.html">Ocenianie</a><a href="jak-uczyc.html">Jak uczyć</a></nav>
+</header>
 <div class="wrap">
-<p style="margin:0"><a href="index.html">← wszystkie bloki</a></p>
-<h1>Blok 7. Twoja strona w internecie</h1>
-<div class="meta"><span class="pill">Klasa I</span><span class="pill">9 godzin</span>
-<span class="pill">lekcje 43–51</span><span class="pill">marzec – kwiecień</span></div>
+    <div class="prevnext" style="margin-top:0; padding-top:0; border:none; margin-bottom: 24px;">
+        <a href="index.html">← Wszystkie bloki</a>
+    </div>
 
-<div class="box hook"><span class="lbl">Zaczynamy od</span>Otwierasz stronę szkoły i naciskasz Ctrl+U. „To jest to, co naprawdę wysyła serwer.” Potem narzędzia deweloperskie i zmiana nagłówka na żywo — klasa widzi, jak tytuł strony zmienia się na ich oczach. Natychmiast dodajesz: to widać wyłącznie na tym komputerze, nikt niczego nie zhakował.</div>
-<div class="box why"><span class="lbl">Po co to uczniowi</span>Bo strona to najtańsza wizytówka firmy — a umiejętność zajrzenia pod maskę odróżnia użytkownika od kogoś, kto rozumie, jak to działa.</div>
-<div class="box fin"><span class="lbl">Na koniec</span><b>To jest w internecie.</b> Każda strona ma prawdziwy, publiczny adres. Drukujecie kartki z adresem i kodem QR, klasa odwiedza wszystkie strony po kolei. Adres można wysłać komukolwiek — i to jest cała różnica wobec pliku na pulpicie.</div>
+    <h1>Blok 7. Twoja strona w internecie</h1>
+    <p class="lead">Strona internetowa to dziś podstawa każdego biznesu. Za chwilę sam stworzysz od zera swoją własną stronę (w formie wizytówki firmowej), która w finale wyląduje pod publicznym adresem i będziesz mógł ją pokazać z telefonu swoim znajomym.</p>
 
-<h2>Wymagania podstawy programowej realizowane w tym bloku</h2>
-<table><thead><tr><th>Kod</th><th>Treść wymagania (zakres podstawowy)</th></tr></thead><tbody><tr><td style="width:70px"><code class="kod">II.3f</code></td><td>Tworzy stronę internetową zgodnie ze standardami, wzbogaconą tabelami i listami, posługuje się arkuszem stylów, korzysta z oprogramowania i serwisów przeznaczonych do tworzenia stron; potrafi opublikować własną stronę w Internecie.</td></tr><tr><td style="width:70px"><code class="kod">III.4</code></td><td>Charakteryzuje sieć Internet, jej ogólną budowę i usługi, opisuje sposoby identyfikowania komputerów w sieci.</td></tr><tr><td style="width:70px"><code class="kod">III.1</code></td><td>Zapoznaje się z możliwościami nowych urządzeń cyfrowych i towarzyszącego im oprogramowania.</td></tr><tr><td style="width:70px"><code class="kod">III.3</code></td><td>Rozwiązuje problemy, korzystając z różnych systemów operacyjnych.</td></tr><tr><td style="width:70px"><code class="kod">IV.3</code></td><td>Objaśnia konsekwencje wykluczenia i pozytywne aspekty włączenia cyfrowego; przedstawia korzyści, jakie przynosi informatyka i technologia komputerowa osobom o specjalnych potrzebach.</td></tr><tr><td style="width:70px"><code class="kod">IV.1</code></td><td>Aktywnie uczestniczy w realizacji projektów rozwiązujących problemy z różnych dziedzin.</td></tr></tbody></table>
+    <div class="meta">
+        <span class="pill">Klasa I</span>
+        <span class="pill">9 godzin</span>
+        <span class="pill">Lekcje 43–51</span>
+        <span class="pill">Marzec – Kwiecień</span>
+    </div>
 
-<h2>Z jaką wiedzą uczeń ma się zderzyć</h2>
-<ul><li>Model klient–serwer: żądanie i odpowiedź; co robi przeglądarka, a co serwer.</li><li>Adres IP, nazwa domeny, rola DNS; protokół HTTP i HTTPS oraz co daje kłódka.</li><li>Czym jest hosting i dlaczego strona musi gdzieś fizycznie leżeć.</li><li>HTML: znacznik, atrybut, element; szkielet dokumentu (deklaracja typu, head, body, kodowanie znaków).</li><li>Semantyka: hierarchia nagłówków, sekcje, listy uporządkowane i nieuporządkowane, tabela do danych.</li><li>Obraz z opisem alternatywnym i odnośnik — po co istnieją i kto z nich korzysta.</li><li>CSS: selektor, właściwość, wartość; arkusz zewnętrzny; dlaczego oddzielamy wygląd od treści.</li><li>Dostępność: kontrast, opisy alternatywne, obsługa klawiaturą, wielkość obszaru klikalnego.</li><li>Walidacja kodu i po co się ją robi.</li><li>Publikacja: co to znaczy, że plik trafia na serwer i staje się dostępny publicznie.</li></ul>
+    <div class="two">
+        <div class="box hook">
+            <span class="lbl">Dla nauczyciela: Zaczynamy od</span>
+            Otwierasz stronę szkoły i naciskasz Ctrl+U (Kod źródłowy). "To jest to, co naprawdę wysyła serwer." Potem otwierasz Narzędzia Deweloperskie (F12) i zmieniasz na żywo główny tytuł strony. Zapewnij uczniów, że widać to tylko na tym komputerze i nic nie zhakowałeś!
+        </div>
+        <div class="box why">
+            <span class="lbl">Dla nauczyciela: Po co to uczniowi</span>
+            Zrozumienie jak działa "pod maską" strona internetowa uczy rozwiązywania problemów i rozróżnia zwykłego konsumenta treści od twórcy.
+        </div>
+    </div>
 
-<h2>Co uczeń ma umieć po tym bloku</h2>
-<ul><li>Umiem wyjaśnić, co dzieje się między kliknięciem a pokazaniem strony.</li><li>Umiem stworzyć plik, który przeglądarka pokaże jako stronę.</li><li>Umiem podzielić stronę na sekcje z nagłówkami.</li><li>Umiem wstawić zdjęcie, listę i działający link.</li><li>Umiem zbudować tabelę w HTML.</li><li>Umiem zmienić wygląd całej strony z jednego pliku.</li><li>Umiem ułożyć elementy na stronie i zrobić przycisk.</li><li>Umiem sprawdzić, czy stronę da się odczytać i obsłużyć bez myszki.</li><li>Umiem opublikować stronę i podać jej adres.</li></ul>
+    <h2>Krok 1: Wstęp do HTML</h2>
+    <div class="step-card">
+        <h3><span class="step-number">1</span> Twój pierwszy plik index.html</h3>
+        <p class="instruction-text">
+            Strona to zwykły plik tekstowy, w którym używamy "tagów" (znaczników), by powiedzieć przeglądarce, co jest tytułem, co obrazkiem, a co linkiem. Szkielet strony zawsze nazywamy <code>index.html</code>.
+        </p>
+        <ol class="zad">
+            <li>Otwórz edytor kodu, np. Visual Studio Code.</li>
+            <li>Utwórz nowy plik, zapisz go jako <code>index.html</code> (pamiętaj o rozszerzeniu, które włączyłeś w Bloku 0!).</li>
+            <li>Wpisz w nim tekst zastępczy (Nauczyciel wskaże szablon struktury). Pamiętaj, że treści wpisujemy wewnątrz znaczników <code>&lt;body&gt; ... &lt;/body&gt;</code>.</li>
+            <li>Zapisz plik i kliknij na niego dwukrotnie, by otworzył się w Twojej przeglądarce internetowej (Chrome/Edge/Safari). Widzisz swoją pierwszą lokalną stronę!</li>
+        </ol>
+    </div>
 
-<h2>Przebieg lekcja po lekcji</h2>
-<p class="note">Kolumna „Praca”: I — indywidualnie · P — w parach · G — w grupie · K — cała klasa.</p>
-<table><thead><tr><th style="width:38px">Nr</th><th style="width:24%">Temat i cel lekcji</th><th style="width:22%">Co przekazuje nauczyciel</th><th style="width:24%">Co robią uczniowie</th><th style="width:52px">Praca</th><th style="width:16%">Narzędzie · dowód</th></tr></thead><tbody><tr><td class='n'>43</td><td><b>HACZYK: co się dzieje, gdy wpisujesz adres</b><br><span class='note'>Umiem wyjaśnić, co dzieje się między kliknięciem a pokazaniem strony.</span></td><td>Pokaż podgląd kodu strony i narzędzia deweloperskie. Podkreśl: zmiana widoczna u ciebie to nie włamanie.</td><td><b>Obie klasy:</b> Ping, tracert, podgląd kodu cudzej strony</td><td class='w'>K</td><td>Przeglądarka · Schemat drogi żądania<br></td></tr><tr><td class='n'>44</td><td><b>Pierwszy plik HTML</b><br><span class='note'>Umiem stworzyć plik, który przeglądarka pokaże jako stronę.</span></td><td>Przeglądarka czyta plik tekstowy i rysuje z niego stronę. Nic magicznego się tu nie dzieje.</td><td><b>Obie klasy:</b> index.html — pierwsza własna strona</td><td class='w'>I</td><td>VS Code / Notatnik · Działający plik lokalnie<br></td></tr><tr><td class='n'>45</td><td><b>Struktura: nagłówki i sekcje</b><br><span class='note'>Umiem podzielić stronę na sekcje z nagłówkami.</span></td><td>Nagłówki mają porządek: h1 raz, potem h2. Po tym porządku poruszają się czytniki ekranu i wyszukiwarki.</td><td><b>Fryzjerzy:</b> O nas, Usługi, Kontakt<br><b>Handlowcy:</b> O nas, Oferta, Kontakt</td><td class='w'>I</td><td>VS Code · Strona z 4 sekcjami<br><span class="tag" style="background:#fff3d6;color:#8a6d1f">KROK MILOWY</span></td></tr><tr><td class='n'>46</td><td><b>Obrazy, listy i odnośniki</b><br><span class='note'>Umiem wstawić zdjęcie, listę i działający link.</span></td><td>Atrybut alt to nie ozdoba. To jedyne, co usłyszy osoba niewidoma i co zobaczy wyszukiwarka.</td><td><b>Obie klasy:</b> Galeria zdjęć poprawionych w bloku 2</td><td class='w'>I</td><td>VS Code · Strona z galerią<br></td></tr><tr><td class='n'>47</td><td><b>Tabela na stronie</b><br><span class='note'>Umiem zbudować tabelę w HTML.</span></td><td>Tabela służy do danych, nie do układania strony.</td><td><b>Fryzjerzy:</b> Cennik usług<br><b>Handlowcy:</b> Tabela produktów i cen</td><td class='w'>I</td><td>VS Code · Tabela na stronie<br></td></tr><tr><td class='n'>48</td><td><b>CSS: jeden plik zmienia wszystko</b><br><span class='note'>Umiem zmienić wygląd całej strony z jednego pliku.</span></td><td>CSS oddziela wygląd od treści. Jedna zmiana w pliku zmienia całą stronę.</td><td><b>Obie klasy:</b> Kolory i czcionki z własnego plakatu</td><td class='w'>I</td><td>VS Code · Podłączony plik style.css<br><span class="tag" style="background:#fff3d6;color:#8a6d1f">KROK MILOWY</span></td></tr><tr><td class='n'>49</td><td><b>Układ, przyciski, sekcja kontakt</b><br><span class='note'>Umiem ułożyć elementy na stronie i zrobić przycisk.</span></td><td>Przycisk musi mieć widoczny obszar klikania — około 44 pikseli. Mniejszy jest nieklikalny na dotyku.</td><td><b>Fryzjerzy:</b> Przycisk „Umów wizytę”<br><b>Handlowcy:</b> Przycisk „Zapytaj o ofertę”</td><td class='w'>I</td><td>VS Code · Strona z układem i przyciskiem<br></td></tr><tr><td class='n'>50</td><td><b>Czy każdy z niej skorzysta?</b><br><span class='note'>Umiem sprawdzić, czy stronę da się odczytać i obsłużyć bez myszki.</span></td><td>Dostępność to nie dodatek dla nielicznych: kontrast pomaga każdemu w słońcu, a klawiatura przy zepsutej myszce.</td><td><b>Obie klasy:</b> Kontrast, opisy zdjęć, nawigacja klawiaturą, walidator W3C</td><td class='w'>P</td><td>Walidator W3C · Raport z 5 poprawkami<br></td></tr><tr><td class='n'>51</td><td><b>FINAŁ: to jest w internecie</b><br><span class='note'>Umiem opublikować stronę i podać jej adres.</span></td><td>Publikacja to moment, w którym praca przestaje być szkolna. Adres wysyłamy dalej.</td><td><b>Obie klasy:</b> Publikacja, wydruk adresu i kodu QR, klasa odwiedza wszystkie strony</td><td class='w'>K</td><td>Netlify Drop · Działający adres internetowy<br><span class="tag" style="background:#fbe5e5;color:#c0392b;font-weight:700">OCENA 8</span></td></tr></tbody></table>
+    <h2>Krok 2: Struktura i obrazki</h2>
+    <div class="step-card">
+        <h3><span class="step-number">2</span> Sekcje, nagłówki i atrybut alt</h3>
+        <p class="instruction-text">
+            Książka ma rozdziały, strona ma sekcje. Najważniejszy tytuł to <code>&lt;h1&gt;</code> (używamy go tylko raz!). Mniejsze podtytuły to <code>&lt;h2&gt;</code> i tak dalej. Dodając obrazek <code>&lt;img&gt;</code> musisz podać jego adres oraz tekst alternatywny.
+        </p>
+        <div class="info">
+            <strong>Atrybut alt:</strong> <code>&lt;img src="foto.jpg" alt="Zdjęcie produktu"&gt;</code> to jedyne, co "widzi" wyszukiwarka Google oraz specjalne czytniki dla osób niewidomych. Bez <code>alt</code> Twoja strona traci dostępność!
+        </div>
+        <ol class="zad">
+            <li>Podziel stronę na 3 sekcje: O nas, Usługi, Kontakt. Nadaj im nagłówki <code>&lt;h2&gt;</code>.</li>
+            <li>Wstaw galerię zdjęć z Bloku 2. Skopiuj obrazki do tego samego folderu co Twój plik html! Użyj tagu <code>&lt;img src="nazwa_pliku.jpg" alt="Twój opis"&gt;</code>.</li>
+            <li>Zbuduj tabelkę <code>&lt;table&gt;</code> zawierającą cennik Twoich usług/produktów. <span class="tag milestone">KROK MILOWY</span></li>
+        </ol>
+    </div>
 
-<h2>Zadania dla uczniów</h2>
-<p class="note">Polecenia gotowe do skopiowania na platformę albo do wyświetlenia na tablicy.</p>
-<ul class="zad"><li>Otwórz kod źródłowy strony szkoły. Znajdź i zapisz: tytuł strony, pierwszy nagłówek, adres jednego obrazka.</li><li>Utwórz plik index.html z nagłówkiem, akapitem i obrazkiem. Otwórz go w przeglądarce.</li><li>Podziel stronę na cztery sekcje, każda z własnym nagłówkiem drugiego poziomu.</li><li>Wstaw galerię czterech zdjęć poprawionych w bloku 2. Każde z opisem alternatywnym.</li><li>Zbuduj cennik w tabeli. Liczby wyrównaj do prawej.</li><li>Przenieś wszystkie style do osobnego pliku style.css. Zmień kolor tła całej strony jedną linijką.</li><li>Dodaj przycisk kontaktowy o obszarze klikalnym nie mniejszym niż 44 piksele.</li><li>Sprawdź stronę w walidatorze W3C. Napraw wszystkie błędy. Przejdź po stronie samym tabulatorem i sprawdź, czy da się dotrzeć do każdego elementu.</li><li>FINAŁ: opublikuj stronę. Wydrukuj kartkę z adresem i kodem QR.</li></ul>
+    <h2>Krok 3: Stylizowanie (CSS)</h2>
+    <div class="step-card">
+        <h3><span class="step-number">3</span> CSS, czyli magik od wyglądu</h3>
+        <p class="instruction-text">
+            Sam HTML wygląda jak dokument z lat 90. Aby dodać kolory, wyrównanie i układy, używamy języka CSS w osobnym pliku. Oddzielamy w ten sposób treść (HTML) od wyglądu (CSS).
+        </p>
+        <ol class="zad">
+            <li>Utwórz w tym samym folderze plik <code>style.css</code>.</li>
+            <li>W <code>index.html</code> w sekcji <code>&lt;head&gt;</code> wklej linijkę, która je połączy: <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</li>
+            <li>W <code>style.css</code> wpisz regułę by zmienić tło, np: <br>
+                <code>body { background-color: #f0f0f0; font-family: sans-serif; }</code>
+            </li>
+            <li>Odśwież stronę w przeglądarce i zobacz efekt! <span class="tag milestone">KROK MILOWY</span></li>
+        </ol>
+    </div>
 
-<h2>Przygotuj przed blokiem</h2>
-<ul><li>Szablon startowy index.html z komentarzami „tu wpisz” — dla całej klasy, nie tylko dla słabszych.</li><li>Sprawdź, czy z pracowni da się wejść na serwis do publikacji i czy nie jest zablokowany.</li><li>Prosty edytor kodu na wszystkich stanowiskach (wystarczy Notatnik, ale kolorowanie składni bardzo pomaga).</li><li>Generator kodów QR i papier na wydruk kartek z adresami.</li></ul>
+    <h2>Krok 4: Przyciski i nawigacja</h2>
+    <div class="step-card">
+        <h3><span class="step-number">4</span> Żeby w coś kliknąć</h3>
+        <p class="instruction-text">
+            Zróbmy przycisk kontaktowy ("Umów wizytę"). Ważna zasada "dostępności" UX: Przycisk musi mieć odpowiednią wielkość, żeby łatwo było w niego trafić palcem na ekranie smartfona. Rozmiar to minimum 44 piksele!
+        </p>
+        <ol class="zad">
+            <li>Dodaj na dole strony link do kontaktu używając <code>&lt;a href="#"&gt;Umów się&lt;/a&gt;</code>.</li>
+            <li>Dodaj do niego CSS, by wyglądał jak przycisk: np. <code>padding: 12px 20px; background-color: blue; color: white;</code> itd.</li>
+            <li>Przetestuj wygląd na symulowanym małym ekranie (w Narzędziach Deweloperskich wybierz "Toggle device toolbar").</li>
+        </ol>
+    </div>
 
-<h2>Kryteria sukcesu finału</h2><div class="ok"><ul><li>Strona ma co najmniej cztery sekcje z nagłówkami i tabelę z cennikiem.</li><li>Style są w osobnym pliku, a nie w atrybutach.</li><li>Każdy obrazek ma opis alternatywny.</li><li>Walidator nie zgłasza błędów.</li><li>Strona jest dostępna pod publicznym adresem i działa też na małym ekranie.</li><li>Autor potrafi pokazać w kodzie miejsce odpowiadające za wybrany element strony.</li></ul></div>
+    <div class="box fin">
+        <span class="lbl">Finał bloku: To jest w Internecie</span>
+        <p>Gotowa strona znajduje się u Ciebie na dysku C:, co oznacza, że nikt z nas do niej nie wejdzie. Musimy ją <strong>Opublikować</strong> (wrzucić na serwer WWW / hosting).</p>
+        <p>Spakujemy zawartość Twojego folderu do jednego archiwum ZIP lub skorzystamy z serwisu <em>Netlify Drop</em>. Tam wrzucisz swój projekt i otrzymasz <strong>Prawdziwy Publiczny Adres URL</strong>!</p>
+        <p>Wydrukujemy Twój adres lub wygenerujemy darmowy kod QR. Każdy w klasie będzie musiał wejść z telefonu i zobaczyć Twoje dzieło na własne oczy w prawdziwym Internecie! <span class="tag grade">OCENA 8</span></p>
+    </div>
 
-<h2>Różnicowanie</h2>
-<div class="two">
-<div class="card"><h3 style="margin-top:0">Dla uczniów, którzy potrzebują wsparcia</h3><ul><li>Szablon z gotowym szkieletem i komentarzami.</li><li>Ściągawka z dziesięcioma znacznikami i przykładem użycia.</li><li>Publikacja metodą przeciągnięcia folderu, bez zakładania konta.</li></ul></div>
-<div class="card"><h3 style="margin-top:0">Dla uczniów, którzy skończą wcześniej</h3><ul><li>Układ oparty na flexbox i wersja dostosowana do telefonu.</li><li>Druga podstrona i menu nawigacyjne.</li><li>Formularz kontaktowy z walidacją pól po stronie przeglądarki.</li></ul></div>
+    <div class="prevnext">
+        <div><a href="blok-06.html">← Blok 6. Kto to napisał — człowiek czy maszyna?</a></div>
+        <div><a href="blok-08.html">Blok 8. Zaprojektuj swoje miejsce pracy →</a></div>
+    </div>
 </div>
-
-<h2>Co zwykle idzie nie tak</h2>
-<div class="warn"><ul><li>Uczeń nie widzi zmian, bo nie zapisał pliku. Wprowadź odruch: zapisz, przełącz, odśwież.</li><li>Polskie znaki wyświetlają się jako krzaki — brak deklaracji kodowania. Wpisz ją do szablonu startowego.</li><li>Obrazki się nie pokazują, bo ścieżka jest bezwzględna z dysku C. Wymuś trzymanie obrazków w podfolderze obok pliku HTML.</li><li>Serwis do publikacji bywa blokowany przez filtr szkolny. Sprawdź to tydzień wcześniej i miej alternatywę.</li></ul></div>
-<div class="prevnext"><div><a href="blok-06.html">← Blok 6. Kto to napisał — człowiek czy maszyna?</a></div><div><a href="blok-08.html">Blok 8. Zaprojektuj swoje miejsce pracy →</a></div></div>
-</div>
-<footer>Rozkład materiału — informatyka, zakres podstawowy, technikum · klasa I (60 h) i klasa II (30 h) · rok szkolny 2026/2027<br>
-Podstawa programowa: rozporządzenie MEN z 30.01.2018 (Dz.U. 2018 poz. 467) w brzmieniu nadanym rozporządzeniem z 28.06.2024 (Dz.U. 2024 poz. 1019).</footer>
-</body></html>
+<footer>
+    Rozkład materiału — informatyka, zakres podstawowy, technikum · klasa I (60 h) i klasa II (30 h) · rok szkolny 2026/2027<br>
+    Podstawa programowa: rozporządzenie MEN z 30.01.2018 (Dz.U. 2018 poz. 467) w brzmieniu nadanym rozporządzeniem z 28.06.2024 (Dz.U. 2024 poz. 1019).
+</footer>
+</body>
+</html>

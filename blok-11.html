@@ -1,49 +1,95 @@
-<!DOCTYPE html><html lang="pl"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Blok 11. Gdzie właściwie są te dane?</title><link rel="stylesheet" href="style.css"></head><body>
-<header class="top"><a class="brand" href="index.html">Informatyka 2026/2027</a><nav><a href="index.html">Bloki</a><a href="plan.html">Plan roku</a><a href="podstawa.html">Podstawa programowa</a><a href="ocenianie.html">Ocenianie</a><a href="jak-uczyc.html">Jak to prowadzić</a></nav></header>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Przewodnik po bloku 11. Bazy danych, relacje i zapytania SQL, a także kwestie ochrony prywatności i RODO.">
+    <title>Blok 11. Gdzie właściwie są te dane? — Informatyka 2026/2027</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+    <a class="brand" href="index.html">Informatyka 2026/2027</a>
+    <nav><a href="index.html" class="active">Bloki</a><a href="plan.html">Plan roku</a><a href="podstawa.html">Podstawa</a><a href="ocenianie.html">Ocenianie</a><a href="jak-uczyc.html">Jak uczyć</a></nav>
+</header>
 <div class="wrap">
-<p style="margin:0"><a href="index.html">← wszystkie bloki</a></p>
-<h1>Blok 11. Gdzie właściwie są te dane?</h1>
-<div class="meta"><span class="pill">Klasa II</span><span class="pill">6 godzin</span>
-<span class="pill">lekcje 10–15</span><span class="pill">listopad – styczeń</span></div>
+    <div class="prevnext" style="margin-top:0; padding-top:0; border:none; margin-bottom: 24px;">
+        <a href="index.html">← Wszystkie bloki</a>
+    </div>
 
-<div class="box hook"><span class="lbl">Zaczynamy od</span>Wyścig. Arkusz z pięcioma tysiącami wierszy na ekranie i zadanie: znajdź wszystkich klientów jednego dostawcy, którzy kupili w marcu. Ktoś zaczyna przewijać. Po dwóch minutach robisz to samo kwerendą w bazie — w pięć sekund.</div>
-<div class="box why"><span class="lbl">Po co to uczniowi</span>Bo lista klientów albo towarów prowadzona w jednym arkuszu prędzej czy później się sypie — i wtedy giną cudze dane.</div>
-<div class="box fin"><span class="lbl">Na koniec</span><b>Test na żywo.</b> Oddajesz klawiaturę koledze. On wpisuje nowy rekord przez twój formularz — bez twoich podpowiedzi. Ty uruchamiasz kwerendę i pokazujesz, że rekord został znaleziony. Jeśli kolega nie wie, co wpisać w którym polu, formularz wymaga poprawy.</div>
+    <h1>Blok 11. Gdzie właściwie są te dane?</h1>
+    <p class="lead">Gdy zapisujesz klientów lub towary w jednej wielkiej tabelce w Excelu, przy 500 wpisach zaczyna panować chaos. Zmieniasz nazwisko klientki, która wyszła za mąż i... musisz poprawić 30 wpisów ręcznie? Rozwiązaniem jest Prawdziwa Relacyjna Baza Danych.</p>
 
-<h2>Wymagania podstawy programowej realizowane w tym bloku</h2>
-<table><thead><tr><th>Kod</th><th>Treść wymagania (zakres podstawowy)</th></tr></thead><tbody><tr><td style="width:70px"><code class="kod">II.3d</code></td><td>Wyszukuje informacje, korzystając z bazy danych opartej na co najmniej dwóch tabelach, definiuje relacje, stosuje filtrowanie, formułuje kwerendy.</td></tr><tr><td style="width:70px"><code class="kod">V.1</code></td><td>Postępuje zgodnie z zasadami netykiety oraz regulacjami prawnymi dotyczącymi ochrony danych osobowych, ochrony informacji oraz prawa autorskiego i ochrony własności intelektualnej; jest świadomy konsekwencji łamania tych zasad.</td></tr><tr><td style="width:70px"><code class="kod">IV.1</code></td><td>Aktywnie uczestniczy w realizacji projektów rozwiązujących problemy z różnych dziedzin.</td></tr></tbody></table>
+    <div class="meta">
+        <span class="pill">Klasa II</span>
+        <span class="pill">6 godzin</span>
+        <span class="pill">Lekcje 10–15</span>
+        <span class="pill">Listopad – Styczeń</span>
+    </div>
 
-<h2>Z jaką wiedzą uczeń ma się zderzyć</h2>
-<ul><li>Dlaczego jedna wielka tabela to problem: powtarzanie tych samych danych, literówki w powtórzeniach, kłopot przy aktualizacji.</li><li>Pojęcia: tabela, rekord, pole, typ danych, klucz podstawowy, klucz obcy.</li><li>Relacja jeden do wielu i sposób jej tworzenia.</li><li>Kwerenda wybierająca: kryteria, sortowanie, pola obliczeniowe.</li><li>Rozpoznanie języka SQL: co znaczy SELECT, FROM i WHERE — na poziomie czytania, nie pisania.</li><li>Formularz do wprowadzania danych i raport jako forma prezentacji wyniku.</li><li>Integralność danych i kopia zapasowa bazy.</li><li>RODO w bazie: minimalizacja danych, cel przetwarzania, kto ma dostęp, jak długo przechowujemy, czym są dane szczególnej kategorii.</li></ul>
+    <div class="two">
+        <div class="box hook">
+            <span class="lbl">Dla nauczyciela: Zaczynamy od</span>
+            Wyścig. Wyświetl uczniom arkusz z 5000 wierszami. Powiedz: "Znajdź wszystkich klientów dostawcy X z marca!". Obserwuj jak uczniowie gubią się scrollując w dół. Następnie wpisz jedno linijkowe polecenie w kwerendzie bazy danych, uzyskując precyzyjny raport w 2 sekundy.
+        </div>
+        <div class="box why">
+            <span class="lbl">Dla nauczyciela: Po co to uczniowi</span>
+            Bo prowadzenie dużej firmy opiera się na stabilnych bazach (systemy sprzedażowe, CMS). Lista klientów prowadzona w złym systemie w końcu zginie, gubiąc cudze dane osobowe (RODO).
+        </div>
+    </div>
 
-<h2>Co uczeń ma umieć po tym bloku</h2>
-<ul><li>Umiem wskazać, dlaczego jedna wielka tabela to kłopot.</li><li>Umiem zaprojektować tabelę i wskazać klucz.</li><li>Umiem połączyć tabele tak, żeby dane się nie dublowały.</li><li>Umiem zadać bazie pytanie i dostać odpowiedź.</li><li>Umiem zrobić formularz i wiem, jak chronić dane w bazie.</li><li>Potrafię pokazać, że baza działa w rękach innej osoby.</li></ul>
+    <h2>Krok 1: Relacje, czyli dlaczego cięto tabele</h2>
+    <div class="step-card">
+        <h3><span class="step-number">1</span> Jedna osoba - wiele wizyt</h3>
+        <p class="instruction-text">
+            Idea "Bazy danych" sprowadza się do faktu, że danych nie powtarzamy. Ktoś wpisał Twoje nazwisko z literówką? W bazie znajduje się tylko w jednym miejscu, więc po poprawieniu zmieni się wszędzie. Wymaga to podziału na Tabela Klientów (z Kluczem Podstawowym - ID) i Tabele Wizyt. 
+        </p>
+        <ol class="zad">
+            <li>Zaprojektuj na kartce Tabela Klientów i Tabele Wizyt (lub Dostawcy / Towary).</li>
+            <li>Wskaż, co w tych tabelach będzie Twoim Unikalnym Identyfikatorem (Kluczem, z ang. <strong>Primary Key</strong>) – nie może to być nazwisko, bo Janów Kowalskich jest dziesięciu!</li>
+            <li>Odpal program (np. Access lub LibreOffice Base). Zbuduj obie tabele. Połącz je linią, tworząc Relację! <span class="tag milestone">KROK MILOWY</span></li>
+        </ol>
+    </div>
 
-<h2>Przebieg lekcja po lekcji</h2>
-<p class="note">Kolumna „Praca”: I — indywidualnie · P — w parach · G — w grupie · K — cała klasa.</p>
-<table><thead><tr><th style="width:38px">Nr</th><th style="width:24%">Temat i cel lekcji</th><th style="width:22%">Co przekazuje nauczyciel</th><th style="width:24%">Co robią uczniowie</th><th style="width:52px">Praca</th><th style="width:16%">Narzędzie · dowód</th></tr></thead><tbody><tr><td class='n'>10</td><td><b>HACZYK: znajdź to w arkuszu</b><br><span class='note'>Umiem wskazać, dlaczego jedna wielka tabela to kłopot.</span></td><td>Problem nie polega na wielkości arkusza, tylko na tym, że te same dane są w nim wiele razy.</td><td><b>Obie klasy:</b> Wyścig: kto szybciej znajdzie dane w arkuszu z 5000 wierszy</td><td class='w'>G</td><td>MS Excel · Lista 3 problemów z jedną wielką tabelą<br></td></tr><tr><td class='n'>11</td><td><b>Tabela, rekord, klucz</b><br><span class='note'>Umiem zaprojektować tabelę i wskazać klucz.</span></td><td>Klucz to coś, co się nie powtarza. Numer, a nie nazwisko.</td><td><b>Fryzjerzy:</b> Tabela klientek<br><b>Handlowcy:</b> Tabela towarów</td><td class='w'>I</td><td>Access / LibreOffice Base · Projekt tabeli<br></td></tr><tr><td class='n'>12</td><td><b>Dwie tabele i relacja</b><br><span class='note'>Umiem połączyć tabele tak, żeby dane się nie dublowały.</span></td><td>Relacja zastępuje przepisywanie: dane klienta wpisujesz raz.</td><td><b>Fryzjerzy:</b> Klientki i Wizyty<br><b>Handlowcy:</b> Towary i Dostawcy</td><td class='w'>I</td><td>Access / Base · Baza z działającą relacją<br><span class="tag" style="background:#fff3d6;color:#8a6d1f">KROK MILOWY</span></td></tr><tr><td class='n'>13</td><td><b>Kwerendy: baza odpowiada na pytania</b><br><span class='note'>Umiem zadać bazie pytanie i dostać odpowiedź.</span></td><td>Kwerenda to pytanie zadane bazie. Pokaż podgląd SQL, żeby zobaczyli, że to zdanie po angielsku.</td><td><b>Fryzjerzy:</b> Kto nie był u nas od trzech miesięcy<br><b>Handlowcy:</b> Co jest poniżej stanu minimalnego</td><td class='w'>I</td><td>Access / Base · 3 działające kwerendy<br></td></tr><tr><td class='n'>14</td><td><b>Formularz i RODO</b><br><span class='note'>Umiem zrobić formularz i wiem, jak chronić dane w bazie.</span></td><td>RODO to nie formalność. Alergie i choroby to dane szczególnej kategorii i wymagają osobnej podstawy prawnej.</td><td><b>Fryzjerzy:</b> Rejestracja wizyty; alergie i choroby skóry to dane wrażliwe<br><b>Handlowcy:</b> Przyjęcie dostawy; dane firmowe a dane osobowe</td><td class='w'>I</td><td>Access / Base · Formularz + notatka RODO<br></td></tr><tr><td class='n'>15</td><td><b>FINAŁ: test na żywo</b><br><span class='note'>Potrafię pokazać, że baza działa w rękach innej osoby.</span></td><td>Baza jest dobra wtedy, gdy obsłuży ją ktoś, kto jej nie budował.</td><td><b>Obie klasy:</b> Kolega wpisuje dane przez twój formularz, ty pokazujesz wynik kwerendy</td><td class='w'>P</td><td>Access / Base · Baza + raport z testu<br><span class="tag" style="background:#fbe5e5;color:#c0392b;font-weight:700">OCENA 3</span></td></tr></tbody></table>
+    <h2>Krok 2: Pytania do Bazy (Kwerendy)</h2>
+    <div class="step-card">
+        <h3><span class="step-number">2</span> Zapytaj w SQL</h3>
+        <p class="instruction-text">
+            Gdy masz gotowe, czyste tabele połączone relacją, zaczynamy pytać bazę. Służą do tego <strong>Kwerendy</strong> (z j. ang Query). Pod spodem bazy danych "rozmawiają" językiem o nazwie SQL, który musimy nauczyć się "czytać".
+        </p>
+        <ol class="zad">
+            <li>Utwórz pierwszą Kwerendę w widoku projektu.</li>
+            <li>Wyciągnij listę "Którzy klienci nie byli u nas na usługach od co najmniej 3 miesięcy?"</li>
+            <li>Obejrzyj "Podgląd SQL" (zwykle prawy przycisk na zakładce Kwerendy). Zrozum co znaczy fragment <code>SELECT Imie, Nazwisko FROM Klienci WHERE Wizyty_Data &lt; 'data'</code>.</li>
+        </ol>
+    </div>
 
-<h2>Zadania dla uczniów</h2>
-<p class="note">Polecenia gotowe do skopiowania na platformę albo do wyświetlenia na tablicy.</p>
-<ul class="zad"><li>Wskaż w tym arkuszu trzy miejsca, w których te same dane powtarzają się wielokrotnie. Napisz, co się stanie, gdy jedno z nich się zmieni.</li><li>Zaprojektuj dwie tabele. Podkreśl klucz podstawowy w każdej i wskaż pole łączące.</li><li>Utwórz tabele, ustaw typy pól i połącz je relacją. Wprowadź po dziesięć rekordów.</li><li>Napisz trzy kwerendy odpowiadające na trzy konkretne pytania biznesowe. Zapisz pytania obok wyników.</li><li>Obejrzyj podgląd zapytania w SQL. Wskaż w nim, która część odpowiada za wybór pól, a która za warunek.</li><li>Zbuduj formularz do wprowadzania danych oraz raport podsumowujący.</li><li>Wypisz, które pola twojej bazy są danymi osobowymi, a które szczególnej kategorii. Napisz, kto powinien mieć do nich dostęp i jak długo je przechowujesz.</li><li>FINAŁ: oddaj klawiaturę koledze i pozwól mu wpisać rekord przez twój formularz. Pokaż, że kwerenda go znalazła.</li></ul>
+    <h2>Krok 3: RODO i Prawo</h3>
+    <div class="step-card">
+        <h3><span class="step-number">3</span> Formularze a prywatność</h3>
+        <p class="instruction-text">
+            Bazy w firmie obsługują pracownicy nie znający SQL – używają do tego graficznych <strong>Formularzy</strong> wprowadzania. Przechowując dane, musisz przestrzegać RODO: mieć jasny "Cel Przetwarzania". Uwaga, dane zdrowotne (np. notatka o alergii klienta) to "Dane Wrażliwe" chronione podwójnie prawem karnym.
+        </p>
+        <ol class="zad">
+            <li>W Kreatorze stwórz piękny Formularz wprowadzania danych o klientach.</li>
+            <li>Przygotuj w dokumencie krótką notatkę, dla szefa swojego wydumanego salonu/sklepu, na temat RODO (jak długo przetrzymacie te dane, czy wolno pracownikom zanotować w bazie szczegóły zdrowia bez pisemnej zgody).</li>
+        </ol>
+    </div>
 
-<h2>Przygotuj przed blokiem</h2>
-<ul><li>Arkusz z 5000 wierszy do wyścigu — z celowo powtarzającymi się danymi.</li><li>Decyzję, w czym pracujecie: Access, LibreOffice Base czy dwie tabele w arkuszu. Sprawdź dostępność tydzień wcześniej.</li><li>Gotową strukturę dwóch tabel do wypełnienia dla uczniów, którzy nie zdążą z projektowaniem.</li><li>Listę trzech pytań biznesowych, na które baza ma odpowiedzieć.</li></ul>
+    <div class="box fin">
+        <span class="lbl">Finał bloku: Test na żywo</span>
+        <p>Baza jest uważana za ukończoną i dobrą tylko wtedy, kiedy może jej użyć przypadkowy, nowo zatrudniony pracownik (a nie tylko jej twórca).</p>
+        <p>Odejdź od biurka i oddaj myszkę oraz klawiaturę swojemu koledze z ławki. On, jako zupełnie nowy użytkownik, bez Twoich podpowiedzi słownych ma spróbować wpisać do Twojego "Formularza" nowego klienta i jego historię. Ty następnie masz uruchomić wybraną przez niego kwerendę. Jeżeli on nie potrafi odnaleźć się w programie i nie wie gdzie wpisać tekst, Twój projekt wymaga przebudowy! <span class="tag grade">OCENA 3</span></p>
+    </div>
 
-<h2>Kryteria sukcesu finału</h2><div class="ok"><ul><li>Relacja działa: dane klienta wpisane raz pojawiają się przy wszystkich jego rekordach.</li><li>Trzy kwerendy zwracają sensowne wyniki i odpowiadają na zapisane wcześniej pytania.</li><li>Formularz jest obsługiwalny przez osobę, która nie budowała bazy.</li><li>Notatka o ochronie danych wskazuje konkretne pola, a nie ogólnie „dane klientów”.</li></ul></div>
-
-<h2>Różnicowanie</h2>
-<div class="two">
-<div class="card"><h3 style="margin-top:0">Dla uczniów, którzy potrzebują wsparcia</h3><ul><li>Gotowa struktura tabel z opisanymi typami pól.</li><li>Kreator formularza zamiast budowy ręcznej.</li><li>Zestaw dziesięciu rekordów do wpisania, bez wymyślania danych.</li></ul></div>
-<div class="card"><h3 style="margin-top:0">Dla uczniów, którzy skończą wcześniej</h3><ul><li>Trzecia tabela i druga relacja.</li><li>Kwerenda z parametrem wpisywanym przez użytkownika.</li><li>Napisanie prostego zapytania SQL ręcznie.</li><li>Zaprojektowanie polityki przechowywania danych dla salonu lub sklepu.</li></ul></div>
+    <div class="prevnext">
+        <div><a href="blok-10.html">← Blok 10. Co mówią te dane?</a></div>
+        <div><a href="blok-12.html">Blok 12. Każ komputerowi zrobić to za ciebie →</a></div>
+    </div>
 </div>
-
-<h2>Co zwykle idzie nie tak</h2>
-<div class="warn"><ul><li>Brak Accessa w licencji szkolnej. Alternatywy: LibreOffice Base z kreatorem albo dwie tabele w arkuszu połączone wyszukiwaniem — wymaganie da się zrealizować obiema drogami, ale wybierz jedną przed rozpoczęciem bloku.</li><li>Uczniowie wpisują prawdziwe dane znajomych. Postaw zasadę: wyłącznie dane fikcyjne. To też jest treścią bloku.</li><li>Sześć godzin to mało. Zrezygnuj z raportu, zanim zrezygnujesz z relacji i kwerend.</li></ul></div>
-<div class="prevnext"><div><a href="blok-10.html">← Blok 10. Co mówią te dane?</a></div><div><a href="blok-12.html">Blok 12. Każ komputerowi zrobić to za ciebie →</a></div></div>
-</div>
-<footer>Rozkład materiału — informatyka, zakres podstawowy, technikum · klasa I (60 h) i klasa II (30 h) · rok szkolny 2026/2027<br>
-Podstawa programowa: rozporządzenie MEN z 30.01.2018 (Dz.U. 2018 poz. 467) w brzmieniu nadanym rozporządzeniem z 28.06.2024 (Dz.U. 2024 poz. 1019).</footer>
-</body></html>
+<footer>
+    Rozkład materiału — informatyka, zakres podstawowy, technikum · klasa I (60 h) i klasa II (30 h) · rok szkolny 2026/2027<br>
+    Podstawa programowa: rozporządzenie MEN z 30.01.2018 (Dz.U. 2018 poz. 467) w brzmieniu nadanym rozporządzeniem z 28.06.2024 (Dz.U. 2024 poz. 1019).
+</footer>
+</body>
+</html>
