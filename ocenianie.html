@@ -1,58 +1,91 @@
 <!DOCTYPE html><html lang="pl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ocenianie</title><link rel="stylesheet" href="style.css"></head><body>
-<header class="top"><a class="brand" href="index.html">Informatyka 2026/2027</a><nav><a href="index.html">Bloki</a><a href="plan.html">Plan roku</a><a href="podstawa.html">Podstawa</a><a href="ocenianie.html" class="active">Ocenianie</a><a href="jak-uczyc.html">Jak uczyć</a></nav></header>
+<header class="top"><a class="brand" href="index.html">
+    <img src="assets/logo.jpg" alt="Logo" style="height: 28px; width: auto; border-radius: 4px;">
+    Informatyka 2026/2027
+</a><nav><a href="index.html">Bloki</a><a href="plan.html">Plan roku</a><a href="podstawa.html">Podstawa</a><a href="ocenianie.html" class="active">Ocenianie</a><a href="jak-uczyc.html">Jak uczyć</a></nav></header>
 <div class="wrap">
 <h1>Ocenianie</h1>
-<p class="lead">Jedna rubryka przez cały cykl. Cztery słowa, które uczeń zapamięta po miesiącu.</p>
+<p class="lead">Zasady proste jak czysty kod. 4 jasne kryteria przez cały rok. Wiesz, na czym stoisz.</p>
 
-<h2>Cztery kryteria</h2>
-<table><thead><tr><th style="width:120px">Kryterium</th><th>Pytanie, na które odpowiada</th><th style="width:60px">Waga</th></tr></thead><tbody>
-<tr><td><b>DZIAŁA</b></td><td>Czy to robi to, co miało robić?</td><td class="w">×3</td></tr>
-<tr><td><b>WYGLĄDA</b></td><td>Czy da się to pokazać komuś z zewnątrz?</td><td class="w">×2</td></tr>
-<tr><td><b>MOJE</b></td><td>Czy zrobiłem to sam i uczciwie podałem źródła oraz użycie AI?</td><td class="w">×3</td></tr>
-<tr><td><b>POKAZUJĘ</b></td><td>Czy potrafię wyjaśnić, co i dlaczego zrobiłem?</td><td class="w">×2</td></tr>
-</tbody></table>
-<p class="note">Każde kryterium 0–4 punkty. Maksimum 40 punktów. Kartę z kryteriami uczeń dostaje na pierwszej lekcji bloku, nie na ostatniej.</p>
-
-<h2>Opisy poziomów</h2>
-<table><thead><tr><th style="width:110px">Kryterium</th><th>0 pkt</th><th>1–2 pkt</th><th>3 pkt</th><th>4 pkt</th></tr></thead><tbody>
-<tr><td><b>DZIAŁA</b></td><td>Nie otwiera się albo nie działa</td><td>Działa z istotnymi błędami</td><td>Działa poprawnie</td><td>Działa także dla danych nietypowych</td></tr>
-<tr><td><b>WYGLĄDA</b></td><td>Nieczytelne, chaotyczne</td><td>Podstawowe formatowanie</td><td>Spójne i czytelne</td><td>Poziom materiału gotowego do użycia w firmie</td></tr>
-<tr><td><b>MOJE</b></td><td>Praca cudza albo skopiowana</td><td>Wykonana głównie z pomocą, bez źródeł</td><td>Samodzielna, źródła i użycie AI opisane</td><td>Samodzielna, z własnymi rozwiązaniami; krytyczna ocena tego, co AI zrobiła źle</td></tr>
-<tr><td><b>POKAZUJĘ</b></td><td>Nie potrafi omówić pracy</td><td>Omawia pobieżnie</td><td>Omawia i uzasadnia decyzje</td><td>Omawia, uzasadnia i przyjmuje krytykę</td></tr>
+<h2>4 Kryteria Sukcesu</h2>
+<p class="note">Punktujemy w skali 0–4 za każde kryterium. Max: 40 punktów. Dokładne wytyczne dostajesz zawsze na starcie projektu.</p>
+<table><thead><tr><th style="width:120px">Kryterium</th><th>Zadaj sobie to pytanie</th><th style="width:60px">Waga</th></tr></thead><tbody>
+<tr><td><b>DZIAŁA</b></td><td>Projekt robi to, co zaplanowaliśmy? Kod odpala bez błędu?</td><td class="w">×3</td></tr>
+<tr><td><b>WYGLĄDA</b></td><td>Nadaje się do pokazania klientowi? UX/UI gra?</td><td class="w">×2</td></tr>
+<tr><td><b>MOJE</b></td><td>Zrobiłeś to sam? Podałeś źródła i opisałeś prompty AI?</td><td class="w">×3</td></tr>
+<tr><td><b>POKAZUJĘ</b></td><td>Potrafisz obronić kod i uzasadnić decyzje projektowe?</td><td class="w">×2</td></tr>
 </tbody></table>
 
-<h2>Progi</h2>
-<p><span class="tag">celujący 91–100%</span><span class="tag">bardzo dobry 76–90%</span><span class="tag">dobry 61–75%</span>
-<span class="tag">dostateczny 46–60%</span><span class="tag">dopuszczający 31–45%</span><span class="tag">niedostateczny 0–30%</span>
-<br><span class="note">Progi dostosuj do statutu szkoły.</span></p>
+<h2>Poziomy Punktacji</h2>
+<table><thead><tr><th style="width:110px">Kryterium</th><th>0 pkt</th><th>1–2 pkt</th><th>3 pkt</th><th>4 pkt (Poziom PRO)</th></tr></thead><tbody>
+<tr><td><b>DZIAŁA</b></td><td>Totalny crash. Nie działa.</td><td>Działa, ale sypie błędami.</td><td>Śmiga poprawnie.</td><td>Kod odporny na edge case'y.</td></tr>
+<tr><td><b>WYGLĄDA</b></td><td>Nieczytelny chaos.</td><td>Bardzo podstawowy szablon.</td><td>Spójnie, czysto i czytelnie.</td><td>Design premium. Gotowe na rynek.</td></tr>
+<tr><td><b>MOJE</b></td><td>Plagiat w 100%.</td><td>Brak źródeł, minimalny własny wkład.</td><td>Projekt autorski + jasne opisy użycia AI.</td><td>Innowacyjne podejście + fixy po błędach AI.</td></tr>
+<tr><td><b>POKAZUJĘ</b></td><td>Milczysz. Nie rozumiesz projektu.</td><td>Odpowiadasz powierzchownie.</td><td>Sprawnie bronisz swoich decyzji.</td><td>Super argumentacja, mądrze przyjmujesz feedback.</td></tr>
+</tbody></table>
 
-<h2>Plan ocen na cały cykl</h2>
-<table><thead><tr><th style="width:60px">Klasa</th><th>Blok</th><th>Za co</th><th style="width:170px">Oznaczenie</th><th style="width:56px">Waga</th></tr></thead><tbody><tr><td style='text-align:center'>I</td><td><a href='blok-01.html'>Blok 1. Ile internet o tobie wie?</a></td><td>Raport o sobie + wydrukowany plakat zasad</td><td>OCENA 1</td><td class='w'>2</td></tr><tr><td style='text-align:center'>I</td><td><a href='blok-02.html'>Blok 2. Napraw to zdjęcie</a></td><td>Zestaw przed/po w portfolio</td><td>OCENA 2</td><td class='w'>2</td></tr><tr><td style='text-align:center'>I</td><td><a href='blok-03.html'>Blok 3. Plakat, który wisi w szkole</a></td><td>Wydrukowany plakat</td><td>OCENA 3</td><td class='w'>2</td></tr><tr><td style='text-align:center'>I</td><td><a href='blok-04.html'>Blok 4. Dokument, który wygląda jak z firmy</a></td><td>Komplet dokumentów + seria pism</td><td>OCENA 4</td><td class='w'>3</td></tr><tr><td style='text-align:center'>I</td><td><a href='blok-05.html'>Blok 5. Ile naprawdę cię to kosztuje?</a></td><td>Praca sprawdzianowa</td><td>OCENA 5 (sprawdzian)</td><td class='w'>3</td></tr><tr><td style='text-align:center'>I</td><td><a href='blok-05.html'>Blok 5. Ile naprawdę cię to kosztuje?</a></td><td>Kalkulator + jedna liczba na ścianę</td><td>OCENA 6</td><td class='w'>3</td></tr><tr><td style='text-align:center'>I</td><td><a href='blok-06.html'>Blok 6. Kto to napisał — człowiek czy maszyna?</a></td><td>Zestaw pytań-pułapek + wyniki</td><td>OCENA 7</td><td class='w'>2</td></tr><tr><td style='text-align:center'>I</td><td><a href='blok-07.html'>Blok 7. Twoja strona w internecie</a></td><td>Działający adres internetowy</td><td>OCENA 8</td><td class='w'>3</td></tr><tr><td style='text-align:center'>I</td><td><a href='blok-08.html'>Blok 8. Zaprojektuj swoje miejsce pracy</a></td><td>Wydruk rzutu i wizualizacji</td><td>OCENA 9</td><td class='w'>2</td></tr><tr><td style='text-align:center'>I</td><td><a href='blok-09.html'>Blok 9. Dostań tę pracę</a></td><td>CV + portfolio roku</td><td>OCENA 10</td><td class='w'>2</td></tr><tr><td style='text-align:center'>II</td><td><a href='blok-10.html'>Blok 10. Co mówią te dane?</a></td><td>Praca sprawdzianowa</td><td>OCENA 1 (sprawdzian)</td><td class='w'>3</td></tr><tr><td style='text-align:center'>II</td><td><a href='blok-10.html'>Blok 10. Co mówią te dane?</a></td><td>Raport + 2-minutowe wystąpienie</td><td>OCENA 2</td><td class='w'>3</td></tr><tr><td style='text-align:center'>II</td><td><a href='blok-11.html'>Blok 11. Gdzie właściwie są te dane?</a></td><td>Baza + raport z testu</td><td>OCENA 3</td><td class='w'>2</td></tr><tr><td style='text-align:center'>II</td><td><a href='blok-12.html'>Blok 12. Każ komputerowi zrobić to za ciebie</a></td><td>Program + tabela testów</td><td>OCENA 4</td><td class='w'>3</td></tr><tr><td style='text-align:center'>II</td><td><a href='blok-13.html'>Blok 13. Co potrafisz?</a></td><td>Portfolio + wystąpienie</td><td>OCENA 5</td><td class='w'>2</td></tr></tbody></table>
+<h2>Skala Ocen</h2>
+<p><span class="tag">91–100% Celujący</span><span class="tag">76–90% Bardzo dobry</span><span class="tag">61–75% Dobry</span>
+<span class="tag">46–60% Dostateczny</span><span class="tag">31–45% Dopuszczający</span><span class="tag">0–30% Niedostateczny</span>
+<br><span class="note">Wartości progów mogą ulec zmianie zgodnie ze statutem szkoły.</span></p>
 
-<h2>Zasady</h2>
+<h2>Harmonogram Zaliczeń</h2>
+<table><thead><tr><th style="width:60px">Klasa</th><th>Blok</th><th>Dostarczasz</th><th style="width:170px">Ocena</th><th style="width:56px">Waga</th></tr></thead><tbody>
+<tr><td style='text-align:center'>I</td><td><a href='blok-01.html'>1. Ślad cyfrowy</a></td><td>Raport + plakat z zasadami</td><td>OCENA 1</td><td class='w'>2</td></tr>
+<tr><td style='text-align:center'>I</td><td><a href='blok-02.html'>2. Retusz foto</a></td><td>Portfolio przed/po</td><td>OCENA 2</td><td class='w'>2</td></tr>
+<tr><td style='text-align:center'>I</td><td><a href='blok-03.html'>3. Plakat w szkole</a></td><td>Gotowy, fizyczny wydruk</td><td>OCENA 3</td><td class='w'>2</td></tr>
+<tr><td style='text-align:center'>I</td><td><a href='blok-04.html'>4. Dokumenty firmowe</a></td><td>Komplet pism biznesowych</td><td>OCENA 4</td><td class='w'>3</td></tr>
+<tr><td style='text-align:center'>I</td><td><a href='blok-05.html'>5. Koszty chmury</a></td><td>Test wiedzy w praktyce</td><td>OCENA 5 (Sprawdzian)</td><td class='w'>3</td></tr>
+<tr><td style='text-align:center'>I</td><td><a href='blok-05.html'>5. Koszty chmury</a></td><td>Kalkulator + statystyki</td><td>OCENA 6</td><td class='w'>3</td></tr>
+<tr><td style='text-align:center'>I</td><td><a href='blok-06.html'>6. Człowiek vs AI</a></td><td>Zestaw pułapek i analiza danych</td><td>OCENA 7</td><td class='w'>2</td></tr>
+<tr><td style='text-align:center'>I</td><td><a href='blok-07.html'>7. Web dev start</a></td><td>Działająca strona (żywy URL)</td><td>OCENA 8</td><td class='w'>3</td></tr>
+<tr><td style='text-align:center'>I</td><td><a href='blok-08.html'>8. Ergonomia IT</a></td><td>Projekt rzutu i wizualizacji</td><td>OCENA 9</td><td class='w'>2</td></tr>
+<tr><td style='text-align:center'>I</td><td><a href='blok-09.html'>9. Rynek pracy</a></td><td>CV + Portfolio z całego roku</td><td>OCENA 10</td><td class='w'>2</td></tr>
+<tr><td style='text-align:center'>II</td><td><a href='blok-10.html'>10. Analiza danych</a></td><td>Test weryfikujący</td><td>OCENA 1 (Sprawdzian)</td><td class='w'>3</td></tr>
+<tr><td style='text-align:center'>II</td><td><a href='blok-10.html'>10. Analiza danych</a></td><td>Raport + pitch (max 2 minuty)</td><td>OCENA 2</td><td class='w'>3</td></tr>
+<tr><td style='text-align:center'>II</td><td><a href='blok-11.html'>11. Bazy danych</a></td><td>Baza SQL + logi z testów</td><td>OCENA 3</td><td class='w'>2</td></tr>
+<tr><td style='text-align:center'>II</td><td><a href='blok-12.html'>12. Automatyzacja</a></td><td>Działający skrypt automatyzujący</td><td>OCENA 4</td><td class='w'>3</td></tr>
+<tr><td style='text-align:center'>II</td><td><a href='blok-13.html'>13. Podsumowanie</a></td><td>Finalne portfolio + obrona projektu</td><td>OCENA 5</td><td class='w'>2</td></tr>
+</tbody></table>
+
+<h2>Zasady Gry</h2>
 <div class="card">
-<p><b>Kroki milowe.</b> Lekcje oznaczone w rozkładzie jako krok milowy kończą się krótkim wpisem „zrobione / do poprawy”.
-To one wyłapują ucznia, który odpadł w środku bloku, zanim zderzy się z finałem.</p>
-<p><b>Poprawa.</b> Każdy produkt można poprawić raz, w ciągu dwóch tygodni po finale. Uczeń poprawia swoją pracę,
-nie robi nowej — praca cyfrowa jest iteracyjna i to też jest treścią nauczania.</p>
-<p><b>Uczeń, który skończył wcześniej.</b> Rola asystenta jest oceniana w kryterium POKAZUJĘ — wytłumaczenie czegoś
-koledze liczy się tak samo jak własna praca.</p>
-<p><b>Czego nie oceniamy.</b> Szybkości pisania, posiadania sprzętu w domu, estetyki, jeśli nie była podanym wcześniej
-kryterium, ani tego, co uczeń umiał już przed lekcją.</p>
+<p><b>Check-pointy.</b> Weryfikujemy projekt w locie. Krótki feedback: „zrobione” albo „do poprawy”. Łapiemy błędy grubo przed deadlinem.</p>
+<p><b>Iteracja.</b> Zepsułeś coś? Masz dwa tygodnie po finale na poprawki. Pracujesz nad starym kodem, nie zaczynasz od zera – tak działa prawdziwy IT flow.</p>
+<p><b>Teamwork.</b> Skończyłeś szybciej? Pomóż zespołowi. Mentoring daje konkretne punkty w kryterium POKAZUJĘ.</p>
+<p><b>Czego NIE oceniamy.</b> Tempa klepania w klawiaturę, prywatnego sprzętu z domu, ani skilli nabytych poza zajęciami. Punktujemy to, czego nauczyłeś się na bloku.</p>
 </div>
 
-<h2>Zasady korzystania z AI</h2>
+<h2>Polityka AI</h2>
 <div class="warn">
-<p>W szkole działa model językowy na lokalnym serwerze — dane uczniów nie wychodzą na zewnątrz i nie trzeba zakładać kont.</p>
-<p><b>Wolno:</b> poprosić o pomysł, o wyjaśnienie niezrozumiałego pojęcia, o poprawę językową własnego tekstu,
-o znalezienie błędu we własnym kodzie.</p>
-<p><b>Trzeba:</b> dopisać do pracy jedno zdanie — jakiego narzędzia użyłem, o co zapytałem, co zmieniłem samodzielnie.</p>
-<p><b>Nie wolno:</b> oddać wyniku wygenerowanego przez model jako własnej pracy bez żadnej zmiany. To zeruje kryterium MOJE.</p>
-<p><b>Czego nie wpisujemy do modelu:</b> danych osobowych — swoich, kolegów ani klientów.</p>
+<p>Korzystamy z lokalnego LLM. Zero wycieków danych, pełna prywatność w szkole.</p>
+<p><b>🟢 MOŻESZ:</b> Generować architekturę, prosić o code review, tłumaczyć błędy i szukać bugów.</p>
+<p><b>🟡 MUSISZ:</b> Raportować użycie AI. Podaj prompt i dopisz, co dokładnie wdrożyłeś od siebie. Bądź w pełni transparentny.</p>
+<p><b>🔴 NIE MOŻESZ:</b> Wciskać ślepego kopiuj-wklej. To instant zero w kategorii MOJE. Kategoryczny zakaz wrzucania danych osobowych do promptów.</p>
 </div>
 </div>
-<footer>Rozkład materiału — informatyka, zakres podstawowy, technikum · klasa I (60 h) i klasa II (30 h) · rok szkolny 2026/2027<br>
-Podstawa programowa: rozporządzenie MEN z 30.01.2018 (Dz.U. 2018 poz. 467) w brzmieniu nadanym rozporządzeniem z 28.06.2024 (Dz.U. 2024 poz. 1019).</footer>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logos">
+      <a href="https://win4smes.eu/" target="_blank" rel="noopener noreferrer" title="WIN4SMEs">
+        <img src="assets/Logo-2025.png" alt="WIN4SMEs" class="logo-win">
+      </a>
+      <div class="footer-logos-secondary">
+        <a href="https://covepolska.pl/" target="_blank" rel="noopener noreferrer" title="COVE Polska">
+          <img src="assets/COVE Polska bez tła.png" alt="COVE Polska">
+        </a>
+        <img src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Co-funded by the European Union">
+      </div>
+    </div>
+    <div class="footer-right-col">
+      <div class="footer-text">
+        <strong>Informatyka 2026/2027 · Metodologia WIN4SMEs (WP3.A5)</strong><br>
+        Rozkład materiału bazuje na innowacyjnych modelach edukacyjnych (Flipped Classroom, Blended Learning).<br>
+        Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autora(-ów) i niekoniecznie odzwierciedlają poglądy Unii Europejskiej.
+      </div>
+    </div>
+  </div>
+</footer>
 </body></html>

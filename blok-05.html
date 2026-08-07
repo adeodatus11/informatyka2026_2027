@@ -9,7 +9,10 @@
 </head>
 <body>
 <header class="top">
-    <a class="brand" href="index.html">Informatyka 2026/2027</a>
+    <a class="brand" href="index.html">
+    <img src="assets/logo.jpg" alt="Logo" style="height: 28px; width: auto; border-radius: 4px;">
+    Informatyka 2026/2027
+</a>
     <nav><a href="index.html" class="active">Bloki</a><a href="plan.html">Plan roku</a><a href="podstawa.html">Podstawa</a><a href="ocenianie.html">Ocenianie</a><a href="jak-uczyc.html">Jak uczyć</a></nav>
 </header>
 <div class="wrap">
@@ -18,7 +21,7 @@
     </div>
 
     <h1>Blok 5. Ile naprawdę cię to kosztuje?</h1>
-    <p class="lead">Excel (lub dowolny arkusz kalkulacyjny) to najpotężniejsze narzędzie, jakiego nauczysz się w szkole. Ten program nie służy do robienia tabelek — on służy do analizy i podejmowania decyzji. Pierwszą rzeczą, jaką przeanalizujemy, będą Twoje własne pieniądze.</p>
+    <p class="lead">Excel (lub dowolny arkusz kalkulacyjny) to potężne narzędzie. Nie służy tylko do robienia tabelek — to kombajn do analizy i podejmowania decyzji. Przeanalizujmy najpierw Twoje wydatki.</p>
 
     <div class="meta">
         <span class="pill">Klasa I</span>
@@ -29,89 +32,91 @@
 
     <div class="two">
         <div class="box hook">
-            <span class="lbl">Dla nauczyciela: Zaczynamy od</span>
-            Kartka i pięć minut. Policz roczny koszt: telefon, dojazdy, jedzenie na mieście, subskrypcje, energetyki. Potem jedno polecenie: pomnóż to przez 5 lat. Zwykle zapada cisza. Dopiero po szoku mówisz: "Arkusz zrobi to w ułamek sekundy bez pomyłek".
+            <span class="lbl">Wstęp (Haczyk)</span>
+            Kartka i pięć minut. Policz roczny koszt: telefon, dojazdy, jedzenie na mieście, subskrypcje, energetyki. Pomnóż to przez 5 lat. Zobacz wynik. Arkusz zrobi to w ułamek sekundy.
         </div>
         <div class="box why">
-            <span class="lbl">Dla nauczyciela: Po co to uczniowi</span>
-            Bo arkusz liczy szybciej i pewniej niż jakikolwiek kalkulator, a znajomość Excela to wymóg na niemal każdym stanowisku specjalistycznym.
+            <span class="lbl">Dlaczego warto?</span>
+            Arkusz liczy błyskawicznie i bezbłędnie. Znajomość Excela to wymóg na stanowiskach specjalistycznych.
         </div>
     </div>
 
-    <h2>Krok 1: Twoje liczby</h2>
+    <h2>Wyzwanie 1: Zmierz się ze swoimi kosztami</h2>
     <div class="step-card">
-        <h3><span class="step-number">1</span> Obliczenia na kartce</h3>
-        <p class="instruction-text">
-            Zanim zrzucisz pracę na maszynę, musisz wiedzieć, czego od niej chcesz. Zastanów się nad drobnymi wydatkami, które robisz regularnie. Pudełko gum, energetyk, bilet autobusowy, subskrypcja Spotify.
-        </p>
+        <h3><span class="step-number">1</span> Policz to na kartce</h3>
+        <p class="instruction-text">Zastanów się nad regularnymi, drobnymi wydatkami.</p>
         <ol class="zad">
-            <li>Bez dotykania komputera, weź kartkę. Wypisz 6 rzeczy, na które regularnie wydajesz pieniądze.</li>
-            <li>Przy każdej wypisz kwotę (np. 15 zł) i częstotliwość w miesiącu (np. 4 razy).</li>
-            <li>Oblicz i zapisz koszt roczny (miesiąc x 12). Pomnóż to przez 5 lat. Pamiętaj tę liczbę.</li>
+            <li>Weź kartkę.</li>
+            <li>Wypisz 6 rzeczy, na które regularnie wydajesz pieniądze (np. gumy, energetyki, Spotify).</li>
+            <li>Przy każdej wypisz kwotę (np. 15) i częstotliwość w miesiącu (np. 4).</li>
+            <li>Oblicz koszt roczny (miesiąc × 12) i pomnóż go przez 5 lat. Zanotuj wynik.</li>
         </ol>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Bądź szczery, to dla Ciebie. Wynik może Cię zaskoczyć.</div>
     </div>
 
-    <h2>Krok 2: Formuły zamiast kalkulatora</h2>
+    <h2>Wyzwanie 2: Przejmij kontrolę z formułami</h2>
     <div class="step-card">
-        <h3><span class="step-number">2</span> Pierwsza komórka</h3>
-        <p class="instruction-text">
-            Przenosimy się do Excela (lub LibreOffice Calc / Google Sheets). Każda komórka ma swój adres, np. <code>B2</code>. Żeby arkusz wiedział, że ma coś policzyć, zawsze, absolutnie <strong>zawsze musisz zacząć od znaku równości ( = )</strong>.
-        </p>
+        <h3><span class="step-number">2</span> Pierwsze obliczenia w arkuszu</h3>
+        <p class="instruction-text">Zbuduj swój pierwszy automat liczący. Zawsze zaczynaj od znaku <code>=</code>.</p>
+        <ol class="zad">
+            <li>Otwórz arkusz (Excel lub Sheets).</li>
+            <li>W kolumnie A wpisz nazwy 6 wydatków.</li>
+            <li>W kolumnie B wpisz koszt jednorazowy (tylko liczby, bez waluty).</li>
+            <li>W kolumnie C wpisz częstotliwość w miesiącu.</li>
+            <li>W kolumnie D kliknij komórkę i wpisz <code>=</code>. Kliknij cenę, wpisz <code>*</code> i kliknij ilość (np. <code>=B2*C2</code>). Wciśnij Enter.</li>
+            <li>Chwyć prawy dolny róg komórki z wynikiem i przeciągnij w dół, aby skopiować formułę.</li>
+        </ol>
         <div class="warn">
-            <strong>Błąd nowicjusza:</strong> Jeśli wpiszesz "5 zł", arkusz uzna to za tekst (jak wyraz "pies") i nie pozwoli Ci tego dodać. Wpisz samo <code>5</code>. Walutę "zł" dodasz za pomocą tzw. Formatowania Komórek.
+            <strong>Błąd nowicjusza:</strong> Wpisuj same liczby (np. <code>5</code>, a nie "5 zł"). Walutę zmienisz przez Formatowanie komórek.
         </div>
-        <ol class="zad">
-            <li>W kolumnie A wpisz nazwy swoich 6 wydatków. W B – koszt jednorazowy. W C – ile razy w miesiącu.</li>
-            <li>W kolumnie D kliknij komórkę, wpisz <code>=</code>, kliknij na komórkę z ceną (np. B2), wciśnij znak <code>*</code> (gwiazdka to mnożenie na klawiaturze) i kliknij na komórkę z ilością (np. C2). Wciśnij Enter. Formuła powinna wyglądać tak: <code>=B2*C2</code>.</li>
-            <li>Złap za prawy dolny róg tej komórki (mały zielony/niebieski kwadracik) i przeciągnij w dół, by "skopiować" formułę dla pozostałych wydatków!</li>
-        </ol>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Gwiazdka <code>*</code> to mnożenie, ukośnik <code>/</code> to dzielenie.</div>
     </div>
 
-    <h2>Krok 3: Prawdziwa moc — Funkcje</h2>
+    <h2>Wyzwanie 3: Zautomatyzuj to z funkcjami</h2>
     <div class="step-card">
-        <h3><span class="step-number">3</span> SUMA, ŚREDNIA, MAX, MIN</h3>
-        <p class="instruction-text">
-            Gdybyś miał dodać do siebie 1000 rachunków wpisując <code>=B2+B3+B4...</code>, trwałoby to wieki. Z pomocą przychodzą gotowe pakiety obliczeniowe, czyli Funkcje. Zaznaczasz cały zakres np. <code>B2:B1000</code>.
-        </p>
+        <h3><span class="step-number">3</span> Gotowe pakiety obliczeniowe</h3>
+        <p class="instruction-text">Użyj funkcji, aby nie wpisywać wszystkiego ręcznie.</p>
         <ol class="zad">
-            <li>Kliknij w komórkę pod podsumowaniem wszystkich Twoich rocznych wydatków.</li>
-            <li>Wpisz <code>=SUMA(</code> i myszką zaznacz wszystkie komórki powyżej, które chcesz dodać. Zamknij nawias <code>)</code> i wciśnij Enter. Otrzymasz łączny roczny koszt.</li>
-            <li>Użyj funkcji <code>=MAX(zakres)</code> by automatycznie znaleźć swój najwyższy wydatek z listy.</li>
-            <li>Zmień cenę najtańszego wydatku. Obserwuj jak cała <strong>SUMA zaktualizowała się całkowicie sama</strong> w ułamku sekundy. <span class="tag milestone">KROK MILOWY</span></li>
+            <li>Kliknij komórkę poniżej podsumowania wydatków.</li>
+            <li>Wpisz <code>=SUMA(</code>.</li>
+            <li>Zaznacz myszką wszystkie komórki do dodania, wpisz <code>)</code> i wciśnij Enter.</li>
+            <li>Użyj funkcji <code>=MAX(zakres)</code>, by znaleźć najwyższy wydatek.</li>
+            <li>Zmień najtańszy wydatek i zobacz, jak wynik aktualizuje się automatycznie. <span class="tag milestone">KROK MILOWY</span></li>
         </ol>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Jeśli zgubisz się przy zaznaczaniu, kliknij ESC i spróbuj ponownie.</div>
     </div>
     
-    <h2>Krok 4: Adresowanie Bezwzględne (Blokada dolarem $)</h2>
+    <h2>Wyzwanie 4: Zablokuj komórki dolarem ($)</h2>
     <div class="step-card">
-        <h3><span class="step-number">4</span> Klawisz F4 i znak $</h3>
-        <p class="instruction-text">
-            Chcesz zobaczyć, ile będą wynosiły te koszty za rok, jeśli w związku z inflacją wszystkie wzrosną o 12%? Wystarczy wpisać 12% w jednej oddzielnej komórce i do niej mnożyć. Ale uwaga – przy "przeciąganiu" formuły w dół, Excel przesuwa wszystkie adresy. Musisz "zablokować" komórkę z inflacją.
-        </p>
+        <h3><span class="step-number">4</span> Zablokuj komórki</h3>
+        <p class="instruction-text">Gdy przeciągasz formuły, arkusz przesuwa adresy. Użyj dolara, by je zablokować.</p>
         <ol class="zad">
-            <li>Wpisz <code>1,12</code> w komórce np. F1.</li>
-            <li>W pustej kolumnie zacznij formułę: <code>=C2*F1</code>.</li>
-            <li>Teraz najważniejsze: kliknij myszką na <code>F1</code> w pasku formuły i wciśnij klawisz <strong>F4</strong> na klawiaturze. Zrobi się z tego <code>$F$1</code> (znaki dolara blokują adres). Wciśnij Enter.</li>
-            <li>Przeciągnij formułę w dół. Widzisz? C2 zmieniło się na C3, ale F1 zostało nienaruszone jako $F$1. Każdy wydatek mnoży się przez tę samą wartość inflacji.</li>
+            <li>Wpisz <code>1,12</code> (12% inflacji) w oddzielnej komórce, np. F1.</li>
+            <li>W nowej kolumnie stwórz formułę: <code>=D2*F1</code>.</li>
+            <li>Kliknij <code>F1</code> w pasku formuły i wciśnij <strong>F4</strong> (zmieni się na <code>$F$1</code>). Wciśnij Enter.</li>
+            <li>Przeciągnij w dół. Koszty pomnożą się przez tę samą wartość.</li>
         </ol>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Wciskaj F4 kilkukrotnie, by zobaczyć jak dolar zmienia pozycję.</div>
     </div>
 
-    <h2>Krok 5: Inteligencja arkusza - JEŻELI</h2>
+    <h2>Wyzwanie 5: Naucz arkusz decydować (JEŻELI)</h2>
     <div class="step-card">
-        <h3><span class="step-number">5</span> Funkcja warunkowa i formatowanie</h3>
-        <p class="instruction-text">
-            Arkusz potrafi sam podejmować proste decyzje. Zróbmy tak, by wyświetlił napis "DUŻO!", jeśli jakikolwiek wydatek przekroczył w miesiącu 150 zł, a "OK", jeśli jest mniejszy.
-        </p>
+        <h3><span class="step-number">5</span> Funkcja warunkowa</h3>
+        <p class="instruction-text">Oznacz automatycznie wydatki powyżej 150 zł.</p>
         <ol class="zad">
-            <li>W nowej kolumnie wpisz funkcję: <code>=JEŻELI(D2>150; "DUŻO!"; "OK")</code>. Średnik rozdziela elementy funkcji.</li>
-            <li>Przeciągnij ją w dół. Wpisane ręcznie wartości testowe upewnią Cię, że formuła zadziałała (zmień wydatek tak by przekroczył 150 zł i zobacz czy napis się zmienił).</li>
-            <li>Na zakładce Narzędzia Główne znajdź <strong>Formatowanie Warunkowe</strong>. Ustaw regułę tak, by komórki zawierające napis "DUŻO!" automatycznie stawały się jaskrawoczerwone.</li>
+            <li>W nowej kolumnie wpisz: <code>=JEŻELI(D2>150; "DUŻO!"; "OK")</code>.</li>
+            <li>Wciśnij Enter i przeciągnij formułę w dół.</li>
+            <li>Zmień testowo jeden z wydatków, by sprawdzić, czy formuła zadziała.</li>
+            <li>Otwórz menu <strong>Formatowanie Warunkowe</strong>.</li>
+            <li>Ustaw regułę: jeśli komórka zawiera tekst "DUŻO!", zmień jej kolor na czerwony.</li>
         </ol>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Tekst w formule JEŻELI zawsze wkładaj w cudzysłowy.</div>
     </div>
 
     <div class="box fin">
-        <span class="lbl">Finał bloku: Zawodowy kalkulator i sprawdzian</span>
-        <p>Twoim zadaniem projektowym (przed sprawdzianem z Excela) jest stworzenie "Kalkulatora zawodowego" (Kalkulator kosztów farbowania z marżą dla Fryzjerów lub Kalkulator marży i ceny dla Handlowców).</p>
-        <p>Wszystkie dane wejściowe muszą być wyraźnie wydzielone od obliczeń. Połowa klasy przesiądzie się do sąsiednich komputerów, by w Twoim kalkulatorze wpisać własne "ekstremalne" dane i sprawdzić czy się posypie (czy nie wywali błędów takich jak <code>#ARG!</code> lub <code>#DZIEL/0!</code>). Anonimowe zestawienia najwyższych miesięcznych wydatków (bez nazwisk) trafią na tablicę ścienną w klasie.</p>
+        <span class="lbl">Wyzwanie Finałowe: Twój Kalkulator Zawodowy</span>
+        <p>Stwórz "Kalkulator zawodowy" dopasowany do Twojego zawodu (np. koszty farbowania dla fryzjera, kalkulator marży dla handlowca).</p>
+        <p>Wydziel wyraźnie dane wejściowe od obliczeń. Udostępnij komputer sąsiadowi, by wpisał ekstremalne dane i przetestował, czy kalkulator jest odporny na błędy (np. <code>#ARG!</code>).</p>
         <p><span class="tag grade">OCENA 5 (Sprawdzian)</span> <span class="tag grade">OCENA 6 (Kalkulator)</span></p>
     </div>
 
@@ -121,8 +126,26 @@
     </div>
 </div>
 <footer>
-    Rozkład materiału — informatyka, zakres podstawowy, technikum · klasa I (60 h) i klasa II (30 h) · rok szkolny 2026/2027<br>
-    Podstawa programowa: rozporządzenie MEN z 30.01.2018 (Dz.U. 2018 poz. 467) w brzmieniu nadanym rozporządzeniem z 28.06.2024 (Dz.U. 2024 poz. 1019).
+  <div class="footer-inner">
+    <div class="footer-logos">
+      <a href="https://win4smes.eu/" target="_blank" rel="noopener noreferrer" title="WIN4SMEs">
+        <img src="assets/Logo-2025.png" alt="WIN4SMEs" class="logo-win">
+      </a>
+      <div class="footer-logos-secondary">
+        <a href="https://covepolska.pl/" target="_blank" rel="noopener noreferrer" title="COVE Polska">
+          <img src="assets/COVE Polska bez tła.png" alt="COVE Polska">
+        </a>
+        <img src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Co-funded by the European Union">
+      </div>
+    </div>
+    <div class="footer-right-col">
+      <div class="footer-text">
+        <strong>Informatyka 2026/2027 · Metodologia WIN4SMEs (WP3.A5)</strong><br>
+        Rozkład materiału bazuje na innowacyjnych modelach edukacyjnych (Flipped Classroom, Blended Learning).<br>
+        Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autora(-ów) i niekoniecznie odzwierciedlają poglądy Unii Europejskiej.
+      </div>
+    </div>
+  </div>
 </footer>
 </body>
 </html>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">PARTS - anatomia dobrego promptu</title>
+  <desc id="desc">Infografika pokazujaca piec elementow dobrego promptu: Persona, Aim, Recipients, Tone i Structure.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect x="40" y="40" width="1520" height="920" rx="32" fill="#ffffff" filter="url(#shadow)"/>
+
+  <text x="90" y="128" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#2563eb">MODUL 2 - PROMPTING</text>
+  <text x="90" y="182" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="800" fill="#0f172a">PARTS - anatomia dobrego promptu</text>
+  <text x="90" y="228" font-family="Inter, Arial, sans-serif" font-size="24" fill="#475569">Dobry prompt dziala jak dobra instrukcja dla wspolpracownika: mowi kto, co, dla kogo, jakim tonem i w jakim formacie.</text>
+
+  <rect x="90" y="280" width="280" height="520" rx="26" fill="#f8fafc" stroke="#dbeafe"/>
+  <rect x="90" y="280" width="280" height="108" rx="26" fill="#dbeafe"/>
+  <text x="130" y="356" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="800" fill="#1d4ed8">P</text>
+  <text x="210" y="338" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#0f172a">Persona</text>
+  <text x="210" y="370" font-family="Inter, Arial, sans-serif" font-size="18" fill="#1e3a8a">Jaka role ma przyjac AI?</text>
+  <text x="126" y="442" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Pytanie kontrolne</text>
+  <text x="126" y="478" font-family="Inter, Arial, sans-serif" font-size="22" fill="#334155">Kim ma byc AI w tym zadaniu?</text>
+  <text x="126" y="548" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">Przyklad:</text>
+  <text x="126" y="582" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">"Dzialaj jako nauczyciel historii"</text>
+  <text x="126" y="642" font-family="Inter, Arial, sans-serif" font-size="18" fill="#64748b">Mozliwe role:</text>
+  <text x="126" y="676" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- nauczyciel lub edukator</text>
+  <text x="126" y="706" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- koordynator projektu</text>
+  <text x="126" y="736" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- analityk lub redaktor</text>
+
+  <rect x="390" y="280" width="280" height="520" rx="26" fill="#f8fafc" stroke="#c7f9cc"/>
+  <rect x="390" y="280" width="280" height="108" rx="26" fill="#dcfce7"/>
+  <text x="430" y="356" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="800" fill="#15803d">A</text>
+  <text x="510" y="338" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#0f172a">Aim</text>
+  <text x="510" y="370" font-family="Inter, Arial, sans-serif" font-size="18" fill="#166534">Co ma powstac?</text>
+  <text x="426" y="442" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Pytanie kontrolne</text>
+  <text x="426" y="478" font-family="Inter, Arial, sans-serif" font-size="22" fill="#334155">Jaki jest cel odpowiedzi?</text>
+  <text x="426" y="548" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">Przyklad:</text>
+  <text x="426" y="582" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">"Przygotuj konspekt lekcji 45 min"</text>
+  <text x="426" y="642" font-family="Inter, Arial, sans-serif" font-size="18" fill="#64748b">Mozliwe cele:</text>
+  <text x="426" y="676" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- mail lub ogloszenie</text>
+  <text x="426" y="706" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- analiza dokumentu lub ankiety</text>
+  <text x="426" y="736" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- plan, lista lub raport</text>
+
+  <rect x="690" y="280" width="280" height="520" rx="26" fill="#f8fafc" stroke="#fde68a"/>
+  <rect x="690" y="280" width="280" height="108" rx="26" fill="#fef3c7"/>
+  <text x="730" y="356" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="800" fill="#b45309">R</text>
+  <text x="810" y="338" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#0f172a">Recipients</text>
+  <text x="810" y="370" font-family="Inter, Arial, sans-serif" font-size="18" fill="#92400e">Dla kogo jest wynik?</text>
+  <text x="726" y="442" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Pytanie kontrolne</text>
+  <text x="726" y="478" font-family="Inter, Arial, sans-serif" font-size="22" fill="#334155">Kto bedzie czytal lub uzywal wyniku?</text>
+  <text x="726" y="548" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">Przyklad:</text>
+  <text x="726" y="582" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">"Dla rodzicow klasy 6"</text>
+  <text x="726" y="642" font-family="Inter, Arial, sans-serif" font-size="18" fill="#64748b">Przyklady odbiorcow:</text>
+  <text x="726" y="676" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- uczniowie konkretnej klasy</text>
+  <text x="726" y="706" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- rodzice lub zespol</text>
+  <text x="726" y="736" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- partnerzy projektu lub dyrekcja</text>
+
+  <rect x="990" y="280" width="280" height="520" rx="26" fill="#f8fafc" stroke="#fbcfe8"/>
+  <rect x="990" y="280" width="280" height="108" rx="26" fill="#fce7f3"/>
+  <text x="1030" y="356" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="800" fill="#be185d">T</text>
+  <text x="1110" y="338" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#0f172a">Tone</text>
+  <text x="1110" y="370" font-family="Inter, Arial, sans-serif" font-size="18" fill="#9d174d">Jak ma brzmiec odpowiedz?</text>
+  <text x="1026" y="442" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Pytanie kontrolne</text>
+  <text x="1026" y="478" font-family="Inter, Arial, sans-serif" font-size="22" fill="#334155">Jaki styl i ton beda najlepsze?</text>
+  <text x="1026" y="548" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">Przyklad:</text>
+  <text x="1026" y="582" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">"Ton: prosty, rzeczowy, przyjazny"</text>
+  <text x="1026" y="642" font-family="Inter, Arial, sans-serif" font-size="18" fill="#64748b">Najczestsze wybory:</text>
+  <text x="1026" y="676" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- formalny lub profesjonalny</text>
+  <text x="1026" y="706" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- prosty i angazujacy</text>
+  <text x="1026" y="736" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- spokojny i neutralny</text>
+
+  <rect x="1290" y="280" width="220" height="520" rx="26" fill="#f8fafc" stroke="#cbd5e1"/>
+  <rect x="1290" y="280" width="220" height="108" rx="26" fill="#e2e8f0"/>
+  <text x="1330" y="356" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="800" fill="#334155">S</text>
+  <text x="1410" y="338" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" text-anchor="middle" fill="#0f172a">Structure</text>
+  <text x="1410" y="370" font-family="Inter, Arial, sans-serif" font-size="18" text-anchor="middle" fill="#334155">W jakim formacie?</text>
+  <text x="1326" y="442" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Pytanie kontrolne</text>
+  <text x="1326" y="478" font-family="Inter, Arial, sans-serif" font-size="22" fill="#334155">Jak ma wygladac wynik?</text>
+  <text x="1326" y="548" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">Przyklad:</text>
+  <text x="1326" y="582" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">"Tabela: czas | aktywnosc | materialy"</text>
+  <text x="1326" y="642" font-family="Inter, Arial, sans-serif" font-size="18" fill="#64748b">Typowe formaty:</text>
+  <text x="1326" y="676" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- lista krokow</text>
+  <text x="1326" y="706" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- mail max 120 slow</text>
+  <text x="1326" y="736" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">- tabela lub akapit</text>
+
+  <rect x="90" y="836" width="1420" height="90" rx="22" fill="#0f172a"/>
+  <text x="130" y="888" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">Dobry prompt = Persona + Aim + Recipients + Tone + Structure</text>
+  <text x="130" y="916" font-family="Inter, Arial, sans-serif" font-size="20" fill="#cbd5e1">Nie zawsze potrzebujesz wszystkich 5 elementow, ale kazdy z nich zmniejsza ryzyko ogolnej i malo uzytecznej odpowiedzi.</text>
+</svg>

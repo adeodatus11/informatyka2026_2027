@@ -652,3 +652,103 @@ pre {
   body { background: white; color: black; }
   .card, .box, table { box-shadow: none; border: 1px solid #ccc; }
 }
+
+/* WIN4SMEs & EU Footer Branding */
+.footer-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, #fff 0%, #e8f0fa 100%);
+  border-radius: 16px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+.footer-logos .logo-win {
+  height: 70px;
+  object-fit: contain;
+}
+.footer-logos-secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  width: 140px;
+}
+.footer-logos-secondary img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.footer-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: right;
+  flex: 1;
+  min-width: 0;
+}
+.footer-text {
+  line-height: 1.6;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.footer-text strong {
+  color: var(--text-primary);
+}
+
+/* Header Logo */
+header.top .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+header.top .brand img {
+  height: 36px;
+  border-radius: 6px;
+}
+
+/* Pro-Tip Component */
+.pro-tip {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-left: 4px solid #0284c7;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 24px 0;
+  display: flex;
+  gap: 12px;
+  font-size: 15px;
+  color: #0369a1;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.1);
+}
+.pro-tip::before {
+  content: '💡';
+  font-size: 20px;
+}
+.pro-tip strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #075985;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pro-tip {
+    background: linear-gradient(135deg, #082f49 0%, #0c4a6e 100%);
+    border-left-color: #38bdf8;
+    color: #bae6fd;
+  }
+  .pro-tip strong {
+    color: #e0f2fe;
+  }
+}

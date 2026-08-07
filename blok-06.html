@@ -9,7 +9,10 @@
 </head>
 <body>
 <header class="top">
-    <a class="brand" href="index.html">Informatyka 2026/2027</a>
+    <a class="brand" href="index.html">
+    <img src="assets/logo.jpg" alt="Logo" style="height: 28px; width: auto; border-radius: 4px;">
+    Informatyka 2026/2027
+</a>
     <nav><a href="index.html" class="active">Bloki</a><a href="plan.html">Plan roku</a><a href="podstawa.html">Podstawa</a><a href="ocenianie.html">Ocenianie</a><a href="jak-uczyc.html">Jak uczyć</a></nav>
 </header>
 <div class="wrap">
@@ -18,7 +21,7 @@
     </div>
 
     <h1>Blok 6. Kto to napisał — człowiek czy maszyna?</h1>
-    <p class="lead">Narzędzia AI mogą ułatwić Ci pracę w przyszłości, np. pisząc opisy usług, odpowiadając na trudne maile klientów czy tłumacząc teksty. Jednak modele językowe to nie "wszechwiedzące maszyny" – to generatory tekstu, które potrafią kłamać (halucynować) z pełnym przekonaniem. Nauczmy się ich używać i... nie dać się im oszukać.</p>
+    <p class="lead">Narzędzia AI piszą maile, tłumaczą teksty i generują pomysły. Ale modele językowe to nie wszechwiedzące wyrocznie. To maszyny przewidujące słowa, które potrafią kłamać (halucynować) z pełnym przekonaniem. Poznaj ich słabe punkty.</p>
 
     <div class="meta">
         <span class="pill">Klasa I</span>
@@ -29,61 +32,63 @@
 
     <div class="two">
         <div class="box hook">
-            <span class="lbl">Dla nauczyciela: Zaczynamy od</span>
-            Dziesięć krótkich tekstów na rzutniku. Klasa głosuje: człowiek czy maszyna? Po dziesiątym tekście podajesz odpowiedzi. Trafialność wynosi zwykle 50%, czyli tyle, ile daje rzut monetą. Uczeń uświadamia sobie, że gołym okiem tego nie pozna.
+            <span class="lbl">Wstęp (Haczyk)</span>
+            Dziesięć krótkich tekstów na rzutniku. Klasa głosuje: człowiek czy maszyna? Po dziesiątym tekście sprawdzamy odpowiedzi. Trafialność wynosi zwykle 50% – tyle samo daje rzut monetą. Ocenianie "na oko" nie działa.
         </div>
         <div class="box why">
-            <span class="lbl">Dla nauczyciela: Po co to uczniowi</span>
-            AI będzie używane w każdej pracy, ale napisze zmyśloną bzdurę bardzo przekonującym tonem, jeśli nie będziesz potrafił tego zweryfikować.
+            <span class="lbl">Dlaczego warto?</span>
+            AI wchodzi do każdej branży. Jeśli nie potrafisz zweryfikować wygenerowanych treści, narazisz siebie lub firmę na kosztowne błędy.
         </div>
     </div>
 
-    <h2>Krok 1: Jak działa AI?</h2>
+    <h2>Wyzwanie 1: Jak działa AI?</h2>
     <div class="step-card">
-        <h3><span class="step-number">1</span> Statystyka, a nie inteligencja</h3>
+        <h3><span class="step-number">1</span> Statystyka zamiast inteligencji</h3>
         <p class="instruction-text">
-            Modele takie jak ChatGPT nie "myślą" i nie "wiedzą". One po prostu przewidują, jakie powinno być następne słowo w zdaniu, bazując na ogromnej liczbie tekstów z internetu. Jeśli model nie ma na coś odpowiedzi, czasem po prostu dobierze "najbardziej prawdopodobne słowo", tworząc kompletną bzdurę, tzw. <strong>Halucynację</strong>.
+            Modele takie jak ChatGPT przewidują kolejne słowo na bazie tekstów z internetu. Kiedy brakuje im wiedzy, zmyślają (tworzą halucynacje).
         </p>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Data odcięcia to moment zakończenia treningu modelu. AI często nie zna najnowszych faktów.</div>
         <ol class="zad">
-            <li>Nauczyciel udostępni Wam dostęp do <em>Lokalnego Modelu Językowego</em> działającego na szkolnym serwerze (dzięki temu Wasze dane nigdzie nie wyciekają!).</li>
-            <li>Zadaj mu pytanie na temat nowości rynkowych z wczoraj (np. kto wygrał wczorajszy duży mecz). Co odpowiedział? Skąd wziął odpowiedź?</li>
-            <li>Zapisz w notatkach: Dlaczego AI nie zawsze wie, co dzieje się dzisiaj? (Słowo klucz: <em>Data odcięcia wiedzy</em>).</li>
+            <li><strong>Otwórz</strong> Lokalny Model Językowy (link od nauczyciela).</li>
+            <li><strong>Zapytaj</strong> o wydarzenia z ostatnich 24 godzin (np. wynik dużego meczu).</li>
+            <li><strong>Zanotuj</strong>: Co AI odpowiedziało i skąd wzięło informacje?</li>
         </ol>
     </div>
 
-    <h2>Krok 2: Weryfikacja to podstawa</h2>
+    <h2>Wyzwanie 2: Weryfikacja to podstawa</h2>
     <div class="step-card">
-        <h3><span class="step-number">2</span> Polowanie na kłamstwa (Halucynacje)</h3>
+        <h3><span class="step-number">2</span> Polowanie na kłamstwa</h3>
         <p class="instruction-text">
-            Nigdy nie ufaj AI w kwestii cen, przepisów, odpowiednich dawek kosmetyków chemicznych czy informacji o osobach fizycznych.
+            Nie ufaj AI w kwestii cen, prawa, medycyny czy substancji chemicznych.
         </p>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Zawsze sprawdzaj kluczowe fakty u źródła – w aktach prawnych czy kartach produktów.</div>
         <ol class="zad">
-            <li>Zapytaj AI o konkretną, rzadką procedurę w Twojej branży (np. skomplikowany zabieg chemiczny na włosy lub przepis prawny dotyczący reklamacji specjalistycznego sprzętu).</li>
-            <li>Przeczytaj uważnie wygenerowaną odpowiedź.</li>
-            <li>Teraz sprawdź podane przez AI fakty w wiarygodnym źródle (np. oficjalnym portalu rządowym, na stronie producenta).</li>
-            <li>Znajdź co najmniej jeden błąd lub niedomówienie, które w prawdziwym życiu mogłoby skończyć się tragicznie/kosztownie. Zapisz go. <span class="tag milestone">KROK MILOWY</span></li>
+            <li><strong>Zapytaj</strong> AI o rzadką procedurę w Twojej branży.</li>
+            <li><strong>Przeczytaj</strong> odpowiedź.</li>
+            <li><strong>Zweryfikuj</strong> informacje na stronach oficjalnych instytucji lub producentów.</li>
+            <li><strong>Wskaż</strong> błąd lub niedomówienie groźne w skutkach. <span class="tag milestone">KROK MILOWY</span></li>
         </ol>
     </div>
 
-    <h2>Krok 3: Inżynieria poleceń (Prompt Engineering)</h2>
+    <h2>Wyzwanie 3: Prompt Engineering</h2>
     <div class="step-card">
-        <h3><span class="step-number">3</span> 4 składniki dobrego Prompta</h3>
+        <h3><span class="step-number">3</span> 4 zasady skutecznego prompta</h3>
         <p class="instruction-text">
-            Jak pytasz, taką masz odpowiedź. Złe polecenie: <em>"Napisz coś o fryzjerze"</em> da bełkot. Dobre polecenie musi zawierać: <strong>Kontekst</strong> (kim jestem), <strong>Zadanie</strong> (co chcę osiągnąć), <strong>Formę</strong> (np. e-mail, tabela) i <strong>Ograniczenia</strong> (czego nie robić).
+            Dobre polecenie to: <strong>Kontekst</strong> (kim jesteś), <strong>Zadanie</strong> (co robić), <strong>Forma</strong> (tabela, mail) i <strong>Ograniczenia</strong> (czego unikać).
         </p>
         <ol class="zad">
-            <li>Wypróbuj w modelu polecenie początkowe: <em>"Odpowiedz na negatywną opinię klienta, że było za drogo"</em>.</li>
-            <li>Teraz stwórz lepszy prompt. Przepisz i uzupełnij: <br>
+            <li><strong>Wpisz</strong> słabe polecenie: <em>"Odpowiedz na negatywną opinię klienta, że było za drogo"</em>.</li>
+            <li><strong>Skopiuj</strong> i <strong>uzupełnij</strong> lepszy prompt:<br>
                 <em>"Jesteś właścicielem profesjonalnego [Twoja branża]. Napisz odpowiedź na negatywną opinię. Bądź uprzejmy, ale stanowczy. Format: mail na 3-4 zdania. Ograniczenia: nie obiecuj zwrotu pieniędzy, używaj prostego języka bez emotikonów."</em>
             </li>
-            <li>Zapisz oba prompty i porównaj jakość uzyskanej odpowiedzi.</li>
+            <li><strong>Porównaj</strong> obie odpowiedzi i oceń różnicę w jakości.</li>
         </ol>
     </div>
 
     <div class="box fin">
-        <span class="lbl">Finał bloku: Pułapka na AI</span>
-        <p>Pracując w grupach, stwórzcie 5 trudnych pytań branżowych (pytań "pułapek"), na które znacie idealną odpowiedź, ale podejrzewacie, że sztuczna inteligencja z powodu braku kontekstu napisze bzdurę.</p>
-        <p>Następnie grupy wymieniają się swoimi zestawami pytań i zlecają ich rozwiązanie Modelowi. Wygrywa grupa, której pytania sprowokowały najwięcej AI-owych halucynacji! Oceniana jest zdolność do wskazania w czym dokładnie pomyliła się maszyna. <span class="tag grade">OCENA 7</span></p>
+        <span class="lbl">Wyzwanie Finałowe: Pułapka na AI</span>
+        <p>Pracując w grupach, stwórzcie 5 trudnych pytań branżowych (pytań "pułapek"), na które znacie odpowiedź. Podejrzewacie jednak, że z powodu braku kontekstu AI wygeneruje bzdurę.</p>
+        <p>Wymieńcie się pytaniami z inną grupą i wprowadźcie je do modelu. Wygrywa zespół, który sprowokuje najwięcej halucynacji AI i dokładnie wskaże błędy w odpowiedzi. <span class="tag grade">OCENA 7</span></p>
     </div>
 
     <div class="prevnext">
@@ -92,8 +97,26 @@
     </div>
 </div>
 <footer>
-    Rozkład materiału — informatyka, zakres podstawowy, technikum · klasa I (60 h) i klasa II (30 h) · rok szkolny 2026/2027<br>
-    Podstawa programowa: rozporządzenie MEN z 30.01.2018 (Dz.U. 2018 poz. 467) w brzmieniu nadanym rozporządzeniem z 28.06.2024 (Dz.U. 2024 poz. 1019).
+  <div class="footer-inner">
+    <div class="footer-logos">
+      <a href="https://win4smes.eu/" target="_blank" rel="noopener noreferrer" title="WIN4SMEs">
+        <img src="assets/Logo-2025.png" alt="WIN4SMEs" class="logo-win">
+      </a>
+      <div class="footer-logos-secondary">
+        <a href="https://covepolska.pl/" target="_blank" rel="noopener noreferrer" title="COVE Polska">
+          <img src="assets/COVE Polska bez tła.png" alt="COVE Polska">
+        </a>
+        <img src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Co-funded by the European Union">
+      </div>
+    </div>
+    <div class="footer-right-col">
+      <div class="footer-text">
+        <strong>Informatyka 2026/2027 · Metodologia WIN4SMEs (WP3.A5)</strong><br>
+        Rozkład materiału bazuje na innowacyjnych modelach edukacyjnych (Flipped Classroom, Blended Learning).<br>
+        Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autora(-ów) i niekoniecznie odzwierciedlają poglądy Unii Europejskiej.
+      </div>
+    </div>
+  </div>
 </footer>
 </body>
 </html>

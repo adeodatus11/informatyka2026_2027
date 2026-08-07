@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Zasada proporcji - kiedy AI daje realna wartosc</title>
+  <desc id="desc">Infografika o swiadomym korzystaniu z AI. Pokazuje uzycie o wysokiej wartosci, uzycie o niskiej wartosci i cztery pytania kontrolne.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect x="40" y="40" width="1520" height="920" rx="32" fill="#ffffff" filter="url(#shadow)"/>
+
+  <text x="90" y="128" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#15803d">MODUL 6 - ZROWNOWAZONE AI</text>
+  <text x="90" y="182" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="800" fill="#0f172a">Zasada proporcji - kiedy AI daje realna wartosc</text>
+  <text x="90" y="228" font-family="Inter, Arial, sans-serif" font-size="24" fill="#475569">Nie chodzi o to, by uzywac AI wszedzie. Chodzi o to, by siegac po nia wtedy, gdy zysk czasu, jakosci lub dostepnosci jest wiekszy niz koszt kolejnych iteracji.</text>
+
+  <rect x="90" y="292" width="675" height="340" rx="28" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <rect x="90" y="292" width="675" height="96" rx="28" fill="#16a34a"/>
+  <text x="130" y="352" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff">UZYCIE O WYRAZNEJ WARTOSCI</text>
+  <text x="130" y="384" font-family="Inter, Arial, sans-serif" font-size="19" fill="#dcfce7">AI pomaga osiagnac konkretny efekt szybciej lub lepiej</text>
+  <text x="128" y="448" font-family="Inter, Arial, sans-serif" font-size="23" fill="#166534">- tworzysz bardziej dostepna wersje materialu dla ucznia</text>
+  <text x="128" y="490" font-family="Inter, Arial, sans-serif" font-size="23" fill="#166534">- porzadkujesz dlugi protokol albo dokument z wieloma zadaniami</text>
+  <text x="128" y="532" font-family="Inter, Arial, sans-serif" font-size="23" fill="#166534">- skracasz czas pisania raportu lub maila roboczego</text>
+  <text x="128" y="574" font-family="Inter, Arial, sans-serif" font-size="23" fill="#166534">- przygotowujesz pierwsza wersje, ktora i tak sprawdza czlowiek</text>
+
+  <rect x="835" y="292" width="675" height="340" rx="28" fill="#fff7ed" stroke="#fdba74"/>
+  <rect x="835" y="292" width="675" height="96" rx="28" fill="#f97316"/>
+  <text x="875" y="352" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff">UZYCIE O NISKIEJ WARTOSCI</text>
+  <text x="875" y="384" font-family="Inter, Arial, sans-serif" font-size="19" fill="#ffedd5">AI generuje kolejne wersje bez wyraznego zysku</text>
+  <text x="873" y="448" font-family="Inter, Arial, sans-serif" font-size="23" fill="#9a3412">- tworzysz wiele prawie identycznych wariantow bez celu</text>
+  <text x="873" y="490" font-family="Inter, Arial, sans-serif" font-size="23" fill="#9a3412">- prosisz AI o cos, co szybciej poprawisz recznie</text>
+  <text x="873" y="532" font-family="Inter, Arial, sans-serif" font-size="23" fill="#9a3412">- iterujesz dalej, chociaz material jest juz wystarczajaco dobry</text>
+  <text x="873" y="574" font-family="Inter, Arial, sans-serif" font-size="23" fill="#9a3412">- zlecasz AI zadanie bez sprawdzenia, czy wynik bedzie potrzebny</text>
+
+  <text x="90" y="694" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#0f172a">Zanim uruchomisz AI, zadaj sobie 4 pytania</text>
+
+  <rect x="90" y="724" width="330" height="132" rx="22" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="118" y="774" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#1d4ed8">1. Czy oszczedzam czas?</text>
+  <text x="118" y="812" font-family="Inter, Arial, sans-serif" font-size="18" fill="#334155">Czy reczna wersja zajelaby wyraznie dluzej?</text>
+
+  <rect x="440" y="724" width="330" height="132" rx="22" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="468" y="774" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#1d4ed8">2. Czy podnosze jakosc?</text>
+  <text x="468" y="812" font-family="Inter, Arial, sans-serif" font-size="18" fill="#334155">Czy AI pomaga uproscic, uporzadkowac lub dopasowac material?</text>
+
+  <rect x="790" y="724" width="330" height="132" rx="22" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="818" y="774" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#1d4ed8">3. Czy unikam zbednych iteracji?</text>
+  <text x="818" y="812" font-family="Inter, Arial, sans-serif" font-size="18" fill="#334155">Czy mam jasny cel, a nie kolejne wersje dla samego testowania?</text>
+
+  <rect x="1140" y="724" width="370" height="132" rx="22" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="1168" y="774" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#1d4ed8">4. Czy wynik przejdzie przez czlowieka?</text>
+  <text x="1168" y="812" font-family="Inter, Arial, sans-serif" font-size="18" fill="#334155">Czy ktos sprawdzi fakty, ton, dane i decyzje przed uzyciem?</text>
+
+  <rect x="90" y="886" width="1420" height="64" rx="22" fill="#0f172a"/>
+  <text x="126" y="928" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff">Uzywaj AI tam, gdzie daje realny zysk jakosci, czasu lub dostepnosci - nie tam, gdzie produkuje kolejne wersje bez potrzeby.</text>
+</svg>

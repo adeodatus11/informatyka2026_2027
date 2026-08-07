@@ -9,7 +9,10 @@
 </head>
 <body>
 <header class="top">
-    <a class="brand" href="index.html">Informatyka 2026/2027</a>
+    <a class="brand" href="index.html">
+    <img src="assets/logo.jpg" alt="Logo" style="height: 28px; width: auto; border-radius: 4px;">
+    Informatyka 2026/2027
+</a>
     <nav><a href="index.html" class="active">Bloki</a><a href="plan.html">Plan roku</a><a href="podstawa.html">Podstawa</a><a href="ocenianie.html">Ocenianie</a><a href="jak-uczyc.html">Jak uczyć</a></nav>
 </header>
 <div class="wrap">
@@ -18,7 +21,7 @@
     </div>
 
     <h1>Blok 7. Twoja strona w internecie</h1>
-    <p class="lead">Strona internetowa to dziś podstawa każdego biznesu. Za chwilę sam stworzysz od zera swoją własną stronę (w formie wizytówki firmowej), która w finale wyląduje pod publicznym adresem i będziesz mógł ją pokazać z telefonu swoim znajomym.</p>
+    <p class="lead">Strona internetowa to dziś podstawa każdego biznesu. Za chwilę stworzysz od zera własną stronę. Na koniec wyląduje pod publicznym adresem – pokażesz ją znajomym ze swojego smartfona.</p>
 
     <div class="meta">
         <span class="pill">Klasa I</span>
@@ -29,12 +32,12 @@
 
     <div class="two">
         <div class="box hook">
-            <span class="lbl">Dla nauczyciela: Zaczynamy od</span>
-            Otwierasz stronę szkoły i naciskasz Ctrl+U (Kod źródłowy). "To jest to, co naprawdę wysyła serwer." Potem otwierasz Narzędzia Deweloperskie (F12) i zmieniasz na żywo główny tytuł strony. Zapewnij uczniów, że widać to tylko na tym komputerze i nic nie zhakowałeś!
+            <span class="lbl">Wstęp (Haczyk)</span>
+            Otwórz stronę szkoły. Naciśnij Ctrl+U (Kod źródłowy). To właśnie odbiera przeglądarka! Otwórz Narzędzia Deweloperskie (F12) i zmień na żywo główny tytuł strony. Spokojnie, widać to tylko u Ciebie, niczego nie popsujesz.
         </div>
         <div class="box why">
-            <span class="lbl">Dla nauczyciela: Po co to uczniowi</span>
-            Zrozumienie jak działa "pod maską" strona internetowa uczy rozwiązywania problemów i rozróżnia zwykłego konsumenta treści od twórcy.
+            <span class="lbl">Dlaczego warto?</span>
+            Zrozumienie, jak działają strony WWW, uczy rozwiązywania problemów. Przestaniesz być tylko konsumentem internetu – staniesz się jego twórcą.
         </div>
     </div>
 
@@ -42,13 +45,17 @@
     <div class="step-card">
         <h3><span class="step-number">1</span> Twój pierwszy plik index.html</h3>
         <p class="instruction-text">
-            Strona to zwykły plik tekstowy, w którym używamy "tagów" (znaczników), by powiedzieć przeglądarce, co jest tytułem, co obrazkiem, a co linkiem. Szkielet strony zawsze nazywamy <code>index.html</code>.
+            Strona to zwykły plik tekstowy. Używamy "tagów" (znaczników), by powiedzieć przeglądarce, co jest tytułem, a co obrazkiem. Szkielet strony zawsze nazywamy <code>index.html</code>.
         </p>
+        <div class="pro-tip">
+            <strong>Pro Tip:</strong> Tagi HTML to polecenia dla przeglądarki. Wszystko, co ma być widoczne na stronie, wpisz pomiędzy <code>&lt;body&gt;</code> a <code>&lt;/body&gt;</code>.
+        </div>
+        <strong>Wyzwanie:</strong>
         <ol class="zad">
-            <li>Otwórz edytor kodu, np. Visual Studio Code.</li>
-            <li>Utwórz nowy plik, zapisz go jako <code>index.html</code> (pamiętaj o rozszerzeniu, które włączyłeś w Bloku 0!).</li>
-            <li>Wpisz w nim tekst zastępczy (Nauczyciel wskaże szablon struktury). Pamiętaj, że treści wpisujemy wewnątrz znaczników <code>&lt;body&gt; ... &lt;/body&gt;</code>.</li>
-            <li>Zapisz plik i kliknij na niego dwukrotnie, by otworzył się w Twojej przeglądarce internetowej (Chrome/Edge/Safari). Widzisz swoją pierwszą lokalną stronę!</li>
+            <li>Otwórz Visual Studio Code.</li>
+            <li>Utwórz nowy plik. Zapisz go jako <code>index.html</code> (pamiętaj o rozszerzeniu).</li>
+            <li>Wpisz szkielet HTML i dodaj swój tekst w sekcji <code>&lt;body&gt;</code>.</li>
+            <li>Zapisz plik. Kliknij go dwukrotnie, by otworzyć w przeglądarce.</li>
         </ol>
     </div>
 
@@ -56,15 +63,16 @@
     <div class="step-card">
         <h3><span class="step-number">2</span> Sekcje, nagłówki i atrybut alt</h3>
         <p class="instruction-text">
-            Książka ma rozdziały, strona ma sekcje. Najważniejszy tytuł to <code>&lt;h1&gt;</code> (używamy go tylko raz!). Mniejsze podtytuły to <code>&lt;h2&gt;</code> i tak dalej. Dodając obrazek <code>&lt;img&gt;</code> musisz podać jego adres oraz tekst alternatywny.
+            Strona potrzebuje struktury. Najważniejszy tytuł to <code>&lt;h1&gt;</code> (użyj go tylko raz). Podtytuły to <code>&lt;h2&gt;</code>.
         </p>
-        <div class="info">
-            <strong>Atrybut alt:</strong> <code>&lt;img src="foto.jpg" alt="Zdjęcie produktu"&gt;</code> to jedyne, co "widzi" wyszukiwarka Google oraz specjalne czytniki dla osób niewidomych. Bez <code>alt</code> Twoja strona traci dostępność!
+        <div class="pro-tip">
+            <strong>Pro Tip:</strong> <code>&lt;img src="foto.jpg" alt="Zdjęcie produktu"&gt;</code> – atrybut <code>alt</code> to jedyne, co "widzi" wyszukiwarka Google. Bez <code>alt</code> strona traci zasięgi i dostępność!
         </div>
+        <strong>Wyzwanie:</strong>
         <ol class="zad">
             <li>Podziel stronę na 3 sekcje: O nas, Usługi, Kontakt. Nadaj im nagłówki <code>&lt;h2&gt;</code>.</li>
-            <li>Wstaw galerię zdjęć z Bloku 2. Skopiuj obrazki do tego samego folderu co Twój plik html! Użyj tagu <code>&lt;img src="nazwa_pliku.jpg" alt="Twój opis"&gt;</code>.</li>
-            <li>Zbuduj tabelkę <code>&lt;table&gt;</code> zawierającą cennik Twoich usług/produktów. <span class="tag milestone">KROK MILOWY</span></li>
+            <li>Wstaw galerię zdjęć z Bloku 2. Skopiuj obrazki do folderu z plikiem <code>index.html</code>. Użyj <code>&lt;img src="..." alt="..."&gt;</code>.</li>
+            <li>Zbuduj tabelkę <code>&lt;table&gt;</code> z cennikiem usług lub produktów. <span class="tag milestone">KROK MILOWY</span></li>
         </ol>
     </div>
 
@@ -72,15 +80,19 @@
     <div class="step-card">
         <h3><span class="step-number">3</span> CSS, czyli magik od wyglądu</h3>
         <p class="instruction-text">
-            Sam HTML wygląda jak dokument z lat 90. Aby dodać kolory, wyrównanie i układy, używamy języka CSS w osobnym pliku. Oddzielamy w ten sposób treść (HTML) od wyglądu (CSS).
+            HTML to sam tekst. CSS dodaje kolory i wygląd. Oddzielamy treść (HTML) od designu (CSS).
         </p>
+        <div class="pro-tip">
+            <strong>Pro Tip:</strong> Trzymaj style zawsze w osobnym pliku. Dzięki temu utrzymasz porządek w kodzie.
+        </div>
+        <strong>Wyzwanie:</strong>
         <ol class="zad">
-            <li>Utwórz w tym samym folderze plik <code>style.css</code>.</li>
-            <li>W <code>index.html</code> w sekcji <code>&lt;head&gt;</code> wklej linijkę, która je połączy: <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</li>
-            <li>W <code>style.css</code> wpisz regułę by zmienić tło, np: <br>
+            <li>Utwórz plik <code>style.css</code> obok pliku <code>index.html</code>.</li>
+            <li>Połącz pliki. Wklej w <code>index.html</code> (sekcja <code>&lt;head&gt;</code>): <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</li>
+            <li>W <code>style.css</code> dodaj regułę: <br>
                 <code>body { background-color: #f0f0f0; font-family: sans-serif; }</code>
             </li>
-            <li>Odśwież stronę w przeglądarce i zobacz efekt! <span class="tag milestone">KROK MILOWY</span></li>
+            <li>Odśwież przeglądarkę i sprawdź efekt. <span class="tag milestone">KROK MILOWY</span></li>
         </ol>
     </div>
 
@@ -88,20 +100,24 @@
     <div class="step-card">
         <h3><span class="step-number">4</span> Żeby w coś kliknąć</h3>
         <p class="instruction-text">
-            Zróbmy przycisk kontaktowy ("Umów wizytę"). Ważna zasada "dostępności" UX: Przycisk musi mieć odpowiednią wielkość, żeby łatwo było w niego trafić palcem na ekranie smartfona. Rozmiar to minimum 44 piksele!
+            Czas na przycisk (Call to Action), który przyciągnie uwagę.
         </p>
+        <div class="pro-tip">
+            <strong>Pro Tip:</strong> Przycisk musi być łatwy do kliknięcia na smartfonie. Zadbaj o rozmiar min. 44 piksele!
+        </div>
+        <strong>Wyzwanie:</strong>
         <ol class="zad">
-            <li>Dodaj na dole strony link do kontaktu używając <code>&lt;a href="#"&gt;Umów się&lt;/a&gt;</code>.</li>
-            <li>Dodaj do niego CSS, by wyglądał jak przycisk: np. <code>padding: 12px 20px; background-color: blue; color: white;</code> itd.</li>
-            <li>Przetestuj wygląd na symulowanym małym ekranie (w Narzędziach Deweloperskich wybierz "Toggle device toolbar").</li>
+            <li>Dodaj link kontaktowy na dole strony: <code>&lt;a href="#"&gt;Umów się&lt;/a&gt;</code>.</li>
+            <li>W pliku CSS spraw, by wyglądał jak przycisk, np. dodaj <code>padding: 12px 20px; background-color: blue; color: white;</code>.</li>
+            <li>Włącz Narzędzia Deweloperskie. Wybierz ikonę urządzeń mobilnych i przetestuj wygląd na smartfonie.</li>
         </ol>
     </div>
 
     <div class="box fin">
-        <span class="lbl">Finał bloku: To jest w Internecie</span>
-        <p>Gotowa strona znajduje się u Ciebie na dysku C:, co oznacza, że nikt z nas do niej nie wejdzie. Musimy ją <strong>Opublikować</strong> (wrzucić na serwer WWW / hosting).</p>
-        <p>Spakujemy zawartość Twojego folderu do jednego archiwum ZIP lub skorzystamy z serwisu <em>Netlify Drop</em>. Tam wrzucisz swój projekt i otrzymasz <strong>Prawdziwy Publiczny Adres URL</strong>!</p>
-        <p>Wydrukujemy Twój adres lub wygenerujemy darmowy kod QR. Każdy w klasie będzie musiał wejść z telefonu i zobaczyć Twoje dzieło na własne oczy w prawdziwym Internecie! <span class="tag grade">OCENA 8</span></p>
+        <span class="lbl">Wyzwanie Finałowe: To jest w Internecie</span>
+        <p>Gotowa strona znajduje się u Ciebie na dysku. Nikt jej tam nie zobaczy. Czas na publikację (hosting).</p>
+        <p>Spakuj zawartość folderu do ZIP. Otwórz <em>Netlify Drop</em>. Wrzuć archiwum i odbierz <strong>Prawdziwy Publiczny Adres URL</strong>.</p>
+        <p>Wygeneruj darmowy kod QR. Każdy w klasie ma zeskanować kod i wejść na Twoją stronę z telefonu! <span class="tag grade">OCENA 8</span></p>
     </div>
 
     <div class="prevnext">
@@ -110,8 +126,26 @@
     </div>
 </div>
 <footer>
-    Rozkład materiału — informatyka, zakres podstawowy, technikum · klasa I (60 h) i klasa II (30 h) · rok szkolny 2026/2027<br>
-    Podstawa programowa: rozporządzenie MEN z 30.01.2018 (Dz.U. 2018 poz. 467) w brzmieniu nadanym rozporządzeniem z 28.06.2024 (Dz.U. 2024 poz. 1019).
+  <div class="footer-inner">
+    <div class="footer-logos">
+      <a href="https://win4smes.eu/" target="_blank" rel="noopener noreferrer" title="WIN4SMEs">
+        <img src="assets/Logo-2025.png" alt="WIN4SMEs" class="logo-win">
+      </a>
+      <div class="footer-logos-secondary">
+        <a href="https://covepolska.pl/" target="_blank" rel="noopener noreferrer" title="COVE Polska">
+          <img src="assets/COVE Polska bez tła.png" alt="COVE Polska">
+        </a>
+        <img src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Co-funded by the European Union">
+      </div>
+    </div>
+    <div class="footer-right-col">
+      <div class="footer-text">
+        <strong>Informatyka 2026/2027 · Metodologia WIN4SMEs (WP3.A5)</strong><br>
+        Rozkład materiału bazuje na innowacyjnych modelach edukacyjnych (Flipped Classroom, Blended Learning).<br>
+        Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autora(-ów) i niekoniecznie odzwierciedlają poglądy Unii Europejskiej.
+      </div>
+    </div>
+  </div>
 </footer>
 </body>
 </html>

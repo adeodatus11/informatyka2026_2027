@@ -9,7 +9,10 @@
 </head>
 <body>
 <header class="top">
-    <a class="brand" href="index.html">Informatyka 2026/2027</a>
+    <a class="brand" href="index.html">
+    <img src="assets/logo.jpg" alt="Logo" style="height: 28px; width: auto; border-radius: 4px;">
+    Informatyka 2026/2027
+</a>
     <nav><a href="index.html" class="active">Bloki</a><a href="plan.html">Plan roku</a><a href="podstawa.html">Podstawa</a><a href="ocenianie.html">Ocenianie</a><a href="jak-uczyc.html">Jak uczyć</a></nav>
 </header>
 <div class="wrap">
@@ -18,7 +21,7 @@
     </div>
 
     <h1>Blok 12. Każ komputerowi zrobić to za ciebie</h1>
-    <p class="lead">Programowanie to nie sztuka dla hakerów. To sposób myślenia, w którym rozbijasz duży problem na bardzo małe, wręcz prostackie kroki, i każesz je wykonać maszynie. Poznasz podstawy języka Python, dzięki czemu napiszesz program, który podejmie za Ciebie decyzję lub zabezpieczy plik.</p>
+    <p class="lead">Programowanie to nie sztuka dla hakerów. To sposób myślenia, w którym rozbijasz duży problem na małe kroki i każesz je wykonać maszynie. Poznasz podstawy Pythona, dzięki czemu napiszesz program podejmujący decyzje lub zabezpieczający plik.</p>
 
     <div class="meta">
         <span class="pill">Klasa II</span>
@@ -29,12 +32,12 @@
 
     <div class="two">
         <div class="box hook">
-            <span class="lbl">Dla nauczyciela: Zaczynamy od</span>
-            Ochotnik zostaje z zamkniętymi oczami "robotem", a klasa steruje nim od drzwi pod tablicę. Robot wpada na ławkę, bo kazali mu "iść", a zapomnieli o komendzie "obróć". Wniosek sam wypływa: komputer nie ma wyobraźni i o niczym się nie domyśli.
+            <span class="lbl">Wstęp (Haczyk)</span>
+            Ochotnik z zamkniętymi oczami wciela się w robota, a klasa steruje nim od drzwi pod tablicę. Robot wpada na ławkę, bo padła komenda "idź", a zabrakło "obróć". Wniosek: komputer nie ma wyobraźni i o niczym się nie domyśli.
         </div>
         <div class="box why">
-            <span class="lbl">Dla nauczyciela: Po co to uczniowi</span>
-            Bo niezależnie od tego kim zostaniesz, zdolność analitycznego podzielenia pracy na instrukcje (Algorytmy) rozwiązuje najwięcej życiowych problemów.
+            <span class="lbl">Dlaczego warto?</span>
+            Niezależnie od zawodu, umiejętność analitycznego dzielenia pracy na instrukcje (Algorytmy) rozwiązuje większość życiowych problemów.
         </div>
     </div>
 
@@ -42,15 +45,15 @@
     <div class="step-card">
         <h3><span class="step-number">1</span> Print i Input</h3>
         <p class="instruction-text">
-            Napiszmy program, który zapyta użytkownika o imię i się przywita. Będziemy używać języka <strong>Python</strong> (np. na stronie Replit.com lub w programie Thonny). Programowanie w Pythonie opiera się na angielskich słowach i matematyce.
+            Napisz program, który zapyta użytkownika o imię i się przywita. Użyj języka <strong>Python</strong>. Otwórz stronę Replit.com lub program Thonny. Programowanie w Pythonie opiera się na angielskich słowach i prostej matematyce.
         </p>
-        <div class="warn">
-            <strong>Błąd nowicjusza:</strong> Funkcja <code>input()</code> zawsze zapisuje to co wpiszesz jako "tekst". Jeśli wpiszesz liczbę "5" to dla Pythona jest to słowo. By mógł na nim liczyć, musisz użyć konwersji używając <code>int()</code> (od ang. integer - liczba całkowita).
+        <div class="pro-tip">
+            <strong>Pro Tip:</strong> Funkcja <code>input()</code> zawsze zapisuje dane jako "tekst". Wpisując liczbę "5", dla Pythona jest to słowo. Przekonwertuj je za pomocą <code>int()</code> (od integer - liczba całkowita), aby wykonać obliczenia matematyczne.
         </div>
         <ol class="zad">
             <li>Napisz kod pytający o imię: <code>imie = input("Jak masz na imię? ")</code></li>
             <li>Wypisz powitanie: <code>print("Witaj", imie)</code></li>
-            <li>Spróbuj napisać mini kalkulator (pytający o 2 liczby, konwertujący je przez <code>int()</code> i wypisujący wynik mnożenia).</li>
+            <li>Stwórz mini kalkulator. Zapytaj o 2 liczby, użyj <code>int()</code> i wypisz wynik ich mnożenia.</li>
         </ol>
     </div>
 
@@ -58,12 +61,12 @@
     <div class="step-card">
         <h3><span class="step-number">2</span> IF oraz FOR</h3>
         <p class="instruction-text">
-            Chcemy, by program "pomyślał". Instrukcja Warunkowa <code>if / else</code> sprawdza matematycznie, czy coś jest prawdą. Jeśli tak, robi X, w przeciwnym razie robi Y. Pętla <code>for</code> z kolei pozwala wykonać ten sam nudny kod 100 razy z rzędu.
+            Naucz program myśleć. Instrukcja warunkowa <code>if / else</code> sprawdza, czy warunek jest spełniony. Jeśli tak, robi X, w przeciwnym razie robi Y. Pętla <code>for</code> pozwala powtórzyć ten sam kod wielokrotnie.
         </p>
         <ol class="zad">
-            <li>Napisz program sprawdzający wiek: Zapytaj użytkownika o to, ile ma lat.</li>
-            <li>Użyj instrukcji <code>if wiek >= 18:</code> by wypisać "Możesz wejść", oraz <code>else:</code> z wypisaniem "Zakaz wstępu". (Uwaga na <strong>wcięcia</strong> tekstu pod IF!).</li>
-            <li>Stwórz pętlę <code>for i in range(10):</code> i wypisz 10 razy "Zrobię zadanie domowe". <span class="tag milestone">KROK MILOWY</span></li>
+            <li>Zapytaj użytkownika o jego wiek.</li>
+            <li>Użyj instrukcji <code>if wiek >= 18:</code> i wypisz "Możesz wejść". Dodaj <code>else:</code> i wypisz "Zakaz wstępu". Pamiętaj o wcięciach!</li>
+            <li>Zbuduj pętlę <code>for i in range(10):</code> i wypisz 10 razy wybrany tekst. <span class="tag milestone">KROK MILOWY</span></li>
         </ol>
     </div>
 
@@ -71,18 +74,18 @@
     <div class="step-card">
         <h3><span class="step-number">3</span> Szyfr Cezara</h3>
         <p class="instruction-text">
-            Szyfr Cezara przesuwa literę alfabetu o zadaną wartość (np. A staje się D przy przesunięciu o 3). Jak napisać kod, który podmieni każde słowo w tajnej wiadomości?
+            Szyfr Cezara przesuwa literę alfabetu o określoną wartość (np. A staje się D przy przesunięciu o 3). Napisz kod, który podmieni każde słowo w tajnej wiadomości.
         </p>
         <ol class="zad">
-            <li>W klasie (bez komputerów) stwórzcie krótką tajną wiadomość używając szyfru cezara, gdzie kluczem jest przesunięcie (np. klucz=3).</li>
-            <li>Spróbujcie z nauczycielem napisać program w Pythonie, do którego wrzucicie "zakodowaną wiadomość", a pętla (for) podmieni litery za pomocą wbudowanych w Pythona kodów ASCII (korzystając z funkcji <code>chr()</code> i <code>ord()</code>).</li>
+            <li>Stwórz krótką tajną wiadomość używając szyfru Cezara, z ustalonym przesunięciem (np. klucz=3).</li>
+            <li>Napisz program w Pythonie, przyjmujący zakodowaną wiadomość. Wykorzystaj pętlę <code>for</code> do podmiany liter przy użyciu kodów ASCII (funkcje <code>chr()</code> i <code>ord()</code>).</li>
         </ol>
     </div>
 
     <div class="box fin">
-        <span class="lbl">Finał bloku: Program "U mnie działa"</span>
-        <p>Twoim zadaniem jest stworzenie finalnego programu rozwiązującego prosty problem (np. Wyszukiwarka brzydkich słów w tekście klienta, Kalkulator podwyżek dla 10 produktów z użyciem pętli). Co najważniejsze - do programu musisz dołączyć <strong>Tabelę Testów</strong> (gdzie celowo wpisałeś błędne dane - literę zamiast liczby i przewidziałeś jak program ma się zachować).</p>
-        <p>Na finale zamieniacie się miejscami w klasie. Jeśli Twój program wywali się (Crash) pod rękami innej osoby, test jest niezaliczony! "U mnie działało" nie jest dla szefa żadnym tłumaczeniem. <span class="tag grade">OCENA 4</span></p>
+        <span class="lbl">Wyzwanie Finałowe: Program "U mnie działa"</span>
+        <p>Stwórz program rozwiązujący konkretny problem (np. wyszukiwarka wulgaryzmów w tekście lub kalkulator podwyżek dla 10 produktów z wykorzystaniem pętli). Dołącz <strong>Tabelę Testów</strong> z wpisanymi błędnymi danymi (np. litera zamiast liczby), sprawdzając reakcję programu.</p>
+        <p>Zamieńcie się miejscami w klasie. Jeśli Twój program wywali błąd (Crash) u innej osoby, test jest niezaliczony! "U mnie działało" to nie wymówka. <span class="tag grade">OCENA 4</span></p>
     </div>
 
     <div class="prevnext">
@@ -91,8 +94,26 @@
     </div>
 </div>
 <footer>
-    Rozkład materiału — informatyka, zakres podstawowy, technikum · klasa I (60 h) i klasa II (30 h) · rok szkolny 2026/2027<br>
-    Podstawa programowa: rozporządzenie MEN z 30.01.2018 (Dz.U. 2018 poz. 467) w brzmieniu nadanym rozporządzeniem z 28.06.2024 (Dz.U. 2024 poz. 1019).
+  <div class="footer-inner">
+    <div class="footer-logos">
+      <a href="https://win4smes.eu/" target="_blank" rel="noopener noreferrer" title="WIN4SMEs">
+        <img src="assets/Logo-2025.png" alt="WIN4SMEs" class="logo-win">
+      </a>
+      <div class="footer-logos-secondary">
+        <a href="https://covepolska.pl/" target="_blank" rel="noopener noreferrer" title="COVE Polska">
+          <img src="assets/COVE Polska bez tła.png" alt="COVE Polska">
+        </a>
+        <img src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Co-funded by the European Union">
+      </div>
+    </div>
+    <div class="footer-right-col">
+      <div class="footer-text">
+        <strong>Informatyka 2026/2027 · Metodologia WIN4SMEs (WP3.A5)</strong><br>
+        Rozkład materiału bazuje na innowacyjnych modelach edukacyjnych (Flipped Classroom, Blended Learning).<br>
+        Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autora(-ów) i niekoniecznie odzwierciedlają poglądy Unii Europejskiej.
+      </div>
+    </div>
+  </div>
 </footer>
 </body>
 </html>

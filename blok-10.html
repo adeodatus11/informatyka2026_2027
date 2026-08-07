@@ -9,7 +9,10 @@
 </head>
 <body>
 <header class="top">
-    <a class="brand" href="index.html">Informatyka 2026/2027</a>
+    <a class="brand" href="index.html">
+    <img src="assets/logo.jpg" alt="Logo" style="height: 28px; width: auto; border-radius: 4px;">
+    Informatyka 2026/2027
+</a>
     <nav><a href="index.html" class="active">Bloki</a><a href="plan.html">Plan roku</a><a href="podstawa.html">Podstawa</a><a href="ocenianie.html">Ocenianie</a><a href="jak-uczyc.html">Jak uczyć</a></nav>
 </header>
 <div class="wrap">
@@ -29,12 +32,12 @@
 
     <div class="two">
         <div class="box hook">
-            <span class="lbl">Dla nauczyciela: Zaczynamy od</span>
-            Wypełniacie wszyscy anonimową ankietę: ile godzin spisz, ile czasu spędzasz na telefonie, ile wydajesz tygodniowo, o której wstajesz. Potem wyświetlasz surowe odpowiedzi – gigantyczną tabelę. Pytasz: "I co my z tym teraz zrobimy? Jak z tego wyciągnąć jakiekolwiek informacje?".
+            <span class="lbl">Wstęp (Haczyk)</span>
+            Wypełniacie anonimową ankietę: ile godzin śpisz, ile czasu spędzasz na telefonie, ile wydajesz tygodniowo, o której wstajesz. Następnie wyświetlamy surowe odpowiedzi – gigantyczną tabelę. Co z tym teraz zrobić? Jak wyciągnąć jakiekolwiek informacje?
         </div>
         <div class="box why">
-            <span class="lbl">Dla nauczyciela: Po co to uczniowi</span>
-            Bo wyciąganie informacji z setek wierszy jednym kliknięciem (Tabela Przestawna) jest umiejętnością, z którą można dostać awans w każdej pracy biurowej.
+            <span class="lbl">Dlaczego warto?</span>
+            Wyciąganie informacji z setek wierszy jednym kliknięciem (Tabela Przestawna) to umiejętność, która mocno podnosi Twoją wartość na rynku pracy.
         </div>
     </div>
 
@@ -42,58 +45,64 @@
     <div class="step-card">
         <h3><span class="step-number">1</span> Wyłuskiwanie danych z szumu</h3>
         <p class="instruction-text">
-            Dane "surowe" są bezużyteczne. Tabela składająca się z 300 wierszy nie odpowie na żadne pytanie. Zaczynamy od przefiltrowania jej.
+            Surowe dane są bezużyteczne. Tabela składająca się z 300 wierszy nie odpowie na żadne pytanie. Rozpocznij od jej przefiltrowania.
         </p>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Filtr nie usuwa wierszy, tylko je ukrywa! Zawsze możesz do nich wrócić.</div>
         <ol class="zad">
             <li>Otwórz arkusz Excel z "Surowymi odpowiedziami klasy".</li>
-            <li>Zaznacz całą tabelę i kliknij "Sortuj i filtruj" -> "Filtruj". Na górnych nagłówkach pojawią się strzałki.</li>
-            <li>Ustaw filtry tak, by zobaczyć tylko osoby śpiące krócej niż 6 godzin i wydające więcej niż 100 zł tygodniowo. Pamiętaj – filtr nie usuwa innych wierszy, on je tylko ukrywa.</li>
+            <li>Zaznacz całą tabelę.</li>
+            <li>Kliknij <strong>Sortuj i filtruj</strong> -> <strong>Filtruj</strong>.</li>
+            <li>Ustaw filtry tak, by zobaczyć tylko osoby śpiące krócej niż 6 godzin i wydające więcej niż 100 zł tygodniowo.</li>
         </ol>
     </div>
 
     <h2>Krok 2: Ulepszone liczenie</h2>
     <div class="step-card">
-        <h3><span class="step-number">2</span> LICZ.JEŻELI oraz SUMA.JEŻELI</h3>
+        <h3><span class="step-number">2</span> Wyzwanie: LICZ.JEŻELI oraz SUMA.JEŻELI</h3>
         <p class="instruction-text">
-            Chcesz policzyć, ILE jest osób jeżdżących do szkoły rowerem? Użyj <code>LICZ.JEŻELI</code>. Chcesz policzyć, ILE PIENIĘDZY wydali razem na tygodniowe zachcianki? Użyjesz <code>SUMA.JEŻELI</code>. Najczęstszy błąd w biurach to mylenie tych dwóch funkcji.
+            Sprawdź, ILE jest osób jeżdżących rowerem (<code>LICZ.JEŻELI</code>), oraz ILE PIENIĘDZY wydali na zachcianki (<code>SUMA.JEŻELI</code>). Nie myl tych funkcji!
         </p>
         <ol class="zad">
-            <li>Napisz funkcję, która policzy liczbę "sztuk": <code>=LICZ.JEŻELI(Zakres, Kryterium)</code>. Sprawdź, ile dokładnie osób korzysta z komunikacji miejskiej.</li>
-            <li>Napisz funkcję, która podsumuje wartość. Oblicz zsumowaną kwotę kieszonkowego pobieranego przez grupę dojeżdżającą autobusem. <span class="tag milestone">KROK MILOWY</span></li>
+            <li>Użyj funkcji <code>=LICZ.JEŻELI(Zakres, Kryterium)</code>. Zlicz osoby korzystające z komunikacji miejskiej.</li>
+            <li>Użyj funkcji <code>=SUMA.JEŻELI(Zakres, Kryterium, Suma_zakres)</code>. Oblicz zsumowaną kwotę kieszonkowego grupy dojeżdżającej autobusem. <span class="tag milestone">KROK MILOWY</span></li>
         </ol>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Kryteria tekstowe w funkcjach wpisuj w cudzysłowach, np. <code>"autobus"</code>.</div>
     </div>
 
     <h2>Krok 3: Tabela Przestawna</h2>
     <div class="step-card">
-        <h3><span class="step-number">3</span> Narzędzie, z którym dostaniesz pracę</h3>
+        <h3><span class="step-number">3</span> Wyzwanie: Narzędzie, z którym dostaniesz pracę</h3>
         <p class="instruction-text">
-            Zamiast wpisywać dziesiątki funkcji <code>SUMA.JEŻELI</code>, możesz wyciągnąć podsumowanie 5000 wierszy w 3 sekundy. Od tego są Tabele Przestawne (Pivot Tables). Ona "przestawia" rzędy w kolumny i pozwala patrzeć na dane z innej perspektywy bez niszczenia oryginału.
+            Wyciągnij podsumowanie 5000 wierszy w 3 sekundy. Tabela przestawna (Pivot Table) analizuje dane bez niszczenia oryginału.
         </p>
         <ol class="zad">
-            <li>Zaznacz wszystkie dane i wejdź we <em>Wstawianie → Tabela Przestawna</em>. Wybierz "Nowy Arkusz".</li>
-            <li>Przeciągnij pole "Kategoria Zakupu" (z okienka po prawej stronie) do kwadracika <strong>Wiersze</strong>.</li>
-            <li>Przeciągnij pole "Obrót / Zysk" do <strong>Wartości</strong>. Zobacz co się stało z tabelą!</li>
-            <li>Zbuduj "Fragmentator" by inni pracownicy mogli odfiltrować dane ładnym przyciskiem. <span class="tag milestone">KROK MILOWY</span></li>
+            <li>Zaznacz wszystkie dane.</li>
+            <li>Wybierz <strong>Wstawianie</strong> → <strong>Tabela Przestawna</strong> i utwórz "Nowy Arkusz".</li>
+            <li>Przeciągnij pole "Kategoria Zakupu" do obszaru <strong>Wiersze</strong>.</li>
+            <li>Przeciągnij pole "Obrót / Zysk" do obszaru <strong>Wartości</strong>.</li>
+            <li>Wstaw "Fragmentator", aby szybko odfiltrować dane wygodnym przyciskiem. <span class="tag milestone">KROK MILOWY</span></li>
         </ol>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Jeśli zmienisz dane w tabeli źródłowej, nie zapomnij kliknąć w tabeli przestawnej "Odśwież".</div>
     </div>
 
     <h2>Krok 4: Wyszukiwarka - VLOOKUP / XLOOKUP</h2>
     <div class="step-card">
-        <h3><span class="step-number">4</span> Arkusz sam znajdzie kod</h3>
+        <h3><span class="step-number">4</span> Wyzwanie: Arkusz sam znajdzie kod</h3>
         <p class="instruction-text">
-            Gdy w sklepie kasjer skanuje kod kreskowy, na ekranie pojawia się nazwa pomidora i jego cena. Jak to działa? Program bierze numer i wyszukuje go pionowo w innej tabeli. W Excelu robimy to funkcją <code>WYSZUKAJ.PIONOWO</code> (VLOOKUP).
+            Użyj <code>WYSZUKAJ.PIONOWO</code> (VLOOKUP), aby po wpisaniu ID odnaleźć odpowiednie informacje w bazie.
         </p>
         <ol class="zad">
-            <li>Do pustej komórki wpisz przykładowy kod kreskowy/ID.</li>
-            <li>Pod spodem zbuduj funkcję <code>=WYSZUKAJ.PIONOWO(TwójKod, CałaTabelaBazy, KolumnaCeny, FAŁSZ)</code>.</li>
-            <li>Zabezpiecz się przed błędem, używając funkcji <code>JEŻELI.BŁĄD</code>, która wyświetli "Brak towaru" zamiast brzydkiego błędu #N/D!.</li>
+            <li>Wpisz przykładowy kod/ID do pustej komórki.</li>
+            <li>W komórce obok zbuduj funkcję: <code>=WYSZUKAJ.PIONOWO(TwójKod, CałaTabelaBazy, KolumnaCeny, FAŁSZ)</code>.</li>
+            <li>Zastosuj funkcję <code>JEŻELI.BŁĄD</code>. Ukryj błąd #N/D! wyświetlając tekst "Brak towaru".</li>
         </ol>
     </div>
 
     <div class="box fin">
-        <span class="lbl">Finał bloku: Narada zarządu</span>
-        <p>Twoim zadaniem końcowym jest stworzenie raportu "jednej strony". Wyciągnij ze szkolnej bazy lub bazy firmowej dokładnie 3 kluczowe liczby, wygeneruj dla nich czytelne wykresy i sformułuj jedną ważną rekomendację (wniosek).</p>
-        <p>Każdy w klasie będzie miał dokładnie 2 minuty na zaprezentowanie swojego "odkrycia". Każdy z widowni (lub nauczyciel) ma prawo zapytać Cię o dowód (np. "skąd wziąłeś ten wniosek?"). Twój raport musi obronić Cię sam – wyklikujesz konkretną komórkę na poparcie każdego swojego słowa! Pamiętaj, wykres ucięty by udawał większy wzrost to kłamstwo analityczne! <span class="tag grade">OCENA 1</span> <span class="tag grade">OCENA 2 (Narada)</span></p>
+        <span class="lbl">Wyzwanie Finałowe: Narada zarządu</span>
+        <p>Stwórz raport "jednej strony". Wybierz ze szkolnej lub firmowej bazy 3 kluczowe liczby, wygeneruj wykresy i sformułuj jedną rekomendację.</p>
+        <p>Zaprezentuj swoje odkrycie w 2 minuty. Udowodnij swój wniosek, wskazując konkretną komórkę. Uważaj: zmanipulowany wykres to błąd analityczny! <span class="tag grade">OCENA 1</span> <span class="tag grade">OCENA 2 (Narada)</span></p>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Pamiętaj, aby opisać osie wykresu i podać zwięzły tytuł, z którego jasno wynika, co prezentujesz.</div>
     </div>
 
     <div class="prevnext">
@@ -102,8 +111,26 @@
     </div>
 </div>
 <footer>
-    Rozkład materiału — informatyka, zakres podstawowy, technikum · klasa I (60 h) i klasa II (30 h) · rok szkolny 2026/2027<br>
-    Podstawa programowa: rozporządzenie MEN z 30.01.2018 (Dz.U. 2018 poz. 467) w brzmieniu nadanym rozporządzeniem z 28.06.2024 (Dz.U. 2024 poz. 1019).
+  <div class="footer-inner">
+    <div class="footer-logos">
+      <a href="https://win4smes.eu/" target="_blank" rel="noopener noreferrer" title="WIN4SMEs">
+        <img src="assets/Logo-2025.png" alt="WIN4SMEs" class="logo-win">
+      </a>
+      <div class="footer-logos-secondary">
+        <a href="https://covepolska.pl/" target="_blank" rel="noopener noreferrer" title="COVE Polska">
+          <img src="assets/COVE Polska bez tła.png" alt="COVE Polska">
+        </a>
+        <img src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Co-funded by the European Union">
+      </div>
+    </div>
+    <div class="footer-right-col">
+      <div class="footer-text">
+        <strong>Informatyka 2026/2027 · Metodologia WIN4SMEs (WP3.A5)</strong><br>
+        Rozkład materiału bazuje na innowacyjnych modelach edukacyjnych (Flipped Classroom, Blended Learning).<br>
+        Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autora(-ów) i niekoniecznie odzwierciedlają poglądy Unii Europejskiej.
+      </div>
+    </div>
+  </div>
 </footer>
 </body>
 </html>

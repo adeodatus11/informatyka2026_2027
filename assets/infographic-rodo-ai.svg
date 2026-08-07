@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">RODO plus AI - co wklejac, czego nie wklejac</title>
+  <desc id="desc">Infografika o bezpiecznym korzystaniu z AI w kontekscie RODO, anonimizacji i danych wrazliwych.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fffaf5"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#7c2d12" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect x="40" y="40" width="1520" height="920" rx="32" fill="#ffffff" filter="url(#shadow)"/>
+
+  <text x="90" y="128" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#ea580c">MODUL 4 - PROJEKTY I ANALITYKA</text>
+  <text x="90" y="182" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="800" fill="#0f172a">RODO + AI - co wklejac, czego nie wklejac</text>
+  <text x="90" y="228" font-family="Inter, Arial, sans-serif" font-size="24" fill="#475569">Zanim wkleisz dokument, ankiete albo notatki do AI, sprawdz poziom ryzyka: zakazane, tylko po anonimizacji albo zwykle bezpieczne.</text>
+
+  <rect x="90" y="290" width="450" height="470" rx="28" fill="#fff1f2" stroke="#fecdd3"/>
+  <rect x="90" y="290" width="450" height="108" rx="28" fill="#ef4444"/>
+  <text x="130" y="356" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff">NIE WKLEJAJ</text>
+  <text x="130" y="384" font-family="Inter, Arial, sans-serif" font-size="19" fill="#fee2e2">bez zgody, podstawy prawnej i lokalnej polityki</text>
+  <text x="128" y="450" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#7f1d1d">Przyklady wysokiego ryzyka</text>
+  <text x="128" y="492" font-family="Inter, Arial, sans-serif" font-size="22" fill="#991b1b">- imiona i nazwiska uczniow lub pracownikow</text>
+  <text x="128" y="530" font-family="Inter, Arial, sans-serif" font-size="22" fill="#991b1b">- oceny, frekwencja, numery telefonow, adresy</text>
+  <text x="128" y="568" font-family="Inter, Arial, sans-serif" font-size="22" fill="#991b1b">- dane zdrowotne, SPE, opinie poradni</text>
+  <text x="128" y="606" font-family="Inter, Arial, sans-serif" font-size="22" fill="#991b1b">- poufne raporty, budzety, oceny partnerow</text>
+  <text x="128" y="644" font-family="Inter, Arial, sans-serif" font-size="22" fill="#991b1b">- tresci pozwalajace rozpoznac konkretna osobe</text>
+  <text x="128" y="704" font-family="Inter, Arial, sans-serif" font-size="18" fill="#7f1d1d">Jesli nie mozesz tego bezpiecznie pokazac poza organizacja,</text>
+  <text x="128" y="732" font-family="Inter, Arial, sans-serif" font-size="18" fill="#7f1d1d">nie wklejaj tego bezposrednio do publicznej AI.</text>
+
+  <rect x="575" y="290" width="450" height="470" rx="28" fill="#fffbeb" stroke="#fde68a"/>
+  <rect x="575" y="290" width="450" height="108" rx="28" fill="#f59e0b"/>
+  <text x="615" y="356" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff">TYLKO PO ANONIMIZACJI</text>
+  <text x="615" y="384" font-family="Inter, Arial, sans-serif" font-size="19" fill="#fef3c7">usun identyfikatory i zamien je na role lub kody</text>
+  <text x="613" y="450" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#92400e">Przyklady sredniego ryzyka</text>
+  <text x="613" y="492" font-family="Inter, Arial, sans-serif" font-size="22" fill="#92400e">- odpowiedzi z ankiety po usunieciu danych</text>
+  <text x="613" y="530" font-family="Inter, Arial, sans-serif" font-size="22" fill="#92400e">- notatki ze spotkania bez nazwisk i maili</text>
+  <text x="613" y="568" font-family="Inter, Arial, sans-serif" font-size="22" fill="#92400e">- dokument z rolami zamiast imion</text>
+  <text x="613" y="606" font-family="Inter, Arial, sans-serif" font-size="22" fill="#92400e">- zbiorcze statystyki bez mozliwosci identyfikacji</text>
+  <text x="613" y="666" font-family="Inter, Arial, sans-serif" font-size="18" fill="#78350f">Zamien: "Anna Kowalska" na "Uczennica A"</text>
+  <text x="613" y="694" font-family="Inter, Arial, sans-serif" font-size="18" fill="#78350f">Usun: maile, numery, dokladne klasy, nazwy firm i placowek</text>
+  <text x="613" y="722" font-family="Inter, Arial, sans-serif" font-size="18" fill="#78350f">Sprawdz, czy polaczenie kilku szczegolow nie odtwarza tozsamosci</text>
+
+  <rect x="1060" y="290" width="450" height="470" rx="28" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <rect x="1060" y="290" width="450" height="108" rx="28" fill="#16a34a"/>
+  <text x="1100" y="356" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff">ZWYKLE BEZPIECZNE</text>
+  <text x="1100" y="384" font-family="Inter, Arial, sans-serif" font-size="19" fill="#dcfce7">o ile nie dopisujesz danych poufnych w tresci promptu</text>
+  <text x="1098" y="450" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#166534">Przyklady niskiego ryzyka</text>
+  <text x="1098" y="492" font-family="Inter, Arial, sans-serif" font-size="22" fill="#166534">- pomysl na lekcje lub konspekt</text>
+  <text x="1098" y="530" font-family="Inter, Arial, sans-serif" font-size="22" fill="#166534">- ogolny szkic maila lub ogloszenia</text>
+  <text x="1098" y="568" font-family="Inter, Arial, sans-serif" font-size="22" fill="#166534">- fikcyjny przyklad do cwiczenia</text>
+  <text x="1098" y="606" font-family="Inter, Arial, sans-serif" font-size="22" fill="#166534">- publicznie dostepne informacje i dokumenty</text>
+  <text x="1098" y="666" font-family="Inter, Arial, sans-serif" font-size="18" fill="#166534">To nadal wersja robocza: sprawdz fakty, ton i zgodnosc z celem.</text>
+  <text x="1098" y="694" font-family="Inter, Arial, sans-serif" font-size="18" fill="#166534">Bezpieczne nie znaczy automatycznie gotowe do wysylki.</text>
+
+  <rect x="90" y="804" width="1420" height="112" rx="24" fill="#0f172a"/>
+  <text x="130" y="856" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">Checklista 4 krokow</text>
+  <text x="130" y="892" font-family="Inter, Arial, sans-serif" font-size="20" fill="#cbd5e1">1. Czy sa tu dane osobowe?  2. Czy mozna kogos rozpoznac?  3. Czy wystarczy anonimizacja?  4. Czy narzedzie jest zgodne z zasadami organizacji?</text>
+</svg>
