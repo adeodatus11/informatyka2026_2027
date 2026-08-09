@@ -47,30 +47,63 @@
         <h3><span class="step-number">1</span> Policz to na kartce</h3>
         <p class="instruction-text">Zastanów się nad regularnymi, drobnymi wydatkami.</p>
         
-<div class="theory-card card" style="border-left: 4px solid var(--accent-secondary); margin-bottom: 40px;">
-  <h3 style="margin-top:0;">🧠 Wiedza w Pigułce</h3>
-  <div class="two">
-    <div>
-      <h4 style="color:var(--text-secondary); margin-bottom:12px;">Kluczowe pojęcia:</h4>
-      <ul style="font-size: 15px;">
-        <li><strong>Formuły:</strong> Komórki arkusza "same liczą" używając znaku <code>=</code> (np. <code>=SUMA()</code>).</li><li><strong>Adresowanie bezwzględne ($):</strong> Znak dolara (np. <code>$A$1</code>) "zamraża" komórkę przy przeciąganiu.</li><li><strong>Formatowanie warunkowe:</strong> Arkusz sam koloruje komórki na podstawie ich zawartości.</li>
-      </ul>
+<div class="theory-card card kompendium" style="border-left: 5px solid var(--accent-primary); margin-bottom: 40px;">
+  <h2 style="margin-top:0; color: var(--accent-primary);">📚 Kompendium Wiedzy</h2>
+  
+  <div class="kompendium-wstep" style="margin-bottom: 24px;">
+    <h3 style="margin-top:0;">1. Zrozumieć temat</h3>
+    <p class="lead" style="font-size:18px;">Arkusz kalkulacyjny to jedno z najpotężniejszych narzędzi analitycznych, które zrewolucjonizowało świat biznesu i finansów osobistych. Zanim powstał VisiCalc czy Excel, księgowi używali gigantycznych ksiąg i kalkulatorów. Jeśli gdzieś na początku ogromnego wyliczenia pojawił się błąd, trzeba było przeliczać wszystko na nowo! Arkusz pozwolił na magię: zmieniasz jedną komórkę, a cała reszta automatycznie się aktualizuje dzięki formułom i referencjom. Dziś Excel nie jest już tylko narzędziem dla księgowych. Znajomość analizy danych to podstawa na praktycznie każdym stanowisku biurowym, a dla Ciebie to idealne narzędzie do zapanowania nad własnym budżetem domowym. Dzięki formatowaniu warunkowemu i sprawnemu adresowaniu (gdzie dolar $ rządzi zamrażaniem komórek), staniesz się analitykiem własnych finansów. Zrozumiesz wreszcie, ile kosztują Cię codzienne przyzwyczajenia, na które zwykle nie zwracasz uwagi.</p>
+  </div>
+
+  <div class="kompendium-slownik" style="margin-bottom: 24px;">
+    <h3 style="margin-top:0;">2. Słownik Pojęć (Kliknij, by rozwinąć)</h3>
+    <details style="margin-bottom:10px; background:var(--bg-primary); padding:12px; border-radius:8px; border:1px solid var(--border-color); cursor:pointer;">
+      <summary style="font-weight:700; color:var(--text-primary); font-size:16px;">Adresowanie bezwzględne ($)</summary>
+      <p style="margin-top:12px; font-size:15px; color:var(--text-secondary);">Blokowanie adresu komórki podczas przeciągania formuł. Znak dolara <code>$</code> powoduje, że odniesienie do konkretnej komórki (np. <code>$A$1</code> ze wskaźnikiem inflacji) nie zmienia się, gdy kopiujesz formułę w dół lub w bok.</p>
+    </details>
+    <details style="margin-bottom:10px; background:var(--bg-primary); padding:12px; border-radius:8px; border:1px solid var(--border-color); cursor:pointer;">
+      <summary style="font-weight:700; color:var(--text-primary); font-size:16px;">Formatowanie warunkowe</summary>
+      <p style="margin-top:12px; font-size:15px; color:var(--text-secondary);">Automatyczna zmiana wyglądu komórki (np. koloru tła) na podstawie jej wartości. Na przykład: jeśli wydatek w komórce przekroczy 150 zł, program automatycznie podświetli ją na czerwono.</p>
+    </details>
+    <details style="margin-bottom:10px; background:var(--bg-primary); padding:12px; border-radius:8px; border:1px solid var(--border-color); cursor:pointer;">
+      <summary style="font-weight:700; color:var(--text-primary); font-size:16px;">Formuła</summary>
+      <p style="margin-top:12px; font-size:15px; color:var(--text-secondary);">Równanie matematyczne w arkuszu. Zawsze zaczyna się od znaku <code>=</code>. Zamiast wpisywać sztywne liczby, odwołujesz się do komórek (np. <code>=B2*C2</code>), by arkusz sam obliczył ostateczny wynik w przypadku jakiejkolwiek zmiany danych.</p>
+    </details>
+  </div>
+
+  <div class="kompendium-ciekawostki pro-tip" style="margin-bottom: 24px;">
+    <strong>Czy wiesz, że...?</strong>
+    W 2020 roku rzekomy brak pamięci w Excelu doprowadził do zgubienia 16 tysięcy przypadków zakażeń w UK, ponieważ dane analizowano w starym formacie .xls (limitowany do ~65 tys. wierszy). Narzędzie potężne, ale i bezlitosne w rękach nieświadomych użytkowników!
+  </div>
+
+  <div class="kompendium-biblioteka" style="margin-bottom: 24px;">
+    <h3 style="margin-top:0;">3. Biblioteka Materiałów</h3>
+    <div class="two">
+      <div>
+        <h4 style="margin-bottom:12px;">Polecane Artykuły (Dla ambitnych)</h4>
+        <ul style="font-size:15px;">
+           <li><a href="https://excelova.pl/dlaczego-excel-jest-najwazniejszym-programem-w-korporacji/" target="_blank">Excel w biznesie</a> - Dlaczego Excel to wciąż najważniejszy program w korporacji?</li>
+           <li><a href="https://support.microsoft.com/pl-pl/excel" target="_blank">Oficjalna pomoc Excel</a> - Baza wiedzy o formułach od Microsoftu.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom:12px;">Polecane Wideo</h4>
+        <a href="https://www.youtube.com/watch?v=8L1OVkw2ZQ8" target="_blank" class="yt-thumb">
+          <img src="https://img.youtube.com/vi/8L1OVkw2ZQ8/hqdefault.jpg" alt="Miniaturka wideo">
+          <div class="play-btn">▶</div>
+        </a>
+      </div>
     </div>
-    <div>
-      <h4 style="color:var(--text-secondary); margin-bottom:12px;">Polecane materiały:</h4>
-      <ul style="font-size: 15px; list-style:none; padding-left:0;">
-        <li style="margin-bottom:16px;">
-          <strong>📺 Wideo:</strong> Adresowanie względne i bezwzględne<br>
-          <a href="https://www.youtube.com/watch?v=8L1OVkw2ZQ8" target="_blank" class="yt-thumb">
-            <img src="https://img.youtube.com/vi/8L1OVkw2ZQ8/hqdefault.jpg" alt="Miniaturka wideo">
-            <div class="play-btn">▶</div>
-          </a>
-        </li>
-        <li>
-          <strong>📖 Artykuł:</strong> <a href="https://excelova.pl/" target="_blank">Dlaczego Excel jest najważniejszym programem w korporacji?</a>
-        </li>
-      </ul>
-    </div>
+  </div>
+
+  <div class="kompendium-checkpoint" style="background:var(--bg-primary); padding:20px; border-radius:12px; border:1px dashed var(--accent-secondary);">
+    <h3 style="margin-top:0; color:var(--accent-secondary);">4. Szybki Check-Point</h3>
+    <p style="margin-bottom:12px;">Zanim przejdziesz do wyzwań, odpowiedz sobie w myślach na te pytania:</p>
+    <ul style="font-size:15px; font-weight:600;">
+       <li>Po co używamy znaku $ przy kopiowaniu formuł w arkuszu?</li>
+       <li>Jak sprawić, by komórka zmieniła kolor, gdy wartość w niej będzie zbyt wysoka?</li>
+       <li>Od jakiego znaku musi rozpoczynać się jakakolwiek funkcja lub formuła?</li>
+    </ul>
   </div>
 </div>
 
