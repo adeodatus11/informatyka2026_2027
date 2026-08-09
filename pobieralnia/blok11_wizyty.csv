@@ -1,0 +1,171 @@
+﻿ID_wizyty;ID_klientki;Data;Usluga;Cena;Pracownik;Uwagi
+1;6;2025-04-30;Strzyżenie damskie;70;Marta Zielińska;Alergia na amoniak
+2;13;2025-05-02;Prostowanie;80;Marta Zielińska;Klientka zadowolona
+3;13;2025-05-07;Upięcie okolicznościowe;150;Marta Zielińska;Klientka zadowolona
+4;9;2025-05-10;Pasemka;260;Marta Zielińska;
+5;13;2025-05-13;Tonowanie;90;Karolina Bąk;Klientka zadowolona
+6;2;2025-05-17;Baleyage;320;Karolina Bąk;Klientka zadowolona
+7;32;2025-05-21;Tonowanie;90;Ewa Kowalczyk;
+8;26;2025-05-30;Koloryzacja jednolita;180;Natalia Woźniak;Alergia na amoniak
+9;30;2025-05-31;Tonowanie;90;Natalia Woźniak;
+10;2;2025-06-04;Maska regenerująca;60;Natalia Woźniak;Alergia na amoniak
+11;4;2025-06-05;Koloryzacja jednolita;180;Ewa Kowalczyk;Spóźniła się 15 min
+12;35;2025-06-11;Podcięcie końcówek;50;Natalia Woźniak;Klientka zadowolona
+13;8;2025-06-14;Prostowanie;80;Natalia Woźniak;
+14;14;2025-06-14;Modelowanie;60;Natalia Woźniak;
+15;21;2025-06-14;Tonowanie;90;Marta Zielińska;
+16;39;2025-06-21;Maska regenerująca;60;Natalia Woźniak;Alergia na amoniak
+17;6;2025-06-25;Pasemka;260;Karolina Bąk;
+18;14;2025-06-26;Koloryzacja jednolita;180;Ewa Kowalczyk;Prosi o tę samą fryzjerkę
+19;38;2025-06-27;Keratynowe prostowanie;350;Marta Zielińska;Spóźniła się 15 min
+20;6;2025-06-28;Modelowanie;60;Karolina Bąk;Alergia na amoniak
+21;19;2025-06-30;Keratynowe prostowanie;350;Marta Zielińska;
+22;4;2025-07-03;Koloryzacja jednolita;180;Natalia Woźniak;
+23;39;2025-07-07;Prostowanie;80;Ewa Kowalczyk;
+24;6;2025-07-10;Strzyżenie damskie;70;Marta Zielińska;Klientka zadowolona
+25;12;2025-07-11;Koloryzacja jednolita;180;Karolina Bąk;Klientka zadowolona
+26;33;2025-07-12;Keratynowe prostowanie;350;Marta Zielińska;
+27;33;2025-07-16;Podcięcie końcówek;50;Ewa Kowalczyk;
+28;26;2025-07-17;Botoks na włosy;200;Karolina Bąk;Alergia na amoniak
+29;26;2025-07-19;Pasemka;260;Ewa Kowalczyk;Klientka zadowolona
+30;35;2025-07-21;Tonowanie;90;Karolina Bąk;Spóźniła się 15 min
+31;9;2025-07-22;Pasemka;260;Marta Zielińska;Prosi o tę samą fryzjerkę
+32;36;2025-07-23;Keratynowe prostowanie;350;Ewa Kowalczyk;
+33;2;2025-07-25;Koloryzacja jednolita;180;Marta Zielińska;
+34;7;2025-07-25;Koloryzacja jednolita;180;Ewa Kowalczyk;
+35;5;2025-07-28;Tonowanie;90;Karolina Bąk;
+36;5;2025-07-29;Upięcie okolicznościowe;150;Ewa Kowalczyk;Klientka zadowolona
+37;13;2025-07-29;Keratynowe prostowanie;350;Karolina Bąk;
+38;33;2025-07-31;Modelowanie;60;Ewa Kowalczyk;
+39;16;2025-08-01;Podcięcie końcówek;50;Marta Zielińska;
+40;4;2025-08-09;Tonowanie;90;Ewa Kowalczyk;
+41;15;2025-08-12;Modelowanie;60;Karolina Bąk;Klientka zadowolona
+42;30;2025-08-15;Pasemka;260;Ewa Kowalczyk;Klientka zadowolona
+43;4;2025-08-22;Baleyage;320;Natalia Woźniak;Alergia na amoniak
+44;38;2025-08-25;Prostowanie;80;Ewa Kowalczyk;Alergia na amoniak
+45;5;2025-08-26;Modelowanie;60;Ewa Kowalczyk;Klientka zadowolona
+46;20;2025-08-28;Modelowanie;60;Ewa Kowalczyk;Prosi o tę samą fryzjerkę
+47;36;2025-08-28;Maska regenerująca;60;Karolina Bąk;Alergia na amoniak
+48;40;2025-09-06;Baleyage;320;Marta Zielińska;
+49;26;2025-09-08;Maska regenerująca;60;Marta Zielińska;Prosi o tę samą fryzjerkę
+50;9;2025-09-15;Koloryzacja jednolita;180;Marta Zielińska;Prosi o tę samą fryzjerkę
+51;37;2025-09-16;Prostowanie;80;Marta Zielińska;Alergia na amoniak
+52;12;2025-09-19;Baleyage;320;Marta Zielińska;Spóźniła się 15 min
+53;14;2025-09-19;Pasemka;260;Karolina Bąk;
+54;20;2025-09-22;Koloryzacja jednolita;180;Karolina Bąk;Spóźniła się 15 min
+55;22;2025-09-26;Prostowanie;80;Ewa Kowalczyk;
+56;24;2025-10-01;Botoks na włosy;200;Marta Zielińska;Klientka zadowolona
+57;26;2025-10-03;Botoks na włosy;200;Ewa Kowalczyk;Prosi o tę samą fryzjerkę
+58;28;2025-10-03;Pasemka;260;Ewa Kowalczyk;
+59;8;2025-10-09;Tonowanie;90;Karolina Bąk;Prosi o tę samą fryzjerkę
+60;38;2025-10-11;Strzyżenie męskie;45;Marta Zielińska;
+61;8;2025-10-16;Baleyage;320;Marta Zielińska;Prosi o tę samą fryzjerkę
+62;27;2025-10-17;Strzyżenie męskie;45;Marta Zielińska;
+63;36;2025-10-17;Keratynowe prostowanie;350;Ewa Kowalczyk;Alergia na amoniak
+64;18;2025-10-25;Keratynowe prostowanie;350;Ewa Kowalczyk;Alergia na amoniak
+65;20;2025-10-25;Keratynowe prostowanie;350;Marta Zielińska;Prosi o tę samą fryzjerkę
+66;5;2025-10-27;Modelowanie;60;Karolina Bąk;Alergia na amoniak
+67;27;2025-10-29;Koloryzacja jednolita;180;Marta Zielińska;Prosi o tę samą fryzjerkę
+68;38;2025-10-29;Prostowanie;80;Karolina Bąk;
+69;26;2025-10-30;Podcięcie końcówek;50;Marta Zielińska;Spóźniła się 15 min
+70;27;2025-10-31;Upięcie okolicznościowe;150;Natalia Woźniak;
+71;35;2025-10-31;Baleyage;320;Ewa Kowalczyk;Prosi o tę samą fryzjerkę
+72;39;2025-11-01;Koloryzacja jednolita;180;Natalia Woźniak;
+73;3;2025-11-04;Podcięcie końcówek;50;Marta Zielińska;Prosi o tę samą fryzjerkę
+74;4;2025-11-04;Keratynowe prostowanie;350;Marta Zielińska;Alergia na amoniak
+75;4;2025-11-06;Modelowanie;60;Ewa Kowalczyk;Spóźniła się 15 min
+76;33;2025-11-06;Koloryzacja jednolita;180;Ewa Kowalczyk;Spóźniła się 15 min
+77;15;2025-11-07;Koloryzacja jednolita;180;Marta Zielińska;
+78;25;2025-11-07;Koloryzacja jednolita;180;Ewa Kowalczyk;
+79;15;2025-11-08;Keratynowe prostowanie;350;Natalia Woźniak;Spóźniła się 15 min
+80;20;2025-11-10;Modelowanie;60;Karolina Bąk;
+81;31;2025-11-11;Maska regenerująca;60;Ewa Kowalczyk;
+82;4;2025-11-12;Strzyżenie męskie;45;Natalia Woźniak;Prosi o tę samą fryzjerkę
+83;21;2025-11-12;Koloryzacja jednolita;180;Natalia Woźniak;Alergia na amoniak
+84;5;2025-11-14;Podcięcie końcówek;50;Natalia Woźniak;
+85;25;2025-11-14;Podcięcie końcówek;50;Karolina Bąk;Spóźniła się 15 min
+86;33;2025-11-15;Modelowanie;60;Ewa Kowalczyk;
+87;31;2025-11-19;Keratynowe prostowanie;350;Karolina Bąk;
+88;26;2025-11-21;Modelowanie;60;Natalia Woźniak;Spóźniła się 15 min
+89;3;2025-11-22;Botoks na włosy;200;Natalia Woźniak;Spóźniła się 15 min
+90;13;2025-11-22;Keratynowe prostowanie;350;Ewa Kowalczyk;Klientka zadowolona
+91;16;2025-11-22;Prostowanie;80;Natalia Woźniak;Alergia na amoniak
+92;15;2025-11-24;Baleyage;320;Ewa Kowalczyk;
+93;38;2025-11-25;Keratynowe prostowanie;350;Marta Zielińska;Spóźniła się 15 min
+94;38;2025-11-26;Prostowanie;80;Marta Zielińska;
+95;38;2025-11-27;Strzyżenie męskie;45;Karolina Bąk;Klientka zadowolona
+96;23;2025-11-28;Podcięcie końcówek;50;Marta Zielińska;Alergia na amoniak
+97;8;2025-11-29;Strzyżenie damskie;70;Marta Zielińska;
+98;12;2025-11-29;Modelowanie;60;Marta Zielińska;
+99;21;2025-12-03;Keratynowe prostowanie;350;Ewa Kowalczyk;Spóźniła się 15 min
+100;25;2025-12-06;Tonowanie;90;Ewa Kowalczyk;Klientka zadowolona
+101;20;2025-12-11;Maska regenerująca;60;Marta Zielińska;Klientka zadowolona
+102;27;2025-12-20;Pasemka;260;Karolina Bąk;Klientka zadowolona
+103;24;2025-12-22;Maska regenerująca;60;Natalia Woźniak;Spóźniła się 15 min
+104;9;2025-12-23;Upięcie okolicznościowe;150;Karolina Bąk;
+105;15;2025-12-25;Upięcie okolicznościowe;150;Natalia Woźniak;
+106;18;2025-12-25;Upięcie okolicznościowe;150;Ewa Kowalczyk;
+107;22;2025-12-26;Strzyżenie męskie;45;Marta Zielińska;Spóźniła się 15 min
+108;27;2025-12-26;Upięcie okolicznościowe;150;Ewa Kowalczyk;Spóźniła się 15 min
+109;4;2025-12-27;Keratynowe prostowanie;350;Karolina Bąk;
+110;17;2026-01-06;Modelowanie;60;Ewa Kowalczyk;
+111;24;2026-01-07;Podcięcie końcówek;50;Natalia Woźniak;
+112;18;2026-01-10;Strzyżenie męskie;45;Ewa Kowalczyk;
+113;21;2026-01-10;Pasemka;260;Ewa Kowalczyk;Klientka zadowolona
+114;32;2026-01-10;Pasemka;260;Natalia Woźniak;Prosi o tę samą fryzjerkę
+115;4;2026-01-17;Strzyżenie męskie;45;Karolina Bąk;
+116;11;2026-01-17;Pasemka;260;Natalia Woźniak;
+117;7;2026-01-22;Modelowanie;60;Marta Zielińska;
+118;21;2026-01-24;Podcięcie końcówek;50;Marta Zielińska;Prosi o tę samą fryzjerkę
+119;9;2026-01-28;Podcięcie końcówek;50;Natalia Woźniak;
+120;26;2026-01-29;Keratynowe prostowanie;350;Ewa Kowalczyk;Spóźniła się 15 min
+121;7;2026-02-05;Maska regenerująca;60;Natalia Woźniak;Prosi o tę samą fryzjerkę
+122;12;2026-02-06;Strzyżenie męskie;45;Karolina Bąk;
+123;14;2026-02-07;Podcięcie końcówek;50;Karolina Bąk;Prosi o tę samą fryzjerkę
+124;36;2026-02-14;Tonowanie;90;Karolina Bąk;Spóźniła się 15 min
+125;37;2026-02-18;Botoks na włosy;200;Marta Zielińska;Alergia na amoniak
+126;2;2026-02-21;Prostowanie;80;Karolina Bąk;Spóźniła się 15 min
+127;36;2026-02-23;Baleyage;320;Karolina Bąk;
+128;2;2026-02-27;Koloryzacja jednolita;180;Natalia Woźniak;Klientka zadowolona
+129;39;2026-02-27;Tonowanie;90;Marta Zielińska;
+130;26;2026-02-28;Maska regenerująca;60;Ewa Kowalczyk;
+131;38;2026-03-05;Pasemka;260;Karolina Bąk;Alergia na amoniak
+132;18;2026-03-10;Upięcie okolicznościowe;150;Karolina Bąk;
+133;13;2026-03-14;Maska regenerująca;60;Karolina Bąk;
+134;26;2026-03-17;Baleyage;320;Karolina Bąk;Spóźniła się 15 min
+135;35;2026-03-20;Upięcie okolicznościowe;150;Marta Zielińska;Spóźniła się 15 min
+136;9;2026-03-21;Upięcie okolicznościowe;150;Karolina Bąk;Prosi o tę samą fryzjerkę
+137;38;2026-03-21;Strzyżenie męskie;45;Marta Zielińska;Klientka zadowolona
+138;3;2026-03-23;Tonowanie;90;Karolina Bąk;Alergia na amoniak
+139;26;2026-03-26;Podcięcie końcówek;50;Ewa Kowalczyk;
+140;30;2026-03-28;Maska regenerująca;60;Natalia Woźniak;
+141;34;2026-03-28;Podcięcie końcówek;50;Natalia Woźniak;Klientka zadowolona
+142;38;2026-03-28;Podcięcie końcówek;50;Ewa Kowalczyk;
+143;13;2026-03-30;Maska regenerująca;60;Natalia Woźniak;Spóźniła się 15 min
+144;8;2026-03-31;Modelowanie;60;Marta Zielińska;Spóźniła się 15 min
+145;15;2026-03-31;Baleyage;320;Karolina Bąk;Prosi o tę samą fryzjerkę
+146;40;2026-03-31;Tonowanie;90;Natalia Woźniak;
+147;3;2026-04-01;Pasemka;260;Marta Zielińska;Spóźniła się 15 min
+148;4;2026-04-04;Prostowanie;80;Marta Zielińska;
+149;21;2026-04-04;Strzyżenie damskie;70;Natalia Woźniak;Klientka zadowolona
+150;29;2026-04-06;Podcięcie końcówek;50;Natalia Woźniak;Prosi o tę samą fryzjerkę
+151;36;2026-04-08;Pasemka;260;Marta Zielińska;
+152;3;2026-04-09;Modelowanie;60;Ewa Kowalczyk;
+153;4;2026-04-09;Prostowanie;80;Natalia Woźniak;Spóźniła się 15 min
+154;7;2026-04-10;Upięcie okolicznościowe;150;Natalia Woźniak;
+155;21;2026-04-15;Tonowanie;90;Natalia Woźniak;Alergia na amoniak
+156;12;2026-04-16;Maska regenerująca;60;Marta Zielińska;Alergia na amoniak
+157;13;2026-04-20;Baleyage;320;Ewa Kowalczyk;Klientka zadowolona
+158;39;2026-04-21;Maska regenerująca;60;Natalia Woźniak;
+159;34;2026-04-23;Maska regenerująca;60;Karolina Bąk;Spóźniła się 15 min
+160;3;2026-04-24;Podcięcie końcówek;50;Karolina Bąk;
+161;22;2026-04-29;Podcięcie końcówek;50;Natalia Woźniak;
+162;7;2026-05-02;Tonowanie;90;Karolina Bąk;Prosi o tę samą fryzjerkę
+163;26;2026-05-02;Upięcie okolicznościowe;150;Marta Zielińska;Alergia na amoniak
+164;4;2026-05-05;Prostowanie;80;Marta Zielińska;
+165;7;2026-05-05;Tonowanie;90;Karolina Bąk;
+166;20;2026-05-07;Prostowanie;80;Natalia Woźniak;Spóźniła się 15 min
+167;21;2026-05-18;Keratynowe prostowanie;350;Karolina Bąk;Prosi o tę samą fryzjerkę
+168;2;2026-05-23;Upięcie okolicznościowe;150;Karolina Bąk;
+169;30;2026-05-25;Maska regenerująca;60;Marta Zielińska;Alergia na amoniak
+170;14;2026-05-26;Maska regenerująca;60;Ewa Kowalczyk;

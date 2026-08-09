@@ -1,0 +1,41 @@
+﻿ID_klientki;Imie;Nazwisko;Telefon;Email;Ulica;Miasto;Data_pierwszej_wizyty;Zgoda_marketing
+1;Oliwia;Rutkowska;578 932 879;oliwia.rutkowska@example.com;ul. Powstańców Śląskich 13;Wrocław;2020-11-10;tak
+2;Monika;Kamińska;509 679 290;monika.kaminska@example.com;ul. Piłsudskiego 9;Wrocław;2025-03-15;tak
+3;Dominika;Jabłońska;507 579 383;dominika.jablonska@example.com;ul. Jedności Narodowej 38;Wrocław;2020-04-06;tak
+4;Anna;Pawlak;568 145 384;anna.pawlak@example.com;ul. Legnicka 9;Wrocław;2019-07-22;tak
+5;Zuzanna;Lewandowska;561 003 307;zuzanna.lewandowska@example.com;ul. Sienkiewicza 91;Wrocław;2021-05-31;nie
+6;Joanna;Ostrowska;545 145 061;joanna.ostrowska@example.com;ul. Powstańców Śląskich 32;Wrocław;2024-09-26;tak
+7;Magdalena;Pawlak;528 378 326;magdalena.pawlak@example.com;ul. Jedności Narodowej 50;Wrocław;2024-07-24;nie
+8;Alicja;Wieczorek;549 403 269;alicja.wieczorek@example.com;ul. Jedności Narodowej 74;Wrocław;2024-09-29;tak
+9;Monika;Wieczorek;540 954 611;monika.wieczorek@example.com;ul. Grabiszyńska 27;Wrocław;2019-05-03;tak
+10;Agnieszka;Malinowska;559 729 792;agnieszka.malinowska@example.com;ul. Sienkiewicza 24;Wrocław;2018-11-01;tak
+11;Karolina;Jabłońska;533 283 679;karolina.jablonska@example.com;ul. Grabiszyńska 54;Wrocław;2025-05-03;tak
+12;Ewelina;Wójcik;543 646 974;ewelina.wojcik@example.com;ul. Piłsudskiego 23;Wrocław;2025-02-05;tak
+13;Klaudia;Witkowska;599 143 301;klaudia.witkowska@example.com;ul. Świdnicka 53;Wrocław;2020-11-14;tak
+14;Magdalena;Wójcik;545 892 152;magdalena.wojcik@example.com;ul. Kościuszki 43;Wrocław;2018-07-03;tak
+15;Nikola;Wójcik;575 400 917;nikola.wojcik@example.com;ul. Grabiszyńska 94;Wrocław;2022-05-19;tak
+16;Sylwia;Kamińska;578 502 551;sylwia.kaminska@example.com;ul. Jedności Narodowej 61;Wrocław;2024-12-30;nie
+17;Barbara;Witkowska;509 669 091;barbara.witkowska@example.com;ul. Grabiszyńska 12;Wrocław;2018-09-12;tak
+18;Iwona;Górska;569 777 818;iwona.gorska@example.com;ul. Piłsudskiego 4;Wrocław;2022-05-23;tak
+19;Julia;Nowak;517 974 054;julia.nowak@example.com;ul. Powstańców Śląskich 87;Wrocław;2019-01-04;tak
+20;Amelia;Król;577 356 436;amelia.krol@example.com;ul. Krzycka 113;Wrocław;2023-06-20;nie
+21;Klaudia;Ostrowska;532 275 014;klaudia.ostrowska@example.com;ul. Powstańców Śląskich 15;Wrocław;2020-10-25;nie
+22;Renata;Wieczorek;568 759 751;renata.wieczorek@example.com;ul. Legnicka 36;Wrocław;2019-01-21;tak
+23;Renata;Ostrowska;549 026 730;renata.ostrowska@example.com;ul. Świdnicka 31;Wrocław;2024-04-15;tak
+24;Paulina;Pawlak;585 133 742;paulina.pawlak@example.com;ul. Bardzka 2;Wrocław;2020-07-28;tak
+25;Aleksandra;Jabłońska;558 889 263;aleksandra.jablonska@example.com;ul. Grabiszyńska 53;Wrocław;2021-07-08;tak
+26;Oliwia;Pawlak;506 898 575;oliwia.pawlak@example.com;ul. Jedności Narodowej 27;Wrocław;2024-10-04;tak
+27;Weronika;Jabłońska;514 854 058;weronika.jablonska@example.com;ul. Grabiszyńska 5;Wrocław;2020-12-04;tak
+28;Zofia;Górska;570 316 028;zofia.gorska@example.com;ul. Traugutta 88;Wrocław;2024-04-17;nie
+29;Monika;Sobczak;577 913 788;monika.sobczak@example.com;ul. Świdnicka 107;Wrocław;2019-07-28;tak
+30;Amelia;Sobczak;544 693 428;amelia.sobczak@example.com;ul. Piłsudskiego 35;Wrocław;2019-06-12;nie
+31;Dominika;Górska;518 096 080;dominika.gorska@example.com;ul. Piłsudskiego 118;Wrocław;2021-05-18;tak
+32;Maja;Kamińska;518 766 437;maja.kaminska@example.com;ul. Kościuszki 17;Wrocław;2022-01-22;nie
+33;Julia;Sobczak;513 690 420;julia.sobczak@example.com;ul. Legnicka 25;Wrocław;2024-02-15;tak
+34;Agnieszka;Baran;553 971 791;agnieszka.baran@example.com;ul. Piłsudskiego 80;Wrocław;2023-01-22;tak
+35;Amelia;Górska;566 892 838;amelia.gorska@example.com;ul. Jedności Narodowej 28;Wrocław;2019-12-06;tak
+36;Hanna;Malinowska;523 525 953;hanna.malinowska@example.com;ul. Krzycka 100;Wrocław;2023-09-09;tak
+37;Sylwia;Jabłońska;514 616 682;sylwia.jablonska@example.com;ul. Krzycka 52;Wrocław;2018-10-29;tak
+38;Ewelina;Wieczorek;555 185 831;ewelina.wieczorek@example.com;ul. Kościuszki 14;Wrocław;2025-08-06;tak
+39;Zofia;Malinowska;597 232 132;zofia.malinowska@example.com;ul. Powstańców Śląskich 37;Wrocław;2018-04-28;tak
+40;Nikola;Wójcik;571 156 768;nikola.wojcik@example.com;ul. Traugutta 56;Wrocław;2023-07-07;tak

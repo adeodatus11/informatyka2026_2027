@@ -22,12 +22,12 @@
 
     <h1>Blok 12. Każ komputerowi zrobić to za ciebie</h1>
     <p class="lead">Programowanie to nie sztuka dla hakerów. To sposób myślenia, w którym rozbijasz duży problem na małe kroki i każesz je wykonać maszynie. Poznasz podstawy Pythona, dzięki czemu napiszesz program podejmujący decyzje lub zabezpieczający plik.</p>
-<div style="margin: 20px 0;"><a href="pobieralnia/skrypt_startowy.py" class="btn-download" download>Pobierz skrypt startowy (.py)</a></div>
+<div style="margin: 20px 0; display:flex; gap:16px; flex-wrap:wrap;"><a href="pobieralnia/blok12_skrypt_startowy.py" class="btn-download" download>Pobierz plik startowy (.py)</a></div>
 
     <div class="meta">
         <span class="pill">Klasa II</span>
-        <span class="pill">11 godzin</span>
-        <span class="pill">Lekcje 16–26</span>
+        <span class="pill">13 godzin</span>
+        <span class="pill">Lekcje 15–27</span>
         <span class="pill">Styczeń – Kwiecień</span>
     </div>
 
@@ -46,7 +46,7 @@
     <div class="step-card">
         <h3><span class="step-number">1</span> Print i Input</h3>
         <p class="instruction-text">
-            Napisz program, który zapyta użytkownika o imię i się przywita. Użyj języka <strong>Python</strong>. Otwórz stronę Replit.com lub program Thonny. Programowanie w Pythonie opiera się na angielskich słowach i prostej matematyce.
+            Napisz program, który zapyta użytkownika o imię i się przywita. Używamy języka <strong>Python</strong> w programie <strong>Thonny</strong> — jest zainstalowany na szkolnych komputerach i nie wymaga zakładania konta. Python opiera się na angielskich słowach i prostej matematyce.
         </p>
         <div class="pro-tip">
             <strong>Pro Tip:</strong> Funkcja <code>input()</code> zawsze zapisuje dane jako "tekst". Wpisując liczbę "5", dla Pythona jest to słowo. Przekonwertuj je za pomocą <code>int()</code> (od integer - liczba całkowita), aby wykonać obliczenia matematyczne.
@@ -71,7 +71,6 @@
     <p>Bramki if/else decydują, co program ma zrobić. Jeśli hasło jest poprawne to wchodzisz, w przeciwnym razie — wypad!</p>
   </div>
 </div>
-<a href="https://www.youtube.com/watch?v=kqtD5dpn9C8" target="_blank" class="btn-youtube">Obejrzyj na YouTube (3 min)</a>
 <!-- KONIEC NOWEJ STRUKTURY -->
 
 <ol class="zad">
@@ -94,9 +93,64 @@
         </ol>
     </div>
 
-    <h2>Krok 3: Szyfrowanie Danych</h2>
+    <h2>Krok 3: Cztery algorytmy, które warto znać</h2>
     <div class="step-card">
-        <h3><span class="step-number">3</span> Szyfr Cezara</h3>
+        <h3><span class="step-number">3</span> Skracanie proporcji, czyli NWD w salonie</h3>
+        <p class="instruction-text">
+            Farbę mieszasz z oksydantem w proporcji. Producent pisze „90 ml farby na 60 ml oksydantu", a ty chcesz wiedzieć, ile to w prostych liczbach. Dzielisz obie liczby przez ich <strong>największy wspólny dzielnik</strong> (NWD) — wychodzi 3:2. Ten sam algorytm skraca ułamki na matematyce.
+        </p>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Python ma NWD gotowe: <code>from math import gcd</code>, a potem <code>gcd(90, 60)</code>. Ale najpierw zobacz, jak to działa od środka.</div>
+        <ol class="zad">
+            <li>Wypisz na kartce wszystkie dzielniki liczb 90 i 60. Zakreśl największy wspólny. To jest NWD.</li>
+            <li>Napisz program: pyta o dwie liczby, wypisuje ich NWD (użyj <code>gcd</code>) i skróconą proporcję, np. <code>3 : 2</code>.</li>
+            <li>Sprawdź program na proporcjach z prawdziwych opakowań: 100 i 150, 45 i 30, 120 i 40.</li>
+            <li><em>Dla chętnych:</em> NWW to najmniejsza wspólna wielokrotność. Ile najmniej mililitrów mieszanki trzeba przygotować, żeby dało się ją podzielić i na 3, i na 4 równe porcje?</li>
+        </ol>
+    </div>
+
+    <div class="step-card">
+        <h3><span class="step-number">4</span> Zera i jedynki, czyli jak komputer widzi liczby</h3>
+        <p class="instruction-text">
+            Komputer nie zna cyfr od 0 do 9. Zna tylko dwie: 0 i 1. Każda liczba, którą wpisujesz, zamieniana jest na <strong>system dwójkowy</strong>. Dlatego plik ma rozmiar 1024, a nie 1000 bajtów.
+        </p>
+        <ol class="zad">
+            <li>Zamień na kartce liczbę 13 na system dwójkowy: dziel przez 2 i zapisuj reszty, potem odczytaj je od dołu.</li>
+            <li>Sprawdź się w Pythonie: <code>print(bin(13))</code>. Wynik <code>0b1101</code> — przedrostek <code>0b</code> znaczy „to jest dwójkowo".</li>
+            <li>Wróć w drugą stronę: <code>print(int("1101", 2))</code>.</li>
+            <li>Napisz program, który pyta o liczbę i wypisuje ją w systemie dwójkowym i szesnastkowym (<code>hex()</code>). Sprawdź, co wyjdzie dla 255.</li>
+        </ol>
+    </div>
+
+    <div class="step-card">
+        <h3><span class="step-number">5</span> Sortowanie bąbelkowe</h3>
+        <p class="instruction-text">
+            Masz cennik w przypadkowej kolejności. Komputer sortuje go tak: porównuje dwie sąsiednie liczby i zamienia je miejscami, jeśli są w złej kolejności. Potem następne dwie. I tak w kółko, aż nie będzie już czego zamieniać. Największa liczba „wypływa" na koniec jak bąbelek — stąd nazwa.
+        </p>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Zanim napiszesz kod, zróbcie to na sobie. Pięć osób z kartkami z cenami staje w rzędzie i sortuje się według tej zasady — porównujemy tylko sąsiadów.</div>
+        <ol class="zad">
+            <li>Odegrajcie sortowanie w klasie, na kartkach. Policzcie, ile zamian było potrzebnych.</li>
+            <li>Zapisz w Pythonie listę pięciu cen w losowej kolejności.</li>
+            <li>Napisz dwie zagnieżdżone pętle <code>for</code>, które porównują <code>lista[i]</code> z <code>lista[i+1]</code> i zamieniają je miejscami: <code>lista[i], lista[i+1] = lista[i+1], lista[i]</code>.</li>
+            <li>Wypisz listę po sortowaniu. Porównaj wynik z gotową funkcją <code>sorted()</code> — ta sama odpowiedź, jedna linijka. <span class="tag milestone">KROK MILOWY</span></li>
+        </ol>
+    </div>
+
+    <div class="step-card">
+        <h3><span class="step-number">6</span> Ciąg Fibonacciego</h3>
+        <p class="instruction-text">
+            Każda liczba jest sumą dwóch poprzednich: 1, 1, 2, 3, 5, 8, 13, 21… Ten ciąg opisuje układ nasion w słoneczniku, spiralę muszli i proporcje, które w projektowaniu uchodzą za przyjemne dla oka. Policzysz go jedną pętlą.
+        </p>
+        <ol class="zad">
+            <li>Dopisz na kartce pięć kolejnych wyrazów po 21.</li>
+            <li>Napisz program: dwie zmienne <code>a = 1</code> i <code>b = 1</code>, pętla <code>for</code>, a w środku <code>a, b = b, a + b</code>. Wypisuj <code>a</code> w każdym obiegu.</li>
+            <li>Wypisz pierwsze 15 wyrazów ciągu.</li>
+            <li>Podziel każdy wyraz przez poprzedni. Do jakiej liczby zbliża się wynik? (To złota proporcja, około 1,618 — używa się jej przy projektowaniu plakatów z bloku 3.)</li>
+        </ol>
+    </div>
+
+    <h2>Krok 4: Szyfrowanie danych</h2>
+    <div class="step-card">
+        <h3><span class="step-number">7</span> Szyfr Cezara</h3>
         <p class="instruction-text">
             Szyfr Cezara przesuwa literę alfabetu o określoną wartość (np. A staje się D przy przesunięciu o 3). Napisz kod, który podmieni każde słowo w tajnej wiadomości.
         </p>
@@ -133,7 +187,7 @@
     <div class="footer-right-col">
       <div class="footer-text">
         <strong>Informatyka 2026/2027 · Metodologia WIN4SMEs (WP3.A5)</strong><br>
-        Rozkład materiału bazuje na innowacyjnych modelach edukacyjnych (Flipped Classroom, Blended Learning).<br>
+        Rozkład inspirowany metodami nauczania badanymi w projekcie WIN4SMEs.<br>
         Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autora(-ów) i niekoniecznie odzwierciedlają poglądy Unii Europejskiej.
       </div>
     </div>

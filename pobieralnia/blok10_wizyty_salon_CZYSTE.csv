@@ -1,0 +1,301 @@
+﻿Data;Klientka;Usluga;Kategoria;Pracownik;Czas_min;Cena
+2025-09-01;Magdalena Sikora;Strzyżenie męskie;Strzyżenie;Natalia Woźniak;20;45
+2025-09-03;Karolina Baran;Strzyżenie damskie;Strzyżenie;Ewa Kowalczyk;50;70
+2025-09-04;Magdalena Górska;Pasemka;Koloryzacja;Marta Zielińska;150;260
+2025-09-05;Paulina Nowak;Zabieg nawilżający;Pielęgnacja;Karolina Bąk;40;80
+2025-09-05;Agnieszka Nowak;Strzyżenie damskie;Strzyżenie;Marta Zielińska;35;70
+2025-09-05;Renata Adamczyk;Baleyage;Koloryzacja;Natalia Woźniak;185;320
+2025-09-06;Beata Jabłońska;Strzyżenie męskie;Strzyżenie;Karolina Bąk;25;45
+2025-09-06;Agnieszka Pawlak;Keratynowe prostowanie;Pielęgnacja;Marta Zielińska;190;350
+2025-09-10;Barbara Nowak;Fale;Stylizacja;Marta Zielińska;40;70
+2025-09-12;Patrycja Zając;Prostowanie;Stylizacja;Ewa Kowalczyk;45;80
+2025-09-12;Dominika Duda;Fale;Stylizacja;Karolina Bąk;40;70
+2025-09-12;Ewelina Wójcik;Zabieg nawilżający;Pielęgnacja;Natalia Woźniak;55;80
+2025-09-12;Paulina Zając;Strzyżenie męskie;Strzyżenie;Marta Zielińska;45;45
+2025-09-12;Sylwia Witkowska;Botoks na włosy;Pielęgnacja;Ewa Kowalczyk;90;200
+2025-09-12;Anna Baran;Podcięcie końcówek;Strzyżenie;Ewa Kowalczyk;40;50
+2025-09-12;Patrycja Król;Maska regenerująca;Pielęgnacja;Natalia Woźniak;25;60
+2025-09-13;Dominika Wieczorek;Pasemka;Koloryzacja;Ewa Kowalczyk;150;260
+2025-09-13;Renata Kamińska;Strzyżenie męskie;Strzyżenie;Ewa Kowalczyk;35;45
+2025-09-13;Dominika Duda;Prostowanie;Stylizacja;Karolina Bąk;30;80
+2025-09-16;Agnieszka Jabłońska;Botoks na włosy;Pielęgnacja;Karolina Bąk;85;200
+2025-09-16;Anna Król;Modelowanie;Stylizacja;Marta Zielińska;30;60
+2025-09-16;Aleksandra Wieczorek;Botoks na włosy;Pielęgnacja;Karolina Bąk;100;200
+2025-09-17;Iwona Michalak;Strzyżenie damskie;Strzyżenie;Natalia Woźniak;45;70
+2025-09-18;Karolina Król;Zabieg nawilżający;Pielęgnacja;Ewa Kowalczyk;40;80
+2025-09-18;Barbara Adamczyk;Strzyżenie damskie;Strzyżenie;Marta Zielińska;35;70
+2025-09-19;Barbara Jabłońska;Maska regenerująca;Pielęgnacja;Marta Zielińska;20;60
+2025-09-19;Ewelina Król;Podcięcie końcówek;Strzyżenie;Karolina Bąk;30;50
+2025-09-19;Renata Jabłońska;Koloryzacja jednolita;Koloryzacja;Ewa Kowalczyk;110;180
+2025-09-20;Agnieszka Jabłońska;Strzyżenie męskie;Strzyżenie;Karolina Bąk;30;45
+2025-09-20;Patrycja Baran;Prostowanie;Stylizacja;Natalia Woźniak;55;80
+2025-09-20;Iwona Lewandowska;Upięcie okolicznościowe;Stylizacja;Ewa Kowalczyk;85;150
+2025-09-20;Karolina Baran;Koloryzacja jednolita;Koloryzacja;Ewa Kowalczyk;115;180
+2025-09-24;Renata Duda;Fale;Stylizacja;Ewa Kowalczyk;55;70
+2025-09-24;Ewelina Witkowska;Strzyżenie damskie;Strzyżenie;Natalia Woźniak;50;70
+2025-09-26;Klaudia Kamińska;Strzyżenie damskie;Strzyżenie;Ewa Kowalczyk;35;70
+2025-09-27;Paulina Witkowska;Modelowanie;Stylizacja;Marta Zielińska;40;60
+2025-09-29;Paulina Wójcik;Fale;Stylizacja;Karolina Bąk;55;70
+2025-10-02;Barbara Lewandowska;Koloryzacja jednolita;Koloryzacja;Karolina Bąk;110;180
+2025-10-03;Ewelina Lewandowska;Modelowanie;Stylizacja;Natalia Woźniak;25;60
+2025-10-03;Agnieszka Wieczorek;Fale;Stylizacja;Karolina Bąk;40;70
+2025-10-04;Anna Kamińska;Modelowanie;Stylizacja;Marta Zielińska;35;60
+2025-10-06;Weronika Nowak;Strzyżenie damskie;Strzyżenie;Ewa Kowalczyk;55;70
+2025-10-06;Anna Sikora;Strzyżenie damskie;Strzyżenie;Natalia Woźniak;35;70
+2025-10-09;Agnieszka Witkowska;Strzyżenie dziecięce;Strzyżenie;Ewa Kowalczyk;35;35
+2025-10-09;Dominika Kamińska;Modelowanie;Stylizacja;Karolina Bąk;25;60
+2025-10-09;Barbara Jabłońska;Modelowanie;Stylizacja;Natalia Woźniak;35;60
+2025-10-10;Dominika Wieczorek;Prostowanie;Stylizacja;Marta Zielińska;45;80
+2025-10-11;Beata Król;Strzyżenie damskie;Strzyżenie;Marta Zielińska;45;70
+2025-10-11;Magdalena Kamińska;Koloryzacja jednolita;Koloryzacja;Natalia Woźniak;130;180
+2025-10-11;Patrycja Witkowska;Strzyżenie damskie;Strzyżenie;Karolina Bąk;45;70
+2025-10-13;Patrycja Michalak;Podcięcie końcówek;Strzyżenie;Natalia Woźniak;40;50
+2025-10-15;Katarzyna Wójcik;Pasemka;Koloryzacja;Karolina Bąk;140;260
+2025-10-17;Sylwia Adamczyk;Baleyage;Koloryzacja;Ewa Kowalczyk;180;320
+2025-10-17;Magdalena Nowak;Modelowanie;Stylizacja;Natalia Woźniak;30;60
+2025-10-17;Justyna Michalak;Baleyage;Koloryzacja;Karolina Bąk;190;320
+2025-10-18;Patrycja Lewandowska;Keratynowe prostowanie;Pielęgnacja;Karolina Bąk;175;350
+2025-10-18;Klaudia Górska;Strzyżenie damskie;Strzyżenie;Natalia Woźniak;55;70
+2025-10-18;Patrycja Witkowska;Strzyżenie dziecięce;Strzyżenie;Natalia Woźniak;25;35
+2025-10-18;Sylwia Wieczorek;Modelowanie;Stylizacja;Ewa Kowalczyk;30;60
+2025-10-23;Anna Wójcik;Strzyżenie męskie;Strzyżenie;Natalia Woźniak;45;45
+2025-10-24;Paulina Witkowska;Strzyżenie męskie;Strzyżenie;Karolina Bąk;30;45
+2025-10-24;Renata Zając;Podcięcie końcówek;Strzyżenie;Marta Zielińska;30;50
+2025-10-25;Aleksandra Michalak;Strzyżenie damskie;Strzyżenie;Natalia Woźniak;55;70
+2025-10-25;Ewelina Wójcik;Upięcie okolicznościowe;Stylizacja;Karolina Bąk;75;150
+2025-10-25;Magdalena Nowak;Modelowanie;Stylizacja;Natalia Woźniak;30;60
+2025-10-27;Magdalena Lewandowska;Tonowanie;Koloryzacja;Karolina Bąk;45;90
+2025-10-28;Klaudia Jabłońska;Strzyżenie męskie;Strzyżenie;Karolina Bąk;30;45
+2025-10-28;Dominika Pawlak;Modelowanie;Stylizacja;Natalia Woźniak;35;60
+2025-10-28;Agnieszka Pawlak;Baleyage;Koloryzacja;Karolina Bąk;190;320
+2025-10-30;Sylwia Duda;Strzyżenie męskie;Strzyżenie;Ewa Kowalczyk;25;45
+2025-10-30;Weronika Adamczyk;Strzyżenie damskie;Strzyżenie;Karolina Bąk;45;70
+2025-10-31;Ewelina Lewandowska;Modelowanie;Stylizacja;Natalia Woźniak;30;60
+2025-11-01;Klaudia Baran;Zabieg nawilżający;Pielęgnacja;Natalia Woźniak;35;80
+2025-11-01;Magdalena Król;Prostowanie;Stylizacja;Ewa Kowalczyk;40;80
+2025-11-04;Barbara Michalak;Botoks na włosy;Pielęgnacja;Karolina Bąk;80;200
+2025-11-07;Monika Adamczyk;Modelowanie;Stylizacja;Marta Zielińska;30;60
+2025-11-07;Monika Górska;Modelowanie;Stylizacja;Marta Zielińska;35;60
+2025-11-08;Sylwia Zając;Tonowanie;Koloryzacja;Karolina Bąk;35;90
+2025-11-08;Weronika Pawlak;Tonowanie;Koloryzacja;Karolina Bąk;60;90
+2025-11-13;Barbara Wójcik;Podcięcie końcówek;Strzyżenie;Ewa Kowalczyk;25;50
+2025-11-14;Ewelina Sikora;Podcięcie końcówek;Strzyżenie;Ewa Kowalczyk;25;50
+2025-11-14;Patrycja Król;Strzyżenie męskie;Strzyżenie;Ewa Kowalczyk;30;45
+2025-11-14;Dominika Jabłońska;Modelowanie;Stylizacja;Ewa Kowalczyk;30;60
+2025-11-14;Barbara Baran;Podcięcie końcówek;Strzyżenie;Natalia Woźniak;30;50
+2025-11-15;Iwona Baran;Strzyżenie damskie;Strzyżenie;Natalia Woźniak;55;70
+2025-11-15;Renata Sikora;Strzyżenie dziecięce;Strzyżenie;Ewa Kowalczyk;15;35
+2025-11-15;Beata Lewandowska;Botoks na włosy;Pielęgnacja;Ewa Kowalczyk;80;200
+2025-11-15;Joanna Górska;Strzyżenie dziecięce;Strzyżenie;Ewa Kowalczyk;20;35
+2025-11-18;Monika Duda;Prostowanie;Stylizacja;Karolina Bąk;30;80
+2025-11-19;Weronika Witkowska;Prostowanie;Stylizacja;Karolina Bąk;45;80
+2025-11-19;Agnieszka Wójcik;Koloryzacja jednolita;Koloryzacja;Natalia Woźniak;125;180
+2025-11-21;Dominika Zając;Strzyżenie męskie;Strzyżenie;Natalia Woźniak;35;45
+2025-11-22;Aleksandra Witkowska;Maska regenerująca;Pielęgnacja;Natalia Woźniak;40;60
+2025-11-22;Patrycja Kamińska;Maska regenerująca;Pielęgnacja;Natalia Woźniak;30;60
+2025-11-22;Monika Lewandowska;Zabieg nawilżający;Pielęgnacja;Natalia Woźniak;30;80
+2025-11-22;Klaudia Michalak;Prostowanie;Stylizacja;Natalia Woźniak;55;80
+2025-11-22;Beata Sikora;Maska regenerująca;Pielęgnacja;Karolina Bąk;45;60
+2025-11-22;Ewelina Baran;Modelowanie;Stylizacja;Marta Zielińska;20;60
+2025-11-25;Monika Baran;Modelowanie;Stylizacja;Ewa Kowalczyk;25;60
+2025-11-28;Aleksandra Górska;Koloryzacja jednolita;Koloryzacja;Ewa Kowalczyk;110;180
+2025-11-28;Joanna Duda;Strzyżenie damskie;Strzyżenie;Karolina Bąk;55;70
+2025-11-28;Dominika Wójcik;Strzyżenie męskie;Strzyżenie;Marta Zielińska;45;45
+2025-11-29;Justyna Nowak;Zabieg nawilżający;Pielęgnacja;Natalia Woźniak;45;80
+2025-12-01;Barbara Duda;Strzyżenie damskie;Strzyżenie;Natalia Woźniak;45;70
+2025-12-02;Paulina Nowak;Pasemka;Koloryzacja;Karolina Bąk;150;260
+2025-12-05;Weronika Sikora;Keratynowe prostowanie;Pielęgnacja;Natalia Woźniak;180;350
+2025-12-05;Anna Górska;Prostowanie;Stylizacja;Marta Zielińska;40;80
+2025-12-06;Ewelina Zając;Koloryzacja jednolita;Koloryzacja;Natalia Woźniak;115;180
+2025-12-06;Barbara Wójcik;Tonowanie;Koloryzacja;Ewa Kowalczyk;45;90
+2025-12-08;Sylwia Zając;Strzyżenie dziecięce;Strzyżenie;Natalia Woźniak;40;35
+2025-12-08;Dominika Duda;Tonowanie;Koloryzacja;Natalia Woźniak;45;90
+2025-12-08;Magdalena Górska;Botoks na włosy;Pielęgnacja;Karolina Bąk;85;200
+2025-12-09;Sylwia Sikora;Maska regenerująca;Pielęgnacja;Ewa Kowalczyk;40;60
+2025-12-11;Patrycja Pawlak;Strzyżenie damskie;Strzyżenie;Karolina Bąk;45;70
+2025-12-11;Justyna Kamińska;Podcięcie końcówek;Strzyżenie;Ewa Kowalczyk;45;50
+2025-12-11;Agnieszka Baran;Modelowanie;Stylizacja;Natalia Woźniak;45;60
+2025-12-12;Patrycja Pawlak;Strzyżenie dziecięce;Strzyżenie;Karolina Bąk;25;35
+2025-12-13;Joanna Górska;Tonowanie;Koloryzacja;Natalia Woźniak;45;90
+2025-12-15;Dominika Michalak;Koloryzacja jednolita;Koloryzacja;Natalia Woźniak;135;180
+2025-12-15;Joanna Pawlak;Tonowanie;Koloryzacja;Karolina Bąk;45;90
+2025-12-15;Klaudia Król;Tonowanie;Koloryzacja;Ewa Kowalczyk;50;90
+2025-12-16;Barbara Michalak;Zabieg nawilżający;Pielęgnacja;Ewa Kowalczyk;45;80
+2025-12-17;Justyna Zając;Maska regenerująca;Pielęgnacja;Karolina Bąk;30;60
+2025-12-17;Katarzyna Wójcik;Modelowanie;Stylizacja;Ewa Kowalczyk;30;60
+2025-12-17;Paulina Duda;Prostowanie;Stylizacja;Natalia Woźniak;40;80
+2025-12-17;Renata Górska;Zabieg nawilżający;Pielęgnacja;Ewa Kowalczyk;40;80
+2025-12-18;Katarzyna Sikora;Strzyżenie dziecięce;Strzyżenie;Ewa Kowalczyk;40;35
+2025-12-19;Sylwia Witkowska;Zabieg nawilżający;Pielęgnacja;Marta Zielińska;30;80
+2025-12-19;Renata Adamczyk;Strzyżenie męskie;Strzyżenie;Ewa Kowalczyk;30;45
+2025-12-19;Paulina Witkowska;Strzyżenie damskie;Strzyżenie;Natalia Woźniak;35;70
+2025-12-20;Beata Pawlak;Strzyżenie damskie;Strzyżenie;Marta Zielińska;45;70
+2025-12-20;Klaudia Baran;Prostowanie;Stylizacja;Marta Zielińska;50;80
+2025-12-20;Patrycja Sikora;Maska regenerująca;Pielęgnacja;Karolina Bąk;35;60
+2025-12-22;Monika Wieczorek;Modelowanie;Stylizacja;Natalia Woźniak;30;60
+2025-12-23;Aleksandra Zając;Upięcie okolicznościowe;Stylizacja;Karolina Bąk;75;150
+2025-12-23;Beata Król;Strzyżenie dziecięce;Strzyżenie;Karolina Bąk;25;35
+2025-12-23;Agnieszka Wieczorek;Pasemka;Koloryzacja;Karolina Bąk;165;260
+2025-12-24;Barbara Witkowska;Keratynowe prostowanie;Pielęgnacja;Natalia Woźniak;175;350
+2025-12-24;Weronika Zając;Podcięcie końcówek;Strzyżenie;Marta Zielińska;25;50
+2025-12-24;Klaudia Kamińska;Modelowanie;Stylizacja;Ewa Kowalczyk;30;60
+2025-12-26;Klaudia Kamińska;Fale;Stylizacja;Natalia Woźniak;30;70
+2025-12-27;Agnieszka Witkowska;Modelowanie;Stylizacja;Marta Zielińska;20;60
+2025-12-27;Agnieszka Baran;Baleyage;Koloryzacja;Natalia Woźniak;185;320
+2025-12-27;Karolina Witkowska;Strzyżenie męskie;Strzyżenie;Marta Zielińska;30;45
+2025-12-27;Patrycja Kamińska;Fale;Stylizacja;Marta Zielińska;40;70
+2025-12-29;Klaudia Jabłońska;Strzyżenie męskie;Strzyżenie;Natalia Woźniak;40;45
+2025-12-30;Justyna Witkowska;Strzyżenie damskie;Strzyżenie;Ewa Kowalczyk;55;70
+2025-12-30;Barbara Pawlak;Pasemka;Koloryzacja;Karolina Bąk;140;260
+2025-12-31;Paulina Pawlak;Baleyage;Koloryzacja;Karolina Bąk;180;320
+2025-12-31;Dominika Górska;Fale;Stylizacja;Natalia Woźniak;30;70
+2025-12-31;Karolina Zając;Botoks na włosy;Pielęgnacja;Natalia Woźniak;100;200
+2026-01-01;Agnieszka Sikora;Keratynowe prostowanie;Pielęgnacja;Marta Zielińska;180;350
+2026-01-01;Monika Baran;Strzyżenie damskie;Strzyżenie;Karolina Bąk;35;70
+2026-01-01;Aleksandra Wójcik;Koloryzacja jednolita;Koloryzacja;Natalia Woźniak;110;180
+2026-01-02;Magdalena Wójcik;Podcięcie końcówek;Strzyżenie;Marta Zielińska;45;50
+2026-01-03;Katarzyna Lewandowska;Tonowanie;Koloryzacja;Marta Zielińska;50;90
+2026-01-03;Iwona Jabłońska;Tonowanie;Koloryzacja;Karolina Bąk;60;90
+2026-01-05;Magdalena Duda;Strzyżenie damskie;Strzyżenie;Marta Zielińska;45;70
+2026-01-05;Klaudia Wieczorek;Maska regenerująca;Pielęgnacja;Natalia Woźniak;45;60
+2026-01-07;Anna Wójcik;Strzyżenie dziecięce;Strzyżenie;Marta Zielińska;25;35
+2026-01-08;Ewelina Jabłońska;Maska regenerująca;Pielęgnacja;Ewa Kowalczyk;30;60
+2026-01-08;Ewelina Michalak;Tonowanie;Koloryzacja;Marta Zielińska;45;90
+2026-01-08;Agnieszka Adamczyk;Podcięcie końcówek;Strzyżenie;Ewa Kowalczyk;30;50
+2026-01-09;Justyna Michalak;Keratynowe prostowanie;Pielęgnacja;Karolina Bąk;180;350
+2026-01-09;Karolina Witkowska;Tonowanie;Koloryzacja;Natalia Woźniak;45;90
+2026-01-09;Katarzyna Witkowska;Botoks na włosy;Pielęgnacja;Natalia Woźniak;85;200
+2026-01-10;Paulina Wieczorek;Modelowanie;Stylizacja;Marta Zielińska;25;60
+2026-01-10;Paulina Nowak;Modelowanie;Stylizacja;Karolina Bąk;35;60
+2026-01-14;Weronika Sikora;Podcięcie końcówek;Strzyżenie;Natalia Woźniak;30;50
+2026-01-14;Magdalena Pawlak;Baleyage;Koloryzacja;Karolina Bąk;180;320
+2026-01-16;Iwona Michalak;Strzyżenie damskie;Strzyżenie;Ewa Kowalczyk;55;70
+2026-01-16;Anna Wójcik;Tonowanie;Koloryzacja;Marta Zielińska;50;90
+2026-01-16;Joanna Pawlak;Strzyżenie damskie;Strzyżenie;Ewa Kowalczyk;55;70
+2026-01-16;Weronika Górska;Modelowanie;Stylizacja;Natalia Woźniak;30;60
+2026-01-16;Dominika Lewandowska;Zabieg nawilżający;Pielęgnacja;Natalia Woźniak;40;80
+2026-01-16;Aleksandra Michalak;Pasemka;Koloryzacja;Marta Zielińska;150;260
+2026-01-17;Beata Kamińska;Strzyżenie damskie;Strzyżenie;Ewa Kowalczyk;35;70
+2026-01-17;Agnieszka Nowak;Podcięcie końcówek;Strzyżenie;Karolina Bąk;30;50
+2026-01-17;Karolina Wójcik;Tonowanie;Koloryzacja;Ewa Kowalczyk;35;90
+2026-01-19;Magdalena Adamczyk;Pasemka;Koloryzacja;Marta Zielińska;150;260
+2026-01-19;Weronika Wójcik;Pasemka;Koloryzacja;Ewa Kowalczyk;150;260
+2026-01-19;Ewelina Witkowska;Modelowanie;Stylizacja;Natalia Woźniak;30;60
+2026-01-20;Anna Pawlak;Strzyżenie damskie;Strzyżenie;Ewa Kowalczyk;45;70
+2026-01-23;Dominika Lewandowska;Modelowanie;Stylizacja;Ewa Kowalczyk;35;60
+2026-01-23;Anna Król;Baleyage;Koloryzacja;Natalia Woźniak;185;320
+2026-01-24;Joanna Michalak;Zabieg nawilżający;Pielęgnacja;Ewa Kowalczyk;40;80
+2026-01-24;Monika Jabłońska;Prostowanie;Stylizacja;Karolina Bąk;50;80
+2026-01-24;Paulina Pawlak;Strzyżenie damskie;Strzyżenie;Karolina Bąk;45;70
+2026-01-24;Dominika Duda;Podcięcie końcówek;Strzyżenie;Karolina Bąk;40;50
+2026-01-26;Barbara Baran;Strzyżenie damskie;Strzyżenie;Natalia Woźniak;40;70
+2026-01-27;Sylwia Duda;Koloryzacja jednolita;Koloryzacja;Marta Zielińska;120;180
+2026-01-29;Katarzyna Nowak;Tonowanie;Koloryzacja;Ewa Kowalczyk;60;90
+2026-01-30;Monika Duda;Koloryzacja jednolita;Koloryzacja;Marta Zielińska;135;180
+2026-01-31;Katarzyna Pawlak;Fale;Stylizacja;Natalia Woźniak;30;70
+2026-01-31;Beata Górska;Koloryzacja jednolita;Koloryzacja;Ewa Kowalczyk;120;180
+2026-01-31;Karolina Michalak;Modelowanie;Stylizacja;Karolina Bąk;45;60
+2026-02-06;Iwona Wójcik;Modelowanie;Stylizacja;Ewa Kowalczyk;20;60
+2026-02-06;Sylwia Wójcik;Strzyżenie męskie;Strzyżenie;Marta Zielińska;30;45
+2026-02-12;Renata Wójcik;Podcięcie końcówek;Strzyżenie;Karolina Bąk;40;50
+2026-02-12;Anna Duda;Fale;Stylizacja;Ewa Kowalczyk;40;70
+2026-02-13;Monika Baran;Podcięcie końcówek;Strzyżenie;Natalia Woźniak;45;50
+2026-02-13;Weronika Baran;Tonowanie;Koloryzacja;Natalia Woźniak;45;90
+2026-02-13;Magdalena Lewandowska;Botoks na włosy;Pielęgnacja;Marta Zielińska;90;200
+2026-02-14;Monika Michalak;Modelowanie;Stylizacja;Karolina Bąk;30;60
+2026-02-14;Karolina Wójcik;Podcięcie końcówek;Strzyżenie;Natalia Woźniak;30;50
+2026-02-14;Joanna Lewandowska;Koloryzacja jednolita;Koloryzacja;Karolina Bąk;125;180
+2026-02-14;Monika Górska;Pasemka;Koloryzacja;Natalia Woźniak;160;260
+2026-02-14;Anna Sikora;Pasemka;Koloryzacja;Ewa Kowalczyk;140;260
+2026-02-16;Paulina Pawlak;Strzyżenie damskie;Strzyżenie;Marta Zielińska;60;70
+2026-02-17;Beata Lewandowska;Botoks na włosy;Pielęgnacja;Marta Zielińska;100;200
+2026-02-18;Patrycja Sikora;Modelowanie;Stylizacja;Natalia Woźniak;35;60
+2026-02-19;Monika Nowak;Koloryzacja jednolita;Koloryzacja;Natalia Woźniak;120;180
+2026-02-19;Sylwia Witkowska;Botoks na włosy;Pielęgnacja;Natalia Woźniak;100;200
+2026-02-20;Renata Górska;Podcięcie końcówek;Strzyżenie;Ewa Kowalczyk;30;50
+2026-02-21;Barbara Witkowska;Strzyżenie damskie;Strzyżenie;Karolina Bąk;45;70
+2026-02-21;Paulina Jabłońska;Strzyżenie damskie;Strzyżenie;Ewa Kowalczyk;55;70
+2026-02-21;Klaudia Duda;Pasemka;Koloryzacja;Karolina Bąk;150;260
+2026-02-21;Justyna Nowak;Strzyżenie damskie;Strzyżenie;Natalia Woźniak;45;70
+2026-02-26;Weronika Pawlak;Modelowanie;Stylizacja;Natalia Woźniak;30;60
+2026-02-26;Beata Michalak;Maska regenerująca;Pielęgnacja;Natalia Woźniak;45;60
+2026-02-27;Karolina Pawlak;Podcięcie końcówek;Strzyżenie;Karolina Bąk;30;50
+2026-02-27;Justyna Wójcik;Koloryzacja jednolita;Koloryzacja;Marta Zielińska;125;180
+2026-02-27;Barbara Adamczyk;Strzyżenie damskie;Strzyżenie;Natalia Woźniak;45;70
+2026-02-28;Agnieszka Pawlak;Zabieg nawilżający;Pielęgnacja;Ewa Kowalczyk;30;80
+2026-02-28;Klaudia Lewandowska;Podcięcie końcówek;Strzyżenie;Marta Zielińska;20;50
+2026-02-28;Magdalena Górska;Prostowanie;Stylizacja;Ewa Kowalczyk;40;80
+2026-03-03;Aleksandra Lewandowska;Maska regenerująca;Pielęgnacja;Ewa Kowalczyk;40;60
+2026-03-05;Beata Lewandowska;Modelowanie;Stylizacja;Natalia Woźniak;40;60
+2026-03-06;Patrycja Nowak;Pasemka;Koloryzacja;Marta Zielińska;150;260
+2026-03-06;Karolina Duda;Prostowanie;Stylizacja;Natalia Woźniak;35;80
+2026-03-10;Weronika Wieczorek;Podcięcie końcówek;Strzyżenie;Karolina Bąk;40;50
+2026-03-12;Agnieszka Zając;Strzyżenie męskie;Strzyżenie;Ewa Kowalczyk;30;45
+2026-03-13;Barbara Król;Botoks na włosy;Pielęgnacja;Marta Zielińska;90;200
+2026-03-14;Dominika Zając;Strzyżenie dziecięce;Strzyżenie;Marta Zielińska;25;35
+2026-03-14;Justyna Wieczorek;Keratynowe prostowanie;Pielęgnacja;Karolina Bąk;180;350
+2026-03-20;Agnieszka Wieczorek;Podcięcie końcówek;Strzyżenie;Marta Zielińska;40;50
+2026-03-20;Beata Król;Tonowanie;Koloryzacja;Karolina Bąk;55;90
+2026-03-20;Barbara Lewandowska;Modelowanie;Stylizacja;Ewa Kowalczyk;30;60
+2026-03-21;Magdalena Lewandowska;Strzyżenie damskie;Strzyżenie;Marta Zielińska;55;70
+2026-03-23;Barbara Michalak;Strzyżenie dziecięce;Strzyżenie;Ewa Kowalczyk;15;35
+2026-03-23;Karolina Jabłońska;Fale;Stylizacja;Natalia Woźniak;30;70
+2026-03-25;Karolina Pawlak;Strzyżenie damskie;Strzyżenie;Natalia Woźniak;45;70
+2026-03-27;Dominika Lewandowska;Modelowanie;Stylizacja;Ewa Kowalczyk;25;60
+2026-03-27;Paulina Adamczyk;Zabieg nawilżający;Pielęgnacja;Ewa Kowalczyk;30;80
+2026-03-27;Karolina Pawlak;Maska regenerująca;Pielęgnacja;Karolina Bąk;25;60
+2026-03-28;Katarzyna Adamczyk;Podcięcie końcówek;Strzyżenie;Natalia Woźniak;30;50
+2026-04-02;Monika Lewandowska;Strzyżenie damskie;Strzyżenie;Marta Zielińska;45;70
+2026-04-03;Joanna Zając;Podcięcie końcówek;Strzyżenie;Natalia Woźniak;40;50
+2026-04-08;Aleksandra Baran;Botoks na włosy;Pielęgnacja;Natalia Woźniak;90;200
+2026-04-10;Monika Michalak;Prostowanie;Stylizacja;Karolina Bąk;50;80
+2026-04-10;Agnieszka Lewandowska;Podcięcie końcówek;Strzyżenie;Ewa Kowalczyk;30;50
+2026-04-10;Dominika Górska;Strzyżenie damskie;Strzyżenie;Marta Zielińska;60;70
+2026-04-10;Barbara Zając;Baleyage;Koloryzacja;Karolina Bąk;170;320
+2026-04-11;Agnieszka Witkowska;Prostowanie;Stylizacja;Marta Zielińska;40;80
+2026-04-14;Ewelina Górska;Strzyżenie męskie;Strzyżenie;Karolina Bąk;40;45
+2026-04-15;Iwona Lewandowska;Podcięcie końcówek;Strzyżenie;Natalia Woźniak;30;50
+2026-04-15;Agnieszka Górska;Strzyżenie męskie;Strzyżenie;Ewa Kowalczyk;20;45
+2026-04-18;Paulina Sikora;Botoks na włosy;Pielęgnacja;Karolina Bąk;85;200
+2026-04-20;Aleksandra Górska;Koloryzacja jednolita;Koloryzacja;Marta Zielińska;110;180
+2026-04-20;Karolina Król;Modelowanie;Stylizacja;Karolina Bąk;40;60
+2026-04-25;Barbara Sikora;Baleyage;Koloryzacja;Karolina Bąk;170;320
+2026-04-25;Beata Zając;Maska regenerująca;Pielęgnacja;Natalia Woźniak;30;60
+2026-04-25;Weronika Nowak;Maska regenerująca;Pielęgnacja;Marta Zielińska;25;60
+2026-04-28;Aleksandra Duda;Pasemka;Koloryzacja;Marta Zielińska;145;260
+2026-04-30;Patrycja Jabłońska;Modelowanie;Stylizacja;Karolina Bąk;30;60
+2026-05-01;Iwona Wójcik;Modelowanie;Stylizacja;Karolina Bąk;20;60
+2026-05-01;Joanna Pawlak;Prostowanie;Stylizacja;Natalia Woźniak;30;80
+2026-05-01;Monika Wójcik;Modelowanie;Stylizacja;Marta Zielińska;20;60
+2026-05-01;Agnieszka Wieczorek;Maska regenerująca;Pielęgnacja;Marta Zielińska;30;60
+2026-05-02;Monika Kamińska;Keratynowe prostowanie;Pielęgnacja;Karolina Bąk;180;350
+2026-05-02;Agnieszka Sikora;Koloryzacja jednolita;Koloryzacja;Marta Zielińska;110;180
+2026-05-06;Justyna Lewandowska;Koloryzacja jednolita;Koloryzacja;Natalia Woźniak;130;180
+2026-05-08;Weronika Wójcik;Prostowanie;Stylizacja;Natalia Woźniak;30;80
+2026-05-08;Anna Adamczyk;Podcięcie końcówek;Strzyżenie;Natalia Woźniak;30;50
+2026-05-09;Agnieszka Zając;Maska regenerująca;Pielęgnacja;Marta Zielińska;30;60
+2026-05-09;Klaudia Wójcik;Tonowanie;Koloryzacja;Karolina Bąk;60;90
+2026-05-11;Joanna Witkowska;Koloryzacja jednolita;Koloryzacja;Marta Zielińska;120;180
+2026-05-12;Sylwia Lewandowska;Modelowanie;Stylizacja;Ewa Kowalczyk;40;60
+2026-05-14;Beata Michalak;Strzyżenie damskie;Strzyżenie;Natalia Woźniak;50;70
+2026-05-16;Barbara Pawlak;Strzyżenie męskie;Strzyżenie;Ewa Kowalczyk;35;45
+2026-05-16;Karolina Michalak;Zabieg nawilżający;Pielęgnacja;Marta Zielińska;35;80
+2026-05-16;Iwona Zając;Strzyżenie dziecięce;Strzyżenie;Ewa Kowalczyk;35;35
+2026-05-16;Iwona Pawlak;Tonowanie;Koloryzacja;Karolina Bąk;45;90
+2026-05-18;Karolina Adamczyk;Maska regenerująca;Pielęgnacja;Karolina Bąk;30;60
+2026-05-20;Aleksandra Sikora;Koloryzacja jednolita;Koloryzacja;Natalia Woźniak;115;180
+2026-05-21;Sylwia Adamczyk;Zabieg nawilżający;Pielęgnacja;Marta Zielińska;50;80
+2026-05-21;Renata Król;Keratynowe prostowanie;Pielęgnacja;Natalia Woźniak;190;350
+2026-05-22;Ewelina Wieczorek;Koloryzacja jednolita;Koloryzacja;Ewa Kowalczyk;120;180
+2026-05-22;Ewelina Górska;Modelowanie;Stylizacja;Ewa Kowalczyk;30;60
+2026-05-22;Karolina Król;Podcięcie końcówek;Strzyżenie;Natalia Woźniak;45;50
+2026-05-23;Beata Baran;Upięcie okolicznościowe;Stylizacja;Karolina Bąk;90;150
+2026-05-23;Agnieszka Wieczorek;Podcięcie końcówek;Strzyżenie;Ewa Kowalczyk;30;50
+2026-05-23;Joanna Wójcik;Prostowanie;Stylizacja;Karolina Bąk;55;80
+2026-05-25;Patrycja Nowak;Koloryzacja jednolita;Koloryzacja;Ewa Kowalczyk;115;180
+2026-05-26;Aleksandra Adamczyk;Strzyżenie męskie;Strzyżenie;Ewa Kowalczyk;30;45
+2026-05-27;Magdalena Baran;Maska regenerująca;Pielęgnacja;Marta Zielińska;25;60
+2026-05-29;Iwona Górska;Koloryzacja jednolita;Koloryzacja;Ewa Kowalczyk;120;180
+2026-05-29;Klaudia Baran;Strzyżenie dziecięce;Strzyżenie;Karolina Bąk;30;35
+2026-05-30;Weronika Pawlak;Modelowanie;Stylizacja;Ewa Kowalczyk;20;60
+2026-05-30;Karolina Król;Keratynowe prostowanie;Pielęgnacja;Karolina Bąk;195;350

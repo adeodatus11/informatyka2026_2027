@@ -21,12 +21,13 @@
     </div>
 
     <h1>Blok 7. Twoja strona w internecie</h1>
-    <p class="lead">Strona internetowa to dziś podstawa każdego biznesu. Za chwilę stworzysz od zera własną stronę. Na koniec wyląduje pod publicznym adresem – pokażesz ją znajomym ze swojego smartfona.</p>
+    <p class="lead">Strona internetowa to dziś podstawa każdego biznesu. Za chwilę stworzysz od zera własną stronę. Na koniec trafi pod prawdziwy adres w internecie — będziesz mógł wysłać go komukolwiek.</p>
+<div style="margin: 20px 0; display:flex; gap:16px; flex-wrap:wrap;"><a href="pobieralnia/blok07_szkielet_strony.zip" class="btn-download" download>Pobierz szkielet strony (ZIP)</a></div>
 
     <div class="meta">
         <span class="pill">Klasa I</span>
         <span class="pill">9 godzin</span>
-        <span class="pill">Lekcje 43–51</span>
+        <span class="pill">Lekcje 41–49</span>
         <span class="pill">Marzec – Kwiecień</span>
     </div>
 
@@ -71,11 +72,11 @@
     <p>Dzięki nim Twoja strona jest jak woda – idealnie dopasowuje się do komputera i do smartfona.</p>
   </div>
 </div>
-<a href="https://www.youtube.com/watch?v=MDLn5-zSQQI" target="_blank" class="btn-youtube">Obejrzyj na YouTube (3 min)</a>
 <!-- KONIEC NOWEJ STRUKTURY -->
 
 <ol class="zad">
             <li>Otwórz Visual Studio Code.</li>
+            <li><strong>Zanim zaczniesz pisać:</strong> ta sama strona musi działać na każdym systemie. Otwórz swój plik na telefonie albo na komputerze z innym systemem niż Windows (nauczyciel pokaże na Linuksie uruchomionym z pendrive'a). Zapisz jedną różnicę, którą zauważysz — np. inną czcionkę domyślną.</li>
             <li>Utwórz nowy plik. Zapisz go jako <code>index.html</code> (pamiętaj o rozszerzeniu).</li>
             <li>Wpisz szkielet HTML i dodaj swój tekst w sekcji <code>&lt;body&gt;</code>.</li>
             <li>Zapisz plik. Kliknij go dwukrotnie, by otworzyć w przeglądarce.</li>
@@ -89,7 +90,7 @@
             Strona potrzebuje struktury. Najważniejszy tytuł to <code>&lt;h1&gt;</code> (użyj go tylko raz). Podtytuły to <code>&lt;h2&gt;</code>.
         </p>
         <div class="pro-tip">
-            <strong>Pro Tip:</strong> <code>&lt;img src="foto.jpg" alt="Zdjęcie produktu"&gt;</code> – atrybut <code>alt</code> to jedyne, co "widzi" wyszukiwarka Google. Bez <code>alt</code> strona traci zasięgi i dostępność!
+            <strong>Pro Tip:</strong> <code>&lt;img src="foto.jpg" alt="Fryzjerka układa włosy klientce"&gt;</code> — atrybut <code>alt</code> to opis obrazka. Osoba niewidoma korzysta z czytnika ekranu, który czyta jej ten opis na głos. Bez <code>alt</code> usłyszy tylko "obraz" i nie dowie się, co pokazujesz. Google też z niego korzysta przy wyszukiwaniu grafiki — ale to skutek uboczny, nie powód.
         </div>
         <strong>Wyzwanie:</strong>
         <ol class="zad">
@@ -132,15 +133,16 @@
         <ol class="zad">
             <li>Dodaj link kontaktowy na dole strony: <code>&lt;a href="#"&gt;Umów się&lt;/a&gt;</code>.</li>
             <li>W pliku CSS spraw, by wyglądał jak przycisk, np. dodaj <code>padding: 12px 20px; background-color: blue; color: white;</code>.</li>
-            <li>Włącz Narzędzia Deweloperskie. Wybierz ikonę urządzeń mobilnych i przetestuj wygląd na smartfonie.</li>
+            <li>Włącz Narzędzia Deweloperskie (F12). Kliknij ikonę urządzeń mobilnych i sprawdź, jak strona wygląda na ekranie telefonu — bez telefonu, prosto w przeglądarce.</li>
         </ol>
     </div>
 
     <div class="box fin">
         <span class="lbl">Wyzwanie Finałowe: To jest w Internecie</span>
-        <p>Gotowa strona znajduje się u Ciebie na dysku. Nikt jej tam nie zobaczy. Czas na publikację (hosting).</p>
-        <p>Spakuj zawartość folderu do ZIP. Otwórz <em>Netlify Drop</em>. Wrzuć archiwum i odbierz <strong>Prawdziwy Publiczny Adres URL</strong>.</p>
-        <p>Wygeneruj darmowy kod QR. Każdy w klasie ma zeskanować kod i wejść na Twoją stronę z telefonu! <span class="tag grade">OCENA 8</span></p>
+        <p>Gotowa strona leży u Ciebie na dysku. Nikt jej tam nie zobaczy. Czas na publikację.</p>
+        <p>Sprawdź, czy plik główny nazywa się <code>index.html</code>, a wszystkie zdjęcia leżą w folderze <code>img</code>. Spakuj folder do ZIP i oddaj w Teams do zadania <em>Publikacja strony</em>.</p>
+        <p>Nauczyciel publikuje wszystkie strony klasy pod jednym adresem szkolnym. Na następnej lekcji otwieramy je po kolei na rzutniku — i wtedy okaże się, czyja strona działa też na wąskim ekranie. <span class="tag grade">OCENA 8</span></p>
+        <p><strong>Sprawdź, zanim oddasz:</strong> strona otwiera się dwuklikiem, żadne zdjęcie nie jest czerwonym krzyżykiem, tekst nie wychodzi poza ekran po zwężeniu okna.</p>
     </div>
 
     <div class="prevnext">
@@ -164,7 +166,7 @@
     <div class="footer-right-col">
       <div class="footer-text">
         <strong>Informatyka 2026/2027 · Metodologia WIN4SMEs (WP3.A5)</strong><br>
-        Rozkład materiału bazuje na innowacyjnych modelach edukacyjnych (Flipped Classroom, Blended Learning).<br>
+        Rozkład inspirowany metodami nauczania badanymi w projekcie WIN4SMEs.<br>
         Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autora(-ów) i niekoniecznie odzwierciedlają poglądy Unii Europejskiej.
       </div>
     </div>

@@ -21,12 +21,13 @@
     </div>
 
     <h1>Blok 11. Gdzie właściwie są te dane?</h1>
-    <p class="lead">Zapisywanie klientów w jednej dużej tabeli działa przy małej skali. Przy 500 wpisach panuje chaos. Prawdziwa Relacyjna Baza Danych to optymalne rozwiązanie eliminujące ręczne, mozolne aktualizacje.</p>
+    <p class="lead">Zapisywanie klientek w jednej wielkiej tabeli działa, dopóki jest ich dwadzieścia. Przy pięciuset zaczyna się chaos: to samo nazwisko w trzech wersjach, zmiana numeru telefonu w dziesięciu miejscach. Baza relacyjna rozwiązuje to raz na zawsze.</p>
+<div style="margin: 20px 0; display:flex; gap:16px; flex-wrap:wrap;"><a href="pobieralnia/blok11_baza_salon.xlsx" class="btn-download" download>Dane do bazy (40 klientek, 170 wizyt)</a></div>
 
     <div class="meta">
         <span class="pill">Klasa II</span>
         <span class="pill">6 godzin</span>
-        <span class="pill">Lekcje 10–15</span>
+        <span class="pill">Lekcje 9–14</span>
         <span class="pill">Listopad – Styczeń</span>
     </div>
 
@@ -57,10 +58,10 @@
       <div class="flashcard">
         <div class="emoji">🕵️‍♂️</div>
         <h4>Rozmowy z bazą: SQL</h4>
-        <p>SQL to język, w którym "prosisz" bazę o dane. Wpisujesz krótkie polecenie i w ułamku sekundy dostajesz dokładnie to, czego szukasz, np. "Pokaż wszystkich z Warszawy".</p>
+        <p>SQL to język, w którym prosisz bazę o dane. Trzy słowa i masz odpowiedź: <em>SELECT</em> co pokazać, <em>FROM</em> z której tabeli, <em>WHERE</em> pod jakim warunkiem.</p>
       </div>
     </div>
-    <a href="https://www.youtube.com/watch?v=HXV3zeQKqGY" target="_blank" class="btn-youtube">Obejrzyj na YouTube (3 min)</a>
+    
     <!-- KONIEC NOWEJ STRUKTURY -->
 
     <h2>Krok 1: Relacje, czyli dlaczego dzielimy tabele</h2>
@@ -69,13 +70,14 @@
         <p class="instruction-text">
             Idea bazy danych polega na braku powtórzeń. Wymaga to podziału informacji np. na Tabelę Klientów i Tabelę Wizyt.
         </p>
-        <div class="pro-tip"><strong>Pro Tip:</strong> Literówka w nazwisku? W bazie istnieje tylko w jednym miejscu, więc jej poprawienie w Tabeli Klientów automatycznie zaktualizuje ją we wszystkich powiązanych wpisach!</div>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Literówka w nazwisku? W bazie siedzi tylko w jednym miejscu — poprawiasz raz w tabeli Klientki i naprawia się w każdej wizycie tej osoby.</div>
+        <div class="warn"><strong>Pracujemy w LibreOffice Base.</strong> Jest darmowy i zainstalowany w pracowni. Nie zakładasz konta, bazę zapisujesz jako plik <code>.odb</code> w folderze <code>11_baza</code>.</div>
         <h4>Wyzwania:</h4>
-        <ol class="challenge-list">
-            <li>Rozpisz na kartce Tabelę Klientów i Tabelę Wizyt (lub Dostawcy i Towary).</li>
-            <li>Wskaż Unikalny Identyfikator (<strong>Primary Key</strong>). Wybierz unikalne ID.</li>
-            <li>Otwórz program (Access lub LibreOffice Base). Skonstruuj obie tabele.</li>
-            <li>Połącz tabele linią w narzędziu relacji. <span class="tag milestone">KROK MILOWY</span></li>
+        <ol class="zad">
+            <li>Rozpisz na kartce dwie tabele: <strong>Klientki</strong> (kto to jest) i <strong>Wizyty</strong> (co i kiedy zrobiła). Zastanów się, która informacja powtarzałaby się przy każdej wizycie — ta należy do tabeli Klientki.</li>
+            <li>Wskaż w każdej tabeli <strong>klucz główny</strong>: pole, które nigdy się nie powtarza. Dlaczego nie może nim być nazwisko?</li>
+            <li>Otwórz LibreOffice Base → <em>Utwórz nową bazę danych</em>. Zaimportuj obie tabele z pobranego pliku (arkusze <em>Klientki</em> i <em>Wizyty</em>) — skopiuj arkusz i wklej go w oknie Tabele.</li>
+            <li>Wejdź w <strong>Narzędzia → Relacje</strong>. Przeciągnij <code>ID_klientki</code> z tabeli Klientki na <code>ID_klientki</code> w tabeli Wizyty. Pojawi się linia łącząca. <span class="tag milestone">KROK MILOWY</span></li>
         </ol>
     </div>
 
@@ -85,12 +87,14 @@
         <p class="instruction-text">
             Połączone relacją tabele pozwalają na zadawanie pytań. Służą do tego <strong>Kwerendy</strong>. Bazy danych wykorzystują w tym celu język SQL.
         </p>
-        <div class="pro-tip"><strong>Pro Tip:</strong> Zamiast pisać SQL ręcznie od początku, użyj graficznego edytora kwerend, a następnie przeanalizuj wygenerowany kod!</div>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Nie pisz SQL od zera. Ułóż kwerendę myszką w widoku projektu, a potem podejrzyj, jaki kod program wygenerował. Tak najszybciej nauczysz się składni.</div>
         <h4>Wyzwania:</h4>
-        <ol class="challenge-list">
-            <li>Utwórz kwerendę w widoku projektu.</li>
-            <li>Odfiltruj klientów, którzy nie korzystali z usług od co najmniej 3 miesięcy.</li>
-            <li>Kliknij prawym przyciskiem myszy w kwerendzie i wybierz "Podgląd SQL". Przeanalizuj składnię <code>SELECT ... FROM ... WHERE ...</code>.</li>
+        <ol class="zad">
+            <li>Kwerendy → <em>Utwórz kwerendę w widoku projektu</em>. Dodaj obie tabele — zobaczysz między nimi linię relacji.</li>
+            <li>Wyciągnij imię, nazwisko, datę i usługę. Uruchom kwerendę (F5). Zobacz, że dane z dwóch tabel złożyły się w jedną tabelę wyników.</li>
+            <li>Dodaj kryterium: pokaż tylko wizyty z jedną wybraną usługą, np. <code>'Baleyage'</code>. Uruchom ponownie.</li>
+            <li>Przełącz się na <strong>Widok → Projekt/Edycja SQL</strong>. Odszukaj w kodzie trzy słowa: <code>SELECT</code> (co pokazać), <code>FROM</code> (skąd), <code>WHERE</code> (jaki warunek).</li>
+            <li><em>Dla chętnych:</em> znajdź klientki, które nie były u nas od pół roku. Podpowiedź: potrzebujesz warunku na dacie ostatniej wizyty.</li>
         </ol>
     </div>
 
@@ -102,16 +106,17 @@
         </p>
         <div class="pro-tip"><strong>Pro Tip:</strong> Dane zdrowotne (np. alergie klienta w salonie kosmetycznym) to dane wrażliwe. Wymagają specjalnej zgody i najwyższego poziomu zabezpieczeń!</div>
         <h4>Wyzwania:</h4>
-        <ol class="challenge-list">
-            <li>Uruchom Kreator i zaprojektuj interfejs formularza.</li>
-            <li>Stwórz notatkę służbową dla szefa firmy, opisującą zasady retencji danych z Twojej bazy.</li>
+        <ol class="zad">
+            <li>Formularze → <em>Użyj kreatora do utworzenia formularza</em>. Wybierz tabelę Klientki i pola, które ma widzieć osoba przy recepcji.</li>
+            <li>Zastanów się, czego na tym formularzu <strong>nie</strong> powinno być. Które pole to dane wrażliwe?</li>
+            <li>Napisz krótką notatkę dla szefa: po co zbieramy te dane, kto ma do nich dostęp i po jakim czasie je kasujemy.</li>
         </ol>
     </div>
 
     <div class="box fin">
         <span class="lbl">Wyzwanie Finałowe: Test na żywo</span>
         <p>Dobrze zaprojektowana baza jest intuicyjna dla każdego nowego pracownika bez znajomości IT.</p>
-        <p>Przekaż myszkę osobie obok. Poproś ją o wpisanie nowego klienta i historii jego wizyt przez Twój formularz. Następnie wygeneruj odpowiedni raport kwerendą. Konieczność instruktażu oznacza braki w UX formularza! <span class="tag grade">OCENA 3</span></p>
+        <p>Przekaż myszkę osobie obok i nie odzywaj się. Ma wpisać nową klientkę i jej wizytę przez twój formularz, a potem uruchomić twoją kwerendę. Jeśli musiałeś cokolwiek podpowiedzieć — formularz jest do poprawy. <span class="tag grade">OCENA 3</span></p>
     </div>
 
     <div class="prevnext">
@@ -135,7 +140,7 @@
     <div class="footer-right-col">
       <div class="footer-text">
         <strong>Informatyka 2026/2027 · Metodologia WIN4SMEs (WP3.A5)</strong><br>
-        Rozkład materiału bazuje na innowacyjnych modelach edukacyjnych (Flipped Classroom, Blended Learning).<br>
+        Rozkład inspirowany metodami nauczania badanymi w projekcie WIN4SMEs.<br>
         Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autora(-ów) i niekoniecznie odzwierciedlają poglądy Unii Europejskiej.
       </div>
     </div>

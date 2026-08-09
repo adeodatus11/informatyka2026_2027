@@ -1,0 +1,301 @@
+﻿Data;Produkt;Kategoria;Sprzedawca;Ilosc;Cena_jednostkowa
+2025-09-01;Woda mineralna 1500 ml;Napoje;Dorota Kubiak;3;2,49
+2025-09-03;Krem do rąk 100 ml;Kosmetyki;Adam Nowicki;1;12,99
+2025-09-04;Woda mineralna 1500 ml;Napoje;Dorota Kubiak;2;2,49
+2025-09-05;Odżywka regenerująca 300 ml;Kosmetyki;Beata Szymańska;2;27,50
+2025-09-05;Sok pomarańczowy 1 l;Napoje;Adam Nowicki;2;5,99
+2025-09-09;Napój izotoniczny 500 ml;Napoje;Dorota Kubiak;1;4,49
+2025-09-11;Płyn do naczyń 1 l;Chemia;Cezary Mazur;3;9,99
+2025-09-12;Farba do włosów;Kosmetyki;Cezary Mazur;1;34,90
+2025-09-12;Płyn do naczyń 1 l;Chemia;Adam Nowicki;6;9,99
+2025-09-12;Woda mineralna 1500 ml;Napoje;Dorota Kubiak;1;2,49
+2025-09-12;Krem do rąk 100 ml;Kosmetyki;Beata Szymańska;1;12,99
+2025-09-12;Farba do włosów;Kosmetyki;Adam Nowicki;2;34,90
+2025-09-13;Grzebień drewniany;Akcesoria;Dorota Kubiak;3;8,50
+2025-09-13;Płyn do naczyń 1 l;Chemia;Cezary Mazur;1;9,99
+2025-09-13;Woda mineralna 1500 ml;Napoje;Dorota Kubiak;10;2,49
+2025-09-13;Szczotka do włosów;Akcesoria;Dorota Kubiak;2;19,99
+2025-09-15;Szampon nawilżający 400 ml;Kosmetyki;Adam Nowicki;5;24,99
+2025-09-16;Mydło w płynie 500 ml;Chemia;Cezary Mazur;1;7,49
+2025-09-16;Farba do włosów;Kosmetyki;Beata Szymańska;1;34,90
+2025-09-16;Ręcznik frotte;Akcesoria;Dorota Kubiak;5;24,00
+2025-09-16;Woda mineralna 1500 ml;Napoje;Beata Szymańska;3;2,49
+2025-09-19;Sok pomarańczowy 1 l;Napoje;Dorota Kubiak;5;5,99
+2025-09-19;Lokówka;Akcesoria;Beata Szymańska;2;89,00
+2025-09-20;Płyn do naczyń 1 l;Chemia;Dorota Kubiak;1;9,99
+2025-09-20;Woda mineralna 1500 ml;Napoje;Adam Nowicki;2;2,49
+2025-09-20;Szampon nawilżający 400 ml;Kosmetyki;Cezary Mazur;1;24,99
+2025-09-22;Płyn do naczyń 1 l;Chemia;Adam Nowicki;1;9,99
+2025-09-23;Proszek do prania 3 kg;Chemia;Cezary Mazur;4;39,90
+2025-09-24;Woda mineralna 1500 ml;Napoje;Dorota Kubiak;2;2,49
+2025-09-25;Mydło w płynie 500 ml;Chemia;Beata Szymańska;2;7,49
+2025-09-25;Sok pomarańczowy 1 l;Napoje;Cezary Mazur;1;5,99
+2025-09-26;Grzebień drewniany;Akcesoria;Cezary Mazur;1;8,50
+2025-09-26;Farba do włosów;Kosmetyki;Beata Szymańska;1;34,90
+2025-09-26;Płyn do płukania 1 l;Chemia;Dorota Kubiak;1;16,50
+2025-09-26;Napój izotoniczny 500 ml;Napoje;Cezary Mazur;1;4,49
+2025-09-27;Płyn do naczyń 1 l;Chemia;Cezary Mazur;1;9,99
+2025-09-27;Krem do rąk 100 ml;Kosmetyki;Cezary Mazur;1;12,99
+2025-09-30;Szczotka do włosów;Akcesoria;Dorota Kubiak;2;19,99
+2025-10-02;Grzebień drewniany;Akcesoria;Adam Nowicki;4;8,50
+2025-10-02;Proszek do prania 3 kg;Chemia;Beata Szymańska;3;39,90
+2025-10-03;Odżywka regenerująca 300 ml;Kosmetyki;Cezary Mazur;6;27,50
+2025-10-03;Sok pomarańczowy 1 l;Napoje;Adam Nowicki;3;5,99
+2025-10-03;Mydło w płynie 500 ml;Chemia;Cezary Mazur;3;7,49
+2025-10-03;Grzebień drewniany;Akcesoria;Cezary Mazur;1;8,50
+2025-10-03;Odżywka regenerująca 300 ml;Kosmetyki;Dorota Kubiak;2;27,50
+2025-10-06;Proszek do prania 3 kg;Chemia;Beata Szymańska;2;39,90
+2025-10-06;Płyn do naczyń 1 l;Chemia;Adam Nowicki;2;9,99
+2025-10-07;Płyn do naczyń 1 l;Chemia;Dorota Kubiak;4;9,99
+2025-10-07;Proszek do prania 3 kg;Chemia;Adam Nowicki;1;39,90
+2025-10-07;Odżywka regenerująca 300 ml;Kosmetyki;Beata Szymańska;1;27,50
+2025-10-08;Woda mineralna 1500 ml;Napoje;Dorota Kubiak;5;2,49
+2025-10-08;Napój izotoniczny 500 ml;Napoje;Dorota Kubiak;3;4,49
+2025-10-09;Szczotka do włosów;Akcesoria;Beata Szymańska;8;19,99
+2025-10-11;Szampon nawilżający 400 ml;Kosmetyki;Dorota Kubiak;4;24,99
+2025-10-13;Krem do rąk 100 ml;Kosmetyki;Adam Nowicki;5;12,99
+2025-10-13;Szczotka do włosów;Akcesoria;Adam Nowicki;10;19,99
+2025-10-13;Płyn do płukania 1 l;Chemia;Dorota Kubiak;3;16,50
+2025-10-14;Płyn do płukania 1 l;Chemia;Dorota Kubiak;2;16,50
+2025-10-16;Krem do rąk 100 ml;Kosmetyki;Adam Nowicki;1;12,99
+2025-10-16;Szampon nawilżający 400 ml;Kosmetyki;Cezary Mazur;1;24,99
+2025-10-17;Szampon nawilżający 400 ml;Kosmetyki;Beata Szymańska;6;24,99
+2025-10-18;Woda mineralna 1500 ml;Napoje;Cezary Mazur;1;2,49
+2025-10-20;Płyn do naczyń 1 l;Chemia;Dorota Kubiak;1;9,99
+2025-10-22;Napój izotoniczny 500 ml;Napoje;Cezary Mazur;5;4,49
+2025-10-22;Krem do rąk 100 ml;Kosmetyki;Dorota Kubiak;2;12,99
+2025-10-23;Krem do rąk 100 ml;Kosmetyki;Cezary Mazur;3;12,99
+2025-10-24;Szampon nawilżający 400 ml;Kosmetyki;Adam Nowicki;2;24,99
+2025-10-24;Napój izotoniczny 500 ml;Napoje;Adam Nowicki;1;4,49
+2025-10-25;Ręcznik frotte;Akcesoria;Cezary Mazur;2;24,00
+2025-10-25;Lokówka;Akcesoria;Adam Nowicki;3;89,00
+2025-10-29;Farba do włosów;Kosmetyki;Dorota Kubiak;2;34,90
+2025-10-30;Szczotka do włosów;Akcesoria;Cezary Mazur;3;19,99
+2025-10-31;Krem do rąk 100 ml;Kosmetyki;Dorota Kubiak;2;12,99
+2025-10-31;Płyn do naczyń 1 l;Chemia;Dorota Kubiak;2;9,99
+2025-10-31;Sok pomarańczowy 1 l;Napoje;Beata Szymańska;2;5,99
+2025-11-01;Odżywka regenerująca 300 ml;Kosmetyki;Beata Szymańska;2;27,50
+2025-11-01;Mydło w płynie 500 ml;Chemia;Adam Nowicki;4;7,49
+2025-11-01;Płyn do naczyń 1 l;Chemia;Cezary Mazur;1;9,99
+2025-11-04;Woda mineralna 1500 ml;Napoje;Adam Nowicki;2;2,49
+2025-11-05;Woda mineralna 1500 ml;Napoje;Dorota Kubiak;6;2,49
+2025-11-05;Napój izotoniczny 500 ml;Napoje;Adam Nowicki;5;4,49
+2025-11-07;Farba do włosów;Kosmetyki;Dorota Kubiak;3;34,90
+2025-11-07;Sok pomarańczowy 1 l;Napoje;Adam Nowicki;4;5,99
+2025-11-10;Mydło w płynie 500 ml;Chemia;Adam Nowicki;6;7,49
+2025-11-11;Szampon nawilżający 400 ml;Kosmetyki;Dorota Kubiak;3;24,99
+2025-11-11;Mydło w płynie 500 ml;Chemia;Beata Szymańska;4;7,49
+2025-11-11;Krem do rąk 100 ml;Kosmetyki;Beata Szymańska;2;12,99
+2025-11-12;Płyn do płukania 1 l;Chemia;Cezary Mazur;5;16,50
+2025-11-13;Ręcznik frotte;Akcesoria;Dorota Kubiak;2;24,00
+2025-11-14;Napój izotoniczny 500 ml;Napoje;Dorota Kubiak;2;4,49
+2025-11-14;Grzebień drewniany;Akcesoria;Dorota Kubiak;2;8,50
+2025-11-14;Płyn do płukania 1 l;Chemia;Cezary Mazur;1;16,50
+2025-11-15;Szczotka do włosów;Akcesoria;Cezary Mazur;5;19,99
+2025-11-17;Szampon nawilżający 400 ml;Kosmetyki;Cezary Mazur;1;24,99
+2025-11-19;Szampon nawilżający 400 ml;Kosmetyki;Beata Szymańska;2;24,99
+2025-11-20;Sok pomarańczowy 1 l;Napoje;Beata Szymańska;3;5,99
+2025-11-22;Szampon nawilżający 400 ml;Kosmetyki;Beata Szymańska;1;24,99
+2025-11-22;Lokówka;Akcesoria;Cezary Mazur;3;89,00
+2025-11-22;Krem do rąk 100 ml;Kosmetyki;Cezary Mazur;3;12,99
+2025-11-25;Ręcznik frotte;Akcesoria;Beata Szymańska;5;24,00
+2025-11-26;Krem do rąk 100 ml;Kosmetyki;Adam Nowicki;3;12,99
+2025-11-28;Woda mineralna 1500 ml;Napoje;Beata Szymańska;2;2,49
+2025-11-29;Sok pomarańczowy 1 l;Napoje;Beata Szymańska;3;5,99
+2025-11-29;Grzebień drewniany;Akcesoria;Cezary Mazur;3;8,50
+2025-11-29;Płyn do naczyń 1 l;Chemia;Cezary Mazur;4;9,99
+2025-12-01;Odżywka regenerująca 300 ml;Kosmetyki;Dorota Kubiak;1;27,50
+2025-12-03;Ręcznik frotte;Akcesoria;Dorota Kubiak;5;24,00
+2025-12-05;Napój izotoniczny 500 ml;Napoje;Adam Nowicki;1;4,49
+2025-12-05;Farba do włosów;Kosmetyki;Dorota Kubiak;2;34,90
+2025-12-06;Grzebień drewniany;Akcesoria;Cezary Mazur;2;8,50
+2025-12-06;Płyn do płukania 1 l;Chemia;Beata Szymańska;2;16,50
+2025-12-06;Woda mineralna 1500 ml;Napoje;Cezary Mazur;1;2,49
+2025-12-11;Woda mineralna 1500 ml;Napoje;Adam Nowicki;10;2,49
+2025-12-12;Szampon nawilżający 400 ml;Kosmetyki;Cezary Mazur;10;24,99
+2025-12-12;Farba do włosów;Kosmetyki;Beata Szymańska;4;34,90
+2025-12-12;Płyn do naczyń 1 l;Chemia;Beata Szymańska;3;9,99
+2025-12-12;Szampon nawilżający 400 ml;Kosmetyki;Beata Szymańska;1;24,99
+2025-12-13;Mydło w płynie 500 ml;Chemia;Dorota Kubiak;4;7,49
+2025-12-15;Szampon nawilżający 400 ml;Kosmetyki;Adam Nowicki;8;24,99
+2025-12-15;Płyn do naczyń 1 l;Chemia;Beata Szymańska;1;9,99
+2025-12-15;Mydło w płynie 500 ml;Chemia;Cezary Mazur;2;7,49
+2025-12-16;Lakier do włosów 250 ml;Kosmetyki;Adam Nowicki;2;18,90
+2025-12-16;Szampon nawilżający 400 ml;Kosmetyki;Dorota Kubiak;4;24,99
+2025-12-16;Płyn do płukania 1 l;Chemia;Cezary Mazur;5;16,50
+2025-12-16;Lakier do włosów 250 ml;Kosmetyki;Adam Nowicki;1;18,90
+2025-12-17;Sok pomarańczowy 1 l;Napoje;Beata Szymańska;1;5,99
+2025-12-17;Odżywka regenerująca 300 ml;Kosmetyki;Cezary Mazur;2;27,50
+2025-12-19;Odżywka regenerująca 300 ml;Kosmetyki;Adam Nowicki;6;27,50
+2025-12-19;Farba do włosów;Kosmetyki;Adam Nowicki;1;34,90
+2025-12-20;Grzebień drewniany;Akcesoria;Adam Nowicki;1;8,50
+2025-12-23;Ręcznik frotte;Akcesoria;Adam Nowicki;1;24,00
+2025-12-23;Woda mineralna 1500 ml;Napoje;Adam Nowicki;1;2,49
+2025-12-23;Krem do rąk 100 ml;Kosmetyki;Beata Szymańska;1;12,99
+2025-12-24;Płyn do płukania 1 l;Chemia;Dorota Kubiak;3;16,50
+2025-12-25;Odżywka regenerująca 300 ml;Kosmetyki;Beata Szymańska;8;27,50
+2025-12-25;Płyn do naczyń 1 l;Chemia;Cezary Mazur;10;9,99
+2025-12-25;Płyn do naczyń 1 l;Chemia;Beata Szymańska;1;9,99
+2025-12-25;Odżywka regenerująca 300 ml;Kosmetyki;Cezary Mazur;5;27,50
+2025-12-26;Sok pomarańczowy 1 l;Napoje;Dorota Kubiak;1;5,99
+2025-12-27;Woda mineralna 1500 ml;Napoje;Adam Nowicki;3;2,49
+2025-12-27;Sok pomarańczowy 1 l;Napoje;Cezary Mazur;8;5,99
+2025-12-29;Szampon nawilżający 400 ml;Kosmetyki;Dorota Kubiak;1;24,99
+2025-12-31;Szampon nawilżający 400 ml;Kosmetyki;Adam Nowicki;3;24,99
+2025-12-31;Ręcznik frotte;Akcesoria;Cezary Mazur;1;24,00
+2025-12-31;Szczotka do włosów;Akcesoria;Adam Nowicki;2;19,99
+2026-01-01;Napój izotoniczny 500 ml;Napoje;Cezary Mazur;5;4,49
+2026-01-02;Krem do rąk 100 ml;Kosmetyki;Adam Nowicki;1;12,99
+2026-01-03;Mydło w płynie 500 ml;Chemia;Adam Nowicki;8;7,49
+2026-01-05;Grzebień drewniany;Akcesoria;Beata Szymańska;5;8,50
+2026-01-05;Woda mineralna 1500 ml;Napoje;Beata Szymańska;2;2,49
+2026-01-07;Woda mineralna 1500 ml;Napoje;Beata Szymańska;4;2,49
+2026-01-10;Sok pomarańczowy 1 l;Napoje;Dorota Kubiak;3;5,99
+2026-01-13;Suszarka;Akcesoria;Beata Szymańska;1;129,00
+2026-01-13;Woda mineralna 1500 ml;Napoje;Adam Nowicki;1;2,49
+2026-01-15;Farba do włosów;Kosmetyki;Beata Szymańska;4;34,90
+2026-01-16;Płyn do płukania 1 l;Chemia;Dorota Kubiak;1;16,50
+2026-01-16;Woda mineralna 1500 ml;Napoje;Dorota Kubiak;2;2,49
+2026-01-16;Odżywka regenerująca 300 ml;Kosmetyki;Adam Nowicki;1;27,50
+2026-01-17;Szampon nawilżający 400 ml;Kosmetyki;Cezary Mazur;2;24,99
+2026-01-17;Sok pomarańczowy 1 l;Napoje;Beata Szymańska;1;5,99
+2026-01-20;Odżywka regenerująca 300 ml;Kosmetyki;Adam Nowicki;3;27,50
+2026-01-22;Odżywka regenerująca 300 ml;Kosmetyki;Adam Nowicki;3;27,50
+2026-01-22;Płyn do płukania 1 l;Chemia;Beata Szymańska;6;16,50
+2026-01-22;Ręcznik frotte;Akcesoria;Adam Nowicki;4;24,00
+2026-01-23;Płyn do płukania 1 l;Chemia;Dorota Kubiak;10;16,50
+2026-01-24;Proszek do prania 3 kg;Chemia;Adam Nowicki;4;39,90
+2026-01-26;Odżywka regenerująca 300 ml;Kosmetyki;Beata Szymańska;1;27,50
+2026-01-26;Napój izotoniczny 500 ml;Napoje;Dorota Kubiak;1;4,49
+2026-01-27;Krem do rąk 100 ml;Kosmetyki;Dorota Kubiak;6;12,99
+2026-01-29;Szampon nawilżający 400 ml;Kosmetyki;Beata Szymańska;1;24,99
+2026-01-30;Napój izotoniczny 500 ml;Napoje;Beata Szymańska;4;4,49
+2026-02-04;Płyn do naczyń 1 l;Chemia;Cezary Mazur;4;9,99
+2026-02-06;Napój izotoniczny 500 ml;Napoje;Beata Szymańska;3;4,49
+2026-02-07;Sok pomarańczowy 1 l;Napoje;Beata Szymańska;5;5,99
+2026-02-07;Płyn do naczyń 1 l;Chemia;Beata Szymańska;1;9,99
+2026-02-07;Mydło w płynie 500 ml;Chemia;Cezary Mazur;2;7,49
+2026-02-10;Napój izotoniczny 500 ml;Napoje;Dorota Kubiak;6;4,49
+2026-02-10;Płyn do naczyń 1 l;Chemia;Cezary Mazur;1;9,99
+2026-02-11;Szampon nawilżający 400 ml;Kosmetyki;Adam Nowicki;10;24,99
+2026-02-11;Sok pomarańczowy 1 l;Napoje;Beata Szymańska;2;5,99
+2026-02-12;Krem do rąk 100 ml;Kosmetyki;Adam Nowicki;1;12,99
+2026-02-12;Woda mineralna 1500 ml;Napoje;Adam Nowicki;1;2,49
+2026-02-13;Płyn do naczyń 1 l;Chemia;Beata Szymańska;1;9,99
+2026-02-14;Ręcznik frotte;Akcesoria;Dorota Kubiak;2;24,00
+2026-02-16;Płyn do naczyń 1 l;Chemia;Dorota Kubiak;2;9,99
+2026-02-18;Odżywka regenerująca 300 ml;Kosmetyki;Beata Szymańska;1;27,50
+2026-02-19;Odżywka regenerująca 300 ml;Kosmetyki;Beata Szymańska;1;27,50
+2026-02-20;Mydło w płynie 500 ml;Chemia;Beata Szymańska;5;7,49
+2026-02-20;Proszek do prania 3 kg;Chemia;Dorota Kubiak;1;39,90
+2026-02-21;Farba do włosów;Kosmetyki;Beata Szymańska;6;34,90
+2026-02-21;Napój izotoniczny 500 ml;Napoje;Adam Nowicki;3;4,49
+2026-02-21;Mydło w płynie 500 ml;Chemia;Cezary Mazur;4;7,49
+2026-02-21;Płyn do naczyń 1 l;Chemia;Adam Nowicki;2;9,99
+2026-02-23;Sok pomarańczowy 1 l;Napoje;Dorota Kubiak;3;5,99
+2026-02-24;Woda mineralna 1500 ml;Napoje;Dorota Kubiak;3;2,49
+2026-02-25;Woda mineralna 1500 ml;Napoje;Cezary Mazur;1;2,49
+2026-02-27;Sok pomarańczowy 1 l;Napoje;Beata Szymańska;3;5,99
+2026-02-27;Napój izotoniczny 500 ml;Napoje;Dorota Kubiak;2;4,49
+2026-02-27;Mydło w płynie 500 ml;Chemia;Beata Szymańska;1;7,49
+2026-02-28;Grzebień drewniany;Akcesoria;Dorota Kubiak;4;8,50
+2026-02-28;Płyn do płukania 1 l;Chemia;Cezary Mazur;5;16,50
+2026-03-05;Odżywka regenerująca 300 ml;Kosmetyki;Dorota Kubiak;1;27,50
+2026-03-07;Grzebień drewniany;Akcesoria;Beata Szymańska;2;8,50
+2026-03-09;Szampon nawilżający 400 ml;Kosmetyki;Beata Szymańska;2;24,99
+2026-03-13;Woda mineralna 1500 ml;Napoje;Cezary Mazur;1;2,49
+2026-03-14;Szczotka do włosów;Akcesoria;Dorota Kubiak;5;19,99
+2026-03-14;Szczotka do włosów;Akcesoria;Cezary Mazur;1;19,99
+2026-03-14;Woda mineralna 1500 ml;Napoje;Cezary Mazur;1;2,49
+2026-03-14;Krem do rąk 100 ml;Kosmetyki;Adam Nowicki;2;12,99
+2026-03-14;Płyn do płukania 1 l;Chemia;Beata Szymańska;4;16,50
+2026-03-16;Lokówka;Akcesoria;Dorota Kubiak;2;89,00
+2026-03-17;Szampon nawilżający 400 ml;Kosmetyki;Dorota Kubiak;2;24,99
+2026-03-18;Płyn do naczyń 1 l;Chemia;Beata Szymańska;2;9,99
+2026-03-20;Sok pomarańczowy 1 l;Napoje;Beata Szymańska;3;5,99
+2026-03-20;Lakier do włosów 250 ml;Kosmetyki;Beata Szymańska;1;18,90
+2026-03-21;Napój izotoniczny 500 ml;Napoje;Dorota Kubiak;2;4,49
+2026-03-21;Proszek do prania 3 kg;Chemia;Dorota Kubiak;4;39,90
+2026-03-21;Sok pomarańczowy 1 l;Napoje;Beata Szymańska;1;5,99
+2026-03-21;Odżywka regenerująca 300 ml;Kosmetyki;Dorota Kubiak;5;27,50
+2026-03-25;Odżywka regenerująca 300 ml;Kosmetyki;Beata Szymańska;3;27,50
+2026-03-27;Płyn do płukania 1 l;Chemia;Beata Szymańska;3;16,50
+2026-03-27;Sok pomarańczowy 1 l;Napoje;Adam Nowicki;1;5,99
+2026-03-28;Napój izotoniczny 500 ml;Napoje;Dorota Kubiak;2;4,49
+2026-03-28;Płyn do naczyń 1 l;Chemia;Adam Nowicki;4;9,99
+2026-03-30;Szampon nawilżający 400 ml;Kosmetyki;Beata Szymańska;10;24,99
+2026-03-31;Farba do włosów;Kosmetyki;Beata Szymańska;2;34,90
+2026-04-01;Mydło w płynie 500 ml;Chemia;Cezary Mazur;1;7,49
+2026-04-01;Woda mineralna 1500 ml;Napoje;Cezary Mazur;3;2,49
+2026-04-02;Szampon nawilżający 400 ml;Kosmetyki;Beata Szymańska;1;24,99
+2026-04-02;Szczotka do włosów;Akcesoria;Adam Nowicki;1;19,99
+2026-04-04;Płyn do naczyń 1 l;Chemia;Beata Szymańska;1;9,99
+2026-04-04;Krem do rąk 100 ml;Kosmetyki;Beata Szymańska;1;12,99
+2026-04-04;Napój izotoniczny 500 ml;Napoje;Beata Szymańska;1;4,49
+2026-04-07;Proszek do prania 3 kg;Chemia;Adam Nowicki;3;39,90
+2026-04-07;Szampon nawilżający 400 ml;Kosmetyki;Beata Szymańska;1;24,99
+2026-04-08;Sok pomarańczowy 1 l;Napoje;Cezary Mazur;6;5,99
+2026-04-10;Proszek do prania 3 kg;Chemia;Beata Szymańska;1;39,90
+2026-04-10;Szampon nawilżający 400 ml;Kosmetyki;Beata Szymańska;4;24,99
+2026-04-11;Szczotka do włosów;Akcesoria;Dorota Kubiak;1;19,99
+2026-04-13;Lakier do włosów 250 ml;Kosmetyki;Cezary Mazur;3;18,90
+2026-04-15;Mydło w płynie 500 ml;Chemia;Beata Szymańska;2;7,49
+2026-04-15;Mydło w płynie 500 ml;Chemia;Dorota Kubiak;2;7,49
+2026-04-16;Szczotka do włosów;Akcesoria;Beata Szymańska;1;19,99
+2026-04-17;Woda mineralna 1500 ml;Napoje;Dorota Kubiak;1;2,49
+2026-04-17;Mydło w płynie 500 ml;Chemia;Dorota Kubiak;1;7,49
+2026-04-17;Płyn do płukania 1 l;Chemia;Dorota Kubiak;5;16,50
+2026-04-17;Grzebień drewniany;Akcesoria;Dorota Kubiak;1;8,50
+2026-04-18;Odżywka regenerująca 300 ml;Kosmetyki;Cezary Mazur;2;27,50
+2026-04-18;Płyn do naczyń 1 l;Chemia;Dorota Kubiak;1;9,99
+2026-04-18;Napój izotoniczny 500 ml;Napoje;Beata Szymańska;1;4,49
+2026-04-20;Sok pomarańczowy 1 l;Napoje;Cezary Mazur;1;5,99
+2026-04-20;Szczotka do włosów;Akcesoria;Cezary Mazur;1;19,99
+2026-04-24;Ręcznik frotte;Akcesoria;Cezary Mazur;1;24,00
+2026-04-24;Sok pomarańczowy 1 l;Napoje;Adam Nowicki;1;5,99
+2026-04-24;Szampon nawilżający 400 ml;Kosmetyki;Adam Nowicki;4;24,99
+2026-04-25;Krem do rąk 100 ml;Kosmetyki;Beata Szymańska;1;12,99
+2026-04-27;Farba do włosów;Kosmetyki;Dorota Kubiak;2;34,90
+2026-04-28;Napój izotoniczny 500 ml;Napoje;Adam Nowicki;1;4,49
+2026-05-01;Suszarka;Akcesoria;Dorota Kubiak;10;129,00
+2026-05-02;Płyn do naczyń 1 l;Chemia;Dorota Kubiak;5;9,99
+2026-05-02;Grzebień drewniany;Akcesoria;Cezary Mazur;2;8,50
+2026-05-02;Woda mineralna 1500 ml;Napoje;Dorota Kubiak;4;2,49
+2026-05-02;Suszarka;Akcesoria;Dorota Kubiak;2;129,00
+2026-05-02;Lakier do włosów 250 ml;Kosmetyki;Adam Nowicki;1;18,90
+2026-05-04;Sok pomarańczowy 1 l;Napoje;Dorota Kubiak;3;5,99
+2026-05-05;Woda mineralna 1500 ml;Napoje;Adam Nowicki;2;2,49
+2026-05-06;Mydło w płynie 500 ml;Chemia;Beata Szymańska;4;7,49
+2026-05-06;Woda mineralna 1500 ml;Napoje;Cezary Mazur;4;2,49
+2026-05-08;Płyn do naczyń 1 l;Chemia;Adam Nowicki;4;9,99
+2026-05-08;Proszek do prania 3 kg;Chemia;Dorota Kubiak;3;39,90
+2026-05-08;Szczotka do włosów;Akcesoria;Beata Szymańska;1;19,99
+2026-05-08;Sok pomarańczowy 1 l;Napoje;Beata Szymańska;3;5,99
+2026-05-08;Płyn do płukania 1 l;Chemia;Beata Szymańska;4;16,50
+2026-05-08;Napój izotoniczny 500 ml;Napoje;Adam Nowicki;3;4,49
+2026-05-08;Płyn do naczyń 1 l;Chemia;Dorota Kubiak;2;9,99
+2026-05-08;Napój izotoniczny 500 ml;Napoje;Beata Szymańska;3;4,49
+2026-05-09;Lakier do włosów 250 ml;Kosmetyki;Adam Nowicki;8;18,90
+2026-05-13;Szampon nawilżający 400 ml;Kosmetyki;Beata Szymańska;3;24,99
+2026-05-15;Farba do włosów;Kosmetyki;Beata Szymańska;1;34,90
+2026-05-15;Krem do rąk 100 ml;Kosmetyki;Cezary Mazur;4;12,99
+2026-05-15;Mydło w płynie 500 ml;Chemia;Cezary Mazur;3;7,49
+2026-05-16;Ręcznik frotte;Akcesoria;Adam Nowicki;3;24,00
+2026-05-19;Lokówka;Akcesoria;Cezary Mazur;2;89,00
+2026-05-20;Woda mineralna 1500 ml;Napoje;Beata Szymańska;3;2,49
+2026-05-20;Krem do rąk 100 ml;Kosmetyki;Cezary Mazur;6;12,99
+2026-05-20;Ręcznik frotte;Akcesoria;Dorota Kubiak;4;24,00
+2026-05-22;Woda mineralna 1500 ml;Napoje;Beata Szymańska;5;2,49
+2026-05-22;Mydło w płynie 500 ml;Chemia;Adam Nowicki;1;7,49
+2026-05-22;Płyn do płukania 1 l;Chemia;Cezary Mazur;2;16,50
+2026-05-23;Szczotka do włosów;Akcesoria;Cezary Mazur;5;19,99
+2026-05-23;Sok pomarańczowy 1 l;Napoje;Adam Nowicki;6;5,99
+2026-05-25;Woda mineralna 1500 ml;Napoje;Adam Nowicki;1;2,49
+2026-05-26;Grzebień drewniany;Akcesoria;Cezary Mazur;3;8,50
+2026-05-26;Woda mineralna 1500 ml;Napoje;Adam Nowicki;5;2,49
+2026-05-27;Ręcznik frotte;Akcesoria;Dorota Kubiak;4;24,00
+2026-05-29;Szampon nawilżający 400 ml;Kosmetyki;Beata Szymańska;10;24,99
+2026-05-29;Szampon nawilżający 400 ml;Kosmetyki;Adam Nowicki;1;24,99
+2026-05-29;Płyn do naczyń 1 l;Chemia;Adam Nowicki;2;9,99
+2026-05-30;Odżywka regenerująca 300 ml;Kosmetyki;Dorota Kubiak;5;27,50
+2026-05-30;Szczotka do włosów;Akcesoria;Dorota Kubiak;2;19,99

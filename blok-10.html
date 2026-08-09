@@ -21,13 +21,13 @@
     </div>
 
     <h1>Blok 10. Co mówią te dane?</h1>
-    <p class="lead">W każdej poważnej firmie zapada moment, w którym ktoś pyta: "ile tego sprzedaliśmy i czy to się nam w ogóle opłaca?". Odpowiedź poparta "twardymi danymi" z arkusza bije każdą zgadywankę. Zobaczmy, co wyczytamy z ankiety o naszej własnej klasie.</p>
-<div style="margin: 20px 0;"><a href="pobieralnia/raport_sprzedazy_raw.csv" class="btn-download" download>Pobierz surowy raport (CSV)</a></div>
+    <p class="lead">W każdej firmie przychodzi moment, w którym ktoś pyta: „ile tego sprzedaliśmy i czy to się w ogóle opłaca?". Odpowiedź poparta danymi bije każdą zgadywankę. Dostajesz rejestr z całego roku — 300 wizyt salonu albo 300 transakcji sklepu. Wybierz plik pasujący do twojego zawodu i pracuj na nim przez cały blok.</p>
+<div style="margin: 20px 0; display:flex; gap:16px; flex-wrap:wrap;"><a href="pobieralnia/blok10_wizyty_salon_raw.csv" class="btn-download" download>Rejestr wizyt salonu (CSV)</a><a href="pobieralnia/blok10_sprzedaz_sklep_raw.csv" class="btn-download" download>Rejestr sprzedaży sklepu (CSV)</a></div>
 
     <div class="meta">
         <span class="pill">Klasa II</span>
-        <span class="pill">9 godzin</span>
-        <span class="pill">Lekcje 1–9</span>
+        <span class="pill">8 godzin</span>
+        <span class="pill">Lekcje 1–8</span>
         <span class="pill">Wrzesień – Listopad</span>
     </div>
 
@@ -61,7 +61,7 @@
   <div class="flashcard">
     <div class="emoji">📝</div>
     <h4>CSV – Uniwersalny Język</h4>
-    <p>Pliki CSV to najprostszy tekst, gdzie dane rozdziela się przecinkami. To jak uniwersalny tłumacz – bez problemu zrozumie go każdy program!</p>
+    <p>CSV to najprostszy plik tekstowy: jeden wiersz to jeden rekord, a kolumny rozdziela znak. W Polsce najczęściej średnik, w krajach anglojęzycznych przecinek. Otwiera go każdy program — dlatego tak wygląda eksport z prawie każdego systemu.</p>
   </div>
   <div class="flashcard">
     <div class="emoji">⚡</div>
@@ -69,14 +69,14 @@
     <p>Tabela Przestawna pozwala zaledwie dwoma kliknięciami zmienić tysiące wierszy chaosu w konkretne podsumowanie. Głębsza analiza w 3 sekundy!</p>
   </div>
 </div>
-<a href="https://www.youtube.com/watch?v=mD0iQczi8L4" target="_blank" class="btn-youtube">Obejrzyj na YouTube (3 min)</a>
 <!-- KONIEC NOWEJ STRUKTURY -->
 
 <ol class="zad">
-            <li>Otwórz arkusz Excel z "Surowymi odpowiedziami klasy".</li>
-            <li>Zaznacz całą tabelę.</li>
-            <li>Kliknij <strong>Sortuj i filtruj</strong> -> <strong>Filtruj</strong>.</li>
-            <li>Ustaw filtry tak, by zobaczyć tylko osoby śpiące krócej niż 6 godzin i wydające więcej niż 100 zł tygodniowo.</li>
+            <li>Otwórz pobrany plik CSV w Excelu i od razu zapisz go jako <code>.xlsx</code> — inaczej stracisz formatowanie.</li>
+            <li>Zanim cokolwiek policzysz, <strong>obejrzyj dane</strong>. Ten plik jest surowy, tak jak wychodzi z prawdziwego systemu. Znajdź: daty zapisane na dwa sposoby, tę samą kategorię napisaną raz z ogonkami raz bez, puste pola i dwa zduplikowane wiersze.</li>
+            <li>Napraw to. Do ujednolicenia kategorii użyj <em>Znajdź i zamień</em> (Ctrl+H), duplikaty usuń przez <strong>Dane → Usuń duplikaty</strong>.</li>
+            <li>Zaznacz całą tabelę i kliknij <strong>Sortuj i filtruj → Filtruj</strong>.</li>
+            <li>Ustaw filtr tak, żeby zobaczyć tylko jedną kategorię i tylko jedną osobę z obsługi. Ile takich wierszy zostało?</li>
         </ol>
     </div>
 
@@ -84,27 +84,30 @@
     <div class="step-card">
         <h3><span class="step-number">2</span> Wyzwanie: LICZ.JEŻELI oraz SUMA.JEŻELI</h3>
         <p class="instruction-text">
-            Sprawdź, ILE jest osób jeżdżących rowerem (<code>LICZ.JEŻELI</code>), oraz ILE PIENIĘDZY wydali na zachcianki (<code>SUMA.JEŻELI</code>). Nie myl tych funkcji!
+            <code>LICZ.JEŻELI</code> odpowiada na pytanie ILE RAZY. <code>SUMA.JEŻELI</code> odpowiada na pytanie ZA ILE PIENIĘDZY. To dwa różne pytania — nie myl ich.
         </p>
         <ol class="zad">
-            <li>Użyj funkcji <code>=LICZ.JEŻELI(Zakres, Kryterium)</code>. Zlicz osoby korzystające z komunikacji miejskiej.</li>
-            <li>Użyj funkcji <code>=SUMA.JEŻELI(Zakres, Kryterium, Suma_zakres)</code>. Oblicz zsumowaną kwotę kieszonkowego grupy dojeżdżającej autobusem. <span class="tag milestone">KROK MILOWY</span></li>
+            <li><code>=LICZ.JEŻELI(zakres; kryterium)</code> — policz, ile razy wykonano jedną wybraną usługę (albo sprzedano jeden produkt).</li>
+            <li><code>=SUMA.JEŻELI(zakres; kryterium; zakres_sumowania)</code> — policz, ile pieniędzy przyniosła jedna kategoria. <span class="tag milestone">KROK MILOWY</span></li>
+            <li>Powtórz dla wszystkich kategorii. Która przynosi najwięcej pieniędzy? Czy to ta sama, którą wykonujecie najczęściej?</li>
         </ol>
-        <div class="pro-tip"><strong>Pro Tip:</strong> Kryteria tekstowe w funkcjach wpisuj w cudzysłowach, np. <code>"autobus"</code>.</div>
+        <div class="warn"><strong>Uwaga na średniki.</strong> W polskim Excelu argumenty funkcji rozdziela się <strong>średnikiem</strong>, nie przecinkiem. Przecinek jest u nas separatorem dziesiętnym.</div>
+        <div class="pro-tip"><strong>Pro Tip:</strong> Kryteria tekstowe wpisuj w cudzysłowach, np. <code>"Koloryzacja"</code>. Zamiast wpisywać tekst, lepiej wskaż komórkę, w której on jest — wtedy zmienisz kryterium bez ruszania formuły.</div>
     </div>
 
     <h2>Krok 3: Tabela Przestawna</h2>
     <div class="step-card">
         <h3><span class="step-number">3</span> Wyzwanie: Narzędzie, z którym dostaniesz pracę</h3>
         <p class="instruction-text">
-            Wyciągnij podsumowanie 5000 wierszy w 3 sekundy. Tabela przestawna (Pivot Table) analizuje dane bez niszczenia oryginału.
+            To, co przed chwilą liczyłeś funkcjami przez piętnaście minut, tabela przestawna zrobi w trzy ruchy — i nie tknie danych źródłowych.
         </p>
+        <div class="warn"><strong>Najpierw policz wartość.</strong> Wariant handlowy: dodaj kolumnę <code>Wartosc</code> z formułą <code>=E2*F2</code> (ilość razy cena) i przeciągnij w dół. Wariant fryzjerski: masz już kolumnę <code>Cena</code>, nic nie liczysz.</div>
         <ol class="zad">
-            <li>Zaznacz wszystkie dane.</li>
-            <li>Wybierz <strong>Wstawianie</strong> → <strong>Tabela Przestawna</strong> i utwórz "Nowy Arkusz".</li>
-            <li>Przeciągnij pole "Kategoria Zakupu" do obszaru <strong>Wiersze</strong>.</li>
-            <li>Przeciągnij pole "Obrót / Zysk" do obszaru <strong>Wartości</strong>.</li>
-            <li>Wstaw "Fragmentator", aby szybko odfiltrować dane wygodnym przyciskiem. <span class="tag milestone">KROK MILOWY</span></li>
+            <li>Kliknij w dowolną komórkę tabeli. Wybierz <strong>Wstawianie → Tabela przestawna → Nowy arkusz</strong>.</li>
+            <li>Przeciągnij pole <code>Kategoria</code> do obszaru <strong>Wiersze</strong>.</li>
+            <li>Przeciągnij pole <code>Cena</code> (fryzjer) albo <code>Wartosc</code> (sklep) do obszaru <strong>Wartości</strong>. Sprawdź, czy Excel sumuje, a nie zlicza.</li>
+            <li>Porównaj wynik z tym, co wyszło ci z <code>SUMA.JEŻELI</code>. Zgadza się? <span class="tag milestone">KROK MILOWY</span></li>
+            <li>Przeciągnij <code>Pracownik</code> (albo <code>Sprzedawca</code>) do <strong>Kolumn</strong>. Wstaw <strong>Fragmentator</strong>, żeby przełączać się między osobami jednym kliknięciem.</li>
         </ol>
         <div class="pro-tip"><strong>Pro Tip:</strong> Jeśli zmienisz dane w tabeli źródłowej, nie zapomnij kliknąć w tabeli przestawnej "Odśwież".</div>
     </div>
@@ -113,18 +116,19 @@
     <div class="step-card">
         <h3><span class="step-number">4</span> Wyzwanie: Arkusz sam znajdzie kod</h3>
         <p class="instruction-text">
-            Użyj <code>WYSZUKAJ.PIONOWO</code> (VLOOKUP), aby po wpisaniu ID odnaleźć odpowiednie informacje w bazie.
+            Zbuduj wyszukiwarkę: wpisujesz nazwę usługi albo produktu, a arkusz sam podaje cenę. Dokładnie tak działa kasa po zeskanowaniu kodu.
         </p>
         <ol class="zad">
-            <li>Wpisz przykładowy kod/ID do pustej komórki.</li>
-            <li>W komórce obok zbuduj funkcję: <code>=WYSZUKAJ.PIONOWO(TwójKod, CałaTabelaBazy, KolumnaCeny, FAŁSZ)</code>.</li>
-            <li>Zastosuj funkcję <code>JEŻELI.BŁĄD</code>. Ukryj błąd #N/D! wyświetlając tekst "Brak towaru".</li>
+            <li>Na nowym arkuszu zrób cennik: w kolumnie A nazwy, w kolumnie B ceny. Wypisz każdą pozycję tylko raz.</li>
+            <li>Obok zostaw pustą komórkę na wpisywanie nazwy, np. <code>E2</code>.</li>
+            <li>W komórce <code>F2</code> wpisz: <code>=WYSZUKAJ.PIONOWO(E2; A:B; 2; FAŁSZ)</code>. Wpisz coś w E2 i zobacz, co się stanie.</li>
+            <li>Wpisz w E2 nazwę, której nie ma w cenniku. Pojawi się <code>#N/D!</code>. Napraw to: <code>=JEŻELI.BŁĄD(WYSZUKAJ.PIONOWO(E2; A:B; 2; FAŁSZ); "Nie ma w cenniku")</code>.</li>
         </ol>
     </div>
 
     <div class="box fin">
         <span class="lbl">Wyzwanie Finałowe: Narada zarządu</span>
-        <p>Stwórz raport "jednej strony". Wybierz ze szkolnej lub firmowej bazy 3 kluczowe liczby, wygeneruj wykresy i sformułuj jedną rekomendację.</p>
+        <p>Zrób prezentację na trzy slajdy: trzy najważniejsze liczby, dwa wykresy i jedna rekomendacja dla właścicielki. Nie „dane pokazują wzrost" — tylko „zróbmy X, bo Y".</p>
         <p>Zaprezentuj swoje odkrycie w 2 minuty. Udowodnij swój wniosek, wskazując konkretną komórkę. Uważaj: zmanipulowany wykres to błąd analityczny! <span class="tag grade">OCENA 1</span> <span class="tag grade">OCENA 2 (Narada)</span></p>
         <div class="pro-tip"><strong>Pro Tip:</strong> Pamiętaj, aby opisać osie wykresu i podać zwięzły tytuł, z którego jasno wynika, co prezentujesz.</div>
     </div>
@@ -150,7 +154,7 @@
     <div class="footer-right-col">
       <div class="footer-text">
         <strong>Informatyka 2026/2027 · Metodologia WIN4SMEs (WP3.A5)</strong><br>
-        Rozkład materiału bazuje na innowacyjnych modelach edukacyjnych (Flipped Classroom, Blended Learning).<br>
+        Rozkład inspirowany metodami nauczania badanymi w projekcie WIN4SMEs.<br>
         Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autora(-ów) i niekoniecznie odzwierciedlają poglądy Unii Europejskiej.
       </div>
     </div>
