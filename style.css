@@ -359,3 +359,49 @@ footer { margin-top: 100px; padding: 40px 32px; font-size: 14px; color: var(--te
   .footer-inner { flex-direction: column; align-items: flex-start; }
   .footer-right-col { text-align: left; }
 }
+
+/* YouTube Thumbnail */
+.yt-thumb {
+  position: relative;
+  display: inline-block;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  max-width: 320px;
+  width: 100%;
+  margin-top: 12px;
+}
+.yt-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: var(--transition);
+}
+.yt-thumb .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.7);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 24px;
+  backdrop-filter: blur(4px);
+  transition: var(--transition);
+}
+.yt-thumb:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.yt-thumb:hover img {
+  transform: scale(1.05);
+}
+.yt-thumb:hover .play-btn {
+  background: var(--accent-primary);
+  transform: translate(-50%, -50%) scale(1.1);
+}
