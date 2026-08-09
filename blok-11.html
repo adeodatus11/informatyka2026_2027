@@ -41,65 +41,27 @@
         </div>
     </div>
 
-    <div class="theory-card card kompendium" style="border-left: 5px solid var(--accent-primary); margin-bottom: 40px;">
-      <h2 style="margin-top:0; color: var(--accent-primary);">📚 Kompendium Wiedzy</h2>
-      
-      <div class="kompendium-wstep" style="margin-bottom: 24px;">
-        <h3 style="margin-top:0;">1. Zrozumieć temat</h3>
-        <p class="lead" style="font-size:18px;">Wyobraź sobie, że prowadzisz najpopularniejszą aplikację do zamawiania jedzenia w mieście. Na początku wystarczył Ci zwykły arkusz kalkulacyjny: wpisywałeś imię klienta, jego adres i ulubioną pizzę. Ale nagle masz tysiące zamówień dziennie! Arkusz zaczyna się wieszać, klienci zmieniają adresy, a Ty toniesz w powielonych danych. Tu na ratunek wchodzą relacyjne bazy danych (RDBMS). Zamiast trzymać wszystko w jednym gigantycznym worze, bazy danych to sprytne połączenia wielu mniejszych "tabel" (np. Klienci, Zamówienia, Restauracje). Dzięki takiemu podziałowi unikasz chaosu, a aktualizacja numeru telefonu klienta odbywa się tylko w jednym miejscu. Serce każdego nowoczesnego serwisu – od Netflixa po TikToka – bije w rytmie baz danych. Umiejętność rozmowy z taką bazą (za pomocą języka SQL) to dzisiaj supermoce, które pozwalają wyciągnąć dowolną informację w ułamku sekundy.</p>
+    <!-- START NOWEJ STRUKTURY -->
+    <h3 style="margin-top: 40px;">Zajawka: Bazy danych bez tajemnic!</h3>
+    <div class="flashcard-carousel">
+      <div class="flashcard">
+        <div class="emoji">🗂️</div>
+        <h4>Co to jest RDBMS?</h4>
+        <p>Wyobraź sobie zbiór małych tabelek połączonych ze sobą zamiast jednego wielkiego, zacinającego się arkusza. Dzięki temu dane się nie dublują i łatwo je ogarnąć!</p>
       </div>
-
-      <div class="kompendium-slownik" style="margin-bottom: 24px;">
-        <h3 style="margin-top:0;">2. Słownik Pojęć (Kliknij, by rozwinąć)</h3>
-        <details style="margin-bottom:10px; background:var(--bg-primary); padding:12px; border-radius:8px; border:1px solid var(--border-color); cursor:pointer;">
-          <summary style="font-weight:700; color:var(--text-primary); font-size:16px;">Klucz Główny (Primary Key)</summary>
-          <p style="margin-top:12px; font-size:15px; color:var(--text-secondary);">Unikalny identyfikator każdego rekordu (wiersza) w tabeli. Przypomina on Twój numer PESEL. W bazie danych dwoje klientów może nazywać się "Jan Kowalski", ale dzięki temu, że jeden z nich ma ID "105", a drugi "902", system bezbłędnie wie, którego z nich obsługujesz.</p>
-        </details>
-        <details style="margin-bottom:10px; background:var(--bg-primary); padding:12px; border-radius:8px; border:1px solid var(--border-color); cursor:pointer;">
-          <summary style="font-weight:700; color:var(--text-primary); font-size:16px;">Rekord i Pole</summary>
-          <p style="margin-top:12px; font-size:15px; color:var(--text-secondary);">Tabela składa się z pól (kolumn) definiujących rodzaj informacji, np. "Imię" czy "Adres", oraz z rekordów (wierszy), które reprezentują pojedyncze wpisy – konkretnego klienta i jego dane. To tak, jak w dzienniku: kolumna to nazwa przedmiotu, a cały wiersz to oceny konkretnego ucznia.</p>
-        </details>
-        <details style="margin-bottom:10px; background:var(--bg-primary); padding:12px; border-radius:8px; border:1px solid var(--border-color); cursor:pointer;">
-          <summary style="font-weight:700; color:var(--text-primary); font-size:16px;">Zapytanie (Query) w SQL</summary>
-          <p style="margin-top:12px; font-size:15px; color:var(--text-secondary);">Specjalne polecenie, które wysyłasz do bazy, by wyciągnąć interesujące Cię dane. Wyobraź sobie, że mówisz: "Wybierz (SELECT) wszystkich klientów, z (FROM) tabeli użytkownicy, gdzie (WHERE) ich miasto to Warszawa". System natychmiast filtruje i zwraca wyniki.</p>
-        </details>
+      <div class="flashcard">
+        <div class="emoji">🔑</div>
+        <h4>Twój PESEL w bazie</h4>
+        <p>Klucz Główny (Primary Key) to unikalny numer każdego wpisu. Nawet jeśli masz dwóch Janów Kowalskich, każdy dostaje własne, niepowtarzalne ID, więc system się nie pomyli.</p>
       </div>
-
-      <div class="kompendium-ciekawostki pro-tip" style="margin-bottom: 24px;">
-        <strong>Czy wiesz, że...?</strong>
-        Język SQL (Structured Query Language) powstał w latach 70. ubiegłego wieku, a mimo to nadal jest jedną z najczęściej wymaganych umiejętności w IT. Obecne systemy gromadzą tak ogromne ilości informacji, że specjaliści potrafiący wyciągać z nich wnioski są wręcz bezcenni.
-      </div>
-
-      <div class="kompendium-biblioteka" style="margin-bottom: 24px;">
-        <h3 style="margin-top:0;">3. Biblioteka Materiałów</h3>
-        <div class="two">
-          <div>
-            <h4 style="margin-bottom:12px;">Polecane Artykuły (Dla ambitnych)</h4>
-            <ul style="font-size:15px;">
-               <li><a href="https://www.w3schools.com/sql/" target="_blank">W3Schools SQL Tutorial</a> - Kompletny zbiór informacji i interaktywne ćwiczenia z SQL.</li>
-               <li><a href="https://aws.amazon.com/relational-database/" target="_blank">Czym są relacyjne bazy danych? (AWS)</a> - Przewodnik od Amazon wyjaśniający zalety RDBMS.</li>
-            </ul>
-          </div>
-          <div>
-            <h4 style="margin-bottom:12px;">Polecane Wideo</h4>
-            <a href="https://www.youtube.com/watch?v=HXV3zeQKqGY" target="_blank" class="yt-thumb">
-              <img src="https://img.youtube.com/vi/HXV3zeQKqGY/hqdefault.jpg" alt="Miniaturka wideo">
-              <div class="play-btn">▶</div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="kompendium-checkpoint" style="background:var(--bg-primary); padding:20px; border-radius:12px; border:1px dashed var(--accent-secondary);">
-        <h3 style="margin-top:0; color:var(--accent-secondary);">4. Szybki Check-Point</h3>
-        <p style="margin-bottom:12px;">Zanim przejdziesz do wyzwań, odpowiedz sobie w myślach na te pytania:</p>
-        <ul style="font-size:15px; font-weight:600;">
-           <li>Co by się stało, gdybyśmy w tabeli "Klienci" nie użyli Klucza Głównego?</li>
-           <li>Dlaczego rozdzielamy dane na wiele mniejszych tabel, zamiast trzymać je w jednym dużym arkuszu?</li>
-           <li>Czym dokładnie różni się pole od rekordu w bazie danych?</li>
-        </ul>
+      <div class="flashcard">
+        <div class="emoji">🕵️‍♂️</div>
+        <h4>Rozmowy z bazą: SQL</h4>
+        <p>SQL to język, w którym "prosisz" bazę o dane. Wpisujesz krótkie polecenie i w ułamku sekundy dostajesz dokładnie to, czego szukasz, np. "Pokaż wszystkich z Warszawy".</p>
       </div>
     </div>
+    <a href="https://www.youtube.com/watch?v=HXV3zeQKqGY" target="_blank" class="btn-youtube">Obejrzyj na YouTube (3 min)</a>
+    <!-- KONIEC NOWEJ STRUKTURY -->
 
     <h2>Krok 1: Relacje, czyli dlaczego dzielimy tabele</h2>
     <div class="step-card">

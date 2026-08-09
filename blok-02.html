@@ -61,64 +61,27 @@
         
         <h4>Wyzwanie 1: Porównanie formatów</h4>
         
-<div class="theory-card card kompendium" style="border-left: 5px solid var(--accent-primary); margin-bottom: 40px;">
-  <h2 style="margin-top:0; color: var(--accent-primary);">📚 Kompendium Wiedzy</h2>
-  
-  <div class="kompendium-wstep" style="margin-bottom: 24px;">
-    <h3 style="margin-top:0;">1. Zrozumieć temat</h3>
-    <p class="lead" style="font-size:18px;">Wyobraź sobie początki internetu – powolne modemy wdzwaniane z charakterystycznym, skrzeczącym dźwiękiem, gdzie załadowanie jednej prostej strony trwało kilka minut. W tamtych czasach każdy bajt miał znaczenie, a twórcy stron musieli mocno ograniczać ilość obrazków, by strona w ogóle się wczytała. To wtedy zrodziła się potrzeba stworzenia czegoś, co zachowa w miarę dobrą jakość przy drastycznym zmniejszeniu wagi pliku. Zaczęto kombinować: jak oszukać ludzkie oko? Tak powstała kompresja stratna, wykorzystywana między innymi w formacie JPG. Zamiast zapisywać informację o każdym pojedynczym pikselu, algorytmy zaczęły uśredniać bloki podobnych kolorów, usuwając drobne detale, których nasz wzrok i tak by nie wychwycił na pierwszy rzut oka. Dziś, w erze gigabitowego internetu i światłowodów w każdym domu, wydawać by się mogło, że waga pliku nie ma już znaczenia. Jednak urządzenia mobilne, limity transferu danych i algorytmy wyszukiwarek nadal bezlitośnie oceniają szybkość wczytywania. Rozdzielczość i waga na WWW to wciąż kwestia życia i śmierci dla wielu biznesów – użytkownik potrafi uciec do konkurencji, jeśli musi czekać ułamek sekundy za długo na załadowanie się głównego zdjęcia na stronie.</p>
+<!-- START NOWEJ STRUKTURY -->
+<h3 style="margin-top: 40px;">Zajawka: Odchudzamy foty 📸</h3>
+<div class="flashcard-carousel">
+  <div class="flashcard">
+    <div class="emoji">🟩</div>
+    <h4>Piksele i siatka</h4>
+    <p>Grafika rastrowa to siatka malutkich kwadracików (pikseli). Im ich więcej, tym większy plik na dysku, więc strona ładuje się wolniej.</p>
   </div>
-
-  <div class="kompendium-slownik" style="margin-bottom: 24px;">
-    <h3 style="margin-top:0;">2. Słownik Pojęć (Kliknij, by rozwinąć)</h3>
-    <details style="margin-bottom:10px; background:var(--bg-primary); padding:12px; border-radius:8px; border:1px solid var(--border-color); cursor:pointer;">
-      <summary style="font-weight:700; color:var(--text-primary); font-size:16px;">Grafika rastrowa (piksele)</summary>
-      <p style="margin-top:12px; font-size:15px; color:var(--text-secondary);">Obraz zbudowany na dwuwymiarowej siatce małych kwadracików (pikseli), z których każdy ma określony kolor. Przykład: Zrób zdjęcie smartfonem i przybliżaj je maksymalnie na ekranie – w końcu zobaczysz te kolorowe kwadraciki.</p>
-    </details>
-    <details style="margin-bottom:10px; background:var(--bg-primary); padding:12px; border-radius:8px; border:1px solid var(--border-color); cursor:pointer;">
-      <summary style="font-weight:700; color:var(--text-primary); font-size:16px;">Kompresja stratna</summary>
-      <p style="margin-top:12px; font-size:15px; color:var(--text-secondary);">Metoda zmniejszania wagi pliku, która bezpowrotnie usuwa część informacji, pogarszając jakość w sposób najmniej zauważalny dla oka. Przykład: Plik JPG po zapisaniu w gorszej jakości traci detale i pojawiają się w nim tzw. "artefakty".</p>
-    </details>
-    <details style="margin-bottom:10px; background:var(--bg-primary); padding:12px; border-radius:8px; border:1px solid var(--border-color); cursor:pointer;">
-      <summary style="font-weight:700; color:var(--text-primary); font-size:16px;">Formaty bezstratne (PNG/WEBP)</summary>
-      <p style="margin-top:12px; font-size:15px; color:var(--text-secondary);">Formaty zachowujące idealną jakość i często obsługujące puste tło (przezroczystość/kanał alfa). WEBP to nowoczesna alternatywa, ważąca znacznie mniej. Przykład: Logo firmy umieszczone na ciemnym tle strony – gdyby miało dodane białe tło zamiast przezroczystości, wyglądałoby nieprofesjonalnie.</p>
-    </details>
+  <div class="flashcard">
+    <div class="emoji">📉</div>
+    <h4>JPG vs PNG/WEBP</h4>
+    <p>JPG tnie wagę, ale psuje jakość (kompresja stratna). PNG zachowuje przezroczystość, a nowszy WEBP daje jakość przy świetnej wadze!</p>
   </div>
-
-  <div class="kompendium-ciekawostki pro-tip" style="margin-bottom: 24px;">
-    <strong>Czy wiesz, że...?</strong>
-    Pierwszym na świecie cyfrowym zdjęciem opublikowanym w raczkującym internecie (a właściwie WWW) było zdjęcie parodystycznego zespołu muzycznego Les Horribles Cernettes w 1992 roku. Składały się z pracowniczek instytutu CERN, gdzie pracował Tim Berners-Lee – twórca WWW, który poprosił o ich zdjęcie, by przetestować publikację obrazu w sieci.
-  </div>
-
-  <div class="kompendium-biblioteka" style="margin-bottom: 24px;">
-    <h3 style="margin-top:0;">3. Biblioteka Materiałów</h3>
-    <div class="two">
-      <div>
-        <h4 style="margin-bottom:12px;">Polecane Artykuły (Dla ambitnych)</h4>
-        <ul style="font-size:15px;">
-           <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Performance/Multimedia" target="_blank">MDN: Optymalizacja Multimediów</a> - Jak poprawnie ładować i optymalizować obrazy na stronach.</li>
-           <li><a href="https://web.dev/learn/images/" target="_blank">Web.dev: Images</a> - Kompleksowy przewodnik od Google po formatach obrazów w sieci.</li>
-        </ul>
-      </div>
-      <div>
-        <h4 style="margin-bottom:12px;">Polecane Wideo</h4>
-        <a href="https://www.youtube.com/watch?v=Fq_aY0WbU0Y" target="_blank" class="yt-thumb">
-          <img src="https://img.youtube.com/vi/Fq_aY0WbU0Y/hqdefault.jpg" alt="Miniaturka wideo">
-          <div class="play-btn">▶</div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="kompendium-checkpoint" style="background:var(--bg-primary); padding:20px; border-radius:12px; border:1px dashed var(--accent-secondary);">
-    <h3 style="margin-top:0; color:var(--accent-secondary);">4. Szybki Check-Point</h3>
-    <p style="margin-bottom:12px;">Zanim przejdziesz do wyzwań, odpowiedz sobie w myślach na te pytania:</p>
-    <ul style="font-size:15px; font-weight:600;">
-       <li>Czym ryzykujesz, gdy wrzucisz na stronę startową pięciomegowy plik PNG ze zdjęciem zamiast skompresowanego JPG lub WEBP?</li>
-       <li>Kiedy użycie obrazu z przezroczystym tłem jest na stronie absolutnie konieczne?</li>
-    </ul>
+  <div class="flashcard">
+    <div class="emoji">🖼️</div>
+    <h4>Waga ma znaczenie</h4>
+    <p>Wielkie zdjęcia zamulają stronę internetową i odpychają klientów. Zawsze sprawdzaj rozmiar przed uploadem – celuj poniżej 200 kB!</p>
   </div>
 </div>
+<a href="https://www.youtube.com/watch?v=Fq_aY0WbU0Y" target="_blank" class="btn-youtube">Obejrzyj na YouTube (3 min)</a>
+<!-- KONIEC NOWEJ STRUKTURY -->
 
 <ol class="zad">
             <li>Otwórz wybrane zdjęcie z materiałów lekcyjnych na komputerze.</li>

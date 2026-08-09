@@ -360,48 +360,87 @@ footer { margin-top: 100px; padding: 40px 32px; font-size: 14px; color: var(--te
   .footer-right-col { text-align: left; }
 }
 
-/* YouTube Thumbnail */
-.yt-thumb {
-  position: relative;
-  display: inline-block;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
-  max-width: 320px;
-  width: 100%;
-  margin-top: 12px;
+/* Gen Z Flashcards Carousel */
+.flashcard-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 0 24px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
-.yt-thumb img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: var(--transition);
+.flashcard-carousel::-webkit-scrollbar {
+  height: 8px;
 }
-.yt-thumb .play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0,0,0,0.7);
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: white;
-  font-size: 24px;
-  backdrop-filter: blur(4px);
-  transition: var(--transition);
+.flashcard-carousel::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+  border-radius: 10px;
 }
-.yt-thumb:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-.yt-thumb:hover img {
-  transform: scale(1.05);
-}
-.yt-thumb:hover .play-btn {
+.flashcard-carousel::-webkit-scrollbar-thumb {
   background: var(--accent-primary);
-  transform: translate(-50%, -50%) scale(1.1);
+  border-radius: 10px;
+}
+.flashcard {
+  min-width: 280px;
+  max-width: 320px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  scroll-snap-align: start;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.flashcard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-primary);
+}
+.flashcard .emoji {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+.flashcard h4 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+.flashcard p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Modern Video Button */
+.btn-youtube {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #ff0000;
+  color: white !important;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+  transition: var(--transition);
+  text-decoration: none;
+  margin: 16px 0 32px;
+}
+.btn-youtube:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+}
+.btn-youtube::before {
+  content: '🍿';
+  font-size: 20px;
 }
