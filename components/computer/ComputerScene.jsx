@@ -5,15 +5,15 @@ import * as THREE from 'three';
 import ComputerModel from './ComputerModel.jsx';
 import {computerComponents} from '../../content/computer.js';
 
-export function CameraController({controls,exploded,selected,reduced,action}){
+export function CameraController({controls,exploded,selected,reduced,action,isolated}){
  const {camera,size,invalidate}=useThree();const tween=useRef(null);
  useEffect(()=>{
   if(!controls.current)return;const c=computerComponents.find(x=>x.id===selected);const target=c?new THREE.Vector3(...(exploded?c.explodedPosition:c.position)):new THREE.Vector3(.15,.15,.3);
   const aspect=size.width/Math.max(size.height,1);const distance=c?(aspect<.85?7.5:5.5):exploded?Math.max(12,10.5/aspect):Math.max(9.7,6.8/aspect);
-  const direction=new THREE.Vector3(.42,.25,1).normalize().multiplyScalar(distance);const destination=target.clone().add(direction);
+  if(c&&isolated){target.z+=.2;}const direction=new THREE.Vector3(.42,.25,1).normalize().multiplyScalar(c&&isolated?(c.id==='case'?10:c.id==='motherboard'?8:c.id==='cpu'||c.id==='ssd'?3.5:5.5):distance);const destination=target.clone().add(direction);
   tween.current={from:camera.position.clone(),to:destination,fromTarget:controls.current.target.clone(),target,elapsed:0};
   if(reduced){camera.position.copy(destination);controls.current.target.copy(target);controls.current.update();tween.current=null;}invalidate();
- },[exploded,selected,size.width,size.height,action?.reset,reduced,camera,controls,invalidate]);
+ },[exploded,selected,size.width,size.height,action?.reset,isolated,reduced,camera,controls,invalidate]);
  useEffect(()=>{if(!controls.current||!action?.zoom)return;const offset=camera.position.clone().sub(controls.current.target);const factor=action.zoom>0?.82:1.22;offset.multiplyScalar(factor).clampLength(3.5,25);camera.position.copy(controls.current.target).add(offset);controls.current.update();tween.current=null;invalidate();},[action?.stamp]);
  useEffect(()=>{const c=controls.current;if(!c)return;const stop=()=>{tween.current=null;};c.addEventListener('start',stop);return()=>c.removeEventListener('start',stop);},[controls]);
  useFrame((_,dt)=>{const t=tween.current;if(!t||!controls.current)return;t.elapsed+=Math.min(dt,.05);const alpha=Math.min(t.elapsed/1.1,1);const e=alpha*alpha*(3-2*alpha);camera.position.lerpVectors(t.from,t.to,e);controls.current.target.lerpVectors(t.fromTarget,t.target,e);controls.current.update();if(alpha===1)tween.current=null;invalidate();});return null;
