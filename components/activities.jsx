@@ -46,6 +46,7 @@ export function Activity({data,value,onChange,base}){
  case 'reveal':return <div className="reveal-grid">{data.cards.map(c=><RevealCard key={c.title} card={c}/>)}</div>;
  case 'matching':return <MatchingExercise data={data} value={value} onChange={onChange}/>;
  case 'sort':return <DragDropExercise data={data} value={value} onChange={onChange}/>;
+ case 'hardwareReference':return <aside className="hardware-reference" aria-label="Porównanie komputerów A, B i C"><h3>{data.question}</h3><div>{data.items.map(h=><section key={h.name}><h4>{h.name}<span>{h.price}</span></h4><dl>{[['Procesor',h.cpu],['RAM',h.ram],['SSD',h.ssd],['Grafika',h.gpu]].map(([label,v])=><div key={label}><dt>{label}</dt><dd>{v}</dd></div>)}</dl></section>)}</div><p>Te same fikcyjne konfiguracje co na początku lekcji.</p></aside>;
  case 'hardware':return <div className="activity"><p className="muted">Fikcyjne konfiguracje i ceny do ćwiczenia. Opisy CPU i GPU są celowo uproszczone.</p><div className="hardware-grid">{data.items.map((h,i)=><HardwareCard key={h.name} item={h} selected={value?.selected===i} onClick={()=>onChange({selected:i,done:true})}/>)}</div>{value?.done&&<FeedbackBox>{data.explanation}</FeedbackBox>}</div>;
  case 'ports':return <Ports data={data} value={value} onChange={onChange}/>;
  case 'scenarios':return <DiagnosticScenario data={data} value={value} onChange={onChange}/>;
