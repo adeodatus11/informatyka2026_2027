@@ -1,0 +1,29 @@
+// Original schematic geometry. Coordinates are in the motherboard's vertical XY plane.
+// Replacing geometry with a licensed GLB only requires an adapter keyed by modelNode.
+export const computerComponents = [
+ {id:'case',name:'Obudowa',shortName:'Obudowa',modelNode:'case',position:[0,0,0],explodedPosition:[-0.55,0,-0.8],description:'Chroni podzespoły i utrzymuje je w odpowiednim miejscu.',practicalMeaning:'Rozmiar obudowy wpływa na to, jakie części można w niej zamontować i jak przepływa powietrze.'},
+ {id:'motherboard',name:'Płyta główna',shortName:'Płyta główna',modelNode:'motherboard',position:[-.2,.3,-.55],explodedPosition:[-.2,.3,-.55],description:'Łączy najważniejsze elementy komputera i umożliwia ich komunikację.',practicalMeaning:'Gniazda i obsługiwane standardy muszą pasować do wybranych podzespołów.'},
+ {id:'cpu',name:'Procesor',shortName:'CPU',modelNode:'cpu',position:[-.5,1.02,-.35],explodedPosition:[-.8,1.35,.85],description:'Wykonuje instrukcje programów i przeprowadza obliczenia.',practicalMeaning:'Ma duży wpływ na szybkość wykonywania wielu zadań. Wydajność zależy od konkretnego modelu i zadania.',analogy:'Pracownik wykonujący polecenia.'},
+ {id:'ram',name:'Pamięć RAM',shortName:'RAM',modelNode:'ram',position:[.78,.85,-.21],explodedPosition:[1.55,1.85,.8],description:'Przechowuje dane potrzebne aktualnie uruchomionym programom.',practicalMeaning:'Mała ilość RAM może ograniczać komfort pracy z wieloma programami.',example:'16 GB zwykle daje większy zapas do pracy z wieloma aplikacjami niż 4 GB. RAM nie jest jedynym czynnikiem wydajności.',analogy:'Biurko z rzeczami potrzebnymi teraz.'},
+ {id:'gpu',name:'Karta graficzna',shortName:'GPU',modelNode:'gpu',position:[-.15,-.45,.22],explodedPosition:[-.35,-.25,2.2],description:'Wykonuje obliczenia związane przede wszystkim z grafiką i obrazem.',practicalMeaning:'Szczególnie ważna m.in. w grach, grafice 3D, montażu wideo i części zastosowań AI. Może też być zintegrowana z procesorem.',analogy:'Specjalista od obrazu.'},
+ {id:'ssd',name:'Dysk SSD M.2',shortName:'SSD',modelNode:'ssd',position:[-.2,-1.03,-.35],explodedPosition:[2.3,-.95,.9],description:'Przechowuje system, programy i pliki również po wyłączeniu komputera.',practicalMeaning:'Wpływa m.in. na szybkość uruchamiania systemu, programów i otwierania danych.',analogy:'Magazyn.',example:'Pokazany model to SSD M.2 korzystający z NVMe. Istnieją też dyski SSD w innych formatach.'},
+ {id:'psu',name:'Zasilacz',shortName:'PSU',modelNode:'psu',position:[-.35,-2.04,.05],explodedPosition:[-1.65,-2.22,1.3],description:'Dostarcza energię elektryczną do podzespołów komputera.',practicalMeaning:'Zasilacz zamienia energię z sieci na napięcia potrzebne częściom komputera. Nie otwieraj jego obudowy.'},
+ {id:'cooling',name:'Chłodzenie procesora',shortName:'Chłodzenie',modelNode:'cooling',position:[-.5,1.02,.35],explodedPosition:[-.9,2.85,1.4],description:'Odprowadza ciepło powstające podczas pracy procesora.',practicalMeaning:'Radiator przejmuje ciepło, a wentylator pomaga oddać je do przepływającego powietrza.'},
+ {id:'fans',name:'Wentylatory obudowy',shortName:'Wentylatory',modelNode:'fans',position:[1.58,.8,.12],explodedPosition:[2.6,.85,-.6],description:'Wymuszają przepływ powietrza przez obudowę.',practicalMeaning:'Pomagają doprowadzać chłodniejsze powietrze i odprowadzać ogrzane. Nie zastępują radiatora na procesorze.'}
+];
+export const motherboardSlots=[
+ {id:'socket',name:'Socket CPU',part:'cpu',position:[-.5,1.02,-.42],size:[.9,.9,.1],description:'Tutaj instaluje się procesor. Gniazdo musi być zgodne z konkretnym CPU.'},
+ {id:'dimm',name:'Sloty RAM',part:'ram',position:[.78,.85,-.4],size:[.48,1.65,.1],description:'Tutaj instaluje się moduły pamięci RAM. Typ pamięci musi pasować do płyty.'},
+ {id:'pcie',name:'Slot PCIe',part:'gpu',position:[-.15,-.45,-.4],size:[2.3,.15,.12],description:'Do długiego slotu PCIe podłącza się zwykle dedykowaną kartę graficzną.'},
+ {id:'m2',name:'Gniazdo M.2',part:'ssd',position:[-.65,-1.03,-.4],size:[.15,.38,.1],description:'Tutaj podłącza się zgodny dysk M.2. Drugi koniec dysku jest mocowany do płyty.'}
+];
+export const dataFlow=[
+ {id:'ssd',title:'Dane na SSD',text:'Pliki gry znajdują się na dysku. Rozpoczynasz uruchamianie programu.'},
+ {id:'ram',title:'Dane potrzebne teraz',text:'Potrzebne dane programu są wczytywane do pamięci RAM.'},
+ {id:'cpu',title:'Instrukcje programu',text:'CPU wykonuje instrukcje gry i obliczenia, np. związane z jej regułami.'},
+ {id:'gpu',title:'Tworzenie obrazu',text:'GPU wykonuje obliczenia potrzebne do stworzenia obrazu.'},
+ {id:'screen',title:'Obraz na ekranie',text:'Przygotowany obraz trafia na monitor. Podczas gry podzespoły stale współpracują.'}
+];
+export const findChallenges=[{id:'ram',question:'Znajdź pamięć RAM.',success:'Tak. To pamięć RAM.'},{id:'cpu',question:'Znajdź procesor.',success:'Tak. To procesor, czyli CPU.'},{id:'gpu',question:'Znajdź kartę graficzną.',success:'Tak. To karta graficzna, czyli GPU.'},{id:'ssd',question:'Znajdź SSD.',success:'Tak. To dysk SSD M.2.'}];
+export const smartphoneModule={status:'planned',title:'A co masz w kieszeni?',description:'Smartfon wygląda inaczej, ale jego elementy pełnią podobne funkcje. Drugi model 3D jest przygotowany do późniejszego dodania.',asset:null,parts:[['CPU','CPU w układzie SoC'],['GPU','GPU w układzie SoC'],['RAM','Pamięć operacyjna'],['SSD','Pamięć flash'],['PSU','Bateria i układy zarządzania energią'],['Płyta główna','Płyta główna telefonu']]};
+export const computerModelAsset={url:null,license:'Original schematic geometry created for this project',nodes:Object.fromEntries(computerComponents.map(c=>[c.id,c.modelNode]))};

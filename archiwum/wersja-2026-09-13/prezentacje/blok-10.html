@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blok 10 &middot; Co mówią te dane? — prezentacja</title>
+<link rel="stylesheet" href="slajdy.css">
+</head>
+<body>
+<div id="scena">
+<section class="slajd srodek">
+<div class="nadtytul">Blok 10 &middot; Co mówią te dane?</div><h1>300 wizyt z całego roku</h1><p class="duze">Rejestr salonu. Wszystko, co się wydarzyło.</p>
+</section>
+<section class="slajd ">
+<div class="nadtytul">Surowe dane &mdash; pierwsze 18 z 300 wierszy</div>
+     <div style="flex:1;overflow:hidden;border:2px solid var(--linia);border-radius:10px;background:#fff;padding:8px"><table class="dane"><tr><th>Data</th><th>Klientka</th><th>Usluga</th><th>Kategoria</th><th>Pracownik</th><th>Czas_min</th><th>Cena</th></tr><tr><td>2025-09-01</td><td>Magdalena Sikora</td><td>Strzyżenie męskie</td><td>Strzyżenie</td><td>Natalia Woźniak</td><td>20</td><td>45</td></tr><tr><td>2025-09-03</td><td>Karolina Baran</td><td>Strzyżenie damskie</td><td>Strzyżenie</td><td>Ewa Kowalczyk</td><td>50</td><td>70</td></tr><tr><td>2025-09-04</td><td>Magdalena Górska</td><td>Pasemka</td><td>Koloryzacja</td><td>Marta Zielińska</td><td>150</td><td>260</td></tr><tr><td>2025-09-05</td><td>Paulina Nowak</td><td>Zabieg nawilżający</td><td>Pielęgnacja</td><td>Karolina Bąk</td><td>40</td><td>80</td></tr><tr><td>2025-09-05</td><td>Agnieszka Nowak</td><td>Strzyżenie damskie</td><td>Strzyżenie</td><td>Marta Zielińska</td><td>35</td><td>70</td></tr><tr><td>2025-09-05</td><td>Renata Adamczyk</td><td>Baleyage</td><td>Koloryzacja</td><td>Natalia Woźniak</td><td>185</td><td>320</td></tr><tr><td>2025-09-06</td><td>Beata Jabłońska</td><td>Strzyżenie męskie</td><td>Strzyżenie</td><td>Karolina Bąk</td><td>25</td><td>45</td></tr><tr><td>2025-09-06</td><td>Agnieszka Pawlak</td><td>Keratynowe prostowanie</td><td>Pielęgnacja</td><td>Marta Zielińska</td><td>190</td><td>350</td></tr><tr><td>2025-09-10</td><td>Barbara Nowak</td><td>Fale</td><td>Stylizacja</td><td>Marta Zielińska</td><td>40</td><td>70</td></tr><tr><td>2025-09-12</td><td>Patrycja Zając</td><td>Prostowanie</td><td>Stylizacja</td><td>Ewa Kowalczyk</td><td>45</td><td>80</td></tr><tr><td>2025-09-12</td><td>Dominika Duda</td><td>Fale</td><td>Stylizacja</td><td>Karolina Bąk</td><td>40</td><td>70</td></tr><tr><td>2025-09-12</td><td>Ewelina Wójcik</td><td>Zabieg nawilżający</td><td>Pielęgnacja</td><td>Natalia Woźniak</td><td>55</td><td>80</td></tr><tr><td>2025-09-12</td><td>Paulina Zając</td><td>Strzyżenie męskie</td><td>Strzyżenie</td><td>Marta Zielińska</td><td>45</td><td>45</td></tr><tr><td>2025-09-12</td><td>Sylwia Witkowska</td><td>Botoks na włosy</td><td>Pielęgnacja</td><td>Ewa Kowalczyk</td><td>90</td><td>200</td></tr><tr><td>2025-09-12</td><td>Anna Baran</td><td>Podcięcie końcówek</td><td>Strzyżenie</td><td>Ewa Kowalczyk</td><td>40</td><td>50</td></tr><tr><td>2025-09-12</td><td>Patrycja Król</td><td>Maska regenerująca</td><td>Pielęgnacja</td><td>Natalia Woźniak</td><td>25</td><td>60</td></tr><tr><td>2025-09-13</td><td>Dominika Wieczorek</td><td>Pasemka</td><td>Koloryzacja</td><td>Ewa Kowalczyk</td><td>150</td><td>260</td></tr><tr><td>2025-09-13</td><td>Renata Kamińska</td><td>Strzyżenie męskie</td><td>Strzyżenie</td><td>Ewa Kowalczyk</td><td>35</td><td>45</td></tr></table></div>
+     <p class="duze" style="margin-top:14px"><b>Pytanie:</b> która usługa przynosi salonowi najwięcej pieniędzy?</p>
+</section>
+<section class="slajd srodek">
+<h1>Kto potrafi odpowiedzieć, patrząc na tę tabelę?</h1><p class="duze" style="margin-top:18px;color:var(--szary)">Nikt. I o to chodzi. Dane bez narzędzia są bezużyteczne.</p>
+</section>
+<section class="slajd ">
+<h2>Najpierw trzeba je posprzątać</h2>
+    <div class="cztery" style="margin-top:12px">
+      <div class="karta czerwona"><div class="naglowek-karty">Daty na dwa sposoby</div><p style="font-size:21px">2025-09-04 obok 04.09.2025. Excel potraktuje jedne jako tekst i nie posortuje.</p></div>
+      <div class="karta czerwona"><div class="naglowek-karty">Ta sama kategoria, różny zapis</div><p style="font-size:21px">Koloryzacja i koloryzacja. Dla ciebie to jedno. Dla arkusza dwie różne rzeczy.</p></div>
+      <div class="karta czerwona"><div class="naglowek-karty">Puste pola</div><p style="font-size:21px">Pięć wizyt bez wpisanej fryzjerki. Kto je wykonał?</p></div>
+      <div class="karta czerwona"><div class="naglowek-karty">Duplikaty</div><p style="font-size:21px">Dwa wiersze wpisane dwa razy. Obrót policzony podwójnie.</p></div>
+    </div>
+    <p class="male" style="margin-top:14px">Tak wygląda eksport z prawdziwego systemu. Czyszczenie danych to nie kaprys nauczyciela.</p>
+</section>
+<section class="slajd ">
+<h2>Po posprzątaniu i jednej tabeli przestawnej</h2>
+    <div class="dwa" style="margin-top:12px">
+      <div class="karta">
+        <table class="dane duza">
+          <tr><th>Kategoria</th><th style="text-align:right">Obrót</th><th style="text-align:right">Wizyt</th></tr>
+          <tr><td><b>Koloryzacja</b></td><td style="text-align:right"><b>12 690 zł</b></td><td style="text-align:right">72</td></tr>
+          <tr><td>Pielęgnacja</td><td style="text-align:right">8 640 zł</td><td style="text-align:right">64</td></tr>
+          <tr><td>Strzyżenie</td><td style="text-align:right">5 510 zł</td><td style="text-align:right">98</td></tr>
+          <tr><td>Stylizacja</td><td style="text-align:right">5 350 zł</td><td style="text-align:right">66</td></tr>
+        </table>
+      </div>
+      <div class="karta zielona" style="justify-content:center">
+        <div class="naglowek-karty">Co z tego wynika</div>
+        <p style="font-size:24px;line-height:1.45">Strzyżeń jest <b>najwięcej</b> &mdash; 98 wizyt.<br>
+        Ale pieniądze robi <b>koloryzacja</b>: 72 wizyty i o ponad dwa razy większy obrót.</p>
+      </div>
+    </div>
+    <div class="odpowiedz odkryj"><b>To jest rekomendacja dla właścicielki:</b> jeśli masz wolne miejsce w grafiku, zapełnij je koloryzacją, nie strzyżeniem. Trzy kliknięcia dały odpowiedź, której nikt nie widział gołym okiem.</div>
+</section>
+<div id="stoper">3</div>
+<div id="zaslona"></div>
+<div id="pasek">
+  <span class="tytul">Blok 10 &middot; Co mówią te dane?</span>
+  <span class="podpowiedz" id="podpowiedz"></span>
+  <span id="licznik">1 / 1</span>
+</div>
+</div>
+<div id="sterowanie">
+  <button id="btn-poprzedni" title="Poprzedni slajd">&larr;</button>
+  <button id="btn-nastepny" title="Następny slajd">&rarr;</button>
+  <button id="btn-odkryj" title="Odkryj odpowiedź">Odkryj</button>
+  <button id="btn-stoper" title="Uruchom odliczanie">Stoper</button>
+  <button id="btn-zaslon" title="Zasłoń ekran">Zasłoń</button>
+  <button id="btn-pelny" title="Pełny ekran">Pełny ekran</button>
+</div>
+<script src="slajdy.js"></script>
+</body>
+</html>

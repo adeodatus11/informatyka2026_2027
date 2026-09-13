@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blok 11 &middot; Wyścig — prezentacja</title>
+<link rel="stylesheet" href="slajdy.css">
+</head>
+<body>
+<div id="scena">
+<section class="slajd srodek">
+<div class="nadtytul">Blok 11 &middot; Gdzie właściwie są te dane?</div><h1>Wyścig</h1><p class="duze">Wy szukacie w arkuszu. Ja pytam bazę.</p>
+</section>
+<section class="slajd ">
+<div class="nadtytul">Zadanie &mdash; na czas</div>
+     <h2 style="margin-bottom:10px">Znajdźcie wszystkie koloryzacje wykonane przez Martę w marcu</h2>
+     <div style="flex:1;overflow:hidden;border:2px solid var(--linia);border-radius:10px;background:#fff;padding:8px"><table class="dane"><tr><th>ID_wizyty</th><th>ID_klientki</th><th>Data</th><th>Usluga</th><th>Cena</th><th>Pracownik</th><th>Uwagi</th></tr><tr><td>1</td><td>6</td><td>2025-04-30</td><td>Strzyżenie damskie</td><td>70</td><td>Marta Zielińska</td><td>Alergia na amoniak</td></tr><tr><td>2</td><td>13</td><td>2025-05-02</td><td>Prostowanie</td><td>80</td><td>Marta Zielińska</td><td>Klientka zadowolona</td></tr><tr><td>3</td><td>13</td><td>2025-05-07</td><td>Upięcie okolicznościow</td><td>150</td><td>Marta Zielińska</td><td>Klientka zadowolona</td></tr><tr><td>4</td><td>9</td><td>2025-05-10</td><td>Pasemka</td><td>260</td><td>Marta Zielińska</td><td></td></tr><tr><td>5</td><td>13</td><td>2025-05-13</td><td>Tonowanie</td><td>90</td><td>Karolina Bąk</td><td>Klientka zadowolona</td></tr><tr><td>6</td><td>2</td><td>2025-05-17</td><td>Baleyage</td><td>320</td><td>Karolina Bąk</td><td>Klientka zadowolona</td></tr><tr><td>7</td><td>32</td><td>2025-05-21</td><td>Tonowanie</td><td>90</td><td>Ewa Kowalczyk</td><td></td></tr><tr><td>8</td><td>26</td><td>2025-05-30</td><td>Koloryzacja jednolita</td><td>180</td><td>Natalia Woźniak</td><td>Alergia na amoniak</td></tr><tr><td>9</td><td>30</td><td>2025-05-31</td><td>Tonowanie</td><td>90</td><td>Natalia Woźniak</td><td></td></tr><tr><td>10</td><td>2</td><td>2025-06-04</td><td>Maska regenerująca</td><td>60</td><td>Natalia Woźniak</td><td>Alergia na amoniak</td></tr><tr><td>11</td><td>4</td><td>2025-06-05</td><td>Koloryzacja jednolita</td><td>180</td><td>Ewa Kowalczyk</td><td>Spóźniła się 15 min</td></tr><tr><td>12</td><td>35</td><td>2025-06-11</td><td>Podcięcie końcówek</td><td>50</td><td>Natalia Woźniak</td><td>Klientka zadowolona</td></tr><tr><td>13</td><td>8</td><td>2025-06-14</td><td>Prostowanie</td><td>80</td><td>Natalia Woźniak</td><td></td></tr><tr><td>14</td><td>14</td><td>2025-06-14</td><td>Modelowanie</td><td>60</td><td>Natalia Woźniak</td><td></td></tr><tr><td>15</td><td>21</td><td>2025-06-14</td><td>Tonowanie</td><td>90</td><td>Marta Zielińska</td><td></td></tr><tr><td>16</td><td>39</td><td>2025-06-21</td><td>Maska regenerująca</td><td>60</td><td>Natalia Woźniak</td><td>Alergia na amoniak</td></tr></table></div>
+     <p class="male" style="margin-top:10px">To jest 170 wierszy. W prawdziwym salonie po pięciu latach będzie ich kilka tysięcy.</p>
+</section>
+<section class="slajd ">
+<div class="dwa">
+      <div class="karta czerwona" style="justify-content:center;align-items:center;text-align:center">
+        <div class="naglowek-karty">Wy &mdash; wzrokiem w arkuszu</div>
+        <div class="liczba" style="color:var(--zly)">4:20</div>
+        <p class="podpis">I nadal nie ma pewności, czy nic nie umknęło</p>
+      </div>
+      <div class="karta zielona" style="justify-content:center;align-items:center;text-align:center">
+        <div class="naglowek-karty">Baza danych &mdash; jedno pytanie</div>
+        <div class="liczba" style="color:var(--dobry)">0,2 s</div>
+        <p class="podpis">Za każdym razem ten sam, pewny wynik</p>
+      </div>
+    </div>
+    <div class="odpowiedz odkryj" style="margin-top:16px">Różnica nie polega na tym, że komputer jest szybszy. Polega na tym, że <b>dane mają strukturę</b> &mdash; baza wie, że Marta to pracownik, a marzec to zakres dat.</div>
+</section>
+<section class="slajd ">
+<h2>Tak wygląda to pytanie</h2>
+    <div class="karta" style="margin-top:16px;background:#14213d;border-color:#14213d">
+      <pre style="font-family:'Courier New',monospace;font-size:30px;line-height:1.55;color:#8fe3a8;margin:0">
+<span style="color:#f0b323">SELECT</span>  Klientki.Nazwisko, Wizyty.Data, Wizyty.Usluga
+<span style="color:#f0b323">FROM</span>    Wizyty <span style="color:#f0b323">JOIN</span> Klientki
+        <span style="color:#f0b323">ON</span> Wizyty.ID_klientki = Klientki.ID_klientki
+<span style="color:#f0b323">WHERE</span>   Wizyty.Pracownik = 'Marta Zielińska'
+        <span style="color:#f0b323">AND</span> Wizyty.Usluga <span style="color:#f0b323">LIKE</span> '%Kolor%'</pre>
+    </div>
+    <div class="odpowiedz odkryj" style="margin-top:14px">Trzy słowa niosą całą robotę: <b>SELECT</b> co pokazać, <b>FROM</b> z której tabeli, <b>WHERE</b> pod jakim warunkiem. Resztę wyklikacie myszką &mdash; program sam napisze ten kod.</div>
+</section>
+<section class="slajd ">
+<h2>Dlaczego dwie tabele, a nie jedna</h2>
+    <div class="dwa" style="margin-top:12px">
+      <div class="karta czerwona">
+        <div class="naglowek-karty">Jedna wielka tabela</div>
+        <p style="font-size:22px;line-height:1.45">Pani Kowalska była 12 razy, więc jej numer telefonu jest wpisany <b>12 razy</b>.<br><br>
+        Zmienia numer? Poprawiasz w dwunastu miejscach. Przeoczysz jedno &mdash; masz dwie wersje prawdy.</p>
+      </div>
+      <div class="karta zielona">
+        <div class="naglowek-karty">Dwie tabele połączone kluczem</div>
+        <p style="font-size:22px;line-height:1.45">Numer telefonu jest w <b>jednym</b> miejscu, w tabeli Klientki.<br><br>
+        Wizyty tylko wskazują na klientkę numerem ID. Poprawiasz raz &mdash; naprawia się wszędzie.</p>
+      </div>
+    </div>
+</section>
+<div id="stoper">3</div>
+<div id="zaslona"></div>
+<div id="pasek">
+  <span class="tytul">Blok 11 &middot; Wyścig</span>
+  <span class="podpowiedz" id="podpowiedz"></span>
+  <span id="licznik">1 / 1</span>
+</div>
+</div>
+<div id="sterowanie">
+  <button id="btn-poprzedni" title="Poprzedni slajd">&larr;</button>
+  <button id="btn-nastepny" title="Następny slajd">&rarr;</button>
+  <button id="btn-odkryj" title="Odkryj odpowiedź">Odkryj</button>
+  <button id="btn-stoper" title="Uruchom odliczanie">Stoper</button>
+  <button id="btn-zaslon" title="Zasłoń ekran">Zasłoń</button>
+  <button id="btn-pelny" title="Pełny ekran">Pełny ekran</button>
+</div>
+<script src="slajdy.js"></script>
+</body>
+</html>

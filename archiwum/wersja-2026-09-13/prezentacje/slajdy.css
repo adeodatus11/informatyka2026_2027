@@ -1,0 +1,123 @@
+/* ============================================================
+   Silnik prezentacji — Informatyka 2026/2027
+   Scena 1280x720 skalowana do okna. Jasne tło: sale bywają nieszczelnie
+   zaciemnione, a czarny slajd na słabym rzutniku staje się szary.
+   ============================================================ */
+
+:root{
+  --atrament:#14213d;
+  --szary:#5b6b82;
+  --linia:#d7dee8;
+  --tlo:#f7f9fc;
+  --akcent:#c0392b;
+  --dobry:#1e8449;
+  --zly:#c0392b;
+  --zolty:#f0b323;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;background:#0e1420;font-family:var(--font)}
+
+#scena{
+  position:absolute;top:50%;left:50%;
+  width:1280px;height:720px;
+  transform-origin:center center;
+  background:var(--tlo);
+  overflow:hidden;
+}
+
+.slajd{
+  position:absolute;inset:0;
+  display:none;
+  padding:56px 72px;
+  flex-direction:column;
+  color:var(--atrament);
+  background:var(--tlo);
+}
+.slajd.aktywny{display:flex}
+
+/* --- typografia --- */
+.slajd h1{font-size:62px;line-height:1.08;letter-spacing:-.02em;margin-bottom:18px}
+.slajd h2{font-size:40px;line-height:1.15;margin-bottom:16px}
+.slajd h3{font-size:27px;line-height:1.2;margin-bottom:10px}
+.slajd p{font-size:26px;line-height:1.45;max-width:1050px}
+.slajd .duze{font-size:34px;line-height:1.4}
+.slajd .male{font-size:19px;color:var(--szary);line-height:1.4}
+.nadtytul{font-size:17px;letter-spacing:.16em;text-transform:uppercase;color:var(--szary);margin-bottom:14px;font-weight:700}
+.srodek{justify-content:center;align-items:center;text-align:center}
+.srodek p{max-width:900px}
+
+/* --- układy --- */
+.dwa{display:grid;grid-template-columns:1fr 1fr;gap:34px;flex:1;min-height:0;align-items:stretch}
+.trzy{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;flex:1;min-height:0}
+.cztery{display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:1fr 1fr;gap:20px;flex:1;min-height:0}
+.stos{display:flex;flex-direction:column;gap:16px;flex:1;min-height:0}
+
+.karta{background:#fff;border:2px solid var(--linia);border-radius:14px;padding:24px;overflow:hidden;
+       display:flex;flex-direction:column;min-height:0}
+.karta.zielona{border-color:var(--dobry);box-shadow:0 0 0 4px rgba(30,132,73,.10)}
+.karta.czerwona{border-color:var(--zly);box-shadow:0 0 0 4px rgba(192,57,43,.10)}
+.etykieta{position:absolute;top:14px;right:16px;font-size:15px;font-weight:800;letter-spacing:.1em;
+          text-transform:uppercase;color:var(--szary)}
+.naglowek-karty{font-size:22px;font-weight:800;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.plakietka{display:inline-block;font-size:15px;font-weight:800;padding:5px 12px;border-radius:999px;
+           background:#eef2f8;color:var(--szary);letter-spacing:.04em}
+.plakietka.a{background:#e8f5ee;color:var(--dobry)}
+.plakietka.b{background:#fdecea;color:var(--zly)}
+
+/* --- odkrywanie odpowiedzi --- */
+.odkryj{opacity:0;transform:translateY(14px);transition:opacity .35s ease,transform .35s ease;pointer-events:none}
+#scena.odkryte .odkryj{opacity:1;transform:none;pointer-events:auto}
+.odpowiedz{margin-top:auto;background:#fff8e6;border-left:8px solid var(--zolty);border-radius:0 12px 12px 0;
+           padding:18px 22px;font-size:22px;line-height:1.4}
+.odpowiedz b{color:var(--atrament)}
+
+/* --- pasek dolny --- */
+#pasek{position:absolute;left:0;right:0;bottom:0;height:44px;display:flex;align-items:center;
+       justify-content:space-between;padding:0 22px;font-size:15px;color:var(--szary);
+       border-top:1px solid var(--linia);background:rgba(255,255,255,.85)}
+#pasek .tytul{font-weight:700;color:var(--atrament)}
+#pasek .podpowiedz{opacity:.75}
+#licznik{font-variant-numeric:tabular-nums;font-weight:700}
+
+/* --- stoper (test 3 sekund / 7 sekund) --- */
+#stoper{position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+        background:#0e1420;color:#fff;font-size:230px;font-weight:800;z-index:60;font-variant-numeric:tabular-nums}
+#scena.stoper-widoczny #stoper{display:flex}
+#zaslona{position:absolute;inset:0;background:#0e1420;display:none;z-index:70}
+#scena.zaslonieta #zaslona{display:block}
+
+/* --- przyciski sterowania --- */
+#sterowanie{position:fixed;right:14px;bottom:14px;display:flex;gap:8px;z-index:90}
+#sterowanie button{
+  font:600 14px/1 var(--font);color:#fff;background:rgba(20,33,61,.82);border:0;
+  padding:10px 14px;border-radius:8px;cursor:pointer;backdrop-filter:blur(4px)}
+#sterowanie button:hover{background:#14213d}
+
+/* --- elementy treści --- */
+.lista{font-size:25px;line-height:1.55;padding-left:26px}
+.lista li{margin-bottom:9px}
+.lista.czysta{list-style:none;padding-left:0}
+.lista.czysta li{padding-left:34px;position:relative}
+.lista.czysta li::before{content:"→";position:absolute;left:0;color:var(--akcent);font-weight:800}
+
+table.dane{border-collapse:collapse;width:100%;font-size:15px;font-variant-numeric:tabular-nums}
+table.dane th{background:#eef2f8;text-align:left;padding:6px 9px;border:1px solid var(--linia);font-size:14px}
+table.dane td{padding:5px 9px;border:1px solid var(--linia);white-space:nowrap}
+table.dane.duza{font-size:23px}
+table.dane.duza td,table.dane.duza th{padding:11px 15px;font-size:23px}
+
+.liczba{font-size:96px;font-weight:800;line-height:1;letter-spacing:-.03em}
+.liczba.mala{font-size:58px}
+.podpis{font-size:19px;color:var(--szary);margin-top:6px}
+
+.wiadomosc{background:#fff;border:2px solid var(--linia);border-radius:12px;padding:18px 20px;font-size:20px;line-height:1.4}
+.wiadomosc .od{font-size:16px;color:var(--szary);margin-bottom:4px}
+.wiadomosc .temat{font-weight:800;margin-bottom:8px;font-size:21px}
+.wiadomosc .trop{background:#ffe9e5;border-radius:4px;padding:0 4px}
+
+kbd{font:700 15px/1 var(--font);background:#fff;border:1px solid var(--linia);
+    border-bottom-width:3px;border-radius:6px;padding:4px 8px;color:var(--atrament)}
+
+@media print{ html,body{overflow:visible} .slajd{display:flex!important;position:static;page-break-after:always} #sterowanie,#pasek{display:none} }

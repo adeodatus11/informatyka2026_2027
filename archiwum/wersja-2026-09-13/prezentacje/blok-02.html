@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blok 2 &middot; Napraw to zdjęcie — prezentacja</title>
+<link rel="stylesheet" href="slajdy.css">
+</head>
+<body>
+<div id="scena">
+<section class="slajd srodek">
+<div class="nadtytul">Blok 2 &middot; Napraw to zdjęcie</div><h1>Które jest oryginałem?</h1><p class="duze">Patrzcie 10 sekund. Potem głosujemy.</p>
+</section>
+<section class="slajd ">
+<div class="dwa">
+      <div class="karta" style="padding:12px;position:relative">
+        <span class="etykieta">A</span>
+        <img src="media/blok02_przed.jpg" alt="Zdjęcie ciemne i przekrzywione" style="width:100%;height:100%;object-fit:cover;border-radius:8px">
+      </div>
+      <div class="karta" style="padding:12px;position:relative">
+        <span class="etykieta">B</span>
+        <img src="media/blok02_po.jpg" alt="Zdjęcie poprawione" style="width:100%;height:100%;object-fit:cover;border-radius:8px">
+      </div>
+    </div>
+    <div class="odpowiedz odkryj"><b>Oryginał to A.</b> B powstało z niego w cztery minuty: wyprostowany poziom, nowy kadr, jaśniej, mocniejszy kontrast, usunięty kubek i gniazdko. Żadnego nowego zdjęcia &mdash; ten sam plik.</div>
+</section>
+<section class="slajd ">
+<h2>Co dokładnie zmieniono</h2>
+    <div class="dwa" style="margin-top:14px">
+      <div class="karta czerwona">
+        <div class="naglowek-karty">A &mdash; tak wyszło z telefonu</div>
+        <ul class="lista" style="font-size:22px">
+          <li>Lada opada &mdash; poziom przekrzywiony o 6 stopni</li>
+          <li>Za ciemne, kolory wyprane</li>
+          <li>Lustro ucięte krawędzią kadru</li>
+          <li>Kubek po kawie i gniazdko w kadrze</li>
+        </ul>
+      </div>
+      <div class="karta zielona">
+        <div class="naglowek-karty">B &mdash; cztery minuty pracy</div>
+        <ul class="lista" style="font-size:22px">
+          <li>Poziom wyprostowany</li>
+          <li>Jasność i kontrast podniesione</li>
+          <li>Kadr według zasady trójpodziału</li>
+          <li>Bałagan wyretuszowany</li>
+        </ul>
+      </div>
+    </div>
+    <p class="male" style="margin-top:16px">To jest różnica między zdjęciem, które odstrasza klientkę, a zdjęciem, które zatrzymuje ją na profilu salonu.</p>
+</section>
+<section class="slajd ">
+<h2>Ten sam obraz, cztery formaty</h2>
+    <div class="cztery" style="margin-top:14px">
+      <div class="karta"><div class="naglowek-karty">JPG &middot; jakość 90</div><div class="liczba mala">242 kB</div><p class="podpis">Wygląda dobrze. Standard do zdjęć.</p></div>
+      <div class="karta"><div class="naglowek-karty">JPG &middot; jakość 30</div><div class="liczba mala" style="color:var(--zly)">54 kB</div><p class="podpis">Pięć razy lżejszy &mdash; i widać kwadraty przy krawędziach.</p></div>
+      <div class="karta"><div class="naglowek-karty">PNG</div><div class="liczba mala" style="color:var(--zly)">917 kB</div><p class="podpis">Bez straty jakości, ale prawie cztery razy cięższy niż JPG.</p></div>
+      <div class="karta zielona"><div class="naglowek-karty">WEBP</div><div class="liczba mala" style="color:var(--dobry)">95 kB</div><p class="podpis">Jakość jak JPG 90 przy dwóch piątych wagi.</p></div>
+    </div>
+    <div class="odpowiedz odkryj"><b>Na stronę salonu:</b> WEBP albo JPG. PNG zostaw dla logo i wszystkiego, co ma przezroczyste tło. Cel: poniżej 200 kB na zdjęcie.</div>
+</section>
+<div id="stoper">3</div>
+<div id="zaslona"></div>
+<div id="pasek">
+  <span class="tytul">Blok 2 &middot; Napraw to zdjęcie</span>
+  <span class="podpowiedz" id="podpowiedz"></span>
+  <span id="licznik">1 / 1</span>
+</div>
+</div>
+<div id="sterowanie">
+  <button id="btn-poprzedni" title="Poprzedni slajd">&larr;</button>
+  <button id="btn-nastepny" title="Następny slajd">&rarr;</button>
+  <button id="btn-odkryj" title="Odkryj odpowiedź">Odkryj</button>
+  <button id="btn-stoper" title="Uruchom odliczanie">Stoper</button>
+  <button id="btn-zaslon" title="Zasłoń ekran">Zasłoń</button>
+  <button id="btn-pelny" title="Pełny ekran">Pełny ekran</button>
+</div>
+<script src="slajdy.js"></script>
+</body>
+</html>
