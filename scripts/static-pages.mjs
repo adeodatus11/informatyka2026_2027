@@ -12,7 +12,7 @@ await writeFile(path.join(root,'dist/.nojekyll'),'');
 // Keep branch-based GitHub Pages working, without requiring a change in hosting settings.
 await mkdir(path.join(root,'assets'),{recursive:true});
 for(const name of await readdir(path.join(root,'assets'))){
-  if(/^(?:index|ComputerExplorer|ComputerScene)-[\w-]+\.(js|css)$/.test(name))await unlink(path.join(root,'assets',name));
+  if(/^(?:index|ComputerExplorer|ComputerScene|PhoneExplorer|computer)-[\w-]+\.(js|css)$/.test(name))await unlink(path.join(root,'assets',name));
 }
 for(const entry of ['index.html','CNAME','assets','materials','videos','lesson','teacher','branding','o-projekcie']){await cp(path.join(root,'dist',entry),path.join(root,entry),{recursive:true});}
 console.log('Built root GitHub Pages files and direct lesson/teacher routes. Archive left untouched.');

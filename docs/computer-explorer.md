@@ -11,4 +11,12 @@ Model można zastąpić licencjonowanym GLB przez adapter GLBPart i metadane com
 
 Mysz: obrót przeciągnięciem, zoom kółkiem, wybór kliknięciem. Dotyk: jeden palec obraca, dwa przybliżają, tap wybiera. Lista udostępnia te same opisy i zadanie klawiaturą, również bez WebGL. Preferencja ograniczenia ruchu wyłącza interpolację. Tryb prezentacji używa pełnego ekranu, z zapasowym widokiem CSS.
 
-Smartfon jest zapowiedzianym kolejnym modułem. Dostępne teraz porównanie wyjaśnia wspólne funkcje PC i telefonu; nie udaje gotowego modelu 3D telefonu.
+## iPhone jako komputer
+
+Pod modelem PC przycisk „Porównaj z iPhonem” ładuje osobny moduł PhoneExplorer. Dziesięć elementów obejmuje ekran, obudowę, płytę, SoC, RAM, flash, akumulator, aparaty, warstwę cieplną i moduł audio/port. Model jest autorską geometrią, inspirowaną ogólną konstrukcją iPhone’a, bez deklarowania zgodności z konkretną generacją. Dane i pozycje: content/phone.js; geometria: PhoneModel.jsx. Animacja, kamera i obsługa dotyku współdzielone z komputerem. Rozsunięcie układów jest wyłącznie dydaktyczne.
+
+Źródła do porównania funkcji i konstrukcji:
+- https://support.apple.com/en-gb/104900 (instrukcja iPhone 15, widok wnętrza)
+- https://support.apple.com/en-jo/121031 (CPU i GPU jako części A18 Pro)
+
+Wariant bez WebGL udostępnia listę, nazwy i komplet opisów. Brak modeli i tekstur pobranych z zewnętrznych bibliotek.
