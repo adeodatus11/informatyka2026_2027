@@ -1,5 +1,7 @@
+import {additionalNotes} from './notes-grades-2-3.js';
 // Short explanations complement the activities; examples are not graded answers.
 export const lessonNotes = {
+ ...additionalNotes,
  '01': {
   start:{title:'Od potrzeb do parametrów',paragraphs:['Sprzęt to fizyczne części komputera, a oprogramowanie to programy, które na nim działają. Dobry wybór zaczyna się od trzech pytań: co będę robić, jakie wymagania mają moje programy i ile mogę wydać?','GB i TB opisują ilość danych, a nie szybkość komputera. W specyfikacjach dysków 1 TB oznacza 1000 GB. Pojemności RAM i SSD nie dodajemy do siebie: pełnią inne funkcje.']},
   knowledge:{title:'Cztery części, cztery różne zadania',paragraphs:['CPU, czyli procesor, wykonuje instrukcje programu. RAM jest pamięcią roboczą: trzyma dane używane teraz i traci je po wyłączeniu zasilania. SSD przechowuje pliki także bez zasilania. GPU wykonuje m.in. obliczenia potrzebne do tworzenia obrazu.','Gdy otwierasz prezentację, jej plik jest odczytywany z dysku. Program pracuje z danymi w RAM, procesor wykonuje polecenia, a układ graficzny pomaga wyświetlić efekt. Aby zachować zmiany, trzeba je zapisać.','Płyta główna łączy części, zasilacz dostarcza im energię, a chłodzenie odprowadza ciepło. W laptopie te funkcje pozostają podobne, choć części są mniejsze i częściej zintegrowane. W modelu kliknij najpierw CPU, RAM, SSD i GPU.']},

@@ -9,7 +9,7 @@ Treści znajdują się w `content/lessons/`. Każdy plik eksportuje jedną lekcj
 5. Dodaj materiały do `public/materials/`, a filmy do `public/videos/`. Ścieżki w treści są względne, np. `materials/lesson-05.zip`.
 6. Uruchom `npm run build`. Nowa lekcja zostanie znaleziona automatycznie, a strony bezpośrednie utworzone podczas budowy.
 
-Komponenty działają również z kolejnymi klasami. Klasy 2 i 3 pokazują stan oczekiwania, dopóki nie pojawią się dla nich dane.
+Komponenty działają również z kolejnymi klasami. Klasa 2 zawiera lekcję 05, a klasa 3 — 06. Ustaw `duration` zgodnie z sumą czasu etapów. Opcjonalne `curriculum` pokazuje oznaczenia rozkładu w planie nauczyciela. Wyjaśnienia etapów uzupełnij w `lesson-notes.js` (lekcje 05–06 importują `notes-grades-2-3.js`).
 
 ## Typy aktywności
 
@@ -33,6 +33,10 @@ Komponenty działają również z kolejnymi klasami. Klasy 2 i 3 pokazują stan 
 | `fileCloud`, `filename`, `connection`, `diagram`, `phone` | Wizualne wprowadzenia i schematy dydaktyczne |
 
 Etap jest zaznaczany jako ukończony po wykonaniu ocenianych aktywności i przejściu dalej. Otwarte odpowiedzi i działania poza stroną są samooceną. Można pominąć etap i wrócić do niego później, ale nie zostanie oznaczony jako ukończony.
+
+## Symulator gabinetu
+
+Typ `dentalSimulator` ma `mode: create` albo `query` i wspólny `stateKey: db-simulator`. Oba etapy korzystają z tych samych danych w postępie lekcji. Zaliczenie wynika z `dentalProgress`, a nie z flagi samooceny. Zmiana rekordów cofa zaliczenie wyszukiwań, a reset symulatora cofa oba praktyczne etapy. Model obsługuje dwie tabele, klucze, formularze i filtrowanie; nie jest interpreterem SQL. Kod zapytania jest wyłącznie poglądowy.
 
 ## Filmy
 

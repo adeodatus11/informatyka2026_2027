@@ -1,13 +1,16 @@
 # Informatyka praktycznie
 
-Interaktywne materiały dla klasy 1 technikum. Cztery tematy i cele wskazane przez nauczyciela:
+Interaktywne materiały dla klas 1–3 technikum. Tematy i cele wskazane przez nauczyciela:
 
 1. **Komputer**: ocenić parametry komputera i dobrać sprzęt do potrzeb.
 2. **System i oprogramowanie**: sprawnie zarządzać plikami, folderami i aplikacjami.
 3. **Urządzenia w szkole**: podłączyć urządzenie i wykonać podstawową diagnostykę.
 4. **Urządzenia w domu**: rozumieć, jak urządzenia komunikują się i wykorzystują dane.
 
-Każda lekcja ma sześć etapów, około 30 minut pracy, interaktywne zadania z informacją zwrotną, postęp lokalny, panel prowadzącego oraz plan do druku. Klasy 2 i 3 są przygotowane na kolejne materiały.
+5. **Tworzenie bazy danych – obsługa gabinetu stomatologicznego** (klasa 2): dwie powiązane tabele, zapis własnej wizyty i wyszukiwanie danych w symulatorze przeglądarkowym.
+6. **Logiczny model komputera i system dwójkowy** (klasa 3): funkcje części komputera, cykl instrukcji, zamiana liczb i zakres ośmiobitowy.
+
+Każda lekcja ma sześć etapów, interaktywne zadania z informacją zwrotną, postęp lokalny, panel prowadzącego oraz plan do druku. Lekcje 1–4 przewidują około 30 minut, a lekcje 5–6 pełne 45 minut. Lekcja 5 działa w całości w przeglądarce: projektowanie tabel i relacji, formularze danych oraz wyszukiwanie. Symulator sprawdza rekordy i zadania, a stan zapisuje się wraz z postępem. Nie wymaga instalacji ani pobierania plików.
 
 ## Uruchomienie
 
