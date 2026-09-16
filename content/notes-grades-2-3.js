@@ -34,10 +34,14 @@ export const additionalNotes = {
  "create": {
   "title": "Instrukcja pracy w symulatorze",
   "paragraphs": [
-   "1. W zakładce Projekt wybierz typ każdego pola oraz klucz główny osobno dla tabel Pacjenci i Wizyty. Identyfikatory są liczbami całkowitymi, imiona, nazwiska i cel są tekstem, a termin — datą i godziną. Utwórz obie tabele. Kluczem głównym Pacjenci jest id_pacjenta, a Wizyty — id_wizyty.",
-   "2. Utwórz relację: klucz obcy Wizyty.id_pacjenta ma wskazywać Pacjenci.id_pacjenta. Przejdź do zakładki Dane. Formularzem wpisz trzy fikcyjne osoby według wzoru nad nim: 1 — Ada Testowa, 2 — Jan Przykładowy, 3 — Ewa Modelowa. Po każdej osobie użyj Dodaj pacjenta.",
-   "3. Wczytaj cztery przykładowe wizyty przyciskiem w symulatorze. Obejrzyj tabelę: ta sama osoba może występować przy kilku terminach. Formularzem dodaj piątą wizytę: ID wizyty 5, ID pacjenta 1, data 23.09.2026, godzina 10:00, cel kontrola. Nie dodawaj drugi raz Ady do Pacjenci.",
-   "4. Sprawdź rekordy i znaczniki zadań nad symulatorem. Pomyłkę popraw przyciskiem Popraw obok rekordu. Symulator sprawdza faktyczny stan bazy. Projekt, wpisane dane i rozpoczęte formularze zapisują się razem z postępem lekcji w tej przeglądarce. Nie trzeba niczego instalować ani pobierać."
+   "Zacznij w zakładce „1. Projekt” w symulatorze poniżej. Wykonuj kroki po kolei. Nazwy pól są przygotowane: wybierasz wartości z list. Po każdym kroku sprawdź komunikat. Jeśli tabela jest już oznaczona „utworzona”, przejdź do następnego kroku.",
+   "Krok 1 — tabela Pacjenci. Przy id_pacjenta wybierz „Liczba całkowita”, przy imie — „Tekst”, przy nazwisko — „Tekst”. Na liście „Klucz główny” wybierz id_pacjenta. Kliknij „Utwórz tabelę Pacjenci”. Pola staną się nieaktywne, a przy nazwie tabeli pojawi się „utworzona”.",
+   "Krok 2 — tabela Wizyty. Przy id_wizyty wybierz „Liczba całkowita”, przy id_pacjenta — „Liczba całkowita”, przy termin — „Data i godzina”, przy cel — „Tekst”. Na liście „Klucz główny” wybierz id_wizyty. Kliknij „Utwórz tabelę Wizyty”.",
+   "Krok 3 — relacja. W „Klucz obcy w Wizyty” wybierz id_pacjenta. W „Wskazuje pole w Pacjenci” także wybierz id_pacjenta. Kliknij „Połącz tabele”. Po komunikacie „Relacja gotowa” kliknij „Przejdź do danych” lub zakładkę „2. Dane”.",
+   "Krok 4 — pacjenci. W formularzu „Nowy pacjent” wpisz kolejno ID pacjenta: 1, Imię: Ada, Nazwisko: Testowa. Kliknij „Dodaj pacjenta”. Formularz się wyczyści. Wpisz drugą osobę: 2, Jan, Przykładowy, i kliknij „Dodaj pacjenta”. Wpisz trzecią: 3, Ewa, Modelowa, i ponownie kliknij „Dodaj pacjenta”. W tabeli pod formularzem mają być trzy rekordy. Przepisz polskie znaki i wielkie litery zgodnie ze wzorem.",
+   "Krok 5 — wizyty przykładowe. Kliknij „Wczytaj 4 przykładowe wizyty”. Sprawdź w tabeli „Wizyty” wiersze o ID 1, 2, 3 i 4. Tych wizyt nie wpisujesz ręcznie. Jeżeli przycisk jest nieaktywny, sprawdź relację oraz dokładność danych trzech pacjentów.",
+   "Krok 6 — własna wizyta. W formularzu „Nowa wizyta” wpisz ID wizyty: 5; ID pacjenta wizyty: 1; Data wizyty: 23 września 2026; Godzina wizyty: 10:00; Cel wizyty: kontrola. Datę wybierz z kalendarza lub wpisz w formacie pokazanym w polu. Kliknij „Dodaj wizytę” raz. W tabeli powinno być pięć rekordów, w tym 5 | 1 | 2026-09-23 10:00 | kontrola.",
+   "Sprawdzenie i przejście dalej. Jeśli pomylisz nazwisko lub termin, kliknij „Popraw” przy rekordzie, popraw formularz nad tabelą i kliknij „Zapisz pacjenta” albo „Zapisz wizytę”. ID jest stały — brakujący rekord z poprawnym ID dodaj osobno. Gdy wszystkie cztery zadania nad symulatorem mają ✓, kliknij „Przejdź dalej” pod całym symulatorem. To zatwierdzi etap „Zrób” i otworzy „Zastosuj”. Dane pozostają w tej samej przeglądarce."
   ],
   "example": {
    "question": "Dlaczego wizyta ma dwa identyfikatory?",
@@ -47,8 +51,9 @@ export const additionalNotes = {
  "query": {
   "title": "Wybierz filtr i zobacz wynik",
   "paragraphs": [
-   "W zakładce Wyszukiwanie wybierz filtr Dzień wizyty, ustaw 21.09.2026 i kolejność Od najwcześniejszej. Kliknij Wyszukaj. Symulator łączy dane z obu tabel przez id_pacjenta, wybiera wizyty z tego dnia i porządkuje je według terminu.",
-   "Następnie zmień filtr na Pacjent, wybierz 1 — Ada Testowa i ponownie wyszukaj od najwcześniejszej. Zobaczysz wszystkie jej wizyty, także tę dopisaną samodzielnie. Oba wyszukiwania są zaliczane po przygotowaniu wymaganych rekordów. Wynik zależy od Twoich danych; zmiana rekordów wymaga ponownego wykonania wyszukiwań.",
+   "Krok 7a — plan dnia. W formularzu „Wyszukaj wizyty” ustaw Filtr: Dzień wizyty; Dzień wyszukiwania: 21 września 2026; Kolejność: Od najwcześniejszej. Kliknij „Wyszukaj”. Dla pięciu wizyt z zadania otrzymasz: 09:00 Ada Testowa, 09:30 Jan Przykładowy, 10:00 Ewa Modelowa. Pod wynikiem przy „Plan dnia 21.09.2026” powinien pojawić się ✓.",
+   "Krok 7b — wizyty Ady. W tym samym formularzu zmień Filtr na „Pacjent”. Z nowej listy „Wybierz pacjenta” wybierz „1 — Ada Testowa”. Pozostaw „Od najwcześniejszej” i ponownie kliknij „Wyszukaj”. Sprawdź terminy: 21.09.2026 09:00, 22.09.2026 11:00 i 23.09.2026 10:00. Przy „Wizyty Ady” pojawi się ✓.",
+   "Przewiń pod cały symulator, odpowiedz na dwa pytania i kliknij „Przejdź dalej”. To zatwierdzi etap „Zastosuj”. Jeśli brak znacznika ✓, sprawdź wymagane dane w „2. Dane” i wykonaj wyszukiwania ponownie. Zmiana rekordów cofa zaliczenie wcześniejszych wyszukiwań. Dodatkowe wizyty mogą rozszerzyć podany wynik.",
    "Wyszukiwanie nie zmienia tabel. W rozwijanym przykładzie SQL zobaczysz, jak podobna operacja wygląda w języku zapytań: SELECT wybiera kolumny, JOIN łączy tabele, WHERE filtruje, a ORDER BY sortuje. Obsługujesz formularz; kod jest tylko dodatkowym wyjaśnieniem."
   ],
   "example": {
