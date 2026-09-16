@@ -10,6 +10,12 @@ import {SiteFooter,ProjectPage} from '../components/project.jsx';
 import {dentalProgress} from '../content/dental-simulator.js';
 
 const storageKey='informatyka-praktycznie-v1';
+// Komputery w pracowni są współdzielone: postęp poprzedniej osoby nie może
+// zostać wyświetlony po kolejnym otwarciu strony.
+try{localStorage.removeItem(storageKey);}catch{}
+try{sessionStorage.removeItem(storageKey);}catch{}
+if('caches'in window){caches.keys().then(keys=>Promise.all(keys.map(key=>caches.delete(key)))).catch(()=>{});}
+if('serviceWorker'in navigator){navigator.serviceWorker.getRegistrations().then(registrations=>Promise.all(registrations.map(registration=>registration.unregister()))).catch(()=>{});}
 const base=(()=>{const url=new URL(document.baseURI);if(document.querySelector('base'))return url.href;const found=url.pathname.match(/^(.*\/)(?:teacher\/)?lesson\/[^/]+\/?$/);return found?url.origin+found[1]:new URL('./',url).href;})();
 function route(){const hash=location.hash.replace(/^#/,'');if(hash)return hash;if(/\/o-projekcie\/?$/.test(location.pathname))return '/project';const p=location.pathname.match(/\/(teacher\/)?lesson\/(\d+)\/?$/);return p?`/${p[1]||''}lesson/${p[2]}`:'/';}
 function readSaved(){try{const x=JSON.parse(localStorage.getItem(storageKey));return x&&typeof x==='object'&&!Array.isArray(x)?x:{};}catch{return {};}}
