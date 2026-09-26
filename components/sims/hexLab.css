@@ -1,0 +1,99 @@
+.hexlab{--hx-ink:#182f38;--hx-line:#c9d5cd;--hx-soft:#f3f6f2;--hx-ok:#12714a;--hx-bad:#b03535;--hx-accent:#1f4fa3;border:1px solid var(--hx-line);border-radius:12px;background:#fff;overflow:hidden;min-width:0}
+.hexlab-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 14px;background:#e9eef3;border-bottom:1px solid var(--hx-line);font-size:.86rem}
+.hexlab-bar strong{font-weight:700;letter-spacing:.01em}
+.hexlab-dots{display:inline-flex;gap:5px}.hexlab-dots i{width:10px;height:10px;border-radius:50%;background:#d64545}.hexlab-dots i:nth-child(2){background:#f0b429}.hexlab-dots i:nth-child(3){background:#16a36a}
+.hexlab-sim{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;padding:2px 7px;border-radius:999px;border:1px solid currentColor;opacity:.8}
+.hexlab-bar>.hexlab-score,.hexlab-hud{margin-left:auto}
+.hexlab-score{font-weight:700;font-variant-numeric:tabular-nums;background:#fff;border:1px solid var(--hx-line);border-radius:999px;padding:3px 10px;color:var(--hx-ink)}
+.hexlab-hud{display:inline-flex;gap:8px;align-items:center;flex-wrap:wrap}.hexlab-hud>span:first-child{display:inline-flex;gap:5px;align-items:center;font-variant-numeric:tabular-nums;font-family:ui-monospace,Consolas,monospace;font-size:1rem}
+.hexlab-dark .hexlab-bar{background:#10232c;color:#e8f4ee;border-color:#10232c}
+.hexlab-body{padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.hexlab-body>.btn{align-self:flex-start}
+.hexlab-mono{font-family:ui-monospace,Consolas,monospace;letter-spacing:.02em}
+.hexlab-msg{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:9px;border:1px solid;font-size:.93rem;line-height:1.55}
+.hexlab-msg.is-ok{background:#e8f5ee;border-color:#9fcdb4;color:#0e4f33}.hexlab-msg.is-retry{background:#fff6e5;border-color:#e7c77a;color:#5b4210}
+.hexlab-ok{color:var(--hx-ok);font-weight:600}.hexlab-bad{color:var(--hx-bad);font-weight:600}
+.hexlab-byte{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.hexlab-nibble{border:1px solid var(--hx-line);border-radius:10px;padding:10px;background:var(--hx-soft);min-width:0}
+.hexlab-bits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.hexlab-bit{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;border:2px solid #9fb2a6;border-radius:8px;background:#fff;min-height:58px}
+.hexlab-bit small{font-size:.7rem;color:#54666c}.hexlab-bit b{font-family:ui-monospace,Consolas,monospace;font-size:1.3rem}
+.hexlab-bit[aria-pressed=true]{background:#1f4fa3;border-color:#1f4fa3;color:#fff}.hexlab-bit[aria-pressed=true] small{color:#dbe6ff}
+.hexlab-digit{display:flex;justify-content:center;align-items:baseline;gap:8px;margin-top:8px}.hexlab-digit span{font-size:.8rem;color:#54666c}.hexlab-digit b{font-family:ui-monospace,Consolas,monospace;font-size:2rem;line-height:1;color:var(--hx-accent)}
+.hexlab-readout{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:baseline;font-family:ui-monospace,Consolas,monospace;margin:0;padding:10px;border-radius:9px;background:#10232c;color:#dff5e8}.hexlab-readout b{font-size:1.35rem;color:#fff}
+.hexlab-table summary{display:inline-flex;gap:8px;align-items:center;font-weight:600;color:var(--accent,#226648)}
+.hexlab-table-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:4px;margin:10px 0}
+.hexlab-table-grid span{display:flex;flex-direction:column;align-items:center;border:1px solid var(--hx-line);border-radius:6px;padding:4px 0;background:#fff;font-family:ui-monospace,Consolas,monospace}
+.hexlab-table-grid b{font-size:1.05rem;color:var(--hx-accent)}.hexlab-table-grid small{font-size:.68rem;color:#54666c}
+.hexlab-tasks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.hexlab-tasks>li{border:1px solid var(--hx-line);border-radius:10px;padding:12px 14px}.hexlab-tasks>li.is-solved{background:#f1f8f3;border-color:#a9d0b7}
+.hexlab-task-title{display:flex;gap:10px;align-items:center;margin:0 0 6px;font-weight:600;flex-wrap:wrap}.hexlab-task-title em{font-style:normal;color:var(--hx-ok);font-size:.85rem;margin-left:auto}
+.hexlab-num{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#e9eef3;font-size:.8rem;flex-shrink:0}.is-solved .hexlab-num{background:var(--hx-ok);color:#fff}
+.hexlab-row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
+.hexlab-row .btn{min-height:44px;padding:.6rem 1rem}
+.hexlab-field{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:600;min-width:0}
+.hexlab-input{display:flex;align-items:center;border:1px solid #96a89d;border-radius:8px;background:#fff;overflow:hidden}
+.hexlab-input:focus-within{outline:3px solid #226648;outline-offset:2px}
+.hexlab-input i{font-style:normal;font-family:ui-monospace,Consolas,monospace;color:#54666c;padding-left:10px}
+.hexlab .hexlab-input input{border:0;margin:0;padding:.6rem .6rem;width:7.5rem;font-family:ui-monospace,Consolas,monospace;font-size:1.05rem;text-transform:uppercase;min-width:0}
+.hexlab .hexlab-input input:focus-visible{outline:none}
+.hexlab-wide{max-width:22rem}.hexlab .hexlab-wide input{width:100%;margin:0}
+.hexlab-wide .hexlab-input input{flex:1}
+/* escape */
+.hexlab-intro{align-items:flex-start}.hexlab-intro h3{margin:0}.hexlab-intro p{margin:0}
+.hexlab-rules{margin:0;padding-left:20px}
+.hexlab-locks{list-style:none;margin:0;padding:10px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;background:#17313b}
+.hexlab-locks button{width:100%;height:100%;display:flex;gap:8px;align-items:flex-start;text-align:left;padding:8px;border-radius:8px;border:1px solid #37535d;background:#1e3d48;color:#e8f4ee}
+.hexlab-locks button:disabled{opacity:.6}
+.hexlab-locks button.is-active{border-color:#f0b429;box-shadow:inset 0 0 0 1px #f0b429}
+.hexlab-locks button.is-solved{background:#134a34;border-color:#2e9a67}
+.hexlab-locks span{display:flex;flex-direction:column;min-width:0}.hexlab-locks small{font-size:.68rem;opacity:.85}.hexlab-locks b{font-size:.84rem;line-height:1.25}.hexlab-locks em{font-style:normal;font-size:.72rem;opacity:.9}
+.hexlab-lockicon{flex-shrink:0;padding-top:2px}
+.hexlab-lock-title{margin:0;font-size:1.15rem}
+.hexlab-lock-body{display:flex;flex-direction:column;gap:12px;min-width:0}.hexlab-lock-body>p{margin:0}
+.hexlab-power{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.hexlab-power .hexlab-input input{width:100%}
+.hexlab-power small{font-size:.8rem;line-height:1.4}
+.hexlab-code{margin:0;font-family:ui-monospace,Consolas,monospace;font-size:1.3rem;background:#10232c;color:#7ef0b2;padding:10px 14px;border-radius:8px;display:flex;gap:10px;flex-wrap:wrap}
+.hexlab-swatches{display:flex;gap:14px;flex-wrap:wrap}
+.hexlab-swatches figure{display:flex;flex-direction:column;gap:6px;margin:0}
+.hexlab-swatches figure>span{display:block;width:120px;height:70px;border-radius:9px;border:1px solid #8aa094}
+.hexlab-swatches figcaption{font-size:.84rem}
+.hexlab-rgb{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.hexlab-rgb .hexlab-input input{width:100%}
+.hexlab-pick legend{font-size:1rem;margin-bottom:8px}
+.hexlab-pick>div{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.hexlab-pick>.hexlab-inline{grid-template-columns:repeat(4,minmax(0,1fr))}
+.hexlab-opt{display:flex;gap:10px;align-items:center;justify-content:flex-start;text-align:left;padding:8px 10px;border:2px solid var(--hx-line);border-radius:8px;background:#fff;min-width:0}
+.hexlab-inline .hexlab-opt{justify-content:center;font-weight:700}
+.hexlab-opt[aria-pressed=true]{border-color:#1f4fa3;background:#eef3fc}
+.hexlab-opt span{display:flex;flex-direction:column;min-width:0}.hexlab-opt small{font-size:.78rem;overflow-wrap:anywhere}
+.hexlab-chip{width:28px;height:28px;border-radius:6px;border:1px solid #8aa094;flex-shrink:0}
+.hexlab-devices{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))!important}
+.hexlab-scroll{overflow-x:auto;max-width:100%}
+.hexlab-oui{border-collapse:collapse;font-size:.88rem;width:100%}.hexlab-oui caption{text-align:left;font-size:.8rem;color:#54666c;padding-bottom:4px}
+.hexlab-oui th,.hexlab-oui td{border:1px solid var(--hx-line);padding:6px 8px;text-align:left}.hexlab-oui th{background:var(--hx-soft)}
+.hexlab-bytes{display:flex;gap:8px;flex-wrap:wrap;margin:0}.hexlab-bytes b{font-family:ui-monospace,Consolas,monospace;font-size:1.3rem;padding:6px 10px;border-radius:7px;background:#10232c;color:#7ef0b2}
+.hexlab-ascii{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:4px;margin-top:10px}
+.hexlab-ascii span{display:flex;flex-direction:column;align-items:center;border:1px solid var(--hx-line);border-radius:6px;padding:3px 0;background:#fff}
+.hexlab-ascii span:first-child{grid-column:span 2}
+.hexlab-ascii b{font-size:.95rem}.hexlab-ascii small{font-size:.72rem;color:#54666c}
+.hexlab-win{position:relative;overflow:hidden;padding:20px;border-radius:12px;background:#10232c;color:#eafff3;display:flex;flex-direction:column;gap:8px;align-items:flex-start}.hexlab-win h3{margin:0;color:#fff}.hexlab-win p{margin:0}
+.hexlab-confetti{position:absolute;inset:0;pointer-events:none}
+.hexlab-confetti i{position:absolute;top:-12px;left:var(--x);width:8px;height:14px;background:var(--c);border-radius:2px;animation:hexlab-fall 2.4s ease-in var(--d) 2 both}
+@keyframes hexlab-fall{to{transform:translateY(260px) rotate(540deg);opacity:0}}
+@media (prefers-reduced-motion:reduce){.hexlab-confetti i{animation:none;display:none}}
+/* gra */
+.hexlab-game{display:flex;flex-direction:column;gap:12px}
+.hexlab-target{height:120px;border-radius:12px;border:1px solid #8aa094}
+.hexlab-result{padding:12px;border:1px solid var(--hx-line);border-radius:10px;background:var(--hx-soft)}.hexlab-result p{margin:8px 0 0}
+@media (max-width:700px){
+ .hexlab-body{padding:14px}
+ .hexlab-locks{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hexlab-power{grid-template-columns:1fr}
+ .hexlab-table-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .hexlab-ascii{grid-template-columns:repeat(6,minmax(0,1fr))}
+ .hexlab-swatches figure>span{width:110px;height:60px}
+ .hexlab-bit{min-height:52px}
+ .hexlab-digit b{font-size:1.7rem}
+}
+@media (max-width:400px){.hexlab-byte{gap:8px}.hexlab-nibble{padding:7px}.hexlab-bits{gap:4px}.hexlab-rgb{gap:6px}}
