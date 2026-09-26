@@ -15,7 +15,7 @@ function mark(items={},key,ok){const p=items[key]||{attempts:0};if(p.ok)return i
 // ---------- Wspólne elementy okna Accessa ----------
 function Ribbon({active='Dane zewnętrzne',children}){
  return <div className="iw-ribbon">
-  <div className="iw-tabs" role="presentation">{['Plik','Narzędzia główne','Tworzenie','Dane zewnętrzne','Narzędzia bazy danych','Pomoc'].map(t=><span key={t} className={t===active?'is-active':''}>{t}</span>)}</div>
+  <div className="iw-tabs" tabIndex={0} aria-label="Karty wstążki programu (podgląd)">{['Plik','Narzędzia główne','Tworzenie','Dane zewnętrzne','Narzędzia bazy danych','Pomoc'].map(t=><span key={t} className={t===active?'is-active':''}>{t}</span>)}</div>
   <div className="iw-groups">{children}</div>
  </div>;
 }

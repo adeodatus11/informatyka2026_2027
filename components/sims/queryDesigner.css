@@ -23,7 +23,7 @@
 .qd-rbtn{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:44px;min-width:58px;padding:3px 6px;border:1px solid transparent;border-radius:4px;background:none;font-size:.74rem;line-height:1.15;color:#222}
 button.qd-rbtn:hover{background:#eef2f8;border-color:#c7d3e6}
 .qd-rbtn[aria-pressed=true]{background:#dde6f5;border-color:#9fb4dc}
-.qd-rbtn.is-dim{color:#8b8b8b}.qd-rbtn.is-on{background:#f6e9eb;color:#7d2e3a}
+.qd-rbtn.is-dim{color:#666}.qd-rbtn.is-on{background:#f6e9eb;color:#7d2e3a}
 .qd-bang{font-size:1.25rem;font-weight:800;color:#b42318;line-height:1}.qd-sigma{font-size:1.2rem;line-height:1;font-weight:700}
 .qd-tables{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:12px;background:#f4f4f4;border-bottom:1px solid #ddd;min-height:120px}
 .qd-tbox{width:158px;background:#fff;border:1px solid #9aa3a8;border-radius:4px;box-shadow:1px 2px 0 rgba(0,0,0,.05);font-size:.8rem}
@@ -61,7 +61,7 @@ button.qd-rbtn:hover{background:#eef2f8;border-color:#c7d3e6}
 .qd-sheet{overflow:auto;max-height:300px}
 .qd-sheet table{border-collapse:collapse;font-size:.8rem;width:max-content;min-width:100%}
 .qd-sheet th,.qd-sheet td{border:1px solid #dcdcdc;padding:4px 8px;white-space:nowrap;text-align:left}.qd-sheet th{background:#f1f1f1;position:sticky;top:0}
-.qd-sheet .qd-num{text-align:right}.qd-empty{color:#777;font-style:italic}
+.qd-sheet .qd-num{text-align:right}.qd-empty{color:#636363;font-style:italic}
 .qd-recbar{margin:0;padding:3px 10px;font-size:.74rem;background:#f1f1f1;border-top:1px solid #ddd}
 .qd-actions{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}.qd-actions .btn{width:auto}
 .qd .feedback{margin-top:0}

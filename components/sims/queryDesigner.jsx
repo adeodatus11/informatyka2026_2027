@@ -82,7 +82,7 @@ export default function QueryDesigner({data,value,onChange}){
 
   <div className="qd-window">
    <div className="qd-titlebar"><span>Stomatolog — Access — Kwerenda{level}{task.id.slice(1).toUpperCase()}: Kwerenda {task.param?'parametryczna':q.totals?'podsumowująca':'wybierająca'}</span><span className="qd-sim">symulacja</span></div>
-   <div className="qd-ribbon"><div className="qd-rtabs"><span>Plik</span><span>Narzędzia główne</span><span>Tworzenie</span><span className="is-active">Projektowanie kwerendy</span></div>
+   <div className="qd-ribbon"><div className="qd-rtabs" tabIndex={0} aria-label="Karty wstążki programu (podgląd)"><span>Plik</span><span>Narzędzia główne</span><span>Tworzenie</span><span className="is-active">Projektowanie kwerendy</span></div>
     <div className="qd-groups">
      <div className="qd-group"><div><button type="button" className="qd-rbtn" aria-pressed={sql} onClick={()=>setSql(!sql)}><Icon name={sql?'table':'file'} size={20}/>{sql?'Widok projektu':'Widok SQL'}</button><button type="button" className="qd-rbtn is-run" onClick={run}><span className="qd-bang" aria-hidden="true">!</span>Uruchom</button></div><span>Wyniki</span></div>
      <div className="qd-group qd-hide-sm"><div><span className="qd-rbtn is-on">Wybierająca</span><span className="qd-rbtn is-dim">Krzyżowa</span><span className="qd-rbtn is-dim">Aktualizująca</span><span className="qd-rbtn is-dim">Usuwająca</span></div><span>Typ kwerendy</span></div>

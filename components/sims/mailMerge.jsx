@@ -54,7 +54,7 @@ export default function MailMerge({data,value,onChange}){
 
  // ---------- Wstążka ----------
  const ribbon=<div className="mm-ribbon">
-  <div className="mm-rtabs">{['Plik','Narzędzia główne','Wstawianie','Projektowanie','Układ','Odwołania','Korespondencja','Recenzja','Widok'].map(t=><span key={t} className={t==='Korespondencja'?'is-active':''}>{t}</span>)}</div>
+  <div className="mm-rtabs" tabIndex={0} aria-label="Karty wstążki programu (podgląd)">{['Plik','Narzędzia główne','Wstawianie','Projektowanie','Układ','Odwołania','Korespondencja','Recenzja','Widok'].map(t=><span key={t} className={t==='Korespondencja'?'is-active':''}>{t}</span>)}</div>
   <div className="mm-groups">
    <div className="mm-group"><div>
     <div className="mm-mwrap"><Rb icon="mail" label="Rozpocznij korespondencję seryjną" menu disabled={demo} onClick={()=>toggleMenu('start')} hint={!demo&&st.docType==='normal'}/>
@@ -64,7 +64,6 @@ export default function MailMerge({data,value,onChange}){
     <Rb icon="list" label="Edytuj listę adresatów" disabled={disabledNoSrc} onClick={()=>setDlg('list')}/>
    </div><span>Rozpocznij korespondencję seryjną</span></div>
    <div className="mm-group"><div>
-    <span className="mm-rbtn is-dim"><Icon name="palette" size={20}/><span>Wyróżnij pola scalania</span></span>
     <div className="mm-mwrap"><Rb icon="hash" label="Wstaw pole scalania" menu disabled={disabledNoSrc} onClick={()=>toggleMenu('field')}/>
      {menu==='field'&&<div className="mm-menu is-fields" role="menu">{fields.map(([f,t])=>['date','datetime','exceldate'].includes(t)?<React.Fragment key={f}><button type="button" role="menuitem" onClick={()=>insert(M.fieldToken(f))}>{f} <small>(bez formatu)</small></button><button type="button" role="menuitem" onClick={()=>insert(M.fieldToken(f,'dd.MM.yyyy'))}>{f} <small>\@ "dd.MM.yyyy"</small></button>{t==='datetime'&&<button type="button" role="menuitem" onClick={()=>insert(M.fieldToken(f,'HH:mm'))}>{f} <small>\@ "HH:mm"</small></button>}</React.Fragment>:<button key={f} type="button" role="menuitem" onClick={()=>insert(M.fieldToken(f))}>{f}</button>)}</div>}</div>
     <div className="mm-mwrap"><Rb icon="settings" label="Reguły" menu disabled={disabledNoSrc} onClick={()=>toggleMenu('rules')}/>
@@ -128,10 +127,10 @@ export default function MailMerge({data,value,onChange}){
   </div>
   {!demo&&<p className="small muted mm-tip">Tip: zaznacz myszką np. <code>[imię]</code> i kliknij pole we „Wstaw pole scalania” — pole zastąpi zaznaczenie. W prawdziwym Wordzie reguły wyglądają tak samo po naciśnięciu Alt+F9 (kody pól: IF, SKIPIF, MERGEFIELD).</p>}
   <div role="status">{msg&&<div className={`feedback ${msg.ok?'':'retry'}`}><Icon name={msg.ok?'check':'warning'}/><div>{msg.text}</div></div>}</div>
-  {demo&&<fieldset className="mm-demo-q"><legend>{seen<3?`Włącz Podgląd wyników i przejdź strzałką ▶ przez co najmniej 3 rekordy (obejrzane: ${Math.min(seen,3)}/3).`:DEMO_Q.q}</legend>
+  {demo&&<div className="mm-demo-q" role="group" aria-labelledby={`${data.id}-dq`}><p id={`${data.id}-dq`} className="mm-dq">{seen<3?`Włącz Podgląd wyników i przejdź strzałką ▶ przez co najmniej 3 rekordy (obejrzane: ${Math.min(seen,3)}/3).`:DEMO_Q.q}</p>
    {seen>=3&&<div className="choices">{DEMO_Q.options.map((o,i)=><button key={o} type="button" aria-pressed={st.answer===i} className={`choice ${st.answer===i?'selected':''}`} onClick={()=>save({answer:i,first:st.first??i===DEMO_Q.correct})}><span className="choice-letter">{String.fromCharCode(65+i)}</span><span>{o}</span></button>)}</div>}
    {st.answer!=null&&<div className={`feedback ${st.answer===DEMO_Q.correct?'':'retry'}`}><Icon name={st.answer===DEMO_Q.correct?'check':'book'}/><div>{st.answer===DEMO_Q.correct?DEMO_Q.explanation:`Spróbuj jeszcze raz. ${DEMO_Q.hint}`}</div></div>}
-  </fieldset>}
+  </div>}
   {st.merged&&!demo&&<div className="mm-out"><h4>{st.merged.kind==='email'?`Skrzynka nadawcza (symulacja) — ${st.merged.count} wiadomości`:`Listy1 — ${st.merged.count} ${st.merged.count===1?'dokument':'dokumentów'}`}</h4>{st.merged.count===0&&<p>Brak dokumentów — lista adresatów jest pusta.</p>}
    <div className="mm-docs">{st.merged.docs.map((d,i)=><article key={i} className="mm-doc" aria-label={`Dokument ${i+1}: ${d.label}`}><header>{d.to?<><b>Do:</b> {d.to}<br/><b>Temat:</b> {st.merged.subject}</>:<b>Dokument {i+1} · {d.label}</b>}</header><p>{d.text}</p></article>)}</div></div>}
  </section>;

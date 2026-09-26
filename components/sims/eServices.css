@@ -40,7 +40,7 @@
 .es-dots-nav button.current{border:2px solid var(--es-blue);background:#eef3fc}
 .es-dots-nav button.done{background:#e3f6ec}
 .es-fake-form{display:grid;gap:6px}
-.es-fake-form span{border:1px solid #c5cfdb;border-radius:6px;padding:8px;color:#8391a1;font-size:.85rem}
+.es-fake-form span{border:1px solid #c5cfdb;border-radius:6px;padding:8px;color:#5b6776;font-size:.85rem}
 .es-choice-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .es-judge{display:flex;gap:8px;align-items:center;justify-content:center;border:2px solid #cfd9e6;border-radius:10px;background:#fff;padding:10px;font-weight:700;min-height:52px}
 .es-judge.safe svg{color:#0d7a4d}
