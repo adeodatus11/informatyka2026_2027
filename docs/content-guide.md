@@ -1,5 +1,7 @@
 # Dodawanie lekcji
 
+Zanim zaczniesz, przeczytaj [profil ucznia i zasady projektowania lekcji](profil-ucznia.md).
+
 Treści znajdują się w `content/lessons/`. Każdy plik eksportuje jedną lekcję. Numer, klasa, tytuł, cel, materiały, etapy i wskazówki nauczyciela pozostają danymi, niezależnie od komponentów.
 
 1. Skopiuj plik podobnej lekcji i nadaj mu nazwę zaczynającą się od numeru, np. `05-internet.js`.
