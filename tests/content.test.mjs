@@ -7,9 +7,10 @@ import {lessonNotes} from '../content/lesson-notes.js';
 import {dentalState,dentalSchema,dentalProgress,createDentalTable,connectDentalTables,saveDentalPatient,saveDentalVisit,loadExampleVisits,runDentalQuery,queryDentalRows,examplePatients,targetVisit,validDay} from '../content/dental-simulator.js';
 const files=(await readdir(new URL('../content/lessons/',import.meta.url))).filter(f=>/^\d.*\.js$/.test(f));
 const lessons=await Promise.all(files.map(async f=>(await import(new URL('../content/lessons/'+f,import.meta.url))).default));
-test('Four lessons keep the exact subject axis supplied by the teacher',()=>assert.deepEqual(lessons.filter(l=>l.grade===1).map(l=>l.title),['Komputer','System i oprogramowanie','Urządzenia w szkole','Urządzenia w domu']));
+test('Four lessons keep the exact subject axis supplied by the teacher',()=>assert.deepEqual(['01','02','03','04'].map(id=>lessons.find(l=>l.id===id).title),['Komputer','System i oprogramowanie','Urządzenia w szkole','Urządzenia w domu']));
 for(const l of lessons)test(`${l.id}: activities, answer keys, teacher metadata and declared time budget`,()=>{
- assert.equal(l.sections.length,6);assert.equal(l.sections.reduce((s,x)=>s+x.duration,0),l.duration);const ids=new Set();
+ if(Number(l.id)<=6)assert.equal(l.sections.length,6);else{assert.ok(l.sections.length>=4&&l.sections.length<=7,'4–7 etapów');assert.ok(l.duration>=30&&l.duration<=45,'30–45 min w klasie');assert.ok(l.format?.name&&l.format.teacher&&l.format.methods?.length,'schemat i metody');for(const m of l.format.methods)assert.match(m.url,/^https:\/\/metodyka\.covepolska\.pl\/metoda-[a-z-]+\.html$/);assert.ok(l.sections.some(s=>s.activities.some(a=>a.type==='resultCard')),'karta wyniku');assert.ok(l.sections.every(s=>!s.where),'bez pracy domowej');}
+ assert.equal(l.sections.reduce((s,x)=>s+x.duration,0),l.duration);const ids=new Set();
  for(const s of l.sections){for(const k of ['teacherNotes','askStudents','expectedAnswers','commonMistakes','optionalExtension'])assert.ok(s[k]?.length>10,`${s.id} ${k}`);assert.equal(typeof s.skipIfShortOnTime,'boolean');
  for(const a of s.activities){assert.ok(!ids.has(a.id),'Duplicate id');ids.add(a.id);if(a.correct)for(const i of a.correct)assert.ok(Number.isInteger(i)&&i>=0&&i<a.options.length);if(a.rows)for(const r of a.rows)assert.ok(r.correct.every(i=>i>=0&&i<a.options.length));if(a.type==='video'){assert.equal(a.file,null);assert.ok(a.duration);} }
  }
@@ -78,4 +79,15 @@ test('Dental SQL creates the intended data, joins visits and enforces keys',()=>
   assert.throws(()=>db.exec("INSERT INTO Wizyty VALUES (6,99,'2026-09-24 10:00','kontrola')"),/FOREIGN KEY/);
   assert.throws(()=>db.exec("INSERT INTO Wizyty VALUES (5,1,'2026-09-24 10:00','kontrola')"),/UNIQUE/);
  }finally{db.close();}
+});
+
+import {lessonScore} from '../content/scoring.js';
+test('Result cards score every listed source and pick badge and grade',()=>{
+ for(const l of lessons)for(const s of l.sections)for(const card of s.activities.filter(a=>a.type==='resultCard')){
+  const empty=lessonScore(l,card,{});assert.ok(empty.max>0,`${l.id}: karta bez punktów`);assert.equal(empty.score,0);
+ }
+ const lesson={sections:[{activities:[{type:'choice',id:'q',options:['a','b'],correct:[0]},{type:'x',id:'sim'},{type:'resultCard',id:'r',badges:[{min:0,name:'A'},{min:0.8,name:'B'}]}]}]};
+ const r=lessonScore(lesson,lesson.sections[0].activities[2],{q:{selected:0,done:true,first:true},sim:{score:3,max:4}});
+ assert.equal(r.score,4);assert.equal(r.max,5);assert.equal(r.badge.name,'B');assert.equal(r.grade,'dobra (4)');
+ assert.equal(lessonScore(lesson,lesson.sections[0].activities[2],{q:{done:true,first:false}}).score,0.5);
 });
