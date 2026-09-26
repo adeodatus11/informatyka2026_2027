@@ -174,3 +174,18 @@ test('eServices: moduł eksperta — najlepszy moduł liczy się do wyniku (maks
  for (const m of es.modules) for (const s of m.steps) if (s.kind === 'choice') { assert.ok(s.correct < s.options.length); assert.equal(s.why.length, s.options.length); }
  assert.ok(c);
 });
+test('factCheck: tryb SIFT — poprawna kolejność S, I, F, T; wskazuje złe pozycje', () => {
+ assert.deepEqual(fc.siftSteps.map(s => s.id), ['S', 'I', 'F', 'T']);
+ assert.equal(fc.checkSiftOrder(['S', 'I', 'F', 'T']).ok, true);
+ const r = fc.checkSiftOrder(['S', 'F', 'I', 'T']); assert.equal(r.ok, false); assert.deepEqual(r.wrong, [1, 2]);
+ assert.equal(fc.siftResult({ok: true, tries: 1}).score, 1);
+ assert.equal(fc.siftResult({ok: true, tries: 2}).score, 0.5);
+ assert.equal(fc.siftResult({}).done, false);
+ assert.deepEqual([...fc.siftShuffled].sort(), ['F', 'I', 'S', 'T']);
+});
+test('Lekcje 07–09: aktywności symulatorów mają points równe max z logiki', async () => {
+ const lessons = await Promise.all(['07-internet-ocean', '08-search', '09-e-services'].map(async f => (await import(`../content/lessons/${f}.js`)).default));
+ const maxOf = a => a.type === 'internetOcean' ? (a.mode === 'bubble' ? 1 : 5) : a.type === 'factCheck' ? (a.mode === 'sift' ? 1 : 12) : a.type === 'eServices' ? (a.mode === 'expert' ? 4 : 5) : a.type === 'searchLab' ? (a.mode === 'demo' ? 1 : a.levels.includes('boss') ? 3 : 9) : null;
+ for (const l of lessons) for (const s of l.sections) for (const a of s.activities) { const m = maxOf(a); if (m !== null) assert.equal(a.points, m, `${l.id} ${a.id}`); if (a.requires) assert.ok(s && l.sections.some(x => x.activities.some(y => y.id === a.requires.id)), a.requires.id); }
+ assert.deepEqual(lessons.map(l => l.duration), [35, 43, 44]);
+});

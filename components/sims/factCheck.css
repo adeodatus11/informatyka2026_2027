@@ -65,3 +65,7 @@
 .fc-done{display:flex;gap:8px;align-items:center;font-weight:700;margin:0}
 @media(max-width:800px){.fc-case{grid-template-columns:1fr}.fc-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.fc-sim{padding:12px}.fc-verdict-buttons{grid-template-columns:1fr}.fc-tool p{padding-left:12px}}
+.fc-q{margin:0;font-size:1.1rem}
+.fc-sim .choice.fc-bad{border-color:#d64545!important;background:#fff1f1!important}
+.fc-badmark{font-size:.75rem;font-weight:800;color:#a52f2f;border:1px solid #d64545;border-radius:999px;padding:1px 8px;background:#fff}
+.fc-sim>*,.fc-case>*{min-width:0}

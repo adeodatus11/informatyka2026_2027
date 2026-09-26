@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {Icon} from '../icons.jsx';
-import {cases,tools,verdicts,chooseVerdict,chooseEvidence,addTool,verdictFeedback,caseScore,caseSolved,factCheckResult} from '../../content/sims/factCheck.js';
+import {cases,tools,verdicts,chooseVerdict,chooseEvidence,addTool,verdictFeedback,caseScore,caseSolved,factCheckResult,siftSteps,siftShuffled,checkSiftOrder,siftResult} from '../../content/sims/factCheck.js';
 import './factCheck.css';
 
 const fmt=n=>String(n).replace('.',',');
@@ -17,7 +17,22 @@ function Frame({c}){
  </div>;
 }
 
-export default function FactCheck({data,value={},onChange}){
+function SiftOrder({data,value={},onChange}){
+ const order=value.order||[];const res=siftResult(value);const byId=id=>siftSteps.find(s=>s.id===id);
+ function toggle(id){if(value.ok)return;const next=order.includes(id)?order.filter(x=>x!==id):[...order,id];onChange({...value,order:next,checked:false,...siftResult(value)});}
+ function check(){const r=checkSiftOrder(order);const tries=(value.tries||0)+1;const next={...value,tries,checked:true,ok:r.ok,wrong:r.wrong};onChange({...next,...siftResult(next)});}
+ return <div className="fc-sim">
+  <div className="fc-top"><div><span className="fc-tag">Kolejność SIFT</span><small>kliknij kroki w kolejności 1 → 4</small></div><div className="fc-counters"><span>Punkty: <b>{fmt(res.score)}</b>/1</span></div></div>
+  <h3 className="fc-q">{data.question||'Ułóż kroki sprawdzania informacji we właściwej kolejności.'}</h3>
+  <div className="choices">{siftShuffled.map(id=>{const pos=order.indexOf(id);const bad=value.checked&&!value.ok&&pos>=0&&value.wrong?.includes(pos);return <button key={id} className={`choice ${pos>=0?'selected':''} ${bad?'fc-bad':''}`} aria-pressed={pos>=0} disabled={value.ok} onClick={()=>toggle(id)}><span className="choice-letter">{pos>=0?pos+1:'+'}</span><span>{byId(id).label}</span>{bad&&<span className="fc-badmark">zła pozycja</span>}</button>;})}</div>
+  <div className="inline-actions"><button className="btn" disabled={order.length!==4||value.ok} onClick={check}>Sprawdź kolejność</button>{order.length>0&&!value.ok&&<button className="text-button" onClick={()=>onChange({...value,order:[],checked:false,...siftResult(value)})}><Icon name="reset" size={18}/>Wyczyść</button>}</div>
+  {value.checked&&<div className={`fc-feedback ${value.ok?'ok':'retry'}`} role="status"><Icon name={value.ok?'check':'warning'} size={20}/><p>{value.ok?`${value.tries===1?'Bezbłędnie: +1 pkt.':'Poprawione: +0,5 pkt.'} S-I-F-T: zatrzymaj się, sprawdź źródło, porównaj z innymi, dotrzyj do oryginału.`:`Na złych pozycjach: ${value.wrong.map(i=>i+1).join(', ')}. Podpowiedź: ${siftSteps[value.wrong[0]].why} Kliknij zaznaczone kroki, aby je odznaczyć.`}</p></div>}
+ </div>;
+}
+
+export default function FactCheck(props){return props.data.mode==='sift'?<SiftOrder {...props}/>:<Cases {...props}/>;}
+
+function Cases({data,value={},onChange}){
  const all=value.cases||{};
  const firstOpen=cases.findIndex(c=>!caseSolved(all[c.id]));
  const [idx,setIdx]=useState(firstOpen<0?0:firstOpen);

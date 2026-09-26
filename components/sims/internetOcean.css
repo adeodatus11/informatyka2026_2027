@@ -47,3 +47,4 @@
 .io-chart-track span{display:block;height:100%;background:#9fb6de;border-radius:7px}
 .io-chart li.top .io-chart-track span{background:var(--io-blue)}
 @media(max-width:700px){.io-charts{grid-template-columns:1fr}.io-chart li{grid-template-columns:6.5rem 1fr 2.6rem}.io-sim{padding:12px}.io-phone{border-width:6px;padding:10px}}
+.io-sim>*{min-width:0}

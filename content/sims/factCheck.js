@@ -145,3 +145,15 @@ export function factCheckResult(state={}){
  const scams=cases.filter(c=>c.answer==='scam'&&cs[c.id]?.verdict?.ok&&cs[c.id].verdict.tries===1).length;
  return {done:solved>=4,score,max:cases.length*2,solved,summary:solved?`Rozpoznane oszustwa: ${scams}/${scamTotal} · rozwiązane przypadki: ${solved}/${cases.length}`:undefined};
 }
+
+// ---------- Tryb 'sift': kolejność kroków SIFT ----------
+export const siftSteps=[
+ {id:'S',label:'Stop — zatrzymaj się, zanim klikniesz lub udostępnisz',why:'Najpierw emocje pod kontrolę. Pośpiech to paliwo manipulacji.'},
+ {id:'I',label:'Investigate — sprawdź, kto jest źródłem (60 sekund)',why:'Zanim ocenisz treść, sprawdź, kto ją napisał.'},
+ {id:'F',label:'Find — poszukaj, co piszą inni (czytanie lateralne)',why:'Otwierasz nowe karty i porównujesz z niezależnymi źródłami.'},
+ {id:'T',label:'Trace — prześledź cytat, zdjęcie lub liczbę do oryginału',why:'Na końcu docierasz do pierwszego źródła i sprawdzasz, czy nikt go nie przekręcił.'}
+];
+// Kolejność wyświetlania (pomieszana), poprawna to S, I, F, T.
+export const siftShuffled=['F','S','T','I'];
+export function checkSiftOrder(order){const wrong=order.map((id,i)=>id===siftSteps[i].id?null:i).filter(i=>i!==null);return {ok:order.length===4&&wrong.length===0,wrong};}
+export function siftResult(st={}){const ok=!!st.ok;return {done:ok,score:ok?(st.tries===1?1:0.5):0,max:1,summary:ok?'Kolejność SIFT: Stop → Investigate → Find → Trace':undefined};}

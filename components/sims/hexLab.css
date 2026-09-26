@@ -27,7 +27,7 @@
 .hexlab-table-grid b{font-size:1.05rem;color:var(--hx-accent)}.hexlab-table-grid small{font-size:.68rem;color:#54666c}
 .hexlab-tasks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .hexlab-tasks>li{border:1px solid var(--hx-line);border-radius:10px;padding:12px 14px}.hexlab-tasks>li.is-solved{background:#f1f8f3;border-color:#a9d0b7}
-.hexlab-task-title{display:flex;gap:10px;align-items:center;margin:0 0 6px;font-weight:600;flex-wrap:wrap}.hexlab-task-title em{font-style:normal;color:var(--hx-ok);font-size:.85rem;margin-left:auto}
+.hexlab-task-title{display:flex;gap:10px;align-items:flex-start;margin:0 0 6px;font-weight:600}.hexlab-prompt{flex:1;min-width:0;padding-top:2px}.hexlab-task-title em{font-style:normal;color:var(--hx-ok);font-size:.85rem;white-space:nowrap;padding-top:3px}
 .hexlab-num{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#e9eef3;font-size:.8rem;flex-shrink:0}.is-solved .hexlab-num{background:var(--hx-ok);color:#fff}
 .hexlab-row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
 .hexlab-row .btn{min-height:44px;padding:.6rem 1rem}
@@ -97,3 +97,5 @@
  .hexlab-digit b{font-size:1.7rem}
 }
 @media (max-width:400px){.hexlab-byte{gap:8px}.hexlab-nibble{padding:7px}.hexlab-bits{gap:4px}.hexlab-rgb{gap:6px}}
+.hexlab-rgb{align-items:end}
+.hexlab-opt:disabled[aria-pressed=true]{opacity:1}
