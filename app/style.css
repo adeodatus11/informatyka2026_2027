@@ -41,3 +41,29 @@ dialog{border:1px solid var(--line);color:var(--ink);background:#fff}dialog::bac
 .site-header nav a{white-space:nowrap}
 @media(max-width:1000px) and (min-width:701px){.site-header{padding:0 24px}.site-header nav{gap:16px}.site-header nav>a>svg{display:none}}
 @media(max-width:700px){.site-header{flex-wrap:wrap;height:auto;padding:12px 16px 6px;row-gap:2px}.brand{flex:1 1 100%}.brand img{width:100%;max-width:480px}.site-header nav{margin-left:auto}.site-header nav>a{min-height:36px}}
+
+/* Wybór klasy na stronie głównej */
+.grade-picker{padding:34px 0 8px}
+.grade-picker h1{font-size:2rem;letter-spacing:-.03em;margin:0 0 6px}
+.grade-hint{margin:0 0 18px;color:var(--muted);font-size:1.05rem}
+.grade-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:14px}
+.grade-card{display:flex;align-items:center;gap:18px;text-align:left;padding:18px 22px;border:2px solid var(--line);border-radius:18px;background:#fff;color:var(--ink);cursor:pointer;font:inherit;transition:border-color .15s,box-shadow .15s,transform .15s}
+.grade-card:hover{border-color:var(--accent);box-shadow:0 8px 22px #182f3014;transform:translateY(-1px)}
+.grade-number{flex:none;display:grid;place-items:center;width:64px;height:64px;border-radius:16px;background:var(--pale);color:var(--accent);font-size:2.3rem;font-weight:800;line-height:1}
+.grade-text{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.grade-text strong{font-size:1.35rem;letter-spacing:-.02em}
+.grade-text small{color:var(--muted);font-size:.86rem;line-height:1.35}
+.grade-card.active{border-color:var(--accent);background:var(--accent);color:#fff;box-shadow:0 10px 26px #22664833}
+.grade-card.active .grade-number{background:#fff;color:var(--accent)}
+.grade-card.active .grade-text small{color:#e3efe6}
+.home .catalog{padding-top:30px}
+/* Kod QR w nagłówku */
+.header-qr{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:4px 10px 4px 4px;font:inherit;font-size:.85rem;color:var(--ink);cursor:pointer}
+.header-qr:hover{border-color:var(--accent)}
+.header-qr img{display:block;width:44px;height:44px;border-radius:6px}
+.qr-dialog{border:0;border-radius:20px;padding:28px;text-align:center;max-width:min(92vw,560px)}
+.qr-dialog::backdrop{background:#10261ccc}
+.qr-dialog h2{margin:0 0 12px}
+.qr-dialog img{display:block;width:min(420px,70vw);height:auto;margin:0 auto}
+.qr-dialog p{font-family:ui-monospace,Consolas,monospace;font-weight:700;font-size:1.25rem;margin:14px 0 18px}
+@media(max-width:900px){.grade-cards{grid-template-columns:1fr}.header-qr span{display:none}}
