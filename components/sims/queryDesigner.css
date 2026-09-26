@@ -4,7 +4,7 @@
 .qd input[type=checkbox]{accent-color:#1f4fa3}
 .qd-top{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;padding:10px 16px;border:1px solid var(--line);border-radius:10px;background:#f7faf7}
 .qd-points{display:flex;align-items:baseline;gap:6px;color:#1f4fa3}.qd-points strong{font-size:1.6rem;line-height:1}.qd-points svg{align-self:center;color:#c98a00}
-.qd-pass{margin:0;display:flex;gap:6px;align-items:center;font-size:.88rem;flex-wrap:wrap}
+.qd-pass{margin:0;font-size:.88rem}.qd-pass svg{vertical-align:-3px;color:#16a36a}
 .qd-tasks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .qd-tasks button{display:flex;gap:10px;align-items:center;text-align:left;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:.86rem;line-height:1.35;min-width:0}
 .qd-tasks button[aria-pressed=true]{border-color:#1f4fa3;background:#eef3fc;box-shadow:inset 0 0 0 1px #1f4fa3}
@@ -73,8 +73,9 @@ button.qd-rbtn:hover{background:#eef2f8;border-color:#c7d3e6}
 @media (max-width:720px){
  .qd-tasks{grid-template-columns:minmax(0,1fr)}
  .qd-hide-sm{display:none}
- .qd-tbox{width:calc(50% - 30px);min-width:130px}
- .qd-rel{grid-template-columns:auto 14px auto}
+ .qd-tables{flex-direction:column;align-items:stretch}
+ .qd-tbox{width:100%}.qd-tbox ul{max-height:120px}
+ .qd-rel{grid-template-columns:auto 60px auto;justify-content:center}
  .qd-grid td{width:128px;min-width:128px}
  .qd-cheat dl div{grid-template-columns:minmax(0,1fr)}
 }

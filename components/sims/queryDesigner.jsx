@@ -31,8 +31,9 @@ export default function QueryDesigner({data,value,onChange}){
  const [error,setError]=useState(null);
  const [param,setParam]=useState(null); // {names, i, values, forCheck}
  const [msg,setMsg]=useState(null);
- const paramRef=useRef();
+ const paramRef=useRef(),errRef=useRef();
  useEffect(()=>{if(param)paramRef.current?.focus();},[param]);
+ useEffect(()=>{if(error)errRef.current?.scrollIntoView({block:'nearest'});},[error]);
 
  function save(nq){onChange({...state,drafts:{...state.drafts,[task.id]:nq},modes:{...state.modes,[`l${level}`]:Q.levelResult(level,state)}});setResult(null);setError(null);}
  function selectTask(id){setTaskId(id);const d=state.drafts[id];setShowTables(!d?.tables?.length);setResult(null);setError(null);setMsg(null);setSql(false);}
@@ -105,7 +106,7 @@ export default function QueryDesigner({data,value,onChange}){
      {critRows.map((label,r)=><tr key={r}><th scope="row">{label}</th>{colsShown.map((c,i)=><td key={i}>{c&&<input type="text" className={cellErr(i,r)?'is-err':''} aria-label={`${r===0?'Kryteria':'lub'}${r===2?' (drugi wiersz)':''}, kolumna ${i+1} (${c.field.split('.')[1]})`} value={c.crit[r]} spellCheck={false} autoComplete="off" onChange={e=>setCrit(i,r,e.target.value.slice(0,80))}/>}</td>)}</tr>)}
     </tbody></table></div></>}
    {param&&<form className="qd-dialog qd-param" onSubmit={paramOk} aria-label="Wprowadzanie wartości parametru"><div className="qd-dtitle">Wprowadzanie wartości parametru</div><div className="qd-dbody"><label>{param.names[param.i]}<input ref={paramRef} value={param.text} onChange={e=>setParam({...param,text:e.target.value.slice(0,40)})}/></label></div><div className="qd-dbtns"><button type="submit" className="qd-btn is-default">OK</button><button type="button" className="qd-btn" onClick={()=>setParam(null)}>Anuluj</button></div></form>}
-   {error&&<div className="qd-msgbox" role="alert"><div className="qd-dtitle">Microsoft Access (symulacja)</div><div className="qd-mbody"><Icon name="warning" size={28}/><div><p>{error.message}</p>{error.hint&&<p className="qd-hint"><b>Wskazówka:</b> {error.hint}</p>}</div></div><div className="qd-dbtns"><button type="button" className="qd-btn is-default" onClick={()=>setError(null)}>OK</button></div></div>}
+   {error&&<div className="qd-msgbox" role="alert" ref={errRef}><div className="qd-dtitle">Microsoft Access (symulacja)</div><div className="qd-mbody"><Icon name="warning" size={28}/><div><p>{error.message}</p>{error.hint&&<p className="qd-hint"><b>Wskazówka:</b> {error.hint}</p>}</div></div><div className="qd-dbtns"><button type="button" className="qd-btn is-default" onClick={()=>setError(null)}>OK</button></div></div>}
    {result&&<div className="qd-result"><div className="qd-rhead"><Icon name="table" size={18}/>Arkusz danych — wynik kwerendy</div>{result.warnings.map(w=><p key={w} className="qd-warn">{w}</p>)}
     <div className="qd-sheet" role="region" aria-label="Wynik kwerendy" tabIndex={0}><table><thead><tr>{result.columns.map((c,i)=><th key={i} scope="col">{c.label}</th>)}</tr></thead><tbody>{result.rows.length?result.rows.slice(0,60).map((r,i)=><tr key={i}>{r.map((v,j)=><td key={j} className={result.columns[j].type==='number'?'qd-num':''}>{v??''}</td>)}</tr>):<tr><td colSpan={result.columns.length} className="qd-empty">(brak rekordów spełniających kryteria)</td></tr>}</tbody></table></div>
     <p className="qd-recbar">Rekordy: {result.rows.length}</p></div>}

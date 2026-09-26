@@ -192,3 +192,10 @@ test('Lekcje 10–12: format, czas, ids aktywności, karta wyniku ze stałym mak
   assert.ok(!JSON.stringify(l).match(/prac[ay] domow|w domu/i),'bez pracy domowej');
  }
 });
+
+test('Korespondencja: nietknięty szablon startowy nie dostaje punktów',()=>{
+ for(const [p,src,tpl] of [['A',{file:'Stomatolog.accdb',table:'Przypomnienia_jutro'},M.starterA],['B',{file:'firmy_praktyki.xlsx',table:'Arkusz1$'},M.starterB]]){
+  const r=M.mergeResult(p,{docType:'email',source:src,template:tpl});
+  assert.equal(r.checks.filter(c=>c.ok&&['spaces','empty','clean'].includes(c.id)).length,0,p);
+ }
+});

@@ -161,14 +161,14 @@ export function qualityChecks(project,state){
   add('dates','Data wysłania w formacie dd.MM.yyyy',docs.length>0&&fieldsUsed.has('data_wyslania')&&docs.every(d=>d.text.includes(formatPicture(d.rec.data_wyslania,'exceldate','dd.MM.yyyy'))&&!d.text.includes(rawValue(d.rec.data_wyslania,'exceldate'))),
    fieldsUsed.has('data_wyslania')?'Excel przekazał datę jako 10/7/2026 (format amerykański). Wstaw pole data_wyslania z formatem dd.MM.yyyy.':'Wstaw pole data_wyslania (z formatem dd.MM.yyyy) w miejsce [data wysłania].');
  }
- const glued=/»«|»\{|\}«/.test(tpl);
+ const glued=/»«|»\{|\}«/.test(tpl),anyField=fieldsUsed.size>0;
  const empty=docs.find(d=>d.issues.some(i=>i.type==='empty'));
  const gluedHint='Dwa pola stoją obok siebie bez spacji (np. «imie»«nazwisko» → „AdaTestowa”). Wstaw spację między nimi.';
  const emptyHint=empty?`Pole ${empty.issues.find(i=>i.type==='empty').field} jest puste u adresata ${[empty.rec.imie||empty.rec.nazwa,empty.rec.nazwisko].filter(Boolean).join(' ')}. Usuń to pole z treści albo odfiltruj takie rekordy.`:'Brak dokumentów do sprawdzenia.';
  if(project==='A'){
-  add('spaces','Spacje między polami (bez „AdaTestowa”)',docs.length>0&&!glued,glued?gluedHint:'Brak dokumentów do sprawdzenia.');
-  add('empty','Brak pustych wartości w treści',docs.length>0&&!empty,emptyHint);
- }else add('clean','Spacje między polami i brak pustych wartości',docs.length>0&&!glued&&!empty,glued?gluedHint:emptyHint);
+  add('spaces','Spacje między polami (bez „AdaTestowa”)',docs.length>0&&anyField&&!glued,glued?gluedHint:anyField?'Brak dokumentów do sprawdzenia.':'W szablonie nie ma jeszcze żadnego pola scalania.');
+  add('empty','Brak pustych wartości w treści',docs.length>0&&anyField&&!empty,anyField?emptyHint:'W szablonie nie ma jeszcze żadnego pola scalania.');
+ }else add('clean','Spacje między polami i brak pustych wartości',docs.length>0&&anyField&&!glued&&!empty,glued?gluedHint:anyField?emptyHint:'W szablonie nie ma jeszcze żadnego pola scalania.');
  if(project==='B'){
   const lines=tpl.split('\n').map(l=>l.trim()).filter(Boolean),last=lines[lines.length-1]||'';
   const ok=last.length>=3&&!/[«»{}\[\]]/.test(last)&&!/^z poważaniem/i.test(last);
