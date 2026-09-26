@@ -35,21 +35,9 @@ dialog{border:1px solid var(--line);color:var(--ink);background:#fff}dialog::bac
 .result-teacher{display:flex;justify-content:space-between;gap:.6rem;flex-wrap:wrap;padding:.6rem .8rem;margin-top:.6rem;background:#eef2f8;border-radius:.6rem;font-size:.92rem}.result-teacher span{display:inline-flex;gap:.35rem;align-items:center}
 .plan-format{border:1px solid #d5dbe6;border-radius:.6rem;padding:.2rem 1rem;margin:1rem 0}
 @media print{.self-row button:not(.selected){display:none}}
-/* Nagłówek: logo + wyraźny adres strony */
+/* Nagłówek: logo projektu (orzeł + adres strony) */
 .site-header{gap:20px}
-.brand-words{display:block;font-size:1.06rem;letter-spacing:-.035em}
-.brand .brand-second{color:var(--accent);font-weight:700}
-.brand .brand-second b{color:#8fbf3a;font-weight:800;margin-left:1px}
-.logo-mark{flex:none;display:block}
-.logo-cursor{animation:logo-blink 1.1s steps(1,end) 3}
-@keyframes logo-blink{50%{opacity:0}}
-.site-address{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:#10261c;color:#fff;font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;font-weight:700;font-size:1.02rem;letter-spacing:-.01em;white-space:nowrap;margin-left:auto;box-shadow:0 1px 0 rgba(0,0,0,.04)}
-.site-address svg{color:#c7ef6b}
-.site-address:hover,.site-address:focus-visible{background:var(--accent);color:#fff}
-@media(max-width:1000px){.site-address{font-size:.9rem;padding:8px 13px}}
-@media(max-width:700px){.site-header{flex-wrap:wrap;height:auto;padding:10px 16px;row-gap:8px}.brand-words{font-size:.95rem}.site-address{order:3;width:100%;justify-content:center;margin-left:0;font-size:1rem;padding:8px 12px}}
-@media(max-width:360px){.site-address{font-size:.86rem}}
-@media(prefers-reduced-motion:reduce){.logo-cursor{animation:none}}
-@media print{.site-address{display:none}}
+.brand img{display:block;height:auto;width:min(640px,58vw)}
 .site-header nav a{white-space:nowrap}
-@media(max-width:1000px) and (min-width:701px){.site-header{padding:0 24px}.site-header nav{gap:16px}.site-header nav>a>svg{display:none}.site-address{font-size:.86rem}}
+@media(max-width:1000px) and (min-width:701px){.site-header{padding:0 24px}.site-header nav{gap:16px}.site-header nav>a>svg{display:none}}
+@media(max-width:700px){.site-header{flex-wrap:wrap;height:auto;padding:12px 16px 6px;row-gap:2px}.brand{flex:1 1 100%}.brand img{width:100%;max-width:480px}.site-header nav{margin-left:auto}.site-header nav>a{min-height:36px}}
