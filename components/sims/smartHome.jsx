@@ -92,12 +92,12 @@ function Plan({v,save,r}){
 export default function SmartHome({value,onChange}){
  const v=value||{};const r=smartHomeResult(v);const [tab,setTab]=useState(v.tab||'energy');const role=v.role||'all';
  function save(next){const res=smartHomeResult(next);onChange({...next,done:res.done,score:res.score,max:res.max,summary:res.summary});}
- const tabs=[['energy','Energia','energy',r.energy.score,'energy'],['security','Bezpieczeństwo','shield',r.security.score,'security'],['auto','Automatyzacje','settings',r.auto.score,'auto'],['plan','Plan','house',null,null]];
+ const tabs=[['energy','Energia','energy',r.energy.score,'energy','Energia'],['security','Bezpieczeństwo','shield',r.security.score,'security','Ochrona'],['auto','Automatyzacje','settings',r.auto.score,'auto','Reguły'],['plan','Plan','house',null,null,'Plan']];
  const pick=t=>{setTab(t);save({...v,tab:t});};
  return <section className="sh" aria-label="Projekt: inteligentny dom Nowaków">
   <header className="sh-bar"><Icon name="house" size={20}/><strong>DomOS · dom Nowaków</strong><span className="sh-sim">symulacja</span><span className="sh-score">{pts(r.score)}/12 pkt</span></header>
   <div className="sh-roles" role="group" aria-label="Moja rola w trójce"><span>Moja rola:</span>{roles.map(([k,l])=><button type="button" key={k} aria-pressed={role===k} onClick={()=>save({...v,role:k})}>{l}</button>)}</div>
-  <div className="sh-tabs" role="group" aria-label="Zakładki projektu">{tabs.map(([k,l,ic,sc,rk])=><button type="button" key={k} aria-pressed={tab===k} onClick={()=>pick(k)}><Icon name={ic} size={18}/><span>{l}</span>{sc!==null&&<em>{pts(sc)}/4</em>}{role!=='all'&&rk===role&&<i className="sh-mine">Twoja</i>}</button>)}</div>
+  <div className="sh-tabs" role="group" aria-label="Zakładki projektu">{tabs.map(([k,l,ic,sc,rk,sh])=><button type="button" key={k} aria-pressed={tab===k} aria-label={`${l}${sc!==null?`, ${pts(sc)} na 4 pkt`:''}${role!=='all'&&rk===role?', Twoja zakładka':''}`} onClick={()=>pick(k)}><Icon name={ic} size={18}/><span className="sh-long">{l}</span><span className="sh-short" aria-hidden="true">{sh}</span>{sc!==null&&<em>{pts(sc)}/4</em>}{role!=='all'&&rk===role&&<i className="sh-mine">Twoja</i>}</button>)}</div>
   {tab==='energy'&&<Energy v={v} save={save}/>}
   {tab==='security'&&<Security v={v} save={save}/>}
   {tab==='auto'&&<Rules v={v} save={save}/>}

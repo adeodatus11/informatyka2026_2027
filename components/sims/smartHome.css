@@ -8,7 +8,7 @@
 .sh-roles button[aria-pressed=true]{background:#226648;border-color:#226648;color:#fff;font-weight:650}
 .sh-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--sh-line)}
 .sh-tabs button{display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 4px;border:0;border-bottom:3px solid transparent;background:#fff;font-size:.86rem;position:relative;min-width:0}
-.sh-tabs button span{overflow-wrap:anywhere;text-align:center;line-height:1.2}
+.sh-tabs button span{text-align:center;line-height:1.2}.sh-short{display:none}
 .sh-tabs button em{font-style:normal;font-size:.75rem;color:#54666c;font-variant-numeric:tabular-nums}
 .sh-tabs button[aria-pressed=true]{border-bottom-color:#226648;color:#1c5a3f;font-weight:700;background:#f4f9f5}
 .sh-mine{position:absolute;top:3px;right:3px;font-style:normal;font-size:.62rem;font-weight:700;background:#f0b429;color:#3a2a00;border-radius:4px;padding:1px 5px}
@@ -75,6 +75,7 @@
  .sh-builder{grid-template-columns:1fr}
  .sh-goals{grid-template-columns:1fr}
  .sh-plan dl{grid-template-columns:repeat(2,minmax(0,1fr))}
- .sh-tabs button{font-size:.78rem}
+ .sh-tabs button{font-size:.8rem}
+ .sh-long{display:none}.sh-short{display:inline}
  .sh-mine{position:static}
 }
