@@ -108,7 +108,7 @@
 .zx-newrow td{background:#fffbea}
 .zx-ztabs{display:flex;gap:6px;padding:8px 12px 0}
 .zx-ztabs button{min-height:34px;padding:3px 12px;border:1px solid #c8ced2;border-radius:6px;background:#fff;font-size:.84rem;color:var(--ink)}.zx-ztabs button[aria-pressed=true]{background:#f6e9eb;border-color:#7d2e3a;color:#7d2e3a;font-weight:650}
-.zx-boardcol{display:grid;gap:12px;min-width:0;position:sticky;top:96px}
+.zx-boardcol{display:grid;gap:12px;min-width:0}
 .zx-boardcol .zx-status:empty{display:none}
 .zx-board{background:#0f2238;color:#fff;border-radius:10px;padding:12px 14px;box-shadow:0 4px 14px rgba(10,20,40,.25)}
 .zx-bhead{display:flex;justify-content:space-between;align-items:center;font-weight:800;letter-spacing:.14em;font-size:.86rem;color:#f0b429}
@@ -139,7 +139,6 @@
 
 @media (max-width:900px){
  .zx-boardgrid,.zx-datagrid{grid-template-columns:minmax(0,1fr)}
- .zx-boardcol{position:static}
  .zx-btasks{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:720px){

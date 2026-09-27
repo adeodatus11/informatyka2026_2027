@@ -93,3 +93,5 @@
  .sd-relform{grid-template-columns:minmax(0,1fr)}
 }
 .sd-criteria{margin-top:8px;font-size:.86rem}.sd-criteria ul{margin:.2rem 0 0;padding-left:20px}
+.sd>*{min-width:0}
+.sd-tables>.sd-cap{grid-column:1/-1}

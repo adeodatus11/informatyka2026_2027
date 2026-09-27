@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useRef,useEffect} from 'react';
 import {Icon} from '../icons.jsx';
 import * as D from '../../content/sims/zawody-data.js';
 import * as Z from '../../content/sims/zawodyExplorer.js';
@@ -155,6 +155,8 @@ function Board({sub,save}){
  const [zTab,setZTab]=useState('edit');
  const [edit,setEdit]=useState({id:'',klasa:''});
  const [nz,setNz]=useState({imie:'',nazwisko:'',plec:'',klasa:'',rocznik:''});
+ const statusRef=useRef();
+ useEffect(()=>{if(msg)statusRef.current?.scrollIntoView({block:'nearest'});},[msg]);
  const addedIds=new Set((b.added||[]).map(r=>r.id_wyniku));
  const editedIds=new Set(Object.keys(b.edits||{}).map(Number));
  const board=D.ranking(event,results,swimmers);
@@ -211,8 +213,6 @@ function Board({sub,save}){
     <div className="zx-log"><h4>Dziennik bazy</h4>{(b.log||[]).length?<ul>{[...(b.log||[])].reverse().slice(0,6).map((l,i)=><li key={i} className={l.type==='reject'?'is-bad':''}>{l.type==='add'?`+ Wyniki #${l.id_wyniku}: ${D.fullName(swimmers.find(z=>z.id_zawodnika===l.rec?.id_zawodnika))}, ${D.fmtTime(l.rec?.czas)} s`:l.type==='edit'?`✎ Zawodnicy #${l.id_zawodnika}: klasa ${l.from} → ${l.to} (1 komórka)`:l.type==='swimmer'?`+ Zawodnicy #${l.id_zawodnika}`:`✖ Odrzucono: id_zawodnika = ${l.id_zawodnika} nie istnieje`}{l.type==='add'&&addedIds.has(l.id_wyniku)&&<button type="button" className="zx-x" aria-label={`Usuń rekord Wyniki ${l.id_wyniku}`} onClick={()=>{save(Z.removeAdded(b,l.id_wyniku));setMsg({ok:true,text:`Usunięto rekord Wyniki #${l.id_wyniku}.`});}}>✕</button>}</li>)}</ul>:<p className="small muted">Na razie bez zmian.</p>}</div>
    </div>
    <div className="zx-boardcol">
-    <div role="status" className="zx-status">{msg&&(msg.access?<div className="zx-msgbox"><div className="zx-mtitle">Access (symulacja)</div><div className="zx-mbody"><Icon name="warning" size={28}/><div><p>{msg.text}</p>{msg.hint&&<p className="zx-hint"><b>Co to znaczy:</b> {msg.hint}</p>}</div></div><div className="zx-mbtns"><button type="button" className="zx-btn is-default" onClick={()=>setMsg(null)}>OK</button></div></div>
-    :<div className={`feedback ${msg.ok?'':'retry'}`}><Icon name={msg.ok?'check':'warning'}/><div><strong>{msg.text}</strong>{msg.hint&&<p className="zx-hint">{msg.hint}</p>}</div></div>)}</div>
     <div className="zx-board"><div className="zx-bhead"><span>TABLICA WYNIKÓW</span><span className="zx-sim">symulacja</span></div>
      <p className="zx-bevent">{D.eventLabel(D.eventById(event))}</p>
      <div className="zx-bevents" role="group" aria-label="Wybierz konkurencję">{D.konkurencje.map(k=><button key={k.id_konkurencji} type="button" aria-pressed={event===k.id_konkurencji} onClick={()=>setEvent(k.id_konkurencji)} aria-label={D.eventLabel(k)}>{evShort(k)}</button>)}</div>
@@ -220,6 +220,8 @@ function Board({sub,save}){
       <tbody>{board.map(r=><tr key={r.id_wyniku} className={`${addedIds.has(r.id_wyniku)?'is-new':''} ${r.miejsce&&r.miejsce<=3?'is-podium':''}`}><td>{r.miejsce?`${r.miejsce}.`:'DSQ'}</td><td>{r.imie} {r.nazwisko}{addedIds.has(r.id_wyniku)&&<em className="zx-tag">NOWY</em>}</td><td>{r.klasa}{editedIds.has(r.id_zawodnika)&&<em className="zx-tag is-edit">ZMIENIONO</em>}</td><td className="zx-num">{D.fmtTime(r.czas)}</td></tr>)}</tbody></table>
      <p className="zx-bsrc">Źródło: kwerenda Ranking (Wyniki + Zawodnicy + Konkurencje), czas rosnąco, DSQ bez miejsca.</p>
     </div>
+    <div role="status" className="zx-status" ref={statusRef}>{msg&&(msg.access?<div className="zx-msgbox"><div className="zx-mtitle">Access (symulacja)</div><div className="zx-mbody"><Icon name="warning" size={28}/><div><p>{msg.text}</p>{msg.hint&&<p className="zx-hint"><b>Co to znaczy:</b> {msg.hint}</p>}</div></div><div className="zx-mbtns"><button type="button" className="zx-btn is-default" onClick={()=>setMsg(null)}>OK</button></div></div>
+    :<div className={`feedback ${msg.ok?'':'retry'}`}><Icon name={msg.ok?'check':'warning'}/><div><strong>{msg.text}</strong>{msg.hint&&<p className="zx-hint">{msg.hint}</p>}</div></div>)}</div>
    </div>
   </div>
   {res.done&&<div className="zx-diagnosis is-ok"><h4><Icon name="check" size={20}/> Jedna zmiana — jedno miejsce</h4><p>Dopisałeś/-aś wynik bez przepisywania nazwiska, zmieniłeś/-aś klasę w jednej komórce, a baza nie wpuściła wyniku zawodnika-widma. Tak działają wyniki na zawodach, ligi e-sportowe i dziennik elektroniczny.</p></div>}
