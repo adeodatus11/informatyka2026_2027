@@ -80,7 +80,7 @@
 .cl-pair span{color:#f0b429}
 .cl-machine{position:relative;display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:10px;border:2px dashed #9fb3d9;background:var(--cl-soft)}
 .cl-machine.is-locked{border-color:#c9ced6}
-.cl-machine.is-locked .cl-field,.cl-machine.is-locked .cl-output,.cl-machine.is-locked .cl-machine-note{opacity:.45}
+.cl-machine.is-locked{border-style:dashed}.cl-machine.is-locked .cl-field,.cl-machine.is-locked .cl-output{filter:grayscale(1)}
 .cl-lockmsg{display:flex;gap:8px;align-items:center;margin:0;font-weight:650;color:#5b4210}
 .cl-machine-note{margin:0}
 /* pojedynek */
