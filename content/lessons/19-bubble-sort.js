@@ -50,7 +50,7 @@ export default {
    activities:[
     {type:'pythonLab',id:'cb-trace',mode:'trace',points:0,file:'babelki.py',title:'Sortowanie bąbelkowe [5, 1, 4, 2, 8]',
      prompt:'Odpowiedz na pytanie 1, zanim zaczniesz klikać. Potem przechodź kroki: podświetlona linia ➜ wykona się teraz, a tabela pokazuje zmienne w tej chwili.',
-     code:'lista = [5, 1, 4, 2, 8]\nn = len(lista)\nfor i in range(n - 1):             # przejścia\n    for j in range(n - 1 - i):     # pary sąsiadów\n        if lista[j] > lista[j + 1]:\n            lista[j], lista[j + 1] = lista[j + 1], lista[j]\nprint(lista)\n',
+     code:'lista = [5, 1, 4, 2, 8]\nn = len(lista)\nfor i in range(n - 1):          # przejścia\n    for j in range(n - 1 - i):  # pary sąsiadów\n        if lista[j] > lista[j + 1]:\n            lista[j], lista[j + 1] = lista[j + 1], lista[j]\nprint(lista)\n',
      listVars:['lista'],pointers:[{var:'j',span:2}],
      questions:[
       {q:'Przewidź, zanim klikniesz: jak wygląda lista po 1. przejściu (gdy i zmienia się z 0 na 1)?',options:['`[1, 4, 2, 5, 8]`','`[1, 2, 4, 5, 8]`','`[1, 5, 4, 2, 8]`','`[5, 4, 2, 1, 8]`'],correct:[0],explain:'5 zamienia się kolejno z 1, 4 i 2, a przy 8 zostaje: [1, 4, 2, 5, 8]. Lista nie jest jeszcze posortowana — 4 i 2 stoją źle.',hint:'Przejdź w myślach 4 porównania: 5 z 1, potem 5 z 4, 5 z 2, 5 z 8. Sprawdź krokami.'},

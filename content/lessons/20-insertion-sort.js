@@ -73,7 +73,7 @@ export default {
  materials:['Komputer z aktualną przeglądarką (Chrome, Edge lub Firefox) — jeden na osobę. Python działa w przeglądarce, bez instalacji.','Projektor do śledzenia w etapie 2','Opcjonalnie: talia kart lub 4 kartki z liczbami 7, 3, 5, 1 do pokazania wstawiania „w ręce”'],
  teacherGuide:{
   preparation:'Przed dzwonkiem otwórz lekcję na komputerze z projektorem i wejdź do etapu 2 — przeglądarka pobierze Pythona (ok. 13 MB). Klucz: lista po wstawieniu 3 to [3, 7, 5, 1]; przy wstawianiu 1 są 3 przesunięcia. Błąd 1: while j > 0 → j >= 0. Błąd 2: brak j -= 1 (pętla nieskończona — program zatrzyma się po 3 s). Błąd 3: lista[j] = karta → lista[j + 1] = karta. Porównanie (100 liczb): bąbelkowe 4950 porównań na obu listach, wstawianie 2612 na losowej i 103 na prawie posortowanej.',
-  summary:'Uczeń wyjaśnia wstawianie analogią kart, układa algorytm, naprawia trzy typowe błędy (zły warunek, pętla nieskończona, wstawienie w złe miejsce) i na podstawie pomiaru wskazuje, że wstawianie jest bardzo szybkie dla danych prawie posortowanych. Na karcie wyniku maks. 25 pkt. Pytanie na wyjście: dlaczego wstawianie przydaje się, gdy do posortowanego rankingu dochodzi jeden nowy wynik?'
+  summary:'Uczeń wyjaśnia wstawianie analogią kart, układa algorytm, naprawia trzy typowe błędy (zły warunek, pętla nieskończona, wstawienie w złe miejsce) i na podstawie pomiaru wskazuje, że wstawianie jest bardzo szybkie dla danych prawie posortowanych. Na karcie wyniku maks. 23 pkt. Pytanie na wyjście: dlaczego wstawianie przydaje się, gdy do posortowanego rankingu dochodzi jeden nowy wynik?'
  },
  sections:[
   {id:'start',label:'Start',title:'Karty w ręce',grouping:'class',
@@ -93,7 +93,7 @@ export default {
    activities:[
     {type:'pythonLab',id:'ci-trace',mode:'trace',points:0,file:'karty.py',title:'Wstawianie kart [7, 3, 5, 1]',
      prompt:'Klikaj „Krok dalej”. Na liście zobaczysz, gdzie są i oraz j. Tabela pokazuje zmienne w tej chwili — przed wykonaniem podświetlonej linii.',
-     code:'karty = [7, 3, 5, 1]\nfor i in range(1, len(karty)):\n    karta = karty[i]                # biorę kartę do ręki\n    j = i - 1\n    while j >= 0 and karty[j] > karta:\n        karty[j + 1] = karty[j]     # większą kartę przesuwam w prawo\n        j -= 1\n    karty[j + 1] = karta            # wkładam kartę w lukę\nprint(karty)\n',
+     code:'karty = [7, 3, 5, 1]\nfor i in range(1, len(karty)):\n    karta = karty[i]          # karta do ręki\n    j = i - 1\n    while j >= 0 and karty[j] > karta:\n        karty[j + 1] = karty[j]   # większą w prawo\n        j -= 1\n    karty[j + 1] = karta      # włóż w lukę\nprint(karty)\n',
      listVars:['karty'],pointers:[{var:'i'},{var:'j'}],
      questions:[
       {q:'Jak wygląda lista po wstawieniu karty 3 (koniec obrotu dla i = 1)?',options:['`[3, 7, 5, 1]`','`[7, 3, 5, 1]`','`[3, 5, 7, 1]`','`[1, 3, 5, 7]`'],correct:[0],explain:'3 jest mniejsze od 7, więc 7 przesuwa się w prawo, a 3 trafia na początek: [3, 7, 5, 1]. Reszta listy jeszcze czeka.',hint:'Idź krokami, aż i zmieni się na 2 — wtedy spójrz na listę.'},

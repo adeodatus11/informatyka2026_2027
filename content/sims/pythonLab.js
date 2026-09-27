@@ -289,7 +289,7 @@ const rules = [
   [/ZeroDivisionError/, /./, () => ({title: 'Dzielenie przez zero', hint: 'Program dzieli przez 0. Sprawdź, czy dzielnik nie jest zerem, zanim podzielisz (if x != 0:).'})],
   [/ValueError/, /invalid literal for int\(\) with base 10: (.*)/, m => ({title: 'To nie jest liczba całkowita', hint: `int() dostało ${m[1]}, a to nie jest liczba całkowita. Sprawdź pole „Dane wejściowe” — każda linia to jedna wartość, bez spacji i liter. Liczby z przecinkiem wczytuj przez float() i pisz z kropką.`})],
   [/ValueError/, /could not convert string to float: (.*)/, m => ({title: 'To nie jest liczba', hint: `float() dostało ${m[1]}. Użyj kropki zamiast przecinka (12.5) i sprawdź pole „Dane wejściowe”.`})],
-  [/ValueError/, /chr\(\) arg not in range/, () => ({title: 'chr() poza zakresem', hint: 'chr() przyjmuje numer znaku (np. 65 → "A"). Sprawdź obliczenia — czy nie zapomniałeś dodać ord("A") lub użyć % 26?'})],
+  [/ValueError/, /chr\(\) arg not in range/, () => ({title: 'chr() poza zakresem', hint: 'chr() przyjmuje numer znaku (np. 65 → "A"). Sprawdź obliczenia — czy dodano ord("A") i użyto % 26?'})],
   [/OverflowError/, /./, () => ({title: 'Za duża liczba', hint: 'Wynik jest za duży dla liczby zmiennoprzecinkowej. Sprawdź, czy pętla nie liczy za długo.'})],
   [/RecursionError/, /./, () => ({title: 'Funkcja wywołuje samą siebie bez końca', hint: 'Brakuje warunku zakończenia (np. if n < 2: return n) albo argument nie maleje przy kolejnym wywołaniu.'})],
   [/KeyError/, /(.*)/, m => ({title: 'Brak klucza w słowniku', hint: `W słowniku nie ma klucza ${m[1]}. Sprawdź pisownię albo użyj slownik.get(klucz, domyślna).`})],
@@ -314,9 +314,9 @@ export function explainError(err, code = '') {
 }
 
 export const STOP_MESSAGES = {
-  timeout: {title: 'Program działa za długo — może pętla się nie kończy?', hint: 'Zatrzymałem go po kilku sekundach. Sprawdź warunek pętli while: czy zmienna w warunku zmienia się w środku pętli (np. j -= 1)?'},
+  timeout: {title: 'Program działa za długo — może pętla się nie kończy?', hint: 'Środowisko zatrzymało go po kilku sekundach. Sprawdź warunek pętli while: czy zmienna w warunku zmienia się w środku pętli (np. j -= 1)?'},
   input: {title: 'Program czeka na dane', hint: 'Program wywołał input(), ale pole „Dane wejściowe” jest puste albo skończyły się w nim linie. Wpisz wartości — każda linia to jedno input().'},
-  output: {title: 'Program wypisał za dużo tekstu', hint: 'Zatrzymałem go po 20 000 znaków. To często znak, że pętla się nie kończy.'},
+  output: {title: 'Program wypisał za dużo tekstu', hint: 'Środowisko zatrzymało go po 20 000 znaków. To często znak, że pętla się nie kończy.'},
   steps: {title: 'Pokazuję pierwsze kroki programu', hint: `Śledzenie zatrzymuje się po ${MAX_TRACE_STEPS} krokach. Zmniejsz dane albo liczbę powtórzeń pętli.`},
 };
 

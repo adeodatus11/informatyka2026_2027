@@ -223,3 +223,36 @@ for (const lesson of lessons) {
     for (const id of card.sources) assert.ok(lesson.sections.flatMap(s => s.activities).some(a => a.id === id), id);
   });
 }
+
+test('Odpowiedzi do pytań wynikają z tego, co naprawdę wypisuje / pokazuje program', () => {
+  const act = id => lessons.flatMap(l => labs(l)).find(a => a.id === id);
+  const out = id => { const a = act(id); return run({code: a.solution || a.starter || a.code, stdin: a.stdin || []}).stdout; };
+  const steps = id => run({code: act(id).code, trace: true}).steps;
+  if (!act('cp-trace')) return;
+  assert.ok(steps('cp-trace').some(s => s.g.litera?.r === "'H'" && s.g.kod?.r === '7'));
+  assert.ok(steps('cp-trace').some(s => s.g.litera?.r === "'Z'" && s.g.nowy?.r === '2'));
+  assert.match(out('cp-crack'), /^11 HASLO DO SZAFKI W PRACOWNI TO PINGWIN$/m);
+  if (act('cb-trace')) {
+    const st = steps('cb-trace');
+    assert.ok(st.some(s => s.g.i?.r === '1' && s.g.lista.r === '[1, 4, 2, 5, 8]'));
+    assert.equal(st.filter(s => s.line === 6 && s.g.i?.r === '0').length, 3);
+    assert.equal(out('cb-predict').trim(), '9 9');
+  }
+  if (act('ci-trace')) {
+    const st = steps('ci-trace');
+    assert.ok(st.some(s => s.g.i?.r === '2' && s.line === 3 && s.g.karty.r === '[3, 7, 5, 1]'));
+    assert.equal(st.filter(s => s.line === 6 && s.g.i?.r === '3').length, 3);
+    assert.match(out('ci-compare'), /prawie posortowana\s+4950\s+103/);
+    assert.match(out('ci-compare'), /losowa\s+4950\s+2612/);
+  }
+  if (act('cf-fib-trace')) {
+    assert.ok(steps('cf-fib-trace').some(s => s.line === 3 && s.g.a?.r === '5' && s.g.b?.r === '8'));
+    assert.equal(out('cf-predict').trim(), '0 1 2 4 8 16');
+    assert.match(out('cf-rec'), /fib\( 20 \) = 6765\s+wywołań funkcji: 21891/);
+    const last = out('cf-golden').trim().split('\n').at(-1);
+    assert.equal(Number(last.split('= ')[1]).toFixed(3), '1.618');
+    const r = run({code: act('cf-deposit').solution, tests: [{call: 'lokata(1000, 5, 10) - 1000', expected: '628.89', tol: 0.005}, {call: 'skarbonka(50, 18)', expected: '900'}].slice(0, 1)});
+    assert.ok(r.tests[0].ok);
+    assert.ok(run({code: act('cf-save').solution, tests: [{call: 'skarbonka(50, 18)', expected: '900'}]}).tests[0].ok);
+  }
+});

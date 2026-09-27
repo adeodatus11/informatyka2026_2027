@@ -57,6 +57,8 @@ export const zawodyQueries={
  numberHint:field=>`Pole ${field} jest liczbą — wpisz samą liczbę, np. ${numberExample[field]||'50 (bez cudzysłowu)'}.`,
  // Czas pokazujemy z dwoma miejscami po przecinku (32,40), jak pole Liczba z formatem „Standardowy”.
  format:(key,v)=>v==null?v:/(^|:)Wyniki\.czas$/.test(key)&&typeof v==='number'?fmtTime(v):typeof v==='number'?String(v).replace('.',','):v,
+ // Produkt pracy na karcie wyniku: „Oficjalne wyniki zawodów”.
+ levelSummary:(level,n)=>[`Listy startowe: ${n}/3`,`Oficjalne wyniki zawodów: ${n}/3 zestawień`,`Protokół sędziowski: ${n}/3 (rekordy, puchar klas, kwerenda „Podaj klasę:”)`][level-1],
  cheat:[['"K" · "2B" · 2008','równe tekstowi lub liczbie (tekst w cudzysłowie, liczba bez)'],['Jak "2*"','wzorzec: klasy 2A, 2B, 2C…'],['<35 · <=32,5 · >2009','porównania liczb (setne po przecinku)'],['Między 2009 I 2010','zakres (z końcami)'],['<> "tak" · "nie"','bez dyskwalifikacji'],['[Podaj klasę:]','parametr — Access zapyta przy uruchomieniu'],['Σ → Min · Policz · Gdzie','najlepszy czas · liczba startów · warunek bez pokazywania']],
  cheatNote:'Czas zapisujemy w sekundach z setnymi (32,46 s). Mniejszy czas = lepszy wynik: ranking to Sortuj: Rosnąco, a najlepszy czas w grupie to Min. Pole dyskwalifikacja to Krótki tekst z wartościami „tak”/„nie”.'
 };

@@ -73,9 +73,9 @@ function TestList({tests, count}) {
           <span className="pl-sr">{t.ok ? 'Zaliczony: ' : 'Niezaliczony: '}</span>
           {t.label && <b className="pl-test-label">{t.label}</b>}
           {t.call && <code className="pl-test-call">{t.call}</code>}
-          {t.stdin && <span className="pl-test-io">dane: <code>{t.stdin.length ? t.stdin.join(' ⏎ ') : '(brak)'}</code></span>}
+          {t.stdin?.length > 0 && <span className="pl-test-io">dane: <code>{t.stdin.join(' ⏎ ')}</code></span>}
           {t.source ? (!t.ok && t.hint && <span className="pl-test-io">{t.hint}</span>) : <span className="pl-test-io">
-            {t.expected !== undefined && <>oczekiwano <code>{t.expected}</code></>}
+            {t.expected !== undefined && <>oczekiwano <code>{String(t.expected).replace(/\n/g, ' ⏎ ')}</code></>}
             {err ? <> · <em>{err.title}</em>{t.error?.message ? <> (<code>{t.error.type}: {t.error.message}</code>)</> : null}</> : t.got !== undefined && !t.stdin && <> · otrzymano <code>{t.got}</code></>}
           </span>}
         </div>
@@ -133,7 +133,7 @@ function SolutionBox({data, v, save, done, onInsert}) {
     {done && <p className="small muted">Twój kod może wyglądać inaczej — liczy się, że przechodzi testy.</p>}
   </details>;
   if (!(hintsUsed && (v.fails || 0) >= 2)) return null;
-  return <p className="pl-solution-offer">Utknąłeś? <button type="button" className="text-button" onClick={() => save({solutionShown: true})}>Pokaż rozwiązanie wzorcowe</button> <span className="small muted">(zadanie da wtedy najwyżej ¼ punktów)</span></p>;
+  return <p className="pl-solution-offer">Nie wychodzi? <button type="button" className="text-button" onClick={() => save({solutionShown: true})}>Pokaż rozwiązanie wzorcowe</button> <span className="small muted">(zadanie da wtedy najwyżej ¼ punktów)</span></p>;
 }
 
 /* ───────── Tryb „code”: edytor + Uruchom + Sprawdź ───────── */
@@ -230,7 +230,7 @@ function ParsonsMode({data, v, save}) {
     if (busy || done) return;
     const review = parsonsReview(data, program);
     if (!program.length) { setMsg({ok: false, text: 'Program jest pusty. Klikaj linie z górnej ramki, żeby dodać je do programu.'}); return; }
-    if (review.missing > 0) { setMsg({ok: false, text: `Brakuje jeszcze ${review.missing} ${review.missing === 1 ? 'linii' : 'linii'} — przenieś je z ramki „Rozsypane linie”.${data.distractors?.length ? ' Uwaga: jedna linia w ramce to pułapka i nie jest potrzebna.' : ''}`}); return; }
+    if (review.missing > 0) { setMsg({ok: false, text: review.distractors ? 'W programie jest linia-pułapka, a w ramce „Rozsypane linie” została linia, której brakuje. Porównaj je i zamień (✕ usuwa linię z programu).' : `Brakuje jeszcze ${review.missing} ${review.missing === 1 ? 'linii' : 'linii'} — przenieś je z ramki „Rozsypane linie”.${data.distractors?.length ? ' Uwaga: jedna linia w ramce to pułapka i nie jest potrzebna.' : ''}`}); return; }
     setBusy(true);
     const code = parsonsCode(data, program);
     const r = await runPython({code, tests: data.tests || []}, {timeoutMs: data.timeoutMs});
@@ -270,7 +270,7 @@ function ParsonsMode({data, v, save}) {
         const b = blocks[p.id];
         return <li key={p.id} className={result?.error?.line === i + 1 ? 'is-error' : ''}>
           <span className="pl-program-num" aria-hidden="true">{i + 1}</span>
-          <code className="pl-program-code" style={{'--indent': p.indent || 0}}>{Array.from({length: p.indent || 0}, (_, k) => <i key={k} className="pl-guide" aria-hidden="true"/>)}<CodeLine line={b.text}/></code>
+          <code className="pl-program-code" style={{'--indent': p.indent || 0}}>{Array.from({length: p.indent || 0}, (_, k) => <i key={k} className="pl-guide" aria-hidden="true"/>)}<span className="pl-program-text"><CodeLine line={b.text}/></span></code>
           {!done && <span className="pl-program-tools">
             <button type="button" onClick={() => indent(i, -1)} disabled={!p.indent} aria-label={`Zmniejsz wcięcie linii ${i + 1}`} title="Zmniejsz wcięcie">←</button>
             <button type="button" onClick={() => indent(i, 1)} disabled={(p.indent || 0) >= 5} aria-label={`Zwiększ wcięcie linii ${i + 1}`} title="Zwiększ wcięcie">→</button>
@@ -376,7 +376,7 @@ function TraceMode({data, v, save, py}) {
 }
 
 /* ───────── Tryb „predict”: przewidź, potem uruchom ───────── */
-const CONFIDENCE = [['sure', 'Jestem pewny'], ['think', 'Chyba tak'], ['guess', 'Strzelam']];
+const CONFIDENCE = [['sure', 'Na pewno'], ['think', 'Chyba tak'], ['guess', 'Strzelam']];
 function PredictMode({data, v, save}) {
   const code = data.code ?? data.starter ?? '';
   const p = v.predict || {};
@@ -395,13 +395,13 @@ function PredictMode({data, v, save}) {
   const real = p.checked ? (p.real ?? result?.stdout ?? '') : null;
   const cmp = p.checked ? compareOutput(p.text, real) : null;
   const meta = p.checked ? (cmp.ok ? (p.confidence === 'guess' ? 'Strzał w dziesiątkę — ale następnym razem spróbuj to wyliczyć linia po linii, a nie zgadywać.' : 'Trafione. Umiesz czytać kod jak komputer.')
-    : (p.confidence === 'sure' ? 'Byłeś pewny, a wynik jest inny — to najcenniejszy moment lekcji. Znajdź linię, która Cię zaskoczyła.' : 'Nie szkodzi — porównaj linie z ✗ i znajdź w kodzie miejsce, które je tworzy.')) : '';
+    : (p.confidence === 'sure' ? 'Pewność była duża, a wynik jest inny — to najcenniejszy moment lekcji. Znajdź linię, która Cię zaskoczyła.' : 'Nie szkodzi — porównaj linie z ✗ i znajdź w kodzie miejsce, które je tworzy.')) : '';
   return <div className="pl-predict">
     <CodeView code={code} label="Program do przewidzenia"/>
     {!p.checked ? <div className="pl-predict-form">
       <label htmlFor={id} className="pl-predict-label">Co pojawi się na ekranie? Wpisz dokładnie, linia po linii.</label>
       <textarea id={id} rows={data.predictRows || 3} spellCheck={false} value={p.text || ''} onChange={e => save({predict: {...p, text: e.target.value}})} placeholder="Twoje przewidywanie…"/>
-      <fieldset className="pl-confidence"><legend>Jak bardzo jesteś pewny?</legend>
+      <fieldset className="pl-confidence"><legend>Jak bardzo jesteś pewna/pewny?</legend>
         {CONFIDENCE.map(([k, l]) => <button type="button" key={k} aria-pressed={p.confidence === k} className={p.confidence === k ? 'is-on' : ''} onClick={() => save({predict: {...p, confidence: k}})}>{l}</button>)}
       </fieldset>
       <button type="button" className="btn" disabled={!p.text?.trim() || busy} onClick={runAndCompare}><Icon name="play" size={18}/>{busy ? 'Uruchamiam…' : 'Uruchom i porównaj'}</button>

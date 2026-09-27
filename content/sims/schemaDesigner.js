@@ -122,7 +122,10 @@ export function evaluate(o,d){
    bonus={ok,msg:ok?`Bonus ✓: ${bt.name} 1 — ∞ ${bk.table} (${bk.field}) — wiadomo, kto wydał książkę.`:`Bonus: tabela ${bt.name} potrzebuje klucza ${bt.pk}, pól imie i nazwisko oraz relacji z ${bk.table}.${bk.field} (Liczba).`};}}
  const passed=checks.filter(c=>c.ok).length,total=checks.length;
  const groups=GROUPS.map(([id,label])=>{const cs=checks.filter(c=>c.group===id);return {id,label,ok:cs.every(c=>c.ok),passed:cs.filter(c=>c.ok).length,total:cs.length,issues:cs.filter(c=>!c.ok)};});
- return {checks,groups,passed,total,ratio:total?passed/total:0,bonus};
+ const ratio=total?passed/total:0;
+ // Zaliczenie: ≥70% kontroli i każda z 6 grup spełniona co najmniej w połowie (np. bez relacji nie ma zaliczenia).
+ const weak=groups.filter(g=>g.total&&g.passed/g.total<0.5);
+ return {checks,groups,passed,total,ratio,bonus,pass:ratio>=PASS&&!weak.length,weak};
 }
 
 // Punkty zlecenia (maks. 4): projekt 100% — 3 pkt przy 1. sprawdzeniu, 2 pkt przy 2.–3., 1,5 później;
@@ -132,17 +135,17 @@ export function recordCheck(s={},o){
  const checks=(s.checks||0)+1;
  const best=Math.max(s.best||0,ev.ratio);
  const perfectAt=s.perfectAt||(ev.ratio===1?checks:null);
- return {state:{...s,checks,best,perfectAt,last:Math.round(ev.ratio*100),bonus:s.bonus||!!ev.bonus?.ok},ev};
+ return {state:{...s,checks,best,passed:s.passed||ev.pass,perfectAt,last:Math.round(ev.ratio*100),bonus:s.bonus||!!ev.bonus?.ok},ev};
 }
 export function orderResult(s={},o){
  const best=s.best||0;
- const proj=s.perfectAt?(s.perfectAt===1?3:s.perfectAt<=3?2:1.5):best>=PASS?1:0;
+ const proj=s.perfectAt?(s.perfectAt===1?3:s.perfectAt<=3?2:1.5):s.passed?1:0;
  const tried=tryoutDone(s.tryout);
  const score=proj+(tried?1:0);
  const bits=[`${o.short}: ${Math.round(best*100)}%`];if(tried)bits.push('test relacji ✓');if(s.bonus)bits.push('bonus ✓');
- return {done:best>=PASS,score,max:4,summary:s.checks?bits.join(' · '):undefined};
+ return {done:!!s.passed,score,max:4,summary:s.checks?bits.join(' · '):undefined};
 }
-export const unlocked=(mode,value={})=>{const i=orders.findIndex(o=>o.id===mode);if(i<=0)return true;const prev=orders[i-1];return (value[prev.id]?.best||0)>=PASS;};
+export const unlocked=(mode,value={})=>{const i=orders.findIndex(o=>o.id===mode);if(i<=0)return true;const prev=orders[i-1];return !!value[prev.id]?.passed;};
 
 // ---------- Wypróbuj: dane testowe i więzy integralności ----------
 export function tryoutTables(o){return o.tables;}

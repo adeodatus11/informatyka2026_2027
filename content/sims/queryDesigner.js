@@ -410,7 +410,8 @@ export function levelResult(level,state={},ds){
  const ts=levelTasks(level,ds),st=state.tasks||{};
  const passed=ts.filter(t=>st[t.id]?.passed);
  const score=ts.reduce((s,t)=>s+(st[t.id]?.passed?(st[t.id].firstTry?2:1):0),0);
- return {done:passed.length>=PASS_MIN,score,max:LEVEL_MAX,passed:passed.length,summary:`Poziom ${level}: ${passed.length}/3 zleceń`};
+ const d=dataset(ds);
+ return {done:passed.length>=PASS_MIN,score,max:LEVEL_MAX,passed:passed.length,summary:d.levelSummary?d.levelSummary(level,passed.length):`Poziom ${level}: ${passed.length}/3 zleceń`};
 }
 export function levelUnlocked(level,state={},ds){return level===1||levelResult(level-1,state,ds).passed>=PASS_MIN;}
 export function recordCheck(state={},task,q){
