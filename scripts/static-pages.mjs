@@ -12,7 +12,9 @@ await writeFile(path.join(root,'dist/.nojekyll'),'');
 // Keep branch-based GitHub Pages working, without requiring a change in hosting settings.
 await mkdir(path.join(root,'assets'),{recursive:true});
 for(const name of await readdir(path.join(root,'assets'))){
-  if(/^(?:index|ComputerExplorer|ComputerScene|PhoneExplorer|computer)-[\w-]+\.(js|css)$/.test(name))await unlink(path.join(root,'assets',name));
+  // Stare pliki z hashami z poprzednich buildów; aktualne zostaną skopiowane poniżej.
+  if(/\.(?:js|mjs|css|wasm)$/.test(name))await unlink(path.join(root,'assets',name));
 }
-for(const entry of ['index.html','CNAME','qr-informatyka.png','assets','materials','videos','lesson','teacher','branding','o-projekcie']){await cp(path.join(root,'dist',entry),path.join(root,entry),{recursive:true});}
+// Kopiujemy wszystko, co wygenerował build (w tym favicony, manifest i pliki Pythona).
+for(const entry of await readdir(path.join(root,'dist'))){await cp(path.join(root,'dist',entry),path.join(root,entry),{recursive:true});}
 console.log('Built root GitHub Pages files and direct lesson/teacher routes. Archive left untouched.');

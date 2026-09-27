@@ -132,6 +132,6 @@ export default function MailMerge({data,value,onChange}){
    {st.answer!=null&&<div className={`feedback ${st.answer===DEMO_Q.correct?'':'retry'}`}><Icon name={st.answer===DEMO_Q.correct?'check':'book'}/><div>{st.answer===DEMO_Q.correct?DEMO_Q.explanation:`Spróbuj jeszcze raz. ${DEMO_Q.hint}`}</div></div>}
   </div>}
   {st.merged&&!demo&&<div className="mm-out"><h4>{st.merged.kind==='email'?`Skrzynka nadawcza (symulacja) — ${st.merged.count} wiadomości`:`Listy1 — ${st.merged.count} ${st.merged.count===1?'dokument':'dokumentów'}`}</h4>{st.merged.count===0&&<p>Brak dokumentów — lista adresatów jest pusta.</p>}
-   <div className="mm-docs">{st.merged.docs.map((d,i)=><article key={i} className="mm-doc" aria-label={`Dokument ${i+1}: ${d.label}`}><header>{d.to?<><b>Do:</b> {d.to}<br/><b>Temat:</b> {st.merged.subject}</>:<b>Dokument {i+1} · {d.label}</b>}</header><p>{d.text}</p></article>)}</div></div>}
+   <div className="mm-docs" tabIndex={0} role="region" aria-label="Scalone dokumenty">{st.merged.docs.map((d,i)=><article key={i} className="mm-doc" aria-label={`Dokument ${i+1}: ${d.label}`}><header>{d.to?<><b>Do:</b> {d.to}<br/><b>Temat:</b> {st.merged.subject}</>:<b>Dokument {i+1} · {d.label}</b>}</header><p>{d.text}</p></article>)}</div></div>}
  </section>;
 }

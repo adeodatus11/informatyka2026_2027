@@ -1,6 +1,11 @@
 // Czysta logika symulatora projektu kwerendy (Access, symulacja): parser kryteriów, wykonanie
-// kwerendy na danych „Stomatolog”, podsumowania (Σ), parametry, poglądowy SQL i sprawdzanie zleceń.
-import {tables,fieldTypes,SIM_TODAY,addDays,isValidISODate} from './stomatolog-data.js';
+// kwerendy, podsumowania (Σ), parametry, poglądowy SQL i sprawdzanie zleceń.
+// Zbiór danych (tabele, relacje, zlecenia) wybiera aktywność przez data.dataset:
+// 'stomatolog' (domyślny, lekcje 11 i 26) albo 'zawody' (lekcja 25). Funkcje przyjmują
+// opcjonalny zbiór danych jako ostatni argument; bez niego działają na „Stomatologu”.
+import * as S from './stomatolog-data.js';
+import {addDays,isValidISODate} from './stomatolog-data.js';
+import {zawodyQueries} from './queryDesigner-zawody.js';
 
 export class QueryError extends Error{constructor(message,hint='',where=null){super(message);this.hint=hint;this.where=where;}}
 export const SYNTAX='Wyrażenie wpisane zawiera nieprawidłową składnię.';
@@ -10,8 +15,8 @@ export const totalsOptions=[['group','Grupuj według'],['sum','Suma'],['avg','Ś
 const aggNames={sum:'Suma',avg:'Średnia',min:'Min',max:'Maks',count:'Policz'};
 const aggSQL={sum:'Sum',avg:'Avg',min:'Min',max:'Max',count:'Count'};
 
-export const allFields=()=>Object.entries(fieldTypes).flatMap(([t,f])=>Object.keys(f).map(x=>`${t}.${x}`));
-export const fieldType=key=>{const [t,f]=key.split('.');return fieldTypes[t]?.[f]==='autonumber'?'number':fieldTypes[t]?.[f];};
+export const allFields=(ds)=>Object.entries(dataset(ds).fieldTypes).flatMap(([t,f])=>Object.keys(f).map(x=>`${t}.${x}`));
+export const fieldType=(key,ds)=>{const ft=dataset(ds).fieldTypes;const [t,f]=key.split('.');return ft[t]?.[f]==='autonumber'?'number':ft[t]?.[f];};
 export const emptyColumn=()=>({field:'',sort:'',show:true,crit:Array(CRIT_ROWS).fill(''),total:'group'});
 export const emptyQuery=()=>({tables:[],cols:[],totals:false});
 
@@ -115,30 +120,31 @@ export function criterionParams(ast,out=[]){
 
 // ---------- Wartości i porównania ----------
 const likeRe=pat=>new RegExp('^'+pat.replace(/[.+^${}()|\\]/g,'\\$&').replace(/\*/g,'.*').replace(/\?/g,'.').replace(/#/g,'\\d')+'$','is');
-function mismatch(type,field){
+function mismatch(type,field,ctx){
+ if(type==='number'&&ctx?.numberHint)return new QueryError(MISMATCH,ctx.numberHint(field));
  const hints={number:`Pole ${field} jest liczbą — wpisz samą liczbę, np. >300 (bez „zł” i bez cudzysłowu).`,date:`Pole ${field} przechowuje daty — wpisz datę w znakach #, np. #2026-10-07#.`,datetime:`Pole ${field} przechowuje datę i godzinę — wpisz datę w znakach #, np. #2026-10-07#, albo Jak "2026-10-07*".`,text:`Pole ${field} jest tekstem — wpisz tekst, np. "Wrocław".`};
  return new QueryError(MISMATCH,hints[type]||'');
 }
-function resolve(v,type,field,params){
- if(v.t==='concat')return v.parts.map(x=>String(resolve(x,'text',field,params)??'')).join('');
+function resolve(v,type,field,params,ctx){
+ if(v.t==='concat')return v.parts.map(x=>String(resolve(x,'text',field,params,ctx)??'')).join('');
  if(v.t==='param'){
   const raw=params?.[v.v];if(raw==null)throw new QueryError('Brak wartości parametru.',`Kwerenda pyta o „${v.v}” — uruchom ją i wpisz wartość.`);
-  if(type==='number'){if(!/^-?\d+([.,]\d+)?$/.test(String(raw).trim()))throw mismatch(type,field);return Number(String(raw).replace(',','.'));}
-  if(type==='date'||type==='datetime'){const d=parseDateText(String(raw));if(!d)throw mismatch(type,field);return d;}
+  if(type==='number'){if(!/^-?\d+([.,]\d+)?$/.test(String(raw).trim()))throw mismatch(type,field,ctx);return Number(String(raw).replace(',','.'));}
+  if(type==='date'||type==='datetime'){const d=parseDateText(String(raw));if(!d)throw mismatch(type,field,ctx);return d;}
   return String(raw);
  }
- if(v.t==='today'){if(type!=='date'&&type!=='datetime')throw mismatch(type,field);return addDays(SIM_TODAY,v.off);}
+ if(v.t==='today'){if(type!=='date'&&type!=='datetime')throw mismatch(type,field,ctx);return addDays(ctx?.today||S.SIM_TODAY,v.off);}
  if(type==='number'){
   if(v.t==='num')return v.v;
   if((v.t==='str'||v.t==='word')&&/^-?\d+([.,]\d+)?$/.test(v.v))return Number(v.v.replace(',','.'));
-  throw mismatch(type,field);
+  throw mismatch(type,field,ctx);
  }
  if(type==='date'||type==='datetime'){
   if(v.t==='date')return v.v;
   if(v.t==='str'&&parseDateText(v.v))return parseDateText(v.v);
-  throw mismatch(type,field);
+  throw mismatch(type,field,ctx);
  }
- if(v.t==='date')throw mismatch(type,field);
+ if(v.t==='date')throw mismatch(type,field,ctx);
  return String(v.v);
 }
 function cmp(a,b,type){
@@ -147,29 +153,45 @@ function cmp(a,b,type){
  if(type==='date')return String(a).localeCompare(String(b));
  return String(a).localeCompare(String(b),'pl',{sensitivity:'accent'});
 }
-export function evalCriterion(ast,value,type,field,params){
+export function evalCriterion(ast,value,type,field,params,ctx){
  switch(ast.t){
-  case 'or':return evalCriterion(ast.a,value,type,field,params)||evalCriterion(ast.b,value,type,field,params);
-  case 'and':return evalCriterion(ast.a,value,type,field,params)&&evalCriterion(ast.b,value,type,field,params);
-  case 'not':return !evalCriterion(ast.a,value,type,field,params);
+  case 'or':return evalCriterion(ast.a,value,type,field,params,ctx)||evalCriterion(ast.b,value,type,field,params,ctx);
+  case 'and':return evalCriterion(ast.a,value,type,field,params,ctx)&&evalCriterion(ast.b,value,type,field,params,ctx);
+  case 'not':return !evalCriterion(ast.a,value,type,field,params,ctx);
   case 'null':return ast.neg?value!=null:value==null;
-  case 'between':{const lo=resolve(ast.lo,type,field,params),hi=resolve(ast.hi,type,field,params);return value!=null&&cmp(value,lo,type)>=0&&cmp(value,hi,type)<=0;}
-  case 'like':{const pat=String(resolve(ast.v,'text',field,params));return value!=null&&likeRe(pat).test(String(value));}
-  case 'cmp':{const b=resolve(ast.v,type,field,params);if(value==null)return false;const c=cmp(value,b,type);
+  case 'between':{const lo=resolve(ast.lo,type,field,params,ctx),hi=resolve(ast.hi,type,field,params,ctx);return value!=null&&cmp(value,lo,type)>=0&&cmp(value,hi,type)<=0;}
+  case 'like':{const pat=String(resolve(ast.v,'text',field,params,ctx));return value!=null&&likeRe(pat).test(String(value));}
+  case 'cmp':{const b=resolve(ast.v,type,field,params,ctx);if(value==null)return false;const c=cmp(value,b,type);
    return {'=':c===0,'<>':c!==0,'<':c<0,'>':c>0,'<=':c<=0,'>=':c>=0}[ast.op];}
  }
  return false;
 }
 
 // ---------- Wykonanie kwerendy ----------
-function baseRows(tbls){
- const rowsOf=t=>tables[t].map(r=>Object.fromEntries(Object.entries(r).map(([k,v])=>[`${t}.${k}`,v])));
- const set=new Set(tbls);
- if(set.has('Wizyty')){
-  let rows=rowsOf('Wizyty');
-  if(set.has('Pacjenci'))rows=rows.flatMap(r=>rowsOf('Pacjenci').filter(p=>p['Pacjenci.id_pacjenta']===r['Wizyty.id_pacjenta']).map(p=>({...r,...p})));
-  if(set.has('Lekarze'))rows=rows.flatMap(r=>rowsOf('Lekarze').filter(l=>l['Lekarze.id_lekarza']===r['Wizyty.id_lekarza']).map(l=>({...r,...l})));
-  return rows;
+// Łączenie tabel wg relacji (INNER JOIN). Start od tabeli po stronie „wiele” (np. Wizyty, Wyniki),
+// do niej dołączamy tabele po stronie „jeden”. Tabele bez relacji — iloczyn kartezjański (jak w Accessie).
+function joinPlan(tbls,ds){
+ const set=new Set(tbls),rels=ds.relations.filter(r=>set.has(r.one)&&set.has(r.many));
+ const manyCount=t=>rels.filter(r=>r.many===t).length;
+ const start=[...tbls].sort((a,b)=>manyCount(b)-manyCount(a))[0];
+ if(!manyCount(start))return {start:null,steps:[],rest:tbls};
+ const joined=new Set([start]),steps=[];
+ let added=true;
+ while(added){added=false;
+  for(const r of rels){
+   if(joined.has(r.many)&&!joined.has(r.one)){steps.push({table:r.one,field:r.field,side:'one',with:r.many});joined.add(r.one);added=true;}
+   else if(joined.has(r.one)&&!joined.has(r.many)){steps.push({table:r.many,field:r.field,side:'many',with:r.one});joined.add(r.many);added=true;}
+  }
+ }
+ return {start,steps,rest:tbls.filter(t=>!joined.has(t))};
+}
+function baseRows(tbls,ds){
+ const rowsOf=t=>ds.tables[t].map(r=>Object.fromEntries(Object.entries(r).map(([k,v])=>[`${t}.${k}`,v])));
+ const plan=joinPlan(tbls,ds);
+ if(plan.start){
+  let rows=rowsOf(plan.start);
+  for(const st of plan.steps)rows=rows.flatMap(r=>rowsOf(st.table).filter(x=>x[`${st.table}.${st.field}`]===r[`${st.with}.${st.field}`]).map(x=>({...r,...x})));
+  return plan.rest.reduce((acc,t)=>acc.flatMap(a=>rowsOf(t).map(r=>({...a,...r}))),rows);
  }
  return tbls.reduce((acc,t)=>acc.flatMap(a=>rowsOf(t).map(r=>({...a,...r}))),[{}]);
 }
@@ -191,17 +213,27 @@ export function validateQuery(q){
  for(const c of used){const t=c.field.split('.')[0];if(!q.tables.includes(t))throw new QueryError(`Tabela ${t} nie jest dodana do projektu.`,'Dodaj ją przyciskiem „Pokaż tabelę” albo usuń kolumnę.');}
  if(!used.some(c=>c.show&&!(q.totals&&c.total==='where')))throw new QueryError('Kwerenda musi mieć co najmniej jedno pole docelowe.','Dodaj pole do siatki i zaznacz w nim „Pokaż”.');
 }
-export function runQuery(q,params={}){
+function unrelatedWarning(tbls,ds){
+ if(tbls.length<2)return null;
+ const plan=joinPlan(tbls,ds);
+ if(plan.start&&!plan.rest.length)return null;
+ const loose=plan.start?[plan.start,...plan.rest]:tbls;
+ const [a,b]=loose;
+ const hub=ds.order.find(t=>!tbls.includes(t)&&ds.relations.some(r=>r.many===t&&r.one===a)&&ds.relations.some(r=>r.many===t&&r.one===b));
+ return `Tabele ${a} i ${b} nie są ze sobą bezpośrednio powiązane — ${hub?`bez tabeli ${hub} `:''}Access łączy każdy rekord z każdym.`;
+}
+export function runQuery(q,params={},dsArg){
+ const ds=dataset(dsArg);
  validateQuery(q);
- const cols=q.cols.filter(c=>c.field).map(c=>({...c,total:q.totals?c.total||'group':null,type:fieldType(c.field)}));
+ const cols=q.cols.filter(c=>c.field).map(c=>({...c,total:q.totals?c.total||'group':null,type:fieldType(c.field,ds)}));
  const parsed=cols.map((c,ci)=>c.crit.map((s,ri)=>{if(!s.trim())return null;try{return parseCriterion(s);}catch(e){e.where={col:q.cols.indexOf(q.cols.filter(x=>x.field)[ci]),row:ri};throw e;}}));
  const isAgg=c=>c.total&&!['group','where'].includes(c.total);
  const test=(row,pick)=>{
   const active=[...Array(CRIT_ROWS).keys()].filter(r=>cols.some((c,ci)=>pick(c)&&parsed[ci][r]));
   if(!active.length)return true;
-  return active.some(r=>cols.every((c,ci)=>!pick(c)||!parsed[ci][r]||(()=>{try{return evalCriterion(parsed[ci][r],row[isAgg(c)?`${c.total}:${c.field}`:c.field],isAgg(c)&&c.total==='count'?'number':isAgg(c)&&['sum','avg'].includes(c.total)?'number':c.type,c.field.split('.')[1],params);}catch(e){e.where={col:q.cols.indexOf(q.cols.filter(x=>x.field)[ci]),row:r};throw e;}})()));
+  return active.some(r=>cols.every((c,ci)=>!pick(c)||!parsed[ci][r]||(()=>{try{return evalCriterion(parsed[ci][r],row[isAgg(c)?`${c.total}:${c.field}`:c.field],isAgg(c)&&c.total==='count'?'number':isAgg(c)&&['sum','avg'].includes(c.total)?'number':c.type,c.field.split('.')[1],params,ds);}catch(e){e.where={col:q.cols.indexOf(q.cols.filter(x=>x.field)[ci]),row:r};throw e;}})()));
  };
- let rows=baseRows(q.tables).filter(r=>test(r,c=>!isAgg(c)));
+ let rows=baseRows(q.tables,ds).filter(r=>test(r,c=>!isAgg(c)));
  let outCols=cols.filter(c=>c.show&&c.total!=='where');
  if(q.totals){
   const groupCols=cols.filter(c=>c.total==='group');
@@ -221,7 +253,7 @@ export function runQuery(q,params={}){
    let d=a==null&&b==null?0:a==null?-1:b==null?1:cmp(a,b,type);if(type==='datetime'&&d===0&&a!=null&&b!=null)d=String(a).localeCompare(String(b));if(d)return c.sort==='desc'?-d:d;}return A.i-B.i;}).map(x=>x.r);
  }
  const warnings=[];
- if(q.tables.length>1&&!q.tables.includes('Wizyty'))warnings.push('Tabele Pacjenci i Lekarze nie są ze sobą bezpośrednio powiązane — bez tabeli Wizyty Access łączy każdy rekord z każdym.');
+ const w=unrelatedWarning(q.tables,ds);if(w)warnings.push(w);
  return {columns:outCols.map(c=>({key:colKey(c),label:colLabel(c,cols),type:isAgg(c)?'number':c.type})),rows:rows.map(r=>outCols.map(c=>r[colKey(c)]??null)),warnings};
 }
 
@@ -242,14 +274,19 @@ function sqlCrit(a,F){
  }
  return '';
 }
-export function fromClause(tbls){
- const s=new Set(tbls);
- if(s.has('Wizyty')&&s.has('Pacjenci')&&s.has('Lekarze'))return 'Lekarze INNER JOIN (Pacjenci INNER JOIN Wizyty ON Pacjenci.id_pacjenta = Wizyty.id_pacjenta) ON Lekarze.id_lekarza = Wizyty.id_lekarza';
- if(s.has('Wizyty')&&s.has('Pacjenci'))return 'Pacjenci INNER JOIN Wizyty ON Pacjenci.id_pacjenta = Wizyty.id_pacjenta';
- if(s.has('Wizyty')&&s.has('Lekarze'))return 'Lekarze INNER JOIN Wizyty ON Lekarze.id_lekarza = Wizyty.id_lekarza';
- return tbls.join(', ');
+export function fromClause(tbls,dsArg){
+ const ds=dataset(dsArg),set=new Set(tbls);let expr=null;const used=new Set();
+ for(const r of ds.relations){
+  if(!set.has(r.one)||!set.has(r.many))continue;
+  const on=`${r.one}.${r.field} = ${r.many}.${r.field}`;
+  if(!expr){expr=`${r.one} INNER JOIN ${r.many} ON ${on}`;used.add(r.one);used.add(r.many);}
+  else{const add=used.has(r.one)?r.many:r.one;expr=`${add} INNER JOIN (${expr}) ON ${on}`;used.add(add);}
+ }
+ if(!expr)return tbls.join(', ');
+ const rest=tbls.filter(t=>!used.has(t));
+ return rest.length?[expr,...rest].join(', '):expr;
 }
-export function toSQL(q){
+export function toSQL(q,ds){
  const cols=q.cols.filter(c=>c.field);
  if(!q.tables.length)return 'SELECT\nFROM ;';
  const isAgg=c=>q.totals&&c.total&&!['group','where'].includes(c.total);
@@ -258,10 +295,10 @@ export function toSQL(q){
  const where=cond(c=>!isAgg(c)),having=cond(isAgg);
  const group=q.totals?cols.filter(c=>c.total==='group').map(c=>c.field):[];
  const order=cols.filter(c=>c.sort&&!(q.totals&&c.total==='where')).map(c=>`${isAgg(c)?`${aggSQL[c.total]}(${c.field})`:c.field}${c.sort==='desc'?' DESC':''}`);
- return [`SELECT ${sel.join(', ')||'*'}`,`FROM ${fromClause(q.tables)}`,where&&`WHERE ${where}`,group.length&&`GROUP BY ${group.join(', ')}`,having&&`HAVING ${having}`,order.length&&`ORDER BY ${order.join(', ')}`].filter(Boolean).join('\n')+';';
+ return [`SELECT ${sel.join(', ')||'*'}`,`FROM ${fromClause(q.tables,ds)}`,where&&`WHERE ${where}`,group.length&&`GROUP BY ${group.join(', ')}`,having&&`HAVING ${having}`,order.length&&`ORDER BY ${order.join(', ')}`].filter(Boolean).join('\n')+';';
 }
 
-// ---------- Zlecenia recepcji ----------
+// ---------- Zlecenia recepcji (Stomatolog) ----------
 const col=(field,extra={})=>({...emptyColumn(),field,...extra});
 const crit=(first,...rest)=>[first,...rest,'',''].slice(0,CRIT_ROWS);
 export const tasks=[
@@ -302,38 +339,57 @@ export const tasks=[
   hints:{tooMany:'Parametr wpisz jako kryterium w kolumnie nazwisko: [Podaj nazwisko pacjenta:].',tooFew:'Parametr musi stać w kolumnie nazwisko (Pacjenci), a nie w innej.',wrong:'Parametr wpisz jako kryterium w kolumnie nazwisko: [Podaj nazwisko pacjenta:].'},
   solution:{tables:['Pacjenci','Wizyty'],totals:false,cols:[col('Pacjenci.nazwisko',{crit:crit('[Podaj nazwisko pacjenta:]')}),col('Wizyty.termin'),col('Wizyty.cel')]}}
 ];
-export const levelTasks=level=>tasks.filter(t=>t.level===level);
+
+// ---------- Zbiory danych ----------
+const stomatolog={
+ id:'stomatolog',title:'Stomatolog',tables:S.tables,fieldTypes:S.fieldTypes,order:['Pacjenci','Wizyty','Lekarze'],relations:S.relations,today:S.SIM_TODAY,tasks,levels:3,
+ labels:{tasks:'Zlecenia recepcji',brief:'Zlecenie z recepcji',client:'recepcja',clientCap:'Recepcja',tablesHint:'przy danych pacjenta i wizyty potrzebne są obie tabele',
+  paramMissing:{msg:'To ma być kwerenda parametryczna — Access ma zapytać o nazwisko.',hint:'W kolumnie nazwisko, w wierszu Kryteria, wpisz pytanie w nawiasie kwadratowym: [Podaj nazwisko pacjenta:].'},
+  paramOne:'Zostaw jeden parametr w kolumnie nazwisko.',altWord:'nazwiska'},
+ manyNotes:{Wizyty:' W projekcie jest tabela Wizyty — każdy pacjent pojawia się tyle razy, ile ma wizyt. Usuń zbędną tabelę (×).'},
+ cheat:[['"Wrocław" lub Wrocław','równe tekstowi (wielkość liter bez znaczenia)'],['>300 · <=100 · <>0','porównania liczb'],['Między #2026-10-05# I #2026-10-09#','zakres (z końcami)'],['#2026-10-07# · Jak "2026-10-07*"','jeden dzień w polu termin'],['Jak "K*" · Jak "?a*"','wzorzec: * dowolne znaki, ? jeden znak'],['Jest Null · Nie jest Null','puste / niepuste pole'],['[Podaj nazwisko pacjenta:]','parametr — Access zapyta przy uruchomieniu'],['Date()+1','jutro (w symulacji „dziś” to 2026-10-06)']],
+ cheatNote:'Uproszczenie symulacji: w polu termin porównywana jest sama data. W prawdziwym Accessie #2026-10-09# oznacza północ, więc wizyta 9.10 o 11:30 jest już „po” tej dacie — bezpieczniej wpisać >=#2026-10-05# I <#2026-10-10#.'
+};
+const zawody={id:'zawody',...zawodyQueries};
+export const datasets={stomatolog,zawody};
+// Zbiór danych: obiekt, identyfikator ('zawody') albo nic (Stomatolog).
+export function dataset(x){if(x&&typeof x==='object')return x;return datasets[x]||stomatolog;}
+const taskDs=task=>dataset(task?.dataset);
+
+export const levelTasks=(level,ds)=>dataset(ds).tasks.filter(t=>t.level===level);
 export const LEVEL_MAX=6,PASS_MIN=2;
 
-const matchKey=(need,key)=>need.endsWith('.*')?key.startsWith(need.slice(0,-1))&&key.includes(':')===need.includes(':'):need===key;
+const matchKey=(need,key)=>need.endsWith('*')?key.startsWith(need.slice(0,-1))&&key.includes(':')===need.includes(':'):need===key;
 function project(result,need){
  const idx=need.map(n=>result.columns.findIndex(c=>matchKey(n.key,c.key)));
  return result.rows.map(r=>idx.map(i=>r[i]));
 }
 function runWith(q,task,value){
  const ps=queryParams(q);const params=Object.fromEntries(ps.map(p=>[p,value]));
- return runQuery(q,params);
+ return runQuery(q,params,taskDs(task));
 }
 export function expectedRows(task,value=task.param){return project(runWith(task.solution,task,value),task.need);}
+const aggLabel={count:'Policz',sum:'Suma',min:'Min',max:'Maks',avg:'Średnia'};
 
 // Sprawdza kwerendę ucznia względem zlecenia. Zwraca {ok, msg, hint}.
 export function checkTask(task,q){
  let res;
+ const ds=taskDs(task),L=ds.labels;
  const ps=queryParams(q);
- if(task.param&&!ps.length)return {ok:false,msg:'To ma być kwerenda parametryczna — Access ma zapytać o nazwisko.',hint:'W kolumnie nazwisko, w wierszu Kryteria, wpisz pytanie w nawiasie kwadratowym: [Podaj nazwisko pacjenta:].'};
- if(ps.length>1)return {ok:false,msg:'Kwerenda zadaje kilka pytań, a recepcja chce jedno.',hint:'Zostaw jeden parametr w kolumnie nazwisko.'};
- if(!task.param&&ps.length)return {ok:false,msg:'To zlecenie nie wymaga parametru — recepcja nie chce odpowiadać na pytania.',hint:'Zamiast [ ... ] wpisz konkretną wartość kryterium.'};
+ if(task.param&&!ps.length)return {ok:false,msg:L.paramMissing.msg,hint:L.paramMissing.hint};
+ if(ps.length>1)return {ok:false,msg:`Kwerenda zadaje kilka pytań, a ${L.client} chce jedno.`,hint:L.paramOne};
+ if(!task.param&&ps.length)return {ok:false,msg:`To zlecenie nie wymaga parametru — ${L.client} nie chce odpowiadać na pytania.`,hint:'Zamiast [ ... ] wpisz konkretną wartość kryterium.'};
  try{res=runWith(q,task,task.param);}catch(e){return {ok:false,msg:e.message,hint:e.hint};}
  const shown=res.columns;
  const missing=task.need.filter(n=>!shown.some(c=>matchKey(n.key,c.key)));
  if(missing.length){const m=missing[0];const agg=m.key.includes(':');
-  return {ok:false,msg:`Brakuje kolumny: ${missing.map(x=>x.label).join(', ')}.`,hint:agg?`Włącz „Sumy (Σ)” i w wierszu Podsumowanie wybierz ${m.key.startsWith('count')?'Policz':'Suma'}.`:q.cols.some(c=>c.field===m.key)?'Pole jest w siatce, ale ma odznaczone „Pokaż”.':`Dodaj pole ${m.key} do siatki (kliknij je w okienku tabeli).`};}
+  return {ok:false,msg:`Brakuje kolumny: ${missing.map(x=>x.label).join(', ')}.`,hint:agg?`Włącz „Sumy (Σ)” i w wierszu Podsumowanie wybierz ${aggLabel[m.key.split(':')[0]]||'Suma'}.`:q.cols.some(c=>c.field===m.key)?'Pole jest w siatce, ale ma odznaczone „Pokaż”.':`Dodaj pole ${m.key} do siatki (kliknij je w okienku tabeli).`};}
  const extra=shown.filter(c=>!task.need.some(n=>matchKey(n.key,c.key)));
- if(extra.length)return {ok:false,msg:`Zbędna kolumna w wyniku: ${extra.map(c=>c.label).join(', ')}.`,hint:'Recepcja prosi tylko o wymienione kolumny. Pole z kryterium może zostać w siatce — odznacz w nim „Pokaż”.'};
+ if(extra.length)return {ok:false,msg:`Zbędna kolumna w wyniku: ${extra.map(c=>c.label).join(', ')}.`,hint:`${L.clientCap} prosi tylko o wymienione kolumny. Pole z kryterium może zostać w siatce — odznacz w nim „Pokaż”.`};
  const got=project(res,task.need),exp=expectedRows(task);
  const bag=rows=>rows.map(r=>JSON.stringify(r)).sort();
- const extraTables=q.tables.filter(t=>!task.solution.tables.includes(t)&&!(task.id==='2b'&&t==='Lekarze'));
- const tableNote=extraTables.includes('Wizyty')?' W projekcie jest tabela Wizyty — każdy pacjent pojawia się tyle razy, ile ma wizyt. Usuń zbędną tabelę (×).':'';
+ const extraTables=q.tables.filter(t=>!task.solution.tables.includes(t)&&!(task.optionalTables||[]).includes(t));
+ const tableNote=extraTables.map(t=>ds.manyNotes?.[t]).find(Boolean)||'';
  if(got.length!==exp.length){const d=got.length-exp.length;
   return {ok:false,msg:d>0?`Masz ${d} ${plural(d,'wiersz','wiersze','wierszy')} za dużo (${got.length} zamiast ${exp.length}).`:`Brakuje ${-d} ${plural(-d,'wiersza','wierszy','wierszy')} (${got.length} zamiast ${exp.length}).`,hint:(d>0?task.hints.tooMany:task.hints.tooFew)+tableNote};}
  const a=bag(got),b=bag(exp);
@@ -342,7 +398,7 @@ export function checkTask(task,q){
   if(got.map(r=>JSON.stringify(r[i])).join()!==exp.map(r=>JSON.stringify(r[i])).join())return {ok:false,msg:'Wiersze są dobre, ale kolejność nie ta.',hint:task.hints.order};}
  if(task.altParam){
   try{const g2=project(runWith(q,task,task.altParam),task.need),e2=expectedRows(task,task.altParam);
-   if(bag(g2).join()!==bag(e2).join())return {ok:false,msg:`Dla „${task.param}” działa, ale dla innego nazwiska — nie.`,hint:task.hints.wrong};
+   if(bag(g2).join()!==bag(e2).join())return {ok:false,msg:`Dla „${task.param}” działa, ale dla innego ${L.altWord} — nie.`,hint:task.hints.wrong};
   }catch(e){return {ok:false,msg:e.message,hint:e.hint};}
  }
  return {ok:true,msg:`Zlecenie wykonane: ${exp.length} ${plural(exp.length,'wiersz','wiersze','wierszy')}, właściwe kolumny${task.order?' i kolejność':''}.`};
@@ -350,19 +406,21 @@ export function checkTask(task,q){
 export function plural(n,one,few,many){n=Math.abs(n);if(n===1)return one;const d=n%10,t=n%100;return d>=2&&d<=4&&(t<12||t>14)?few:many;}
 
 // Punkty poziomu: 2 za zaliczenie przy 1. sprawdzeniu, 1 po poprawce.
-export function levelResult(level,state={}){
- const ts=levelTasks(level),st=state.tasks||{};
+export function levelResult(level,state={},ds){
+ const ts=levelTasks(level,ds),st=state.tasks||{};
  const passed=ts.filter(t=>st[t.id]?.passed);
  const score=ts.reduce((s,t)=>s+(st[t.id]?.passed?(st[t.id].firstTry?2:1):0),0);
- return {done:passed.length>=PASS_MIN,score,max:LEVEL_MAX,passed:passed.length,summary:`Poziom ${level}: ${passed.length}/3 zleceń`};
+ const d=dataset(ds);
+ return {done:passed.length>=PASS_MIN,score,max:LEVEL_MAX,passed:passed.length,summary:d.levelSummary?d.levelSummary(level,passed.length):`Poziom ${level}: ${passed.length}/3 zleceń`};
 }
-export function levelUnlocked(level,state={}){return level===1||levelResult(level-1,state).passed>=PASS_MIN;}
+export function levelUnlocked(level,state={},ds){return level===1||levelResult(level-1,state,ds).passed>=PASS_MIN;}
 export function recordCheck(state={},task,q){
+ const ds=taskDs(task);
  const r=checkTask(task,q);const prev=state.tasks?.[task.id]||{attempts:0};
  if(prev.passed)return {state,result:r};
  const t={...prev,attempts:prev.attempts+1,passed:r.ok,firstTry:r.ok&&prev.attempts===0};
  const next={...state,tasks:{...state.tasks,[task.id]:t}};
  const modes={...next.modes};
- for(const l of [1,2,3])modes[`l${l}`]=levelResult(l,next);
+ for(let l=1;l<=(ds.levels||3);l++)modes[`l${l}`]=levelResult(l,next,ds);
  return {state:{...next,modes},result:r};
 }
