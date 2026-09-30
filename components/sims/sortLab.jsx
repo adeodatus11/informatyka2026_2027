@@ -1,6 +1,8 @@
 import React,{useEffect,useRef,useState} from 'react';
 import {Icon} from '../icons.jsx';
 import './sortLab.css';
+import {shuffled} from '../../content/shuffle.js';
+import {orderOptions,optionKey} from './optionOrder.js';
 import {isSorted,bubbleTrace,insertionTrace,WORKED,attempt,taskPoints,bubbleQuestions,insertionQuestions,raceQuestions,bubbleResult,insertionResult,raceResult,
  RACE_SIZES,RACE_KINDS,raceRun,fmtNum,humanTime,MANUAL_ROUNDS,CARD_IDS,orderValues,startOrder,roundBench,swapAdjacent,compareCards,CHECK_COST,roundScore,manualResult,
  PSEUDO_STEPS,PSEUDO_SHUFFLED,checkPseudo,pseudoResult} from '../../content/sims/sortLab.js';
@@ -19,7 +21,7 @@ function Window({title,score,max,children,sub}){
 function Questions({qs,state={},onAnswer}){
  return <ol className="sl-qs">{qs.map((q,n)=>{const st=state[q.id]||{};return <li key={q.id} className={st.solved?'is-solved':''}>
   <p className="sl-q-title"><span className="sl-num" aria-hidden="true">{st.solved?<Icon name="check" size={16}/>:n+1}</span><span className="sl-prompt">{q.prompt}</span>{st.solved&&<em>+{pts(taskPoints(st.solvedAt))} pkt</em>}</p>
-  <div className="choices sl-choices" role="group" aria-label={q.prompt}>{q.options.map((o,i)=><button type="button" key={o} className={`choice ${st.pick===i?'selected':''}`} aria-pressed={st.pick===i} disabled={st.solved} onClick={()=>onAnswer(q,i)}><span className="choice-letter">{String.fromCharCode(65+i)}</span><span>{o}</span></button>)}</div>
+  <div className="choices sl-choices" role="group" aria-label={q.prompt}>{orderOptions(optionKey('sortLab',q.id,q.options),q.options).map(([i,o],pos)=><button type="button" key={o} data-option={i} className={`choice ${st.pick===i?'selected':''}`} aria-pressed={st.pick===i} disabled={st.solved} onClick={()=>onAnswer(q,i)}><span className="choice-letter">{String.fromCharCode(65+pos)}</span><span>{o}</span></button>)}</div>
   {st.last&&<Msg m={{ok:st.solved,text:st.solved?`${st.solvedAt===1?'Trafione za pierwszym razem: +2 pkt.':'Poprawione: +1 pkt.'} ${q.explain}`:`Jeszcze nie. ${q.tip}`}}/>}
  </li>;})}</ol>;
 }
@@ -191,7 +193,7 @@ function Pseudo({value={},onChange}){
  return <Window title="Pseudokod · sortowanie bąbelkowe" score={res.score} max={res.max}>
   <p>Ułóż kroki algorytmu we właściwej kolejności — klikaj od pierwszego do ostatniego. Tak zaczyna się każdy program: najpierw plan po polsku.</p>
   <div className="sl-pseudo">
-   <div className="choices sl-choices" role="group" aria-label="Kroki do ułożenia">{PSEUDO_SHUFFLED.map(id=>{const p=order.indexOf(id);return <button type="button" key={id} className={`choice ${p>=0?'selected':''}`} aria-pressed={p>=0} disabled={value.solved} onClick={()=>toggle(id)}><span className="choice-letter">{p>=0?p+1:'+'}</span><span>{byId(id).text}</span></button>;})}</div>
+   <div className="choices sl-choices" role="group" aria-label="Kroki do ułożenia">{shuffled(`sim:sortLab:pseudo:${PSEUDO_SHUFFLED.join('|')}`,PSEUDO_SHUFFLED).map(([,id])=>{const p=order.indexOf(id);return <button type="button" key={id} data-option={PSEUDO_STEPS.findIndex(s=>s.id===id)} className={`choice ${p>=0?'selected':''}`} aria-pressed={p>=0} disabled={value.solved} onClick={()=>toggle(id)}><span className="choice-letter">{p>=0?p+1:'+'}</span><span>{byId(id).text}</span></button>;})}</div>
    <ol className={`sl-code ${value.solved?'is-solved':''}`} aria-label="Twój algorytm">{order.length?order.map((id,i)=><li key={id} className={wrong.has(i)?'is-bad':''} style={{paddingLeft:value.solved?`${byId(id).indent*1.6+0.6}em`:undefined}}>{byId(id).text}{wrong.has(i)&&<span className="sl-badmark"> ← zła pozycja</span>}</li>):<li className="muted">Kliknij pierwszy krok…</li>}</ol>
   </div>
   <div className="sl-controls"><button type="button" className="btn" disabled={order.length!==PSEUDO_STEPS.length||value.solved} onClick={check}>Sprawdź kolejność</button>{order.length>0&&!value.solved&&<button type="button" className="btn secondary sl-small" onClick={()=>save({...value,order:[],check:null})}><Icon name="reset" size={18}/>Wyczyść</button>}</div>
