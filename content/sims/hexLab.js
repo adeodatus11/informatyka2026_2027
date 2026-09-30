@@ -130,35 +130,26 @@ export function checkColor({r, g, b, darkest} = {}, attempt = 1) {
 }
 
 export const macLock = {
+  sticker: {device: 'Drukarka w pokoju nauczycielskim', mac: '00:1B:44:A0:33:9C'},
   ouis: [
-    {oui: '3C:5A:B4', maker: 'ZielonyPC', what: 'komputery pracowni'},
+    {oui: '3C:5A:B4', maker: 'ZielonyPC', what: 'komputery'},
     {oui: '00:1B:44', maker: 'DrukTech', what: 'drukarki'},
     {oui: 'F0:9F:C2', maker: 'AirNode', what: 'punkty dostępowe Wi-Fi'},
   ],
-  devices: [
-    {name: 'PC-01', mac: '3C:5A:B4:12:0F:01'},
-    {name: 'DRUK-NAUCZ', mac: '00:1B:44:A0:33:9C'},
-    {name: 'PC-07', mac: '3C:5A:B4:12:0F:07'},
-    {name: 'AP-PIETRO2', mac: 'F0:9F:C2:7E:10:02'},
-    {name: 'PC-12', mac: '3C:5A:B5:12:0F:0C'},
-  ],
-  intruder: 4,
-  bits: {options: ['24', '32', '48', '128'], correct: 2},
+  maker: 1,
+  bits: {options: ['6', '12', '24', '48'], correct: 3},
 };
 export const ouiOf = mac => mac.split(':').slice(0, 3).join(':');
-export function findIntruders() { const known = new Set(macLock.ouis.map(o => o.oui)); return macLock.devices.map((d, i) => known.has(ouiOf(d.mac)) ? -1 : i).filter(i => i >= 0); }
-export function checkMac({device, bits} = {}, attempt = 1) {
+export function checkMac({maker, bits} = {}, attempt = 1) {
   const problems = [];
-  const dev = Number(device);
-  if (device === undefined || device === null || device === '') problems.push('wskaż urządzenie intruza');
-  else if (dev !== macLock.intruder) problems.push(attempt >= 2
-    ? `${macLock.devices[dev].name}: jego pierwsze 3 bajty ${ouiOf(macLock.devices[dev].mac)} są w tabeli. Porównuj każdy bajt, znak po znaku`
-    : `${macLock.devices[dev].name} ma producenta z tabeli — to szkolne urządzenie`);
+  if (maker === undefined || maker === null || maker === '') problems.push('wybierz producenta');
+  else if (Number(maker) !== macLock.maker) problems.push(attempt >= 2
+    ? `producent: pierwsze 3 pary z naklejki to ${ouiOf(macLock.sticker.mac)} — znajdź dokładnie ten zapis w kolumnie OUI`
+    : 'producent się nie zgadza — porównaj PIERWSZE 3 pary cyfr z naklejki z kolumną OUI');
   if (bits === undefined || bits === null || bits === '') problems.push('odpowiedz, ile bitów ma adres MAC');
-  else if (Number(bits) !== macLock.bits.correct) problems.push(attempt >= 2 ? 'bity: MAC ma 6 bajtów, a każdy bajt to 8 bitów' : 'liczba bitów się nie zgadza — policz bajty (pary cyfr)');
+  else if (Number(bits) !== macLock.bits.correct) problems.push(attempt >= 2 ? 'bity: par jest 6, a każda para to 8 bitów, więc 6 · 8 = ?' : 'liczba bitów się nie zgadza — policz pary cyfr i pomnóż przez 8');
   const ok = problems.length === 0;
-  const extra = !ok && attempt >= 3 ? ' Podpowiedź: jedno z urządzeń „PC” różni się od pozostałych tylko jedną cyfrą w 3. bajcie.' : '';
-  return {ok, message: ok ? 'Intruz namierzony: PC-12 ma OUI 3C:5A:B5 (B5, nie B4) — ktoś podszył się pod komputer pracowni. MAC = 6 bajtów = 48 bitów.' : `Do poprawy: ${problems.join('; ')}.${extra}`};
+  return {ok, message: ok ? 'Zgadza się: 00:1B:44 to DrukTech, czyli drukarka. MAC = 6 par = 6 bajtów = 48 bitów. Administrator sieci po samym początku adresu widzi, jakiego producenta jest urządzenie — i od razu zauważa obcy sprzęt.' : `Do poprawy: ${problems.join('; ')}.`};
 }
 
 export const asciiLock = {bytes: ['57', '4F', '4C', '4E', '4F', '53', '43'], answer: 'WOLNOSC'};
@@ -178,7 +169,7 @@ export function checkAscii(text, attempt = 1) {
 export const escapeLocks = [
   {id: 'power', title: 'Panel zasilania'},
   {id: 'color', title: 'Kolor alarmu'},
-  {id: 'mac', title: 'Obca karta sieciowa'},
+  {id: 'mac', title: 'Naklejka z adresem MAC'},
   {id: 'ascii', title: 'Wiadomość z serwera'},
 ];
 export const ESCAPE_MAX = 12;

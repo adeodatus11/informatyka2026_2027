@@ -1,4 +1,4 @@
-import{l as e,n as t,o as n,r}from"./index-CV5wtjK7.js";var i=e(n(),1),a=3e3;String.raw`
+import{l as e,n as t,o as n,r}from"./index-C4lDwUD-.js";var i=e(n(),1),a=3e3;String.raw`
 import sys, json, builtins, traceback, math, ast, time
 
 _PL_FILE = 'twoj_kod.py'

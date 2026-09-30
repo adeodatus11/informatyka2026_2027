@@ -80,12 +80,12 @@ test('hex: kłódki escape roomu — poprawne odpowiedzi i informacja zwrotna', 
   assert.equal(hex.checkColor({r: 'FF', g: '88', b: '00', darkest: 0}).ok, false);
   assert.match(hex.checkColor({r: 'FF', g: '55', b: '00', darkest: 1}).message, /zielony \(G\): za mało/);
   assert.match(hex.checkColor({r: 'FF', g: '55', b: '00', darkest: 1}, 3).message, /136 = 8 · 16 \+ 8 = 88/);
-  // 3. MAC — dokładnie jeden intruz, 48 bitów
-  assert.deepEqual(hex.findIntruders(), [hex.macLock.intruder]);
-  assert.equal(hex.macLock.bits.options[hex.macLock.bits.correct], '48');
-  for (const d of hex.macLock.devices) assert.equal(d.mac.split(':').length, 6);
-  assert.equal(hex.checkMac({device: 4, bits: 2}).ok, true);
-  assert.equal(hex.checkMac({device: 0, bits: 2}).ok, false);
+  // 3. MAC — producent z pierwszych 3 par, 48 bitów
+  assert.equal(hex.macLock.ouis[hex.macLock.maker].oui, hex.ouiOf(hex.macLock.sticker.mac));
+  assert.equal(hex.macLock.bits.options[hex.macLock.bits.correct], String(hex.macLock.sticker.mac.split(':').length * 8));
+  assert.equal(hex.checkMac({maker: 1, bits: 3}).ok, true);
+  assert.equal(hex.checkMac({maker: 0, bits: 3}).ok, false);
+  assert.equal(hex.checkMac({maker: 1, bits: 1}).ok, false);
   // 4. ASCII
   assert.equal(hex.decodeAscii(hex.asciiLock.bytes), 'WOLNOSC');
   assert.equal(hex.checkAscii('wolność').ok, true);
