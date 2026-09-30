@@ -8,14 +8,14 @@ async function activity(page,a){
  if(a.type==='dentalSimulator'){if(a.mode==='create'){await createDentalProject(page);await prepareDentalRecords(page);}else await performDentalQueries(page);}
  const group=()=>page.getByRole('group',{name:a.question,exact:true});
  if(a.type==='computerChallenge'){if(!await page.locator('.component-list').evaluate(e=>e.open))await page.locator('.component-list summary').click();for(const [i,name] of ['Pamięć RAM','Procesor','Karta graficzna','Dysk SSD M.2'].entries()){await page.locator('.component-list').getByRole('button',{name:new RegExp(name)}).click();if(i<3)await page.getByRole('button',{name:'Następny element'}).click();}}
- if(a.type==='choice')await group().getByRole('button').nth(a.correct[0]).click();
- if(a.type==='multi'){const g=group();for(const i of a.correct||Array.from({length:a.min||1},(_,i)=>i))await g.getByRole('checkbox').nth(i).check();await g.getByRole('button',{name:'Sprawdź wybór'}).click();}
+ if(a.type==='choice')await group().locator(`button[data-option="${a.correct[0]}"]`).click();
+ if(a.type==='multi'){const g=group();for(const i of a.correct||Array.from({length:a.min||1},(_,i)=>i))await g.locator(`label[data-option="${i}"] input`).check();await g.getByRole('button',{name:'Sprawdź wybór'}).click();}
  if(a.type==='hardware')await page.getByRole('button',{name:'Wybieram',exact:true}).nth(1).click();
  if(a.type==='matching')for(let i=0;i<a.rows.length;i++)await page.locator(`#${a.id}-${i}`).selectOption(String(a.rows[i].correct[0]));
  if(a.type==='sort')for(let i=0;i<a.files.length;i++){const [n,f]=a.files[i];const file=page.getByRole('button',{name:n,exact:true});const folder=page.getByRole('button',{name:`Przenieś wybrany plik do folderu ${a.folders[f]}`});if(i===0)await file.dragTo(folder);else{await file.click();await folder.click();}}
  if(a.type==='text'){await page.locator(`#${a.id}`).fill(a.mode==='filename'?'Plan_wycieczki_Krakow_2026.docx':'RAM, bo pracuję z wieloma aplikacjami');await page.locator('form').filter({has:page.locator(`#${a.id}`)}).getByRole('button').click();}
- if(a.type==='scenarios')for(const c of a.cases){const d=page.locator('details.scenario').filter({has:page.locator('summary').filter({hasText:c.title})});await d.locator('summary').click();for(const i of c.correct)await d.getByRole('checkbox').nth(i).check();await d.getByRole('button',{name:'Sprawdź wybór'}).click();}
- if(a.type==='sequence'){for(const i of a.correct)await page.getByRole('button',{name:a.options[i],exact:false}).click();await page.getByRole('button',{name:'Sprawdź kolejność'}).click();}
+ if(a.type==='scenarios')for(const c of a.cases){const d=page.locator('details.scenario').filter({has:page.locator('summary').filter({hasText:c.title})});await d.locator('summary').click();for(const i of c.correct)await d.locator(`label[data-option="${i}"] input`).check();await d.getByRole('button',{name:'Sprawdź wybór'}).click();}
+ if(a.type==='sequence'){const box=page.locator('.activity').filter({has:page.getByRole('heading',{name:a.question,exact:true})});for(const i of a.correct)await box.locator(`button[data-option="${i}"]`).click();await box.getByRole('button',{name:'Sprawdź kolejność'}).click();}
  if(a.type==='appNeeds'){await page.locator(`#${a.id}`).selectOption(a.categories[1]);await page.getByRole('checkbox',{name:'Kamera',exact:true}).check();await page.locator(`#${a.id}-reason`).fill('Wysłanie zdjęcia w wiadomości');await page.getByRole('button',{name:'Porównaj z przykładami'}).click();}
  if(a.type==='checklist')for(const item of a.items)await page.getByRole('checkbox',{name:item,exact:true}).check();
  if(a.type==='flow')for(let i=1;i<a.nodes.length;i++)await page.getByRole('button',{name:'Odkryj kolejny krok'}).click();

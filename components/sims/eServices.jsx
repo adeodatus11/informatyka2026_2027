@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import {Icon} from '../icons.jsx';
 import {profile,loginMethods,makeCode,checkCode,phishing,classify,chooseAction,loginResult,modules,moduleById,checkStep,attempt,moduleScore,moduleDone,expertResult} from '../../content/sims/eServices.js';
 import './eServices.css';
+import {orderOptions,optionKey} from './optionOrder.js';
 
 const fmt=n=>String(n).replace('.',',');
 function Lock({open}){return <span className={`es-lock ${open?'open':''}`} aria-hidden="true"/>;}
@@ -46,7 +47,7 @@ function Login({value={},onChange}){
    <p className="small muted">Wskazówka: czytaj adres od końca do pierwszego „/”. Liczy się to, co stoi tuż przed „/”.</p>
    <div className="es-choice-row" role="group" aria-label="Ocena">{[[true,'Bezpieczna'],[false,'Phishing (pułapka)']].map(([safe,label])=><button key={label} className={`es-judge ${safe?'safe':'bad'} ${st.cls?.choice===safe?'picked':''}`} aria-pressed={st.cls?.choice===safe} disabled={st.cls?.ok&&st.cls.choice!==safe} onClick={()=>savePh(classify(item,st,safe))}>{safe?<Icon name="shield" size={20}/>:<Icon name="warning" size={20}/>}{label}</button>)}</div>
    {st.cls&&<Feedback ok={st.cls.ok}>{st.cls.ok?<><b>{st.cls.tries===1?'Dobrze! +1 pkt.':'Teraz dobrze: +0,5 pkt.'}</b> {item.explain}</>:<>Przyjrzyj się jeszcze raz: końcówce domeny, znakom (s czy 5? kropka czy myślnik?), kłódce i presji czasu.</>}</Feedback>}
-   {st.cls?.ok&&<fieldset className="es-fieldset"><legend>Co robisz?</legend><div className="choices">{item.actions.map((a,i)=><button key={a} className={`choice ${st.act?.choice===i?'selected':''}`} aria-pressed={st.act?.choice===i} disabled={st.act?.ok&&st.act.choice!==i} onClick={()=>savePh(chooseAction(item,st,i))}><span className="choice-letter">{String.fromCharCode(65+i)}</span><span>{a}</span></button>)}</div>
+   {st.cls?.ok&&<fieldset className="es-fieldset"><legend>Co robisz?</legend><div className="choices">{orderOptions(optionKey('eServices',`phishing:${item.id}`,item.actions),item.actions).map(([i,a],pos)=><button key={a} data-option={i} className={`choice ${st.act?.choice===i?'selected':''}`} aria-pressed={st.act?.choice===i} disabled={st.act?.ok&&st.act.choice!==i} onClick={()=>savePh(chooseAction(item,st,i))}><span className="choice-letter">{String.fromCharCode(65+pos)}</span><span>{a}</span></button>)}</div>
     {st.act&&<Feedback ok={st.act.ok}>{st.act.ok?(item.actionWhy[item.action]||'Dokładnie tak. SMS-y przekazujesz na 8080, podejrzane strony zgłaszasz na incydent.cert.pl.'):item.actionWhy[st.act.choice]}</Feedback>}
     {st.act?.ok&&idx<phishing.length-1&&<button className="btn" onClick={()=>setIdx(idx+1)}>Następna sytuacja <Icon name="right" size={18}/></button>}
    </fieldset>}
@@ -56,7 +57,7 @@ function Login({value={},onChange}){
 }
 
 // ---------------- Moduły eksperta ----------------
-function StepChoice({step,st,onTry}){return <><div className="choices">{step.options.map((o,i)=><button key={o} className={`choice ${st.choice===i?'selected':''}`} aria-pressed={st.choice===i} disabled={st.ok&&st.choice!==i} onClick={()=>onTry(i===step.correct,{choice:i})}><span className="choice-letter">{String.fromCharCode(65+i)}</span><span>{o}</span></button>)}</div>{st.choice!==undefined&&!st.ok&&<Feedback ok={false}>{step.why[st.choice]}</Feedback>}</>;}
+function StepChoice({step,st,onTry}){return <><div className="choices">{orderOptions(optionKey('eServices',step.id,step.options),step.options).map(([i,o],pos)=><button key={o} data-option={i} className={`choice ${st.choice===i?'selected':''}`} aria-pressed={st.choice===i} disabled={st.ok&&st.choice!==i} onClick={()=>onTry(i===step.correct,{choice:i})}><span className="choice-letter">{String.fromCharCode(65+pos)}</span><span>{o}</span></button>)}</div>{st.choice!==undefined&&!st.ok&&<Feedback ok={false}>{step.why[st.choice]}</Feedback>}</>;}
 function StepInput({step,st,onTry,label,inputMode='numeric'}){const [v,setV]=useState('');return <form className="es-form inline" onSubmit={e=>{e.preventDefault();onTry(checkStep(step,v),{last:v});}}><label htmlFor={`es-${step.id}`}>{label}</label><div className="es-input-row"><input id={`es-${step.id}`} inputMode={inputMode} autoComplete="off" value={v} onChange={e=>setV(e.target.value)} disabled={st.ok}/>{step.unit&&<span>{step.unit}</span>}<button className="btn" type="submit" disabled={st.ok||!v.trim()}>Sprawdź</button></div>{st.tries>0&&!st.ok&&<Feedback ok={false}>Jeszcze nie. {step.hint}</Feedback>}</form>;}
 
 function Health({mod,ms,tryStep,cur}){

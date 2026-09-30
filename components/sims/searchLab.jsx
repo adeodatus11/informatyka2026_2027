@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import {Icon} from '../icons.jsx';
 import {search,docs,PAGE_SIZE,formatDate,missionsForLevels,missionComplete,missionScore,missionPoints,levelResult,completedCount,isTarget,missionTrap,demoExamples} from '../../content/sims/searchLab.js';
 import './searchLab.css';
+import {orderOptions,optionKey} from './optionOrder.js';
 
 const fmt=n=>String(n).replace('.',',');
 const typeLabel={pdf:'PDF',docx:'DOCX',xlsx:'XLSX'};
@@ -76,7 +77,7 @@ function Missions({data,value={},onChange,answers={},lesson}){
     :<Results result={result} clicked={st.clicks||[]} onOpen={id=>{setOpen(id);setMsg(null);}}/>}
    {!lastQuery&&<p className="muted">Wpisz pierwsze zapytanie. Wynik = kliknięcie właściwej strony.</p>}
   </Chrome>
-  {st.found&&m.check&&<fieldset className="sl-check"><legend>{m.check.question}</legend><div className="choices">{m.check.options.map((o,i)=><button key={o} className={`choice ${st.checkChoice===i?'selected':''}`} aria-pressed={st.checkChoice===i} disabled={st.checked&&i!==m.check.correct} onClick={()=>answerCheck(i)}><span className="choice-letter">{String.fromCharCode(65+i)}</span><span>{o}</span></button>)}</div>{st.checkChoice!==undefined&&<div className={`sl-feedback ${st.checked?'ok':'retry'}`} role="status"><Icon name={st.checked?'check':'warning'} size={20}/><p>{st.checked?`${m.check.explanation} Misja zaliczona: +${missionScore(st,m)} pkt.`:'Nie — sprawdź dokładnie tekst źródła, nie odpowiedź AI ani forum. (−1 pkt, min. 1)'}</p></div>}</fieldset>}
+  {st.found&&m.check&&<fieldset className="sl-check"><legend>{m.check.question}</legend><div className="choices">{orderOptions(optionKey('searchLab',`${m.id}:check`,m.check.options),m.check.options).map(([i,o],pos)=><button key={o} data-option={i} className={`choice ${st.checkChoice===i?'selected':''}`} aria-pressed={st.checkChoice===i} disabled={st.checked&&i!==m.check.correct} onClick={()=>answerCheck(i)}><span className="choice-letter">{String.fromCharCode(65+pos)}</span><span>{o}</span></button>)}</div>{st.checkChoice!==undefined&&<div className={`sl-feedback ${st.checked?'ok':'retry'}`} role="status"><Icon name={st.checked?'check':'warning'} size={20}/><p>{st.checked?`${m.check.explanation} Misja zaliczona: +${missionScore(st,m)} pkt.`:'Nie — sprawdź dokładnie tekst źródła, nie odpowiedź AI ani forum. (−1 pkt, min. 1)'}</p></div>}</fieldset>}
   {st.queries.length>0&&<section className="sl-history" aria-label="Historia zapytań"><h4>Twoje zapytania — co zmieniałeś?</h4><ol>{st.queries.map((q,i)=>{const d=i?diff(st.queries[i-1],q):null;return <li key={i}><code>{q}</code>{d&&(d.added.length||d.removed.length)?<small>{d.added.length?`dodano: ${d.added.join(' ')}`:''}{d.added.length&&d.removed.length?' · ':''}{d.removed.length?`usunięto: ${d.removed.join(' ')}`:''}</small>:null}</li>;})}</ol></section>}
   {done&&!open&&<div className="sl-feedback ok" role="status"><Icon name="trophy" size={20}/><p>Misja „{m.title}” zaliczona: {missionScore(st,m)} pkt. {list.some(x=>!missionComplete(ms[x.id],x))?'Wybierz kolejną misję powyżej.':'Wszystkie misje tego poziomu zaliczone!'}</p></div>}
   <CheatSheet/>
@@ -98,7 +99,7 @@ function Demo({data,value={},onChange}){
   </>}
   {e.gap&&<fieldset className="sl-check"><legend>Uzupełnij lukę w zapytaniu</legend>
    <p className="sl-gap"><code>{e.gap.before}<span className="sl-blank">{gap.ok?e.gap.options[e.gap.correct]:'____'}</span>{e.gap.after}</code></p>
-   <div className="sl-gap-options" role="group" aria-label="Brakujący operator">{e.gap.options.map((o,i)=><button key={o} className={`choice ${gap.choice===i?'selected':''}`} aria-pressed={gap.choice===i} disabled={gap.ok&&i!==e.gap.correct} onClick={()=>{if(gap.ok)return;save({...value,gap:{choice:i,tries:(gap.tries||0)+1,ok:i===e.gap.correct}});}}><code>{o}</code></button>)}</div>
+   <div className="sl-gap-options" role="group" aria-label="Brakujący operator">{orderOptions(optionKey('searchLab',`${e.id}:gap`,e.gap.options),e.gap.options).map(([i,o])=><button key={o} data-option={i} className={`choice ${gap.choice===i?'selected':''}`} aria-pressed={gap.choice===i} disabled={gap.ok&&i!==e.gap.correct} onClick={()=>{if(gap.ok)return;save({...value,gap:{choice:i,tries:(gap.tries||0)+1,ok:i===e.gap.correct}});}}><code>{o}</code></button>)}</div>
    {gap.choice!==undefined&&<div className={`sl-feedback ${gap.ok?'ok':'retry'}`} role="status"><Icon name={gap.ok?'check':'warning'} size={20}/><p>{gap.ok?e.gap.explanation:'Nie ten. Szukasz operatora, który wybiera typ pliku.'}</p></div>}
    {gap.ok&&<Chrome query={e.gap.before+e.gap.options[e.gap.correct]+e.gap.after}><Results result={search(e.gap.before+e.gap.options[e.gap.correct]+e.gap.after)}/></Chrome>}
   </fieldset>}

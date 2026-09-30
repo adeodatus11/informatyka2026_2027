@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import {Icon} from '../icons.jsx';
 import './cipherLab.css';
+import {orderOptions,optionKey} from './optionOrder.js';
 import {ALPHABET,PL_PAIRS,normalize,lettersOnly,letterCount,mod26,caesar,caesarTable,gaderypoluki,GADERY_PAIRS,attempt,taskPoints,
  caesarTasks,caesarTaskCipher,checkCaesarTask,caesarResult,gaderyTasks,checkGaderyTask,gaderyResult,
  encryptWith,validateMessage,matchCipher,allShifts,soloPuzzles,formatTime,duelResult,MIN_LETTERS,
@@ -25,7 +26,7 @@ function Task({n,task,st={},onInput,onCheck,cipher,disabled}){
  return <li className={`cl-task ${solved?'is-solved':''}`}>
   <p className="cl-task-title"><span className="cl-num" aria-hidden="true">{solved?<Icon name="check" size={16}/>:n}</span><span className="cl-prompt">{task.prompt}</span>{solved&&<em>+{pts(taskPoints(st.solvedAt))} pkt</em>}</p>
   {cipher&&<p className="cl-cipher-line" aria-label={`Szyfrogram: ${cipher}`}>{cipher}</p>}
-  {task.kind==='choice'?<div className="choices cl-choices" role="group" aria-label={task.prompt}>{task.options.map((o,i)=><button type="button" key={o} className={`choice ${st.pick===i?'selected':''}`} aria-pressed={st.pick===i} disabled={solved||disabled} onClick={()=>onCheck(i)}><span className="choice-letter">{String.fromCharCode(65+i)}</span><span>{o}</span></button>)}</div>
+  {task.kind==='choice'?<div className="choices cl-choices" role="group" aria-label={task.prompt}>{orderOptions(optionKey('cipherLab',task.id,task.options),task.options).map(([i,o],pos)=><button type="button" key={o} data-option={i} className={`choice ${st.pick===i?'selected':''}`} aria-pressed={st.pick===i} disabled={solved||disabled} onClick={()=>onCheck(i)}><span className="choice-letter">{String.fromCharCode(65+pos)}</span><span>{o}</span></button>)}</div>
   :!solved&&<div className="cl-row"><label className="cl-field"><span>{task.kind==='encrypt'?'Szyfrogram':'Tekst jawny'}</span><input className="cl-input" value={st.input||''} disabled={disabled} autoComplete="off" spellCheck={false} maxLength={80} onChange={e=>onInput(e.target.value)} onKeyDown={e=>{if(e.key==='Enter')onCheck(st.input||'');}}/></label><button type="button" className="btn" disabled={disabled} onClick={()=>onCheck(st.input||'')}>Sprawdź</button></div>}
   <Msg m={st.msg}/>
  </li>;

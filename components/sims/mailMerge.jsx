@@ -2,6 +2,7 @@ import React,{useState,useRef,useEffect} from 'react';
 import {Icon} from '../icons.jsx';
 import * as M from '../../content/sims/mailMerge.js';
 import './mailMerge.css';
+import {orderOptions,optionKey} from './optionOrder.js';
 
 const PROJECT_DOC={projectA:'Przypomnienie.docx',projectB:'List_praktyki.docx',demo:'Przypomnienie_wzor.docx'};
 const DEMO_Q={q:'W rekordzie 2 (Michał Krawczyk) Word napisał „Szanowny Panie”, a w rekordzie 1 „Szanowna Pani”. Skąd to wie?',options:['Word zgaduje płeć po imieniu','Reguła JEŻELI sprawdza pole plec: dla „K” wstawia pierwszy tekst, dla innych wartości — drugi','Recepcja poprawiła każdy list ręcznie'],correct:1,explanation:'Tak. Reguła {JEŻELI plec = "K" "Szanowna Pani" "Szanowny Panie"} działa jak w Excelu JEŻELI: warunek → tekst 1, inaczej → tekst 2. Word niczego nie zgaduje — bierze dane z kolumny plec.',hint:'Spójrz na pierwszą linię szablonu (wyłącz Podgląd wyników): tam jest reguła, która czyta jedno z pól.'};
@@ -128,7 +129,7 @@ export default function MailMerge({data,value,onChange}){
   {!demo&&<p className="small muted mm-tip">Tip: zaznacz myszką np. <code>[imię]</code> i kliknij pole we „Wstaw pole scalania” — pole zastąpi zaznaczenie. W prawdziwym Wordzie reguły wyglądają tak samo po naciśnięciu Alt+F9 (kody pól: IF, SKIPIF, MERGEFIELD).</p>}
   <div role="status">{msg&&<div className={`feedback ${msg.ok?'':'retry'}`}><Icon name={msg.ok?'check':'warning'}/><div>{msg.text}</div></div>}</div>
   {demo&&<div className="mm-demo-q" role="group" aria-labelledby={`${data.id}-dq`}><p id={`${data.id}-dq`} className="mm-dq">{seen<3?`Włącz Podgląd wyników i przejdź strzałką ▶ przez co najmniej 3 rekordy (obejrzane: ${Math.min(seen,3)}/3).`:DEMO_Q.q}</p>
-   {seen>=3&&<div className="choices">{DEMO_Q.options.map((o,i)=><button key={o} type="button" aria-pressed={st.answer===i} className={`choice ${st.answer===i?'selected':''}`} onClick={()=>save({answer:i,first:st.first??i===DEMO_Q.correct})}><span className="choice-letter">{String.fromCharCode(65+i)}</span><span>{o}</span></button>)}</div>}
+   {seen>=3&&<div className="choices">{orderOptions(optionKey('mailMerge','demo',DEMO_Q.options),DEMO_Q.options).map(([i,o],pos)=><button key={o} type="button" data-option={i} aria-pressed={st.answer===i} className={`choice ${st.answer===i?'selected':''}`} onClick={()=>save({answer:i,first:st.first??i===DEMO_Q.correct})}><span className="choice-letter">{String.fromCharCode(65+pos)}</span><span>{o}</span></button>)}</div>}
    {st.answer!=null&&<div className={`feedback ${st.answer===DEMO_Q.correct?'':'retry'}`}><Icon name={st.answer===DEMO_Q.correct?'check':'book'}/><div>{st.answer===DEMO_Q.correct?DEMO_Q.explanation:`Spróbuj jeszcze raz. ${DEMO_Q.hint}`}</div></div>}
   </div>}
   {st.merged&&!demo&&<div className="mm-out"><h4>{st.merged.kind==='email'?`Skrzynka nadawcza (symulacja) — ${st.merged.count} wiadomości`:`Listy1 — ${st.merged.count} ${st.merged.count===1?'dokument':'dokumentów'}`}</h4>{st.merged.count===0&&<p>Brak dokumentów — lista adresatów jest pusta.</p>}

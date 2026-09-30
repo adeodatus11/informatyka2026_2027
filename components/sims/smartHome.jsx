@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import {Icon} from '../icons.jsx';
 import './smartHome.css';
+import {orderOptions,optionKey} from './optionOrder.js';
 import {PRICE,TARGET_SAVINGS,devices,measures,deviceKwh,formula,energyPlan,routerQuestion,checkRouterCost,fmt,zl,
  fixes,traps,iotDevices,securityAudit,triggers,conditions,actions,classifyRule,ruleText,sameRule,MAX_RULES,rulesScore,rulesWord,smartHomeResult} from '../../content/sims/smartHome.js';
 
@@ -46,7 +47,7 @@ function Security({v,save}){
   <div className="sh-iot">{iotDevices.map(d=>{const chosen=sel[d.id]||[];const r=per[d.id];return <fieldset key={d.id} className={`sh-iot-card ${show&&r?(r.ok?'is-ok':'is-bad'):''}`}>
    <legend><Icon name={d.icon} size={20}/>{d.name}</legend>
    <ul className="sh-issues">{d.issues.map(i=><li key={i.text}><Icon name="warning" size={16}/>{i.text}</li>)}</ul>
-   <div className="sh-fixes">{d.options.map(f=><label key={f} className={chosen.includes(f)?'is-on':''}><input type="checkbox" checked={chosen.includes(f)} onChange={()=>toggle(d.id,f)}/><span>{fixes[f]}</span></label>)}</div>
+   <div className="sh-fixes">{orderOptions(optionKey('smartHome',`${d.id}:fixes`,d.options),d.options).map(([i,f])=><label key={f} data-option={i} className={chosen.includes(f)?'is-on':''}><input type="checkbox" checked={chosen.includes(f)} onChange={()=>toggle(d.id,f)}/><span>{fixes[f]}</span></label>)}</div>
    {show&&r&&<p className={`sh-verdict ${r.ok?'is-ok':'is-bad'}`}>{r.ok?'✓ Zabezpieczone.':<>{r.missing.length>0&&<span>Brakuje {r.missing.length} {r.missing.length===1?'poprawki':'poprawek'}: {r.missing.map(m=>m.hint).join(' ')}</span>}{r.traps.map(t=><span key={t}> Pułapka! {traps[t]}</span>)}</>}</p>}
   </fieldset>;})}</div>
   <button type="button" className="btn" onClick={check}>Sprawdź audyt <Icon name="shield" size={18}/></button>

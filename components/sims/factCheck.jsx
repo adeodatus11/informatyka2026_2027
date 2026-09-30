@@ -2,6 +2,8 @@ import React,{useState} from 'react';
 import {Icon} from '../icons.jsx';
 import {cases,tools,verdicts,chooseVerdict,chooseEvidence,addTool,verdictFeedback,caseScore,caseSolved,factCheckResult,siftSteps,siftShuffled,checkSiftOrder,siftResult} from '../../content/sims/factCheck.js';
 import './factCheck.css';
+import {shuffled} from '../../content/shuffle.js';
+import {orderOptions,optionKey} from './optionOrder.js';
 
 const fmt=n=>String(n).replace('.',',');
 
@@ -24,7 +26,7 @@ function SiftOrder({data,value={},onChange}){
  return <div className="fc-sim">
   <div className="fc-top"><div><span className="fc-tag">Kolejność SIFT</span><small>kliknij kroki w kolejności 1 → 4</small></div><div className="fc-counters"><span>Punkty: <b>{fmt(res.score)}</b>/1</span></div></div>
   <h3 className="fc-q">{data.question||'Ułóż kroki sprawdzania informacji we właściwej kolejności.'}</h3>
-  <div className="choices">{siftShuffled.map(id=>{const pos=order.indexOf(id);const bad=value.checked&&!value.ok&&pos>=0&&value.wrong?.includes(pos);return <button key={id} className={`choice ${pos>=0?'selected':''} ${bad?'fc-bad':''}`} aria-pressed={pos>=0} disabled={value.ok} onClick={()=>toggle(id)}><span className="choice-letter">{pos>=0?pos+1:'+'}</span><span>{byId(id).label}</span>{bad&&<span className="fc-badmark">zła pozycja</span>}</button>;})}</div>
+  <div className="choices">{shuffled(`sim:factCheck:sift:${siftShuffled.join('|')}`,siftShuffled).map(([,id])=>{const pos=order.indexOf(id);const bad=value.checked&&!value.ok&&pos>=0&&value.wrong?.includes(pos);return <button key={id} data-option={siftSteps.findIndex(s=>s.id===id)} className={`choice ${pos>=0?'selected':''} ${bad?'fc-bad':''}`} aria-pressed={pos>=0} disabled={value.ok} onClick={()=>toggle(id)}><span className="choice-letter">{pos>=0?pos+1:'+'}</span><span>{byId(id).label}</span>{bad&&<span className="fc-badmark">zła pozycja</span>}</button>;})}</div>
   <div className="inline-actions"><button className="btn" disabled={order.length!==4||value.ok} onClick={check}>Sprawdź kolejność</button>{order.length>0&&!value.ok&&<button className="text-button" onClick={()=>onChange({...value,order:[],checked:false,...siftResult(value)})}><Icon name="reset" size={18}/>Wyczyść</button>}</div>
   {value.checked&&<div className={`fc-feedback ${value.ok?'ok':'retry'}`} role="status"><Icon name={value.ok?'check':'warning'} size={20}/><p>{value.ok?`${value.tries===1?'Bezbłędnie: +1 pkt.':'Poprawione: +0,5 pkt.'} S-I-F-T: zatrzymaj się, sprawdź źródło, porównaj z innymi, dotrzyj do oryginału.`:`Na złych pozycjach: ${value.wrong.map(i=>i+1).join(', ')}. Podpowiedź: ${siftSteps[value.wrong[0]].why} Kliknij zaznaczone kroki, aby je odznaczyć.`}</p></div>}
  </div>;
@@ -63,7 +65,7 @@ function Cases({data,value={},onChange}){
   </fieldset>
   {verdictOk&&<fieldset className="fc-verdict">
    <legend>2. Najmocniejszy dowód</legend>
-   <div className="choices">{c.evidence.map((e,i)=><button key={e.text} className={`choice ${st.evidence?.choice===i?'selected':''}`} aria-pressed={st.evidence?.choice===i} disabled={evOk&&st.evidence.choice!==i} onClick={()=>save(chooseEvidence(c,st,i))}><span className="choice-letter">{String.fromCharCode(65+i)}</span><span>{e.text}</span></button>)}</div>
+   <div className="choices">{orderOptions(optionKey('factCheck',`${c.id}:evidence`,c.evidence.map(e=>e.text)),c.evidence).map(([i,e],pos)=><button key={e.text} data-option={i} className={`choice ${st.evidence?.choice===i?'selected':''}`} aria-pressed={st.evidence?.choice===i} disabled={evOk&&st.evidence.choice!==i} onClick={()=>save(chooseEvidence(c,st,i))}><span className="choice-letter">{String.fromCharCode(65+pos)}</span><span>{e.text}</span></button>)}</div>
    {st.evidence&&<div className={`fc-feedback ${evOk?'ok':'retry'}`} role="status"><Icon name={evOk?'check':'warning'} size={20}/><p>{evOk?`${st.evidence.tries===1?'Mocny dowód: +1 pkt.':'Dobrze: +0,5 pkt.'} ${c.explain}`:`Słaby dowód. ${c.evidence[st.evidence.choice].why}`}</p></div>}
   </fieldset>}
   {evOk&&<div className="fc-action"><Icon name="shield" size={26}/><div><b>Co zrobić?</b><p>{c.action}</p></div></div>}

@@ -1,6 +1,7 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {Icon} from '../icons.jsx';
 import './pythonLab.css';
+import {orderOptions, optionKey} from './optionOrder.js';
 import {CodeEditor, CodeView, CodeLine} from './python/CodeEditor.jsx';
 import {ensurePython, runPython, subscribe, pythonState} from './python/runtime.js';
 import {labResult, labMax, codeScore, parsonsScore, explainError, STOP_MESSAGES, compareOutput, checkQuestion,
@@ -110,7 +111,7 @@ function Questions({data, v, save}) {
       const id = `${data.id}-q${i}`;
       return <fieldset key={i} className={`pl-q ${st.ok ? 'is-ok' : ''}`}>
         <legend><span className="pl-q-num">{st.ok ? '✓' : i + 1}</span><span>{qq.q}</span>{st.ok && <em>+{pts(st.first ? 1 : 0.5)} pkt</em>}</legend>
-        {qq.options ? <div className="pl-q-options">{qq.options.map((o, j) => <button type="button" key={j} className={`choice ${st.sel === j ? 'selected' : ''}`} aria-pressed={st.sel === j} disabled={st.ok && st.sel !== j} onClick={() => answer(i, j)}><span className="choice-letter">{String.fromCharCode(65 + j)}</span><span><CodeOr text={o}/></span></button>)}</div>
+        {qq.options ? <div className="pl-q-options">{orderOptions(optionKey('pythonLab', `${data.id}:q${i}`, qq.options), qq.options).map(([j, o], pos) => <button type="button" key={j} data-option={j} className={`choice ${st.sel === j ? 'selected' : ''}`} aria-pressed={st.sel === j} disabled={st.ok && st.sel !== j} onClick={() => answer(i, j)}><span className="choice-letter">{String.fromCharCode(65 + pos)}</span><span><CodeOr text={o}/></span></button>)}</div>
           : <form className="pl-q-text" onSubmit={e => { e.preventDefault(); answer(i, drafts[i] ?? ''); }}>
             <label htmlFor={id}>{qq.inputLabel || 'Twoja odpowiedź'}</label>
             <input id={id} autoComplete="off" spellCheck={false} disabled={st.ok} value={drafts[i] ?? (st.ok ? st.sel : '')} onChange={e => setDrafts({...drafts, [i]: e.target.value})}/>
