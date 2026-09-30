@@ -99,3 +99,14 @@
 @media (max-width:400px){.hexlab-byte{gap:8px}.hexlab-nibble{padding:7px}.hexlab-bits{gap:4px}.hexlab-rgb{gap:6px}}
 .hexlab-rgb{align-items:end}
 .hexlab-opt:disabled[aria-pressed=true]{opacity:1}
+
+.hexlab-mac{margin:10px 0 14px;padding:14px 16px;border:1px solid var(--hx-line);border-radius:12px;background:#fff}
+.hexlab-mac figcaption{font-size:.85rem;color:#54666c;margin-bottom:8px}
+.hexlab-mac-sticker{display:inline-flex;align-items:center;font-size:1.6rem;font-weight:700;letter-spacing:.04em;padding:8px 14px;border:2px dashed #9aa9a0;border-radius:8px;background:#fafbf9}
+.hexlab-mac-sticker .hexlab-mac-oui{background:#dcefe3;color:#0e4d2c;border-radius:6px;padding:0 6px}
+.hexlab-mac-sticker .hexlab-mac-dev{background:#e7ecf7;color:#1f3b73;border-radius:6px;padding:0 6px}
+.hexlab-mac-sep{padding:0 2px}
+.hexlab-mac-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;font-size:.88rem}
+.hexlab-mac-legend span{padding:3px 10px;border-radius:999px}
+.hexlab-mac-legend .hexlab-mac-oui{background:#dcefe3;color:#0e4d2c}
+.hexlab-mac-legend .hexlab-mac-dev{background:#e7ecf7;color:#1f3b73}
