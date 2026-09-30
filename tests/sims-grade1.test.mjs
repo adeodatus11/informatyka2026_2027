@@ -9,8 +9,10 @@ import * as es from '../content/sims/eServices.js';
 test('internetOcean: rząd wielkości daje 1 pkt, pomyłka o jeden rząd 0,5 pkt', () => {
  const s = ocean.minuteStats[0];
  assert.equal(ocean.guessPoints(s, s.correct), 1);
- assert.equal(ocean.guessPoints(s, s.correct - 1), 0.5);
- assert.equal(ocean.guessPoints(s, 0), 0);
+ assert.equal(ocean.guessPoints(s, s.correct > 0 ? s.correct - 1 : s.correct + 1), 0.5);
+ assert.equal(ocean.guessPoints(s, s.correct < 2 ? s.correct + 2 : s.correct - 2), 0);
+ // poprawne odpowiedzi nie mogą stać zawsze na tej samej pozycji
+ assert.ok(new Set(ocean.minuteStats.map(x => x.correct)).size >= 3);
  assert.equal(ocean.minuteResult({}).done, false);
  assert.equal(ocean.minuteResult({}).max, 5);
  const all = Object.fromEntries(ocean.minuteStats.map(x => [x.id, x.correct]));
