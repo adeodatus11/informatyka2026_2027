@@ -1,12 +1,12 @@
 # Stały punkt odniesienia: informatyka PP 2024 + Python
 
-**Zakres podstawowy, liceum i technikum; źródła prawne sprawdzono 30 września 2026, mapę uaktualniono 1 października 2026.** Mapa obejmuje 33 lekcje: 13 w klasie 1, 10 w klasie 2, 10 w klasie 3. Audyt 27 istniejących lekcji oparto na GitHub `main`, commit `91bffa3`; następnie dodano sześć lekcji Worda (ID 28–33).
+**Zakres podstawowy, liceum i technikum; źródła prawne sprawdzono 30 września 2026, mapę uaktualniono 1 października 2026.** Mapa obejmuje 34 lekcje: 14 w klasie 1, 10 w klasie 2, 10 w klasie 3. Audyt 27 istniejących lekcji oparto na GitHub `main`, commit `91bffa3`; następnie dodano sześć lekcji Worda (ID 28–33).
 
 ## Zawartość
 
 - [Podstawa 2024 — wymagania szczegółowe](podstawa-2024.md): pełne brzmienie zakresu podstawowego, z numerami do mapowania.
 - [Tekst urzędowy — cały dział Informatyka](tekst-urzedowy-2024.txt): cele ogólne, oba zakresy i warunki realizacji; wyciąg z PDF Dziennika Ustaw, strony 341–351.
-- [Mapa wszystkich 33 lekcji](mapa-lekcji.md): numer w klasie, stałe ID, wymagania, dowody w ćwiczeniach i ograniczenia.
+- [Mapa wszystkich 34 lekcji](mapa-lekcji.md): numer w klasie, stałe ID, wymagania, dowody w ćwiczeniach i ograniczenia.
 - [Pokrycie wymagań i dalsza ścieżka Pythona](pokrycie-i-python.md): co już jest, czego brakuje, czego nie należy zaliczać na wyrost.
 - [Materiały Migry](migra.md): konkretne programy i rozkłady, wersje z Pythonem oraz sposób wykorzystania.
 - [Wymagania JSON](wymagania.json), [mapowanie JSON](mapowanie.json), [rejestr źródeł](zrodla.json): dane do dalszego rozwijania repozytorium.

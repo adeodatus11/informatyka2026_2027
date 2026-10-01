@@ -44,3 +44,7 @@ Ustaw `workspace:'desktop-word'`. Komponenty `WordWorkspaceNotice`, `wordSteps` 
 ## Kontrola przed publikacją
 
 Sprawdź liczbę tematów w klasach, sumy minut, unikalne ID aktywności, zgodność instrukcji z plikami i działanie wszystkich pobrań. Uruchom walidację mapy, testy treści, build i kontrolę w przeglądarce. Wykonaj co najmniej jedno przejście poprawne oraz poprawienie błędu; obejrzyj widok mobilny i plan nauczyciela. Wyniki budowy trafiają do katalogu głównego repo, bo stamtąd publikuje GitHub Pages.
+
+## Odsyłacz do kursu zewnętrznego
+
+Dla samego linku użyj `externalUrl`, `description`, pustych `sections` i rzeczywistego czasu całego kursu. Karta otwiera dostawcę w nowej karcie; nie oznaczamy kursu jako ukończonego. `order` ustala pozycję w klasie bez zmiany istniejących ID. Odsyłacz nie wymaga autorskiego scenariusza ani lokalnego quizu.

@@ -1,8 +1,10 @@
 # Informatyka praktycznie
 
-Interaktywne materiały dla klas 1–3 technikum: **33 lekcje — 13 w klasie 1, 10 w klasie 2 i 10 w klasie 3**. Aktualny katalog powstaje automatycznie z `content/lessons/`; numeracja na stronie jest osobna dla każdej klasy.
+Interaktywne materiały dla klas 1–3 technikum: **34 lekcje — 14 w klasie 1, 10 w klasie 2 i 10 w klasie 3**. Aktualny katalog powstaje automatycznie z `content/lessons/`; numeracja na stronie jest osobna dla każdej klasy.
 
-Nowy dział Worda (klasa 1, tematy 8–13) obejmuje style, nagłówki i stopki, spisy treści i obiektów, sekcje, recenzję oraz projekt poradnika. Instrukcje, sprawdzenie wiedzy i samoocena są na platformie, a uczniowie pracują w stacjonarnym Wordzie na sześciu przygotowanych plikach DOCX. Pięć lekcji trwa po 45 minut, projekt końcowy 2 × 45 minut. Każda ma plan nauczyciela, kryteria produktu i ewaluację.
+Nowy dział Worda (klasa 1, tematy 9–14) obejmuje style, nagłówki i stopki, spisy treści i obiektów, sekcje, recenzję oraz projekt poradnika. Instrukcje, sprawdzenie wiedzy i samoocena są na platformie, a uczniowie pracują w stacjonarnym Wordzie na sześciu przygotowanych plikach DOCX. Pięć lekcji trwa po 45 minut, projekt końcowy 2 × 45 minut. Każda ma plan nauczyciela, kryteria produktu i ewaluację.
+
+Lekcja 7 klasy 1 prowadzi bezpośrednio do kursu Demagoga w nowej karcie (około 120 minut za cały kurs, praca na komputerze). Kolejność kontroluje `order` niezależnie od trwałego ID.
 
 ## Zasoby do projektowania lekcji
 

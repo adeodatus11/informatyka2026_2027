@@ -1,6 +1,6 @@
 # Pokrycie PP i dalsza ścieżka Pythona
 
-Stan 01.10.2026, 33 lekcje (klasy: 13/10/10). Numery poniżej to **stałe ID**, a nie numery lekcji w klasie. „Jest” oznacza zestaw ćwiczeń obejmujący treść punktu, nie zaliczenie umiejętności przez każdego ucznia. „Częściowo” oznacza dowód realizacji fragmentu; „brak” — brak odpowiednich obowiązkowych zadań w aktualnym kursie. Dodatki i zadania opcjonalne nie są automatycznie traktowane jako wymagane pokrycie.
+Stan 01.10.2026, 34 lekcje (klasy: 14/10/10). Numery poniżej to **stałe ID**, a nie numery lekcji w klasie. „Jest” oznacza zestaw ćwiczeń obejmujący treść punktu, nie zaliczenie umiejętności przez każdego ucznia. „Częściowo” oznacza dowód realizacji fragmentu; „brak” — brak odpowiednich obowiązkowych zadań w aktualnym kursie. Dodatki i zadania opcjonalne nie są automatycznie traktowane jako wymagane pokrycie.
 
 ## Macierz wszystkich wymagań szczegółowych
 
@@ -57,3 +57,5 @@ To propozycje autorskie realizacji PP, nie dodatkowe wymagania prawne ani skopio
 4. Uzupełnienia przekrojowe: robotyka, różne systemy operacyjne, licencje, wizerunek cyfrowy, wykluczenie i dostępność.
 
 Kontrolować transfer z symulatorów na rzeczywiste narzędzia. Nie wymaga to prawdziwych danych pacjentów, płatności, logowania do banku ani wysyłania korespondencji — zadania powinny wykorzystywać fikcyjne dane i bezpieczne środowiska.
+
+Lekcja ID 34 (klasa 1, numer 7) jest odsyłaczem do kursu Demagoga. Nie zwiększa automatycznie pokrycia PP: ukończenie i ćwiczenia odbywają się poza platformą szkolną.

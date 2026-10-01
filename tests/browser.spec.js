@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import {readdir} from 'node:fs/promises';
 import {createDentalProject,prepareDentalRecords,performDentalQueries} from './dental-helpers.js';
 const files=(await readdir(new URL('../content/lessons/',import.meta.url))).filter(f=>/^\d.*\.js$/.test(f));
-const lessons=await Promise.all(files.map(async f=>(await import(new URL('../content/lessons/'+f,import.meta.url))).default));
+const lessons=(await Promise.all(files.map(async f=>(await import(new URL('../content/lessons/'+f,import.meta.url))).default))).filter(l=>!l.externalUrl);
 async function activity(page,a){
  if(a.type==='dentalSimulator'){if(a.mode==='create'){await createDentalProject(page);await prepareDentalRecords(page);}else await performDentalQueries(page);}
  const group=()=>page.getByRole('group',{name:a.question,exact:true});
