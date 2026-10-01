@@ -12,7 +12,7 @@ export function ResultCard({data,value={},onChange,answers={},lesson}){
   <details className="result-rows"><summary>Skąd te punkty?</summary><ul>{r.rows.map(x=><li key={x.id}><span>{x.label}</span><b>{String(x.score).replace('.',',')}/{x.max}</b></li>)}</ul><p className="small muted">Pytania wyboru: pełny punkt za trafienie za pierwszym razem, połowa za poprawkę.</p></details>
   <fieldset className="self-check"><legend>Samoocena: jak Ci poszło?</legend>{items.map((o,i)=><div key={o} className="self-row"><span>{o}</span><div role="group" aria-label={o}>{levels.map(([k,l])=><button key={k} className={`self-${k} ${self[i]===k?'selected':''}`} aria-pressed={self[i]===k} onClick={()=>onChange({...value,self:{...self,[i]:k}})}>{l}</button>)}</div></div>)}</fieldset>
   <label className="result-name">Podpis do zdjęcia karty (imię i pierwsza litera nazwiska, opcjonalnie)<input maxLength={40} autoComplete="off" value={value.name||''} onChange={e=>onChange({...value,name:e.target.value})}/></label>
-  <footer className="result-teacher"><span><Icon name="school" size={18}/>Dla nauczyciela: proponowana ocena <b>{r.grade}</b></span><span>{value.name&&<b>{value.name} · </b>}{new Date().toLocaleDateString('pl-PL')}</span></footer>
+  <footer className="result-teacher">{data.hideGrade?<span><Icon name="school" size={18}/>Wynik sprawdzenia wiedzy. Dokument ocenia osobno nauczyciel.</span>:<span><Icon name="school" size={18}/>Dla nauczyciela: proponowana ocena <b>{r.grade}</b></span>}<span>{value.name&&<b>{value.name} · </b>}{new Date().toLocaleDateString('pl-PL')}</span></footer>
   <p className="small muted">{data.note||'Pokaż kartę nauczycielowi albo zrób jej zdjęcie. Wynik nie jest nigdzie wysyłany i zniknie po odświeżeniu strony.'}</p>
  </section>;
 }

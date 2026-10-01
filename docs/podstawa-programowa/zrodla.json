@@ -1,0 +1,50 @@
+{
+  "checkedOn": "2026-09-30",
+  "statutorySource": {
+    "url": "https://eli.gov.pl/api/acts/DU/2024/1019/text/O/D20241019.pdf",
+    "sha256": "4ec3ad07dc6912223f9973991f647b8759e7d41eb9889b94f396d6935fd5f8ed",
+    "extractedPdfPages": [
+      341,
+      351
+    ]
+  },
+  "laterAmendmentsChecked": [
+    {
+      "url": "https://eli.gov.pl/eli/DU/2025/382/ogl",
+      "sha256": "c8f52e88b0a1e3014dd0870cd03ecdac25e6c5905f255624f7c3b5653bbed385",
+      "scope": "edukacja obywatelska i zdrowotna"
+    },
+    {
+      "url": "https://eli.gov.pl/eli/DU/2025/1035/ogl",
+      "sha256": "65248243bec0091905bb1965e176f884c2a2349c23818cf8a7fffdfdccc42ca3",
+      "scope": "wychowanie fizyczne"
+    },
+    {
+      "url": "https://eli.gov.pl/eli/DU/2026/947/ogl",
+      "sha256": "ef5b42836ceda417e297e4a341dcc891ce37a737e64617cc8866e3e9f2c16870",
+      "scope": "edukacja zdrowotna"
+    }
+  ],
+  "migraReviewed": [
+    {
+      "url": "https://pliki.migra.pl/f.php?d=s&id=2008",
+      "sha256": "7d33923c4ecafcd4eca58f8a60d75d97b5da875723334745273b2001f0429897",
+      "storage": "Link do wydawcy; bez kopii RTF w repozytorium."
+    },
+    {
+      "url": "https://pliki.migra.pl/f.php?d=s&id=2448",
+      "sha256": "a37c77156adf08843e2bb509230956d1ed48dee41bac3a514483ccf412ba1582",
+      "storage": "Link do wydawcy; bez kopii RTF w repozytorium."
+    },
+    {
+      "url": "https://pliki.migra.pl/f.php?d=s&id=2452",
+      "sha256": "03a38d1c918993fe4bb073ba9b64f934156b225331d40ee90c9bd76a48720edb",
+      "storage": "Link do wydawcy; bez kopii RTF w repozytorium."
+    },
+    {
+      "url": "https://pliki.migra.pl/f.php?d=s&id=2456",
+      "sha256": "eec967ecc0d96e074b4ebd8c1d4ec1d99befac16af4142d1ab13699e9b56ba11",
+      "storage": "Link do wydawcy; bez kopii RTF w repozytorium."
+    }
+  ]
+}

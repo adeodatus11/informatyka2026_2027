@@ -1,0 +1,324 @@
+INFORMATYKA
+ZAKRES PODSTAWOWY I ROZSZERZONY
+
+Cele kształcenia – wymagania ogólne
+
+I. Rozumienie, analizowanie i rozwiązywanie problemów na bazie logicznego i
+abstrakcyjnego myślenia, myślenia algorytmicznego i sposobów reprezentowania informacji.
+
+II. Programowanie i rozwiązywanie problemów z wykorzystaniem komputera oraz innych
+urządzeń cyfrowych: układanie i programowanie algorytmów, organizowanie, wyszukiwanie i
+udostępnianie informacji, posługiwanie się aplikacjami komputerowymi.
+
+
+III. Posługiwanie się komputerem, urządzeniami cyfrowymi i sieciami komputerowymi,
+w tym: znajomość zasad działania urządzeń cyfrowych i sieci komputerowych oraz
+wykonywania obliczeń i programów.
+
+IV. Rozwijanie kompetencji społecznych, takich jak: komunikacja i współpraca w grupie,
+w tym w środowiskach wirtualnych, udział w projektach zespołowych oraz zarządzanie
+projektami.
+
+V. Przestrzeganie prawa i zasad bezpieczeństwa. Respektowanie prywatności informacji
+i ochrony danych, praw własności intelektualnej, etykiety w komunikacji i norm współżycia
+społecznego, ocena zagrożeń związanych z technologią i ich uwzględnienie dla bezpieczeństwa
+swojego i innych.
+
+Treści nauczania – wymagania szczegółowe
+I. Rozumienie, analizowanie i rozwiązywanie problemów.
+Zakres podstawowy. Uczeń:
+1) planuje kolejne kroki rozwiązywania problemu, z uwzględnieniem podstawowych etapów
+myślenia komputacyjnego (określenie problemu, definicja modeli i pojęć, znalezienie
+rozwiązania, zaprogramowanie i testowanie rozwiązania);
+2) stosuje przy rozwiązywaniu problemów z różnych dziedzin algorytmy poznane w szkole
+podstawowej oraz algorytmy:
+a) na liczbach: badania pierwszości liczby, zamiany reprezentacji liczb między
+pozycyjnymi systemami liczbowymi, działań na ułamkach z wykorzystaniem NWD
+i NWW,
+b) na tekstach: porównywania tekstów, wyszukiwania wzorca w tekście metodą naiwną,
+szyfrowania tekstu metodą Cezara,
+c) porządkowania ciągu liczb przez wstawianie i metodą bąbelkową,
+d) obliczania wartości elementów ciągu metodą iteracyjną w tym wartości elementów
+ciągu Fibonacciego;
+3) sprawdza poprawność działania algorytmów dla przykładowych danych.
+
+Zakres rozszerzony. Uczeń spełnia wymagania określone dla zakresu podstawowego, a
+ponadto:
+
+1) wyróżnia w problemie podproblemy i charakteryzuje: metodę połowienia, stosuje
+podejście zachłanne i rekurencję;
+2) porównuje działanie różnych algorytmów dla wybranego problemu, analizuje algorytmy
+na podstawie ich gotowych implementacji;
+3) w zależności od problemu rozwiązuje go, stosując metodę wstępującą lub zstępującą;
+4) do realizacji rozwiązania problemu dobiera odpowiednią metodę lub technikę
+algorytmiczną i struktury danych;
+5) objaśnia dobrany algorytm, uzasadnia poprawność rozwiązania na wybranych
+przykładach danych i ocenia jego efektywność;
+6) ilustruje i wyjaśnia rolę pojęć, obiektów i operacji matematycznych w projektowaniu
+rozwiązań problemów informatycznych i z innych dziedzin, posługuje się pojęciem
+logarytmu;
+7) przedstawia sposoby reprezentowania w komputerze znaków, liczb, wartości logicznych;
+8) objaśnia sposoby wykonywania przez komputer działań arytmetycznych i operacji
+logicznych;
+9) wyjaśnia, jakie może być źródło błędów pojawiających się w obliczeniach
+komputerowych: błąd zaokrąglenia, błąd przybliżenia;
+10) dyskutuje na temat roli myślenia komputacyjnego i jego metod, takich jak: abstrakcja,
+reprezentacja danych, dekompozycja problemu, redukcja, myślenie rekurencyjne,
+podejście heurystyczne w rozwiązywaniu problemów z różnych dziedzin.
+
+II. Programowanie i rozwiązywanie problemów z wykorzystaniem komputera oraz innych
+urządzeń cyfrowych.
+Zakres podstawowy. Uczeń:
+1) projektuje i programuje rozwiązania problemów z różnych dziedzin, stosując: instrukcje
+wejścia/wyjścia, wyrażenia arytmetyczne i logiczne, instrukcje warunkowe, instrukcje
+iteracyjne, funkcje z parametrami i bez parametrów, testuje poprawność programów dla
+różnych danych, w szczególności programuje algorytmy z punktu I.2;
+2) do realizacji rozwiązań problemów prawidłowo dobiera środowiska informatyczne,
+aplikacje oraz zasoby, wykorzystuje również elementy robotyki;
+3) przygotowuje opracowania rozwiązań problemów, posługując się wybranymi
+aplikacjami:
+
+a) projektuje modele dwuwymiarowe i trójwymiarowe, tworzy i edytuje projekty w
+grafice rastrowej i wektorowej, wykorzystuje różne formaty obrazów, przekształca
+pliki graficzne, uwzględniając wielkość i jakość obrazów,
+b) opracowuje dokumenty o różnorodnej tematyce, w tym informatycznej, i o
+rozbudowanej strukturze, dzieli tekst na sekcje i kolumny, tworzy spisy treści,
+rysunków i tabel, pracuje nad dokumentem w trybie recenzji, definiuje
+korespondencję seryjną,
+c) gromadzi dane pochodzące z różnych źródeł w tabeli arkusza kalkulacyjnego,
+korzysta z różnorodnych funkcji arkusza w zależności od rodzaju danych, filtruje
+dane według kilku kryteriów, dobiera odpowiednie wykresy do zaprezentowania
+danych, analizuje dane, korzystając z dodatkowych narzędzi, w tym z tabel i
+wykresów przestawnych,
+d) wyszukuje informacje, korzystając z bazy danych opartej na co najmniej dwóch
+tabelach, definiuje relacje, stosuje filtrowanie, formułuje kwerendy,
+e) tworzy prezentacje, w tym z wykorzystaniem technik multimedialnych,
+f) tworzy stronę internetową zgodnie ze standardami, wzbogaconą tabelami, listami,
+posługuje się arkuszem stylów, korzysta z oprogramowania i serwisów
+przeznaczonych do tworzenia stron; potrafi opublikować własną stronę w Internecie;
+4) wyszukuje w sieci potrzebne informacje i zasoby, ocenia ich przydatność oraz
+wykorzystuje w rozwiązywanych problemach.
+
+Zakres rozszerzony. Uczeń spełnia wymagania określone dla zakresu podstawowego, a
+ponadto:
+1) projektuje i tworzy programy w procesie rozwiązywania problemów, wykorzystuje w
+programach dobrane do algorytmów struktury danych, w tym struktury dynamiczne i
+korzysta z dostępnych bibliotek dla tych struktur;
+2) sprawnie posługuje się zintegrowanym środowiskiem programistycznym przy pisaniu,
+uruchamianiu i testowaniu programów;
+3) przygotowując opracowania rozwiązań złożonych problemów, posługuje się wybranymi
+aplikacjami w stopniu zaawansowanym:
+a) tworzy i edytuje dwuwymiarowe oraz trójwymiarowe wizualizacje i animacje,
+stosuje właściwe formaty plików graficznych,
+b) stosuje zaawansowane funkcje arkusza kalkulacyjnego w zależności od rodzaju
+danych,
+
+c) projektuje i tworzy relacyjną bazę złożoną z wielu tabel, formułuje kwerendy, stosuje
+język SQL do wyszukiwania informacji w bazie i do jej modyfikacji, uwzględnia
+kwestie integralności danych, bezpieczeństwa i ochrony danych w bazie;
+4) współtworzy otwarte zasoby i aktywności oraz umieszcza je w sieci.
+
+I + II. Zakres rozszerzony. Uczeń spełnia wymagania określone dla zakresu podstawowego, a
+ponadto:
+1) zapisuje za pomocą listy kroków lub pseudokodu i implementuje w wybranym języku
+programowania algorytmy poznane na wcześniejszych etapach oraz algorytmy:
+a) algorytm Euklidesa w wersji iteracyjnej i rekurencyjnej wraz z zastosowaniami,
+b) znajdowania określonego elementu w zbiorze uporządkowanym metodą binarnego
+wyszukiwania,
+c) generowania liczb pierwszych metodą sita Eratostenesa,
+d) jednoczesnego wyszukiwania elementu najmniejszego i największego,
+e) sortowania ciągu liczb przez scalanie,
+f) wyznaczania miejsc zerowych funkcji metodą połowienia,
+g) obliczania przybliżonej wartości pierwiastka kwadratowego,
+h) obliczania wartości wielomianu za pomocą schematu Hornera,
+i) szybkiego potęgowania liczb w wersji iteracyjnej i rekurencyjnej,
+j) rekurencyjnego tworzenia fraktali;
+2) wykorzystuje znane sobie algorytmy przy rozwiązywaniu i programowaniu rozwiązań
+następujących problemów:
+a) rozkładania liczby na czynniki pierwsze,
+b) wykonywania działań na liczbach w systemach innych niż dziesiętny,
+c) znajdowania w ciągu podciągów o różnorodnych własnościach, np. najdłuższego
+spójnego podciągu niemalejącego, spójnego podciągu o największej sumie,
+d) zamiany wyrażenia na postać w odwrotnej notacji polskiej i obliczanie jego wartości
+na podstawie tej postaci;
+3) objaśnia oraz porównuje podstawowe metody i techniki algorytmiczne oraz struktury
+danych, wykorzystując przykłady problemów i algorytmów, w szczególności:
+a) wyszukiwanie elementów liniowe i przez połowienie (do znajdowania elementów w
+zbiorze, sortowania przez wstawianie, przybliżonego rozwiązywania równań),
+b) rekurencję (do generowania ciągów liczb, potęgowania, sortowania liczb,
+generowania fraktali),
+
+c) metodę dziel i zwyciężaj (jednoczesne znajdowanie minimum i maksimum,
+sortowanie przez scalanie i szybkie),
+d) podejście zachłanne (do wydawania reszty, szukania najkrótszej drogi),
+e) programowanie dynamiczne (do szukania najdłuższego wspólnego podciągu),
+f) metodę szyfrowania z kluczem publicznym i jej zastosowanie w podpisie
+elektronicznym,
+g) struktury dynamiczne: stos, kolejka, lista (do realizacji algorytmu ONP),
+h) grafy (do przedstawiania abstrakcyjnego modelu sytuacji problemowych).
+
+III. Posługiwanie się komputerem, urządzeniami cyfrowymi i sieciami komputerowymi.
+Zakres podstawowy. Uczeń:
+1) zapoznaje się z możliwościami nowych urządzeń cyfrowych i towarzyszącego im
+oprogramowania;
+2) objaśnia funkcje innych niż komputer urządzeń cyfrowych i korzysta z ich możliwości;
+3) rozwiązuje problemy korzystając z różnych systemów operacyjnych;
+4) charakteryzuje sieć Internet, jej ogólną budowę i usługi, opisuje sposoby identyfikowania
+komputerów w sieci.
+
+Zakres rozszerzony. Uczeń spełnia wymagania określone dla zakresu podstawowego, a
+ponadto:
+1) dokonuje kompresji informacji, objaśnia różnice między kompresją stratną i bezstratną
+tekstów, obrazów, dźwięków, filmów;
+2) opisuje podstawowe funkcje urządzeń i protokoły stosowane w przepływie informacji i w
+zarządzaniu siecią.
+
+IV. Rozwijanie kompetencji społecznych.
+Zakres podstawowy. Uczeń:
+1) aktywnie uczestniczy w realizacji projektów rozwiązujących problemy z różnych
+dziedzin;
+2) podaje przykłady wpływu informatyki i technologii komputerowej na najważniejsze sfery
+życia osobistego i zawodowego; korzysta z wybranych e-usług; przedstawia wpływ
+technologii na dobrobyt społeczeństw i komunikację społeczną;
+
+3) objaśnia konsekwencje wykluczenia i pozytywne aspekty włączenia cyfrowego;
+przedstawia korzyści, jakie przynosi informatyka i technologia komputerowa osobom o
+specjalnych potrzebach;
+4) bezpiecznie buduje swój wizerunek w przestrzeni medialnej;
+5) poszerza i uzupełnia swoją wiedzę korzystając z zasobów udostępnionych na platformach
+do e-nauczania.
+
+Zakres rozszerzony. Uczeń spełnia wymagania określone dla zakresu podstawowego, a
+ponadto:
+1) przy realizacji zespołowego projektu programistycznego posługuje się środowiskiem
+przeznaczonym do współpracy i realizacji projektów zespołowych;
+2) przygotowuje się do świadomego wyboru kierunku i zakresu dalszego kształcenia,
+głównie informatycznego, z myślą o przyszłej karierze zawodowej.
+
+V. Przestrzeganie prawa i zasad bezpieczeństwa.
+Zakres podstawowy. Uczeń:
+1) postępuje zgodnie z zasadami netykiety oraz regulacjami prawnymi dotyczącymi:
+ochrony danych osobowych, ochrony informacji oraz prawa autorskiego i ochrony
+własności intelektualnej w dostępie do informacji; jest świadomy konsekwencji łamania
+tych zasad;
+2) respektuje obowiązujące prawo i normy etyczne dotyczące korzystania i
+rozpowszechniania oprogramowania komputerowego, aplikacji cudzych i własnych oraz
+dokumentów elektronicznych;
+3) stosuje dobre praktyki w zakresie ochrony informacji wrażliwych (np. hasła, pin), danych
+i bezpieczeństwa systemu operacyjnego, objaśnia rolę szyfrowania informacji;
+4) opisuje szkody, jakie mogą spowodować działania pirackie w sieci, w odniesieniu do
+indywidualnych osób, wybranych instytucji i całego społeczeństwa.
+
+Zakres rozszerzony. Uczeń spełnia wymagania określone dla zakresu podstawowego, a
+ponadto:
+1) objaśnia rolę technik uwierzytelniania, kryptografii i podpisu elektronicznego w ochronie
+i dostępie do informacji;
+2) omawia znaczenie algorytmów szyfrowania i składania podpisu elektronicznego.
+
+
+Warunki i sposób realizacji
+Cele kształcenia informatycznego – wymagania ogólne – są takie same dla wszystkich etapów
+edukacyjnych i wszystkich typów szkół. Ich interpretacja jest zapisana w postaci wymagań
+szczegółowych. Treści podstawy programowej w zakresie przedmiotu informatyka mają
+charakter przyrostowy, sugerując w ten sposób spiralny rozwój wiedzy, umiejętności i
+kompetencji uczniów przez wszystkie lata nauki szkolnej.
+Na podstawę programową w zakresie przedmiotu informatyka w liceum ogólnokształcącym i
+technikum należy patrzeć w powiązaniu ze zmianami, jakie nastąpiły w nauczaniu informatyki
+w szkole podstawowej. Wprowadzenie rozwiązywania problemów z pomocą komputerów i
+programowania od najmłodszych lat znacznie wydłużyło okres poznawania tych zagadnień, a
+przez to umożliwiło stopniowe i uporządkowane kształtowanie myślenia algorytmicznego/
+komputacyjnego. Wspólne wymagania ogólne i spiralny układ wymagań szczegółowych na
+przestrzeni wszystkich etapów edukacyjnych stworzyły możliwość ciągłego utrwalania
+wcześniej kształtowanych umiejętności i przemyślanego rozszerzania ich o nowe, odpowiednio
+do rozwoju ucznia. Stopniowe wprowadzanie uczniów w świat informatyki i jej zastosowań w
+różnych przedmiotach i dziedzinach życia kładzie solidne podwaliny pod umiejętności
+rozwiązywania w liceum ogólnokształcącym i technikum  zagadnień trudniejszych. Zwiększa
+to u uczniów zaciekawienie przedmiotem i przygotowanie do rozwiązywania różnorodnych
+problemów ze świadomym wykorzystaniem metod mających swoje korzenie w informatyce.
+Wybór przez uczniów dalszej drogi i poziomu kształcenia informatycznego w liceum
+ogólnokształcącym i t echnikum będzie bardziej świadomy niż do tej pory. Już w szkole
+podstawowej uczniowie poznają różnorodne algorytmy. Uczą się programować, w tym także
+sterować robotem. Dzięki temu, zarówno w kształceniu w zakresie podstawowym, jak i
+rozszerzonym, łatwiej będzie realizować zagadnienia informatyczne do tej pory uznawane za
+trudne.
+Najważniejszym celem kształcenia informatycznego uczniów jest rozwój umiejętności
+myślenia komputacyjnego, skupionego na kreatywnym rozwiązywaniu problemów z różnych
+dziedzin ze świadomym wykorzystaniem przy tym metod i narzędzi wywodzących się z
+informatyki, w tym programowania. Takie podejście jest kontynuowane w liceum
+ogólnokształcącym i technikum zarówno w zakresie podstawowym, jak i rozszerzonym.
+Zagadnienia algorytmiczne wyszczególnione w podstawie programowej w zakresie przedmiotu
+informatyka dla zakresu podstawowego są dobrane świadomie, wiążą się bowiem z
+
+problemami z innych przedmiotów, np. z matematyki, jak i dotyczą problemów związanych z
+funkcjonowaniem w społeczeństwie cyfrowym. Wiele pojęć i metod matematycznych jest
+integralną częścią informatyki, związki matematyki z informatyką są naturalne. Programując
+rozwiązania problemów, uczeń stosuje odpowiednie metody i nadaje rozwiązaniom wymiar
+praktyczny, łącząc aspekty programistyczne z elementami sterowania rzeczywistymi
+obiektami, np. robotami.
+Rozwiązywanie problemów leży również u podstaw pracy z aplikacjami użytkowymi.
+Projektując grafikę, opracowując dokumenty, analizując dane i wyszukując informacje, uczeń
+poznaje możliwości gotowych aplikacji i ich przydatne funkcje. W podstawie  programowej w
+zakresie przedmiotu informatyka  pojawia się projektowanie trójwymiarowe, wspomagające
+kształcenie wyobraźni przestrzennej, niezbędnej w wielu dziedzinach życia, m.in. w
+medycynie, budownictwie i projektowaniu różnorodnych elementów.
+Uczeń kończący kształcenie informatyczne w zakresie podstawowym powinien sprawnie
+posługiwać się współczesnymi urządzeniami cyfrowymi, sieciami oraz systemami
+operacyjnymi zarządzającymi ich pracą. Instalacja nowej wersji systemu czy oprogramowania
+powinna być wykonywana przez niego świadomie, przy zachowaniu bezpieczeństwa danych i
+poszanowaniu własności intelektualnej. Podczas korzystania z serwisów społecznościowych,
+e-usług, platform do e-nauczania, zasobów otwartych i wszelkich zasobów umieszczonych
+również w chmurze, uczeń powinien przestrzegać ogólnie przyjętych zasad netykiety, jak i
+bezpieczeństwa w przestrzeni cyfrowej.
+W kształceniu informatycznym w zakresie rozszerzonym treści nauczania są znacząco
+rozszerzane. Poza traktowaniem programowania jako aktywności rozwijającej kreatywność i
+innowacyjność uczniów w każdej dziedzinie życia, nauka algorytmiki i programowania
+odgrywa ważną rolę w przygotowaniu do wyboru kariery zawodowej związanej z informatyką.
+Bazuje ona na solidnych podstawach informatyki, która ma swoje teorie, metody i techniki oraz
+praktykę.
+W dziale II Programowanie i rozwiązywanie problemów z wykorzystaniem komputera oraz
+innych urządzeń cyfrowych  występuje zakres rozszerzony I+II, w którym połączono
+umiejętności uczniów z działów I i II, obejmujące jednoczesne projektowanie rozwiązań
+problemów i ich programowanie. W tym dziale wyróżniono trzy punkty. Punkt 1 jest wykazem
+problemów i algorytmów ich rozwiązywania, które uczeń powinien poznać na zajęciach. W
+punkcie 2 zawarto problemy, które uczeń powinien umieć rozwiązać, stosując algorytmy z
+
+punktu 1 lub ich niewielkie modyfikacje. Rozwiązania problemów z punktów 1 i 2 uczeń
+powinien umieć zapisać za pomocą listy kroków lub pseudokodu oraz zaimplementować w
+wybranym języku programowania. Punkt 3 jest zwieńczeniem myślenia algorytmicznego i
+komputacyjnego, dotyczy metod i technik algorytmicznych oraz struktur danych, które w
+naturalny sposób mogą być wyabstrahowane z metod rozwiązyw ania problemów i ich
+komputerowych realizacji, wymienionych w punktach 1 i 2. Wymienione w punkcie 3
+trudniejsze, nowe problemy i algorytmy powinny być przynajmniej omówione na zajęciach, a
+działanie algorytmów zilustrowane na przykładach lub w odpowiednich aplikacjach.
+Zagadnienia poruszane w tym punkcie stanowią dobry materiał do przygotowania prezentacji i
+wygłoszenia referatu przez uczniów indywidualnie lub zespołowo. W grupach bardziej
+zaawansowanych zaleca się zaprogramowanie tych algorytmów.
+Umiejętności wykorzystywania aplikacji użytkowych do rozwiązywania problemów są
+doskonalone m.in. w zespołowej pracy nad rozbudowaną dokumentacją i prezentacją z użyciem
+aplikacji w chmurze czy przy prowadzeniu obliczeń w arkuszu kalkulacyjnym wzbogaconym
+programami wytworzonymi w wbudowanym języku programowania.
+Zarówno w zakresie podstawowym, jak i rozszerzonym zaleca się realizowanie treści
+informatycznych w formie projektów, tematycznie uwzględniających różnorodne
+zainteresowania uczniów, także z innych dziedzin. Uczniowie powinni mieć możliwość
+korzystania z komputerów w zależności od potrzeb wynikających z charakteru zajęć oraz
+realizowanych tematów i celów.
+Podczas zajęć z informatyki uczeń ma do swojej dyspozycji osobny komputer z dostępem do
+Internetu i aplikacji użytkowych zapewniających realizację zagadnień podstawy programowej
+w zakresie przedmiotu informatyka. Zaleca się wspomaganie zajęć informatycznych pracą na
+platformie do e-nauczania, na której nauczyciel może umieszczać swoje materiały
+elektroniczne do zajęć – uczniowie oraz nauczyciel powinni na tej platformie mieć swoje
+indywidualne miejsce. Takie podejście sprzyja rozwojowi dodatkowych kompetencji.
+Uczniowie poznają możliwości platform do e-nauczania, a w ogólności także do pracy w domu,
+uczą się sposobów korzystania z ich zasobów, a na poziomie zaawansowanym sami kreują ich
+zawartość taką, jak dokumenty, quizy, wiki, fora, zadania. Ponadto uczniowie, którzy z różnych
+przyczyn nie będą obecni na zajęciach, mogą na podstawie materiałów przygotowanych przez
+nauczyciela na bieżąco samodzielnie przygotowywać się do lekcji i przesyłać zadania domowe.
+Praca na platformie istotnie porządkuje proces uczenia się: uczy systematyczności i
+punktualności.
+
+Praca w środowisku wirtualnej chmury może być wykorzystana do polepszenia efektów
+kształcenia informatycznego oraz zwiększenia zaangażowania uczniów poprzez ich lepsze
+przygotowanie się do zajęć (kształcenie wyprzedzające) i wykonywanie przez nich zadań poza
+regularnymi lekcjami i zajęciami w szkole (odwrócone kształcenie).
+Wyposażenie pracowni komputerowej powinno zapewnić  możliwość realizacji wymagań
+określonych w podstawie programowej w zakresie przedmiotu informatyka.

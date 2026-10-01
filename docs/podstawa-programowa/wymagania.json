@@ -1,0 +1,120 @@
+{
+  "version": "PP2024-LO-TECH-P",
+  "verifiedOn": "2026-09-30",
+  "source": "https://eli.gov.pl/eli/DU/2024/1019/ogl",
+  "pdfPages": "341–351",
+  "requirements": [
+    {
+      "id": "I.1",
+      "text": "planuje kolejne kroki rozwiązywania problemu, z uwzględnieniem podstawowych etapów myślenia komputacyjnego (określenie problemu, definicja modeli i pojęć, znalezienie rozwiązania, zaprogramowanie i testowanie rozwiązania);"
+    },
+    {
+      "id": "I.2.a",
+      "text": "stosuje przy rozwiązywaniu problemów z różnych dziedzin algorytmy poznane w szkole podstawowej oraz algorytmy: na liczbach: badania pierwszości liczby, zamiany reprezentacji liczb między pozycyjnymi systemami liczbowymi, działań na ułamkach z wykorzystaniem NWD i NWW,"
+    },
+    {
+      "id": "I.2.b",
+      "text": "stosuje przy rozwiązywaniu problemów z różnych dziedzin algorytmy poznane w szkole podstawowej oraz algorytmy: na tekstach: porównywania tekstów, wyszukiwania wzorca w tekście metodą naiwną, szyfrowania tekstu metodą Cezara,"
+    },
+    {
+      "id": "I.2.c",
+      "text": "stosuje przy rozwiązywaniu problemów z różnych dziedzin algorytmy poznane w szkole podstawowej oraz algorytmy: porządkowania ciągu liczb przez wstawianie i metodą bąbelkową,"
+    },
+    {
+      "id": "I.2.d",
+      "text": "stosuje przy rozwiązywaniu problemów z różnych dziedzin algorytmy poznane w szkole podstawowej oraz algorytmy: obliczania wartości elementów ciągu metodą iteracyjną w tym wartości elementów ciągu Fibonacciego;"
+    },
+    {
+      "id": "I.3",
+      "text": "sprawdza poprawność działania algorytmów dla przykładowych danych."
+    },
+    {
+      "id": "II.1",
+      "text": "projektuje i programuje rozwiązania problemów z różnych dziedzin, stosując: instrukcje wejścia/wyjścia, wyrażenia arytmetyczne i logiczne, instrukcje warunkowe, instrukcje iteracyjne, funkcje z parametrami i bez parametrów, testuje poprawność programów dla różnych danych, w szczególności programuje algorytmy z punktu I.2;"
+    },
+    {
+      "id": "II.2",
+      "text": "do realizacji rozwiązań problemów prawidłowo dobiera środowiska informatyczne, aplikacje oraz zasoby, wykorzystuje również elementy robotyki;"
+    },
+    {
+      "id": "II.3.a",
+      "text": "przygotowuje opracowania rozwiązań problemów, posługując się wybranymi aplikacjami: projektuje modele dwuwymiarowe i trójwymiarowe, tworzy i edytuje projekty w grafice rastrowej i wektorowej, wykorzystuje różne formaty obrazów, przekształca pliki graficzne, uwzględniając wielkość i jakość obrazów,"
+    },
+    {
+      "id": "II.3.b",
+      "text": "przygotowuje opracowania rozwiązań problemów, posługując się wybranymi aplikacjami: opracowuje dokumenty o różnorodnej tematyce, w tym informatycznej, i o rozbudowanej strukturze, dzieli tekst na sekcje i kolumny, tworzy spisy treści, rysunków i tabel, pracuje nad dokumentem w trybie recenzji, definiuje korespondencję seryjną,"
+    },
+    {
+      "id": "II.3.c",
+      "text": "przygotowuje opracowania rozwiązań problemów, posługując się wybranymi aplikacjami: gromadzi dane pochodzące z różnych źródeł w tabeli arkusza kalkulacyjnego, korzysta z różnorodnych funkcji arkusza w zależności od rodzaju danych, filtruje dane według kilku kryteriów, dobiera odpowiednie wykresy do zaprezentowania danych, analizuje dane, korzystając z dodatkowych narzędzi, w tym z tabel i wykresów przestawnych,"
+    },
+    {
+      "id": "II.3.d",
+      "text": "przygotowuje opracowania rozwiązań problemów, posługując się wybranymi aplikacjami: wyszukuje informacje, korzystając z bazy danych opartej na co najmniej dwóch tabelach, definiuje relacje, stosuje filtrowanie, formułuje kwerendy,"
+    },
+    {
+      "id": "II.3.e",
+      "text": "przygotowuje opracowania rozwiązań problemów, posługując się wybranymi aplikacjami: tworzy prezentacje, w tym z wykorzystaniem technik multimedialnych,"
+    },
+    {
+      "id": "II.3.f",
+      "text": "przygotowuje opracowania rozwiązań problemów, posługując się wybranymi aplikacjami: tworzy stronę internetową zgodnie ze standardami, wzbogaconą tabelami, listami, posługuje się arkuszem stylów, korzysta z oprogramowania i serwisów przeznaczonych do tworzenia stron; potrafi opublikować własną stronę w Internecie;"
+    },
+    {
+      "id": "II.4",
+      "text": "wyszukuje w sieci potrzebne informacje i zasoby, ocenia ich przydatność oraz wykorzystuje w rozwiązywanych problemach."
+    },
+    {
+      "id": "III.1",
+      "text": "zapoznaje się z możliwościami nowych urządzeń cyfrowych i towarzyszącego im oprogramowania;"
+    },
+    {
+      "id": "III.2",
+      "text": "objaśnia funkcje innych niż komputer urządzeń cyfrowych i korzysta z ich możliwości;"
+    },
+    {
+      "id": "III.3",
+      "text": "rozwiązuje problemy korzystając z różnych systemów operacyjnych;"
+    },
+    {
+      "id": "III.4",
+      "text": "charakteryzuje sieć Internet, jej ogólną budowę i usługi, opisuje sposoby identyfikowania komputerów w sieci."
+    },
+    {
+      "id": "IV.1",
+      "text": "aktywnie uczestniczy w realizacji projektów rozwiązujących problemy z różnych dziedzin;"
+    },
+    {
+      "id": "IV.2",
+      "text": "podaje przykłady wpływu informatyki i technologii komputerowej na najważniejsze sfery życia osobistego i zawodowego; korzysta z wybranych e-usług; przedstawia wpływ technologii na dobrobyt społeczeństw i komunikację społeczną;"
+    },
+    {
+      "id": "IV.3",
+      "text": "objaśnia konsekwencje wykluczenia i pozytywne aspekty włączenia cyfrowego; przedstawia korzyści, jakie przynosi informatyka i technologia komputerowa osobom o specjalnych potrzebach;"
+    },
+    {
+      "id": "IV.4",
+      "text": "bezpiecznie buduje swój wizerunek w przestrzeni medialnej;"
+    },
+    {
+      "id": "IV.5",
+      "text": "poszerza i uzupełnia swoją wiedzę korzystając z zasobów udostępnionych na platformach do e-nauczania."
+    },
+    {
+      "id": "V.1",
+      "text": "postępuje zgodnie z zasadami netykiety oraz regulacjami prawnymi dotyczącymi: ochrony danych osobowych, ochrony informacji oraz prawa autorskiego i ochrony własności intelektualnej w dostępie do informacji; jest świadomy konsekwencji łamania tych zasad;"
+    },
+    {
+      "id": "V.2",
+      "text": "respektuje obowiązujące prawo i normy etyczne dotyczące korzystania i rozpowszechniania oprogramowania komputerowego, aplikacji cudzych i własnych oraz dokumentów elektronicznych;"
+    },
+    {
+      "id": "V.3",
+      "text": "stosuje dobre praktyki w zakresie ochrony informacji wrażliwych (np. hasła, pin), danych i bezpieczeństwa systemu operacyjnego, objaśnia rolę szyfrowania informacji;"
+    },
+    {
+      "id": "V.4",
+      "text": "opisuje szkody, jakie mogą spowodować działania pirackie w sieci, w odniesieniu do indywidualnych osób, wybranych instytucji i całego społeczeństwa."
+    }
+  ]
+}

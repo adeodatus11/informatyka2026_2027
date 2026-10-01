@@ -1,0 +1,643 @@
+{
+  "basis": "PP2024-LO-TECH-P",
+  "reviewedCommit": "91bffa3",
+  "reviewedOn": "2026-10-01",
+  "meaning": "Powiązanie tematyczne i dowód ćwiczenia; nie deklaracja pełnej realizacji wszystkich wskazanych punktów.",
+  "lessons": [
+    {
+      "lessonId": "01",
+      "grade": 1,
+      "numberInGrade": 1,
+      "title": "Komputer",
+      "file": "content/lessons/01-computer.js",
+      "requirements": [
+        "III.1"
+      ],
+      "activityIds": [
+        "find-computer-part",
+        "profiles"
+      ],
+      "evidence": "Rozpoznawanie części i dobór konfiguracji.",
+      "limitations": "Część wymagania: brak samodzielnej pracy z nowym oprogramowaniem.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "02",
+      "grade": 1,
+      "numberInGrade": 2,
+      "title": "System i oprogramowanie",
+      "file": "content/lessons/02-files.js",
+      "requirements": [
+        "III.3",
+        "II.2"
+      ],
+      "activityIds": [
+        "application-choice",
+        "sort-files",
+        "practice-check"
+      ],
+      "evidence": "Dobór aplikacji, porządkowanie plików, ZIP.",
+      "limitations": "Pracę na plikach potwierdza nauczyciel; do III.3 potrzeba doświadczeń w różnych systemach, do II.2 również robotyki.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "03",
+      "grade": 1,
+      "numberInGrade": 3,
+      "title": "Urządzenia w szkole",
+      "file": "content/lessons/03-troubleshooting.js",
+      "requirements": [
+        "III.2"
+      ],
+      "activityIds": [
+        "diagnostics",
+        "ports-explore",
+        "exit-diagnostic"
+      ],
+      "evidence": "Dobór złączy i uporządkowana diagnostyka urządzeń.",
+      "limitations": "Symulację trzeba uzupełnić praktycznym podłączeniem urządzenia.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "04",
+      "grade": 1,
+      "numberInGrade": 4,
+      "title": "Urządzenia w domu",
+      "file": "content/lessons/04-smartphone.js",
+      "requirements": [
+        "III.1",
+        "III.2",
+        "III.4",
+        "V.3"
+      ],
+      "activityIds": [
+        "technology-match",
+        "ride",
+        "app-needs"
+      ],
+      "evidence": "Komunikacja urządzeń, przebieg usługi, dobór uprawnień.",
+      "limitations": "Sieć i bezpieczeństwo tylko częściowo; brak samodzielnej obsługi sprzętu i pełnego zakresu ochrony danych.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "07",
+      "grade": 1,
+      "numberInGrade": 5,
+      "title": "Internet jako ocean informacji",
+      "file": "content/lessons/07-internet-ocean.js",
+      "requirements": [
+        "II.4",
+        "V.3"
+      ],
+      "activityIds": [
+        "fact-check",
+        "sms-first"
+      ],
+      "evidence": "SIFT, weryfikacja informacji i reakcja na phishing.",
+      "limitations": "Przypadki są symulowane. Do II.4 dodać samodzielne wyszukanie i wykorzystanie źródła w otwartej sieci.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "08",
+      "grade": 1,
+      "numberInGrade": 6,
+      "title": "Przykłady wyszukiwania informacji",
+      "file": "content/lessons/08-search.js",
+      "requirements": [
+        "II.4"
+      ],
+      "activityIds": [
+        "search-l1",
+        "search-l2",
+        "search-boss"
+      ],
+      "evidence": "Budowanie zapytań, ocena wyników, poprawianie strategii.",
+      "limitations": "Szukajka ma zamknięty zbiór wyników; potrzebne zadanie transferowe w rzeczywistej wyszukiwarce.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "09",
+      "grade": 1,
+      "numberInGrade": 7,
+      "title": "Korzystanie z wybranych e-usług",
+      "file": "content/lessons/09-e-services.js",
+      "requirements": [
+        "IV.2",
+        "V.3"
+      ],
+      "activityIds": [
+        "es-login",
+        "es-expert"
+      ],
+      "evidence": "Symulacja logowania i korzystania z e-usług.",
+      "limitations": "Do IV.2 uzupełnić wpływ na społeczeństwo i komunikację. Kwoty, ulgi i zasady usług wymagają oddzielnej aktualizacji.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "05",
+      "grade": 2,
+      "numberInGrade": 1,
+      "title": "Tworzenie bazy danych – obsługa gabinetu stomatologicznego",
+      "file": "content/lessons/05-dental-database.js",
+      "requirements": [
+        "I.1",
+        "II.3.d"
+      ],
+      "activityIds": [
+        "db-create",
+        "db-query",
+        "db-explain"
+      ],
+      "evidence": "Dwie tabele, relacja, rekordy, dwa wyszukiwania.",
+      "limitations": "Dobre wprowadzenie do II.3.d; ograniczone gotowe filtry, kwerendy rozwija 11. I.1 bez programowania rozwiązania.",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "10",
+      "grade": 2,
+      "numberInGrade": 2,
+      "title": "Importowanie danych z innych dokumentów do tabeli bazy danych",
+      "file": "content/lessons/10-data-import.js",
+      "requirements": [
+        "II.3.d"
+      ],
+      "activityIds": [
+        "import-guided",
+        "import-fix"
+      ],
+      "evidence": "Import danych, dobór typów i naprawa błędów.",
+      "limitations": "Wsparcie pracy z bazą; sam import nie realizuje relacji i kwerend. Import CSV nie oznacza realizacji II.3.c (arkusz).",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "11",
+      "grade": 2,
+      "numberInGrade": 3,
+      "title": "Przygotowanie kwerend w bazie Stomatolog",
+      "file": "content/lessons/11-queries.js",
+      "requirements": [
+        "II.3.d"
+      ],
+      "activityIds": [
+        "q-l1",
+        "q-l2",
+        "q-l3"
+      ],
+      "evidence": "Samodzielne projektowanie filtrów i kwerend wielotabelowych, podsumowujących i parametrycznych.",
+      "limitations": "W połączeniu z 05 obejmuje treść II.3.d. Symulator wykonuje kwerendy z projektu; pokazywany SQL nie jest dowodem pisania własnego SQL.",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "12",
+      "grade": 2,
+      "numberInGrade": 4,
+      "title": "Przygotowanie korespondencji seryjnej",
+      "file": "content/lessons/12-mail-merge.js",
+      "requirements": [
+        "II.3.b",
+        "IV.1"
+      ],
+      "activityIds": [
+        "m-projA",
+        "m-projB"
+      ],
+      "evidence": "Scalanie dokumentu ze źródłem danych i własny list.",
+      "limitations": "Realizuje korespondencję seryjną, nie cały dokument rozbudowany: brak sekcji, kolumn, spisów i trybu recenzji.",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "16",
+      "grade": 2,
+      "numberInGrade": 5,
+      "title": "Szyfrowanie tekstu metodą podstawieniową",
+      "file": "content/lessons/16-substitution-cipher.js",
+      "requirements": [
+        "I.2.b",
+        "I.3",
+        "V.3"
+      ],
+      "activityIds": [
+        "cipher-caesar",
+        "cipher-duel",
+        "cipher-crack"
+      ],
+      "evidence": "Szyfrowanie, deszyfrowanie i sprawdzanie kluczy.",
+      "limitations": "Cezar realizuje część I.2.b. GA-DE-RY-PO-LU-KI i analiza częstości są dodatkami; brak algorytmów porównywania tekstów i wyszukiwania wzorca.",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "17",
+      "grade": 2,
+      "numberInGrade": 6,
+      "title": "Programowanie algorytmu szyfrowania tekstu metodą podstawieniową",
+      "file": "content/lessons/17-cipher-python.js",
+      "requirements": [
+        "I.1",
+        "I.2.b",
+        "I.3",
+        "II.1",
+        "IV.1",
+        "V.3"
+      ],
+      "activityIds": [
+        "cp-loop",
+        "cp-cipher",
+        "cp-crack"
+      ],
+      "evidence": "Uczeń pisze i uruchamia Python: pętla, warunek, funkcje, szyfr i testy.",
+      "limitations": "Część II.1 i I.2.b. Nie przypisywać pełnego wymagania tekstowego na podstawie samego Cezara.",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "18",
+      "grade": 2,
+      "numberInGrade": 7,
+      "title": "Algorytmy porządkowania liczb",
+      "file": "content/lessons/18-sorting-algorithms.js",
+      "requirements": [
+        "I.2.c",
+        "I.3"
+      ],
+      "activityIds": [
+        "sort-bubble",
+        "sort-insertion",
+        "sort-pseudo"
+      ],
+      "evidence": "Oba sortowania krok po kroku, porównania, zamiany, pseudokod.",
+      "limitations": "Implementacje znajdują się w 19–20. Ocena złożoności jest rozszerzeniem dydaktycznym.",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "19",
+      "grade": 2,
+      "numberInGrade": 8,
+      "title": "Programowanie algorytmów porządkowania metodą bąbelkową",
+      "file": "content/lessons/19-bubble-sort.js",
+      "requirements": [
+        "I.1",
+        "I.2.c",
+        "I.3",
+        "II.1"
+      ],
+      "activityIds": [
+        "cb-trace",
+        "cb-rank",
+        "cb-flag"
+      ],
+      "evidence": "Sortowanie bąbelkowe w Pythonie, śledzenie, testy i warianty.",
+      "limitations": "Jedna z dwóch metod wymaganych w I.2.c; dołączyć 20. II.1 to nadal tylko część całego wymagania.",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "20",
+      "grade": 2,
+      "numberInGrade": 9,
+      "title": "Programowanie algorytmów porządkowania przez wstawianie",
+      "file": "content/lessons/20-insertion-sort.js",
+      "requirements": [
+        "I.1",
+        "I.2.c",
+        "I.3",
+        "II.1"
+      ],
+      "activityIds": [
+        "ci-trace",
+        "ci-bug1",
+        "ci-bug2",
+        "ci-bug3",
+        "ci-compare"
+      ],
+      "evidence": "Wstawianie w Pythonie, while, debugowanie i testy.",
+      "limitations": "Wraz z 18–19 obejmuje obie metody. Wynik ucznia trzeba ocenić niezależnie od odsłoniętego rozwiązania.",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "21",
+      "grade": 2,
+      "numberInGrade": 10,
+      "title": "Obliczanie wartości elementów ciągu metodą iteracyjną, w tym wartości elementów ciągu Fibonacciego",
+      "file": "content/lessons/21-sequences-fibonacci.js",
+      "requirements": [
+        "I.1",
+        "I.2.d",
+        "I.3",
+        "II.1"
+      ],
+      "activityIds": [
+        "cf-save",
+        "cf-calc",
+        "cf-fib"
+      ],
+      "evidence": "Modelowanie ciągu, input/print, iteracja, fib(n) i testy.",
+      "limitations": "Iteracyjny Fibonacci realizuje I.2.d; prosta rekurencja i złota proporcja są dodatkami, nie obowiązkiem tego punktu.",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "06",
+      "grade": 3,
+      "numberInGrade": 1,
+      "title": "Logiczny model komputera i system dwójkowy",
+      "file": "content/lessons/06-binary-computer.js",
+      "requirements": [
+        "I.2.a",
+        "I.3"
+      ],
+      "activityIds": [
+        "binary-read",
+        "binary-write",
+        "binary-method"
+      ],
+      "evidence": "Zamiana 2↔10 i sprawdzenie wyniku w przeciwną stronę.",
+      "limitations": "Tylko część algorytmów liczbowych; brak implementacji zamiany w Pythonie. Model CPU to kontekst dydaktyczny.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "13",
+      "grade": 3,
+      "numberInGrade": 2,
+      "title": "System szesnastkowy",
+      "file": "content/lessons/13-hexadecimal.js",
+      "requirements": [
+        "I.2.a",
+        "I.3"
+      ],
+      "activityIds": [
+        "hex-nibble",
+        "hex-escape",
+        "hex-color"
+      ],
+      "evidence": "Zamiana 2↔10↔16 i zastosowania hex.",
+      "limitations": "Brak implementacji konwersji w Pythonie; kolor RGB nie zastępuje projektowania grafiki II.3.a.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "14",
+      "grade": 3,
+      "numberInGrade": 3,
+      "title": "Urządzenia cyfrowe w szkole",
+      "file": "content/lessons/14-school-devices.js",
+      "requirements": [
+        "III.1",
+        "III.2",
+        "III.4",
+        "V.1",
+        "V.3"
+      ],
+      "activityIds": [
+        "net-map",
+        "hd-tickets",
+        "rules-password"
+      ],
+      "evidence": "Mapa sieci, diagnostyka, rzeczowa komunikacja i ochrona dostępu.",
+      "limitations": "Częściowe pokrycie: nie wszystkie sposoby identyfikacji w sieci i nie cały zakres prawa/netykiety.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "15",
+      "grade": 3,
+      "numberInGrade": 4,
+      "title": "Urządzenia cyfrowe w domu i inne",
+      "file": "content/lessons/15-home-devices.js",
+      "requirements": [
+        "III.1",
+        "III.2",
+        "IV.1",
+        "V.3"
+      ],
+      "activityIds": [
+        "home-project",
+        "peer-stars",
+        "peer-fix"
+      ],
+      "evidence": "Projekt smart home, reguły automatyzacji, zabezpieczenia i poprawa po ocenie koleżeńskiej.",
+      "limitations": "Symulacja IoT; reguła JEŻELI–TO nie zastępuje robotyki II.2 ani programu Python II.1.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "22",
+      "grade": 3,
+      "numberInGrade": 5,
+      "title": "Podstawowe pojęcia i przykład bazy danych – obsługa szkolnych zawodów pływackich",
+      "file": "content/lessons/22-swimming-database.js",
+      "requirements": [
+        "II.3.d"
+      ],
+      "activityIds": [
+        "zw-explore",
+        "zw-board"
+      ],
+      "evidence": "Odczyt relacji i integralność danych w bazie zawodów.",
+      "limitations": "Wprowadzenie; samodzielne projektowanie relacji i kwerend rozwijają 24–25.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "23",
+      "grade": 3,
+      "numberInGrade": 6,
+      "title": "Tworzenie bazy danych – obsługa gabinetu stomatologicznego",
+      "file": "content/lessons/23-dental-database-g3.js",
+      "requirements": [
+        "I.1",
+        "II.3.d"
+      ],
+      "activityIds": [
+        "db-create",
+        "db-query",
+        "db-explain"
+      ],
+      "evidence": "Budowa bazy gabinetu i wyszukiwanie, jak w 05, dla klasy 3.",
+      "limitations": "Powtórzenie nie jest dodatkowym wymaganiem PP; I.1 bez programowania.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "24",
+      "grade": 3,
+      "numberInGrade": 7,
+      "title": "Tworzenie bazy danych – zadania",
+      "file": "content/lessons/24-database-tasks.js",
+      "requirements": [
+        "I.1",
+        "II.3.d"
+      ],
+      "activityIds": [
+        "sd-z1",
+        "sd-z2",
+        "sd-z3"
+      ],
+      "evidence": "Projektowanie tabel, kluczy i relacji dla różnych problemów.",
+      "limitations": "Relacje i model danych; kwerendy w 25–26. I.1 częściowo, bez kodowania rozwiązania.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "25",
+      "grade": 3,
+      "numberInGrade": 8,
+      "title": "Zasady tworzenia kwerend na przykładzie bazy Zawody",
+      "file": "content/lessons/25-queries-zawody.js",
+      "requirements": [
+        "II.3.d"
+      ],
+      "activityIds": [
+        "zq-l1",
+        "zq-l2",
+        "zq-l3"
+      ],
+      "evidence": "Kwerendy z trzech tabel, filtry, ranking, agregacja i parametr.",
+      "limitations": "Wraz z 22–24 obejmuje II.3.d. SQL jest podglądem projektu, nie osobnym edytorem języka.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "26",
+      "grade": 3,
+      "numberInGrade": 9,
+      "title": "Importowanie danych i przygotowywanie kwerend w bazie Stomatolog",
+      "file": "content/lessons/26-import-queries-g3.js",
+      "requirements": [
+        "II.3.d"
+      ],
+      "activityIds": [
+        "import-guided",
+        "import-fix",
+        "q-l1",
+        "q-l2"
+      ],
+      "evidence": "Import, poprawa danych i własne kwerendy w bazie gabinetu.",
+      "limitations": "Utrwalenie 10–11 w klasie 3. Nie zaliczać samego importu jako pracy w arkuszu.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "27",
+      "grade": 3,
+      "numberInGrade": 10,
+      "title": "Przygotowanie korespondencji seryjnej",
+      "file": "content/lessons/27-mail-merge-g3.js",
+      "requirements": [
+        "II.3.b",
+        "IV.1"
+      ],
+      "activityIds": [
+        "m-projA",
+        "m-projB"
+      ],
+      "evidence": "Korespondencja seryjna i projekt listu, jak w 12, dla klasy 3.",
+      "limitations": "Część II.3.b; ponowne wykorzystanie nie pokrywa brakujących funkcji edytora.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "28",
+      "grade": 1,
+      "numberInGrade": 8,
+      "title": "Nagłówek, stopka i standardowe style tekstu",
+      "file": "content/lessons/28-word-styles.js",
+      "requirements": [
+        "II.3.b"
+      ],
+      "activityIds": [
+        "w28-style-steps",
+        "w28-page-steps",
+        "w28-rubric"
+      ],
+      "evidence": "Uczeń stosuje i modyfikuje style, buduje hierarchię nagłówków oraz wstawia nagłówek strony i automatyczną numerację w stopce rzeczywistego DOCX.",
+      "limitations": "Wprowadzenie do struktury dokumentu; spisy, sekcje i recenzję rozwijają 29–33. Samoocena nie sprawdza zawartości pliku.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "29",
+      "grade": 1,
+      "numberInGrade": 9,
+      "title": "Odwołania w dokumencie tekstowym – tworzenie spisu treści",
+      "file": "content/lessons/29-word-toc.js",
+      "requirements": [
+        "II.3.b"
+      ],
+      "activityIds": [
+        "w29-build",
+        "w29-change",
+        "w29-rubric"
+      ],
+      "evidence": "Automatyczny spis treści na podstawie stylów; dodanie i zmiana tytułów oraz kontrola aktualizacji całego spisu i numerów stron w Wordzie.",
+      "limitations": "Realizuje spis treści i jego aktualizację; nie zastępuje spisów obiektów, sekcji, recenzji ani korespondencji seryjnej. Działanie pola potwierdza nauczyciel w DOCX.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "30",
+      "grade": 1,
+      "numberInGrade": 10,
+      "title": "Odwołania w dokumencie tekstowym – spis ilustracji, tabel i wykresów",
+      "file": "content/lessons/30-word-captions.js",
+      "requirements": [
+        "II.3.b"
+      ],
+      "activityIds": [
+        "w30-caption-steps",
+        "w30-list-steps",
+        "w30-update",
+        "w30-rubric"
+      ],
+      "evidence": "Automatyczne podpisy ilustracji, tabel i wykresów; trzy osobne spisy według etykiet i sprawdzenie aktualizacji po zmianie podpisu.",
+      "limitations": "Realizuje spisy obiektów. Gotowe ilustracje i wykresy nie dowodzą projektowania grafiki II.3.a ani pracy w arkuszu II.3.c. Nauczyciel sprawdza pola w pliku.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "31",
+      "grade": 1,
+      "numberInGrade": 11,
+      "title": "Dzielenie dokumentu tekstowego",
+      "file": "content/lessons/31-word-sections.js",
+      "requirements": [
+        "II.3.b"
+      ],
+      "activityIds": [
+        "w31-model",
+        "w31-work",
+        "w31-header",
+        "w31-rubric"
+      ],
+      "evidence": "Podziały stron i sekcji, sekcja pozioma z harmonogramem, kolumny oraz niezależny nagłówek wybranej sekcji w Wordzie.",
+      "limitations": "Realizuje sekcje i kolumny; pozostałe funkcje II.3.b są w innych lekcjach. Obejrzenie podglądu nie zastępuje sprawdzenia granic sekcji i ustawień w DOCX.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "32",
+      "grade": 1,
+      "numberInGrade": 12,
+      "title": "Praca w trybie recenzji",
+      "file": "content/lessons/32-word-review.js",
+      "requirements": [
+        "II.3.b",
+        "IV.1"
+      ],
+      "activityIds": [
+        "w32-edit",
+        "w32-feedback",
+        "w32-rubric"
+      ],
+      "evidence": "Redakcja zaproszenia według karty faktów: śledzone zmiany, komentarze, uzasadnione akceptowanie i odrzucanie propozycji, poprawa po informacji zwrotnej oraz oddzielna wersja do publikacji.",
+      "limitations": "Tryb recenzji sprawdzany w prawdziwym dokumencie; IV.1 wspiera krótki projekt redakcyjny z poprawą, nie samo zaznaczenie quizu. Nie jest to ćwiczenie publikowania ani praw autorskich.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "33",
+      "grade": 1,
+      "numberInGrade": 13,
+      "title": "Praktyczny poradnik",
+      "file": "content/lessons/33-word-guide.js",
+      "requirements": [
+        "II.3.b",
+        "IV.1"
+      ],
+      "activityIds": [
+        "w33-plan",
+        "w33-build",
+        "w33-save",
+        "w33-reader",
+        "w33-publish",
+        "w33-rubric"
+      ],
+      "evidence": "Projekt poradnika organizatora: plan, style, nagłówek i stopka, cztery spisy, sekcja pozioma, test czytelnika, śledzona poprawa oraz końcowe DOCX i sprawdzony PDF.",
+      "limitations": "Dwie sesje po 45 minut. Nie zawiera korespondencji seryjnej (12/27) ani obowiązkowych kolumn (31). Zachowanie gotowej informacji o źródłach nie dowodzi sprawdzenia licencji V.2. Nauczyciel ocenia rzeczywiste pliki.",
+      "migraReference": "M1"
+    }
+  ],
+  "reviewedScope": "27 lekcji z GitHub main 91bffa3 (audyt 30.09.2026) oraz sześć nowych lekcji Worda 28–33 (aktualizacja mapy 01.10.2026)."
+}

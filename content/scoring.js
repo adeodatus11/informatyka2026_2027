@@ -1,5 +1,5 @@
 // Punktacja do karty wyniku. Działa w przeglądarce i w testach Node.
-const display=new Set(['reveal','flow','video','download','fileCloud','filename','connection','diagram','phone','ports','hardwareReference','computerExplorer','resultCard','text','checklist','appNeeds','hardware','dentalSimulator']);
+const display=new Set(['wordSteps','wordRubric','reveal','flow','video','download','fileCloud','filename','connection','diagram','phone','ports','hardwareReference','computerExplorer','resultCard','text','checklist','appNeeds','hardware','dentalSimulator']);
 export const defaultGrades=[[0.9,'bardzo dobra (5)'],[0.75,'dobra (4)'],[0.55,'dostateczna (3)'],[0.35,'dopuszczająca (2)'],[0,'jeszcze do poprawy — wróć do zadań']];
 export function activityScore(activity,value){
  if(value&&Number(value.max)>0)return {score:Math.max(0,Math.min(Number(value.score)||0,Number(value.max))),max:Number(value.max)};

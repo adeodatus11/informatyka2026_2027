@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "target": "Microsoft Word na komputerze, domyślnie Windows",
+  "fixtures": [
+    {
+      "lesson": 28,
+      "filename": "lesson-28-start.docx",
+      "topic": "Szkolny klub gier",
+      "expectedOperations": [
+        "Apply Heading 1/2 styles",
+        "Insert header and PAGE footer field",
+        "Modify Normal style"
+      ],
+      "initialSections": 1
+    },
+    {
+      "lesson": 29,
+      "filename": "lesson-29-start.docx",
+      "topic": "Organizacja szkolnego turnieju",
+      "expectedOperations": [
+        "Insert TOC field",
+        "Add or rename heading",
+        "Update entire TOC"
+      ],
+      "prestyledHeadings": true,
+      "initialTocCount": 0
+    },
+    {
+      "lesson": 30,
+      "filename": "lesson-30-start.docx",
+      "topic": "Strefa nauki",
+      "expectedOperations": [
+        "Add 2 Ilustracja captions",
+        "Add 2 Tabela captions",
+        "Add 2 Wykres captions",
+        "Insert 3 separate label-filtered TOCs"
+      ],
+      "illustrations": 2,
+      "tables": 2,
+      "chartImages": 2,
+      "initialCaptionFields": 0
+    },
+    {
+      "lesson": 31,
+      "filename": "lesson-31-start.docx",
+      "topic": "Plan szkolnego wydarzenia",
+      "expectedOperations": [
+        "Insert next-page section breaks around schedule",
+        "Set schedule landscape",
+        "Return to portrait",
+        "Use continuous section breaks for two-column tips"
+      ],
+      "initialSections": 1,
+      "initialColumns": 1
+    },
+    {
+      "lesson": 32,
+      "filename": "lesson-32-start.docx",
+      "topic": "Zaproszenie na warsztaty",
+      "expectedOperations": [
+        "Accept room correction 21 to 12",
+        "Reject duration correction 60 to 90",
+        "Track own factual and language corrections",
+        "Add comment for missing materials detail"
+      ],
+      "trackedInsertions": 2,
+      "trackedDeletions": 2,
+      "truth": {
+        "date": "18 listopada 2026",
+        "time": "14.00",
+        "room": "12",
+        "minutes": 60,
+        "cost": "bezpłatny",
+        "deadline": "16 listopada"
+      },
+      "initialComments": 0
+    },
+    {
+      "lesson": 33,
+      "filename": "lesson-33-start.docx",
+      "topic": "Poradnik organizacji szkolnego wydarzenia",
+      "expectedOperations": [
+        "Create 4–6 page guide",
+        "Apply heading hierarchy",
+        "Insert header and PAGE footer field",
+        "Insert TOC and caption lists",
+        "Landscape table section",
+        "Peer review with tracked change and comments"
+      ],
+      "illustrations": 1,
+      "tables": 1,
+      "chartImages": 1
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+.word-workshop,.word-rubric{border:1px solid var(--line);border-radius:12px;background:#fff;padding:clamp(18px,3vw,30px)}
+.word-workshop-heading{display:flex;align-items:flex-start;gap:14px;margin-bottom:22px;color:var(--accent)}
+.word-workshop-heading p,.word-rubric-kicker{margin:0 0 5px;color:var(--muted);font-size:.85rem}
+.word-workshop-heading h3,.word-rubric h3{color:var(--ink);margin:0;font-size:1.35rem;line-height:1.35}
+.word-steps{list-style:none;margin:0;padding:0;display:grid;gap:26px}
+.word-step-heading{display:flex;align-items:baseline;gap:12px}
+.word-step-heading>span{display:grid;place-items:center;flex-shrink:0;background:#eaf0e8;color:#284c35;width:30px;height:30px;border-radius:50%;font-weight:700}
+.word-step-heading h4{margin:0;font-size:1.06rem}
+.word-instruction{white-space:pre-line;line-height:1.7;margin:10px 0 12px}
+.word-check{display:flex;align-items:flex-start;gap:9px;background:#f0f5ef;padding:12px 15px;border-radius:8px;font-size:.93rem;line-height:1.55;margin:0}
+.word-check svg{flex-shrink:0;margin-top:3px;color:#315d3b}
+.word-help{margin:10px 0 0;font-size:.9rem}.word-help summary{cursor:pointer;color:#315d3b;text-decoration:underline;text-underline-offset:3px}.word-help p{line-height:1.6;margin:10px 0 0}
+.word-rubric>p{line-height:1.6}.word-filename{background:#f5f6f2;padding:12px;border-radius:7px;overflow-wrap:anywhere}
+.word-criteria{display:grid;gap:14px;margin:22px 0}.word-criterion{display:grid;grid-template-columns:minmax(0,1fr) 160px;align-items:center;gap:20px;padding:16px;border:1px solid var(--line);border-radius:8px}
+.word-criterion label{display:block;font-weight:700}.word-criterion label span{display:block;font-size:.8rem;color:var(--muted);font-weight:500;margin-top:4px}.word-criterion p{font-size:.9rem;line-height:1.6;margin:8px 0 0}.word-criterion select{width:100%;min-height:44px;border:1px solid #748575;border-radius:6px;color:#20392b;background:#fff;padding:8px;font:inherit;font-size:.9rem}
+.word-rubric-total{font-weight:650;padding:15px;background:#eaf0e8;border-radius:8px}
+.word-workspace-notice{display:flex;align-items:flex-start;gap:14px;background:#edf2e9;border:1px solid #c6d5c3;border-radius:10px;padding:20px;margin:20px 0}.word-workspace-notice>svg{flex-shrink:0;color:#315d3b}.word-workspace-notice p{font-size:.91rem;line-height:1.65;margin:6px 0 0}
+.word-teacher-materials{margin:22px 0}.word-teacher-materials ul{line-height:1.8}.word-teacher-criteria li{margin-bottom:10px}
+@media(max-width:600px){.word-criterion{grid-template-columns:1fr;gap:10px}.word-workspace-notice{padding:16px;gap:10px}.word-workshop,.word-rubric{padding:17px}.word-step-heading h4{font-size:1rem}}
+@media print{.word-help{display:none}.word-workshop,.word-rubric{break-inside:auto}.word-steps>li,.word-criterion{break-inside:avoid}.word-workshop,.word-rubric{box-shadow:none}.word-workspace-notice{display:none}}

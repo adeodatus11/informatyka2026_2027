@@ -1,16 +1,15 @@
 # Informatyka praktycznie
 
-Interaktywne materiały dla klas 1–3 technikum. Tematy i cele wskazane przez nauczyciela:
+Interaktywne materiały dla klas 1–3 technikum: **33 lekcje — 13 w klasie 1, 10 w klasie 2 i 10 w klasie 3**. Aktualny katalog powstaje automatycznie z `content/lessons/`; numeracja na stronie jest osobna dla każdej klasy.
 
-1. **Komputer**: ocenić parametry komputera i dobrać sprzęt do potrzeb.
-2. **System i oprogramowanie**: sprawnie zarządzać plikami, folderami i aplikacjami.
-3. **Urządzenia w szkole**: podłączyć urządzenie i wykonać podstawową diagnostykę.
-4. **Urządzenia w domu**: rozumieć, jak urządzenia komunikują się i wykorzystują dane.
+Nowy dział Worda (klasa 1, tematy 8–13) obejmuje style, nagłówki i stopki, spisy treści i obiektów, sekcje, recenzję oraz projekt poradnika. Instrukcje, sprawdzenie wiedzy i samoocena są na platformie, a uczniowie pracują w stacjonarnym Wordzie na sześciu przygotowanych plikach DOCX. Pięć lekcji trwa po 45 minut, projekt końcowy 2 × 45 minut. Każda ma plan nauczyciela, kryteria produktu i ewaluację.
 
-5. **Tworzenie bazy danych – obsługa gabinetu stomatologicznego** (klasa 2): dwie powiązane tabele, zapis własnej wizyty i wyszukiwanie danych w symulatorze przeglądarkowym.
-6. **Logiczny model komputera i system dwójkowy** (klasa 3): funkcje części komputera, cykl instrukcji, zamiana liczb i zakres ośmiobitowy.
+## Zasoby do projektowania lekcji
 
-Każda lekcja ma sześć etapów, interaktywne zadania z informacją zwrotną, postęp lokalny, panel prowadzącego oraz plan do druku. Lekcje 1–4 przewidują około 30 minut, a lekcje 5–6 pełne 45 minut. Lekcja 5 działa w całości w przeglądarce: projektowanie tabel i relacji, formularze danych oraz wyszukiwanie. Symulator sprawdza rekordy i zadania, a stan zapisuje się wraz z postępem. Nie wymaga instalacji ani pobierania plików.
+- [Podstawa programowa 2024, źródła i opracowania Migra](docs/podstawa-programowa/README.md) — tekst urzędowy, wymagania, mapowanie wszystkich lekcji i jawne luki; Python jako język realizacji.
+- [Metody COVE Polska](docs/metodyka-cove.md) — obowiązkowy punkt odniesienia dla kolejnych scenariuszy.
+- [Wspólny schemat lekcji](docs/lesson-blueprint.md) i [zasady pracy agentów](AGENTS.md) — wykorzystanie istniejącego layoutu i komponentów.
+- [Scenariusze Word 28–30](docs/scenarios/word-28-30.md), [Word 31–33](docs/scenarios/word-31-33.md), [materiały i generator DOCX](docs/word-materials.md).
 
 ## Uruchomienie
 
@@ -54,6 +53,8 @@ Archiwum nie jest podlinkowane w interfejsie. Pozostaje częścią repozytorium 
 
 ```sh
 npm test
+node --test tests/word-content.test.mjs
+node scripts/check-curriculum.mjs
 npm run build
 npm run test:e2e
 ```
@@ -62,7 +63,7 @@ Testy przeglądarkowe używają zainstalowanego Chrome. Sprawdzają pełne przej
 
 ## Dane ucznia i ograniczenia
 
-Brak kont i trackerów. Odpowiedzi nie są wysyłane do serwera. Stan jest zapisywany w `localStorage`; przy blokadzie pamięci lokalnej działa do odświeżenia strony. Przycisk w stopce czyści postęp po potwierdzeniu.
+Brak kont i trackerów. Odpowiedzi nie są wysyłane do serwera. Odpowiedzi i postęp ćwiczeń są dostępne w bieżącej sesji strony i znikają po odświeżeniu. Prace DOCX uczeń zapisuje oddzielnie na komputerze.
 
 Teksty otwarte i ćwiczenia poza stroną są jawnie oznaczoną samooceną. Plik MP4 w paczce jest dwusekundową planszą testową, a obrazy są planszami. Nie są to zdjęcia wydarzeń ani planowane filmy instruktażowe. Specyfikacje laptopów i ceny są fikcyjnymi przykładami do lekcji.
 
