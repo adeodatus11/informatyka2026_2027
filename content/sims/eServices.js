@@ -1,4 +1,4 @@
-// Logika symulatora „e-Sprawy (symulacja)” (lekcja 09). Czysty JS.
+// Logika symulatora e-usług (login.gov.pl, IKP, PKP Intercity, Twój e-PIT) — lekcja 09. Czysty JS.
 // Wszystkie dane osobowe są fikcyjne; PESEL jest przykładowy (poprawna suma kontrolna, nieprzypisany do osoby).
 
 export const profile={name:'Kuba Przykładowy',pesel:'10231405673',born:'14.03.2010',age:16};
@@ -13,20 +13,20 @@ export function makeCode(rand=Math.random){let c='';for(let i=0;i<6;i++)c+=Math.
 export function checkCode(expected,typed){return String(typed||'').replace(/\s|-/g,'')===expected;}
 
 export const phishing=[
- {id:'real',kind:'browser',url:'https://e-sprawy.gov.pl/logowanie',lock:true,title:'Logowanie do e-Sprawy',body:'Zaloguj się, aby zobaczyć swoje sprawy.',safe:true,
+ {id:'real',kind:'browser',url:'https://login.gov.pl/login',lock:true,title:'login.gov.pl — logowanie do e-usług',body:'Zaloguj się, aby zobaczyć swoje sprawy.',safe:true,
   explain:'Bezpieczna: https, kłódka, a domena kończy się dokładnie na „.gov.pl” (ostatnia część przed pierwszym „/”).',
   actions:['Loguję się — adres i kłódka się zgadzają','Przekazuję stronę na 8080','Zamykam i nigdy tu nie wracam'],action:0,
   actionWhy:['Dobrze. Przy okazji: najbezpieczniej wpisywać adres ręcznie lub mieć go w zakładkach.','8080 służy do przekazywania podejrzanych SMS-ów, a ta strona jest prawdziwa.','Nie ma potrzeby — to prawdziwa strona.']},
- {id:'suffix',kind:'browser',url:'https://e-sprawy.gov.pl.login-check.xyz/logowanie',lock:true,title:'Logowanie do e-Sprawy',body:'Twoja sesja wygasła. Zaloguj się ponownie i podaj kod SMS.',safe:false,
-  explain:'Phishing! Czytaj adres od końca, do pierwszego „/”: domena to „login-check.xyz”. „e-sprawy.gov.pl” to tylko przynęta na początku. Kłódka oznacza szyfrowanie, a nie uczciwość strony.',
-  actions:['Loguję się, bo jest kłódka','Zamykam kartę, zgłaszam adres na incydent.cert.pl, wpisuję e-sprawy.gov.pl ręcznie','Wpisuję tylko login, bez hasła — dla testu'],action:1,
+ {id:'suffix',kind:'browser',url:'https://login.gov.pl.login-check.xyz/logowanie',lock:true,title:'login.gov.pl — logowanie do e-usług',body:'Twoja sesja wygasła. Zaloguj się ponownie i podaj kod SMS.',safe:false,
+  explain:'Phishing! Czytaj adres od końca, do pierwszego „/”: domena to „login-check.xyz”. „login.gov.pl” to tylko przynęta na początku. Kłódka oznacza szyfrowanie, a nie uczciwość strony.',
+  actions:['Loguję się, bo jest kłódka','Zamykam kartę, zgłaszam adres na incydent.cert.pl, wpisuję login.gov.pl ręcznie','Wpisuję tylko login, bez hasła — dla testu'],action:1,
   actionWhy:['Kłódka ma też strona oszusta. Liczy się domena.','','Nawet sam login pomaga oszustom. Nie wpisuj niczego.']},
- {id:'dash',kind:'browser',url:'http://e-sprawy-gov.pl/logowanie',lock:false,title:'e-Sprawy — logowanie',body:'Zaloguj się, aby odebrać pismo.',safe:false,
-  explain:'Phishing! Myślnik zamiast kropki: „e-sprawy-gov.pl” to zwykła domena .pl, którą każdy może kupić. Do tego http bez kłódki — dane lecą bez szyfrowania.',
+ {id:'dash',kind:'browser',url:'http://login-gov.pl/logowanie',lock:false,title:'login.gov.pl — logowanie',body:'Zaloguj się, aby odebrać pismo.',safe:false,
+  explain:'Phishing! Myślnik zamiast kropki: „login-gov.pl” to zwykła domena .pl, którą każdy może kupić. Do tego http bez kłódki — dane lecą bez szyfrowania.',
   actions:['Zamykam kartę i zgłaszam adres na incydent.cert.pl','Loguję się szybko, zanim ktoś zauważy','Przekazuję stronę na 8080'],action:0,
   actionWhy:['','Nie! Ta strona zbiera loginy i hasła.','8080 przyjmuje SMS-y. Strony zgłaszasz na incydent.cert.pl.']},
- {id:'sms',kind:'sms',from:'mDokumenty',url:'https://e-5prawy.pl/odnow',text:'Twoj mDokument wygasa DZIS. Odnow go teraz, inaczej zostanie zablokowany: https://e-5prawy.pl/odnow',safe:false,
-  explain:'Phishing! Zamiast „s” jest cyfra „5”, domena to zwykłe „.pl”, a presja czasu („DZIŚ”, „zablokowany”) ma Cię przestraszyć. Ważność dokumentów sprawdzasz w aplikacji, nie przez link z SMS-a.',
+ {id:'sms',kind:'sms',from:'mObywatel',url:'https://m0bywatel.pl/odnow',text:'Twoj mDowod w mObywatelu wygasa DZIS. Odnow go teraz, inaczej zostanie zablokowany: https://m0bywatel.pl/odnow',safe:false,
+  explain:'Phishing! Zamiast litery „o” jest cyfra „0” (m0bywatel), domena to zwykłe „.pl”, a nie mobywatel.gov.pl. Nazwa nadawcy „mObywatel” niczego nie dowodzi — oszuści potrafią ją podrobić, a presja czasu („DZIŚ”, „zablokowany”) ma Cię przestraszyć. Ważność dokumentów sprawdzasz w aplikacji, nie przez link z SMS-a.',
   actions:['Klikam, bo nie chcę blokady','Nie klikam, przekazuję SMS na 8080 i usuwam','Odpisuję „STOP”'],action:1,
   actionWhy:['Właśnie na to liczą oszuści.','','Odpowiedź potwierdza, że numer jest aktywny — dostaniesz więcej spamu.']}
 ];
@@ -53,17 +53,17 @@ export const modules=[
    {id:'lab',from:'Laboratorium Przykład',subject:'Wynik badania krwi',date:'wczoraj',body:'Wynik morfologii jest dostępny. Wszystkie parametry w normie.',fields:[['Nr zlecenia','2026/0913']]}
   ],
   steps:[
-   {id:'code',kind:'code',title:'Znajdź kod recepty',task:'W skrzynce Konta Zdrowia (symulacja) otwórz e-receptę i wpisz 4-cyfrowy kod, który podasz w aptece.',answer:'4827',hint:'Szukasz 4 cyfr opisanych jako „Kod dostępowy” w wiadomości o e-recepcie — nie 22-cyfrowego klucza.'},
-   {id:'pharmacy',kind:'pharmacy',title:'Apteka (symulacja)',task:'Farmaceutka prosi o PESEL i kod. Wpisz dane z profilu i kod recepty.',hint:'PESEL jest w profilu na górze (11 cyfr). Kod recepty znalazłeś w poprzednim kroku.'},
+   {id:'code',kind:'code',title:'Znajdź kod recepty',task:'W Internetowym Koncie Pacjenta (IKP, symulacja) otwórz e-receptę i wpisz 4-cyfrowy kod, który podasz w aptece.',answer:'4827',hint:'Szukasz 4 cyfr opisanych jako „Kod dostępowy” w wiadomości o e-recepcie — nie 22-cyfrowego klucza.'},
+   {id:'pharmacy',kind:'pharmacy',title:'W aptece',task:'Farmaceutka prosi o PESEL i kod. Wpisz dane z profilu i kod recepty.',hint:'PESEL jest w profilu na górze (11 cyfr). Kod recepty znalazłeś w poprzednim kroku.'},
    {id:'who',kind:'choice',title:'Komu wolno podać kod?',task:'Kolega pisze na grupie klasowej: „Wrzuć kod, wykupię Ci lek po drodze”. Komu możesz podać kod recepty?',options:['Wrzucę na grupę klasową — tak będzie szybciej','Farmaceucie w aptece albo zaufanej osobie, która realizuje receptę za mnie (np. rodzicowi) — prywatnie','Każdemu, kto napisze, że dzwoni z przychodni'],correct:1,
     why:['Na grupie kod zobaczy 30 osób — z PESEL-em ktoś może wykupić Twój lek albo poznać Twoje dane zdrowotne.','','Przychodnia nie prosi o kod recepty przez telefon. To klasyczna próba wyłudzenia.']},
-   {id:'referral',kind:'referral',title:'Zapis z e-skierowaniem',task:'Zapisz się do ortopedy w Rejestracji (symulacja). Podaj kod e-skierowania ze skrzynki i wybierz termin.',answer:'7315',hint:'Kod skierowania to 4 cyfry w wiadomości o e-skierowaniu (nie ten sam co kod recepty).'}
+   {id:'referral',kind:'referral',title:'Zapis z e-skierowaniem',task:'Zapisz się do ortopedy w rejestracji przychodni (symulacja). Podaj kod e-skierowania ze skrzynki i wybierz termin.',answer:'7315',hint:'Kod skierowania to 4 cyfry w wiadomości o e-skierowaniu (nie ten sam co kod recepty).'}
   ],
   expert:['E-receptę realizujesz w aptece: podajesz PESEL i 4-cyfrowy kod (z SMS-a, e-maila albo Internetowego Konta Pacjenta).','Kod to klucz do Twoich leków — dajesz go farmaceucie albo zaufanej osobie, nigdy na grupie.','Od 16 lat sam logujesz się do IKP. E-skierowania nie zgubisz: w rejestracji wystarczą kod i PESEL.']},
  {id:'travel',letter:'B',title:'Dojazdy',icon:'location',lead:'Bilet ze zniżką na praktyki i do szkoły. Pomyłka = opłata dodatkowa.',
-  trip:{from:'Zielonkowo',to:'Borowo',price:42},
+  trip:{from:'Wrocław',to:'Opole',price:42},
   steps:[
-   {id:'discount',kind:'choice',title:'Wybierz ulgę',task:'Kupujesz jednorazowy bilet KolejSim (symulacja): Zielonkowo → Borowo, normalny 42,00 zł. Masz 16 lat i chodzisz do technikum. Którą ulgę wybierasz?',options:['0% — bilet normalny','37% — uczeń szkoły ponadpodstawowej','49% — uczeń, bilet miesięczny imienny','51% — student'],correct:1,
+   {id:'discount',kind:'choice',title:'Wybierz ulgę',task:'Kupujesz jednorazowy bilet PKP Intercity (symulacja, cena przykładowa): Wrocław → Opole, normalny 42,00 zł. Masz 16 lat i chodzisz do technikum. Którą ulgę wybierasz?',options:['0% — bilet normalny','37% — uczeń szkoły ponadpodstawowej','49% — uczeń, bilet miesięczny imienny','51% — student'],correct:1,
     why:['Przepłacasz! Jako uczeń do 24 lat masz ulgę.','','49% dotyczy tylko biletów miesięcznych imiennych, a Ty kupujesz jednorazowy.','51% to ulga studencka. W pociągu konduktor poprosi o legitymację studencką — a jej nie masz: zapłacisz różnicę i opłatę dodatkową.']},
    {id:'doc',kind:'choice',title:'Dokument do ulgi',task:'Czym udowodnisz prawo do ulgi podczas kontroli?',options:['Legitymacją szkolną albo mLegitymacją w aplikacji mObywatel','Zdjęciem legitymacji w galerii telefonu','Dowodem osobistym — jest tam data urodzenia'],correct:0,
     why:['','Zdjęcie w galerii to nie dokument — każdy może je podrobić. mLegitymacja w aplikacji ma zabezpieczenia i kod QR.','Dowód osobisty nie potwierdza, że się uczysz. Ulga jest dla ucznia, nie dla wieku.']},

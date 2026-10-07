@@ -1,4 +1,4 @@
-import{i as e,r as t,s as n,u as r}from"./index-vslwX7Cl.js";import{n as i,t as a}from"./optionOrder-BIoIvD-8.js";var o=r(n(),1),s=3e3;String.raw`
+import{i as e,r as t,s as n,u as r}from"./index-ClGlnYDK.js";import{n as i,t as a}from"./optionOrder-iBM9aP5G.js";var o=r(n(),1),s=3e3;String.raw`
 import sys, json, builtins, traceback, math, ast, time
 
 _PL_FILE = 'twoj_kod.py'
