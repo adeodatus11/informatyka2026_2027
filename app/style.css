@@ -79,3 +79,32 @@ dialog{border:1px solid var(--line);color:var(--ink);background:#fff}dialog::bac
 .fresh-done{color:var(--ink)}
 .fresh-start:has(.fresh-done){border-style:solid;border-color:var(--accent);background:var(--pale)}
 @media(max-width:800px){.fresh-start{flex-direction:column;align-items:stretch}}
+
+/* Instrukcja zgłaszania oszustw (8080, incydent.cert.pl) */
+.report-guide h3{margin-top:0}.report-guide h4{display:flex;align-items:center;gap:8px;margin:18px 0 10px;font-size:1.05rem}
+.rg-phones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.rg-phone{margin:0}.rg-phone figcaption{font-size:.88rem;margin-bottom:6px;min-height:2.5em}
+.rg-screen{border:7px solid #1b2328;border-radius:22px;background:#f4f6f8;padding:10px 8px;min-height:230px;display:flex;flex-direction:column;gap:8px;font-size:.78rem}
+.rg-head,.rg-to{font-weight:700;text-align:center;border-bottom:1px solid #d9dee3;padding-bottom:6px}
+.rg-to{text-align:left}
+.rg-bubble{position:relative;background:#fff;border:1px solid #d9dee3;border-radius:12px 12px 12px 4px;padding:8px;line-height:1.35;color:#1b2328}
+.rg-out{background:#dcefe3;border-color:#b7dcc4;border-radius:12px 12px 4px 12px}
+.rg-dim{background:#e9edf0;color:#3d4a52}.rg-small{font-size:.7rem}
+.rg-hold{outline:3px solid #f0b429}
+.rg-finger{position:absolute;right:6px;bottom:-14px;font-size:1.4rem}
+.rg-tip{margin:auto 0 0;color:#9b2c2c;font-weight:700;text-align:center}
+.rg-menu{list-style:none;margin:0;padding:4px;background:#fff;border:1px solid #c9d0d6;border-radius:10px;box-shadow:0 6px 16px #0002}
+.rg-menu li{padding:6px 8px;border-radius:6px}.rg-pick{background:var(--accent);color:#fff;font-weight:700}
+.rg-send{margin-top:auto;display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid #c9d0d6;border-radius:999px;padding:5px 10px;color:#54666c}.rg-send b{color:var(--accent)}
+.rg-ok{margin:auto 0 0;display:flex;gap:6px;color:#155c37;font-weight:600;line-height:1.35}
+.rg-note{font-size:.9rem;color:var(--muted);margin:10px 0 0}
+.rg-browser{border:1px solid #c9d0d6;border-radius:12px;overflow:hidden;background:#fff;max-width:640px}
+.rg-bar{display:flex;align-items:center;gap:6px;background:#eef1f4;padding:7px 12px;font-family:ui-monospace,Consolas,monospace;font-size:.85rem;color:#1b2328}
+.rg-form{padding:14px 18px}.rg-form-title{font-size:1.15rem;font-weight:800;margin:0 0 8px}
+.rg-label{margin:10px 0 4px;font-weight:700;font-size:.88rem}
+.rg-radios{display:flex;flex-wrap:wrap;gap:8px}.rg-radios span{border:1px solid #c9d0d6;border-radius:999px;padding:3px 10px;font-size:.82rem}.rg-radios .rg-on{border-color:var(--accent);background:var(--pale);font-weight:700}
+.rg-input{border:1px solid #c9d0d6;border-radius:8px;padding:7px 10px;font-family:ui-monospace,Consolas,monospace;font-size:.82rem;overflow-wrap:anywhere}
+.rg-area{font-family:inherit;min-height:3em}
+.rg-submit{display:inline-block;margin-top:12px;background:var(--accent);color:#fff;font-weight:700;border-radius:8px;padding:8px 14px}
+@media(max-width:900px){.rg-phones{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.rg-phones{grid-template-columns:1fr}}

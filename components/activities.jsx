@@ -5,6 +5,7 @@ import {Icon,fileIcon} from './icons.jsx';
 import {shuffled} from '../content/shuffle.js';
 import {simComponents} from './sims/index.jsx';
 import {ResultCard} from './ResultCard.jsx';
+import {ReportGuide} from './ReportGuide.jsx';
 import {WordSteps,WordRubric} from './WordWorkshop.jsx';
 
 export function FeedbackBox({children,ok=true}){return <div className={`feedback ${ok?'':'retry'}`} role="status"><Icon name={ok?'check':'book'}/><div>{children}</div></div>}
@@ -47,6 +48,7 @@ export function Activity({data,value,onChange,base,answers,lesson}){
  switch(data.type){
  case 'wordSteps':return <WordSteps data={data}/>;
  case 'wordRubric':return <WordRubric data={data} value={value} onChange={onChange}/>;
+ case 'reportGuide':return <ReportGuide data={data}/>;
  case 'resultCard':return <ResultCard data={data} value={value} onChange={onChange} answers={answers} lesson={lesson}/>;
  case 'dentalSimulator':return <DentalSimulator data={data} value={value} onChange={onChange}/>;
  case 'computerExplorer':

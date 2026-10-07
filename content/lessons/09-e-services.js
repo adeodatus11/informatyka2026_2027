@@ -24,8 +24,8 @@ export default {
  ],
  materials:['Komputer lub telefon z przeglądarką — każdy uczeń swój','Symulator nie wymaga logowania ani prawdziwych danych; PESEL w zadaniach jest fikcyjny (przykład)'],
  teacherGuide:{
-  preparation:'Przed etapem 3 podziel klasę na trójki i przydziel litery A, B, C (np. według kolejności w dzienniku). Portal „e-Sprawy”, apteka, KolejSim i e-Urząd to fikcyjne symulacje — nie używają prawdziwych danych. W tekstach wymieniamy realne usługi (mObywatel, IKP, Twój e-PIT, 8080, incydent.cert.pl) jako fakty do zapamiętania.',
-  summary:'Uczeń loguje się z kodem SMS, odróżnia domenę kończącą się na .gov.pl od podróbek (np. .gov.pl.login-check.xyz, -gov.pl, e-5prawy). Realizuje e-receptę PESEL + 4-cyfrowy kod, wybiera ulgę 37% na bilet jednorazowy (49% — miesięczny imienny, 51% — tylko studenci), liczy 42 zł × 0,63 = 26,46 zł, odzyskuje zaliczkę 230 zł dzięki uldze dla młodych i wie, po co zastrzec PESEL. Pytanie dodatkowe: dlaczego kłódka w przeglądarce nie gwarantuje, że strona jest prawdziwa?'
+  preparation:'Przed etapem 3 podziel klasę na trójki i przydziel litery A, B, C (np. według kolejności w dzienniku). Ekrany login.gov.pl, IKP, apteki, PKP Intercity i e-Urzędu Skarbowego (Twój e-PIT) to symulacje z fikcyjnymi danymi — odwzorowują przebieg prawdziwych usług, ale nie łączą się z nimi. W tekstach wymieniamy realne usługi (mObywatel, IKP, Twój e-PIT, 8080, incydent.cert.pl) jako fakty do zapamiętania.',
+  summary:'Uczeń loguje się z kodem SMS, odróżnia domenę kończącą się na .gov.pl od podróbek (np. login.gov.pl.login-check.xyz, login-gov.pl, m0bywatel.pl). Realizuje e-receptę PESEL + 4-cyfrowy kod, wybiera ulgę 37% na bilet jednorazowy (49% — miesięczny imienny, 51% — tylko studenci), liczy 42 zł × 0,63 = 26,46 zł, odzyskuje zaliczkę 230 zł dzięki uldze dla młodych i wie, po co zastrzec PESEL. Pytanie dodatkowe: dlaczego kłódka w przeglądarce nie gwarantuje, że strona jest prawdziwa?'
  },
  sections:[
   {id:'start',label:'Start',title:'Okienko czy aplikacja?',grouping:'class',
@@ -36,11 +36,12 @@ export default {
     choice('l09-pdf','Powtórka: który operator pokaże tylko pliki PDF?',['site:pdf','filetype:pdf','"pdf"'],[1],'filetype:pdf zostawia tylko pliki PDF — idealne do regulaminów, cenników i formularzy urzędowych.','site: ogranicza stronę, a nie typ pliku.')
    ]},
   {id:'login',label:'Logowanie',title:'Wejście bez wpadki',grouping:'solo',
-   intro:'Zaloguj się do e-Spraw (symulacja) z kodem SMS. Potem cztery sytuacje: prawdziwa strona czy pułapka? Jeden błąd tutaj to przejęte konto.',
-   reading:{title:'Dwa zamki i czytanie adresu',paragraphs:['Do e-usług państwa logujesz się przez węzeł logowania (w rzeczywistości login.gov.pl): profilem zaufanym (login i hasło), przez bank albo aplikacją mObywatel. Po haśle przychodzi kod SMS — to drugi zamek, czyli weryfikacja dwuetapowa.','Oszuści podrabiają strony logowania. Czytaj adres od końca: tuż przed pierwszym „/” musi stać dokładnie .gov.pl. Podejrzany SMS przekaż na 8080 (bezpłatnie), podejrzaną stronę zgłoś na incydent.cert.pl.'],example:{question:'Kłódka przy adresie = bezpieczna strona?',answer:'Nie. Kłódka oznacza tylko, że połączenie jest szyfrowane. Oszust też może mieć kłódkę — liczy się domena.'}},
-   ...note(7,'Uczniowie pracują sami. Po 4 minutach zatrzymaj klasę na sytuacji 2 (adres z .gov.pl na początku i .xyz na końcu) i zapytaj, kto dał się złapać. Pokaż na tablicy, jak czytać adres od końca do pierwszego „/”.','Który fragment adresu decyduje o tym, do kogo należy strona?','Domena tuż przed pierwszym „/”, czytana od końca: np. …login-check.xyz należy do właściciela login-check.xyz, a nie do e-sprawy.gov.pl.','Uczniowie ufają kłódce i temu, że adres „zaczyna się od” znanej nazwy. Nie zauważają cyfry 5 zamiast litery s ani myślnika zamiast kropki.','Poproś uczniów o sprawdzenie w swoim telefonie, czy mają włączone powiadomienia z aplikacji banku albo mObywatela i jak wygląda prawdziwy SMS z kodem.'),
+   intro:'Zaloguj się przez login.gov.pl (symulacja) z kodem SMS. Potem cztery sytuacje: prawdziwa strona czy pułapka? Jeden błąd tutaj to przejęte konto.',
+   reading:{title:'Dwa zamki i czytanie adresu',paragraphs:['Do e-usług państwa logujesz się przez login.gov.pl: profilem zaufanym (login i hasło), przez bank albo aplikacją mObywatel. Po haśle przychodzi kod SMS — to drugi zamek, czyli weryfikacja dwuetapowa.','Oszuści podrabiają strony logowania. Czytaj adres od końca: tuż przed pierwszym „/” musi stać dokładnie .gov.pl. Podejrzany SMS przekaż na 8080 (bezpłatnie), podejrzaną stronę zgłoś na incydent.cert.pl.'],example:{question:'Kłódka przy adresie = bezpieczna strona?',answer:'Nie. Kłódka oznacza tylko, że połączenie jest szyfrowane. Oszust też może mieć kłódkę — liczy się domena.'}},
+   ...note(7,'Uczniowie pracują sami. Po 4 minutach zatrzymaj klasę na sytuacji 2 (adres z .gov.pl na początku i .xyz na końcu) i zapytaj, kto dał się złapać. Pokaż na tablicy, jak czytać adres od końca do pierwszego „/”.','Który fragment adresu decyduje o tym, do kogo należy strona?','Domena tuż przed pierwszym „/”, czytana od końca: np. …login-check.xyz należy do właściciela login-check.xyz, a nie do login.gov.pl.','Uczniowie ufają kłódce i temu, że adres „zaczyna się od” znanej nazwy. Nie zauważają cyfry 5 zamiast litery s ani myślnika zamiast kropki.','Poproś uczniów o sprawdzenie w swoim telefonie, czy mają włączone powiadomienia z aplikacji banku albo mObywatela i jak wygląda prawdziwy SMS z kodem.'),
    activities:[
-    {type:'eServices',id:'es-login',mode:'login',points:5,label:'Logowanie z kodem SMS i 4 pułapki'}
+    {type:'eServices',id:'es-login',mode:'login',points:5,label:'Logowanie z kodem SMS i 4 pułapki'},
+    {type:'reportGuide',id:'report-guide',title:'Wpadło Ci oszustwo? Zgłoś je w minutę'}
    ]},
   {id:'expert',label:'Ekspert',title:'Zostań ekspertem jednej sprawy',grouping:'trio',
    intro:'W trójce każdy wybiera inny moduł: A — Zdrowie, B — Dojazdy, C — Pieniądze i praca. Przejdź 4 kroki i zapamiętaj 3 zdania z Karty eksperta — za chwilę będziesz uczyć innych.',
@@ -49,15 +50,20 @@ export default {
    activities:[
     {type:'eServices',id:'es-expert',mode:'expert',points:4,label:'Moduł eksperta (A, B lub C)'}
    ]},
-  {id:'teach',label:'Uczę',title:'Naucz swoją trójkę',grouping:'trio',
-   intro:'Każdy ekspert ma 2–3 minuty. Pokaż na ekranie swój moduł, przekaż 3 zdania z karty i sprawdź, czy słuchacze zrozumieli. Słuchacze: pytajcie — test za chwilę rozwiązujecie sami.',
+  {id:'teach',label:'Uczę',title:'Pokaż kolegom swoją sprawę',grouping:'trio',
+   intro:'W poprzednim etapie każdy z Was załatwił INNĄ sprawę: A — receptę, B — bilet, C — zwrot podatku. Teraz po kolei pokazujecie je sobie nawzajem. Za chwilę test ze wszystkich trzech spraw — i każdy pisze go sam.',
+   reading:{title:'Jak to zrobić: 3 tury po 3 minuty',paragraphs:[
+    'Tura 1 — mówi osoba A (recepta). Tura 2 — osoba B (bilet). Tura 3 — osoba C (podatek). Nauczyciel mówi „zmiana”, gdy mija czas.',
+    'Gdy mówisz Ty: 1) pokaż na swoim ekranie, co klikałeś w poprzednim etapie; 2) przeczytaj 3 zdania z „Karty eksperta” (jest na dole Twojej sprawy); 3) zadaj kolegom jedno pytanie z listy poniżej i sprawdź, czy dobrze odpowiadają.',
+    'Gdy słuchasz: zadaj ekspertowi co najmniej jedno pytanie z listy poniżej. W teście będą bardzo podobne pytania, więc to Twoja ściąga — tylko w głowie.'],
+    example:{question:'Nie masz trójki i pracujesz sam?',answer:'Wróć do etapu „Ekspert” i załatw pozostałe dwie sprawy — po każdej pojawi się jej Karta eksperta. Potem odpowiedz sobie na pytania z listy poniżej. Tak przygotujesz się do testu.'}},
    ...note(9,'Mierz czas głośno: 3 × 3 minuty. Po każdej turze powiedz „zmiana eksperta”. Chodź między trójkami i słuchaj, czy eksperci zadają pytania sprawdzające, a nie tylko czytają. Uczniowie pracujący solo w tym czasie czytają trzy Karty eksperta i odpowiadają sobie na pytania z kart poniżej.','Jak sprawdzisz, że kolega naprawdę zrozumiał Twoją sprawę, a nie tylko kiwa głową?','Zadam pytanie, np. „ile zapłacisz za bilet za 30 zł z ulgą?” albo „komu możesz podać kod recepty?”, i poproszę, żeby powtórzył najważniejszy krok własnymi słowami.','Ekspert czyta kartę na głos i nie sprawdza zrozumienia. Słuchacze nie zadają pytań, bo „i tak wiedzą”.','Poproś każdą trójkę o wymyślenie jednego podchwytliwego pytania do testu dla innej trójki.'),
    activities:[
-    {type:'checklist',id:'teach-check',items:['Pokazałem/am na ekranie, gdzie jest najważniejsza informacja (kod recepty, wybór ulgi albo pole ulgi w zeznaniu)','Zadałem/am słuchaczom co najmniej jedno pytanie sprawdzające','Słuchacze powtórzyli najważniejszy krok własnymi słowami'],explanation:'Świetnie. Kto uczy innych, sam zapamiętuje najlepiej. Teraz słuchasz kolejnych ekspertów — zadawaj pytania z kart poniżej.'},
+    {type:'checklist',id:'teach-check',items:['Pokazałem/am kolegom na ekranie swoją sprawę','Przeczytałem/am im 3 zdania z mojej Karty eksperta','Zadałem/am jedno pytanie z listy i koledzy dobrze odpowiedzieli','Wysłuchałem/am pozostałych dwóch osób i zadałem/am im pytania'],explanation:'Gotowe. Kto tłumaczy innym, sam zapamiętuje najlepiej. Teraz test — każdy odpowiada sam.'},
     reveal('teach-questions',[
-     {title:'Pytania do eksperta A',icon:'shield',short:'Zdrowie: e-recepta i e-skierowanie',text:'Co dokładnie podaję w aptece? Czym różni się kod od 22-cyfrowego klucza recepty? Czy mama może wykupić mój lek? Czy e-skierowanie można zgubić?'},
-     {title:'Pytania do eksperta B',icon:'location',short:'Dojazdy: ulga i bilet',text:'Ile procent zniżki mam na bilet jednorazowy, a ile na miesięczny? Czy zdjęcie legitymacji wystarczy? Co się stanie, jeśli kupię bilet z ulgą 51%? Ile zapłacę za bilet za 30 zł?'},
-     {title:'Pytania do eksperta C',icon:'energy',short:'Pieniądze: PIT-0 i PESEL',text:'Do ilu lat mam ulgę dla młodych? Co zrobić, żeby pracodawca w ogóle nie pobierał zaliczki? Jak odebrać zwrot? Po co zastrzegać PESEL i ile to kosztuje?'}
+     {title:'Pytania do osoby A',icon:'shield',short:'Recepta i skierowanie',text:'Co dokładnie podaję w aptece? Czym różni się kod od 22-cyfrowego klucza recepty? Czy mama może wykupić mój lek? Czy e-skierowanie można zgubić?'},
+     {title:'Pytania do osoby B',icon:'location',short:'Bilet ze zniżką',text:'Ile procent zniżki mam na bilet jednorazowy, a ile na miesięczny? Czy zdjęcie legitymacji wystarczy? Co się stanie, jeśli kupię bilet z ulgą 51%? Ile zapłacę za bilet za 30 zł?'},
+     {title:'Pytania do osoby C',icon:'energy',short:'Zwrot podatku i PESEL',text:'Do ilu lat mam ulgę dla młodych? Co zrobić, żeby pracodawca w ogóle nie pobierał zaliczki? Jak odebrać zwrot? Po co zastrzegać PESEL i ile to kosztuje?'}
     ])
    ]},
   {id:'test',label:'Test',title:'Test drużyny — każdy odpowiada sam',grouping:'solo',
