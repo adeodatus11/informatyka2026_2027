@@ -1,6 +1,6 @@
 export default {
   "id": "32",
-  "grade": 1,
+  "grade": 1,order:13,
   "title": "Praca w trybie recenzji",
   "topic": "Praca w trybie recenzji",
   "subtitle": "Redakcja dostała zaproszenie z błędami. Popraw treść, zachowaj ślad decyzji i przygotuj wersję do publikacji.",

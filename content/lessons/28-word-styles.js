@@ -1,7 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
 export default {
- id:'28',grade:1,workspace:'desktop-word',title:'Nagłówek, stopka i standardowe style tekstu',
+ id:'28',grade:1,order:9,workspace:'desktop-word',title:'Nagłówek, stopka i standardowe style tekstu',
  subtitle:'Zamień szkic szkolnego klubu gier w dokument, który można wygodnie czytać i zmieniać.',
  topic:'Nagłówek, stopka i standardowe style tekstu',icon:'doc',tags:['Word','Style','Numeracja'],duration:45,
  curriculum:'PP 2024, zakres podstawowy: opracowywanie rozbudowanych dokumentów tekstowych z użyciem stylów oraz narzędzi struktury dokumentu.',

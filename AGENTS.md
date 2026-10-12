@@ -4,6 +4,7 @@
 
 - Przed liczeniem i planowaniem lekcji sprawdź aktualny stan GitHuba (`git fetch origin`, porównanie z `origin/main`). Nie zakładaj, że lokalna kopia jest aktualna. Zachowaj cudze zmiany.
 - **Rozkład tematów szkoły (klasy 1–3) i stan każdej lekcji: `docs/rozklad-2026-2027.md`** (dane: `docs/rozklad-2026-2027.json`). Przed planowaniem nowych lekcji zacznij od niego i po dodaniu lekcji zaktualizuj status.
+- **Sposób pracy, testy w chmurze i publikacja: `docs/praca-i-publikacja.md`. Budowa lekcji: `docs/przewodnik-wykonawcy.md`. Pomysły i decyzje do kolejnych tematów: `docs/notatki-realizacji/`.**
 - Źródłem aktualnych lekcji jest `content/lessons/`. Archiwum i stare `blok-*.html` nie są aktywnym kursem.
 - Czytaj `docs/podstawa-programowa/README.md`, mapę lekcji i luki. Zakres: PP 2024, liceum/technikum, podstawowy; język realizacji Python. Nie utożsamiaj go z podstawą szkoły branżowej.
 - Po zmianie zakresu zajęć aktualizuj `docs/podstawa-programowa/mapowanie.json`, mapę czytelną i macierz pokrycia. Sprawdzaj konkretne czynności ucznia, nie sam tytuł tematu.

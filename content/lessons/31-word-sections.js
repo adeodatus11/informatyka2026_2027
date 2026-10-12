@@ -1,6 +1,6 @@
 export default {
   "id": "31",
-  "grade": 1,
+  "grade": 1,order:12,
   "title": "Dzielenie dokumentu tekstowego",
   "topic": "Dzielenie dokumentu tekstowego",
   "subtitle": "Jedna szeroka tabela nie musi przewracać całego dokumentu. Zostań diagnostą układu stron.",

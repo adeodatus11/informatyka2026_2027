@@ -1,7 +1,7 @@
 import {note, choice, reveal, video} from '../schema.js';
 export const computerOptions=[{name:'Laptop A',ram:'4 GB',ssd:'128 GB',cpu:'Podstawowy',gpu:'Zintegrowana',price:'1399 zł'},{name:'Laptop B',ram:'16 GB',ssd:'512 GB',cpu:'Średniej klasy',gpu:'Zintegrowana',price:'2599 zł'},{name:'Laptop C',ram:'32 GB',ssd:'1 TB',cpu:'Wydajny',gpu:'Dedykowana',price:'5199 zł'}];
 export default {
- id:'01', grade:1, title:'Komputer', subtitle:'Oceń parametry komputera i dobierz sprzęt do potrzeb.', topic:'Komputer', icon:'laptop', duration:30,
+ id:'01', grade:1,order:1, title:'Komputer', subtitle:'Oceń parametry komputera i dobierz sprzęt do potrzeb.', topic:'Komputer', icon:'laptop', duration:30,
  objectives:['Rozróżniam CPU, RAM, SSD i GPU.','Odczytuję podstawowe parametry komputera.','Dobieram komputer do potrzeb i uzasadniam wybór.'],
  materials:['Przeglądarka na komputerze lub telefonie','Opcjonalnie: specyfikacja komputera w pracowni'],
  teacherGuide:{preparation:'Otwórz lekcję na ekranie. Ceny i konfiguracje są fikcyjnymi przykładami do porównania, nie ofertą zakupu. Nie wyjaśniaj parametrów przed pierwszym wyborem.', summary:'Poproś uczniów o odróżnienie pamięci roboczej od miejsca na pliki. Oceń uzasadnienie wyboru, nie cenę laptopa.'},

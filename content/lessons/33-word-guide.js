@@ -1,6 +1,6 @@
 export default {
   "id": "33",
-  "grade": 1,
+  "grade": 1,order:14,
   "title": "Praktyczny poradnik",
   "topic": "Praktyczny poradnik",
   "subtitle": "Wydaj poradnik dla kolejnego zespołu organizatorów. Czy inna osoba znajdzie w nim informację i bezpiecznie go zaktualizuje?",
