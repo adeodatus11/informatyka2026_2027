@@ -1,7 +1,7 @@
 import {note, choice} from '../schema.js';
 
 export default {
- id:'29',grade:1,workspace:'desktop-word',title:'Odwołania w dokumencie tekstowym – tworzenie spisu treści',
+ id:'29',grade:1,order:10,workspace:'desktop-word',title:'Odwołania w dokumencie tekstowym – tworzenie spisu treści',
  subtitle:'Organizator turnieju dopisał rozdział. Twój spis ma nadążyć za zmianą.',topic:'Odwołania w dokumencie tekstowym – tworzenie spisu treści',icon:'list',tags:['Word','Spis treści','Aktualizacja'],duration:45,
  curriculum:'PP 2024, zakres podstawowy: opracowywanie dokumentów o rozbudowanej strukturze, style i automatyczny spis treści.',
  format:{name:'Laboratorium zmian: przewidź → wykonaj → sprawdź',student:'Z gotowego szkieletu poradnika turnieju zbudujesz automatyczny spis treści. Potem celowo zmienisz dokument i sprawdzisz, co trzeba aktualizować. Pracujesz we własnym Wordzie, a partner testuje odsyłacze.',teacher:'Ograniczony przypadek redakcyjny ma produkt i test odporności na zmianę. Uczniowie najpierw przewidują skutek, następnie edytują plik i porównują z przewidywaniem. Powtórka bez notatek i bilet wyjścia ujawniają indywidualne rozumienie.',grouping:'Samodzielny plik; w etapie testu pary czytają nawzajem wyniki i wskazują dowody. Jeden komputer: operator i kontroler zmieniają się po utworzeniu spisu.',methods:[{name:'Problem, projekt i przypadek',url:'https://metodyka.covepolska.pl/metoda-problem-projekt-przypadek.html'},{name:'Retrieval practice',url:'https://metodyka.covepolska.pl/metoda-retrieval-practice.html'},{name:'Ocenianie kształtujące',url:'https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html'}]},

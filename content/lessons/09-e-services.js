@@ -1,7 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
 export default {
- id:'09',grade:1,title:'Korzystanie z wybranych e-usług',
+ id:'09',grade:1,order:7,title:'Korzystanie z wybranych e-usług',
  subtitle:'Załatwisz receptę, bilet ze zniżką i zwrot podatku z wakacyjnej pracy bez kolejki — i nie dasz się okraść po drodze.',
  topic:'Korzystanie z wybranych e-usług',icon:'idcard',tags:['e-recepta','ulga 37%','PIT-0'],duration:44,
  curriculum:'Podstawa programowa informatyki (liceum/technikum): korzystanie z usług i zasobów sieciowych, bezpieczeństwo danych',

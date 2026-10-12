@@ -1,7 +1,7 @@
 import {note, choice} from '../schema.js';
 
 export default {
- id:'30',grade:1,workspace:'desktop-word',title:'Odwołania w dokumencie tekstowym – spis ilustracji, tabel i wykresów',
+ id:'30',grade:1,order:11,workspace:'desktop-word',title:'Odwołania w dokumencie tekstowym – spis ilustracji, tabel i wykresów',
  subtitle:'Redakcja raportu: sześć obiektów, trzy niezależne spisy i ani jednego ręcznie wpisanego numeru.',topic:'Odwołania w dokumencie tekstowym – spis ilustracji, tabel i wykresów',icon:'doc',tags:['Word','Podpisy','Trzy spisy'],duration:45,
  curriculum:'PP 2024, zakres podstawowy: opracowywanie rozbudowanych dokumentów z tabelami, grafiką i automatycznymi spisami.',
  format:{name:'Zespół redakcyjny: podpisy, spisy i próba zmiany',student:'Tworzycie raport o strefie nauki. Osoba A pilnuje etykiet i treści podpisów, osoba B kompletności i aktualizacji spisów. Po trzech podpisach zamieniacie się przy klawiaturze. Na koniec każdy sam wyjaśnia mechanizm.',teacher:'Uczenie kooperacyjne ma wspólny produkt i dwa obowiązki merytoryczne. Każdy zaczyna od własnej klasyfikacji obiektów. Kontrola między parami kończy się poprawką, a indywidualna odpowiedź ujawnia, czy obie osoby rozumieją zależność etykieta–podpis–spis.',grouping:'Pary przy jednym komputerze, wspólny DOCX. W trójce trzecia osoba sprawdza zgodność podpisu z obiektem; role rotują po dwóch obiektach. Samodzielnie: wykonaj kolejno oba rodzaje kontroli.',methods:[{name:'Uczenie kooperacyjne',url:'https://metodyka.covepolska.pl/metoda-uczenie-kooperacyjne.html'},{name:'Ocenianie kształtujące',url:'https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html'},{name:'Retrieval practice',url:'https://metodyka.covepolska.pl/metoda-retrieval-practice.html'}]},

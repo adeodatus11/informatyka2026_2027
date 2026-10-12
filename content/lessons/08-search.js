@@ -1,7 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
 export default {
- id:'08',grade:1,title:'Przykłady wyszukiwania informacji',
+ id:'08',grade:1,order:6,title:'Przykłady wyszukiwania informacji',
  subtitle:'Znajdziesz w minutę to, czego inni szukają kwadrans — tani bilet, regulamin praktyk, instrukcję, pracę na wakacje.',
  topic:'Przykłady wyszukiwania informacji',icon:'search',tags:['"…"','site:','filetype:'],duration:43,
  curriculum:'Podstawa programowa informatyki (liceum/technikum): wyszukiwanie informacji w sieci, ocena wiarygodności źródeł',

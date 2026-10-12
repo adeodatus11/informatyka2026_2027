@@ -1,7 +1,7 @@
 import {note, choice} from '../schema.js';
 
 export default {
- id:'07',grade:1,title:'Internet jako ocean informacji',
+ id:'07',grade:1,order:5,title:'Internet jako ocean informacji',
  subtitle:'Nie dasz się nabrać — ani na fake newsa, ani na oszustwo, które kosztuje pieniądze albo konto.',
  topic:'Internet jako ocean informacji',icon:'globe',tags:['SIFT','Fake?','Bańka'],duration:35,
  curriculum:'Podstawa programowa informatyki (liceum/technikum): wyszukiwanie i ocena informacji w sieci, bezpieczeństwo w internecie',

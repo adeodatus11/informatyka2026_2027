@@ -1,6 +1,6 @@
 import {note,choice,reveal,video} from '../schema.js';
 export default {
- id:'02',grade:1,title:'System i oprogramowanie',subtitle:'Sprawnie zarządzaj plikami, folderami i aplikacjami.',topic:'System i oprogramowanie',icon:'folder',duration:30,
+ id:'02',grade:1,order:2,title:'System i oprogramowanie',subtitle:'Sprawnie zarządzaj plikami, folderami i aplikacjami.',topic:'System i oprogramowanie',icon:'folder',duration:30,
  objectives:['Odróżniam system operacyjny od aplikacji.','Rozpoznaję pliki, foldery i rozszerzenia.','Porządkuję materiały i nadaję im czytelne nazwy.','Rozpakowuję i tworzę ZIP.'],
  materials:['Komputer z menedżerem plików i obsługą ZIP','Paczka lesson-02-files.zip'],teacherGuide:{preparation:'Pobierz i sprawdź paczkę na szkolnym komputerze. Uczniowie pracują na jej kopii. Zadanie końcowe wykonują na komputerze; telefon wystarczy do ćwiczeń na stronie.',summary:'Sprawdź foldery i nazwy wewnątrz ZIP. Nie oceniaj szybkości klikania. Na wspólnym komputerze usuń na końcu kopię roboczą, jeśli wymagają tego zasady pracowni.'},
  sections:[
