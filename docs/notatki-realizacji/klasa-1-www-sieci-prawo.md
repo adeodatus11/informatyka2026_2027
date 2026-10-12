@@ -71,8 +71,8 @@ Bloki projektowe (34, 36, 48) — praca w trójkach z rolami, jawne kryteria i o
 ### 48. Przestępczość komputerowa – projekt
 - Komiks/plakat „Anatomia oszustwa na BLIK/OLX” — gdzie można było przerwać; karty przepisów kk „po ludzku” dopasowane do scenek; ocena 5 domen z Listą Ostrzeżeń CERT; ćwiczenie zgłoszenia (8080, incydent.cert.pl, bank — instrukcja jest w lekcji 09); opcjonalnie spotkanie z NASK/policją (Cyberprofilaktyka.pl). Bez ćwiczeń „hakowania” cudzych systemów.
 
-## Do rozstrzygnięcia przed budową
+## Decyzje nauczyciela (12.10.2026)
 
-1. `htmlLab` na platformie jako ścieżka główna — czy wystarczy, czy nauczyciel chce pracy w konkretnym zewnętrznym edytorze (wtedy sprawdzić go w pracowni, w tym filtr OSE).
-2. Publikacja stron uczniów (21): pokaz czy konto nauczyciela (Neocities/GitHub Pages) — RODO i wiek.
-3. CMD w pracowni (`ping`, `tracert`, `nslookup`) — czy uczniowie mają dostęp do wiersza poleceń.
+1. **Edytor WWW: wystarczy edytor na platformie** (`htmlLab`) — bez zewnętrznych edytorów i kont.
+2. **Publikacja: tylko podgląd w czasie sesji** — strona żyje w przeglądarce ucznia na czas lekcji; nauczyciel ocenia ją przy komputerze ucznia. Bez hostingu i bez kont. Temat 21 (publikowanie i promowanie) realizujemy jako przygotowanie do publikacji + omówienie/pokaz, jak działa hosting i domena; w edytorze podgląd „jak strona wygląda w wynikach wyszukiwania”. Zapis pliku `.html` na dysk — opcjonalnie, dla chętnych.
+3. **Wiersz poleceń: dostępny** (Windows 11 Pro) — w temacie 31 uczniowie uruchamiają `ipconfig`, `ping`, `nslookup`, `tracert` na swoich komputerach; platforma prowadzi krok po kroku i zbiera wyniki (uczeń wpisuje/wkleja odczyty, np. czas ping, liczbę przeskoków, adres IP strony).
