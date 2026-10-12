@@ -1,0 +1,1454 @@
+[
+ {
+  "klasa": 1,
+  "lp": 1,
+  "sem": "I półrocze",
+  "temat": "Logiczny model i elementy komputera",
+  "pp": "III.1., III.2.",
+  "status": "jest",
+  "ids": [
+   "01"
+  ],
+  "note": "częściowo: 01 to parametry komputera; model logiczny jest w 06",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 2,
+  "sem": "I półrocze",
+  "temat": "Systemy operacyjne i inne oprogramowanie",
+  "pp": "III.3.",
+  "status": "jest",
+  "ids": [
+   "02"
+  ],
+  "note": "częściowo: 02 skupia się na plikach i folderach",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 3,
+  "sem": "I półrocze",
+  "temat": "Urządzenia cyfrowe w szkole",
+  "pp": "III.1., III.2.",
+  "status": "jest",
+  "ids": [
+   "03"
+  ],
+  "note": "tytuł w serwisie: „Urządzenia w szkole”",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 4,
+  "sem": "I półrocze",
+  "temat": "Urządzenia cyfrowe w domu i inne",
+  "pp": "III.1., III.2.",
+  "status": "jest",
+  "ids": [
+   "04"
+  ],
+  "note": "tytuł w serwisie: „Urządzenia w domu” (smartfon)",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 5,
+  "sem": "I półrocze",
+  "temat": "Internet jako ocean informacji",
+  "pp": "III.4.",
+  "status": "jest",
+  "ids": [
+   "07"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 6,
+  "sem": "I półrocze",
+  "temat": "Przykłady wyszukiwania informacji",
+  "pp": "II.4.",
+  "status": "jest",
+  "ids": [
+   "08"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 7,
+  "sem": "I półrocze",
+  "temat": "Korzystanie z wybranych e-usług",
+  "pp": "III.1., III.2., III.3., III.4., IV.5.",
+  "status": "jest",
+  "ids": [
+   "09"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 8,
+  "sem": "I półrocze",
+  "temat": "Korzystanie z wybranych e-usług – projekt",
+  "pp": "IV.1., IV.2., IV.3.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 9,
+  "sem": "I półrocze",
+  "temat": "Nagłówek, stopka i standardowe style tekstu",
+  "pp": "II.2., II.3b.",
+  "status": "jest",
+  "ids": [
+   "28"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 10,
+  "sem": "I półrocze",
+  "temat": "Odwołania w dokumencie tekstowym – tworzenie spisu treści",
+  "pp": "II.2., II.3b.",
+  "status": "jest",
+  "ids": [
+   "29"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 11,
+  "sem": "I półrocze",
+  "temat": "Odwołania w dokumencie tekstowym – spis ilustracji, tabel i wykresów",
+  "pp": "II.2., II.3b.",
+  "status": "jest",
+  "ids": [
+   "30"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 12,
+  "sem": "I półrocze",
+  "temat": "Dzielenie dokumentu tekstowego",
+  "pp": "II.2., II.3b.",
+  "status": "jest",
+  "ids": [
+   "31"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 13,
+  "sem": "I półrocze",
+  "temat": "Praca w trybie recenzji",
+  "pp": "II.2., II.3b.",
+  "status": "jest",
+  "ids": [
+   "32"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 14,
+  "sem": "I półrocze",
+  "temat": "Praktyczny poradnik",
+  "pp": "II.2., II.3b.",
+  "status": "jest",
+  "ids": [
+   "33"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 15,
+  "sem": "I półrocze",
+  "temat": "Tworzenie obrazu i praca z warstwami w programie GIMP",
+  "pp": "II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 16,
+  "sem": "I półrocze",
+  "temat": "Stosowanie narzędzi selekcji w programie GIMP",
+  "pp": "II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 17,
+  "sem": "I półrocze",
+  "temat": "Edycja zdjęć w programie GIMP",
+  "pp": "II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 18,
+  "sem": "I półrocze",
+  "temat": "Tworzenie stron WWW – podstawowe informacje",
+  "pp": "II.2., II.3f.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 19,
+  "sem": "I półrocze",
+  "temat": "Stosowanie wybranych znaczników języka HTML",
+  "pp": "II.2., II.3f.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 20,
+  "sem": "I półrocze",
+  "temat": "Kaskadowe arkusze stylów CSS",
+  "pp": "II.2., II.3f.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 21,
+  "sem": "I półrocze",
+  "temat": "Publikowanie i promowanie stron WWW w Internecie",
+  "pp": "II.2., II.3f.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 22,
+  "sem": "I półrocze",
+  "temat": "Sytuacje problemowe i określanie specyfikacji zadania",
+  "pp": "I.1., I.3.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 23,
+  "sem": "I półrocze",
+  "temat": "Techniki algorytmiczne i programowanie",
+  "pp": "I.1., I.3.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 24,
+  "sem": "I półrocze",
+  "temat": "Środowisko programistyczne języka Python, stosowanie zmiennych i wyprowadzanie wyników",
+  "pp": "I.1., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 25,
+  "sem": "I półrocze",
+  "temat": "Algorytmy z warunkami w języku Python",
+  "pp": "I.1., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 26,
+  "sem": "I półrocze",
+  "temat": "Sprawdzanie poprawności danych i zapisywanie rozwiązania problemu w języku Python",
+  "pp": "I.1., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 27,
+  "sem": "I półrocze",
+  "temat": "Instrukcje warunkowe zagnieżdżone i z klauzulą elif w języku Python",
+  "pp": "I.1., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 28,
+  "sem": "I półrocze",
+  "temat": "Algorytmy iteracyjne w języku Python",
+  "pp": "I.1., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 29,
+  "sem": "I półrocze",
+  "temat": "Instrukcje iteracyjne zagnieżdżone w języku Python",
+  "pp": "I.1., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 30,
+  "sem": "I półrocze",
+  "temat": "Stosowanie instrukcji iteracyjnych for i while w języku Python",
+  "pp": "I.1., I.3., II. 1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 31,
+  "sem": "II półrocze",
+  "temat": "Sieci komputerowe",
+  "pp": "III.4.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 32,
+  "sem": "II półrocze",
+  "temat": "Bezpieczeństwo i ochrona danych w komputerach i sieciach komputerowych",
+  "pp": "V.1., V.3.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 33,
+  "sem": "II półrocze",
+  "temat": "Wybrane przepisy prawa dotyczące technologii informacyjno-komunikacyjnych",
+  "pp": "IV.4., V.1., V.2., V.4.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 34,
+  "sem": "II półrocze",
+  "temat": "Zasady rozpowszechniania programów komputerowych – projekt",
+  "pp": "IV.1., V.1., V.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 35,
+  "sem": "II półrocze",
+  "temat": "Komunikacja i wymiana informacji w Internecie",
+  "pp": "IV.2., IV.3., V.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 36,
+  "sem": "II półrocze",
+  "temat": "Szanse i zagrożenia związane z rozwojem informatyki i technologii informacyjno-komunikacyjnych – projekt",
+  "pp": "IV.1., IV.2., IV.3., IV.5.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 37,
+  "sem": "II półrocze",
+  "temat": "Tworzenie rysunków w grafice wektorowej",
+  "pp": "II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 38,
+  "sem": "II półrocze",
+  "temat": "Rysowanie figur i ścieżek w programie Inkscape",
+  "pp": "II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 39,
+  "sem": "II półrocze",
+  "temat": "Rysowanie przestrzenne, przekształcenia i warstwy w programie Inkscape",
+  "pp": "II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 40,
+  "sem": "II półrocze",
+  "temat": "Tworzenie formuł, formaty danych i formatowanie tabeli arkusza",
+  "pp": "II.2., II.3c.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 41,
+  "sem": "II półrocze",
+  "temat": "Stosowanie funkcji arkusza kalkulacyjnego",
+  "pp": "II.2., II.3c.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 42,
+  "sem": "II półrocze",
+  "temat": "Przedstawianie danych w postaci wykresu",
+  "pp": "II.2., II.3c.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 43,
+  "sem": "II półrocze",
+  "temat": "Tworzenie wykresu – projekt z geografii",
+  "pp": "II.2., II.3c., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 44,
+  "sem": "II półrocze",
+  "temat": "Korzystanie z filtrów, tabele i wykresy przestawne",
+  "pp": "II.2., II.3c.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 45,
+  "sem": "II półrocze",
+  "temat": "Stosowanie filtru w tabeli przestawnej i praktyczny poradnik",
+  "pp": "II.2., II.3c.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 46,
+  "sem": "II półrocze",
+  "temat": "Zasady tworzenia prezentacji multimedialnej",
+  "pp": "II.2., II.3e.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 47,
+  "sem": "II półrocze",
+  "temat": "Tworzymy prezentację multimedialną o Fryderyku Chopinie – projekt",
+  "pp": "II.2., II.3e., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 48,
+  "sem": "II półrocze",
+  "temat": "Przestępczość komputerowa – projekt",
+  "pp": "IV.1., V.2., V.4.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 49,
+  "sem": "II półrocze",
+  "temat": "Funkcje zwracające wartość w języku Python",
+  "pp": "I.1., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 50,
+  "sem": "II półrocze",
+  "temat": "Funkcje niezwracające wartości w języku Python",
+  "pp": "I.1., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 51,
+  "sem": "II półrocze",
+  "temat": "Definiowanie i stosowanie listy w języku Python",
+  "pp": "I.1., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 52,
+  "sem": "II półrocze",
+  "temat": "Wykonywanie operacji na elementach listy w języku Python",
+  "pp": "I.1., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 53,
+  "sem": "II półrocze",
+  "temat": "Dane tekstowe w języku Python",
+  "pp": "I.1., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 54,
+  "sem": "II półrocze",
+  "temat": "Wybrane algorytmy na tekstach",
+  "pp": "I.1., I.2b., I.3., II.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 55,
+  "sem": "II półrocze",
+  "temat": "Programowanie wybranych algorytmów na tekstach",
+  "pp": "I.1., I.2b., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 56,
+  "sem": "II półrocze",
+  "temat": "Wyszukiwanie wzorca w tekście metodą naiwną",
+  "pp": "I.1., I.2b., I.3., II.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 57,
+  "sem": "II półrocze",
+  "temat": "Programowanie algorytmu wyszukiwania wzorca w tekście metodą naiwną",
+  "pp": "I.1., I.2b., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 58,
+  "sem": "II półrocze",
+  "temat": "System dwójkowy",
+  "pp": "I.2a.",
+  "status": "do ponownego użycia",
+  "ids": [
+   "06 (kl. 3)"
+  ],
+  "note": "06 łączy model komputera i system dwójkowy",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 59,
+  "sem": "II półrocze",
+  "temat": "System szesnastkowy",
+  "pp": "I.2a.",
+  "status": "do ponownego użycia",
+  "ids": [
+   "13 (kl. 3)"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 1,
+  "lp": 60,
+  "sem": "II półrocze",
+  "temat": "Programowanie zamiany reprezentacji liczb między pozycyjnymi systemami liczbowymi",
+  "pp": "I.1., I.2a., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 1,
+  "sem": "cały rok",
+  "temat": "Wybrane możliwości programu SketchUp przydatne do projektowania ogrodu",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 2,
+  "sem": "cały rok",
+  "temat": "Projektowanie trójwymiarowego modelu ławki",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 3,
+  "sem": "cały rok",
+  "temat": "Określanie wymagań projektu ogrodu i rysowanie rzutu 2D ogrodu",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 4,
+  "sem": "cały rok",
+  "temat": "Tworzenie projektu ogrodu",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 5,
+  "sem": "cały rok",
+  "temat": "Projektowanie własnego pokoju",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 6,
+  "sem": "cały rok",
+  "temat": "Urządzanie pokoju modelami 3D",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 7,
+  "sem": "cały rok",
+  "temat": "Doskonalenie umiejętności projektowania modeli trójwymiarowych – zadania",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 8,
+  "sem": "cały rok",
+  "temat": "Podstawowe pojęcia i przykłady bazy danych – obsługa szkolnych zawodów pływackich",
+  "pp": "I.1., II.2., II.3d.",
+  "status": "do ponownego użycia",
+  "ids": [
+   "22 (kl. 3)"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 9,
+  "sem": "cały rok",
+  "temat": "Zasady tworzenia kwerend na przykładzie bazy Zawody",
+  "pp": "I.1., II.2., II.3d.",
+  "status": "do ponownego użycia",
+  "ids": [
+   "25 (kl. 3)"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 10,
+  "sem": "cały rok",
+  "temat": "Tworzenie bazy danych – obsługa gabinetu stomatologicznego",
+  "pp": "I.1., II.2., II.3d.",
+  "status": "jest",
+  "ids": [
+   "05"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 11,
+  "sem": "cały rok",
+  "temat": "Importowanie danych z innych dokumentów do tabeli bazy danych",
+  "pp": "I.1., II.2., II.3d.",
+  "status": "jest",
+  "ids": [
+   "10"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 12,
+  "sem": "cały rok",
+  "temat": "Przygotowanie kwerend w bazie Stomatolog",
+  "pp": "I.1., II.2., II.3d.",
+  "status": "jest",
+  "ids": [
+   "11"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 13,
+  "sem": "cały rok",
+  "temat": "Przygotowanie korespondencji seryjnej",
+  "pp": "I.1., II.2., II.3b., II.3d.",
+  "status": "jest",
+  "ids": [
+   "12"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 14,
+  "sem": "cały rok",
+  "temat": "Szyfrowanie tekstu metodą podstawieniową",
+  "pp": "I.1., I.2b., I.3.",
+  "status": "jest",
+  "ids": [
+   "16"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 15,
+  "sem": "cały rok",
+  "temat": "Programowanie algorytmu szyfrowania tekstu metodą podstawieniową",
+  "pp": "I.1., I.2b., I.3., II.1., II.2.",
+  "status": "jest",
+  "ids": [
+   "17"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 16,
+  "sem": "cały rok",
+  "temat": "Algorytmy porządkowania liczb",
+  "pp": "I.1., I.2c., I.3.",
+  "status": "jest",
+  "ids": [
+   "18"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 17,
+  "sem": "cały rok",
+  "temat": "Programowanie algorytmów porządkowania metodą bąbelkową",
+  "pp": "I.1., I.2c., I.3., II.1., II.2.",
+  "status": "jest",
+  "ids": [
+   "19"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 18,
+  "sem": "cały rok",
+  "temat": "Programowanie algorytmów porządkowania przez wstawianie",
+  "pp": "I.1., I.2c., I.3., II.1., II.2.",
+  "status": "jest",
+  "ids": [
+   "20"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 19,
+  "sem": "cały rok",
+  "temat": "Obliczanie wartości elementów ciągu metodą iteracyjną, w tym wartości elementów ciągu Fibonacciego",
+  "pp": "I.1., I.2d., I.3.",
+  "status": "jest",
+  "ids": [
+   "21"
+  ],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 20,
+  "sem": "cały rok",
+  "temat": "Programowanie algorytmów iteracyjnych",
+  "pp": "I.1., I.2d., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 21,
+  "sem": "cały rok",
+  "temat": "Wybrane algorytmy na liczbach",
+  "pp": "I.1., I.2a., I.2d., I.3.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 22,
+  "sem": "cały rok",
+  "temat": "Programowanie wybranych algorytmów na liczbach",
+  "pp": "I.1., I.2a., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 23,
+  "sem": "cały rok",
+  "temat": "Działania na ułamkach zwykłych z wykorzystaniem NWD i NWW",
+  "pp": "I.1., I.2a., I.3.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 24,
+  "sem": "cały rok",
+  "temat": "Programowanie działań na ułamkach z wykorzystaniem NWD i NWW",
+  "pp": "I.1., I.2a., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 25,
+  "sem": "cały rok",
+  "temat": "Sterowanie nawadnianiem ogrodu – wprowadzenie do robotyki i zadanie projektowe",
+  "pp": "I.1., II.2., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 26,
+  "sem": "cały rok",
+  "temat": "Sterowanie nawadnianiem ogrodu – zadania szczegółowe",
+  "pp": "I.1., II.2., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 27,
+  "sem": "cały rok",
+  "temat": "Projekt „Zamknij okno”",
+  "pp": "I.1., II.2., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 28,
+  "sem": "cały rok",
+  "temat": "Projekt „Wycisz radio”",
+  "pp": "I.1., II.2., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 29,
+  "sem": "cały rok",
+  "temat": "Budowanie robota – przygotowanie pomocy i montowanie układu",
+  "pp": "I.1., II.2., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 2,
+  "lp": 30,
+  "sem": "cały rok",
+  "temat": "Budowanie robota – tworzenie oprogramowania",
+  "pp": "I.1., II.2., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+ },
+ {
+  "klasa": 3,
+  "lp": 1,
+  "sem": "",
+  "nr": 1,
+  "temat": "Wybrane możliwości programu SketchUp przydatne do projektowania ogrodu",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 2,
+  "sem": "",
+  "nr": 2,
+  "temat": "Projektowanie trójwymiarowego modelu ławki",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 3,
+  "sem": "",
+  "nr": 3,
+  "temat": "Określanie wymagań projektu ogrodu i rysowanie rzutu 2D ogrodu",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 4,
+  "sem": "",
+  "nr": 4,
+  "temat": "Tworzenie projektu ogrodu",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 5,
+  "sem": "",
+  "nr": 5,
+  "temat": "Projektowanie własnego pokoju",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 6,
+  "sem": "",
+  "nr": 6,
+  "temat": "Urządzanie pokoju modelami 3D",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 7,
+  "sem": "",
+  "nr": 7,
+  "temat": "Doskonalenie umiejętności projektowania modeli trójwymiarowych – zadania",
+  "pp": "I.1., II.2., II.3a.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 8,
+  "sem": "",
+  "nr": 8,
+  "temat": "Podstawowe pojęcia i przykłady bazy danych – obsługa szkolnych zawodów pływackich",
+  "pp": "I.1., II.2., II.3d.",
+  "status": "jest",
+  "ids": [
+   "22"
+  ],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 9,
+  "sem": "",
+  "nr": 9,
+  "temat": "Zasady tworzenia kwerend na przykładzie bazy Zawody",
+  "pp": "I.1., II.2., II.3d.",
+  "status": "jest",
+  "ids": [
+   "25"
+  ],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 10,
+  "sem": "",
+  "nr": 10,
+  "temat": "Tworzenie bazy danych – obsługa gabinetu stomatologicznego",
+  "pp": "I.1., II.2., II.3d.",
+  "status": "jest",
+  "ids": [
+   "23"
+  ],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 11,
+  "sem": "",
+  "nr": 11,
+  "temat": "Importowanie danych z innych dokumentów do tabeli bazy danych",
+  "pp": "I.1., II.2., II.3d.",
+  "status": "jest",
+  "ids": [
+   "26"
+  ],
+  "note": "26 łączy import i kwerendy w jednej lekcji",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 12,
+  "sem": "",
+  "nr": 12,
+  "temat": "Przygotowanie kwerend w bazie Stomatolog",
+  "pp": "I.1., II.2., II.3d.",
+  "status": "jest",
+  "ids": [
+   "26"
+  ],
+  "note": "26 łączy import i kwerendy w jednej lekcji",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 13,
+  "sem": "",
+  "nr": 13,
+  "temat": "Przygotowanie korespondencji seryjnej",
+  "pp": "I.1., II.2., II.3b., II.3d.",
+  "status": "jest",
+  "ids": [
+   "27"
+  ],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 14,
+  "sem": "",
+  "nr": 14,
+  "temat": "Sprawdzian (lekcje 1-13)",
+  "pp": "",
+  "status": "sprawdzian",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 15,
+  "sem": "",
+  "nr": 15,
+  "temat": "Szyfrowanie tekstu metodą podstawieniową",
+  "pp": "I.1., I.2b., I.3.",
+  "status": "do ponownego użycia",
+  "ids": [
+   "16 (kl. 2)"
+  ],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 16,
+  "sem": "",
+  "nr": 16,
+  "temat": "Programowanie algorytmu szyfrowania tekstu metodą podstawieniową",
+  "pp": "I.1., I.2b., I.3., II.1., II.2.",
+  "status": "do ponownego użycia",
+  "ids": [
+   "17 (kl. 2)"
+  ],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 17,
+  "sem": "",
+  "nr": 17,
+  "temat": "Algorytmy porządkowania liczb",
+  "pp": "I.1., I.2c., I.3.",
+  "status": "do ponownego użycia",
+  "ids": [
+   "18 (kl. 2)"
+  ],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 18,
+  "sem": "",
+  "nr": 18,
+  "temat": "Programowanie algorytmów porządkowania metodą bąbelkową",
+  "pp": "I.1., I.2c., I.3., II.1., II.2.",
+  "status": "do ponownego użycia",
+  "ids": [
+   "19 (kl. 2)"
+  ],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 19,
+  "sem": "",
+  "nr": 19,
+  "temat": "Programowanie algorytmów porządkowania przez wstawianie",
+  "pp": "I.1., I.2c., I.3., II.1., II.2.",
+  "status": "do ponownego użycia",
+  "ids": [
+   "20 (kl. 2)"
+  ],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 20,
+  "sem": "",
+  "nr": 20,
+  "temat": "Obliczanie wartości elementów ciągu metodą iteracyjną, w tym wartości elementów ciągu Fibonacciego",
+  "pp": "I.1., I.2d., I.3.",
+  "status": "do ponownego użycia",
+  "ids": [
+   "21 (kl. 2)"
+  ],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 21,
+  "sem": "",
+  "nr": 21,
+  "temat": "Programowanie algorytmów iteracyjnych",
+  "pp": "I.1., I.2d., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 22,
+  "sem": "",
+  "nr": 22,
+  "temat": "Wybrane algorytmy na liczbach",
+  "pp": "I.1., I.2a., I.2d., I.3.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 23,
+  "sem": "",
+  "nr": 23,
+  "temat": "Programowanie wybranych algorytmów na liczbach",
+  "pp": "I.1., I.2a., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 24,
+  "sem": "",
+  "nr": 24,
+  "temat": "Działania na ułamkach zwykłych z wykorzystaniem NWD i NWW",
+  "pp": "I.1., I.2a., I.3.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 25,
+  "sem": "",
+  "nr": 25,
+  "temat": "Programowanie działań na ułamkach z wykorzystaniem NWD i NWW",
+  "pp": "I.1., I.2a., I.3., II.1., II.2.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 26,
+  "sem": "",
+  "nr": 26,
+  "temat": "Sprawdzian (lekcje 15-25)",
+  "pp": "",
+  "status": "sprawdzian",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 27,
+  "sem": "",
+  "nr": 27,
+  "temat": "Sterowanie nawadnianiem ogrodu – wprowadzenie do robotyki i zadanie projektowe",
+  "pp": "I.1., II.2., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 28,
+  "sem": "",
+  "nr": 28,
+  "temat": "Sterowanie nawadnianiem ogrodu – zadania szczegółowe",
+  "pp": "I.1., II.2., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 29,
+  "sem": "",
+  "nr": 29,
+  "temat": "Projekt „Zamknij okno”",
+  "pp": "I.1., II.2., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 30,
+  "sem": "",
+  "nr": 30,
+  "temat": "Projekt „Wycisz radio”",
+  "pp": "I.1., II.2., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 31,
+  "sem": "",
+  "nr": 31,
+  "temat": "Budowanie robota – przygotowanie pomocy i montowanie układu",
+  "pp": "I.1., II.2., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ },
+ {
+  "klasa": 3,
+  "lp": 32,
+  "sem": "",
+  "nr": 32,
+  "temat": "Budowanie robota – tworzenie oprogramowania",
+  "pp": "I.1., II.2., IV.1.",
+  "status": "brak",
+  "ids": [],
+  "note": "",
+  "zrodlo": "cykl 3-letni, propozycja 2"
+ }
+]

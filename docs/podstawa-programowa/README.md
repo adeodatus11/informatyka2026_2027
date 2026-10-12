@@ -4,6 +4,8 @@
 
 ## Zawartość
 
+- [Rozkład tematów 2026/2027 i stan lekcji](../rozklad-2026-2027.md): tematy z rozkładów MIGRA wskazanych przez nauczyciela (kl. 1–2: cykl 2-letni technikum, kl. 3: cykl 3-letni) zestawione z lekcjami w serwisie.
+
 - [Podstawa 2024 — wymagania szczegółowe](podstawa-2024.md): pełne brzmienie zakresu podstawowego, z numerami do mapowania.
 - [Tekst urzędowy — cały dział Informatyka](tekst-urzedowy-2024.txt): cele ogólne, oba zakresy i warunki realizacji; wyciąg z PDF Dziennika Ustaw, strony 341–351.
 - [Mapa wszystkich 34 lekcji](mapa-lekcji.md): numer w klasie, stałe ID, wymagania, dowody w ćwiczeniach i ograniczenia.
