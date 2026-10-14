@@ -78,7 +78,7 @@ export default {
       {call:'zlicz("żółw żuje", "ż")',expected:'2',label:'Polska litera'},
       {call:'all(zlicz(t, z) == t.count(z) for t, z in [("aaaa", "a"), ("Mississippi", "s"), ("", "x")])',expected:'True',label:'Te same wyniki co str.count'}
      ],
-     sourceChecks:[{pattern:'\\.count\\(',absent:true,label:'Funkcja nie używa gotowego count',hint:'Usuń count z funkcji zlicz — napisz pętlę z licznikiem. (W print poniżej funkcji count może zostać.)'}],
+     sourceChecks:[{pattern:'tekst\\.count\\(',absent:true,label:'Funkcja nie używa gotowego count',hint:'Usuń count z funkcji zlicz — napisz pętlę z licznikiem. (W print poniżej funkcji count może zostać.)'}],
      hints:['Przed pętlą: `licznik = 0`. Pętla: `for z in tekst:`','W pętli: `if z == znak:` i pod spodem (8 spacji) `licznik = licznik + 1`.','Na końcu, poza pętlą (4 spacje): `return licznik`.'],
      questions:[{q:'Ile zwróci zlicz("Ala ma kota", "a")?',answer:'3',inputLabel:'Wynik',explain:'Trzy małe „a”: Al-a, m-a, kot-a. Wielkie A na początku to inny znak. Jeśli chcesz liczyć oba, porównuj z.lower() == znak.',hint:'Policz tylko małe a.'}]}
    ]},
