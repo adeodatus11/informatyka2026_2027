@@ -393,6 +393,8 @@ export function nextYear(game) {
 }
 
 /* ───────── Raport ───────── */
+// Które zdarzenia „ujawniają” ryzyko danej karty.
+export const RISK_EVENTS = {online: ['leak', 'ransomware'], chatbot: ['hallucination', 'aiAct', 'aiPaste'], payments: ['outage'], kiosk: ['exclusion', 'ransomware'], monitoring: ['monitoring'], social: ['fakeReviews'], sensors: ['outage', 'ransomware'], security: [], aiTraining: []};
 // Oś czasu: co było szansą, a co zagrożeniem (z obszarem), oraz czy ukryte ryzyko się ujawniło.
 export function timeline(sim) {
   if (!sim) return [];
@@ -401,8 +403,8 @@ export function timeline(sim) {
     year: h.year,
     cards: h.bought.map(b => {
       const c = cardFor(b.id, sim.ind);
-      const fired = events.find(e => happened.has(e.id) && e.triggers.includes(b.id) && e.id !== 'phishing' && e.id !== 'outage' ? true : false);
-      return {id: b.id, name: c.name, chance: c.chance, risk: c.risk, revealed: !!fired && events.some(e => happened.has(e.id) && e.triggers.includes(b.id) && e.area === c.risk.area)};
+      const hit = (RISK_EVENTS[b.id] || []).filter(id => happened.has(id));
+      return {id: b.id, name: c.name, chance: c.chance, risk: c.risk, revealedBy: hit.map(id => eventFor(id).title)};
     }),
     event: h.event ? {id: h.event, title: eventFor(h.event).title, area: eventFor(h.event).area, quality: h.quality, points: h.points} : null,
   }));
