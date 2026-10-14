@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import React,{useEffect,useRef,useState} from 'react';
 import {Icon} from '../icons.jsx';
 import './textLab.css';
 import {orderOptions,optionKey} from './optionOrder.js';
@@ -19,7 +19,9 @@ function Window({title,score,max,children}){
 const MARK_LABEL={eq:'równe',ne:'różne',hit:'trafienie',cur:'porównywany teraz'};
 function Tape({rows,label}){
  const n=Math.max(...rows.map(r=>r.cells.length));
- return <div className="tl-tape-scroll"><div className="tl-tape" role="img" aria-label={label||rows.map(r=>`${r.label}: ${r.cells.filter(c=>c.ch!=null).map(c=>show(c.ch)).join(' ')}`).join('; ')} style={{'--n':n}}>
+ const ref=useRef(null);const [over,setOver]=useState(false);
+ useEffect(()=>{const el=ref.current;if(!el)return;const check=()=>setOver(el.scrollWidth>el.clientWidth+1);check();if(typeof ResizeObserver==='undefined')return;const ro=new ResizeObserver(check);ro.observe(el);return ()=>ro.disconnect();},[n]);
+ return <div className="tl-tape-scroll" ref={ref} tabIndex={over?0:undefined} role={over?'group':undefined} aria-label={over?'Taśma ze znakami — przewiń w bok':undefined}><div className="tl-tape" role="img" aria-label={label||rows.map(r=>`${r.label}: ${r.cells.filter(c=>c.ch!=null).map(c=>show(c.ch)).join(' ')}`).join('; ')} style={{'--n':n}}>
   {rows.map((r,ri)=><div className="tl-row" key={ri}>
    <span className="tl-row-label">{r.label}</span>
    <div className="tl-cells">{r.cells.map((c,i)=>c.ch==null?<span key={i} className="tl-cell is-gap"/>:<span key={i} className={`tl-cell ${c.mark?`is-${c.mark}`:''} ${c.ch===' '?'is-space':''}`} title={MARK_LABEL[c.mark]||undefined}>

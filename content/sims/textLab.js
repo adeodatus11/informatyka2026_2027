@@ -272,7 +272,7 @@ export const PATTERN_QUESTIONS = [
   {id: 'p-cost', prompt: 'Regulamin sklepu ma 20 000 znaków. Szukasz słowa „zwrot” (5 liter). Ile porównań wykona algorytm naiwny w najgorszym razie?', options: ['około 20 000', 'około 100 000', 'około 400 000 000', 'dokładnie 5'], correct: 1,
     explain: `Okien jest 20 000 − 5 + 1 = ${windowsCount(20000, 5).toLocaleString('pl-PL')}, w każdym najwyżej 5 porównań: ${(windowsCount(20000, 5) * 5).toLocaleString('pl-PL')} ≈ 100 000. Dla komputera to ułamek sekundy.`, tip: 'Policz: liczba okien × długość wzorca.'},
   {id: 'p-real', prompt: 'W prawdziwym tekście algorytm naiwny zwykle robi znacznie mniej porównań niż w najgorszym razie. Dlaczego?', options: ['Bo w większości okien różnica wychodzi już na pierwszym znaku i od razu przesuwa wzorzec', 'Bo komputer pomija co drugie okno', 'Bo porównuje tylko pierwsze litery słów', 'Bo zapamiętuje cały tekst na pamięć'], correct: 0,
-    explain: 'W rundzie 1 większość okien odpadła po jednym porównaniu. Najgorszy przypadek to teksty typu „aaaaaaab” — tam prawie każde okno pasuje do końca.', tip: 'Przypomnij sobie rundę 1: ile porównań miała większość okien?'},
+    explain: 'W rundzie 1 większość okien odpadła po jednym porównaniu. Najgorszy przypadek to teksty typu „aaaaaaab” ze wzorcem „aab” — tam w każdym oknie porównania idą aż do ostatniego znaku wzorca.', tip: 'Przypomnij sobie rundę 1: ile porównań miała większość okien?'},
 ];
 
 /* ───────── wyniki trybów ───────── */

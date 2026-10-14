@@ -22,11 +22,12 @@
 .tl-say{margin:0;padding:10px 14px;border-radius:9px;background:#10254a;color:#fff;font-weight:600;min-height:2.6em}
 /* taśma ze znakami */
 .tl-tape-scroll{overflow-x:auto;min-width:0;padding-bottom:2px}
-.tl-tape{display:flex;flex-direction:column;gap:6px;width:max-content;min-width:100%}
-.tl-row{display:grid;grid-template-columns:7.5em auto;align-items:center;gap:8px}
+.tl-tape{display:flex;flex-direction:column;gap:6px;width:100%;min-width:calc(var(--n) * 23px + 8.5em)}
+.tl-tape-scroll:focus-visible{outline:3px solid var(--tl-accent);outline-offset:2px}
+.tl-row{display:grid;grid-template-columns:7.5em minmax(0,1fr);align-items:center;gap:8px}
 .tl-row-label{font-size:.78rem;color:#54666c;text-align:right;overflow-wrap:anywhere;line-height:1.2}
-.tl-cells{display:flex;gap:3px}
-.tl-cell{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;width:34px;height:52px;border-radius:7px;border:2px solid #b9c7dc;background:#fff;font-family:ui-monospace,Consolas,monospace;flex-shrink:0}
+.tl-cells{display:grid;grid-template-columns:repeat(var(--n),minmax(20px,34px));gap:3px}
+.tl-cell{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;height:52px;border-radius:7px;border:2px solid #b9c7dc;background:#fff;font-family:ui-monospace,Consolas,monospace;flex-shrink:0}
 .tl-cell b{font-size:1.15rem;line-height:1;color:#10254a}
 .tl-cell.is-space b{color:#8592a6;font-weight:400}
 .tl-tag{position:absolute;top:1px;font-size:.68rem;font-weight:800;color:var(--tl-accent);line-height:1}
@@ -64,4 +65,4 @@
 .tl-list-title{margin:0 0 6px;font-weight:600;font-size:.92rem}
 .tl-list{margin:0;padding:8px 8px 8px 2.2em;border-radius:9px;background:var(--tl-soft);line-height:1.7}
 .tl-list.is-ok{background:#e8f5ee}
-@media (max-width:560px){.tl-body{padding:14px}.tl-row{grid-template-columns:4.5em auto}.tl-cell{width:28px;height:46px}.tl-hud-step{margin-left:0}}
+@media (max-width:560px){.tl-body{padding:14px}.tl-row{grid-template-columns:4.5em auto}.tl-cell{height:46px}.tl-hud-step{margin-left:0}}

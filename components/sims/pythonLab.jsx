@@ -66,7 +66,7 @@ function TestList({tests, count}) {
   const ok = tests.filter(t => t.ok).length;
   return <div className="pl-tests-box">
     <p className="pl-panel-title"><Icon name="check" size={16}/>Testy: {ok}/{tests.length} zaliczonych</p>
-    <ol className="pl-tests">{tests.map((t, i) => {
+    <ol className="pl-tests" tabIndex={0} aria-label={`Wyniki testów: ${ok} z ${tests.length} zaliczonych`}>{tests.map((t, i) => {
       const err = t.error ? explainError(t.error) : t.stop ? STOP_MESSAGES[t.stop] : null;
       return <li key={i} className={t.ok ? 'is-ok' : 'is-bad'}>
         <span className="pl-test-mark" aria-hidden="true">{t.ok ? '✓' : '✗'}</span>

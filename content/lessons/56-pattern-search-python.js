@@ -1,13 +1,14 @@
 import {note, choice} from '../schema.js';
 import {patternTrace} from '../sims/textLab.js';
 
-const ZNAJDZ = `def znajdz_wszystkie(tekst, wzorzec):
+const ZNAJDZ = `def znajdz_wszystkie(t, w):
+    m = len(w)
     wynik = []
-    for i in range(len(tekst) - len(wzorzec) + 1):
+    for i in range(len(t) - m + 1):
         j = 0
-        while j < len(wzorzec) and tekst[i + j] == wzorzec[j]:
+        while j < m and t[i + j] == w[j]:
             j = j + 1
-        if j == len(wzorzec):
+        if j == m:
             wynik.append(i)
     return wynik
 `;
@@ -74,17 +75,17 @@ export default {
       {q:'Ile wartości przyjmie i (ile okien)?',options:['8','10','3','7'],correct:[0],explain:'range(10 − 3 + 1) = range(8): i = 0…7. Okno na pozycji 8 nie zmieściłoby wzorca.',hint:'n − m + 1.'}
      ]}
    ]},
-  {id:'parsons',label:'Układanka',title:'Ułóż znajdz_wszystkie(tekst, wzorzec)',grouping:'solo',
+  {id:'parsons',label:'Układanka',title:'Układanka: funkcja znajdz_wszystkie',grouping:'solo',
    intro:'Ten sam algorytm, ale jako funkcja, która zwraca listę pozycji zamiast wypisywać. Ułóż linie — jedna z nich to pułapka z poprzedniego wyjaśnienia. Testy sprawdzą przypadki brzegowe.',
    reading:{title:'Lista pozycji',paragraphs:[
     'Zamiast print zapisujemy pozycje w liście: wynik = [] przed pętlą, wynik.append(i) przy trafieniu, return wynik na końcu. Pusta lista [] oznacza „nie znaleziono”.',
     'Przypadki brzegowe: wzorzec na początku i na końcu, wzorzec równy całemu tekstowi, dłuższy od tekstu (range z ujemną liczbą nie wykona się ani razu — wynik []), wystąpienia nakładające się („aaaa” i „aa” → [0, 1, 2]).'
    ]},
-   ...note(8,'Po zaliczeniu zapytaj, którą linią była pułapka i który test ją wykrył (wzorzec częściowo na końcu tekstu: „lolo” i „lol” → IndexError). Kto skończy wcześniej, odpowiada na pytanie o nakładanie.','Który test wykrywa pułapkę z range(len(tekst))?','Ten, w którym na końcu tekstu jest początek wzorca: „lolo” i „lol”. Przy i = 2 algorytm porównuje l = l, o = o i sięga po tekst[4], którego nie ma.','Złe wcięcie wynik.append(i) (w pętli while albo poza for), return wewnątrz for.','Zapytaj: co zwróci funkcja dla pustego wzorca? (każdą pozycję 0…n — warto taki przypadek obsłużyć osobno).'),
+   ...note(8,'Po zaliczeniu zapytaj, którą linią była pułapka i który test ją wykrył (wzorzec częściowo na końcu tekstu: „lolo” i „lol” → IndexError). Kto skończy wcześniej, odpowiada na pytanie o nakładanie.','Który test wykrywa pułapkę z range(len(t))?','Ten, w którym na końcu tekstu jest początek wzorca: „lolo” i „lol”. Przy i = 2 algorytm porównuje l = l, o = o i sięga po tekst[4], którego nie ma.','Złe wcięcie wynik.append(i) (w pętli while albo poza for), return wewnątrz for.','Zapytaj: co zwróci funkcja dla pustego wzorca? (każdą pozycję 0…n — warto taki przypadek obsłużyć osobno).'),
    activities:[
     {type:'pythonLab',id:'pw-parsons',mode:'parsons',points:4,file:'znajdz.py',title:'Układanka: znajdz_wszystkie',
-     prompt:'Ułóż funkcję zwracającą listę wszystkich pozycji, na których zaczyna się wzorzec. Klikaj linie, ↑ ↓ zmieniają kolejność, ← → wcięcie. Jedna linia to pułapka.',
-     solution:ZNAJDZ,distractors:['for i in range(len(tekst)):'],
+     prompt:'Ułóż funkcję zwracającą listę wszystkich pozycji, na których zaczyna się wzorzec. Krótkie nazwy: `t` — tekst, `w` — wzorzec, `m` — długość wzorca. Klikaj linie, ↑ ↓ zmieniają kolejność, ← → wcięcie. Jedna linia to pułapka.',
+     solution:ZNAJDZ,distractors:['for i in range(len(t)):'],
      tests:[
       {call:'znajdz_wszystkie("lol xd lol", "lol")',expected:'[0, 7]'},
       {call:'znajdz_wszystkie("aaaa", "aa")',expected:'[0, 1, 2]',label:'Nakładające się wystąpienia'},
@@ -93,7 +94,7 @@ export default {
       {call:'znajdz_wszystkie("ok", "okej")',expected:'[]',label:'Wzorzec dłuższy od tekstu'},
       {call:'znajdz_wszystkie("hahaha", "ha")',expected:'[0, 2, 4]',label:'Wzorzec na końcu'}
      ],
-     hints:['Kolejność: def, wynik = [], for, j = 0, while, j = j + 1, if, wynik.append(i), return.','Wcięcia: for — 1 poziom, j = 0, while i if — 2 poziomy, j = j + 1 i wynik.append(i) — 3 poziomy, return — 1 poziom.','Pułapka to pętla for bez „- len(wzorzec) + 1”: okno wyjeżdża poza tekst.']}
+     hints:['Kolejność: def, m = len(w), wynik = [], for, j = 0, while, j = j + 1, if, wynik.append(i), return.','Wcięcia: m, wynik, for i return — 1 poziom; j = 0, while i if — 2 poziomy; j = j + 1 i wynik.append(i) — 3 poziomy.','Pułapka to pętla for bez „- m + 1”: okno wyjeżdża poza tekst.']}
    ]},
   {id:'cost',label:'Koszt',title:'Ile to kosztuje? Licznik porównań i find/count',grouping:'solo',
    intro:'Na lekcji bez kodu liczyłeś porównania ręcznie. Teraz niech policzy je program. Potem przewidź, co powiedzą wbudowane find i count — i znajdź różnicę.',
@@ -125,7 +126,7 @@ export default {
    intro:'Czas na przypadek z początku lekcji. Funkcja szukaj(czat, fraza) zwraca wiadomości, w których jest fraza — bez względu na wielkość liter. Użyj swojej znajdz_wszystkie.',
    reading:{title:'Najpierw ujednolić, potem szukać',paragraphs:[
     'Użytkownik wpisze „mecz”, a w czacie jest „MECZ” i „Mecz”. Wyszukiwarka zamienia na małe litery i tekst, i frazę: znajdz_wszystkie(w.lower(), fraza.lower()). Oryginalną wiadomość dopisuje do wyniku bez zmian — użytkownik ma zobaczyć ją tak, jak została napisana.',
-    'Wiadomość pasuje, gdy lista pozycji nie jest pusta: len(…) > 0. Zwróć uwagę: „meczu” też zawiera „mecz” — to zwykle dobrze, ale „ok” znajdzie się też w „kok” i „okno”. Prawdziwe wyszukiwarki mają opcję „całe słowa”.'
+    'Wiadomość pasuje, gdy lista pozycji nie jest pusta: len(…) > 0. (W gotowej funkcji znajdz_wszystkie parametry nazywają się krótko: t — tekst, w — wzorzec.) Zwróć uwagę: „meczu” też zawiera „mecz” — to zwykle dobrze, ale „ok” znajdzie się też w „kok” i „okno”. Prawdziwe wyszukiwarki mają opcję „całe słowa”.'
    ]},
    ...note(12,'Praca samodzielna nad przypadkiem. Odsyłaj do testów. Po zaliczeniu zapytaj, co jeszcze przydałoby się w wyszukiwarce czatu (całe słowa, polskie znaki: „szkola” vs „szkoła”, podświetlanie pozycji). Szybsi robią bonus: własne find.','Dlaczego wyszukiwarka zwraca oryginalną wiadomość, a nie w.lower()?','Bo użytkownik ma zobaczyć wiadomość tak, jak ją napisano. Małe litery służą tylko do porównania.','Dopisywanie do wyniku w.lower(); lower() tylko po jednej stronie (fraza „MECZ” nie znajdzie „mecz”); append poza if (wszystkie wiadomości trafiają do wyniku).','Bonus: moje_find(tekst, wzorzec) — pierwsza pozycja albo −1 — i porównanie z str.find.'),
    activities:[
