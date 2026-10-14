@@ -263,6 +263,197 @@
       "migraReference": "M1"
     },
     {
+      "lessonId": "35",
+      "grade": 1,
+      "numberInGrade": 15,
+      "title": "Tworzenie stron WWW – podstawowe informacje",
+      "file": "content/lessons/35-www-basics.js",
+      "requirements": [
+        "II.2",
+        "II.3.f",
+        "III.4"
+      ],
+      "activityIds": [
+        "w35-flow",
+        "w35-headings",
+        "w35-hobby",
+        "w35-show"
+      ],
+      "evidence": "Edytor htmlLab z podglądem: droga strony (klient–serwer, DNS, HTTPS), zamiana „udawanych” nagłówków na h1/h2, strona o hobby sprawdzana według kryteriów.",
+      "limitations": "Fakty prawne i liczby z raportów oznaczone w panelu nauczyciela do weryfikacji przed lekcją. Produkt ucznia żyje tylko w przeglądarce podczas lekcji (bez publikacji i zapisu na serwerze).",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "36",
+      "grade": 1,
+      "numberInGrade": 16,
+      "title": "Stosowanie wybranych znaczników języka HTML",
+      "file": "content/lessons/36-html-tags.js",
+      "requirements": [
+        "II.2",
+        "II.3.f"
+      ],
+      "activityIds": [
+        "w36-match",
+        "w36-fix",
+        "w36-card",
+        "w36-show"
+      ],
+      "evidence": "Naprawa zepsutej strony z walidatorem i wizytówka/mini-CV z listą, tabelą, linkiem i obrazkiem z alt, sprawdzana automatycznie.",
+      "limitations": "Fakty prawne i liczby z raportów oznaczone w panelu nauczyciela do weryfikacji przed lekcją. Produkt ucznia żyje tylko w przeglądarce podczas lekcji (bez publikacji i zapisu na serwerze).",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "37",
+      "grade": 1,
+      "numberInGrade": 17,
+      "title": "Kaskadowe arkusze stylów CSS",
+      "file": "content/lessons/37-css.js",
+      "requirements": [
+        "II.2",
+        "II.3.f"
+      ],
+      "activityIds": [
+        "w37-rules",
+        "w37-fixcss",
+        "w37-theme",
+        "w37-show"
+      ],
+      "evidence": "Reguły CSS, naprawa zepsutego arkusza i własny motyw strony z kontrolą kontrastu (WCAG).",
+      "limitations": "Fakty prawne i liczby z raportów oznaczone w panelu nauczyciela do weryfikacji przed lekcją. Produkt ucznia żyje tylko w przeglądarce podczas lekcji (bez publikacji i zapisu na serwerze).",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "38",
+      "grade": 1,
+      "numberInGrade": 18,
+      "title": "Publikowanie i promowanie stron WWW w Internecie",
+      "file": "content/lessons/38-publishing.js",
+      "requirements": [
+        "II.3.f",
+        "III.4",
+        "IV.4",
+        "V.1"
+      ],
+      "activityIds": [
+        "w38-terms",
+        "w38-law",
+        "w38-serp",
+        "w38-ready"
+      ],
+      "evidence": "Hosting, domena, DNS, podgląd wyniku wyszukiwania (title, description) i lista kontrolna przed publikacją; wizerunek, RODO, licencje obrazów.",
+      "limitations": "Fakty prawne i liczby z raportów oznaczone w panelu nauczyciela do weryfikacji przed lekcją. Produkt ucznia żyje tylko w przeglądarce podczas lekcji (bez publikacji i zapisu na serwerze).",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "39",
+      "grade": 1,
+      "numberInGrade": 19,
+      "title": "Wybrane przepisy prawa dotyczące technologii informacyjno-komunikacyjnych",
+      "file": "content/lessons/39-tech-law.js",
+      "requirements": [
+        "IV.4",
+        "V.1",
+        "V.2",
+        "V.4"
+      ],
+      "activityIds": [
+        "law-match",
+        "court",
+        "fair-use",
+        "rodo-16",
+        "ai-act"
+      ],
+      "evidence": "„Sąd klasowy” w trójkach (lawCourt): werdykt, przepis i uzasadnienie dla sytuacji nastolatków; dozwolony użytek, RODO, odpowiedzialność nieletnich, AI Act.",
+      "limitations": "Fakty prawne i liczby z raportów oznaczone w panelu nauczyciela do weryfikacji przed lekcją. Produkt ucznia żyje tylko w przeglądarce podczas lekcji (bez publikacji i zapisu na serwerze).",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "40",
+      "grade": 1,
+      "numberInGrade": 20,
+      "title": "Zasady rozpowszechniania programów komputerowych – projekt",
+      "file": "content/lessons/40-license-project.js",
+      "requirements": [
+        "IV.1",
+        "V.1",
+        "V.2"
+      ],
+      "activityIds": [
+        "lic-shelf",
+        "lic-creator",
+        "lic-check"
+      ],
+      "evidence": "Projekt licencyjny (licenseLab): przypisanie programów do licencji, wybór licencji do zlecenia, stopka TASL i karta licencyjna; audyt przypadków użycia.",
+      "limitations": "Fakty prawne i liczby z raportów oznaczone w panelu nauczyciela do weryfikacji przed lekcją. Produkt ucznia żyje tylko w przeglądarce podczas lekcji (bez publikacji i zapisu na serwerze).",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "41",
+      "grade": 1,
+      "numberInGrade": 21,
+      "title": "Komunikacja i wymiana informacji w Internecie",
+      "file": "content/lessons/41-online-communication.js",
+      "requirements": [
+        "IV.2",
+        "IV.3",
+        "V.1"
+      ],
+      "activityIds": [
+        "channel-match",
+        "mail-spot",
+        "mail-compose",
+        "mail-tone"
+      ],
+      "evidence": "Dobór kanału komunikacji, profesjonalny e-mail o praktyki sprawdzany kryteriami (proMail) i przekształcenie agresywnej wiadomości w asertywną.",
+      "limitations": "Fakty prawne i liczby z raportów oznaczone w panelu nauczyciela do weryfikacji przed lekcją. Produkt ucznia żyje tylko w przeglądarce podczas lekcji (bez publikacji i zapisu na serwerze).",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "42",
+      "grade": 1,
+      "numberInGrade": 22,
+      "title": "Szanse i zagrożenia związane z rozwojem informatyki i technologii informacyjno-komunikacyjnych – projekt",
+      "file": "content/lessons/42-tech-future-project.js",
+      "requirements": [
+        "IV.1",
+        "IV.2",
+        "IV.3",
+        "IV.5"
+      ],
+      "activityIds": [
+        "deb-evidence",
+        "deb-jobs",
+        "deb-poster",
+        "deb-peer"
+      ],
+      "evidence": "Projekt-debata w trójkach (debateLab): ocena dowodów, stanowisko z argumentami i kontrargumentem, ocena koleżeńska według rubryki.",
+      "limitations": "Fakty prawne i liczby z raportów oznaczone w panelu nauczyciela do weryfikacji przed lekcją. Produkt ucznia żyje tylko w przeglądarce podczas lekcji (bez publikacji i zapisu na serwerze).",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "43",
+      "grade": 1,
+      "numberInGrade": 23,
+      "title": "Przestępczość komputerowa – projekt",
+      "file": "content/lessons/43-computer-crime-project.js",
+      "requirements": [
+        "IV.1",
+        "V.2",
+        "V.4"
+      ],
+      "activityIds": [
+        "scam-steps",
+        "kk-match",
+        "domains",
+        "comic-build",
+        "peer-review"
+      ],
+      "evidence": "Projekt „anatomia oszustwa” (scamComic): przepisy kk do scenek, ocena domen, plakat-komiks z punktami przerwania, ocena koleżeńska i zgłaszanie incydentu.",
+      "limitations": "Fakty prawne i liczby z raportów oznaczone w panelu nauczyciela do weryfikacji przed lekcją. Produkt ucznia żyje tylko w przeglądarce podczas lekcji (bez publikacji i zapisu na serwerze).",
+      "migraReference": "M1"
+    },
+    {
       "lessonId": "05",
       "grade": 2,
       "numberInGrade": 1,
@@ -653,5 +844,5 @@
       "migraReference": "M3"
     }
   ],
-  "reviewedScope": "27 lekcji z GitHub main 91bffa3 (audyt 30.09.2026) oraz sześć nowych lekcji Worda 28–33 (aktualizacja mapy 01.10.2026)."
+  "reviewedScope": "27 lekcji z GitHub main 91bffa3 (audyt 30.09.2026) oraz sześć nowych lekcji Worda 28–33 (aktualizacja mapy 01.10.2026). Lekcje klasy 1: WWW 35–38, prawo/komunikacja/projekty 39–43 (aktualizacja mapy 14.10.2026)."
 }

@@ -68,3 +68,8 @@ Inni wykonawcy pracują RÓWNOLEGLE w tym samym katalogu — NIE uruchamiaj `npm
 2. `npx vite build --outDir <twój scratch>/dist --emptyOutDir` — musi się zbudować.
 3. Dev server na WŁASNYM porcie: `npx vite --host 127.0.0.1 --port <port> --strictPort` (w tle) i test Playwright (chromium: `chromium.launch({executablePath:'/opt/pw-browsers/chromium-1194/chrome-linux/chrome'})`; `import {chromium} from '@playwright/test'`; skrypt trzymaj w katalogu repo `tmp/` (jest w .gitignore), inaczej import nie znajdzie pakietu) — skrypt przechodzi każdą Twoją lekcję (`http://127.0.0.1:<port>/#/lesson/NN`): rozwiązuje symulatory, sprawdza kartę wyniku z max punktów, brak błędów w konsoli, szerokości 1366 i 1280 (dopracowane) oraz 390 px (tylko brak poziomego scrolla strony). Zrób zrzuty ekranu kluczowych widoków i OBEJRZYJ je (Read na PNG) — popraw brzydkie/nieczytelne miejsca. Zabij serwer na koniec.
 Raport końcowy (krótko): lista plików, typy symulatorów, co zweryfikowano, ewentualne potrzebne zmiany we wspólnych plikach, znane ograniczenia.
+
+## Uwagi z budowy lekcji 35–43
+- Podgląd strony ucznia (`htmlLab`) to `iframe sandbox=""` w zamkniętym shadow root — axe zawiesza się na ramce bez skryptów, a treści ucznia (czasem celowo zepsutej) i tak nie ocenia. Przy nowych ramkach podglądu postępuj tak samo.
+- Opcjonalny wariant w Wordzie w lekcji z innym produktem: `wordRubric` blokuje ukończenie etapu, więc w lekcji 42 `WordSteps`/`WordRubric` są renderowane wewnątrz symulatora (`debateLab`, `data.word`), tylko po wyborze Worda.
+- `htmlLab` (tryby `free`, `tasks`, `fix`, `serp`, `theme`, `show`) nadaje się dla klasy 3 (tematy 31–32, strona WWW).
