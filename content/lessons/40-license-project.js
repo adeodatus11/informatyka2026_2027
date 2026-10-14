@@ -1,0 +1,103 @@
+import {note, choice, reveal} from '../schema.js';
+
+// Lekcja 40 (klasa 1, temat 34): licencje programów i treści — projekt w trójkach.
+// Fakty o licencjach konkretnych programów: content/sims/licenseLab.js (stan 2026, do sprawdzenia przed lekcją).
+export default {
+ id:'40',grade:1,order:34,
+ title:'Zasady rozpowszechniania programów komputerowych – projekt',
+ subtitle:'„Darmowe” nie znaczy „wolno wszystko”. Wydasz własną pracę na jasnych zasadach i legalnie użyjesz cudzej — bez cracków i bez wirusów.',
+ topic:'Licencje programów i treści',icon:'shield',tags:['Licencje','Creative Commons','Projekt'],duration:45,
+ curriculum:'PP 2024 · zakres podstawowy · V.2 — respektowanie prawa i norm etycznych przy korzystaniu z oprogramowania i rozpowszechnianiu cudzych i własnych aplikacji oraz dokumentów; V.1 — prawo autorskie i ochrona własności intelektualnej; IV.1 — udział w projekcie.',
+ format:{
+  name:'Projekt w trójkach: wydajemy własną pracę',
+  student:'Najpierw rozpoznasz licencje znanych programów. Potem w trójce „wydajecie” aplikację lub grafikę: dobieracie licencję do zlecenia, piszecie poprawną stopkę z uznaniem autorstwa i tworzycie kartę licencyjną. Na koniec sam sprawdzisz, czy cudze użycie zdjęć jest zgodne z licencją, a inna trójka oceni Waszą kartę.',
+  teacher:'Hak (crack Photoshopa) i trzy pytania powtórkowe otwierają temat ryzyka i źródła. Półka licencji to szybka diagnoza: uczniowie mylą „darmowe” z „otwartym” — reaguj na tę pomyłkę na forum. Przed projektem pokaż kryteria sukcesu i role. Przykład rozwiązany (stopka TASL w czytance) modelujesz na głos, zanim trójki zbudują własną. Audyt przypadków robi każdy samodzielnie — to indywidualny dowód zrozumienia po pracy w grupie. Kończy ocena koleżeńska według kryteriów: dwie gwiazdy, życzenie i jedna poprawka.',
+  grouping:'Trójki z rolami: Prawnik (prowadzi kreator i pilnuje warunków licencji), Autor (stopka TASL i źródła grafik), Wydawca (karta licencyjna i uzasadnienie dla odbiorcy). Jedno urządzenie na trójkę do projektu; role zamieniacie przy kolejnych zleceniach. W parze jedna osoba łączy role Autora i Wydawcy. Samodzielnie — wykonujesz wszystkie trzy role po kolei; ocenę koleżeńską robi wtedy nauczyciel albo sąsiednia para.',
+  methods:[
+   {name:'Problem, projekt i przypadek',url:'https://metodyka.covepolska.pl/metoda-problem-projekt-przypadek.html'},
+   {name:'Uczenie kooperacyjne',url:'https://metodyka.covepolska.pl/metoda-uczenie-kooperacyjne.html'},
+   {name:'Przykłady rozwiązane',url:'https://metodyka.covepolska.pl/metoda-przyklady-rozwiazane.html'},
+   {name:'Feedback prowadzący do poprawy',url:'https://metodyka.covepolska.pl/metoda-feedback-poprawa.html'},
+   {name:'Retrieval practice',url:'https://metodyka.covepolska.pl/metoda-retrieval-practice.html'}
+  ]
+ },
+ objectives:[
+  'Rozróżniam freeware, shareware, open source (GPL, MIT), licencję komercyjną z EULA i domenę publiczną na przykładach znanych programów.',
+  'Dobieram licencję Creative Commons (BY, SA, NC, ND) albo umowę do sytuacji: portfolio, szkoła, klient.',
+  'Piszę poprawną stopkę z uznaniem autorstwa: tytuł, autor, źródło, licencja i zaznaczone zmiany.',
+  'Oceniam, czy konkretne użycie cudzego zdjęcia jest zgodne z licencją, i wiem, czym grozi pirackie oprogramowanie.'
+ ],
+ materials:[
+  'Przeglądarka — jedno urządzenie na trójkę do projektu, każdy uczeń do audytu (może być ten sam komputer po kolei)',
+  'Opcjonalnie: Word na komputerze do przeniesienia karty licencyjnej (instrukcja w etapie projektu)',
+  'Opcjonalnie dla chętnych: Wikimedia Commons lub Openverse — tylko jako wskazówka, gdzie szukać grafik CC; lekcja nie wymaga wchodzenia na te strony'
+ ],
+ teacherGuide:{
+  preparation:'Sprawdź przed lekcją licencje programów z półki (strony producentów; stan na 2026 r.): VLC — GNU GPL; 7-Zip — głównie GNU LGPL; jądro Linux — GPL v2; LibreOffice — MPL 2.0; WinRAR — shareware z 40-dniowym okresem próbnym; Acrobat Reader — freeware; SQLite — domena publiczna; Photoshop, Office, Minecraft — licencje komercyjne z umową (EULA). Warunki producentów się zmieniają. Linki do treści licencji CC 4.0 w polskiej wersji: creativecommons.org/licenses/…/4.0/deed.pl. Źródła do pogłębienia: creativecommons.pl, otwartezasoby.pl. Przygotuj podział na trójki i kartkę z rolami.',
+  summary:'Uczeń wyjaśnia, że licencja to warunki korzystania, a „za darmo” to tylko cena. Poprawnie dobiera: portfolio bez zarabiania przez innych → CC BY-NC-SA; ikony do wolnego użytku → CC BY; aplikacja, której kod ma zostać otwarty → GPL; logo dla klienta na wyłączność → umowa, nie CC. Stopka TASL: tytuł, autor, źródło (strona autora, nie „Google Grafika”), licencja z linkiem, zaznaczona zmiana, przy SA — ta sama licencja. Karta wyniku: maks. 26 pkt (3 + 10 + 6 + 7). Ocena koleżeńska i refleksja nie są punktowane.'
+ },
+ sections:[
+  {id:'start',label:'Start',title:'Photoshop „za darmo” z Discorda',grouping:'class',
+   intro:'Ktoś wrzuca na serwer klasy link: „Photoshop 2026 full + crack, działa!”. Zanim klikniesz — trzy szybkie pytania, także z wcześniejszych lekcji.',
+   ...note(5,'Odczytaj hak i zapytaj, kto zna kogoś, komu „crack” zepsuł komputer lub przejął konto. Potem uczniowie odpowiadają samodzielnie na trzy pytania (retrieval: lekcja 07 — SIFT, lekcja 28 — stopka w Wordzie). Omów krótko: piractwo to naruszenie licencji, ale też realne ryzyko złośliwego oprogramowania (np. kradnącego hasła i sesje kont).','Skąd twórca „cracka” ma pieniądze, skoro rozdaje program za darmo?','Z reklam, kopania kryptowalut na Twoim komputerze, kradzieży haseł i kont, sprzedaży dostępu do zainfekowanych komputerów.','Przekonanie, że antywirus „przepuścił, więc jest czysto”, albo że wyłączenie antywirusa „bo blokuje cracka” jest bezpieczne.','Zapytaj, jaka jest legalna, darmowa alternatywa dla Photoshopa (np. GIMP lub Krita — open source) i dla Office (LibreOffice).'),
+   activities:[
+    choice('lic-crack','Pobierasz „Photoshop full + crack” z linku na Discordzie. Co realnie ryzykujesz?',['Nic — skoro plik jest w internecie, wolno go używać','Złośliwe oprogramowanie (np. kradzież haseł) i naruszenie licencji — do tego brak aktualizacji bezpieczeństwa','Tylko to, że program będzie działał wolniej','Ryzykuje wyłącznie osoba, która wrzuciła link'],[1],'Cracki to jedna z ulubionych dróg infekcji: instalator dostaje uprawnienia administratora, a Ty często wyłączasz antywirusa „bo blokuje”. Do tego łamiesz licencję, a program nie dostaje poprawek bezpieczeństwa.','Pomyśl, kto daje programowi uprawnienia administratora — i po co ktoś miałby rozdawać płatny program za darmo.'),
+    choice('lic-sift','Powtórka z lekcji o oceanie informacji: ostatni krok SIFT to „dotrzyj do oryginału”. Co to znaczy przy zdjęciu znalezionym w sieci?',['Zrobić zrzut ekranu w najwyższej jakości','Znaleźć stronę, na której zdjęcie opublikował autor — tam jest jego nazwisko i licencja','Podać link do wyników wyszukiwania grafik','Zapytać na grupie klasowej, czy ktoś zna to zdjęcie'],[1],'Oryginał to strona autora albo galerii, w której opublikował zdjęcie. Tylko tam sprawdzisz autora i licencję — dziś to będzie „S” (źródło) w stopce TASL.','Wyszukiwarka pokazuje kopie. Gdzie zdjęcie pojawiło się pierwszy raz?'),
+    choice('lic-footer','Powtórka z Worda: informacja o licencji ma być na każdej stronie dokumentu. Gdzie ją wstawisz?',['W stopce strony (Wstawianie → Stopka) — powtarza się automatycznie na każdej stronie','W stylu Nagłówek 1 na początku dokumentu','Ręcznie na końcu ostatniej strony','W nazwie pliku'],[0],'Stopka strony powtarza się na każdej stronie — dlatego wpisuje się tam autorów, licencję i numer strony. Styl Nagłówek 1 to tytuł rozdziału, nie nagłówek strony.','Przypomnij sobie różnicę między nagłówkiem/stopką strony a stylem Nagłówek 1.')
+   ]},
+  {id:'shelf',label:'Półka',title:'Półka licencji: co naprawdę wolno?',grouping:'pair',
+   intro:'Licencja to umowa: mówi, co wolno zrobić z programem lub utworem. Ustaw 10 programów na właściwych półkach. Pracujcie w parach albo samodzielnie — każdy klika na swoim komputerze.',
+   reading:{title:'Cena to nie licencja',paragraphs:[
+    'Freeware jest za darmo, ale kod jest zamknięty i warunki ustala producent. Open source też bywa za darmo, ale daje więcej: kod jest jawny, wolno go zmieniać i rozpowszechniać. GPL każe udostępnić zmiany na tej samej licencji (copyleft). MIT pozwala nawet zamknąć kod — byle zachować informację o autorach.',
+    'Shareware to wersja próbna — po okresie testów trzeba kupić licencję. Program komercyjny kupujesz razem z umową licencyjną użytkownika (EULA): ona mówi, na ilu urządzeniach i do czego go używasz. Domena publiczna oznacza brak ograniczeń praw majątkowych — autor się ich zrzekł albo minęło 70 lat od jego śmierci.'
+   ],example:{question:'Przykład rozwiązany: VLC jest darmowy. Czy to freeware?',answer:'Nie wystarczy patrzeć na cenę. W „Pomoc → O programie” VLC pokazuje licencję GNU GPL, a kod jest publiczny. To open source: możesz go używać za darmo także w firmie, czytać i zmieniać kod.'}},
+   ...note(8,'Pokaż na projektorze przykład VLC (czytanka) i zapytaj, co odróżnia freeware od open source. Pary klikają; po 5 minutach zatrzymaj klasę przy programie, przy którym najwięcej osób się pomyliło (zwykle 7-Zip lub VLC jako „freeware” i Acrobat Reader jako „open source”). Reakcja na błąd: wróć do pytania „czy kod jest jawny i czy wolno go zmieniać?”.','Dlaczego VLC i Acrobat Reader trafiają na różne półki, skoro oba są za darmo?','Kod VLC jest otwarty (GPL) — wolno go zmieniać i rozpowszechniać. Kod Acrobat Readera jest zamknięty — używasz go tylko na warunkach producenta.','Utożsamianie „darmowy” z „open source” i „wolno wszystko”. Traktowanie licencji edukacyjnej Office jako freeware.','Szybsi: znajdźcie w swoim telefonie lub komputerze jeden program open source i jeden komercyjny (np. w „O programie” lub „Informacje prawne”).'),
+   activities:[{type:'licenseLab',id:'lic-shelf',mode:'shelf',points:10,label:'Półka licencji: 10 programów'}]},
+  {id:'criteria',label:'Kryteria',title:'Kryteria sukcesu i role w trójce',grouping:'trio',
+   intro:'Za chwilę Wasza trójka „wydaje” własną aplikację lub grafikę. Zanim zaczniecie, przeczytajcie, po czym inna trójka pozna, że karta licencyjna jest dobra, i rozdzielcie role.',
+   ...note(3,'Przeczytaj kryteria na głos, podziel klasę na trójki i przydziel role. Przy nieparzystej liczbie: para łączy role Autora i Wydawcy, osoba sama wykonuje wszystkie trzy. Uprzedź, że kryteria wrócą w ocenie koleżeńskiej.','Po czym poznacie dobrą stopkę licencyjną bez pytania nauczyciela?','Ma autora, rok, nazwę licencji i link; przy cudzym zdjęciu — tytuł, autora, źródło, licencję i zaznaczoną zmianę.','Traktowanie kryteriów jak formalności. Pokaż, że „© Wszystkie prawa zastrzeżone” pod cudzym zdjęciem nie spełnia żadnego z nich.','Poproś trójki o dopisanie własnego kryterium, np. „licencja nie odstrasza odbiorcy, któremu na projekcie zależy”.'),
+   activities:[reveal('lic-criteria',[
+    {title:'1. Licencja pasuje do sytuacji',icon:'shield',short:'portfolio · szkoła · klient',text:'Licencja wynika z tego, czego chcecie: czy inni mogą zarabiać, przerabiać, czy kod ma zostać otwarty, czy klient chce wyłączności (wtedy umowa, nie CC).'},
+    {title:'2. Poprawna stopka',icon:'list',short:'autor · rok · licencja · link',text:'Stopka Waszego projektu podaje autorów, rok, pełną nazwę licencji (np. CC BY-NC-SA 4.0) i link do jej treści.'},
+    {title:'3. Uczciwie z cudzym',icon:'camera',short:'T-A-S-L + zmiany',text:'Każdy cudzy materiał ma uznanie autorstwa: Tytuł, Autor, Źródło (strona autora), Licencja. Jeśli coś zmieniliście — piszecie to. Przy SA przeróbka idzie na tej samej licencji.'},
+    {title:'4. Uzasadnienie dla odbiorcy',icon:'book',short:'co wolno, czego nie',text:'1–2 zdania, dlaczego ta licencja: co odbiorca może zrobić, a czego nie. Bez „bo tak” i bez „darmowe”.'},
+    {title:'Role w trójce',icon:'group',short:'Prawnik · Autor · Wydawca',text:'Prawnik prowadzi kreator i czyta warunki licencji. Autor układa stopkę TASL i pilnuje źródeł. Wydawca wypełnia kartę licencyjną i pisze uzasadnienie. Kto nie klika, ten sprawdza i podpowiada. Przy kolejnym zleceniu zamieńcie się przy klawiaturze.'}
+   ])]},
+  {id:'project',label:'Projekt',title:'Projekt: wydajemy własną pracę',grouping:'trio',
+   intro:'Cztery zlecenia, jedna stopka do cudzego zdjęcia i Wasza karta licencyjna. Kreator zadaje te same pytania, które zadaje sobie twórca przed publikacją.',
+   reading:{title:'Creative Commons w czterech literach',paragraphs:[
+    'Licencje Creative Commons (CC) składa się z elementów. BY — podpisz autora (jest w każdej licencji CC). NC — tylko niekomercyjnie. ND — bez przeróbek. SA — przeróbka na tej samej licencji. CC0 to dobrowolne przekazanie do domeny publicznej. Do programów zamiast CC używa się licencji programistycznych, np. GPL lub MIT.',
+    'Uznanie autorstwa zapamiętasz jako TASL: Tytuł, Autor, Źródło, Licencja. Źródło to strona, na której autor opublikował utwór, a nie wyszukiwarka. Grafik na licencjach CC szukaj np. w Wikimedia Commons albo przez Openverse — i zawsze sprawdzaj licencję na stronie pliku.'
+   ],example:{question:'Przykład rozwiązany: zdjęcie „Dworzec nocą”, autor Jan Nowak, CC BY 4.0, przycięte do banera.',answer:'„Dworzec nocą”, aut. Jan Nowak, źródło: (link do strony zdjęcia), licencja CC BY 4.0 (link do treści licencji). Zmiany: przycięto. — Każdy element ma swoje miejsce; „Źródło: Google” byłoby błędem.'}},
+   ...note(14,'Modeluj na głos przykład TASL z czytanki (1 min). Trójki pracują w kreatorze: najpierw 4 zlecenia, potem stopka, na końcu karta licencyjna własnego projektu (dowolnego: aplikacja, plakat, zdjęcia, strona z lekcji o WWW). Co 4 minuty zapowiadaj etap i przypominaj o zamianie ról. Krąż z pytaniami: „Kto może na tym zarabiać?”, „Czy klient chce, by inni też mogli użyć logo?”. Nie podawaj licencji — wskaż zdanie w zleceniu.','Dlaczego logo dla pizzerii nie wydamy na licencji CC?','Licencja CC daje prawa wszystkim. Klient chce wyłączności, więc potrzebna jest umowa (przeniesienie praw lub licencja wyłączna) z opisem, gdzie i jak może używać logo.','Wybieranie CC dla kodu aplikacji. Mylenie NC z ND. W stopce „Źródło: Google Grafika” albo „No copyright infringement intended”.','Szybsi: przenieście kartę do Worda (instrukcja poniżej) i wstawcie stopkę licencyjną w stopce strony.'),
+   activities:[
+    {type:'licenseLab',id:'lic-creator',mode:'creator',points:6,label:'Kreator licencji: 4 zlecenia, stopka TASL i karta licencyjna'},
+    {type:'wordSteps',id:'lic-word',title:'Dla chętnych: karta licencyjna w Wordzie',steps:[
+     {title:'Wklej kartę',instruction:'W kreatorze kliknij „Kopiuj kartę”. Otwórz pusty dokument w Wordzie i wklej tekst (Ctrl+V). Zapisz jako 40-karta-licencyjna.docx.',check:'W dokumencie jest nazwa projektu, licencja, lista „wolno / nie wolno / warunek” i uzasadnienie.',help:'Jeśli przycisk nie kopiuje (zablokowany schowek), zaznacz tekst karty myszką i użyj Ctrl+C.'},
+     {title:'Nadaj strukturę stylami',instruction:'Pierwszy wiersz oznacz stylem Tytuł. Wiersze „Licencja…” i „Dlaczego ta licencja…” wyróżnij stylem Nagłówek 1 lub pogrubieniem — jak w lekcjach Worda.',check:'Widok → Okienko nawigacji pokazuje nagłówki karty.',help:'Samo pogrubienie nie tworzy nagłówka w nawigacji — potrzebny jest styl.'},
+     {title:'Stopka licencyjna',instruction:'Przenieś zdanie „Stopka do projektu: …” do stopki strony: Wstawianie → Stopka → Edytuj stopkę. Zapisz Ctrl+S.',check:'Stopka z autorami, rokiem i licencją widnieje na dole strony.',help:'Stopka strony to nie styl Nagłówek 1. Kliknij dwukrotnie dół strony, żeby wejść do stopki.'}
+    ]}
+   ]},
+  {id:'audit',label:'Audyt',title:'Audyt: czy to zgodne z licencją?',grouping:'solo',
+   intro:'Teraz każdy sprawdza samodzielnie. Siedem sytuacji z użyciem cudzych zdjęć: wydaj werdykt i wskaż, który element licencji rozstrzyga sprawę.',
+   ...note(7,'Każdy uczeń pracuje sam (to indywidualny dowód zrozumienia po pracy w trójce). Minimum to 5 przypadków. Po 5 minutach omów jeden przypadek z tą samą licencją i różnym werdyktem (salon paznokci vs prezentacja szkolna): licencja ta sama, inne użycie. Jeśli wiele osób myli się przy „brak licencji”, zatrzymaj klasę: brak informacji = wszystkie prawa zastrzeżone.','Dlaczego ta sama licencja CC BY-NC raz pozwala, a raz nie?','Bo liczy się sposób użycia: prezentacja na lekcji jest niekomercyjna, reklama salonu — komercyjna.','„Skoro jest podpis, to wszystko wolno” (a ND zabrania przeróbek). „Nie ma licencji, więc można” — jest odwrotnie.','Dla chętnych: wymyśl własny przypadek z licencją CC BY-SA i daj go do rozwiązania sąsiadowi.'),
+   activities:[{type:'licenseLab',id:'lic-check',mode:'check',points:7,label:'Audyt: 7 przypadków użycia cudzych zdjęć'}]},
+  {id:'peer',label:'Ocena',title:'Ocena koleżeńska: dwie gwiazdy i życzenie',grouping:'trio',
+   intro:'Zamieńcie się miejscami z sąsiednią trójką. Otwórzcie ich kartę licencyjną w etapie „Projekt” (zakładka Karta), sprawdźcie kryteria i zostawcie informację zwrotną na ich komputerze. Po powrocie wprowadźcie jedną poprawkę.',
+   ...note(5,'Trójki zamieniają się miejscami (2 min): zaznaczają kryteria i wpisują dwie gwiazdy i życzenie. Po powrocie (2 min) każda trójka czyta uwagę, poprawia kartę w kreatorze i zapisuje, co zmieniła. Uczeń bez trójki: ocenia sąsiednia para albo nauczyciel. Pilnuj tonu: o pracy, nie o osobach.','Która uwaga najbardziej pomogła Wam poprawić kartę?','Konkretna, np. „brakuje linku do licencji”, „uzasadnienie nie mówi, czy wolno zarabiać”, „w stopce cudzego zdjęcia nie ma zmian”.','Ogólniki („fajne”, „słabe”). Zaznaczanie kryteriów bez czytania karty.','Wybierz jedną kartę do pokazania na projektorze i omów poprawkę przed klasą.'),
+   activities:[
+    {type:'checklist',id:'lic-peer-check',items:['Licencja pasuje do sytuacji opisanej w uzasadnieniu','Stopka projektu ma autorów, rok, pełną nazwę licencji i link','Stopka cudzego zdjęcia ma tytuł, autora, źródło, licencję i zaznaczone zmiany','Uzasadnienie mówi odbiorcy, co wolno, a czego nie'],explanation:'Dzięki. Teraz dwie gwiazdy i jedno życzenie — konkretnie, o karcie, nie o osobach.'},
+    {type:'text',id:'lic-peer-stars',question:'Dwie gwiazdy (co jest dobre) i życzenie (co poprawić) — dla ocenianej trójki:',minLength:20,explanation:'Dobra informacja zwrotna jest konkretna: „★ Licencja BY-NC-SA pasuje do portfolio. ★ Stopka TASL kompletna. Życzenie: w uzasadnieniu napiszcie wprost, że nie wolno zarabiać bez zgody”.'},
+    {type:'text',id:'lic-peer-fix',question:'Po powrocie: jaką poprawkę wprowadziliście i dlaczego?',minLength:15,explanation:'Zapisanie, co i dlaczego zmieniliście, pomaga zapamiętać zasadę, a nie tylko wynik. Feedback działa, kiedy prowadzi do poprawionej wersji.'}
+   ]},
+  {id:'result',label:'Wynik',title:'Twój wynik',grouping:'class',
+   intro:'Punkty z rozgrzewki, półki, projektu i audytu. Zaznacz samoocenę i pokaż kartę nauczycielowi.',
+   ...note(3,'Zapytaj 2–3 osoby, jaką licencję wybrały dla swojej pracy i dlaczego. Przypomnij trzy zasady: darmowe ≠ wolno wszystko; brak licencji = nie wolno; crack = ryzyko złośliwego oprogramowania. Uczniowie robią zdjęcie karty.','Jakiej licencji użyjesz dla zdjęć lub projektów, które wrzucasz do sieci — i co to zmienia dla innych?','Np. CC BY-NC: każdy może pokazać z podpisem, ale nie zarobić bez zgody; albo „wszystkie prawa zastrzeżone”, jeśli nie chcę żadnego użycia bez pytania.','Przekonanie, że licencja jest potrzebna tylko „prawdziwym firmom”. Każdy autor decyduje o swojej pracy.','Zapytaj, jak legalnie zdobyć program, który jest drogi (wersja edukacyjna, darmowa alternatywa open source, wersja próbna).'),
+   activities:[{type:'resultCard',id:'result',title:'Licencje — wynik',sources:['lic-crack','lic-sift','lic-footer','lic-shelf','lic-creator','lic-check'],badges:[
+    {min:0,name:'Crack-tester',text:'Jeszcze chwila, a pobrałbyś „Photoshop full”. Wróć do półki — tam jest cała różnica między „za darmo” a „wolno”.'},
+    {min:0.5,name:'Licencjonowany ziomek',text:'Wiesz, co wolno, a czego nie. Twoje zdjęcia i cudze — pod kontrolą.'},
+    {min:0.85,name:'Kancelaria „Pod Kafelkiem”',text:'Licencje, stopki i umowy z klientem — możesz doradzać całej klasie. Bez cracków, bez wirusów.'}
+   ]}]}
+ ],
+ exitTicket:'Licencja to warunki, nie cena. Przed użyciem cudzego zdjęcia sprawdź licencję u autora i podpisz TASL; swoją pracę wydaj na licencji, która mówi innym, co wolno. A „crack” to najdroższy darmowy program.'
+};
