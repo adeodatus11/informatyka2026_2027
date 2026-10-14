@@ -83,7 +83,7 @@ export default function ScamChat({data,value,onChange}){
    <div className="sch-counters" aria-live="polite"><span>Punkty: <b>{fmt(res.score)}</b>/{res.max}</span><span>Wykryte flagi: <b>{res.flagsFound}</b>/{res.flagsSeen}</span><span>Przerwane: <b>{Math.min(res.finished,S.REQUIRED)}</b>/{S.REQUIRED}{res.finished>S.REQUIRED?' + bonus':''}</span></div></div>
   <p className="sch-help">Przejdź <b>co najmniej 2 rozmowy</b> (trzecia to bonus: liczą się 2 najlepsze). Wybieraj odpowiedzi tak, jak naprawdę byś zrobił. Za bezpieczny wybór od razu dostajesz 1 pkt, po cofnięciu 0,5 pkt.</p>
   <div className="sch-tabs" role="group" aria-label="Wybór rozmowy">{S.scenarios.map((x,i)=>{const xs=v.scen?.[x.id];
-   return <button key={x.id} className={`sch-tab ${x.id===active?'on':''} ${xs?.done?'done':''}`} aria-pressed={x.id===active} onClick={()=>open(x.id)}>
+   return <button key={x.id} className={`sch-tab ${x.id===active?'on':''} ${xs?.done?'done':''}`} aria-pressed={x.id===active} onClick={()=>save({...v,active:x.id})}>
     <Icon name={xs?.done?'check':x.icon} size={22}/><span><b>{i+1}. {x.title}</b><small>{x.short}{i===2?' · bonus':''} · {status(x,xs)}</small></span></button>;})}</div>
 
   <div className="sch-layout">
@@ -99,7 +99,7 @@ export default function ScamChat({data,value,onChange}){
      <div className="sch-compose">
       {!ready?<p className="sch-wait" role="status">{typing?`${sc.contact.name} pisze…`:'…'}</p>
       :st.fail?<Outcome sc={sc} st={st} onUndo={back} headRef={outRef}/>
-      :st.done?<Summary sc={sc} st={st} next={nextSc} onNext={()=>open(nextSc.id)} headRef={sumRef}/>
+      :st.done?<Summary sc={sc} st={st} next={nextSc} onNext={()=>save({...v,active:nextSc.id})} headRef={sumRef}/>
       :<fieldset className="sch-options"><legend tabIndex={-1} ref={optRef}>Decyzja {st.path.length+1}/{S.DECISIONS}: co robisz?</legend>
         {orderOptions(optionKey('scamChat',`${sc.id}:${st.node}`,node.options.map(o=>o.text)),node.options).map(([i,o])=>{const tried=r?.wrong.includes(i);
          return <button key={i} data-option={i} className={`sch-opt ${tried?'tried':''}`} disabled={tried} onClick={()=>pick(i)}>
