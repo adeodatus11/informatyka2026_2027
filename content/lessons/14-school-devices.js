@@ -1,7 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
 export default {
- id:'14',grade:3,title:'Urządzenia cyfrowe w szkole',
+ id:'14',grade:3,order:3,title:'Urządzenia cyfrowe w szkole',
  subtitle:'Na praktykach i w pierwszej pracy to Ty będziesz „tym od komputerów”. Poćwicz na sieci szkoły i prawdziwych zgłoszeniach.',
  topic:'Urządzenia cyfrowe w szkole',icon:'board',tags:['Sieć szkoły','Helpdesk','OSE'],duration:40,
  curriculum:'2024 Informatyka – liceum/technikum · urządzenia cyfrowe i sieci komputerowe w otoczeniu ucznia, bezpieczna praca w sieci',

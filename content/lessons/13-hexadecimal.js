@@ -1,7 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
 export default {
- id:'13',grade:3,title:'System szesnastkowy',
+ id:'13',grade:3,order:2,title:'System szesnastkowy',
  subtitle:'Kolory w grach, adresy kart sieciowych i kody błędów Windowsa — przeczytasz je bez wyszukiwarki.',
  topic:'System szesnastkowy',icon:'hash',tags:['#FF8800','0xDEADBEEF','MAC'],duration:42,
  curriculum:'2024 Informatyka – liceum/technikum · reprezentacja liczb w systemach pozycyjnych (dwójkowy, szesnastkowy)',

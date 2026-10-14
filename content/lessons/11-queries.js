@@ -3,7 +3,7 @@ import {note, choice, reveal} from '../schema.js';
 const lab=(level,label,question,criteria)=>({type:'queryDesigner',id:`q-l${level}`,stateKey:'query-lab',mode:`l${level}`,level,points:6,label,question,criteria});
 
 export default {
- id:'11',grade:2,title:'Przygotowanie kwerend w bazie Stomatolog',
+ id:'11',grade:2,order:12,title:'Przygotowanie kwerend w bazie Stomatolog',
  subtitle:'Jedno pytanie do bazy i recepcja ma listę do SMS-ów, dzienny utarg i pacjentów bez e-maila.',
  topic:'Przygotowanie kwerend w bazie Stomatolog',icon:'funnel',
  tags:['Kryteria','Sumy','Parametr'],duration:44,

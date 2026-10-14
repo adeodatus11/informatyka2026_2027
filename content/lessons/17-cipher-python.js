@@ -20,7 +20,7 @@ const DESZYFRUJ = `def deszyfruj(tekst, klucz):
 const TAJNA = 'SLDWZ OZ DKLQVT H ACLNZHYT EZ ATYRHTY';
 
 export default {
- id:'17',grade:2,title:'Programowanie algorytmu szyfrowania tekstu metodą podstawieniową',
+ id:'17',grade:2,order:15,title:'Programowanie algorytmu szyfrowania tekstu metodą podstawieniową',
  subtitle:'Napiszesz program, który szyfruje całą wiadomość w tysięcznej części sekundy — i łamie szyfr Cezara, sprawdzając wszystkie klucze.',
  topic:'Szyfr Cezara w Pythonie',icon:'code',tags:['ord/chr','% 26','pętla for'],duration:45,
  curriculum:'Informatyka – liceum/technikum · algorytmy szyfrowania (podstawieniowe), programowanie rozwiązań w wybranym języku (Python)',

@@ -1,7 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
 export default {
- id:'18',grade:2,title:'Algorytmy porządkowania liczb',
+ id:'18',grade:2,order:16,title:'Algorytmy porządkowania liczb',
  subtitle:'Ranking w grze, ceny od najtańszej, playlista od najnowszej — sprawdź, czy posortujesz szybciej niż komputer.',
  topic:'Algorytmy porządkowania liczb',icon:'sort',tags:['Porównanie','Zamiana','n²'],duration:45,
  curriculum:'Podstawa programowa informatyki (liceum/technikum): algorytmy porządkowania ciągu liczb — metoda bąbelkowa i przez wstawianie, porównanie liczby operacji; wprowadzenie do lekcji 19–20 (sortowanie w Pythonie)',

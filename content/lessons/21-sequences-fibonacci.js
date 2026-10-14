@@ -1,7 +1,7 @@
 import {note, choice} from '../schema.js';
 
 export default {
- id:'21',grade:2,title:'Obliczanie wartości elementów ciągu metodą iteracyjną, w tym wartości elementów ciągu Fibonacciego',
+ id:'21',grade:2,order:19,title:'Obliczanie wartości elementów ciągu metodą iteracyjną, w tym wartości elementów ciągu Fibonacciego',
  subtitle:'Ile uzbierasz, odkładając 50 zł miesięcznie? Ile da lokata po 10 latach? Napiszesz kalkulator, który to policzy — a przy okazji odkryjesz ciąg Fibonacciego.',
  topic:'Ciągi i Fibonacci w Pythonie',icon:'code',tags:['iteracja','Fibonacci','φ ≈ 1,618'],duration:45,
  curriculum:'Informatyka – liceum/technikum · algorytmy iteracyjne: obliczanie wyrazów ciągów (w tym ciągu Fibonacciego), iteracja a rekurencja, programowanie w wybranym języku (Python)',

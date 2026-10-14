@@ -1,6 +1,7 @@
 export default {
  "id": "05",
  "grade": 2,
+ "order": 10,
  "title": "Tworzenie bazy danych – obsługa gabinetu stomatologicznego",
  "subtitle": "Uporządkuj pacjentów i wizyty. Utwórz bazę, połącz tabele i odszukaj termin.",
  "topic": "Tworzenie bazy danych – obsługa gabinetu stomatologicznego",

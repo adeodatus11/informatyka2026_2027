@@ -22,7 +22,7 @@ const sections=base.sections.map(s=>{
 
 export default {
  ...base,
- id:'23',grade:3,
+ id:'23',grade:3,order:6,
  tags:['Tabele','Klucze','Relacje'],
  format:{
   name:'Symulacja pracy recepcji',

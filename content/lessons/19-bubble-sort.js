@@ -10,7 +10,7 @@ const SORTUJ = `def sortuj(lista):
 `;
 
 export default {
- id:'19',grade:2,title:'Programowanie algorytmów porządkowania metodą bąbelkową',
+ id:'19',grade:2,order:17,title:'Programowanie algorytmów porządkowania metodą bąbelkową',
  subtitle:'Ranking graczy, ceny od najtańszej, tabela wyników — napiszesz sortowanie, które robi to za Ciebie.',
  topic:'Sortowanie bąbelkowe w Pythonie',icon:'sort',tags:['for w for','zamiana','flaga'],duration:45,
  curriculum:'Informatyka – liceum/technikum · algorytmy porządkowania (sortowanie bąbelkowe), programowanie rozwiązań w wybranym języku (Python)',

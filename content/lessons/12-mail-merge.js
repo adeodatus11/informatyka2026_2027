@@ -1,7 +1,7 @@
 import {note, choice} from '../schema.js';
 
 export default {
- id:'12',grade:2,title:'Przygotowanie korespondencji seryjnej',
+ id:'12',grade:2,order:13,title:'Przygotowanie korespondencji seryjnej',
  subtitle:'Jeden szablon → dziesiątki spersonalizowanych przypomnień i listów o praktyki w minutę.',
  topic:'Przygotowanie korespondencji seryjnej',icon:'mail',
  tags:['«pola»','Reguły','Scalanie'],duration:44,

@@ -3,7 +3,7 @@ import {note, choice} from '../schema.js';
 const lab=(level,label,question,criteria)=>({type:'queryDesigner',id:`q-l${level}`,stateKey:'query-lab',mode:`l${level}`,level,maxLevel:2,dataset:'stomatolog',points:6,label,question,criteria});
 
 export default {
- id:'26',grade:3,title:'Importowanie danych i przygotowywanie kwerend w bazie Stomatolog',
+ id:'26',grade:3,order:9,title:'Importowanie danych i przygotowywanie kwerend w bazie Stomatolog',
  subtitle:'Gabinet przysyła plik z zapisami i listę pytań recepcji. Importujesz dane w minutę, czyścisz błędy i odpowiadasz kwerendami — jak na praktykach w biurze.',
  topic:'Importowanie danych i przygotowywanie kwerend w bazie Stomatolog',icon:'table',
  tags:['Import CSV','Błędy danych','Kwerendy'],duration:45,
