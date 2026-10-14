@@ -218,8 +218,10 @@
   "sem": "I półrocze",
   "temat": "Tworzenie stron WWW – podstawowe informacje",
   "pp": "II.2., II.3f.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "35"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -229,8 +231,10 @@
   "sem": "I półrocze",
   "temat": "Stosowanie wybranych znaczników języka HTML",
   "pp": "II.2., II.3f.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "36"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -240,8 +244,10 @@
   "sem": "I półrocze",
   "temat": "Kaskadowe arkusze stylów CSS",
   "pp": "II.2., II.3f.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "37"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -251,8 +257,10 @@
   "sem": "I półrocze",
   "temat": "Publikowanie i promowanie stron WWW w Internecie",
   "pp": "II.2., II.3f.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "38"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -383,8 +391,10 @@
   "sem": "II półrocze",
   "temat": "Wybrane przepisy prawa dotyczące technologii informacyjno-komunikacyjnych",
   "pp": "IV.4., V.1., V.2., V.4.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "39"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -394,8 +404,10 @@
   "sem": "II półrocze",
   "temat": "Zasady rozpowszechniania programów komputerowych – projekt",
   "pp": "IV.1., V.1., V.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "40"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -405,8 +417,10 @@
   "sem": "II półrocze",
   "temat": "Komunikacja i wymiana informacji w Internecie",
   "pp": "IV.2., IV.3., V.1.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "41"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -416,8 +430,10 @@
   "sem": "II półrocze",
   "temat": "Szanse i zagrożenia związane z rozwojem informatyki i technologii informacyjno-komunikacyjnych – projekt",
   "pp": "IV.1., IV.2., IV.3., IV.5.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "42"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -548,8 +564,10 @@
   "sem": "II półrocze",
   "temat": "Przestępczość komputerowa – projekt",
   "pp": "IV.1., V.2., V.4.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "43"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },

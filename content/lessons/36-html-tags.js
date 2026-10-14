@@ -81,7 +81,7 @@ export default {
  materials:['Komputer z przeglądarką — jeden na osobę; edytor HTML na platformie, bez instalacji i bez konta','Projektor do pokazania kart znaczników i pierwszego błędu','Pary ustalone przed etapem 4 (dyktujący/piszący)'],
  teacherGuide:{
   preparation:'Klucz do zepsutej strony: 1) </strong> po „we wtorki.”, 2) src="pizza.svg" zamiast ścieżki C:\\Users\\…, 3) alt z opisem pizzy, 4) <h3>Nasze pizze</h3> → <h2>, 5) <a href="…"> przy „Zamów online”, 6) pierwszy wiersz tabeli <th> zamiast <td>. Usunięcie treści nie zalicza błędu (symulator pilnuje, żeby akapity, menu, zdjęcie, tabela i link zostały). Ustal pary do dyktowania. Wizytówka: uczeń używa imienia lub pseudonimu i fikcyjnego e-maila — bez adresu i telefonu.',
-  summary:'Uczeń stosuje listy, tabelę z <th>, link z href i obrazek z alt, naprawia 6 błędów zepsutej strony i buduje wizytówkę spełniającą 7 kryteriów. Na karcie wyniku: pytania, dopasowanie, naprawa, dyktando i wizytówka (maks. 23 pkt). Pytanie na wyjście: co usłyszy niewidomy użytkownik przy obrazku bez alt?'
+  summary:'Uczeń stosuje listy, tabelę z <th>, link z href i obrazek z alt, naprawia 6 błędów zepsutej strony i buduje wizytówkę spełniającą 7 kryteriów. Na karcie wyniku: pytania, dopasowanie, naprawa, dyktando i wizytówka (maks. 20 pkt). Pytanie na wyjście: co usłyszy niewidomy użytkownik przy obrazku bez alt?'
  },
  sections:[
   {id:'start',label:'Start',title:'„Obraz, obraz, link, link”',grouping:'class',

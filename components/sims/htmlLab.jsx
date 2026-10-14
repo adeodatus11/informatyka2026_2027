@@ -80,11 +80,39 @@ function goToLine(ta, src, line) {
 function Preview({html, css, title, height}) {
   const dh = useDebounced(html), dc = useDebounced(css);
   const doc = useMemo(() => buildDocument(dh, dc), [dh, dc]);
-  // sandbox="" — bez skryptów, formularzy, wyskakujących okien i bez dostępu do platformy (patrz content/sims/htmlLab.js)
   return <>
-    <iframe className="hl-frame" sandbox="" srcDoc={doc.doc} title={title} style={height ? {height} : undefined}/>
+    <SandboxFrame doc={doc.doc} title={title} height={height}/>
     {doc.removed.scripts > 0 && <p className="hl-note small"><Icon name="shield" size={16}/>Skrypty i atrybuty on… są w tym edytorze wyłączone — dziś uczymy się HTML i CSS.</p>}
   </>;
+}
+
+/**
+ * <iframe sandbox=""> (bez allow-scripts i allow-same-origin): kod ucznia nie uruchamia skryptów, formularzy ani okien
+ * i nie ma dostępu do platformy. Ramka siedzi w zamkniętym shadow root, bo narzędzia testujące (axe) próbują
+ * wstrzyknąć skrypt do każdej ramki — w ramce bez skryptów czekałyby w nieskończoność. Treść ucznia (w trybie
+ * naprawy celowo zepsuta) i tak nie jest częścią interfejsu platformy.
+ */
+function SandboxFrame({doc, title, height}) {
+  const host = useRef(null);
+  const frame = useRef(null);
+  useEffect(() => {
+    if (frame.current || !host.current) return;
+    const root = host.current.attachShadow({mode: 'closed'});
+    const st = document.createElement('style');
+    st.textContent = ':host{display:block}iframe{display:block;width:100%;height:100%;border:0;background:#fff}';
+    const f = document.createElement('iframe');
+    f.setAttribute('sandbox', '');
+    f.setAttribute('referrerpolicy', 'no-referrer');
+    root.append(st, f);
+    frame.current = f;
+  }, []);
+  useEffect(() => {
+    const f = frame.current;
+    if (!f) return;
+    f.title = title;
+    if (f.srcdoc !== doc) f.srcdoc = doc;
+  });
+  return <div ref={host} className="hl-frame" style={height ? {height} : undefined}/>;
 }
 
 function ScreenReaderView({root}) {
@@ -139,7 +167,7 @@ function Criteria({checks, results, hints, onHint, mode, done, passedLabel}) {
         <div>
           <span className="hl-sr">{r.ok ? 'Spełnione: ' : 'Jeszcze nie: '}</span>
           <b>{c.label}</b>
-          {r.info && <span className="hl-info">{r.info}</span>}
+          {r.info && (mode !== 'fix' || r.ok || used > 0) && <span className="hl-info">{r.info}</span>}
           {used > 0 && <ul className="hl-hints">{hl.slice(0, used).map((h, i) => <li key={i}><Icon name="book" size={16}/><span><Rich text={h}/></span></li>)}</ul>}
           {!r.ok && used < hl.length && <button type="button" className="text-button hl-hint-btn" onClick={() => onHint(c.id)}>Podpowiedź{hl.length > 1 ? ` ${used + 1}/${hl.length}` : ''}{!done ? ' (−25% za to kryterium)' : ''}</button>}
         </div>
@@ -299,7 +327,7 @@ function Lab({data, value, onChange}) {
     requestAnimationFrame(() => goToLine(ta.current, toCss ? css : html, it.line));
   }
   const marks = {};
-  for (const it of issues) if (!!it.css === (tab === 'css') && (!marks[it.line] || it.sev === 'error')) marks[it.line] = it.sev === 'error' ? 'error' : 'warn';
+  if (mode !== 'fix') for (const it of issues) if (!!it.css === (tab === 'css') && (!marks[it.line] || it.sev === 'error')) marks[it.line] = it.sev === 'error' ? 'error' : 'warn';
   const readOnly = tab === 'html' && (mode === 'theme' || data.lockHtml);
   const snippets = tab === 'css' ? CSS_SNIPPETS : SNIPPETS;
   const showSnippets = data.snippets !== false && !readOnly && mode !== 'fix';
@@ -374,7 +402,7 @@ function Lab({data, value, onChange}) {
       {mode !== 'free' && <p className={`hl-feedback ${done ? 'is-ok' : ''}`} role="status">
         <Icon name={done ? 'trophy' : 'right'} size={18}/>
         {done ? `${data.doneText || 'Zadanie zaliczone!'} ${r.summary || ''}` : `${mode === 'fix' ? 'Do naprawy' : 'Do spełnienia'} zostało: ${checks.length - checks.filter(c => results[c.id]?.ok).length}.${data.minDone && data.minDone < checks.length ? ` Etap zaliczysz od ${data.minDone}/${checks.length}.` : ''}`}
-        {ratio ? ` Kontrast: ${fmtRatio(ratio)}.` : ''}
+        {ratio && !done ? ` Kontrast: ${fmtRatio(ratio)}.` : ''}
       </p>}
     </div>
   </section>;

@@ -86,7 +86,7 @@ export default {
  materials:['Komputer z przeglądarką (Chrome, Edge lub Firefox) — jeden na osobę; edytor HTML działa na platformie, bez instalacji i bez konta','Projektor do pokazania F12 i przykładu rozwiązanego','Opcjonalnie: kartka do planu strony w parze'],
  teacherGuide:{
   preparation:'Sprawdź na komputerze z projektorem, czy działa F12 (narzędzia deweloperskie) — na niektórych komputerach szkolnych administrator je blokuje; wtedy hak pokazujesz tylko w edytorze na platformie. Strony uczniów istnieją tylko w ich przeglądarkach do odświeżenia — ocenę robisz przy komputerze ucznia w etapie 6 (widok „Twoja strona”). Pobranie pliku .html jest opcjonalne.',
-  summary:'Uczeń opisuje drogę strony (adres → DNS → serwer → HTML → przeglądarka), rozróżnia HTML/CSS/JS, zamienia „udawane nagłówki” na <h1>/<h2> i buduje stronę o hobby spełniającą 6 kryteriów. Na karcie wyniku: pytania, podmiana nagłówka, kolejność, dopasowania, poradnik i strona (maks. 18 pkt). Pytanie na wyjście: dlaczego screenshot strony nie jest dowodem?'
+  summary:'Uczeń opisuje drogę strony (adres → DNS → serwer → HTML → przeglądarka), rozróżnia HTML/CSS/JS, zamienia „udawane nagłówki” na <h1>/<h2> i buduje stronę o hobby spełniającą 6 kryteriów. Na karcie wyniku: pytania, podmiana nagłówka, kolejność, dopasowania, poradnik i strona (maks. 17 pkt). Pytanie na wyjście: dlaczego screenshot strony nie jest dowodem?'
  },
  sections:[
   {id:'start',label:'Start',title:'Screenshot to dowód?',grouping:'class',
