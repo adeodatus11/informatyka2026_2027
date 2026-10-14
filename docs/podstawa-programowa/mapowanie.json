@@ -443,14 +443,14 @@
         "V.4"
       ],
       "activityIds": [
+        "scam-chat",
         "scam-steps",
         "kk-match",
         "domains",
-        "comic-build",
-        "peer-review"
+        "maja-15min"
       ],
-      "evidence": "Projekt „anatomia oszustwa” (scamComic): przepisy kk do scenek, ocena domen, plakat-komiks z punktami przerwania, ocena koleżeńska i zgłaszanie incydentu.",
-      "limitations": "Fakty prawne i liczby z raportów oznaczone w panelu nauczyciela do weryfikacji przed lekcją. Produkt ucznia żyje tylko w przeglądarce podczas lekcji (bez publikacji i zapisu na serwerze).",
+      "evidence": "Symulowane rozmowy z oszustem (scamChat): rozpoznawanie czerwonych flag i przerywanie oszustwa w 3 scenariuszach; przepisy kk do scenek, ocena adresów (Lista Ostrzeżeń), plan reakcji „Pomóż Mai” i zgłaszanie incydentu.",
+      "limitations": "IV.1 częściowo: lekcja nie ma już projektu zespołowego (decyzja nauczyciela — praca samodzielna). Fakty prawne i dane CERT Polska oznaczone w panelu nauczyciela do weryfikacji.",
       "migraReference": "M1"
     },
     {

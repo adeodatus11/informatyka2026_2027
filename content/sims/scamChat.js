@@ -219,8 +219,10 @@ export function chatResult(value={}){
  const finished=rows.filter(r=>r.done);
  const flagsFound=rows.reduce((s,r)=>s+r.flags,0),flagsSeen=rows.reduce((s,r)=>s+r.resolved,0);
  const doneFlags=finished.reduce((s,r)=>s+r.flags,0),doneTotal=finished.length*DECISIONS;
+ const started=scenarios.filter(sc=>value.scen?.[sc.id]).length;
+ const flagsTotal=DECISIONS*Math.max(REQUIRED,started); // licznik „Wykryte flagi: X/Y”
  const done=finished.length>=REQUIRED;
- return {done,score,max:chatMax,finished:finished.length,flagsFound,flagsSeen,
+ return {done,score,max:chatMax,finished:finished.length,flagsFound,flagsSeen,flagsTotal,
   summary:finished.length?`Rozmowy z oszustem: ${Math.min(finished.length,REQUIRED)}/${REQUIRED} przerwane${finished.length>REQUIRED?' + bonus':''}, flagi ${doneFlags}/${doneTotal}`:undefined};
 }
 

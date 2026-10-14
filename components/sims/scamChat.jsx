@@ -80,7 +80,7 @@ export default function ScamChat({data,value,onChange}){
 
  return <div className="sch-sim">
   <div className="sch-top"><div><span className="sch-tag">Rozmowa z oszustem</span><small>symulacja: aplikacje, osoby, numery i adresy są fikcyjne</small></div>
-   <div className="sch-counters" aria-live="polite"><span>Punkty: <b>{fmt(res.score)}</b>/{res.max}</span><span>Wykryte flagi: <b>{res.flagsFound}</b>/{res.flagsSeen}</span><span>Przerwane: <b>{Math.min(res.finished,S.REQUIRED)}</b>/{S.REQUIRED}{res.finished>S.REQUIRED?' + bonus':''}</span></div></div>
+   <div className="sch-counters" aria-live="polite"><span>Punkty: <b>{fmt(res.score)}</b>/{res.max}</span><span>Wykryte flagi: <b>{res.flagsFound}</b>/{res.flagsTotal}</span><span>Przerwane: <b>{Math.min(res.finished,S.REQUIRED)}</b>/{S.REQUIRED}{res.finished>S.REQUIRED?' + bonus':''}</span></div></div>
   <p className="sch-help">Przejdź <b>co najmniej 2 rozmowy</b> (trzecia to bonus: liczą się 2 najlepsze). Wybieraj odpowiedzi tak, jak naprawdę byś zrobił. Za bezpieczny wybór od razu dostajesz 1 pkt, po cofnięciu 0,5 pkt.</p>
   <div className="sch-tabs" role="group" aria-label="Wybór rozmowy">{S.scenarios.map((x,i)=>{const xs=v.scen?.[x.id];
    return <button key={x.id} className={`sch-tab ${x.id===active?'on':''} ${xs?.done?'done':''}`} aria-pressed={x.id===active} onClick={()=>save({...v,active:x.id})}>
@@ -91,11 +91,11 @@ export default function ScamChat({data,value,onChange}){
     <div className="sch-appbar"><span className="sch-app"><b>{sc.app.name}</b><span className="sch-badge">symulacja</span></span><small>{sc.app.sub}</small></div>
     <div className="sch-contact"><span className="sch-ava big" aria-hidden="true">{sc.contact.initials}</span><span><b>{sc.contact.name}</b><small>{sc.contact.note}</small></span></div>
     {!st?<div className="sch-start"><p>{sc.setup}</p><button className="btn" onClick={()=>open(sc.id)}><Icon name="mail" size={18}/>Zacznij rozmowę</button></div>:<>
-     <ol className="sch-log" ref={logRef} tabIndex={0} role="log" aria-label={`Rozmowa: ${sc.contact.name}`}>
+     <div className="sch-log" ref={logRef} tabIndex={0} role="log" aria-label={`Rozmowa: ${sc.contact.name}`}><ol className="sch-list">
       <li className="sch-row note"><p className="sch-setup">{sc.setup}</p></li>
       {items.slice(0,n).map(m=><Bubble key={m.key} m={m} sc={sc}/>)}
       {typing&&<li className="sch-row them" aria-hidden="true"><span className="sch-ava">{sc.contact.initials}</span><p className="sch-bubble sch-typing"><span/><span/><span/></p></li>}
-     </ol>
+     </ol></div>
      <div className="sch-compose">
       {!ready?<p className="sch-wait" role="status">{typing?`${sc.contact.name} pisze…`:'…'}</p>
       :st.fail?<Outcome sc={sc} st={st} onUndo={back} headRef={outRef}/>

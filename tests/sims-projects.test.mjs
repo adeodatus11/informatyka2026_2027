@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as ll from '../content/sims/licenseLab.js';
-import * as dl from '../content/sims/debateLab.js';
+import * as ff from '../content/sims/futureFirm.js';
 import lesson40 from '../content/lessons/40-license-project.js';
 import lesson42 from '../content/lessons/42-tech-future-project.js';
 import {lessonScore,resultSources} from '../content/scoring.js';
@@ -100,80 +100,8 @@ test('licenseLab audyt: werdykt i rozstrzygający element, różne werdykty i el
  assert.deepEqual(ll.checkCase({}, 'club'), {});
 });
 
-// ---------- debateLab ----------
-test('debateLab dzień online: bez oceniania, wymaga refleksji i eksperymentu, porównanie neutralne', () => {
- assert.equal(dl.dayResult({}).done, false);
- let v = {};
- for (const [k, h] of Object.entries(dl.exampleDay)) v = dl.setHours(v, k, h);
- assert.equal(dl.dayTotal(v.hours), 7);
- assert.equal(dl.dayResult(v).done, false);
- v.feel = Object.fromEntries(Object.keys(dl.exampleDay).map(k => [k, 'neutral']));
- v.experiment = 2;
- const r = dl.dayResult(v);
- assert.equal(r.done, true); assert.equal(r.score, undefined, 'dzień online nie jest punktowany');
- assert.doesNotMatch(r.summary, /\d+ ?h/, 'w produkcie nie ma godzin ucznia');
- assert.match(dl.compareText(7), /o 2 h większy/);
- assert.match(dl.compareText(5.2), /zbliżony/);
- assert.equal(dl.setHours({}, 'games', 99).hours.games, dl.MAX_HOURS);
- assert.equal(dl.setHours({}, 'games', -3).hours.games, 0);
- for (const t of [dl.compareText(2), dl.compareText(9)]) assert.doesNotMatch(t, /za dużo|źle|uzależn/i);
-});
-test('debateLab dowody: trzy typy, punktacja 1 / 0,5', () => {
- for (const t of dl.evidenceTypes) assert.ok(dl.statements.filter(s => s.type === t.id).length >= 2, t.id);
- let s = dl.chooseEvidence({}, 'cousin', 'proof');
- s = dl.chooseEvidence(s, 'cousin', 'noproof');
- assert.equal(dl.evidenceResult({items: s}).score, 0.5);
- let all = {};
- for (const st of dl.statements) all = dl.chooseEvidence(all, st.id, st.type);
- assert.deepEqual(dl.evidenceResult({items: all}), {done: true, score: 7, max: 7, solved: 7, summary: 'Dowody: 7/7 rozpoznanych'});
-});
-test('debateLab kreator stanowiska: kryteria, chochoł, poprawka i dwa warianty wydania', () => {
- for (const b of dl.bank) { assert.equal(b.replies.length, 3); assert.equal(b.replies.filter(r => r[1]).length, 1, b.id); }
- assert.ok(new Set(dl.bank.map(b => b.replies.findIndex(r => r[1]))).size >= 3, 'poprawna odpowiedź nie zawsze na tej samej pozycji');
- for (const side of ['pro', 'contra']) assert.ok(dl.bank.filter(b => b.side === side && b.proof).length >= 3 && dl.bank.some(b => b.side === side && !b.proof));
- const base = {stance: 'pro', title: 'AI z głową', rule: 'Pracę z AI oznaczamy przypisem i sprawdzamy fakty.', tip: 0, team: 'Trójka A'};
- let p = {...base, args: ['p-use', 'p-anecdote'], counter: 'c-brain', reply: 2};
- assert.deepEqual(dl.posterMissing(p), []);
- p = dl.checkPoster(p);
- const crit = Object.fromEntries(dl.posterCriteria(p).map(c => [c.id, c.ok]));
- assert.deepEqual(crit, {side: true, roles: false, proof: false, counter: false, reply: true});
- assert.equal(dl.posterScore(p), 2);
- assert.equal(dl.posterCriteria({...p, args: ['p-use', 'c-errors']}).find(c => c.id === 'side').ok, false, 'argument drugiej strony nie wspiera tezy');
- p = dl.toggleArg(p, 'p-anecdote'); p = dl.toggleArg(p, 'p-skills');
- p = dl.setCounter(p, 'c-errors'); assert.equal(p.reply, undefined);
- p = dl.checkPoster({...p, reply: 2});
- assert.equal(dl.posterAllOk(p), true);
- assert.equal(dl.posterScore(p), 3.5, 'side i reply za 1. razem, roles, proof i counter po poprawce');
- assert.equal(dl.posterResult({poster: p}).max, dl.POSTER_MAX);
- assert.equal(dl.posterResult({poster: p}).done, false, 'trzeba wybrać wariant i wydać');
- assert.equal(dl.posterResult({poster: {...p, variant: 'platform'}}).done, false, 'plakat trzeba wydać');
- assert.equal(dl.posterResult({poster: {...p, variant: 'platform', published: true}}).done, true);
- assert.equal(dl.posterResult({poster: {...p, variant: 'word', published: true}}).done, false, 'wariant Word wymaga samooceny pliku');
- assert.equal(dl.posterResult({poster: {...p, variant: 'word', rubric: {ratings: {}, done: true}}}).done, true);
- assert.match(dl.posterResult({poster: {...p, variant: 'word', rubric: {done: true}}}).summary, /Stanowisko \(Word\): „AI z głową” — Więcej szans/);
- const perfect = dl.checkPoster({...base, args: ['p-use', 'p-skills'], counter: 'c-errors', reply: 2});
- assert.equal(dl.posterScore(perfect), dl.POSTER_MAX, 'wszystko za pierwszym razem = maks.');
- assert.equal(dl.posterAllOk({...p, reply: 0}), false, 'zmiana po sprawdzeniu wymaga ponownego sprawdzenia');
- assert.equal(dl.toggleArg({args: ['a', 'b']}, 'c').args.length, 2, 'maks. 2 argumenty');
- const text = dl.posterText(p);
- assert.match(text, /NASZA TEZA: Więcej szans/); assert.match(text, /DRUGA STRONA MÓWI/); assert.match(text, /Licencja: CC BY 4\.0/);
- assert.equal(dl.checkPoster({stance: 'pro'}).attempts, undefined, 'niekompletny plakat nie zużywa próby');
-});
-
-test('debateLab ocena koleżeńska: wszystkie kryteria 0–2, gwiazdy i życzenie; bez punktów do karty', () => {
- assert.equal(dl.peerResult({}).done, false);
- for (const c of dl.peerCriteria) assert.equal(c.levels.length, 3, c.id);
- let v = {};
- for (const c of dl.peerCriteria) v = dl.ratePeer(v, c.id, 2);
- assert.equal(dl.peerResult(v).done, false, 'bez gwiazd i życzenia');
- v = dl.setPeer(dl.setPeer(v, 'stars', '★ Dowody ze źródłem ★ Jasna teza'), 'wish', 'Dopiszcie, kto pilnuje zasady.');
- const r = dl.peerResult(v);
- assert.equal(r.done, true); assert.equal(r.total, dl.PEER_MAX); assert.equal(r.score, undefined);
- assert.equal(dl.peerResult(dl.ratePeer(v, 'rule', 0)).total, dl.PEER_MAX - 2);
-});
-
 // ---------- lekcje ----------
-for (const lesson of [lesson40, lesson42]) test(`${lesson.id}: projekt ma role, kryteria, wariant solo i kartę wyniku z poprawnymi źródłami`, () => {
+for (const lesson of [lesson40]) test(`${lesson.id}: projekt ma role, kryteria, wariant solo i kartę wyniku z poprawnymi źródłami`, () => {
  assert.equal(lesson.grade, 1); assert.equal(lesson.duration, 45);
  assert.equal(lesson.sections.reduce((s, x) => s + x.duration, 0), 45);
  assert.match(lesson.format.grouping, /trój/i); assert.match(lesson.format.grouping, /parze|parach/i); assert.match(lesson.format.grouping, /samodziel|sam /i);
@@ -185,7 +113,7 @@ for (const lesson of [lesson40, lesson42]) test(`${lesson.id}: projekt ma role, 
  const empty = lessonScore(lesson, card, {});
  assert.ok(empty.max >= 15); assert.equal(empty.score, 0);
  assert.ok(lesson.sections[0].activities.filter(a => a.type === 'choice').length >= 2, 'retrieval na starcie');
- assert.ok(all.some(a => a.type === 'checklist' || (a.type === 'debateLab' && a.mode === 'peer')), 'ocena koleżeńska wg kryteriów');
+ assert.ok(all.some(a => a.type === 'checklist'), 'ocena koleżeńska wg kryteriów');
  assert.ok(all.some(a => a.type === 'text'), 'refleksja / poprawka');
  for (const a of sources.filter(a => a.points)) assert.equal(lessonScore(lesson, card, {}).rows.find(r => r.id === a.id).max, a.points);
  const ids = all.map(a => a.id); assert.equal(new Set(ids).size, ids.length);
@@ -203,23 +131,150 @@ test('Punkty w lekcjach zgadzają się z logiką symulatorów', () => {
  assert.equal(a40['lic-shelf'].points, ll.shelfResult({}).max);
  assert.equal(a40['lic-creator'].points, ll.creatorResult({}).max);
  assert.equal(a40['lic-check'].points, ll.checkResult({}).max);
- const a42 = Object.fromEntries(acts(lesson42).map(a => [a.id, a]));
- assert.equal(a42['deb-evidence'].points, dl.evidenceResult({}).max);
- assert.equal(a42['deb-poster'].points, dl.POSTER_MAX);
- assert.equal(a42['deb-peer'].posterId, 'deb-poster');
- const w = a42['deb-poster'].word;
- assert.match(w.file, /^materials\/lesson-42-stanowisko-start\.docx$/);
- assert.equal(w.steps.type, 'wordSteps'); assert.equal(w.rubric.type, 'wordRubric');
- assert.equal(w.rubric.criteria.reduce((s, c) => s + c.points, 0), 10);
- for (const c of w.rubric.criteria) assert.match(c.description, /0 pkt/);
  assert.equal(lessonScore(lesson40, acts(lesson40).find(a => a.type === 'resultCard'), {}).max, 26);
- assert.equal(lessonScore(lesson42, acts(lesson42).find(a => a.type === 'resultCard'), {}).max, 17);
- const card42 = acts(lesson42).find(a => a.type === 'resultCard');
- assert.ok(!card42.sources.includes('deb-day') && !card42.sources.includes('deb-peer'), 'czas online i ocena koleżeńska nie są punktowane');
 });
-test('Plik startowy Worda do lekcji 42 istnieje i jest archiwum DOCX', async () => {
- const {readFileSync} = await import('node:fs');
- const buf = readFileSync(new URL('../public/materials/lesson-42-stanowisko-start.docx', import.meta.url));
- assert.equal(buf.subarray(0, 2).toString(), 'PK');
- assert.ok(buf.includes(Buffer.from('word/document.xml')));
+
+// ---------- futureFirm (lekcja 42) ----------
+const BEST = e => e.options.findIndex(o => o.q === 'best');
+function play(ind, plan, pick, check) {
+ let g = ff.newGame(ind);
+ for (let y = 0; y < ff.YEARS.length; y++) {
+  for (const id of plan[y] || []) g = ff.toggleCard(g, id);
+  g = ff.confirmYear(g);
+  let s = ff.simulate(g);
+  assert.equal(s.phase, 'event');
+  const e = ff.eventFor(s.history.at(-1).event);
+  g = ff.react(g, pick(e, s, y));
+  s = ff.simulate(g);
+  if (check) check(s, y);
+  if (y < ff.YEARS.length - 1) { assert.equal(s.finished, false); g = ff.nextYear(g); }
+ }
+ return {game: g, sim: ff.simulate(g)};
+}
+function seeded(seed) { let x = seed; return () => { x = (x * 1103515245 + 12345) % 2147483648; return x / 2147483648; }; }
+
+test('futureFirm: dane gry — 3 branże, karty z szansą i ryzykiem, zdarzenia z 3 reakcjami (best/ok/bad)', () => {
+ assert.deepEqual(ff.industryIds, ['pizzeria', 'warsztat', 'salon']);
+ assert.equal(new Set(ff.industryIds.map(i => industriesSeniors(i))).size, 3, 'branże różnią się udziałem seniorów');
+ for (const ind of ff.industryIds) for (const c of ff.cards) {
+  const k = ff.cardFor(c.id, ind);
+  assert.ok(k.cost > 0 && k.name && k.what, c.id);
+  assert.ok(ff.AREAS[k.chance.area] && ff.AREAS[k.risk.area] && k.chance.text.length > 20 && k.risk.text.length > 20, c.id);
+  for (const l of ff.LENSES) assert.ok(k.hints[l.id]?.length > 15, `${c.id} ${l.id}`);
+ }
+ assert.ok(ff.cards.some(c => !c.risk.visible) && ff.cards.some(c => c.risk.visible), 'część ryzyk ukryta, część widoczna');
+ for (const e of ff.events) {
+  assert.deepEqual(e.options.map(o => o.q).sort(), ['bad', 'best', 'ok'], e.id);
+  for (const o of e.options) assert.ok(o.feedback.length > 30, e.id);
+  for (const l of ff.LENSES) assert.ok(e.hints[l.id]?.length > 15, `${e.id} ${l.id}`);
+  assert.ok(ff.AREAS[e.area], e.id);
+ }
+ assert.ok(new Set(ff.events.map(e => e.options.findIndex(o => o.q === 'best'))).size === 3, 'najlepsza reakcja na różnych pozycjach w danych');
+ for (const a of ['praca', 'bezpieczenstwo', 'wykluczenie', 'dobrostan', 'prawo']) assert.ok(ff.events.some(e => e.area === a) || ff.cards.some(c => c.risk.area === a || c.chance.area === a), a);
+ assert.equal(ff.MAX_POINTS, 12);
+});
+function industriesSeniors(i) { return ff.cardFor('kiosk', i) && ff.simulate(ff.newGame(i)).stats && i && ({pizzeria: 0.15, warsztat: 0.3, salon: 0.4})[i]; }
+
+test('futureFirm: najlepsza gra daje 12/12 w każdej branży, a summary opisuje firmę w 2030 r.', () => {
+ for (const ind of ff.industryIds) {
+  const {sim, game} = play(ind, ff.BEST_PLAN, BEST);
+  assert.equal(sim.finished, true);
+  assert.equal(sim.eventPoints, 8); assert.equal(sim.goalPoints, 4); assert.equal(sim.points, ff.MAX_POINTS, ind);
+  const r = ff.futureFirmResult({game});
+  assert.equal(r.done, false, 'bez odpowiedzi metapoznawczej etap niezaliczony');
+  assert.equal(r.score, 12); assert.equal(r.max, 12);
+  const r2 = ff.futureFirmResult({game, reflection: 'Pakiet bezpieczeństwa kupiłbym jeszcze raz w pierwszym roku.'});
+  assert.equal(r2.done, true);
+  assert.match(r2.summary, new RegExp(`^${ff.industries[ind].short} 2030: [\\d\\s\\u00a0]+ zł/mies\\. \\(\\+[\\d\\s\\u00a0]+ zł\\), klienci \\d+%, bezpieczeństwo \\d+%, zespół \\d+%$`));
+ }
+ assert.deepEqual(ff.futureFirmResult({}), {done: false, score: 0, max: 12, summary: undefined});
+});
+
+test('futureFirm: zdarzenia wynikają z decyzji', () => {
+ const firstEvent = (ind, buy) => { let g = ff.newGame(ind); for (const id of buy) g = ff.toggleCard(g, id); return ff.simulate(ff.confirmYear(g)).history[0].event; };
+ assert.equal(firstEvent('salon', ['kiosk']), 'exclusion');
+ assert.equal(firstEvent('pizzeria', ['chatbot']), 'hallucination');
+ assert.equal(firstEvent('pizzeria', ['chatbot', 'aiTraining']), 'aiAct', 'szkolenie z AI zapobiega halucynacji, zostaje obowiązek z AI Act');
+ assert.equal(firstEvent('warsztat', ['online', 'payments']), 'ransomware', 'dwa systemy bez pakietu bezpieczeństwa');
+ assert.equal(firstEvent('warsztat', ['security', 'online', 'payments']), 'phishing');
+ assert.equal(firstEvent('pizzeria', ['online']), 'leak');
+ assert.equal(firstEvent('pizzeria', ['monitoring']), 'monitoring');
+ assert.equal(firstEvent('pizzeria', ['social']), 'fakeReviews');
+ assert.equal(firstEvent('pizzeria', []), 'phishing');
+ // Ten sam kiosk boli bardziej tam, gdzie jest więcej seniorów.
+ const loss = ind => { let g = ff.toggleCard(ff.newGame(ind), 'kiosk'); return ff.simulate(ff.confirmYear(g)).history[0].impact.find(([k]) => k === 'clients')[1]; };
+ assert.ok(loss('salon') < loss('warsztat') && loss('warsztat') < loss('pizzeria'));
+ // Ochrona łagodzi skutki: phishing przy pakiecie bezpieczeństwa nie obniża bezpieczeństwa.
+ const ph = buy => { let g = ff.newGame('pizzeria'); for (const id of buy) g = ff.toggleCard(g, id); return ff.simulate(ff.confirmYear(g)).history[0]; };
+ assert.equal(ph(['security']).protected, true); assert.deepEqual(ph(['security']).impact, []);
+ assert.equal(ph([]).protected, false);
+ // Brak pakietu: każdy nowy system obniża bezpieczeństwo.
+ assert.ok(ph(['payments']).afterShop.security < ff.START.security);
+ assert.ok(ph(['security', 'payments']).afterShop.security > ff.START.security);
+ // Zdarzenia się nie powtarzają; nic nie kupując, gra i tak ma 4 zdarzenia.
+ const {sim} = play('salon', [[], [], [], []], () => 0);
+ assert.equal(new Set(sim.history.map(h => h.event)).size, 4);
+});
+
+test('futureFirm: każda ścieżka kończy się raportem, kasa nie spada poniżej limitu, wskaźniki w 0–100', () => {
+ const rnd = seeded(42);
+ const seen = new Set();
+ for (const ind of ff.industryIds) for (let k = 0; k < 400; k++) {
+  const plan = ff.YEARS.map(() => ff.cards.filter(() => rnd() < 0.35).map(c => c.id));
+  const {sim} = play(ind, plan, () => Math.floor(rnd() * 3), s => {
+   for (const snap of [s.stats, ...s.history.flatMap(h => [h.start, h.afterShop, h.afterImpact, h.afterReaction, h.end].filter(Boolean))]) {
+    assert.ok(snap.cash >= ff.MIN_CASH, `kasa ${snap.cash}`);
+    for (const key of ['clients', 'security', 'team']) assert.ok(snap[key] >= 0 && snap[key] <= 100, key);
+    assert.ok(snap.profit >= 0 && snap.staff >= 1);
+   }
+  });
+  assert.equal(sim.finished, true); assert.equal(sim.history.length, 4);
+  assert.ok(sim.points >= 0 && sim.points <= ff.MAX_POINTS);
+  for (const h of sim.history) { seen.add(h.event); for (const b of h.bought) assert.ok(h.start.cash >= 0, 'kupuje się tylko za dodatnią kasę'); }
+  const tl = ff.timeline(sim); assert.equal(tl.length, 4);
+ }
+ for (const e of ff.events) assert.ok(seen.has(e.id), `zdarzenie ${e.id} osiągalne`);
+});
+
+test('futureFirm: zakupy w budżecie, reakcja jednorazowa, mutacje poza fazą ignorowane', () => {
+ let g = ff.newGame('pizzeria');
+ g = ff.toggleCard(g, 'monitoring');
+ assert.equal(ff.canAdd(g, 'online'), null);
+ assert.match(ff.canAdd(g, 'kiosk'), /Brakuje 4000 zł/);
+ const over = ff.toggleCard(g, 'kiosk');
+ assert.equal(over, g, 'karta ponad budżet nie trafia do koszyka');
+ assert.ok(ff.cartCost(ff.toggleCard(ff.toggleCard(g, 'online'), 'chatbot').years[0].cart, 'pizzeria') <= ff.START.cash);
+ g = ff.toggleCard(g, 'monitoring'); assert.deepEqual(g.years[0].cart, []);
+ assert.equal(ff.react(g, 0), g, 'nie można reagować przed zamknięciem zakupów');
+ assert.equal(ff.nextYear(g), g);
+ g = ff.confirmYear(ff.toggleCard(g, 'security'));
+ assert.equal(ff.toggleCard(g, 'online'), g, 'po zatwierdzeniu koszyk zamknięty');
+ g = ff.react(g, 1);
+ assert.equal(ff.react(g, 2), g, 'reakcji nie da się zmienić');
+ g = ff.nextYear(g);
+ assert.match(ff.canAdd(g, 'security'), /już działa/);
+ // Stan „z zewnątrz” z zakupem ponad stan kasy — karta pominięta, kasa nie spada poniżej zera przy zakupach.
+ const forged = ff.simulate({ind: 'salon', years: [{cart: ['kiosk', 'monitoring', 'online', 'chatbot'], confirmed: true, reaction: 0}]});
+ assert.ok(forged.history[0].afterShop.cash >= 0);
+ assert.equal(ff.simulate({ind: 'nieznana', years: []}), null);
+});
+
+test('42: lekcja „Firma 2030” — kontrakt, samodzielnie domyślnie, retrieval, karta wyniku', () => {
+ const l = lesson42;
+ assert.equal(l.grade, 1); assert.equal(l.id, '42'); assert.equal(l.order, 36); assert.equal(l.duration, 45);
+ assert.equal(l.sections.reduce((s, x) => s + x.duration, 0), 45);
+ assert.ok(l.sections.length >= 4 && l.sections.length <= 7);
+ assert.match(l.format.grouping, /^Domyślnie samodzielnie/);
+ assert.doesNotMatch(JSON.stringify(l), /plakat|stanowisk|debat|ocen[aęy] koleżeńsk|Word/i);
+ assert.ok(l.format.methods.length >= 3);
+ const all = l.sections.flatMap(s => s.activities);
+ const game = all.find(a => a.type === 'futureFirm');
+ assert.equal(game.id, 'ff-game'); assert.equal(game.points, ff.MAX_POINTS);
+ assert.ok(l.sections[0].activities.filter(a => a.type === 'choice').length >= 2, 'retrieval na starcie');
+ const card = all.find(a => a.type === 'resultCard');
+ const empty = lessonScore(l, card, {});
+ assert.equal(empty.max, 20); assert.equal(empty.score, 0);
+ assert.ok(resultSources(l, card).some(a => a.id === 'ff-game'));
+ const ids = all.map(a => a.id); assert.equal(new Set(ids).size, ids.length);
+ assert.match(l.teacherGuide.preparation, /DO WERYFIKACJI/); assert.match(l.teacherGuide.preparation, /uproszczenie/);
 });

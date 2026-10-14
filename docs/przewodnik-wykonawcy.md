@@ -73,5 +73,4 @@ Raport końcowy (krótko): lista plików, typy symulatorów, co zweryfikowano, e
 
 ## Uwagi z budowy lekcji 35–43
 - Podgląd strony ucznia (`htmlLab`) to `iframe sandbox=""` w zamkniętym shadow root — axe zawiesza się na ramce bez skryptów, a treści ucznia (czasem celowo zepsutej) i tak nie ocenia. Przy nowych ramkach podglądu postępuj tak samo.
-- Opcjonalny wariant w Wordzie w lekcji z innym produktem: `wordRubric` blokuje ukończenie etapu, więc w lekcji 42 `WordSteps`/`WordRubric` są renderowane wewnątrz symulatora (`debateLab`, `data.word`), tylko po wyborze Worda.
 - `htmlLab` (tryby `free`, `tasks`, `fix`, `serp`, `theme`, `show`) nadaje się dla klasy 3 (tematy 31–32, strona WWW).

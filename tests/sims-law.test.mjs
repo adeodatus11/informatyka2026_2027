@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import * as lc from '../content/sims/lawCourt.js';
 import * as pm from '../content/sims/proMail.js';
 import * as sc from '../content/sims/scamComic.js';
+import * as ch from '../content/sims/scamChat.js';
 import lesson39 from '../content/lessons/39-tech-law.js';
 import lesson41 from '../content/lessons/41-online-communication.js';
 import lesson43 from '../content/lessons/43-computer-crime-project.js';
@@ -144,75 +145,87 @@ test('scamComic domeny: 5 adresów, zielone i czerwone, jedna świeża domena po
  assert.equal(sc.domainsResult({}).max, 5);
 });
 
-// ---------- scamComic: kreator ----------
-function solveComic(id, {wrongOrder = false, wrongStop = false} = {}) {
- const story = sc.scenarioById(id);
- let c = sc.chooseScenario({}, id);
- if (wrongOrder) {
-  for (const p of [...story.panels].reverse()) c = sc.togglePanel(c, p.id);
-  c = sc.checkOrder(c);
-  assert.equal(c.orderCheck.ok, false);
-  c = sc.resetOrder(c);
+// ---------- scamChat: rozmowa z oszustem ----------
+const safeIdx = node => node.options.findIndex(o => o.safe);
+const riskyIdx = node => node.options.findIndex(o => !o.safe);
+function playScenario(id, {undoAt = []} = {}) {
+ const sc = ch.scenarioById(id);
+ let v = ch.openScenario({}, id), st = v.scen[id], step = 0;
+ while (!st.done) {
+  const node = ch.currentNode(sc, st);
+  if (undoAt.includes(step)) {
+   st = ch.choose(sc, st, riskyIdx(node));
+   assert.ok(st.fail, `${id}: ryzykowna decyzja kończy się ekranem skutków`);
+   assert.equal(ch.choose(sc, st, safeIdx(node)), st, 'bez cofnięcia nie da się wybrać dalej');
+   st = ch.undo(st);
+   assert.equal(st.fail, null);
+   assert.equal(ch.choose(sc, st, st.res[st.node].wrong[0]), st, 'sprawdzonej ryzykownej odpowiedzi nie da się wybrać ponownie');
+  }
+  st = ch.choose(sc, st, safeIdx(node));
+  step++;
+  assert.ok(step <= ch.DECISIONS, 'za dużo decyzji');
  }
- for (const p of story.panels) c = sc.togglePanel(c, p.id);
- c = sc.checkOrder(c);
- assert.equal(c.orderCheck.ok, true);
- for (const p of story.panels.filter(p => p.stop)) c = sc.toggleStop(c, p.id);
- if (wrongStop) { c = sc.toggleStop(c, story.panels.at(-1).id); c = sc.checkStops(c); assert.equal(sc.stopsSolved(c), false); assert.equal(sc.comicResult(c).score, 1 + 2.5); c = sc.toggleStop(c, story.panels.at(-1).id); }
- c = sc.checkStops(c);
- assert.ok(sc.stopsSolved(c), id);
- for (const p of story.panels.filter(p => p.stop)) c = sc.setBubble(c, p.id, 'Nie podaję kodu, dzwonię do osoby.');
- for (const r of sc.reactions.filter(r => r.ok)) c = sc.toggleReaction(c, r.id);
- c = sc.checkReactions(c);
- return {...c, title: 'Nie dawaj się nabrać'};
+ return st;
 }
-test('scamComic kreator: każda historia ma 6 kadrów, 3–4 punkty przerwania i skutek bez STOP', () => {
- assert.equal(sc.scenarios.length, 3);
- for (const s of sc.scenarios) {
-  assert.equal(s.panels.length, 6);
-  const stops = s.panels.filter(p => p.stop).length;
-  assert.ok(stops >= 3 && stops <= 4, s.id);
-  assert.equal(s.panels.at(-1).stop, false, 'ostatni kadr to skutek');
-  for (const p of s.panels) assert.ok(p.why.length > 20, p.id);
-  assert.match(s.law, /art\. \d+/);
-  const r = sc.comicResult(solveComic(s.id));
-  assert.deepEqual([r.done, r.score, r.max], [true, 7, 7], s.id);
+test('scamChat: 3 rozmowy, każda ścieżka ma 5 decyzji po 3 odpowiedzi, bezpieczne i ryzykowne z opisem skutków', () => {
+ assert.equal(ch.scenarios.length, 3);
+ assert.equal(ch.chatMax, 10);
+ for (const sc of ch.scenarios) {
+  const ps = ch.paths(sc);
+  assert.ok(ps.length >= 1);
+  for (const p of ps) assert.equal(p.length, ch.DECISIONS, `${sc.id}: równa liczba decyzji na każdej ścieżce`);
+  for (const [nid, n] of Object.entries(sc.nodes)) {
+   assert.equal(n.options.length, 3, nid);
+   assert.ok(n.options.some(o => o.safe) && n.options.some(o => !o.safe), `${nid}: jest wybór bezpieczny i ryzykowny`);
+   assert.ok(n.flag.name.length > 5 && n.flag.text.length > 40, `${nid}: czerwona flaga`);
+   assert.ok(n.msgs.length >= 1, `${nid}: wiadomość`);
+   for (const o of n.options.filter(o => !o.safe)) for (const k of ['loss', 'did', 'missed']) assert.ok(o.end?.[k]?.length > 2, `${nid}: skutek ${k}`);
+   for (const o of n.options.filter(o => o.next)) assert.ok(sc.nodes[o.next], `${nid}: next`);
+  }
+  for (const k of ['lastChance', 'law', 'setup']) assert.ok(sc[k].length > 30, `${sc.id}.${k}`);
+  assert.match(sc.law, /art\. \d+ kk/);
+ }
+ // rozgałęzienie: w co najmniej 2 rozmowach dwie różne bezpieczne odpowiedzi prowadzą do różnych reakcji oszusta
+ const branching = ch.scenarios.filter(sc => Object.values(sc.nodes).some(n => n.options.filter(o => o.safe).length === 2));
+ assert.ok(branching.length >= 2);
+});
+test('scamChat: każdą rozmowę da się przejść, pełne punkty za pierwszy wybór, połowa po cofnięciu', () => {
+ for (const sc of ch.scenarios) {
+  const st = playScenario(sc.id);
+  assert.deepEqual(ch.scenarioScore(sc, st), {score: 5, max: 5, flags: 5, resolved: 5, done: true});
+  const st2 = playScenario(sc.id, {undoAt: [0, 3]});
+  const r = ch.scenarioScore(sc, st2);
+  assert.equal(r.score, 4); assert.equal(r.flags, 3);
+  const items = ch.transcript(sc, st2);
+  assert.equal(items.filter(i => i.who === 'flag').length, 5);
+  assert.equal(items.filter(i => i.who === 'flag' && !i.first).length, 2);
  }
 });
-test('scamComic kreator: błędy obniżają punkty, plakat wymaga dymków i tytułu', () => {
- const c = solveComic('olx', {wrongOrder: true, wrongStop: true});
- const r = sc.comicResult(c);
- assert.equal(r.done, true);
- assert.equal(r.score, 1 + 2.5 + 2);
- assert.equal(sc.comicResult({...c, title: 'abc'}).done, false);
- const story = sc.scenarioById('olx');
- assert.equal(sc.comicResult(sc.setBubble(c, story.panels.find(p => p.stop).id, 'uważaj')).done, false);
- let x = sc.chooseScenario({}, 'blik');
- assert.equal(sc.toggleStop(x, 'b2'), x, 'STOP dopiero po kolejności');
- let rr = sc.toggleReaction({}, 'delete');
- rr = sc.checkReactions(rr);
- assert.equal(rr.reactCheck.ok, false);
- assert.deepEqual(rr.reactCheck.wrong, ['delete']);
- assert.deepEqual(sc.comicResult({}), {done: false, score: 0, max: 7, summary: undefined});
- const html = sc.posterHtml(sc.setBubble({...c, title: '<b>x</b>'}, 'o2', '<script>alert(1)</script>'));
- assert.ok(!html.includes('<script>alert'), 'escapowanie tekstu ucznia');
- assert.match(html, /&lt;b&gt;x&lt;\/b&gt;/);
-});
-test('scamComic ocena koleżeńska: komplet kryteriów, wskazówka i poprawka', () => {
- let p = {};
- for (const c of sc.peerCriteria) p = sc.ratePeer(p, c.id, 2);
- assert.equal(sc.peerResult(p).done, false);
- p = {...p, tip: 'Dymek w kadrze 3: napiszcie, co zrobić.'};
- assert.equal(sc.peerResult(p).done, false);
- p = {...p, fixed: true};
- const r = sc.peerResult(p);
- assert.equal(r.done, true); assert.equal(r.total, 8);
- assert.equal(r.max, undefined, 'ocena koleżeńska nie trafia do punktów');
- for (const c of sc.peerCriteria) assert.equal(c.levels.length, 3);
+test('scamChat: wynik ma stałe max 10, liczą się 2 najlepsze rozmowy, trzecia to bonus', () => {
+ assert.deepEqual(ch.chatResult({}), {done: false, score: 0, max: 10, finished: 0, flagsFound: 0, flagsSeen: 0, flagsTotal: 10, summary: undefined});
+ const sell = playScenario('sell', {undoAt: [1]}), blik = playScenario('blik');
+ let v = {scen: {sell, blik}};
+ let r = ch.chatResult(v);
+ assert.equal(r.done, true); assert.equal(r.score, 9.5); assert.equal(r.max, 10);
+ assert.equal(r.summary, 'Rozmowy z oszustem: 2/2 przerwane, flagi 9/10');
+ const one = ch.chatResult({scen: {blik}});
+ assert.equal(one.done, false); assert.equal(one.score, 5);
+ v = {scen: {sell, blik, shop: playScenario('shop')}};
+ r = ch.chatResult(v);
+ assert.equal(r.score, 10, 'bonus zastępuje słabszą rozmowę');
+ assert.equal(r.flagsTotal, 15);
+ assert.equal(r.max, 10);
+ assert.match(r.summary, /2\/2 przerwane \+ bonus, flagi 14\/15/);
+ // rozmowa w toku też daje punkty na bieżąco
+ const sc = ch.scenarioById('shop');
+ let st = ch.openScenario({}, 'shop').scen.shop;
+ st = ch.choose(sc, st, safeIdx(ch.currentNode(sc, st)));
+ assert.equal(ch.chatResult({scen: {shop: st}}).score, 1);
+ assert.equal(ch.choose(sc, st, 7), st, 'nieistniejąca odpowiedź');
 });
 
 // ---------- lekcje ----------
-for (const [lesson, order, types] of [[lesson39, 33, ['lawCourt']], [lesson41, 35, ['proMail']], [lesson43, 48, ['scamComic', 'reportGuide']]]) {
+for (const [lesson, order, types] of [[lesson39, 33, ['lawCourt']], [lesson41, 35, ['proMail']], [lesson43, 48, ['scamChat', 'scamComic', 'reportGuide']]]) {
  test(`Lekcja ${lesson.id}: klasa 1, kolejność ${order}, 45 min, karta wyniku z punktami`, () => {
   assert.equal(lesson.grade, 1); assert.equal(lesson.order, order); assert.equal(lesson.duration, 45);
   assert.equal(lesson.sections.reduce((s, x) => s + x.duration, 0), 45);
@@ -235,9 +248,22 @@ test('Lekcje 39, 41, 43: różne metody główne i dokładne tytuły z rozkładu
  const first = [lesson39, lesson41, lesson43].map(l => l.format.methods[0].name);
  assert.equal(new Set(first).size, 3);
  const card = lesson43.sections.at(-1).activities.at(-1);
- const all = {domains: sc.domainsResult({judged: Object.fromEntries(sc.domains.map(d => [d.id, {ok: true, tries: 1}]))}), 'scam-project': {modes: {comic: sc.comicResult(solveComic('shop'))}}};
+ const all = {domains: sc.domainsResult({judged: Object.fromEntries(sc.domains.map(d => [d.id, {ok: true, tries: 1}]))}), 'scam-chat': ch.chatResult({scen: {sell: playScenario('sell'), blik: playScenario('blik')}})};
  const r = lessonScore(lesson43, card, all);
- assert.equal(r.score, 12); assert.equal(r.max, 18);
+ assert.equal(r.score, 15); assert.equal(r.max, 23);
+ assert.ok(r.rows.find(x => x.id === 'scam-chat').summary.startsWith('Rozmowy z oszustem: 2/2'));
+});
+test('Lekcja 43: bez plakatu, komiksu i oceny koleżeńskiej; praca samodzielna; czat jako główna część', () => {
+ const acts = lesson43.sections.flatMap(s => s.activities);
+ assert.ok(!acts.some(a => a.type === 'scamComic' && a.mode !== 'domains'));
+ const text = JSON.stringify(lesson43).toLowerCase();
+ for (const w of ['plakat', 'komiks', 'koleżeńsk', 'trójk']) assert.ok(!text.includes(w), w);
+ for (const s of lesson43.sections) assert.ok(['solo', 'class'].includes(s.grouping), s.id);
+ const chat = lesson43.sections.find(s => s.activities.some(a => a.type === 'scamChat'));
+ assert.ok(chat.duration >= 14 && chat.duration === Math.max(...lesson43.sections.map(s => s.duration)));
+ assert.equal(acts.find(a => a.type === 'scamChat').points, ch.chatMax);
+ const seq = acts.find(a => a.id === 'maja-15min');
+ assert.equal(seq.options[seq.correct[0]].startsWith('Telefon do banku'), true);
 });
 test('proMail spot: sprawdzenie zeruje flagę edycji, żeby pokazać informację zwrotną', () => {
  let s = pm.toggleMark({}, 'from');
