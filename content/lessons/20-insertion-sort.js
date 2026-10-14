@@ -53,7 +53,7 @@ print("prawie posortowana ", babelkowe(prawie[:]), "      ", wstawianie(prawie[:
 `;
 
 export default {
- id:'20',grade:2,title:'Programowanie algorytmów porządkowania przez wstawianie',
+ id:'20',grade:2,order:18,title:'Programowanie algorytmów porządkowania przez wstawianie',
  subtitle:'Układasz karty w ręce dokładnie tak, jak ten algorytm. Nauczysz się go pisać — i naprawiać, gdy się psuje.',
  topic:'Sortowanie przez wstawianie w Pythonie',icon:'sort',tags:['while','przesuwanie','karty'],duration:45,
  curriculum:'Informatyka – liceum/technikum · algorytmy porządkowania (sortowanie przez wstawianie), programowanie i testowanie rozwiązań w wybranym języku (Python)',

@@ -48,6 +48,11 @@ Dokument obowiązuje przy tworzeniu każdej nowej lekcji w tym serwisie. Opisuje
   - sprawdzanie koleżeńskie według listy kryteriów.
 - Każda osoba odpowiada też indywidualnie, np. przez test po pracy w grupie.
 - Zadanie zawsze da się wykonać samemu, bo ktoś może nie mieć pary albo klasa może liczyć nieparzystą liczbę osób.
+- **Decyzja nauczyciela (14.10.2026): bez pracy grupowej na siłę.** Domyślnie uczeń pracuje sam; para lub trójka tylko tam, gdzie naturalnie coś daje, i zawsze jako opcja. Nie przydzielamy ról w trójkach i nie organizujemy ocen koleżeńskich „dla metody”.
+
+### 6a. Bez sztucznych produktów
+- **Decyzja nauczyciela (14.10.2026):** nie budujemy na platformie „generatorów” plakatów, komiksów czy stanowisk — to aktywności na siłę. Produkt ma wynikać z zadania: działająca strona, program, decyzje w symulacji, zgłoszenie, odpowiedzi.
+- Jeśli temat naprawdę wymaga plakatu lub grafiki, uczeń robi go w prawdziwym narzędziu: w **Canvie** albo przez **prompt do ChatGPT / innego generatora obrazów** — i przy okazji uczy się, jak napisać dobry prompt (cel, odbiorca, styl, format, poprawki) oraz jak oznaczyć grafikę z AI.
 
 ### 7. Dostępność i sprzęt
 - Lekcja działa na telefonie (szerokość 390 px) i na komputerze, także klawiaturą. Kolor nie jest jedynym nośnikiem informacji.

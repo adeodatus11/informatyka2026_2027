@@ -1,7 +1,7 @@
 import {note, choice} from '../schema.js';
 
 export default {
- id:'10',grade:2,title:'Importowanie danych z innych dokumentów do tabeli bazy danych',
+ id:'10',grade:2,order:11,title:'Importowanie danych z innych dokumentów do tabeli bazy danych',
  subtitle:'12 zgłoszeń z formularza w bazie w minutę zamiast 20 minut przepisywania — i bez literówek.',
  topic:'Importowanie danych z innych dokumentów do tabeli bazy danych',icon:'table',
  tags:['CSV','Kreator importu','Błędy importu'],duration:40,

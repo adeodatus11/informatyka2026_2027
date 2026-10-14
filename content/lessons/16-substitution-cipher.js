@@ -1,7 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
 export default {
- id:'16',grade:2,title:'Szyfrowanie tekstu metodą podstawieniową',
+ id:'16',grade:2,order:14,title:'Szyfrowanie tekstu metodą podstawieniową',
  subtitle:'Zaszyfrujesz wiadomość dla kumpla, złamiesz cudzą bez klucza — i zrozumiesz, czemu Twojego WhatsAppa nie da się złamać tak samo.',
  topic:'Szyfrowanie tekstu metodą podstawieniową',icon:'lock',tags:['Cezar','GA-DE-RY-PO-LU-KI','Częstość liter'],duration:45,
  curriculum:'Podstawa programowa informatyki (liceum/technikum): algorytmy na tekstach — szyfrowanie i deszyfrowanie tekstu metodą podstawieniową (szyfr Cezara); wprowadzenie do lekcji 17 (program szyfrujący w Pythonie)',

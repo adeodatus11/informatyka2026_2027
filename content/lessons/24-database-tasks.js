@@ -3,7 +3,7 @@ import {note, choice} from '../schema.js';
 const order=(n,label,question,criteria)=>({type:'schemaDesigner',id:`sd-z${n}`,stateKey:'schema-lab',mode:`z${n}`,points:4,label,question,criteria});
 
 export default {
- id:'24',grade:3,title:'Tworzenie bazy danych – zadania',
+ id:'24',grade:3,order:7,title:'Tworzenie bazy danych – zadania',
  subtitle:'Trzy zlecenia z prawdziwych firm: wypożyczalnia, warsztat, biblioteka. Projektujesz bazę, a symulator sprawdza ją jak szef na praktykach.',
  topic:'Tworzenie bazy danych – zadania',icon:'table',
  tags:['Projekt','Klucze','Relacje'],duration:45,

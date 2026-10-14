@@ -3,7 +3,7 @@ import {note, choice, reveal} from '../schema.js';
 const lab=(level,label,question,criteria)=>({type:'queryDesigner',id:`zq-l${level}`,stateKey:'query-lab',mode:`l${level}`,level,dataset:'zawody',points:6,label,question,criteria});
 
 export default {
- id:'25',grade:3,title:'Zasady tworzenia kwerend na przykładzie bazy Zawody',
+ id:'25',grade:3,order:8,title:'Zasady tworzenia kwerend na przykładzie bazy Zawody',
  subtitle:'Sędzia prosi o podium, protokół dyskwalifikacji i rekordy. Jedna kwerenda = wynik w sekundę, bez przepisywania.',
  topic:'Zasady tworzenia kwerend na przykładzie bazy Zawody',icon:'funnel',
  tags:['Kryteria','Sortowanie','Ranking'],duration:45,

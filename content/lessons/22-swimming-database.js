@@ -3,7 +3,7 @@ import {note, choice, reveal} from '../schema.js';
 const sim=(mode,id,points,label,question)=>({type:'zawodyExplorer',id,stateKey:'zawody-lab',mode,points,label,question});
 
 export default {
- id:'22',grade:3,title:'Podstawowe pojęcia i przykład bazy danych – obsługa szkolnych zawodów pływackich',
+ id:'22',grade:3,order:5,title:'Podstawowe pojęcia i przykład bazy danych – obsługa szkolnych zawodów pływackich',
  subtitle:'Wyniki zawodów, tabela ligi e-sportowej i dziennik elektroniczny działają tak samo: jedna zmiana w jednym miejscu i wszystko się zgadza.',
  topic:'Podstawowe pojęcia i przykład bazy danych – obsługa szkolnych zawodów pływackich',icon:'swim',
  tags:['Tabela','Rekord','Klucz'],duration:45,

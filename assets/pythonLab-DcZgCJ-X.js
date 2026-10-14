@@ -1,4 +1,4 @@
-import{a as e,n as t,t as n}from"./jsx-runtime-B-hcVAMW.js";import{a as r}from"./index-ODkqTcBd.js";import{n as i,t as a}from"./optionOrder-C62JZWua.js";var o=e(t(),1),s=3e3;String.raw`
+import{a as e,n as t,t as n}from"./jsx-runtime-B-hcVAMW.js";import{a as r}from"./index-BWc9VEIR.js";import{n as i,t as a}from"./optionOrder-B1sIIXjQ.js";var o=e(t(),1),s=3e3;String.raw`
 import sys, json, builtins, traceback, math, ast, time
 
 _PL_FILE = 'twoj_kod.py'

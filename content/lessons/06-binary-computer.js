@@ -1,7 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
 export default {
- id:'06',grade:3,title:'Logiczny model komputera i system dwójkowy',
+ id:'06',grade:3,order:1,title:'Logiczny model komputera i system dwójkowy',
  subtitle:'Prześledź wykonanie programu i odczytaj liczby zapisane zerami i jedynkami.',
  topic:'Logiczny model komputera i system dwójkowy',icon:'cpu',duration:45,
  curriculum:'2024 Informatyka – liceum/technikum · I.2.a (oznaczenie z rozkładu materiału)',

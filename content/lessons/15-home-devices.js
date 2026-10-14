@@ -1,7 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
 export default {
- id:'15',grade:3,title:'Urządzenia cyfrowe w domu i inne',
+ id:'15',grade:3,order:4,title:'Urządzenia cyfrowe w domu i inne',
  subtitle:'Policz, ile naprawdę kosztuje konsola, dekoder i router — i sprawdź, czy kamera w domu nie „nadaje” dla obcych.',
  topic:'Urządzenia cyfrowe w domu i inne',icon:'house',tags:['Smart home','kWh → zł','IoT'],duration:43,
  curriculum:'2024 Informatyka – liceum/technikum · urządzenia cyfrowe w otoczeniu ucznia, Internet rzeczy, bezpieczeństwo i ochrona danych',

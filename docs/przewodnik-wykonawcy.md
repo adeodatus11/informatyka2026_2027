@@ -9,7 +9,8 @@ Każda lekcja pokazuje REALNĄ korzyść dla ucznia (pieniądze, czas, bezpiecze
 ## Twarde ograniczenia
 - 30–45 min w klasie. BRAK pracy domowej (nie planuj nic "przed lekcją"/"w domu").
 - Wszystko w przeglądarce, bez logowania, bez zewnętrznych serwisów, bez żądań sieciowych z platformy. Wyjątki ustalone z nauczycielem: lekcje Worda (Word stacjonarny, `docs/word-desktop.md`), wiersz poleceń Windows 11 Pro (`ping`, `tracert`, `nslookup`, `ipconfig`) — platforma prowadzi krok po kroku, uczeń wpisuje odczyty.
-- Praca w parach/maks. trójkach tylko tam, gdzie spec to przewiduje; zawsze musi dać się wykonać samodzielnie (ktoś nie ma pary).
+- Domyślnie praca samodzielna. Para/trójka tylko jako opcja, gdy naturalnie coś daje — bez ról przydzielanych na siłę i bez ocen koleżeńskich „dla metody” (decyzja nauczyciela 14.10.2026).
+- Bez sztucznych produktów: żadnych „generatorów” plakatów, komiksów, stanowisk na platformie. Jeśli potrzebny plakat/grafika — w Canvie albo przez prompt do ChatGPT z nauką pisania promptu i oznaczania grafik z AI (`docs/profil-ucznia.md`, 6a).
 - Realne usługi publiczne nazywaj prawdziwie (decyzja nauczyciela, lekcja 09: login.gov.pl, IKP, mObywatel, CERT Polska, 8080), ale bez ich logo i kolorystyki; każdy ekran symulatora ma dopisek „symulacja” i fikcyjne dane. Firmy prywatne w symulatorach — fikcyjne nazwy. Przykłady phishingu mogą być podróbkami prawdziwych adresów (`login-gov.pl`) — to cel ćwiczenia.
 - Dane osobowe w zadaniach fikcyjne (PESEL fikcyjny, oznaczony jako przykład).
 - Dostępność: przyciski <button>, etykiety <label>, focus widoczny, działa klawiaturą, kolor nie jest jedynym nośnikiem informacji, PRIORYTET: komputer w pracowni (1366×768 i 1280×720 na projektorze). Telefon to rzadkość: przy 390 px strona nie może mieć poziomego przewijania (sprawdza to test), ale nie dopracowuj układu mobilnego. Komunikaty zwrotne w elemencie z role="status".
