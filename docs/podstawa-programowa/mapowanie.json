@@ -419,16 +419,16 @@
         "IV.1",
         "IV.2",
         "IV.3",
-        "IV.5"
+        "V.3"
       ],
       "activityIds": [
-        "deb-evidence",
-        "deb-jobs",
-        "deb-poster",
-        "deb-peer"
+        "ff-now",
+        "ff-game",
+        "ff-price",
+        "ff-72h"
       ],
-      "evidence": "Projekt-debata w trójkach (debateLab): ocena dowodów, stanowisko z argumentami i kontrargumentem, ocena koleżeńska według rubryki.",
-      "limitations": "Fakty prawne i liczby z raportów oznaczone w panelu nauczyciela do weryfikacji przed lekcją. Produkt ucznia żyje tylko w przeglądarce podczas lekcji (bez publikacji i zapisu na serwerze).",
+      "evidence": "Gra strategiczna Firma 2030 (futureFirm): decyzje o technologiach w małej firmie, reakcje na incydenty (phishing, ransomware, wyciek danych, halucynacja AI, wykluczenie cyfrowe), raport z osią szans i zagrożeń oraz refleksja.",
+      "limitations": "Model gry jest uproszczeniem (liczby orientacyjne). Fakty prawne i dane z raportów oznaczone w panelu nauczyciela do weryfikacji. IV.1 częściowo: praca domyślnie samodzielna.",
       "migraReference": "M1"
     },
     {
