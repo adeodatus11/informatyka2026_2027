@@ -209,6 +209,14 @@ function StepInput({task, step, idx, onAnswer, focusRef}) {
 }
 const answerText = (step, input) => step.kind === 'frac' ? fracText(input.map(Number)) : step.kind === 'num' ? String(input).trim() : step.options[input];
 
+/** „240 − 180 = ?” → „240 − 180 = 60”; inne pytania → „pytanie → odpowiedź”. */
+function logLine(step, ans) {
+  const pr = step.prompt.trim();
+  if (pr.includes('=') && / \?$/.test(pr)) return <>{pr.slice(0, -1)}<b>{ans}</b></>;
+  if (pr.includes('= ?')) { const [x, ...rest] = pr.split('= ?'); return <>{x}= <b>{ans}</b>{rest.join('= ?')}</>; }
+  return <>{pr.replace(/\s*\?$/, '')} <b>→ {ans}</b></>;
+}
+
 function Task({task, st, onAnswer, onNext, hasNext}) {
   const i = st?.step || 0;
   const step = task.steps[i];
@@ -224,7 +232,7 @@ function Task({task, st, onAnswer, onNext, hasNext}) {
         <p className="nl-hud"><span>Krok <b>{Math.min(i + 1, task.steps.length)}</b> / {task.steps.length}</span><span>Pomyłki: <b>{st?.errors || 0}</b></span>
           {st?.done && <span className="nl-hud-pts">+{pts(taskScore(task, st))}/{task.points} pkt</span>}</p>
         {(st?.log || []).length > 0 && <ol className="nl-log" aria-label="Wykonane kroki">
-          {st.log.map(e => <li key={e.i}><span className="nl-log-mark" aria-hidden="true">✓</span><span>{task.steps[e.i].prompt.replace(/\s*\?$/, '')} <b>→ {answerText(task.steps[e.i], e.input)}</b></span></li>)}
+          {st.log.map(e => <li key={e.i}><span className="nl-log-mark" aria-hidden="true">✓</span><span>{logLine(task.steps[e.i], answerText(task.steps[e.i], e.input))}</span></li>)}
         </ol>}
         {step && <StepInput key={`${task.id}-${i}`} task={task} step={step} idx={i} focusRef={focusRef} onAnswer={x => { wantFocus.current = true; onAnswer(x); }}/>}
         {fb && <div className={`nl-fb ${fb.ok ? 'is-ok' : 'is-retry'}`} role="status"><Icon name={fb.ok ? 'check' : 'warning'} size={18}/><span>{fb.ok ? '' : fb.invalid || fb.near ? '' : 'Jeszcze nie. '}{fb.text}</span></div>}

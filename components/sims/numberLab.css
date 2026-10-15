@@ -101,6 +101,7 @@
 .nl-fb.is-ok{background:#e8f5ee;border-color:#9fcdb4;color:#0e4f33}.nl-fb.is-retry{background:#fff6e5;border-color:#e7c77a;color:#5b4210}
 .nl-done,.nl-all{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0;padding:10px 12px;border-radius:9px;background:#fff8e1;border:1px solid #f0b429;font-weight:600}
 .nl-done svg,.nl-all svg{color:#b7791f}
+.nl-all{flex-wrap:nowrap;align-items:flex-start}
 .nl-done .btn{margin-left:auto}
 @media(max-width:900px){.nl-grid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:560px){.nl-body{padding:12px}.nl-bar-row{grid-template-columns:minmax(0,1fr) 40px}.nl-bar-label{grid-column:1/-1}.nl-op{padding-left:0}.nl-tl-row{grid-template-columns:minmax(0,1fr)}.nl-big{font-size:2rem}.nl-ratio span{min-width:70px;font-size:.78rem}.nl-rbar{grid-template-columns:80px minmax(0,1fr) auto}}

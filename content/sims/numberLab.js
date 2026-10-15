@@ -274,9 +274,9 @@ export const MODES = {
   addsub: {
     title: 'Dodawanie i odejmowanie', icon: 'hash',
     tasks: [
-      addTask('a-recipe', [1, 2], [1, 3], '+', {title: 'Naleśniki: mleko + woda', story: 'Przepis: 1/2 szklanki mleka i 1/3 szklanki wody. Ile płynu razem? Czy zmieści się w jednej szklance?'}),
-      addTask('a-pizza', [3, 4], [1, 6], '−', {title: 'Pizza na spółkę', story: 'Zostało 3/4 pizzy. Zjadasz 1/6 całej pizzy. Ile zostaje?'}),
-      addTask('a-train', [1, 4], [1, 12], '+', {title: 'Trening', story: 'Rozgrzewka trwa 1/4 godziny, rozciąganie 1/12 godziny (5 minut). Jaka to razem część godziny?'})
+      addTask('a-recipe', [1, 2], [1, 3], '+', {title: 'Naleśniki: mleko + woda', story: 'Przepis: 1/2 szklanki mleka i 1/3 szklanki wody. Ile płynu razem? Czy zmieści się w jednej szklance?', labels: ['mleko', 'woda']}),
+      addTask('a-pizza', [3, 4], [1, 6], '−', {title: 'Pizza na spółkę', story: 'Zostało 3/4 pizzy. Zjadasz 1/6 całej pizzy. Ile zostaje?', labels: ['zostało', 'zjadasz']}),
+      addTask('a-train', [1, 4], [1, 12], '+', {title: 'Trening', story: 'Rozgrzewka trwa 1/4 godziny, rozciąganie 1/12 godziny (5 minut). Jaka to razem część godziny?', labels: ['rozgrzewka', 'rozciąganie']})
     ],
     summary: () => 'Przepis: 1/2 + 1/3 = 5/6 szklanki'
   },
@@ -354,7 +354,7 @@ function simplifyTask(id, [l, m], {title, story, points = 2}) {
     ]};
 }
 
-function addTask(id, x, y, op, {title, story, points = 2}) {
+function addTask(id, x, y, op, {title, story, points = 2, labels}) {
   const m = lcm(x[1], y[1]), lx = x[0] * (m / x[1]), ly = y[0] * (m / y[1]);
   const raw = op === '+' ? lx + ly : lx - ly;
   const r = simplify(raw, m);
@@ -372,7 +372,7 @@ function addTask(id, x, y, op, {title, story, points = 2}) {
   ];
   if (op === '+' && r[0] > r[1]) steps.push(pick('Wynik jest…', ['większy od 1', 'mniejszy od 1'], 0, 'Porównaj licznik z mianownikiem.'));
   if (id === 'a-recipe') steps.push(pick('Czy mleko z wodą zmieszczą się w jednej szklance?', ['Tak — 5/6 to mniej niż cała szklanka', 'Nie — wyjdzie ponad szklankę', 'Tak, równo pełna'], 0, '5/6 < 6/6.', {after: 'Zostaje 1/6 szklanki wolnego miejsca.'}));
-  return {id, title, story, points, visual: {kind: 'bars', items: [x, y], op: op === '+' ? '+' : '−', result: r, common: m}, steps};
+  return {id, title, story, points, visual: {kind: 'bars', items: [x, y], op: op === '+' ? '+' : '−', result: r, common: m, labels}, steps};
 }
 
 /* ───────────── Stan i punktacja ───────────── */
