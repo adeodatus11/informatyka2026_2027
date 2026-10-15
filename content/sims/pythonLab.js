@@ -374,7 +374,7 @@ export function labResult(data, value = {}) {
   const score = Math.min(max, Math.round((main + qScore) * 10) / 10);
   const done = mainDone && qDone;
   let summary;
-  if (data.summary && done) summary = data.summary.replace('{passed}', v.bestPassed ?? '').replace('{total}', data.tests?.length ?? '');
+  if (data.summary && done) summary = data.summary.replace('{passed}', v.bestPassed ?? '').replace('{total}', (data.tests?.length || 0) + (data.sourceChecks?.length || 0));
   return {done, score, max, summary};
 }
 

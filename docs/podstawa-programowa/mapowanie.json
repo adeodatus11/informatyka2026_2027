@@ -346,9 +346,249 @@
       "migraReference": "M1"
     },
     {
-      "lessonId": "39",
+      "lessonId": "60",
       "grade": 1,
       "numberInGrade": 19,
+      "title": "Sytuacje problemowe i określanie specyfikacji zadania",
+      "file": "content/lessons/60-problem-specification.js",
+      "requirements": [
+        "I.1",
+        "I.3"
+      ],
+      "activityIds": [
+        "sp-parts",
+        "sp-hole2",
+        "sp-bus",
+        "sp-phone",
+        "sp-steps"
+      ],
+      "evidence": "Specyfikacja zadania z sytuacji życiowej: dane, wynik, warunki, luki w specyfikacji, projektowanie przypadków testowych (flowLab).",
+      "limitations": "Lekcja bez kodu.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "61",
+      "grade": 1,
+      "numberInGrade": 20,
+      "title": "Techniki algorytmiczne i programowanie",
+      "file": "content/lessons/61-algorithms-techniques.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.2"
+      ],
+      "activityIds": [
+        "al-kinds",
+        "al-trace",
+        "al-fill",
+        "al-run"
+      ],
+      "evidence": "Algorytm jako lista kroków, schemat blokowy krok po kroku z decyzjami (flowLab), pseudokod, uzupełnianie schematu i pierwsze uruchomienie programu w Pythonie.",
+      "limitations": "Schematy uproszczone.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "62",
+      "grade": 1,
+      "numberInGrade": 21,
+      "title": "Środowisko programistyczne języka Python, stosowanie zmiennych i wyprowadzanie wyników",
+      "file": "content/lessons/62-python-variables-output.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "py-card",
+        "py-cinema",
+        "py-hours",
+        "py-pocket"
+      ],
+      "evidence": "Pierwsze programy w Pythonie: print, zmienne i typy, input()/int(), f-stringi, naprawa błędu typu, kalkulator kieszonkowego z testami.",
+      "limitations": "—",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "63",
+      "grade": 1,
+      "numberInGrade": 22,
+      "title": "Algorytmy z warunkami w języku Python",
+      "file": "content/lessons/63-python-conditions.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "wa-parsons",
+        "wa-pass",
+        "wa-delivery",
+        "wa-ticket"
+      ],
+      "evidence": "Warunki if/else, porównania, and/or w prostych przypadkach; poziomy odblokowywane po kolei z testami.",
+      "limitations": "—",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "64",
+      "grade": 1,
+      "numberInGrade": 23,
+      "title": "Sprawdzanie poprawności danych i zapisywanie rozwiązania problemu w języku Python",
+      "file": "content/lessons/64-python-validation.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "wd-break",
+        "wd-parsons",
+        "wd-product"
+      ],
+      "evidence": "Walidacja danych wejściowych (isdigit, zakresy, puste dane), przypadki brzegowe i kalkulator rabatu odporny na złe dane (7 testów).",
+      "limitations": "Komentarz nagłówkowy to deklaracja ucznia; zapis pliku .py opcjonalnie przez Notatnik.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "65",
+      "grade": 1,
+      "numberInGrade": 24,
+      "title": "Instrukcje warunkowe zagnieżdżone i z klauzulą elif w języku Python",
+      "file": "content/lessons/65-elif-nested-python.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "el-trace",
+        "el-fix-grades",
+        "el-fix-code",
+        "el-club"
+      ],
+      "evidence": "elif i warunki zagnieżdżone: śledzenie, kolejność warunków, naprawa progów ocen i kodów rabatowych, rabat klubowy.",
+      "limitations": "Programy bez funkcji (input + testy danych).",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "66",
+      "grade": 1,
+      "numberInGrade": 25,
+      "title": "Algorytmy iteracyjne w języku Python",
+      "file": "content/lessons/66-loops-python.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "lp-trace",
+        "lp-parsons",
+        "lp-fix-avg",
+        "lp-countdown",
+        "lp-mvp"
+      ],
+      "evidence": "Pętla for z range: sumowanie, licznik, średnia ocen, odliczanie — śledzenie, układanka, naprawa i własny kod z testami.",
+      "limitations": "—",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "67",
+      "grade": 1,
+      "numberInGrade": 26,
+      "title": "Instrukcje iteracyjne zagnieżdżone w języku Python",
+      "file": "content/lessons/67-nested-loops-python.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "nl-trace",
+        "nl-parsons",
+        "nl-fix-tour",
+        "nl-rect",
+        "nl-table"
+      ],
+      "evidence": "Pętle zagnieżdżone: siatki i wzorki, tabliczka mnożenia, terminarz turnieju, liczenie wykonań pętli wewnętrznej.",
+      "limitations": "—",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "68",
+      "grade": 1,
+      "numberInGrade": 27,
+      "title": "Stosowanie instrukcji iteracyjnych for i while w języku Python",
+      "file": "content/lessons/68-for-while-python.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "fw-match",
+        "fw-parsons",
+        "fw-goal",
+        "fw-pin",
+        "fw-game"
+      ],
+      "evidence": "Dobór for/while, pętla nieskończona i jej naprawa, PIN z 3 próbami i break, kalkulator „ile tygodni do celu”, gra „zgadnij liczbę”.",
+      "limitations": "—",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "58",
+      "grade": 1,
+      "numberInGrade": 28,
+      "title": "Sieci komputerowe",
+      "file": "content/lessons/58-computer-networks.js",
+      "requirements": [
+        "III.3",
+        "III.4"
+      ],
+      "activityIds": [
+        "net-address",
+        "net-lanwan",
+        "net-packets",
+        "net-cmd",
+        "net-passport"
+      ],
+      "evidence": "netLab: adresy IP (prywatny/publiczny), LAN/WAN i router jako brama, pakiety (podział, trasy, retransmisja) oraz pomiary w wierszu poleceń Windows (ipconfig, ping, tracert) z „paszportem połączenia”.",
+      "limitations": "Odczyty CMD sprawdzane tylko co do formatu; tryb zastępczy z przykładowymi wynikami, gdy zapora blokuje ping/tracert. Klient–serwer i DNS w 35 i 38.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "59",
+      "grade": 1,
+      "numberInGrade": 29,
+      "title": "Bezpieczeństwo i ochrona danych w komputerach i sieciach komputerowych",
+      "file": "content/lessons/59-security-data-protection.js",
+      "requirements": [
+        "V.1",
+        "V.3"
+      ],
+      "activityIds": [
+        "sec-pass",
+        "sec-audit",
+        "sec-update",
+        "sec-manager",
+        "sec-plan"
+      ],
+      "evidence": "securityCheck: miernik siły hasła z opisanymi założeniami i pokaz k-anonimowości, audyt fikcyjnego telefonu/laptopa (12 luk, poziom ryzyka), aktualizacje, menedżer haseł, osobisty plan 5 kroków.",
+      "limitations": "Plan to samoocena. Phishing i 2FA w 09, oszustwa w 43, kopie zapasowe w 42. Dane NordPass i szacunki czasu łamania do weryfikacji.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "39",
+      "grade": 1,
+      "numberInGrade": 30,
       "title": "Wybrane przepisy prawa dotyczące technologii informacyjno-komunikacyjnych",
       "file": "content/lessons/39-tech-law.js",
       "requirements": [
@@ -371,7 +611,7 @@
     {
       "lessonId": "40",
       "grade": 1,
-      "numberInGrade": 20,
+      "numberInGrade": 31,
       "title": "Zasady rozpowszechniania programów komputerowych – projekt",
       "file": "content/lessons/40-license-project.js",
       "requirements": [
@@ -391,7 +631,7 @@
     {
       "lessonId": "41",
       "grade": 1,
-      "numberInGrade": 21,
+      "numberInGrade": 32,
       "title": "Komunikacja i wymiana informacji w Internecie",
       "file": "content/lessons/41-online-communication.js",
       "requirements": [
@@ -412,7 +652,7 @@
     {
       "lessonId": "42",
       "grade": 1,
-      "numberInGrade": 22,
+      "numberInGrade": 33,
       "title": "Szanse i zagrożenia związane z rozwojem informatyki i technologii informacyjno-komunikacyjnych – projekt",
       "file": "content/lessons/42-tech-future-project.js",
       "requirements": [
@@ -434,7 +674,7 @@
     {
       "lessonId": "43",
       "grade": 1,
-      "numberInGrade": 23,
+      "numberInGrade": 34,
       "title": "Przestępczość komputerowa – projekt",
       "file": "content/lessons/43-computer-crime-project.js",
       "requirements": [
