@@ -314,7 +314,7 @@ export function explainError(err, code = '') {
 }
 
 export const STOP_MESSAGES = {
-  timeout: {title: 'Program działa za długo — może pętla się nie kończy?', hint: 'Środowisko zatrzymało go po kilku sekundach. Sprawdź warunek pętli while: czy zmienna w warunku zmienia się w środku pętli (np. j -= 1)?'},
+  timeout: {title: 'Program działa za długo — może pętla się nie kończy?', hint: 'Środowisko zatrzymało go po kilku sekundach. Sprawdź warunek pętli while: czy zmienna z warunku zmienia się w środku pętli (np. licznik += 1 albo j -= 1)? Jeśli nie, warunek nigdy nie stanie się fałszywy.'},
   input: {title: 'Program czeka na dane', hint: 'Program wywołał input(), ale pole „Dane wejściowe” jest puste albo skończyły się w nim linie. Wpisz wartości — każda linia to jedno input().'},
   output: {title: 'Program wypisał za dużo tekstu', hint: 'Środowisko zatrzymało go po 20 000 znaków. To często znak, że pętla się nie kończy.'},
   steps: {title: 'Pokazuję pierwsze kroki programu', hint: `Śledzenie zatrzymuje się po ${MAX_TRACE_STEPS} krokach. Zmniejsz dane albo liczbę powtórzeń pętli.`},
