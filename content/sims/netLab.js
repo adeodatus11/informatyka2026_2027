@@ -216,7 +216,7 @@ przez maksymalnie 30 przeskoków:
 Śledzenie zakończone.`
 };
 // Linia, w której jest odpowiedź — do podświetlenia po zaliczeniu w trybie zastępczym.
-export const answerLines = {ipv4: 'Adres IPv4', gateway: 'Brama domyślna', ping: 'Czas średni', hops: '  8 '};
+export const answerLines = {ipv4: 'Adres IPv4', gateway: 'Brama domyślna', ping: 'Czas średni', hops: '  8    12 ms'};
 
 const R = (ok, text, extra = {}) => ({ok, text, ...extra});
 export function checkIPv4(input, source = 'live') {

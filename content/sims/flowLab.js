@@ -245,7 +245,7 @@ export function checkFill(chart, picks, tests = []) {
 }
 
 /* ───────────── Rysunek schematu: geometria (czysta funkcja, testowalna) ───────────── */
-export const GEO = {colW: 230, rowH: 92, w: 184, h: 50, pad: 34, lane: 18};
+export const GEO = {colW: 236, rowH: 92, w: 196, h: 50, pad: 34, lane: 18};
 
 export function blockBox(b) {
   const [c, r] = b.pos;

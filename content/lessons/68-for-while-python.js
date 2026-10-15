@@ -109,7 +109,7 @@ export default {
  materials:['Komputer z przeglądarką — jeden na osobę. Python działa w przeglądarce, bez instalacji i bez logowania.','Projektor — pokaz pętli nieskończonej i zatrzymania programu po 3 s (etap 4).'],
  teacherGuide:{
   preparation:'Przed dzwonkiem otwórz etap 2 na komputerze z projektorem — przeglądarka pobierze Pythona (ok. 13 MB). Klucz: skarbonka — tygodnie 1–4 (30, 60, 90, 120 zł) i „Cel osiągnięty!”; bateria — 60 min, zostaje 10%; cel 600 zł po 50 zł → 12 tygodni, 100 zł po 30 zł → 4 tygodnie i 120 zł, 0 zł tygodniowo → pętla nieskończona; PIN 4821; gra — tajna liczba 37, przy strzałach w środek przedziału wystarczy najwyżej 7 prób dla 1–100. Pętla nieskończona w środowisku: po 3 s komunikat „Program działa za długo…” i restart Pythona (2–3 s) — to normalne. W zwykłym terminalu program przerywa się klawiszami Ctrl+C.',
-  summary:'Uczeń dobiera for/while, przewiduje skarbonkę, układa pętlę baterii, naprawia pętlę nieskończoną (kalkulator celu), uzupełnia PIN o licznik i break oraz pisze grę w zgadywanie. Karta wyniku: maks. 26 pkt. Pytanie na wyjście: po czym poznać, że pętla while się nie skończy?'
+  summary:'Uczeń dobiera for/while, przewiduje skarbonkę, układa pętlę baterii, naprawia pętlę nieskończoną (kalkulator celu), uzupełnia PIN o licznik i break oraz pisze grę w zgadywanie. Karta wyniku: maks. 25 pkt. Pytanie na wyjście: po czym poznać, że pętla while się nie skończy?'
  },
  sections:[
   {id:'start',label:'Start',title:'Trzy złe PIN-y i blokada',grouping:'class',

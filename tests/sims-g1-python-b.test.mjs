@@ -98,7 +98,8 @@ py.runPython(P.RUNNER_PY);
 const runFn = py.globals.get('_pl_run');
 const run = req => JSON.parse(runFn(JSON.stringify(req)));
 const passes = (a, code) => {
-  const r = run({code, stdin: a.stdin || [], tests: a.tests});
+  // śledzenie z limitem kroków chroni test przed pętlą nieskończoną w kodzie startowym
+  const r = run({code, stdin: a.stdin || [], tests: a.tests, trace: true, maxSteps: 20000});
   const pyOk = !r.error && (!r.stop || r.stop === 'input');
   return pyOk && r.tests?.length === a.tests.length && r.tests.every(t => t.ok) && P.sourceChecks(code, a.sourceChecks).every(t => t.ok);
 };
@@ -148,6 +149,9 @@ for (const lesson of ALL) {
         // każda linia z wcięciem przesuniętym o jeden poziom psuje program
         for (const [k, b] of blocks.entries()) for (const delta of [-1, 1]) {
           const ind = b.indent + delta; if (ind < 0) continue;
+          // jedyna linia bloku może mieć dowolnie głębokie wcięcie — to wciąż ten sam program
+          const onlyInBlock = blocks[k - 1]?.text.endsWith(':') && (blocks[k + 1]?.indent ?? 0) < b.indent;
+          if (delta > 0 && onlyInBlock) continue;
           const prog = good.map(x => ({...x})); prog[k] = {id: b.id, indent: ind};
           const rr = run({code: P.parsonsCode(a, prog), tests: a.tests, trace: true, maxSteps: 5000});
           assert.ok(rr.error || rr.stop || rr.tests?.some(t => !t.ok), `${a.id}: wcięcie ${ind} dla „${b.text}” powinno oblać testy`);

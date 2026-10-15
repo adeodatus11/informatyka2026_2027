@@ -88,8 +88,8 @@ function Chart({chart, picks = {}, current, prev, visited = new Set(), blankNo =
           const text = b.blank ? blockText(b, picks) : b.text;
           const raw = text === null ? `pole ${blankNo[b.id]}` : b.kind === 'if' && !/\?$/.test(text) ? `${text}?` : text;
           const lines = String(raw).split('\n');
-          const long = lines.some(l => l.length > (b.kind === 'if' ? 17 : 21));
-          const fs = long ? 12.5 : 14.5;
+          const long = lines.some(l => l.length > (b.kind === 'if' ? 16 : 19));
+          const fs = long ? 12 : 14.5;
           const state = current === b.id ? 'is-current' : prev === b.id ? 'is-prev' : visited.has(b.id) ? 'is-visited' : '';
           return <g key={b.id} className={`fl-block fl-k-${b.kind} ${state} ${b.blank ? 'is-blank' : ''} ${b.blank && text === null ? 'is-empty' : ''}`}>
             {shape(b, box)}
@@ -97,13 +97,12 @@ function Chart({chart, picks = {}, current, prev, visited = new Set(), blankNo =
               {lines.map((l, i) => <tspan key={i} x={box.cx} dy={i ? fs * 1.2 : 0}>{l}</tspan>)}
             </text>
             {b.blank && <g className="fl-blank-no"><circle cx={box.left + (b.kind === 'if' ? 22 : 4)} cy={box.top + 4} r={11}/><text x={box.left + (b.kind === 'if' ? 22 : 4)} y={box.top + 4}>{blankNo[b.id]}</text></g>}
-            {current === b.id && <text className="fl-here" x={box.left - (b.kind === 'if' ? 2 : 8)} y={box.cy} textAnchor="end">➜</text>}
           </g>;
         })}
       </svg>
     </div>
     <details className="fl-outline">
-      <summary>{title || 'Schemat'} zapisany jako lista kroków</summary>
+      <summary>Pokaż schemat jako listę kroków (tekst)</summary>
       <ol>{outline.map((l, i) => <li key={i}>{l.replace(/^\d+\.\s*/, '')}</li>)}</ol>
     </details>
   </figure>;
@@ -171,6 +170,7 @@ function TraceMode({data, v, save}) {
         <div className="fl-step" aria-live="polite">
           <p className="fl-step-no">Krok {Math.min(k + 1, steps.length)} z {steps.length}</p>
           {last && <p className="fl-step-done">{describe(last, before?.vars, blocks[last.id])}</p>}
+          {cur && <p className="fl-step-next"><b>Teraz (żółty blok):</b> <code className="fl-inline">{blocks[cur.id].text.replace(/\n/g, '; ')}</code></p>}
           {!cur && <p className="fl-step-end"><Icon name="trophy" size={18}/>Algorytm przeszedł do końca{v.mistakes ? ` (pomyłki przy decyzjach: ${v.mistakes})` : ' bez pomyłki'}. Wynik na ekranie: <b>{run.out.join(' | ') || '—'}</b></p>}
         </div>
         {cur && cur.kind === 'if' ? <div className="fl-decide" role="group" aria-label="Decyzja w rombie">
@@ -237,7 +237,7 @@ function FillMode({data, v, save}) {
               <td>{Object.entries(t.input).map(([n, x]) => `${n} = ${show(x)}`).join(', ')}</td>
               <td>{t.output}</td>
               <td>{r ? (r.error ? <span className="fl-err">{r.error.message}</span> : r.got || '—') : <span className="fl-muted">?</span>}</td>
-              <td>{r ? (r.ok ? '✓' : '✗') : ''}<span className="sr-only">{r ? (r.ok ? ' zgodne' : ' różne') : ' nie sprawdzono'}</span></td>
+              <td className="fl-mark">{r ? (r.ok ? '✓' : '✗') : ''}<span className="sr-only">{r ? (r.ok ? ' zgodne' : ' różne') : ' nie sprawdzono'}</span></td>
             </tr>;
           })}</tbody>
         </table>

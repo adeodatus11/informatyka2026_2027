@@ -21,7 +21,7 @@ export default {
  materials:['Komputer z przeglądarką — jeden na osobę, bez logowania.','Tablica: trzy kolumny „Dane wejściowe | Wynik | Warunki” do przykładu z pizzą.'],
  teacherGuide:{
   preparation:'Lekcja nie wymaga Pythona. Klucz: 1000 zł przy 150 zł/mies. → 7 miesięcy (6 · 150 = 900 to za mało). Dziury: autobus — brak danych (czas dojścia, aktualna godzina); kino — sprzeczność dla 16 i 17 lat; pizza — niejasność „tania” (brak progu). Projektant testów, autobus: przypadki typowe TAK (np. odjazd 10, dojście 5), NIE (5 i 10), brzegowy (10 i 10 → TAK), błędne (−3, 200 albo „abc”). Telefon: bez reszty (1200 i 100 → 12), z resztą (1000 i 300 → 4), brzegowy (500 i 500 albo 500 i 800 → 1), błędne (kwota 0 albo tekst). Ceny i kino są fikcyjne.',
-  summary:'Uczeń rozkłada problem na dane, wynik i warunki, rozpoznaje trzy typy dziur w specyfikacji i buduje dwa zestawy przypadków testowych (8 rodzajów przypadków), w których platforma sprawdza oczekiwany wynik. Karta wyniku: maks. 29 pkt. Pytanie na wyjście: dlaczego trzeba testować granicę warunku? Następna lekcja zamieni specyfikację w algorytm (lista kroków i schemat blokowy).'
+  summary:'Uczeń rozkłada problem na dane, wynik i warunki, rozpoznaje trzy typy dziur w specyfikacji i buduje dwa zestawy przypadków testowych (8 rodzajów przypadków), w których platforma sprawdza oczekiwany wynik. Karta wyniku: maks. 27 pkt. Pytanie na wyjście: dlaczego trzeba testować granicę warunku? Następna lekcja zamieni specyfikację w algorytm (lista kroków i schemat blokowy).'
  },
  sections:[
   {id:'start',label:'Start',title:'„Zrób mi apkę, co policzy…”',grouping:'class',

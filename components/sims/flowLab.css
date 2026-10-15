@@ -45,7 +45,6 @@
 .fl-block.is-empty text{fill:#1f4fa3;font-style:italic}
 .fl-blank-no circle{fill:#1f4fa3;stroke:none}
 .fl-blank-no text{fill:#fff!important;font-size:13px;font-weight:800;font-style:normal}
-.fl-here{font-size:22px;fill:#b07a00!important;text-anchor:end!important}
 .fl-outline{font-size:.88rem}
 .fl-outline summary{display:inline-flex;align-items:center;color:var(--fl-accent);font-weight:600}
 .fl-outline ol{margin:4px 0 0;padding-left:22px;line-height:1.5}
@@ -84,7 +83,7 @@
 .fl-results thead th{background:#eef2ee;font-size:.8rem}
 .fl-results tr.is-ok{background:#f1f9f4}
 .fl-results tr.is-bad{background:#fdf0ef}
-.fl-results td:last-child{font-weight:800;text-align:center;width:2.2em}
+.fl-results td.fl-mark{font-weight:800;text-align:center;width:2.2em}
 .fl-results small{display:block}
 .fl-err{color:#8a1c1c}
 
@@ -138,3 +137,4 @@
  .fl-spec dl{grid-template-columns:minmax(0,1fr)}
  .fl-results{font-size:.82rem}
 }
+.fl-step-next{margin-top:6px!important}
