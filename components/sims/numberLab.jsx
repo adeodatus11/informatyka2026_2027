@@ -12,7 +12,7 @@ const fmt = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 function Frac({f, className = ''}) {
   if (!f) return null;
   if (f[1] === 1) return <span className={`nl-int ${className}`}>{f[0]}</span>;
-  return <span className={`nl-frac ${className}`} aria-label={`${f[0]} przez ${f[1]}`}><span aria-hidden="true">{f[0]}</span><span aria-hidden="true">{f[1]}</span></span>;
+  return <span className={`nl-frac ${className}`}><span aria-hidden="true">{f[0]}</span><span aria-hidden="true">{f[1]}</span><span className="sr-only">{f[0]}/{f[1]}</span></span>;
 }
 
 /* ───────── Obrazki: każdy pokazuje tylko to, co uczeń już odkrył ───────── */
