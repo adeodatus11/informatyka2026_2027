@@ -1,6 +1,6 @@
 # Python w przeglądarce (symulator `pythonLab`)
 
-Lekcje 17, 19, 20 i 21 (klasa 2) uczą programowania w Pythonie bez instalacji, bez logowania i bez wysyłania kodu na serwer. Uczniowie piszą i uruchamiają prawdziwy CPython 3.14 skompilowany do WebAssembly (Pyodide).
+Lekcje 17, 19, 20, 21, 46, 48 i 50 (klasa 2) oraz 52 i 54–57 (klasa 3) uczą programowania w Pythonie bez instalacji, bez logowania i bez wysyłania kodu na serwer. Uczniowie piszą i uruchamiają prawdziwy CPython 3.14 skompilowany do WebAssembly (Pyodide).
 
 ## Jak to działa
 
