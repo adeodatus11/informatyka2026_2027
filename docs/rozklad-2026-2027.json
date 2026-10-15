@@ -98,7 +98,7 @@
   "pp": "IV.1., IV.2., IV.3.",
   "status": "brak",
   "ids": [],
-  "note": "",
+  "note": "częściowo w 09: etap „Zostań ekspertem jednej sprawy” (jigsaw); projekt = ewentualnie druga godzina 09",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
  {
@@ -371,7 +371,7 @@
   "pp": "III.4.",
   "status": "brak",
   "ids": [],
-  "note": "",
+  "note": "częściowo: klient–serwer, URL, DNS, hosting w 35 i 38; sieć szkolna (router, switch, AP) w 14 (kl. 3). Brakuje: adres IP, LAN/WAN, pakiety, ping/tracert/ipconfig",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
  {
@@ -382,7 +382,7 @@
   "pp": "V.1., V.3.",
   "status": "brak",
   "ids": [],
-  "note": "",
+  "note": "częściowo: 2FA i fałszywe logowanie w 09; oszustwa w 43; kopie zapasowe, ransomware, pakiet bezpieczeństwa w 42 (gra); hasła a szyfr w 16 (kl. 2). Brakuje: siła hasła i menedżer haseł, aktualizacje, malware, szyfrowanie Wi-Fi/dysku — w praktyce",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
  {
@@ -1412,9 +1412,11 @@
   "nr": 26,
   "temat": "Działania na ułamkach z wykorzystaniem NWD i NWW",
   "pp": "I.1, I.2.a, I.3, II.1, II.2",
-  "status": "brak",
-  "ids": [],
-  "note": "",
+  "status": "do ponownego użycia",
+  "ids": [
+   "49 (kl. 2)"
+  ],
+  "note": "koncepcja bez kodu; w kl. 3 temat zakłada też Python → razem z 50",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  },
  {
@@ -1424,9 +1426,11 @@
   "nr": 27,
   "temat": "Skracanie i działania arytmetyczne na ułamkach",
   "pp": "I.1, I.2.a, I.3, II.1, II.2",
-  "status": "brak",
-  "ids": [],
-  "note": "",
+  "status": "do ponownego użycia",
+  "ids": [
+   "50 (kl. 2)"
+  ],
+  "note": "kalkulator ułamków w Pythonie",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  },
  {
@@ -1472,9 +1476,12 @@
   "nr": 31,
   "temat": "Etapy tworzenia strony internetowej",
   "pp": "I.1, II.2, II.3.f, IV.1",
-  "status": "brak",
-  "ids": [],
-  "note": "",
+  "status": "do ponownego użycia",
+  "ids": [
+   "35 (kl. 1)",
+   "36 (kl. 1)"
+  ],
+  "note": "częściowo: podstawy HTML i etapy (plan → kod → sprawdzenie) są w 35–36 i 38; w kl. 3 można podpiąć wersję skróconą",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  },
  {
@@ -1484,9 +1491,11 @@
   "nr": 32,
   "temat": "Nowy wygląd strony internetowej o Wyspach Kanaryjskich",
   "pp": "I.1, II.2, II.3.f, IV.1",
-  "status": "brak",
-  "ids": [],
-  "note": "",
+  "status": "do ponownego użycia",
+  "ids": [
+   "37 (kl. 1)"
+  ],
+  "note": "częściowo: CSS i motywy w 37 (htmlLab); potrzebny inny szablon strony (Wyspy Kanaryjskie)",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  }
 ]
