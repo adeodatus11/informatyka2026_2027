@@ -234,7 +234,7 @@ function ParsonsMode({data, v, save}) {
     if (review.missing > 0) { setMsg({ok: false, text: review.distractors ? 'W programie jest linia-pułapka, a w ramce „Rozsypane linie” została linia, której brakuje. Porównaj je i zamień (✕ usuwa linię z programu).' : `Brakuje jeszcze ${review.missing} ${review.missing === 1 ? 'linii' : 'linii'} — przenieś je z ramki „Rozsypane linie”.${data.distractors?.length ? ' Uwaga: jedna linia w ramce to pułapka i nie jest potrzebna.' : ''}`}); return; }
     setBusy(true);
     const code = parsonsCode(data, program);
-    const r = await runPython({code, tests: data.tests || []}, {timeoutMs: data.timeoutMs});
+    const r = await runPython({code, stdin: data.stdin || [], tests: data.tests || []}, {timeoutMs: data.timeoutMs});
     setBusy(false); setResult(r);
     const tests = r.tests || [];
     const all = !r.error && !r.timeout && !r.fatal && tests.length === (data.tests || []).length && tests.every(t => t.ok);

@@ -98,7 +98,7 @@
   "pp": "IV.1., IV.2., IV.3.",
   "status": "brak",
   "ids": [],
-  "note": "",
+  "note": "częściowo w 09: etap „Zostań ekspertem jednej sprawy” (jigsaw); projekt = ewentualnie druga godzina 09",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
  {
@@ -270,8 +270,10 @@
   "sem": "I półrocze",
   "temat": "Sytuacje problemowe i określanie specyfikacji zadania",
   "pp": "I.1., I.3.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "60"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -281,8 +283,10 @@
   "sem": "I półrocze",
   "temat": "Techniki algorytmiczne i programowanie",
   "pp": "I.1., I.3.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "61"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -292,8 +296,10 @@
   "sem": "I półrocze",
   "temat": "Środowisko programistyczne języka Python, stosowanie zmiennych i wyprowadzanie wyników",
   "pp": "I.1., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "62"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -303,8 +309,10 @@
   "sem": "I półrocze",
   "temat": "Algorytmy z warunkami w języku Python",
   "pp": "I.1., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "63"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -314,8 +322,10 @@
   "sem": "I półrocze",
   "temat": "Sprawdzanie poprawności danych i zapisywanie rozwiązania problemu w języku Python",
   "pp": "I.1., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "64"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -325,8 +335,10 @@
   "sem": "I półrocze",
   "temat": "Instrukcje warunkowe zagnieżdżone i z klauzulą elif w języku Python",
   "pp": "I.1., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "65"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -336,8 +348,10 @@
   "sem": "I półrocze",
   "temat": "Algorytmy iteracyjne w języku Python",
   "pp": "I.1., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "66"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -347,8 +361,10 @@
   "sem": "I półrocze",
   "temat": "Instrukcje iteracyjne zagnieżdżone w języku Python",
   "pp": "I.1., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "67"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -358,8 +374,10 @@
   "sem": "I półrocze",
   "temat": "Stosowanie instrukcji iteracyjnych for i while w języku Python",
   "pp": "I.1., I.3., II. 1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "68"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -369,8 +387,10 @@
   "sem": "II półrocze",
   "temat": "Sieci komputerowe",
   "pp": "III.4.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "58"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -380,8 +400,10 @@
   "sem": "II półrocze",
   "temat": "Bezpieczeństwo i ochrona danych w komputerach i sieciach komputerowych",
   "pp": "V.1., V.3.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "59"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -1412,9 +1434,11 @@
   "nr": 26,
   "temat": "Działania na ułamkach z wykorzystaniem NWD i NWW",
   "pp": "I.1, I.2.a, I.3, II.1, II.2",
-  "status": "brak",
-  "ids": [],
-  "note": "",
+  "status": "do ponownego użycia",
+  "ids": [
+   "49 (kl. 2)"
+  ],
+  "note": "koncepcja bez kodu; w kl. 3 temat zakłada też Python → razem z 50",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  },
  {
@@ -1424,9 +1448,11 @@
   "nr": 27,
   "temat": "Skracanie i działania arytmetyczne na ułamkach",
   "pp": "I.1, I.2.a, I.3, II.1, II.2",
-  "status": "brak",
-  "ids": [],
-  "note": "",
+  "status": "do ponownego użycia",
+  "ids": [
+   "50 (kl. 2)"
+  ],
+  "note": "kalkulator ułamków w Pythonie",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  },
  {
@@ -1472,9 +1498,12 @@
   "nr": 31,
   "temat": "Etapy tworzenia strony internetowej",
   "pp": "I.1, II.2, II.3.f, IV.1",
-  "status": "brak",
-  "ids": [],
-  "note": "",
+  "status": "do ponownego użycia",
+  "ids": [
+   "35 (kl. 1)",
+   "36 (kl. 1)"
+  ],
+  "note": "częściowo: podstawy HTML i etapy (plan → kod → sprawdzenie) są w 35–36 i 38; w kl. 3 można podpiąć wersję skróconą",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  },
  {
@@ -1484,9 +1513,11 @@
   "nr": 32,
   "temat": "Nowy wygląd strony internetowej o Wyspach Kanaryjskich",
   "pp": "I.1, II.2, II.3.f, IV.1",
-  "status": "brak",
-  "ids": [],
-  "note": "",
+  "status": "do ponownego użycia",
+  "ids": [
+   "37 (kl. 1)"
+  ],
+  "note": "częściowo: CSS i motywy w 37 (htmlLab); potrzebny inny szablon strony (Wyspy Kanaryjskie)",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  }
 ]
