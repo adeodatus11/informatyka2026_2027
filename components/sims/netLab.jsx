@@ -55,7 +55,7 @@ function Address({st,set}){
 function NetMap({round,highlight,down}){
  const pos=Object.fromEntries(nodes.map(n=>[n.id,n]));
  const routeEdges=new Set();if(highlight)for(let i=1;i<highlight.length;i++)routeEdges.add([highlight[i-1],highlight[i]].sort().join('|'));
- return <svg className="nlab-map" viewBox="0 0 670 220" role="img" aria-label={`Mapa sieci: ${nodes.map(n=>n.label).join(', ')}${down?`. Węzeł ${down} nie działa.`:''}${highlight?` Zaznaczona trasa: ${routeText(highlight)}.`:''}`}>
+ return <svg className="nlab-map" viewBox="0 0 670 250" role="img" aria-label={`Mapa sieci: ${nodes.map(n=>n.label).join(', ')}${down?`. Węzeł ${down} nie działa.`:''}${highlight?` Zaznaczona trasa: ${routeText(highlight)}.`:''}`}>
   {edges.map(([a,b])=>{const on=routeEdges.has([a,b].sort().join('|'));const off=down&&(a==='lodz'||b==='lodz');return <line key={a+b} x1={pos[a].x} y1={pos[a].y} x2={pos[b].x} y2={pos[b].y} className={`${on?'is-on':''} ${off?'is-down':''}`}/>;})}
   {nodes.map(n=>{const off=down&&n.id==='lodz';return <g key={n.id} className={`nlab-node ${off?'is-down':''} ${highlight?.includes(n.id)?'is-on':''}`} transform={`translate(${n.x} ${n.y})`}>
    <circle r="20"/>{off&&<path d="M-11 -11 L11 11 M11 -11 L-11 11" className="nlab-x"/>}
@@ -173,7 +173,7 @@ function Passport({value,st,set}){
     <div><dt>Ping</dt><dd>{fmtMs(p.ping)} ms<small>{p.pingTarget}{p.prediction!==null?` · przewidywałem: ${p.prediction} ms`:''}</small></dd></div>
     <div><dt>Tracert</dt><dd>{p.hops} przeskoków<small>{p.sample.hops?'przykład':'pomiar własny'}</small></dd></div>
    </dl>
-   <div className="nlab-bars" aria-label="Porównanie opóźnień">{bars.map(b=><div key={b.l} className={`nlab-bar ${b.me?'is-me':''}`}><span className="nlab-bar-l">{b.l}</span><span className="nlab-bar-track" aria-hidden="true"><i style={{width:`${Math.max(1.5,100*b.v/maxV)}%`}}/></span><b>{b.n}</b></div>)}</div>
+   <div className="nlab-lats" aria-label="Porównanie opóźnień">{bars.map(b=><div key={b.l} className={`nlab-lat ${b.me?'is-me':''}`}><span className="nlab-lat-l">{b.l}</span><span className="nlab-lat-track" aria-hidden="true"><i style={{width:`${Math.max(1.5,100*b.v/maxV)}%`}}/></span><b>{b.n}</b></div>)}</div>
    <p className="small nlab-phys"><Icon name="energy" size={16}/>Fizyka laga: światło w światłowodzie robi ok. 200 km na 1 ms. Warszawa – Nowy Jork to ok. 6 900 km, więc tam i z powrotem co najmniej ok. {minPingMs(6900)} ms — bez żadnych routerów po drodze. Żadna aplikacja „do pingu” tego nie przeskoczy.</p>
   </article>
   <label className="nlab-field nlab-concl" htmlFor="nl-concl"><span>Wniosek: co sprawdzisz najpierw, gdy w grze pojawi się lag? Wykorzystaj dzisiejsze pomiary (1–2 zdania).</span>

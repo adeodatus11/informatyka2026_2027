@@ -54,7 +54,7 @@
 .nlab-tile b{position:absolute;top:3px;left:4px;font-size:.72rem;background:#fff;color:#182f38;border-radius:4px;padding:0 5px;line-height:1.5}
 .nlab-tile.is-missing{background:repeating-linear-gradient(45deg,#e6e9ec 0 6px,#f5f6f7 6px 12px);border:2px dashed #b03535}
 .nlab-tile.is-missing small{position:absolute;bottom:3px;left:0;right:0;text-align:center;font-size:.72rem;font-weight:700;color:#8a2a2a}
-.nlab-map{width:100%;height:auto;max-height:230px;background:#f7f9fc;border:1px solid var(--nl-line);border-radius:10px}
+.nlab-map{width:100%;height:auto;max-height:260px;background:#f7f9fc;border:1px solid var(--nl-line);border-radius:10px}
 .nlab-map line{stroke:#aebccb;stroke-width:3}.nlab-map line.is-on{stroke:#1f4fa3;stroke-width:6}.nlab-map line.is-down{stroke:#d64545;stroke-dasharray:6 5}
 .nlab-node circle{fill:#fff;stroke:#5a7189;stroke-width:2}.nlab-node.is-on circle{fill:#dbe7fb;stroke:#1f4fa3;stroke-width:3}
 .nlab-node.is-down circle{fill:#fde8e8;stroke:#b03535}.nlab-x{stroke:#b03535;stroke-width:3}
@@ -97,12 +97,13 @@
 .nlab-passport dl>div{background:#fff;border:1px solid var(--nl-line);border-radius:8px;padding:8px}
 .nlab-passport dt{font-size:.75rem;color:#4c5d63}.nlab-passport dd{margin:0;font-weight:700;display:flex;flex-direction:column;gap:2px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
 .nlab-passport dd small{font-weight:400;font-size:.76rem;color:#4c5d63}
-.nlab-bars{display:grid;gap:6px}
-.nlab-bar{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr) 4.5rem;gap:10px;align-items:center;font-size:.84rem}
-.nlab-bar-l{overflow-wrap:anywhere}.nlab-bar b{text-align:right;font-variant-numeric:tabular-nums}
-.nlab-bar-track{height:14px;background:#e6ebf1;border-radius:999px;overflow:hidden}.nlab-bar-track i{display:block;height:100%;background:#7d93ad;border-radius:999px}
-.nlab-bar.is-me .nlab-bar-track i{background:#1f4fa3}.nlab-bar.is-me{font-weight:650}
+.nlab-lats{display:grid;gap:6px}
+.nlab-lat{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr) 4.5rem;gap:10px;align-items:center;font-size:.84rem}
+.nlab-lat-l{overflow-wrap:anywhere}.nlab-lat b{text-align:right;font-variant-numeric:tabular-nums}
+.nlab-lat-track{height:14px;background:#e6ebf1;border-radius:999px;overflow:hidden}.nlab-lat-track i{display:block;height:100%;background:#7d93ad;border-radius:999px}
+.nlab-lat.is-me .nlab-lat-track i{background:#1f4fa3}.nlab-lat.is-me{font-weight:650}
 .nlab-phys{display:flex;gap:6px;align-items:flex-start;color:#3f5157;line-height:1.5}.nlab-phys svg{margin-top:3px}
+.nlab-concl{gap:10px}
 .nlab-concl textarea{width:100%;border:1px solid #96a89d;border-radius:8px;padding:.7rem;font:inherit;font-weight:400;resize:vertical;min-height:80px}
 .nlab-good{color:#12613f;font-weight:650}
 @media (prefers-reduced-motion:reduce){.nlab-home>section{transition:none}}
@@ -111,7 +112,7 @@
  .nlab-home,.nlab-modes,.nlab-classify ul{grid-template-columns:1fr}
  .nlab-send{grid-template-columns:1fr}
  .nlab-passport dl{grid-template-columns:repeat(2,minmax(0,1fr))}
- .nlab-bar{grid-template-columns:1fr 3.8rem}.nlab-bar-track{grid-column:1/-1;grid-row:2}
+ .nlab-lat{grid-template-columns:1fr 3.8rem}.nlab-lat-track{grid-column:1/-1;grid-row:2}
  .nlab-steps>li{padding-left:14px;padding-top:44px}
  .nlab-classify li{grid-template-columns:1fr}
  .nlab-quiz:has(.choice-letter:only-child) .nlab-options{grid-template-columns:repeat(3,minmax(0,1fr))}
