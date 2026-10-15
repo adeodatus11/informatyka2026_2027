@@ -44,7 +44,7 @@
 .pl-line.is-error{background:#fbe3e3;box-shadow:inset 3px 0 #d64545}
 .pl-textarea{position:relative;display:block;width:100%;height:calc(var(--rows,3) * 24px + 24px);min-height:72px;border:0;outline:0;resize:none;overflow:hidden;background:transparent;color:transparent;caret-color:#10232c;-webkit-text-fill-color:transparent}
 .pl-textarea::selection{background:#b9d3f6;-webkit-text-fill-color:transparent}
-.pl-t-kw{color:#8a2bb3;font-weight:600}.pl-t-fn{color:#1f4fa3}.pl-t-str{color:#11703f}.pl-t-num{color:#b3541e}.pl-t-com{color:#54645d;font-style:italic}.pl-t-op{color:#6b3b12}
+.pl-t-kw{color:#8a2bb3;font-weight:600}.pl-t-fn{color:#1f4fa3}.pl-t-str{color:#11703f}.pl-t-num{color:#9a4515}.pl-t-com{color:#54645d;font-style:italic}.pl-t-op{color:#6b3b12}
 
 /* Kod tylko do odczytu */
 .pl-view{border:1px solid #b9c7be;border-radius:10px;background:#fbfcfa;overflow:auto;max-height:480px;font-family:var(--pl-mono);font-size:16px;line-height:24px}

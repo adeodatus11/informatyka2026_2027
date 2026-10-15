@@ -10,6 +10,7 @@ Każda lekcja pokazuje REALNĄ korzyść dla ucznia (pieniądze, czas, bezpiecze
 - 30–45 min w klasie. BRAK pracy domowej (nie planuj nic "przed lekcją"/"w domu").
 - Wszystko w przeglądarce, bez logowania, bez zewnętrznych serwisów, bez żądań sieciowych z platformy. Wyjątki ustalone z nauczycielem: lekcje Worda (Word stacjonarny, `docs/word-desktop.md`), wiersz poleceń Windows 11 Pro (`ping`, `tracert`, `nslookup`, `ipconfig`) — platforma prowadzi krok po kroku, uczeń wpisuje odczyty.
 - Domyślnie praca samodzielna. Para/trójka tylko jako opcja, gdy naturalnie coś daje — bez ról przydzielanych na siłę i bez ocen koleżeńskich „dla metody” (decyzja nauczyciela 14.10.2026).
+- **Nie budujemy na platformie edytorów grafiki** (rastrowej, wektorowej, 3D). Tematy GIMP/Inkscape/SketchUp realizujemy w gotowych edytorach online; platforma prowadzi krok po kroku i zbiera wynik (jak lekcje Worda) — decyzja nauczyciela 14.10.2026.
 - Bez sztucznych produktów: żadnych „generatorów” plakatów, komiksów, stanowisk na platformie. Jeśli potrzebny plakat/grafika — w Canvie albo przez prompt do ChatGPT z nauką pisania promptu i oznaczania grafik z AI (`docs/profil-ucznia.md`, 6a).
 - Realne usługi publiczne nazywaj prawdziwie (decyzja nauczyciela, lekcja 09: login.gov.pl, IKP, mObywatel, CERT Polska, 8080), ale bez ich logo i kolorystyki; każdy ekran symulatora ma dopisek „symulacja” i fikcyjne dane. Firmy prywatne w symulatorach — fikcyjne nazwy. Przykłady phishingu mogą być podróbkami prawdziwych adresów (`login-gov.pl`) — to cel ćwiczenia.
 - Dane osobowe w zadaniach fikcyjne (PESEL fikcyjny, oznaczony jako przykład).
@@ -72,5 +73,4 @@ Raport końcowy (krótko): lista plików, typy symulatorów, co zweryfikowano, e
 
 ## Uwagi z budowy lekcji 35–43
 - Podgląd strony ucznia (`htmlLab`) to `iframe sandbox=""` w zamkniętym shadow root — axe zawiesza się na ramce bez skryptów, a treści ucznia (czasem celowo zepsutej) i tak nie ocenia. Przy nowych ramkach podglądu postępuj tak samo.
-- Opcjonalny wariant w Wordzie w lekcji z innym produktem: `wordRubric` blokuje ukończenie etapu, więc w lekcji 42 `WordSteps`/`WordRubric` są renderowane wewnątrz symulatora (`debateLab`, `data.word`), tylko po wyborze Worda.
 - `htmlLab` (tryby `free`, `tasks`, `fix`, `serp`, `theme`, `show`) nadaje się dla klasy 3 (tematy 31–32, strona WWW).

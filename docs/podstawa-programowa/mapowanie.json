@@ -419,16 +419,16 @@
         "IV.1",
         "IV.2",
         "IV.3",
-        "IV.5"
+        "V.3"
       ],
       "activityIds": [
-        "deb-evidence",
-        "deb-jobs",
-        "deb-poster",
-        "deb-peer"
+        "ff-now",
+        "ff-game",
+        "ff-price",
+        "ff-72h"
       ],
-      "evidence": "Projekt-debata w trójkach (debateLab): ocena dowodów, stanowisko z argumentami i kontrargumentem, ocena koleżeńska według rubryki.",
-      "limitations": "Fakty prawne i liczby z raportów oznaczone w panelu nauczyciela do weryfikacji przed lekcją. Produkt ucznia żyje tylko w przeglądarce podczas lekcji (bez publikacji i zapisu na serwerze).",
+      "evidence": "Gra strategiczna Firma 2030 (futureFirm): decyzje o technologiach w małej firmie, reakcje na incydenty (phishing, ransomware, wyciek danych, halucynacja AI, wykluczenie cyfrowe), raport z osią szans i zagrożeń oraz refleksja.",
+      "limitations": "Model gry jest uproszczeniem (liczby orientacyjne). Fakty prawne i dane z raportów oznaczone w panelu nauczyciela do weryfikacji. IV.1 częściowo: praca domyślnie samodzielna.",
       "migraReference": "M1"
     },
     {
@@ -443,20 +443,55 @@
         "V.4"
       ],
       "activityIds": [
+        "scam-chat",
         "scam-steps",
         "kk-match",
         "domains",
-        "comic-build",
-        "peer-review"
+        "maja-15min"
       ],
-      "evidence": "Projekt „anatomia oszustwa” (scamComic): przepisy kk do scenek, ocena domen, plakat-komiks z punktami przerwania, ocena koleżeńska i zgłaszanie incydentu.",
-      "limitations": "Fakty prawne i liczby z raportów oznaczone w panelu nauczyciela do weryfikacji przed lekcją. Produkt ucznia żyje tylko w przeglądarce podczas lekcji (bez publikacji i zapisu na serwerze).",
+      "evidence": "Symulowane rozmowy z oszustem (scamChat): rozpoznawanie czerwonych flag i przerywanie oszustwa w 3 scenariuszach; przepisy kk do scenek, ocena adresów (Lista Ostrzeżeń), plan reakcji „Pomóż Mai” i zgłaszanie incydentu.",
+      "limitations": "IV.1 częściowo: lekcja nie ma już projektu zespołowego (decyzja nauczyciela — praca samodzielna). Fakty prawne i dane CERT Polska oznaczone w panelu nauczyciela do weryfikacji.",
       "migraReference": "M1"
+    },
+    {
+      "lessonId": "44",
+      "grade": 2,
+      "numberInGrade": 1,
+      "title": "Podstawowe pojęcia i przykłady bazy danych – obsługa szkolnych zawodów pływackich",
+      "file": "content/lessons/44-swimming-database-g2.js",
+      "requirements": [
+        "II.3.d"
+      ],
+      "activityIds": [
+        "zw-explore",
+        "zw-board"
+      ],
+      "evidence": "Ponowne użycie lekcji 22 (klasa 3): odczyt relacji i integralność danych w bazie zawodów.",
+      "limitations": "Wprowadzenie do baz; dalsze tematy baz danych w lekcjach 05, 10–12.",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "45",
+      "grade": 2,
+      "numberInGrade": 2,
+      "title": "Zasady tworzenia kwerend na przykładzie bazy Zawody",
+      "file": "content/lessons/45-queries-zawody-g2.js",
+      "requirements": [
+        "II.3.d"
+      ],
+      "activityIds": [
+        "zq-l1",
+        "zq-l2",
+        "zq-l3"
+      ],
+      "evidence": "Ponowne użycie lekcji 25 (klasa 3): kwerendy z kryteriami, sortowaniem, relacjami i podsumowaniem.",
+      "limitations": "SQL jest podglądem projektu, nie osobnym edytorem języka.",
+      "migraReference": "M2"
     },
     {
       "lessonId": "05",
       "grade": 2,
-      "numberInGrade": 1,
+      "numberInGrade": 3,
       "title": "Tworzenie bazy danych – obsługa gabinetu stomatologicznego",
       "file": "content/lessons/05-dental-database.js",
       "requirements": [
@@ -475,7 +510,7 @@
     {
       "lessonId": "10",
       "grade": 2,
-      "numberInGrade": 2,
+      "numberInGrade": 4,
       "title": "Importowanie danych z innych dokumentów do tabeli bazy danych",
       "file": "content/lessons/10-data-import.js",
       "requirements": [
@@ -492,7 +527,7 @@
     {
       "lessonId": "11",
       "grade": 2,
-      "numberInGrade": 3,
+      "numberInGrade": 5,
       "title": "Przygotowanie kwerend w bazie Stomatolog",
       "file": "content/lessons/11-queries.js",
       "requirements": [
@@ -510,7 +545,7 @@
     {
       "lessonId": "12",
       "grade": 2,
-      "numberInGrade": 4,
+      "numberInGrade": 6,
       "title": "Przygotowanie korespondencji seryjnej",
       "file": "content/lessons/12-mail-merge.js",
       "requirements": [
@@ -528,7 +563,7 @@
     {
       "lessonId": "16",
       "grade": 2,
-      "numberInGrade": 5,
+      "numberInGrade": 7,
       "title": "Szyfrowanie tekstu metodą podstawieniową",
       "file": "content/lessons/16-substitution-cipher.js",
       "requirements": [
@@ -548,7 +583,7 @@
     {
       "lessonId": "17",
       "grade": 2,
-      "numberInGrade": 6,
+      "numberInGrade": 8,
       "title": "Programowanie algorytmu szyfrowania tekstu metodą podstawieniową",
       "file": "content/lessons/17-cipher-python.js",
       "requirements": [
@@ -571,7 +606,7 @@
     {
       "lessonId": "18",
       "grade": 2,
-      "numberInGrade": 7,
+      "numberInGrade": 9,
       "title": "Algorytmy porządkowania liczb",
       "file": "content/lessons/18-sorting-algorithms.js",
       "requirements": [
@@ -590,7 +625,7 @@
     {
       "lessonId": "19",
       "grade": 2,
-      "numberInGrade": 8,
+      "numberInGrade": 10,
       "title": "Programowanie algorytmów porządkowania metodą bąbelkową",
       "file": "content/lessons/19-bubble-sort.js",
       "requirements": [
@@ -611,7 +646,7 @@
     {
       "lessonId": "20",
       "grade": 2,
-      "numberInGrade": 9,
+      "numberInGrade": 11,
       "title": "Programowanie algorytmów porządkowania przez wstawianie",
       "file": "content/lessons/20-insertion-sort.js",
       "requirements": [
@@ -634,7 +669,7 @@
     {
       "lessonId": "21",
       "grade": 2,
-      "numberInGrade": 10,
+      "numberInGrade": 12,
       "title": "Obliczanie wartości elementów ciągu metodą iteracyjną, w tym wartości elementów ciągu Fibonacciego",
       "file": "content/lessons/21-sequences-fibonacci.js",
       "requirements": [
@@ -650,6 +685,117 @@
       ],
       "evidence": "Modelowanie ciągu, input/print, iteracja, fib(n) i testy.",
       "limitations": "Iteracyjny Fibonacci realizuje I.2.d; prosta rekurencja i złota proporcja są dodatkami, nie obowiązkiem tego punktu.",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "46",
+      "grade": 2,
+      "numberInGrade": 13,
+      "title": "Programowanie algorytmów iteracyjnych",
+      "file": "content/lessons/46-iterative-python.js",
+      "requirements": [
+        "I.1",
+        "I.2.d",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "it-trace",
+        "it-parsons",
+        "it-loan",
+        "it-digits"
+      ],
+      "evidence": "Algorytmy iteracyjne w Pythonie (silnia, potęga, suma cyfr, raty/oszczędności): śledzenie, układanka, naprawa błędu i własny kod z testami.",
+      "limitations": "—",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "47",
+      "grade": 2,
+      "numberInGrade": 14,
+      "title": "Wybrane algorytmy na liczbach",
+      "file": "content/lessons/47-number-algorithms.js",
+      "requirements": [
+        "I.1",
+        "I.2.a",
+        "I.3"
+      ],
+      "activityIds": [
+        "nl-prime",
+        "nl-factor",
+        "nl-euclid",
+        "nl-lcm"
+      ],
+      "evidence": "Symulator numberLab: test pierwszości, rozkład na czynniki, NWD Euklidesa (odejmowanie i reszta) i NWW krok po kroku z przewidywaniem kroków.",
+      "limitations": "Lekcja bez kodu; programowanie w 48.",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "48",
+      "grade": 2,
+      "numberInGrade": 15,
+      "title": "Programowanie wybranych algorytmów na liczbach",
+      "file": "content/lessons/48-number-algorithms-python.js",
+      "requirements": [
+        "I.1",
+        "I.2.a",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "ln-prime",
+        "ln-gcd",
+        "ln-factor",
+        "ln-lcm"
+      ],
+      "evidence": "Własne funkcje czy_pierwsza, nwd, rozkład i nww w Pythonie z testami brzegowymi i porównaniem z math.gcd.",
+      "limitations": "—",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "49",
+      "grade": 2,
+      "numberInGrade": 16,
+      "title": "Działania na ułamkach zwykłych z wykorzystaniem NWD i NWW",
+      "file": "content/lessons/49-fractions.js",
+      "requirements": [
+        "I.1",
+        "I.2.a",
+        "I.3"
+      ],
+      "activityIds": [
+        "nf-simplify",
+        "nf-addsub",
+        "nf-mul",
+        "nf-mix"
+      ],
+      "evidence": "numberLab: skracanie przez NWD, wspólny mianownik przez NWW, działania na ułamkach w praktycznych kontekstach (przepisy, proporcje mieszanek).",
+      "limitations": "Lekcja bez kodu; programowanie w 50.",
+      "migraReference": "M2"
+    },
+    {
+      "lessonId": "50",
+      "grade": 2,
+      "numberInGrade": 17,
+      "title": "Programowanie działań na ułamkach z wykorzystaniem NWD i NWW",
+      "file": "content/lessons/50-fractions-python.js",
+      "requirements": [
+        "I.1",
+        "I.2.a",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "fp-skroc",
+        "fp-add",
+        "fp-sub",
+        "fp-calc"
+      ],
+      "evidence": "Funkcje na ułamkach jako krotkach (skracanie, dodawanie, odejmowanie, kalkulator) z kontrolą mianownika 0 i porównaniem z fractions.Fraction.",
+      "limitations": "—",
       "migraReference": "M2"
     },
     {
@@ -841,6 +987,160 @@
       ],
       "evidence": "Korespondencja seryjna i projekt listu, jak w 12, dla klasy 3.",
       "limitations": "Część II.3.b; ponowne wykorzystanie nie pokrywa brakujących funkcji edytora.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "53",
+      "grade": 3,
+      "numberInGrade": 11,
+      "title": "Wybrane algorytmy na tekstach",
+      "file": "content/lessons/53-text-algorithms.js",
+      "requirements": [
+        "I.1",
+        "I.2.b",
+        "I.3"
+      ],
+      "activityIds": [
+        "tl-compare",
+        "tl-detective",
+        "tl-pattern",
+        "ta-match"
+      ],
+      "evidence": "Symulator textLab: porównywanie leksykograficzne, zliczanie, palindromy, anagramy i naiwne wyszukiwanie wzorca krok po kroku z licznikiem porównań.",
+      "limitations": "Lekcja bez kodu; programowanie tych algorytmów w 55–56.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "54",
+      "grade": 3,
+      "numberInGrade": 12,
+      "title": "Praca z danymi tekstowymi w języku Python",
+      "file": "content/lessons/54-python-strings.js",
+      "requirements": [
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "ps-mask",
+        "ps-name",
+        "ps-initials",
+        "ps-digits",
+        "ps-nick"
+      ],
+      "evidence": "Zadania pythonLab na typie str: indeksy, wycinki, pętla po znakach, metody tekstowe, ord/chr; testy automatyczne.",
+      "limitations": "I.2.b częściowo — przygotowanie do algorytmów na tekstach.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "55",
+      "grade": 3,
+      "numberInGrade": 13,
+      "title": "Programowanie algorytmów na tekstach w języku Python – porównywanie tekstów i zliczanie znaku w tekście",
+      "file": "content/lessons/55-compare-count-python.js",
+      "requirements": [
+        "I.1",
+        "I.2.b",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "pc-zlicz",
+        "pc-less",
+        "pc-pal",
+        "pc-anagram"
+      ],
+      "evidence": "Własne funkcje: zliczanie znaku, porównanie tekstów, palindrom, anagram — z testami brzegowymi i porównaniem z wbudowanymi.",
+      "limitations": "Polskie znaki w porównaniu tylko według kodów znaków.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "56",
+      "grade": 3,
+      "numberInGrade": 14,
+      "title": "Programowanie algorytmów na tekstach w języku Python – wyszukiwanie wzorca w tekście",
+      "file": "content/lessons/56-pattern-search-python.js",
+      "requirements": [
+        "I.1",
+        "I.2.b",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "pw-parsons",
+        "pw-count",
+        "pw-builtin",
+        "pw-chat"
+      ],
+      "evidence": "Naiwne wyszukiwanie wzorca w Pythonie: wszystkie i nakładające się wystąpienia, liczba porównań, porównanie ze str.find.",
+      "limitations": "Tylko metoda naiwna.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "51",
+      "grade": 3,
+      "numberInGrade": 15,
+      "title": "Podstawowe pojęcia dotyczące szyfrowania i szyfrowanie tekstu metodą podstawieniową",
+      "file": "content/lessons/51-substitution-cipher-g3.js",
+      "requirements": [
+        "I.2.b",
+        "I.3",
+        "V.3"
+      ],
+      "activityIds": [
+        "cipher-caesar",
+        "cipher-duel",
+        "cipher-crack"
+      ],
+      "evidence": "Ponowne użycie lekcji 16 (klasa 2): szyfrowanie, deszyfrowanie i sprawdzanie kluczy.",
+      "limitations": "Jak w lekcji 16; pojedynek w parze opcjonalny.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "52",
+      "grade": 3,
+      "numberInGrade": 16,
+      "title": "Programowanie algorytmu szyfrowania podstawieniowego",
+      "file": "content/lessons/52-cipher-python-g3.js",
+      "requirements": [
+        "I.1",
+        "I.2.b",
+        "I.3",
+        "II.1",
+        "V.3"
+      ],
+      "activityIds": [
+        "cp-loop",
+        "cp-cipher",
+        "cp-crack"
+      ],
+      "evidence": "Ponowne użycie lekcji 17 (klasa 2): program szyfrujący w Pythonie z testami.",
+      "limitations": "Jak w lekcji 17; praca samodzielna.",
+      "migraReference": "M3"
+    },
+    {
+      "lessonId": "57",
+      "grade": 3,
+      "numberInGrade": 17,
+      "title": "Programowanie zamiany liczby dwójkowej na dziesiętną",
+      "file": "content/lessons/57-binary-to-decimal.js",
+      "requirements": [
+        "I.1",
+        "I.2.a",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "pb-weights",
+        "pb-horner",
+        "pb-valid",
+        "pb-ip"
+      ],
+      "evidence": "Zamiana dwójkowy→dziesiętny metodą pozycyjną i schematem Hornera, walidacja wejścia, porównanie z int(x, 2).",
+      "limitations": "I.2.a częściowo — tylko zamiana 2→10; pozostałe w tematach 24–25.",
       "migraReference": "M3"
     }
   ],
