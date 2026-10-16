@@ -1,3 +1,4 @@
+import {DESKTOP_APPS,desktopApp} from '../content/desktop-apps.js';
 import React from 'react';
 import {Icon} from './icons.jsx';
 import './word-workshop.css';
@@ -35,4 +36,4 @@ export function WordRubric({data,value={},onChange}){
  </section>;
 }
 
-export function WordWorkspaceNotice(){return <aside className="word-workspace-notice"><Icon name="desktop" size={27}/><div><strong>Przeglądarka obok Worda</strong><p>Pobierz dokument startowy, zapisz własną kopię i otwórz ją w zainstalowanym Wordzie. Przełączaj okna skrótem Alt+Tab lub ustaw je obok siebie. Instrukcje opisują Worda dla Windows; nazwy poleceń mogą się nieznacznie różnić między wersjami. Zapisuj pracę Ctrl+S. Strona nie przesyła pliku nauczycielowi.</p></div></aside>;}
+export function WordWorkspaceNotice({workspace='desktop-word'}){const app=desktopApp(workspace)||DESKTOP_APPS['desktop-word'];return <aside className="word-workspace-notice"><Icon name="desktop" size={27}/><div><strong>Przeglądarka obok {app.gen}</strong><p>Pobierz {app.file}, zapisz własną kopię i otwórz ją w zainstalowanym {app.loc}. Przełączaj okna skrótem Alt+Tab lub ustaw je obok siebie. Instrukcje opisują {app.gen} dla Windows; nazwy poleceń mogą się nieznacznie różnić między wersjami. Zapisuj pracę Ctrl+S. Strona nie przesyła pliku nauczycielowi.</p></div></aside>;}
