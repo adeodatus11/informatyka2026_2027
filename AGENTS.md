@@ -15,7 +15,7 @@
 - 45 min, 4–7 etapów, retrieval na starcie, karta wyniku na końcu. Bez pracy domowej, bez logowania, wszystko w przeglądarce (wyjątki: Word/Excel/PowerPoint stacjonarne przez `workspace:'desktop-word'|'desktop-excel'|'desktop-powerpoint'`, wiersz poleceń Windows 11).
 - Pary: tak, ale nie na każdej lekcji (ok. co trzecia) i tylko gdy naturalnie coś dają; pary zamiast trójek; bez sztywnych ról i ocen koleżeńskich na siłę; zawsze wariant solo.
 - Bez sztucznych produktów/generatorów na platformie; plakat/grafika tylko w Canvie albo przez prompt do AI (opcja, z nauką promptu).
-- Nie budujemy edytorów grafiki na platformie — grafika w gotowych edytorach online (wybór do akceptacji nauczyciela).
+- Nie budujemy edytorów grafiki na platformie. Grafika 2D: darmowe aplikacje ArtCraft (PhotoCraft — raster, VectorCraft — wektor; instalowane, bez konta, stan alfa — `docs/artcraft-desktop.md`). Grafika 3D (SketchUp): narzędzie do wyboru przez nauczyciela (propozycja w `docs/notatki-realizacji/`).
 - Pliki DOCX ucznia są sprawdzane lokalnie w przeglądarce (`docxCheck`, nic nie jest wysyłane) — `docs/word-desktop.md`.
 - Bieżące zlecenie dla wykonawcy zewnętrznego: `docs/zlecenie-codex.md`.
 
