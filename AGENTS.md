@@ -9,6 +9,16 @@
 - Czytaj `docs/podstawa-programowa/README.md`, mapę lekcji i luki. Zakres: PP 2024, liceum/technikum, podstawowy; język realizacji Python. Nie utożsamiaj go z podstawą szkoły branżowej.
 - Po zmianie zakresu zajęć aktualizuj `docs/podstawa-programowa/mapowanie.json`, mapę czytelną i macierz pokrycia. Sprawdzaj konkretne czynności ucznia, nie sam tytuł tematu.
 
+## Skrót decyzji nauczyciela (stan 25.10.2026)
+
+- Grupa docelowa: technikum 15–18 lat, niska motywacja — realna korzyść, szybkie sukcesy, krótko. Szczegóły: `docs/profil-ucznia.md`.
+- 45 min, 4–7 etapów, retrieval na starcie, karta wyniku na końcu. Bez pracy domowej, bez logowania, wszystko w przeglądarce (wyjątki: Word/Excel/PowerPoint stacjonarne przez `workspace:'desktop-word'|'desktop-excel'|'desktop-powerpoint'`, wiersz poleceń Windows 11).
+- Pary: tak, ale nie na każdej lekcji (ok. co trzecia) i tylko gdy naturalnie coś dają; pary zamiast trójek; bez sztywnych ról i ocen koleżeńskich na siłę; zawsze wariant solo.
+- Bez sztucznych produktów/generatorów na platformie; plakat/grafika tylko w Canvie albo przez prompt do AI (opcja, z nauką promptu).
+- Nie budujemy edytorów grafiki na platformie — grafika w gotowych edytorach online (wybór do akceptacji nauczyciela).
+- Pliki DOCX ucznia są sprawdzane lokalnie w przeglądarce (`docxCheck`, nic nie jest wysyłane) — `docs/word-desktop.md`.
+- Bieżące zlecenie dla wykonawcy zewnętrznego: `docs/zlecenie-codex.md`.
+
 ## Obowiązkowy zasób metodyczny
 
 **Przy projektowaniu lub istotnej zmianie lekcji korzystaj z https://metodyka.covepolska.pl/.** Przeczytaj strony wybranych metod, a następnie przełóż je na realne czynności w scenariuszu. Sam link albo nazwa metody nie wystarczy.
@@ -22,8 +32,8 @@
 
 - Zachowuj istniejącą aplikację React, nawigację etapów, widok nauczyciela i typy aktywności. Nie projektuj od zera layoutu kolejnej lekcji. Wspólne elementy rozszerzaj raz; zasady są w `docs/lesson-blueprint.md`.
 - Stałe `id` jest unikalne w całym serwisie, natomiast numer wyświetlany zaczyna się od 1 w każdej klasie. Nie zmieniaj istniejących ID.
-- Lekcje Worda zakładają **stacjonarny Word zainstalowany na komputerze**, nie symulator ani Word Online. Instrukcje, wyjaśnienia i testy są na platformie, produkt ucznia powstaje w DOCX. Szczegóły w `docs/word-desktop.md`.
-- Samoocena, quiz i ocena rzeczywistego pliku to trzy różne rzeczy. Nie przedstawiaj zaznaczonej checklisty jako automatycznej weryfikacji dokumentu. Nie wysyłaj prac ani korespondencji bez odrębnego polecenia użytkownika.
+- Lekcje Worda, Excela i PowerPointa zakładają **stacjonarny program zainstalowany na komputerze**, nie symulator ani wersję online. Instrukcje, wyjaśnienia i testy są na platformie, produkt ucznia powstaje w pliku. Szczegóły w `docs/word-desktop.md`, `docs/excel-desktop.md`, `docs/powerpoint-desktop.md`.
+- Samoocena, quiz i ocena rzeczywistego pliku to trzy różne rzeczy. Nie przedstawiaj zaznaczonej checklisty jako automatycznej weryfikacji dokumentu (automatyczna jest tylko `docxCheck`, czytający plik lokalnie). Nie wysyłaj prac ani korespondencji bez odrębnego polecenia użytkownika.
 - Materiały do pobrania twórz w `public/materials/`; uruchomienie build kopiuje je do katalogu publikacji. Pliki powinny być samodzielne i zawierać fikcyjne dane. Sprawdzaj strukturę DOCX oraz wygląd po renderowaniu.
 - Walidacja: `node scripts/check-curriculum.mjs`, `npm test`, testy dotyczące zmienianych komponentów i `npm run build`. Sprawdź w przeglądarce nowy przebieg, telefon, pobranie plików i widok nauczyciela.
 - GitHub Pages publikuje `main` z katalogu głównego, więc do publikacji muszą trafić także wyniki budowy, a nie tylko pliki `content/`.
