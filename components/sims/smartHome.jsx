@@ -8,7 +8,7 @@ import {PRICE,TARGET_SAVINGS,devices,measures,deviceKwh,formula,energyPlan,route
 const pts=n=>String(n).replace('.',',');
 function Msg({m}){if(!m)return null;return <div className={`sh-msg ${m.ok?'is-ok':'is-retry'}`} role="status"><Icon name={m.ok?'check':'warning'} size={20}/><div>{m.text}</div></div>;}
 const kindLabel={energy:['Energia','energy'],safety:['Bezpieczeństwo','shield'],comfort:['Wygoda','house'],weak:['Bez jasnego sensu','circle'],risky:['RYZYKO','warning']};
-const roles=[['all','Wszystkie (solo)'],['energy','Energetyk'],['security','Strażnik'],['auto','Automatyk']];
+const roles=[['all','Wszystkie'],['energy','Energia'],['security','Bezpieczeństwo'],['auto','Automatyzacje']];
 const payText=p=>p.cost===0?(p.savings>0?'od razu (koszt 0 zł)':'—'):p.payback===Infinity?'nigdy':p.payback<1?'poniżej miesiąca':`ok. ${fmt(Math.ceil(p.payback))} mies.${p.payback>24?` (${fmt(p.payback/12,0,1)} lat)`:''}`;
 
 function Energy({v,save}){
@@ -86,7 +86,7 @@ function Plan({v,save,r}){
   </article>
   <label className="sh-field sh-note-field"><span>Najważniejsza decyzja w planie i dlaczego (1–2 zdania)</span><textarea rows={3} maxLength={400} value={v.planNote||''} onChange={e=>save({...v,planNote:e.target.value})} placeholder="Np. Listwa na RTV, bo dekoder w czuwaniu zjadał prawie 200 zł rocznie."/></label>
   <ul className="sh-goals" aria-label="Kryteria sukcesu">{crit.map(([ok,t])=><li key={t} className={ok?'is-ok':''}><Icon name={ok?'check':'circle'} size={18}/>{t}<span className="sr-only">{ok?' — spełnione':' — jeszcze nie'}</span></li>)}</ul>
-  {r.done&&<p className="sh-final" role="status"><Icon name="trophy" size={22}/>Plan gotowy do oceny koleżeńskiej. Wynik: {pts(r.score)}/12 pkt.</p>}
+  {r.done&&<p className="sh-final" role="status"><Icon name="trophy" size={22}/>Plan gotowy — sprawdźcie go według kryteriów. Wynik: {pts(r.score)}/12 pkt.</p>}
  </div>;
 }
 
@@ -97,7 +97,7 @@ export default function SmartHome({value,onChange}){
  const pick=t=>{setTab(t);save({...v,tab:t});};
  return <section className="sh" aria-label="Projekt: inteligentny dom Nowaków">
   <header className="sh-bar"><Icon name="house" size={20}/><strong>DomOS · dom Nowaków</strong><span className="sh-sim">symulacja</span><span className="sh-score">{pts(r.score)}/12 pkt</span></header>
-  <div className="sh-roles" role="group" aria-label="Moja rola w trójce"><span>Moja rola:</span>{roles.map(([k,l])=><button type="button" key={k} aria-pressed={role===k} onClick={()=>save({...v,role:k})}>{l}</button>)}</div>
+  <div className="sh-roles" role="group" aria-label="Moja część planu (opcjonalnie, przy podziale zakładek w parze)"><span>Moja część (opcjonalnie):</span>{roles.map(([k,l])=><button type="button" key={k} aria-pressed={role===k} onClick={()=>save({...v,role:k})}>{l}</button>)}</div>
   <div className="sh-tabs" role="group" aria-label="Zakładki projektu">{tabs.map(([k,l,ic,sc,rk,sh])=><button type="button" key={k} aria-pressed={tab===k} aria-label={`${l}${sc!==null?`, ${pts(sc)} na 4 pkt`:''}${role!=='all'&&rk===role?', Twoja zakładka':''}`} onClick={()=>pick(k)}><Icon name={ic} size={18}/><span className="sh-long">{l}</span><span className="sh-short" aria-hidden="true">{sh}</span>{sc!==null&&<em>{pts(sc)}/4</em>}{role!=='all'&&rk===role&&<i className="sh-mine">Twoja</i>}</button>)}</div>
   {tab==='energy'&&<Energy v={v} save={save}/>}
   {tab==='security'&&<Security v={v} save={save}/>}

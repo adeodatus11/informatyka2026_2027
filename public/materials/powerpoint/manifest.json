@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "target": "Microsoft PowerPoint na komputerze (Windows), 16:9",
+  "generator": "scripts/build-powerpoint-materials.py (tylko biblioteka standardowa Pythona)",
+  "fixtures": [
+    {
+      "lesson": 75,
+      "filename": "lesson-75-start.pptx",
+      "topic": "Praktyki zawodowe – celowo zła prezentacja",
+      "slides": 6,
+      "layouts": 8,
+      "deliberateProblems": [
+        "ręczne formatowanie w symbolach zastępczych (Comic Sans, Impact, Times New Roman, kolory)",
+        "ręcznie zmienione tła slajdów 1 i 6",
+        "ściana tekstu 14 pt na slajdzie 2",
+        "jasnożółty tekst na białym tle i 5 animacji na slajdzie 3",
+        "zdjęcie ze znakiem wodnym fotobanku, rozciągnięte, bez źródła na slajdzie 4",
+        "tabela 8×4 w 11 pt zamiast jednej myśli lub wykresu na slajdzie 5",
+        "czerwony tekst na zielonym tle na slajdzie 6",
+        "brak notatek prelegenta i slajdu ze źródłami",
+        "efektowne przejścia (koło, szachownica, podział)"
+      ],
+      "expectedOperations": [
+        "Zapisz jako lesson-75-nazwisko.pptx",
+        "Resetuj slajdy i tła",
+        "Wzorzec slajdów: wspólna czcionka tytułów",
+        "Podziel slajd 2, resztę przenieś do notatek",
+        "Usuń ozdobniki i zbędne animacje",
+        "Zamień zdjęcie na lesson-75-grafika.png z podpisem",
+        "Dodaj slajd Źródła i notatki"
+      ]
+    },
+    {
+      "lesson": 75,
+      "filename": "lesson-75-grafika.png",
+      "topic": "Autorska ilustracja stanowiska pracy (bez znaku wodnego) do podmiany; podpis: Ilustracja „Stanowisko pracy”, materiały lekcji Informatyka praktycznie, CC0"
+    },
+    {
+      "lesson": 76,
+      "filename": "lesson-76-start.pptx",
+      "topic": "Fryderyk Chopin – starter projektu",
+      "slides": 8,
+      "layouts": 15,
+      "structure": [
+        "tytuł",
+        "hak",
+        "życie w 3 faktach",
+        "Warszawa i Paryż",
+        "muzyka (link/QR opcjonalnie)",
+        "ciekawostka",
+        "Chopin dziś (opcjonalny)",
+        "źródła"
+      ],
+      "notes": "każdy slajd ma notatkę prelegenta z podpowiedzią",
+      "prompts": "puste symbole zastępcze z własnym tekstem podpowiedzi (hasCustomPrompt) w układach „Chopin – …”"
+    }
+  ]
+}

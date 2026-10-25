@@ -9,7 +9,7 @@ export default {
   name:'Escape room w parach',
   student:'Najpierw krótka rozgrzewka i 4 zadania na przełącznikach bitów. Potem z partnerem uciekacie z serwerowni: 4 kłódki z kodami hex. Efekt: odblokowane drzwi, czas ucieczki i punkty na karcie wyniku.',
   teacher:'Start: retrieval practice z lekcji o systemie dwójkowym, bez notatek (2 min), i szybki hak z kolorami. Potem nauczanie jawne: pokazujesz 2 przykłady na konwerterze (0xA7 → 1010 0111 i 0x2F → 47), uczniowie samodzielnie robią 4 zadania. Główna część to escape room w parach — mastery learning: każda kłódka otwiera się dopiero po poprawnym rozwiązaniu poprzedniej, a błędna próba daje wskazówkę prowadzącą do poprawy. Ty krążysz między parami i zadajesz pytania („jak to sprawdziliście?”), zamiast podawać wynik. Szybkie pary grają w „Trafisz kolor?”, reszta kończy kłódki.',
-  grouping:'Pary (dopuszczalna trójka). Każdy wpisuje odpowiedzi na swoim urządzeniu, ale para się naradza. Przy nieparzystej liczbie osób — jedna trójka albo praca samodzielna: symulator działa tak samo.',
+  grouping:'Escape room w parach z sąsiadem: każdy wpisuje odpowiedzi na swoim urządzeniu, ale para się naradza. Kto nie ma pary albo woli sam — gra solo: symulator i punkty są takie same.',
   methods:[
    {name:'Mastery learning',url:'https://metodyka.covepolska.pl/metoda-mastery-learning.html'},
    {name:'Retrieval practice',url:'https://metodyka.covepolska.pl/metoda-retrieval-practice.html'},

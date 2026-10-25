@@ -105,7 +105,7 @@ export const footerParts=[
  {id:'sa',text:'Przerobiona grafika jest dostępna na licencji CC BY-SA 4.0.',required:true,why:'SA: przeróbkę udostępniacie na tej samej licencji.'},
  {id:'google',text:'Źródło: Google Grafika',required:false,why:'Wyszukiwarka to nie źródło. Podaj stronę, na której zdjęcie opublikował autor.'},
  {id:'nci',text:'No copyright infringement intended',required:false,why:'Ten popularny dopisek nic nie znaczy prawnie. Liczy się spełnienie warunków licencji.'},
- {id:'arr',text:'© Wszystkie prawa zastrzeżone — nasza trójka',required:false,why:'To nie Wasze zdjęcie, a SA zabrania zastrzegania wszystkich praw do przeróbki.'},
+ {id:'arr',text:'© Wszystkie prawa zastrzeżone — autorzy projektu',required:false,why:'To nie Wasze zdjęcie, a SA zabrania zastrzegania wszystkich praw do przeróbki.'},
  {id:'free',text:'Licencja: darmowe',required:false,why:'„Darmowe” to nie nazwa licencji. Darmowe ≠ wolno wszystko.'}
 ];
 const sentenceParts=new Set(['change','sa']);
@@ -122,7 +122,7 @@ export function checkFooter(cur={}){
 }
 export const footerPoints=f=>f?.ok?(f.tries===1?2:1):0;
 
-// Karta licencyjna — produkt trójki.
+// Karta licencyjna — produkt pary (albo ucznia pracującego samodzielnie).
 export function cardComplete(card={}){return (card.name||'').trim().length>=3&&(card.team||'').trim().length>=2&&(card.reason||'').trim().length>=15&&!!licenseFrom(card.answers||{});}
 export function cardFooter(card={},year=new Date().getFullYear()){
  const id=licenseFrom(card.answers||{});if(!id)return '';const l=licenses[id];const name=(card.name||'').trim()||'Nasz projekt';const team=(card.team||'').trim()||'nasz zespół';
