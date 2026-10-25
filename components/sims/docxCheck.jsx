@@ -77,6 +77,7 @@ function HeaderFooter({kind,sec,i,ctx}){
  const name=kind==='header'?'Nagłówek strony':'Stopka';
  const linked=i>0&&sec.linked[kind].default&&path;
  const hl=ctx.hl.has(kind);
+ if(!part&&i>0)return null; // pusta ramka tylko w pierwszej sekcji
  return <div id={i===0?ctx.pid(kind):undefined} tabIndex={-1} className={`dxc-hf dxc-hf-${kind} ${hl?'is-hl':''}`}>
   <span className="dxc-hf-label">{name}{linked?' · połączony z poprzednim':''}{sec.titlePg?' · inna pierwsza strona':''}</span>
   {part&&part.blocks.some(b=>b.kind==='table'||b.text.trim()||b.segs.length)?part.blocks.map(b=><Block key={b.id} b={b} ctx={ctx}/>):<span className="dxc-none">{name.toLowerCase()} — pusta</span>}

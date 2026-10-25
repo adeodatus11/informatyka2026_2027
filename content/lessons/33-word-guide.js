@@ -16,7 +16,7 @@ export default {
   "materials": [
     "Komputer z Microsoft Word dla Windows 2019/2021/2024 lub Microsoft 365; polecenia mogą mieć nieco inne etykiety w poszczególnych wydaniach.",
     "Przeglądarka z tą lekcją oraz pobrany dokument DOCX. Internet służy pobraniu materiałów; edycja odbywa się w Wordzie na komputerze.",
-    "Własny folder roboczy. Zapisuj Ctrl+S; do oddania plików użyj kanału wskazanego przez nauczyciela. Platforma nie przesyła i nie sprawdza plików Word."
+    "Własny folder roboczy. Zapisuj Ctrl+S; do oddania plików użyj kanału wskazanego przez nauczyciela. Platforma nie przesyła plików — sprawdza je lokalnie w Twojej przeglądarce."
   ],
   "format": {
     "methods": [
@@ -370,7 +370,7 @@ export default {
         {
           "type": "resultCard",
           "id": "w33-result",
-          "title": "Sprawdzenie wiedzy — quiz",
+          "title": "Wiedza i plik",
           "hideGrade": true,
           "sources": [
             "w33-docx-review",

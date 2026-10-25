@@ -16,7 +16,7 @@ export function WordSteps({data,lesson}){const app=desktopApp(lesson?.workspace)
  </section>;
 }
 
-export function WordRubric({data,value={},onChange,lesson}){const app=desktopApp(lesson?.workspace)||DESKTOP_APPS['desktop-word'];
+export function WordRubric({data,value={},onChange,lesson}){const app=desktopApp(lesson?.workspace)||DESKTOP_APPS['desktop-word'];const hasCheck=!!lesson?.sections?.some(s=>s.activities.some(a=>a.type==='docxCheck'));
  const ratings=value.ratings||{};
  const complete=data.criteria.every((c,i)=>Number.isInteger(ratings[i])&&ratings[i]>=0&&ratings[i]<=c.points);
  const total=data.criteria.reduce((sum,c,i)=>sum+(Number.isInteger(ratings[i])?Math.max(0,Math.min(c.points,ratings[i])):0),0);
@@ -25,7 +25,7 @@ export function WordRubric({data,value={},onChange,lesson}){const app=desktopApp
  return <section className="word-rubric activity" aria-labelledby={`${data.id}-title`}>
   <p className="word-rubric-kicker">{app.doc} do obejrzenia w {app.loc}</p>
   <h3 id={`${data.id}-title`}>{data.title||'Kryteria pracy praktycznej'}</h3>
-  <p>Otwórz swój plik i sprawdź każde kryterium. To Twoja samoocena. Strona nie odczytuje dokumentu i nie potwierdza, że wykonano czynności w {app.loc}. Ocenę pracy ustala nauczyciel po obejrzeniu pliku.</p>
+  <p>{hasCheck?'Platforma sprawdziła automatycznie to, co da się odczytać z pliku (sprawdzarka powyżej). Tu oceniasz sam to, czego automat nie zmierzy — wygląd stron, sens treści i kontrolę. Plik czyta tylko Twoja przeglądarka, nic nie jest wysyłane.':`Otwórz swój plik i sprawdź każde kryterium. To Twoja samoocena. Strona nie odczytuje pliku i nie potwierdza, że wykonano czynności w ${app.loc}.`} Ocenę pracy ustala nauczyciel po obejrzeniu pliku.</p>
   {data.filename&&<p className="word-filename">Zapisz pracę jako <strong>{data.filename}</strong></p>}
   <div className="word-criteria">{data.criteria.map((c,i)=><div className="word-criterion" key={`${data.id}-${i}`}>
    <div><label htmlFor={`${data.id}-criterion-${i}`}>{c.label}<span>0–{c.points} pkt</span></label><p id={`${data.id}-description-${i}`}>{c.description}</p></div>

@@ -16,7 +16,7 @@ export default {
   "materials": [
     "Komputer z Microsoft Word dla Windows 2019/2021/2024 lub Microsoft 365; polecenia mogą mieć nieco inne etykiety w poszczególnych wydaniach.",
     "Przeglądarka z tą lekcją oraz pobrany dokument DOCX. Internet służy pobraniu materiałów; edycja odbywa się w Wordzie na komputerze.",
-    "Własny folder roboczy. Zapisuj Ctrl+S; do oddania plików użyj kanału wskazanego przez nauczyciela. Platforma nie przesyła i nie sprawdza plików Word."
+    "Własny folder roboczy. Zapisuj Ctrl+S; do oddania plików użyj kanału wskazanego przez nauczyciela. Platforma nie przesyła plików — sprawdza je lokalnie w Twojej przeglądarce."
   ],
   "format": {
     "methods": [
@@ -213,7 +213,7 @@ export default {
       "label": "Ocena",
       "title": "Ocena — dwa pliki, jeden proces",
       "duration": 6,
-      "intro": "Oddaj oba pliki kanałem ustalonym z nauczycielem. Platforma sprawdza wyłącznie odpowiedzi quizowe, a rubryka jest Twoją samooceną.",
+      "intro": "Oddaj oba pliki kanałem ustalonym z nauczycielem. Najpierw wgraj oba pliki do sprawdzarki (plik czyta tylko Twoja przeglądarka), potem uzupełnij samoocenę tego, czego automat nie zmierzy.",
       "activities": [
         {
           "type": "choice",
@@ -285,7 +285,7 @@ export default {
         {
           "type": "resultCard",
           "id": "w32-result",
-          "title": "Sprawdzenie wiedzy — quiz",
+          "title": "Wiedza i plik",
           "hideGrade": true,
           "sources": [
             "w32-docx",
