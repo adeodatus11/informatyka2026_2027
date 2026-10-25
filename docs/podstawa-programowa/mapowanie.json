@@ -1,7 +1,7 @@
 {
   "basis": "PP2024-LO-TECH-P",
   "reviewedCommit": "91bffa3",
-  "reviewedOn": "2026-10-01",
+  "reviewedOn": "2026-10-25",
   "meaning": "Powiązanie tematyczne i dowód ćwiczenia; nie deklaracja pełnej realizacji wszystkich wskazanych punktów.",
   "lessons": [
     {
@@ -865,6 +865,294 @@
       "evidence": "Symulowane rozmowy z oszustem (scamChat): rozpoznawanie czerwonych flag i przerywanie oszustwa w 3 scenariuszach; przepisy kk do scenek, ocena adresów (Lista Ostrzeżeń), plan reakcji „Pomóż Mai” i zgłaszanie incydentu.",
       "limitations": "IV.1 częściowo: lekcja nie ma już projektu zespołowego (decyzja nauczyciela — praca samodzielna). Fakty prawne i dane CERT Polska oznaczone w panelu nauczyciela do weryfikacji.",
       "migraReference": "M1"
+    },
+    {
+      "lessonId": "77",
+      "grade": 1,
+      "title": "Funkcje zwracające wartość w języku Python",
+      "file": "content/lessons/77-python-g1.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "77-recall",
+        "77-predict",
+        "77-change",
+        "77-par",
+        "77-fix",
+        "77-own"
+      ],
+      "evidence": "Definiuję funkcję z parametrem i return. Odróżniam wyświetlenie wyniku od zwrócenia wartości. Testuję funkcję dla różnych danych. Dowód: Z lekcji 68: co kończy pętlę while?; Przewidź wynik; Zmień rabat na 20%; Ułóż działający kod; Napraw None zamiast ceny; Policz koszt biletów dla grupy",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 43
+    },
+    {
+      "lessonId": "78",
+      "grade": 1,
+      "title": "Funkcje niezwracające wartości w języku Python",
+      "file": "content/lessons/78-python-g1.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "78-recall",
+        "78-predict",
+        "78-change",
+        "78-par",
+        "78-fix",
+        "78-own"
+      ],
+      "evidence": "Definiuję funkcję bez parametrów. Wywołuję funkcję wykonującą czynność. Wyjaśniam skąd bierze się None. Dowód: Z poprzedniej lekcji: co robi return 5?; Przewidź wynik; Zmień komunikat na Gotowe; Ułóż działający kod; Usuń niepotrzebne None; Komunikat dla gracza",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 44
+    },
+    {
+      "lessonId": "79",
+      "grade": 1,
+      "title": "Definiowanie i stosowanie listy w języku Python",
+      "file": "content/lessons/79-python-g1.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "79-recall",
+        "79-predict",
+        "79-change",
+        "79-par",
+        "79-fix",
+        "79-own"
+      ],
+      "evidence": "Tworzę listę i dopisuję element. Odczytuję indeks, długość i wycinek. Sprawdzam obecność elementu przez in. Dowód: Z lekcji 78: jak wywołasz funkcję baner bez parametrów?; Przewidź wynik; Dopisz chleb do zakupów; Ułóż działający kod; Napraw indeks poza zakresem; Sprawdź czy produkt jest na liście",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 45
+    },
+    {
+      "lessonId": "80",
+      "grade": 1,
+      "title": "Wykonywanie operacji na elementach listy w języku Python",
+      "file": "content/lessons/80-python-g1.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "80-recall",
+        "80-predict",
+        "80-change",
+        "80-par",
+        "80-fix",
+        "80-own"
+      ],
+      "evidence": "Liczę sumę, minimum, maksimum i średnią. Sortuję listę bez zmiany oryginału. Filtruję listę pętlą i warunkiem. Dowód: Z lekcji 79: jaki indeks ma pierwszy element listy?; Przewidź wynik; Zrób ranking malejąco; Ułóż działający kod; Średnia także dla pustej listy; Wybierz wyniki od progu",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 46
+    },
+    {
+      "lessonId": "81",
+      "grade": 1,
+      "title": "Dane tekstowe w języku Python",
+      "file": "content/lessons/81-reuse-g1.js",
+      "requirements": [
+        "II.1",
+        "I.2.b",
+        "I.3",
+        "II.2"
+      ],
+      "activityIds": [
+        "81-recall",
+        "ps-predict1",
+        "ps-first",
+        "ps-predict2",
+        "ps-mask",
+        "ps-name",
+        "ps-initials",
+        "ps-trace",
+        "ps-digits",
+        "ps-nick"
+      ],
+      "evidence": "Odczytuję znaki i fragmenty napisu przez indeksy i wycinki, także ujemne. Używam len, upper, lower, strip, split, find, count i replace i wiem, co zwracają. Przechodzę pętlą for po znakach napisu i zamieniam znaki na kody (ord, chr). Piszę funkcje do maskowania numeru, poprawiania imion i sprawdzania nicku, które przechodzą testy. Dowód: Z lekcji 80: Co daje sorted([3, 1, 2])?; Co wypisze ten program?; Imię wielkimi literami i jego długość; Przewidź: indeksy i wycinki; Maskowanie numeru karty; Poprawianie imienia i nazwiska; Układanka: inicjały „J.K.”; Przykład rozwiązany: liczę cyfry w haśle; Ile cyfr ma hasło?; Walidator nicku: nick_ok(nick)",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 47
+    },
+    {
+      "lessonId": "92",
+      "grade": 1,
+      "title": "Wybrane algorytmy na tekstach",
+      "file": "content/lessons/92-reuse-g1.js",
+      "requirements": [
+        "I.2.b",
+        "I.1",
+        "I.3"
+      ],
+      "activityIds": [
+        "92-recall",
+        "tl-compare",
+        "tl-detective",
+        "tl-pattern",
+        "ta-match",
+        "ta-badminton"
+      ],
+      "evidence": "Porównuję dwa teksty znak po znaku i wyjaśniam, dlaczego komputer stawia „Zosia” przed „adam”. Przewiduję wynik zliczania znaku, sprawdzania palindromu i anagramu dla podanych słów. Wykonuję krok po kroku wyszukiwanie wzorca metodą naiwną i liczę okna oraz porównania. Rozpoznaję, który algorytm na tekstach działa w Ctrl+F, filtrze nicków i liście kontaktów. Dowód: Z lekcji 81: Co oznacza napis[0]?; Porównywanie tekstów (kontakty); Detektyw tekstów: 7 zagadek; Wyszukiwanie wzorca: 2 rundy i koszt; Dopasuj sytuację do algorytmu, który wykonuje najważniejszą pracę.; Gra odrzuca każdy nick, w którym występuje słowo „admin” (bez względu na wielkość liter). Który nick zostanie odrzucony, choć nikt się pod admina nie podszywa?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 48
+    },
+    {
+      "lessonId": "93",
+      "grade": 1,
+      "title": "Programowanie wybranych algorytmów na tekstach",
+      "file": "content/lessons/93-reuse-g1.js",
+      "requirements": [
+        "I.2.b",
+        "II.1",
+        "I.3",
+        "II.2"
+      ],
+      "activityIds": [
+        "93-recall",
+        "pc-bug",
+        "pc-zlicz",
+        "pc-less",
+        "pc-less-q",
+        "pc-pal",
+        "pc-pal2",
+        "pc-anagram"
+      ],
+      "evidence": "Piszę funkcję zliczającą znak w pętli i porównuję jej wynik z metodą count. Programuję porównanie leksykograficzne znak po znaku i wyjaśniam wynik dla wielkich liter i polskich znaków. Sprawdzam palindrom dwoma wskaźnikami, także dla zdań (bez spacji i wielkości liter). Dobieram testy brzegowe: pusty tekst, brak znaku, wielkość liter, spacje, polskie znaki. Dowód: Z lekcji 92: Jak sprawdzasz palindrom?; Znajdź błąd: co wypisze ten program?; Poziom 1: zlicz(tekst, znak); Układanka: mniejszy(a, b); Sprawdź: kontakty po kodach; Poziom 3a: czy_palindrom(t); Poziom 3b: palindrom zdaniowy; Poziom 4: czy_anagram(a, b)",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 49
+    },
+    {
+      "lessonId": "94",
+      "grade": 1,
+      "title": "Wyszukiwanie wzorca w tekście metodą naiwną",
+      "file": "content/lessons/94-pattern-concept-g1.js",
+      "requirements": [
+        "I.2.b",
+        "I.1",
+        "I.3"
+      ],
+      "activityIds": [
+        "94-recall",
+        "94-windows",
+        "94-overlap",
+        "tl-pattern",
+        "94-edge"
+      ],
+      "evidence": "Wyznaczam możliwe okna wzorca. Wykonuję porównania od lewej i zatrzymuję się na różnicy. Znajduję nakładające się wystąpienia. Dowód: Z lekcji 93: kiedy porównywanie dwóch napisów może się skończyć?; Tekst ma 5 znaków, wzorzec 2. Ile okien mieści cały wzorzec?; Wzorzec aa w tekście aaaa pasuje na pozycjach:; Wyszukiwanie wzorca: 2 rundy i koszt; Co, gdy wzorzec jest dłuższy od tekstu?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 50
+    },
+    {
+      "lessonId": "95",
+      "grade": 1,
+      "title": "Programowanie algorytmu wyszukiwania wzorca w tekście metodą naiwną",
+      "file": "content/lessons/95-reuse-g1.js",
+      "requirements": [
+        "I.2.b",
+        "II.1",
+        "I.3",
+        "II.2"
+      ],
+      "activityIds": [
+        "95-recall",
+        "pw-trace",
+        "pw-parsons",
+        "pw-count",
+        "pw-builtin",
+        "pw-chat",
+        "pw-find"
+      ],
+      "evidence": "Śledzę algorytm naiwny i wskazuję okna, w których znaleziono wzorzec. Układam funkcję zwracającą listę wszystkich wystąpień, także nakładających się i na końcu tekstu. Mierzę liczbę porównań i wyjaśniam, dlaczego wyniki różnią się od count. Wykorzystuję własne wyszukiwanie w wyszukiwarce wiadomości bez względu na wielkość liter. Dowód: Z lekcji 94: Ile okien dla tekstu 4-znakowego i wzorca 2-znakowego?; Algorytm naiwny krok po kroku; Układanka: znajdz_wszystkie; Licznik porównań: ile_porownan(tekst, wzorzec); Przewidź: find i count w logach serwera; Wyszukiwarka czatu: szukaj(czat, fraza); Bonus: moje_find — pokonaj str.find",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 51
+    },
+    {
+      "lessonId": "96",
+      "grade": 1,
+      "title": "System dwójkowy",
+      "file": "content/lessons/96-binary-g1.js",
+      "requirements": [
+        "I.2.a"
+      ],
+      "activityIds": [
+        "96-recall",
+        "binary-read",
+        "binary-zero",
+        "binary-write",
+        "binary-second",
+        "binary-method",
+        "binary-range",
+        "binary-byte"
+      ],
+      "evidence": "Odczytuję wagi bitów od prawej. Zapisuję liczbę jako sumę potęg dwójki. Rozpoznaję zakres jednego bajtu. Dowód: Z lekcji 95: co zwraca znajdz_wszystkie, gdy nie ma trafień?; Ile wynosi 00010110₂ w systemie dziesiętnym?; Czy 00101₂ i 101₂ mają tę samą wartość?; Który zapis ośmiobitowy oznacza 19₁₀?; 42 = 32 + 8 + 2. Który zapis jest poprawny?; Rozpisz zamianę 26₁₀ na system dwójkowy i sprawdź wynik sumą wag.; Jaka jest największa liczba całkowita bez znaku na 8 bitach?; Ile bitów zawierają 3 bajty?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 52
+    },
+    {
+      "lessonId": "97",
+      "grade": 1,
+      "title": "System szesnastkowy",
+      "file": "content/lessons/97-reuse-g1.js",
+      "requirements": [
+        "I.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "97-recall",
+        "hex-nibble",
+        "hex-escape",
+        "hex-color"
+      ],
+      "evidence": "Zamieniam liczby między systemami dziesiętnym, dwójkowym i szesnastkowym. Wyjaśniam, dlaczego jedna cyfra szesnastkowa odpowiada czterem bitom, a dwie — bajtowi. Odczytuję kolor zapisany jako #RRGGBB i rozpoznaję producenta w adresie MAC. Odszyfrowuję krótki tekst zapisany jako bajty ASCII w hex. Dowód: Z lekcji 96: Ile dziesiętnie wynosi 1010 w systemie dwójkowym?; Konwerter czwórek: 4 zadania; Ucieczka z serwerowni: 4 kłódki; Gra: Trafisz kolor?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 53
+    },
+    {
+      "lessonId": "98",
+      "grade": 1,
+      "title": "Programowanie zamiany reprezentacji liczb między pozycyjnymi systemami liczbowymi",
+      "file": "content/lessons/98-python-g1.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2",
+        "I.2.a"
+      ],
+      "activityIds": [
+        "98-recall",
+        "98-predict",
+        "98-change",
+        "98-par",
+        "98-fix",
+        "98-own"
+      ],
+      "evidence": "Odczytuję liczbę metodą mnożenia i dodawania. Tworzę zapis z reszt dzielenia. Sprawdzam zero, błędną cyfrę i podstawę. Dowód: Z lekcji 97: ile wynosi FF szesnastkowo?; Przewidź wynik; Odczytaj zapis o podstawie 2, 10 lub 16; Ułóż działający kod; Napraw zero w zapisie dwójkowym; Zapisz liczbę w wybranym systemie",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 54
     },
     {
       "lessonId": "44",
