@@ -498,8 +498,10 @@
   "sem": "II półrocze",
   "temat": "Tworzenie formuł, formaty danych i formatowanie tabeli arkusza",
   "pp": "II.2., II.3c.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "69"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -509,8 +511,10 @@
   "sem": "II półrocze",
   "temat": "Stosowanie funkcji arkusza kalkulacyjnego",
   "pp": "II.2., II.3c.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "70"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -520,8 +524,10 @@
   "sem": "II półrocze",
   "temat": "Przedstawianie danych w postaci wykresu",
   "pp": "II.2., II.3c.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "71"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -531,8 +537,10 @@
   "sem": "II półrocze",
   "temat": "Tworzenie wykresu – projekt z geografii",
   "pp": "II.2., II.3c., IV.1.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "72"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -542,8 +550,10 @@
   "sem": "II półrocze",
   "temat": "Korzystanie z filtrów, tabele i wykresy przestawne",
   "pp": "II.2., II.3c.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "73"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -553,8 +563,10 @@
   "sem": "II półrocze",
   "temat": "Stosowanie filtru w tabeli przestawnej i praktyczny poradnik",
   "pp": "II.2., II.3c.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "74"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -564,8 +576,10 @@
   "sem": "II półrocze",
   "temat": "Zasady tworzenia prezentacji multimedialnej",
   "pp": "II.2., II.3e.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "75"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -575,8 +589,10 @@
   "sem": "II półrocze",
   "temat": "Tworzymy prezentację multimedialną o Fryderyku Chopinie – projekt",
   "pp": "II.2., II.3e., IV.1.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "76"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },

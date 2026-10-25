@@ -166,7 +166,7 @@ export default {
       "label": "Poprawa",
       "title": "Poprawa — od uwagi do publikacji",
       "duration": 13,
-      "intro": "Przez pierwsze 4 minuty pracujcie w parze (po 2 minuty na osobę). Recenzent wskazuje jeden spełniony warunek i jeden konkretny następny krok. Potem każdy ma 9 minut na zastosowanie uwagi i przygotowanie kopii.",
+      "intro": "Przez pierwsze 4 minuty pracujcie w parze z sąsiadem (po 2 minuty na osobę). Recenzent wskazuje jeden spełniony warunek i jeden konkretny następny krok. Bez pary: przejdź ramę pytań sam albo poproś nauczyciela o uwagę. Potem każdy ma 9 minut na zastosowanie uwagi i przygotowanie kopii.",
       "activities": [
         {
           "type": "wordSteps",

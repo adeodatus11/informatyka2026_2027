@@ -172,7 +172,8 @@ test('Lekcje 22–27: klasa 3, czas, karta wyniku ze stałym maksimum, symulator
   assert.ok(!JSON.stringify(l).match(/prac[ay] domow|w domu/i),'bez pracy domowej');
  }
  const l23=(await import('../content/lessons/23-dental-database-g3.js')).default,l05=(await import('../content/lessons/05-dental-database.js')).default;
- assert.equal(l05.sections.flatMap(s=>s.activities).some(a=>a.type==='resultCard'),false,'lekcja 05 bez zmian');
+ // 05 ma własną kartę wyniku (decyzja 10.2026); wrapper 23 zastępuje ją swoją — w każdej lekcji dokładnie jedna karta
+ for(const l of [l05,l23])assert.equal(l.sections.flatMap(s=>s.activities).filter(a=>a.type==='resultCard').length,1,`${l.id}: jedna karta wyniku`);
  assert.equal(l23.sections[0].activities[0].id,'db-g3-recall');assert.equal(l05.sections[0].activities.length,1);
  assert.ok(l23.sections.every(s=>s.reading?.paragraphs?.length>=2));
  const l27=(await import('../content/lessons/27-mail-merge-g3.js')).default;

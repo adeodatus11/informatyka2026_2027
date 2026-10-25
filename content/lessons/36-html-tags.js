@@ -68,7 +68,7 @@ export default {
   name:'Warsztat: napraw → podyktuj → zbuduj',
   student:'Najpierw poznasz najważniejsze znaczniki i naprawisz stronę pizzerii z 6 błędami. Potem w parze dyktujecie sobie kod, a na koniec budujesz wizytówkę sprawdzaną automatycznie według 7 kryteriów. Efekt: Twoja wizytówka na ekranie, gotowa do pokazania.',
   teacher:'Start: retrieval practice z lekcji 35 (title, poprawne zamykanie). Krótko nauczanie jawne: karty znaczników i dopasowanie. Potem „napraw zepsutą stronę” — uczeń widzi objawy (pogrubiona połowa strony, brak zdjęcia), szuka przyczyn w kodzie, a walidator i stopniowane podpowiedzi prowadzą do poprawy (feedback prowadzący do poprawy). Dyktowanie w parach to tutoring rówieśniczy z rolami: dyktujący czyta kartę, piszący nie widzi karty; zamiana po 3 minutach. Wizytówka to zadanie samodzielne z jawnymi kryteriami; ocenę produktu robisz przy komputerze ucznia w etapie 6.',
-  grouping:'Etapy 1–3 i 5 samodzielnie. Etap 4 w parach (dyktujący i piszący, zamiana ról po 3 minutach, każdy pisze u siebie). Nieparzysta liczba osób: jedna trójka (trzecia osoba sprawdza zgodność z kartą) albo praca samodzielna — uczeń czyta kartę sam i pisze kod z pamięci.',
+  grouping:'Etapy 1–3 i 5 samodzielnie. Etap 4 w parach (dyktujący i piszący, zamiana ról po 3 minutach, każdy pisze u siebie). Bez pary (nieparzysta liczba osób albo ktoś woli sam): uczeń czyta kartę, zamyka ją i pisze kod z pamięci — zadanie i punkty są te same.',
   methods:[
    {name:'Retrieval practice',url:'https://metodyka.covepolska.pl/metoda-retrieval-practice.html'},
    {name:'Feedback prowadzący do poprawy',url:'https://metodyka.covepolska.pl/metoda-feedback-poprawa.html'},
@@ -78,7 +78,7 @@ export default {
   ]
  },
  objectives:['Stosuję znaczniki list (<ul>, <ol>, <li>), tabeli (<table>, <tr>, <th>, <td>), odnośnika (<a href>) i obrazka (<img src alt>).','Znajduję i poprawiam typowe błędy: niezamknięty znacznik, złą ścieżkę obrazka, brak alt, pominięty poziom nagłówka.','Wyjaśniam, jak czytnik ekranu korzysta z alt, nagłówków i nagłówków tabeli.','Buduję wizytówkę, która spełnia jawne kryteria.'],
- materials:['Komputer z przeglądarką — jeden na osobę; edytor HTML na platformie, bez instalacji i bez konta','Projektor do pokazania kart znaczników i pierwszego błędu','Pary ustalone przed etapem 4 (dyktujący/piszący)'],
+ materials:['Komputer z przeglądarką — jeden na osobę; edytor HTML na platformie, bez instalacji i bez konta','Projektor do pokazania kart znaczników i pierwszego błędu','Pary z sąsiadem z ławki przed etapem 4 (osoba bez pary pracuje sama)'],
  teacherGuide:{
   preparation:'Klucz do zepsutej strony: 1) </strong> po „we wtorki.”, 2) src="pizza.svg" zamiast ścieżki C:\\Users\\…, 3) alt z opisem pizzy, 4) <h3>Nasze pizze</h3> → <h2>, 5) <a href="…"> przy „Zamów online”, 6) pierwszy wiersz tabeli <th> zamiast <td>. Usunięcie treści nie zalicza błędu (symulator pilnuje, żeby akapity, menu, zdjęcie, tabela i link zostały). Ustal pary do dyktowania. Wizytówka: uczeń używa imienia lub pseudonimu i fikcyjnego e-maila — bez adresu i telefonu.',
   summary:'Uczeń stosuje listy, tabelę z <th>, link z href i obrazek z alt, naprawia 6 błędów zepsutej strony i buduje wizytówkę spełniającą 7 kryteriów. Na karcie wyniku: pytania, dopasowanie, naprawa, dyktando i wizytówka (maks. 20 pkt). Pytanie na wyjście: co usłyszy niewidomy użytkownik przy obrazku bez alt?'

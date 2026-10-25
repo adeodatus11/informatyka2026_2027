@@ -25,8 +25,8 @@ export default {
         "url": "https://metodyka.covepolska.pl/metoda-nauczanie-jawne.html"
       },
       {
-        "name": "Tutoring rówieśniczy",
-        "url": "https://metodyka.covepolska.pl/metoda-peer-tutoring.html"
+        "name": "Ocenianie kształtujące",
+        "url": "https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html"
       },
       {
         "name": "Metapoznanie",
@@ -34,9 +34,9 @@ export default {
       }
     ],
     "name": "Laboratorium usterek układu",
-    "student": "Po krótkim pokazie naprawisz plan wydarzenia. W parze na zmianę obsługujecie Word i pytacie o dowód. Każdy kończy własny plik oraz samodzielny test.",
-    "teacher": "Pokaż decyzję: „zmieniam układ części dokumentu, potrzebuję granic sekcji po obu stronach”. Po praktyce kierowanej uruchom tutoring wcześniej pokazanej procedury, zmień role po 6 minutach. Zatrzymaj klasę przy kontroli orientacji i zakończ samodzielnym przypadkiem.",
-    "grouping": "Pokaz wspólny, potem pary przy własnych komputerach. Tutor zadaje pytania, nie przejmuje myszy. Samodzielnie: wykonaj obie rundy, odczytując pytania kontrolne."
+    "student": "Po krótkim pokazie naprawisz plan wydarzenia we własnym pliku. Po każdym kroku sam szukasz dowodu w dokumencie (granice sekcji, podgląd stron). Na koniec samodzielny test.",
+    "teacher": "Pokaż decyzję: „zmieniam układ części dokumentu, potrzebuję granic sekcji po obu stronach”. Po praktyce kierowanej uczniowie samodzielnie wykonują pokazaną procedurę i odpowiadają sobie na pytania kontrolne z listy. Zatrzymaj klasę przy kontroli orientacji (wszyscy pokazują obie granice sekcji) — to moment decyzji, czy powtarzasz pokaz. Zakończ samodzielnym przypadkiem.",
+    "grouping": "Pokaz wspólny, potem praca samodzielna przy własnym komputerze. Pytania kontrolne uczeń zadaje sobie sam (są w instrukcji); sąsiedzi mogą się dopytywać, ale nikt nie przejmuje cudzej myszy."
   },
   "sections": [
     {
@@ -74,7 +74,7 @@ export default {
       "askStudents": "Dlaczego Enter nie jest narzędziem do dzielenia stron?",
       "expectedAnswers": "Puste akapity przesuwają się po zmianie tekstu; podział strony zachowuje intencję autora.",
       "commonMistakes": "Uczniowie szukają sekcji w Wstawianie zamiast Układ.",
-      "optionalExtension": "Dla chętnych: wyjaśnij partnerowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
+      "optionalExtension": "Dla chętnych: wyjaśnij sąsiadowi lub nauczycielowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
       "skipIfShortOnTime": false
     },
     {
@@ -109,7 +109,7 @@ export default {
       "askStudents": "Ile granic trzeba, by środkowy fragment miał inny układ?",
       "expectedAnswers": "Zwykle dwie: przed fragmentem i za nim.",
       "commonMistakes": "Mylenie podziału strony z podziałem sekcji.",
-      "optionalExtension": "Dla chętnych: wyjaśnij partnerowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
+      "optionalExtension": "Dla chętnych: wyjaśnij sąsiadowi lub nauczycielowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
       "skipIfShortOnTime": false,
       "reading": {
         "title": "Granica to ustawienie, nie ozdoba",
@@ -125,7 +125,7 @@ export default {
       "label": "Warsztat",
       "title": "Warsztat — plan, który się mieści",
       "duration": 17,
-      "intro": "Każdy pracuje w swoim pliku. Runda A (6 min): Ty wykonujesz orientację, partner pyta. Runda B (6 min): zamieńcie role przy drugim pliku. Ostatnie 5 min: każdy robi własny układ kolumn.",
+      "intro": "Pracujesz w swoim pliku. Najpierw (ok. 12 min) granice sekcji i pozioma orientacja harmonogramu, potem (5 min) dwie kolumny na fragmencie. Po każdym kroku sprawdź dowód w dokumencie.",
       "activities": [
         {
           "type": "wordSteps",
@@ -151,20 +151,20 @@ export default {
               "help": "W Układ → Kolumny → Więcej kolumn sprawdź „Zastosuj do: Ta sekcja”. Nie buduj kolumn spacjami lub tabelą."
             },
             {
-              "title": "Przystanek tutora",
-              "instruction": "Zapytaj partnera: „Gdzie są obie granice?”, „Co potwierdza, że reszta pozostała pionowa?”, „Jaki zakres dotyczy dwóch kolumn?”. Odpowiadaj pokazaniem miejsca w dokumencie.",
-              "check": "Każdy potrafi wskazać dowód we własnym pliku.",
-              "help": "Tutor pomaga pytaniem, nie wykonuje czynności za autora."
+              "title": "Przystanek kontrolny",
+              "instruction": "Odpowiedz sobie, pokazując miejsce w dokumencie: „Gdzie są obie granice?”, „Co potwierdza, że reszta pozostała pionowa?”, „Jaki zakres dotyczy dwóch kolumn?”.",
+              "check": "Potrafisz wskazać dowód we własnym pliku.",
+              "help": "Nie umiesz wskazać granicy? Włącz ¶ i przewiń do harmonogramu. Jeśli dalej nie widzisz — podnieś rękę, nauczyciel pokaże to na Twoim pliku."
             }
           ]
         }
       ],
-      "grouping": "pair",
-      "teacherNotes": "Monitoruj trzy pary w każdej rundzie. Zatrzymaj wszystkich przed kolumnami: niech pokażą obie granice sekcji z tabelą. Jeśli brak drugiej granicy, krótki ponowny pokaz.",
+      "grouping": "solo",
+      "teacherNotes": "Obejdź kilka stanowisk w trakcie pracy. Zatrzymaj wszystkich przed kolumnami: niech pokażą obie granice sekcji z tabelą. Jeśli brak drugiej granicy, krótki ponowny pokaz.",
       "askStudents": "Po czym wiesz, że zmiana dotyczy jednej sekcji?",
       "expectedAnswers": "Granice w ¶ i podgląd stron po obu stronach tabeli.",
       "commonMistakes": "Zaznaczenie całego dokumentu, brak granicy za tabelą.",
-      "optionalExtension": "Dla chętnych: wyjaśnij partnerowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
+      "optionalExtension": "Dla chętnych: wyjaśnij sąsiadowi lub nauczycielowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
       "skipIfShortOnTime": false
     },
     {
@@ -193,7 +193,7 @@ export default {
             },
             {
               "title": "Dowód jakości",
-              "instruction": "W Plik → Drukuj przejrzyj wszystkie strony. Zapisz Ctrl+S. Partnerowi pokaż tylko wynik; sam wskaż dwie granice sekcji i wyjaśnij, dlaczego wybrano taki typ podziału.",
+              "instruction": "W Plik → Drukuj przejrzyj wszystkie strony. Zapisz Ctrl+S. Sam wskaż dwie granice sekcji i wyjaśnij, dlaczego wybrano taki typ podziału.",
               "check": "Masz zapisany plik i potrafisz uzasadnić jego strukturę.",
               "help": "Pusta strona? Włącz ¶ i sprawdź zbędny podział strony obok podziału sekcji. Nie kasuj w ciemno granic sekcji."
             }
@@ -235,7 +235,7 @@ export default {
       "askStudents": "Dlaczego rozłączamy także nagłówek za harmonogramem?",
       "expectedAnswers": "Aby następna sekcja nie dziedziczyła nowego nagłówka harmonogramu.",
       "commonMistakes": "Rozłączenie tylko zmienianej sekcji i pominięcie sekcji za nią.",
-      "optionalExtension": "Dla chętnych: wyjaśnij partnerowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
+      "optionalExtension": "Dla chętnych: wyjaśnij sąsiadowi lub nauczycielowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
       "skipIfShortOnTime": false
     },
     {
@@ -315,7 +315,7 @@ export default {
       "askStudents": "Czy podział strony wystarczy do nowej orientacji?",
       "expectedAnswers": "Nie — trzeba wydzielić sekcję.",
       "commonMistakes": "Samoocena utożsamiana z potwierdzeniem poprawności pliku.",
-      "optionalExtension": "Dla chętnych: wyjaśnij partnerowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
+      "optionalExtension": "Dla chętnych: wyjaśnij sąsiadowi lub nauczycielowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
       "skipIfShortOnTime": false
     }
   ],

@@ -33,10 +33,10 @@ export default {
         "url": "https://metodyka.covepolska.pl/metoda-feedback-poprawa.html"
       }
     ],
-    "name": "Miniprojekt redakcyjny w dwóch lekcjach",
+    "name": "Miniprojekt redakcyjny na 2 godziny lekcyjne (2 × 45 min)",
     "student": "Masz gotowy surowy tekst, ilustrację, tabelę i wykres. W ciągu 2 × 45 minut przygotujesz poradnik, którego spisy da się aktualizować. Po pierwszych 45 minutach zapisujesz wersję roboczą; po drugich oddajesz wersję z recenzją, finalny DOCX i PDF.",
-    "teacher": "Przed projektem pokaż zależność: style → spis treści; podpisy → spisy obiektów; układ → aktualizacja numerów stron. Uczniowie zapisują własny plan i punkt kontroli. Po pierwszej sesji każdy zapisuje plik. Druga zaczyna się diagnozą, następnie rzeczywisty test czytelnika, konkretna uwaga i poprawa. Nie oceniaj dekoracyjności ani szybkości.",
-    "grouping": "Każdy tworzy własny poradnik. W drugiej sesji pary zamieniają się rolą czytelnika i autora po 5 minutach. Bez pary testuje nauczyciel lub uczeń wykonuje zadania czytelnika po krótkiej przerwie i oznacza samokontrolę."
+    "teacher": "UWAGA: to jedna lekcja na DWIE godziny lekcyjne (90 min = 2 × 45 min; blok albo dwie kolejne lekcje w planie). Sesja 1 (45 min): etapy „Plan wydania”, „Budowa” i „Punkt zapisu” — kończy się zapisem i zamknięciem pliku. Sesja 2 (45 min): etapy „Kontrola po przerwie”, „Test czytelnika” i oddanie plików. Między sesjami uczniowie zachowują DOCX w ustalonym miejscu. Przed projektem pokaż zależność: style → spis treści; podpisy → spisy obiektów; układ → aktualizacja numerów stron. Uczniowie zapisują własny plan i punkt kontroli. Po pierwszej sesji każdy zapisuje plik. Druga zaczyna się diagnozą, następnie rzeczywisty test czytelnika, konkretna uwaga i poprawa. Nie oceniaj dekoracyjności ani szybkości.",
+    "grouping": "Każdy tworzy własny poradnik. W drugiej sesji, w teście czytelnika, sąsiedzi wymieniają się dokumentami po 5 minut (poradnik ma sens tylko wtedy, gdy ktoś inny umie z niego skorzystać). Bez pary testuje nauczyciel lub uczeń wykonuje zadania czytelnika po krótkiej przerwie i oznacza samokontrolę."
   },
   "sections": [
     {
@@ -238,7 +238,7 @@ export default {
       "label": "Test czytelnika",
       "title": "Test czytelnika — feedback i poprawa",
       "duration": 22,
-      "intro": "Pierwsze 10 min: po 5 min na dokument każdej osoby. Czytelnik wykonuje trzy zadania, autor obserwuje. Następne 12 min: każdy wprowadza poprawę w swoim pliku.",
+      "intro": "Pierwsze 10 min: po 5 min na dokument każdej osoby. Czytelnik wykonuje trzy zadania, autor obserwuje. Następne 12 min: każdy wprowadza poprawę w swoim pliku. Bez pary: odłóż poradnik na chwilę, potem wykonaj zadania czytelnika sam albo poproś nauczyciela o test.",
       "activities": [
         {
           "type": "wordSteps",
@@ -415,7 +415,7 @@ export default {
     "Testuję dokument z czytelnikiem, wykorzystuję informację zwrotną i przygotowuję wersję DOCX oraz PDF."
   ],
   "teacherGuide": {
-    "preparation": "Projekt wymaga dwóch lekcji po 45 min. Starter 33 jest samodzielny: nie wymaga oddanych wcześniejszych prac. Sprawdź ilustrację Model pracy zespołu, tabelę Harmonogram roboczy, wykres Jak czytać zebrane opinie i końcowe źródła. Przygotuj miejsce bezpiecznego zachowania prac między lekcjami. Kryteria 20 pkt pokaż przed rozpoczęciem.",
+    "preparation": "Projekt wymaga dwóch lekcji po 45 min — zarezerwuj w planie dwie godziny lekcyjne (najlepiej blok lub dwie lekcje w jednym tygodniu); na platformie to jedna lekcja z przerwą po etapie „Punkt zapisu”. Starter 33 jest samodzielny: nie wymaga oddanych wcześniejszych prac. Sprawdź ilustrację Model pracy zespołu, tabelę Harmonogram roboczy, wykres Jak czytać zebrane opinie i końcowe źródła. Przygotuj miejsce bezpiecznego zachowania prac między lekcjami. Kryteria 20 pkt pokaż przed rozpoczęciem.",
     "summary": "Wymagane: 33-poradnik-recenzja.docx (ślad feedbacku), 33-poradnik.docx (działające pola, uporządkowany tekst) i 33-poradnik.pdf (czytelny eksport). Rubryka 20 pkt dotyczy produktu po poprawie, nie quizu. Uczeń pokazuje działanie aktualizacji pola; PDF sam nie dowodzi automatyzacji. Z refleksji wybierz jedną umiejętność do powrotu za 2–4 tygodnie."
   },
   "exitTicket": "Wydanie gotowe, gdy ktoś znajdzie potrzebną informację, a Ty pokażesz działającą aktualizację. Zachowaj recenzję i oddaj końcowy DOCX oraz sprawdzony PDF."

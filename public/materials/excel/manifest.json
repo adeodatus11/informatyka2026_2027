@@ -1,0 +1,64 @@
+{
+ "generator": "scripts/build-excel-materials.py",
+ "files": [
+  {
+   "lesson": "69",
+   "file": "materials/excel/lesson-69-start.xlsx",
+   "title": "Formuły i formaty — praca wakacyjna",
+   "sheets": [
+    "Wypłata"
+   ],
+   "purpose": "Wypłata: formuły =C*D, kopiowanie, Autosumowanie, liczba zapisana jako tekst w C13, formaty daty, waluty i procentu."
+  },
+  {
+   "lesson": "70",
+   "file": "materials/excel/lesson-70-start.xlsx",
+   "title": "Funkcje — turniej i rachunek za prąd",
+   "sheets": [
+    "Turniej",
+    "Prąd"
+   ],
+   "purpose": "Turniej: SUMA, ŚREDNIA (puste ≠ 0), ZAOKR, JEŻELI, MAX, MIN, ILE.LICZB, LICZ.JEŻELI. Prąd: adres bezwzględny $B$4."
+  },
+  {
+   "lesson": "71",
+   "file": "materials/excel/lesson-71-start.xlsx",
+   "title": "Wykresy — abonamenty, wydatki, kanał",
+   "sheets": [
+    "Abonamenty",
+    "Wydatki",
+    "Kanał"
+   ],
+   "purpose": "Abonamenty: koszt 24 mies. i wykres kolumnowy (oś od zera i oś od 1100). Wydatki: wykres kołowy z %. Kanał: wykres liniowy."
+  },
+  {
+   "lesson": "72",
+   "file": "materials/excel/lesson-72-start.xlsx",
+   "title": "Projekt z geografii — klimatogram",
+   "sheets": [
+    "Klimat",
+    "Województwa"
+   ],
+   "purpose": "Klimat: klimatogram (kolumny opadów + linia temperatury), suma, średnia, amplituda, wnioski. Województwa: wariant dla chętnych (gęstość)."
+  },
+  {
+   "lesson": "73",
+   "file": "materials/excel/lesson-73-start.xlsx",
+   "title": "Filtry i tabela przestawna — sklep TechKąt",
+   "sheets": [
+    "Zamówienia"
+   ],
+   "purpose": "Zamówienia (40 wierszy): Formatuj jako tabelę + wiersz sumy, filtry, tabela przestawna Kategoria × Suma z Wartość, liczba zamówień wg miasta, wykres przestawny."
+  },
+  {
+   "lesson": "74",
+   "file": "materials/excel/lesson-74-start.xlsx",
+   "title": "Filtr w tabeli przestawnej — wyjazd klasowy",
+   "sheets": [
+    "Wydatki",
+    "Poradnik"
+   ],
+   "purpose": "Wydatki (19 rachunków): tabela przestawna, pole w obszarze Filtry, fragmentator, koszt na osobę. Poradnik: 5 kroków i wnioski."
+  }
+ ]
+}

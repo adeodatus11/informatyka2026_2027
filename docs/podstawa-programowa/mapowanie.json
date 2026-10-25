@@ -672,9 +672,174 @@
       "migraReference": "M1"
     },
     {
-      "lessonId": "43",
+      "lessonId": "69",
       "grade": 1,
       "numberInGrade": 34,
+      "title": "Tworzenie formuł, formaty danych i formatowanie tabeli arkusza",
+      "file": "content/lessons/69-excel-formulas.js",
+      "requirements": [
+        "II.2",
+        "II.3.c"
+      ],
+      "activityIds": [
+        "x69-predict",
+        "x69-check",
+        "x69-formats",
+        "x69-text"
+      ],
+      "evidence": "Excel na komputerze: formuły, formaty danych i formatowanie tabeli na przykładzie wypłaty z pracy wakacyjnej; wynik z komórki sprawdzany na platformie (sheetCheck).",
+      "limitations": "Sprawdzenie potwierdza wartość, nie obecność formuły — plik ocenia nauczyciel; rubryka to samoocena. Kwoty i przepisy (PIT/ZUS) do weryfikacji.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "70",
+      "grade": 1,
+      "numberInGrade": 35,
+      "title": "Stosowanie funkcji arkusza kalkulacyjnego",
+      "file": "content/lessons/70-excel-functions.js",
+      "requirements": [
+        "II.2",
+        "II.3.c"
+      ],
+      "activityIds": [
+        "x70-match",
+        "x70-predict",
+        "x70-check",
+        "x70-dollar",
+        "x70-power"
+      ],
+      "evidence": "Funkcje SUMA, ŚREDNIA, MIN, MAX, LICZ.JEŻELI, JEŻELI, ZAOKR i adres bezwzględny $B$4 na statystykach turnieju i rachunku za prąd.",
+      "limitations": "Jak w 69; cena prądu do weryfikacji.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "71",
+      "grade": 1,
+      "numberInGrade": 36,
+      "title": "Przedstawianie danych w postaci wykresu",
+      "file": "content/lessons/71-excel-charts.js",
+      "requirements": [
+        "II.2",
+        "II.3.c"
+      ],
+      "activityIds": [
+        "x71-types",
+        "x71-check",
+        "x71-lie",
+        "x71-fair",
+        "x71-line"
+      ],
+      "evidence": "Dobór typu wykresu, czytelność i wykres wprowadzający w błąd (oś od nie-zera); wykres w Excelu na danych abonamentów i kieszonkowego.",
+      "limitations": "—",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "72",
+      "grade": 1,
+      "numberInGrade": 37,
+      "title": "Tworzenie wykresu – projekt z geografii",
+      "file": "content/lessons/72-excel-geography.js",
+      "requirements": [
+        "II.2",
+        "II.3.c",
+        "IV.1"
+      ],
+      "activityIds": [
+        "x72-plan",
+        "x72-check",
+        "x72-read",
+        "x72-good"
+      ],
+      "evidence": "Projekt z geografii: klimatogram z danych publicznych (IMGW), wykres kombi i 2–3 wnioski z liczbami.",
+      "limitations": "Dane IMGW i GUS wpisane do weryfikacji przez nauczyciela; IV.1 częściowo (projekt samodzielny lub w parze).",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "73",
+      "grade": 1,
+      "numberInGrade": 38,
+      "title": "Korzystanie z filtrów, tabele i wykresy przestawne",
+      "file": "content/lessons/73-excel-pivot.js",
+      "requirements": [
+        "II.2",
+        "II.3.c"
+      ],
+      "activityIds": [
+        "x73-hide",
+        "x73-check",
+        "x73-pivot",
+        "x73-boss"
+      ],
+      "evidence": "Filtry, tabela i wykres przestawny na danych zamówień sklepu internetowego (praktyki).",
+      "limitations": "Nazwy kart Excela do sprawdzenia w wersji w pracowni.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "74",
+      "grade": 1,
+      "numberInGrade": 39,
+      "title": "Stosowanie filtru w tabeli przestawnej i praktyczny poradnik",
+      "file": "content/lessons/74-excel-pivot-guide.js",
+      "requirements": [
+        "II.2",
+        "II.3.c"
+      ],
+      "activityIds": [
+        "x74-match",
+        "x74-check",
+        "x74-person",
+        "x74-step"
+      ],
+      "evidence": "Filtr i fragmentator w tabeli przestawnej, praktyczny poradnik dla następnego skarbnika (rozliczenie wyjazdu).",
+      "limitations": "—",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "75",
+      "grade": 1,
+      "numberInGrade": 40,
+      "title": "Zasady tworzenia prezentacji multimedialnej",
+      "file": "content/lessons/75-presentation-rules.js",
+      "requirements": [
+        "II.2",
+        "II.3.e"
+      ],
+      "activityIds": [
+        "p75-critic",
+        "p75-layout",
+        "p75-steps",
+        "p75-notes-steps"
+      ],
+      "evidence": "Zasady prezentacji: rozpoznawanie błędów na slajdach (slideCritic), układy slajdów, naprawa złej prezentacji w PowerPoincie, notatki prelegenta i źródła grafik.",
+      "limitations": "Plik oceniany przez nauczyciela; rubryka to samoocena. Pliki PPTX do sprawdzenia w PowerPoincie w pracowni.",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "76",
+      "grade": 1,
+      "numberInGrade": 41,
+      "title": "Tworzymy prezentację multimedialną o Fryderyku Chopinie – projekt",
+      "file": "content/lessons/76-chopin-presentation.js",
+      "requirements": [
+        "II.2",
+        "II.3.e",
+        "IV.1"
+      ],
+      "activityIds": [
+        "p76-plan",
+        "p76-critic",
+        "p76-prompt",
+        "p76-steps",
+        "p76-rehearse-steps"
+      ],
+      "evidence": "Projekt: prezentacja o Fryderyku Chopinie dla konkretnego odbiorcy (6–8 slajdów), prompt do grafiki AI jako opcja z oznaczeniem, próba wystąpienia.",
+      "limitations": "Fakty biograficzne do weryfikacji; IV.1 częściowo (projekt samodzielny lub w parze).",
+      "migraReference": "M1"
+    },
+    {
+      "lessonId": "43",
+      "grade": 1,
+      "numberInGrade": 42,
       "title": "Przestępczość komputerowa – projekt",
       "file": "content/lessons/43-computer-crime-project.js",
       "requirements": [

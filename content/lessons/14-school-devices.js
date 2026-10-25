@@ -7,9 +7,9 @@ export default {
  curriculum:'2024 Informatyka – liceum/technikum · urządzenia cyfrowe i sieci komputerowe w otoczeniu ucznia, bezpieczna praca w sieci',
  format:{
   name:'Symulacja helpdesku w parach',
-  student:'Poznasz sieć szkoły na mapie i sprawdzisz, co pada przy awarii. Potem w parze obsłużycie 6 zgłoszeń: jedna osoba zgłasza, druga diagnozuje. Efekt: zamknięte zgłoszenia i punkty na karcie wyniku.',
+  student:'Poznasz sieć szkoły na mapie i sprawdzisz, co pada przy awarii. Potem obsłużysz 6 zgłoszeń — najlepiej w parze (jedna osoba zgłasza, druga diagnozuje), ale da się też samemu. Efekt: zamknięte zgłoszenia i punkty na karcie wyniku.',
   teacher:'Lekcja opiera się na przypadkach (problem, projekt, przypadek). Najpierw krótki hak i powtórka o adresie MAC. Uczniowie samodzielnie poznają mapę sieci szkoły i analizują 4 awarie. Główna część to helpdesk w parach z tutoringiem rówieśniczym: zgłaszający ma kartę z pełnym opisem sytuacji, technik zadaje pytania i proponuje rozwiązanie; po 3 zgłoszeniach zamiana ról, a na koniec każdy domyka u siebie zgłoszenia, w których był zgłaszającym. Na koniec nauczanie dialogowe: rozmowa o zasadach (czy technik może obejść filtr, gdy prosi nauczyciel?).',
-  grouping:'Pary na dwóch urządzeniach (może być telefon + komputer). Przy nieparzystej liczbie osób — jedna trójka (dwóch techników, jeden zgłaszający) albo praca samodzielna w trybie „Sam(a)”: odpowiedzi odsłaniają się automatycznie.',
+  grouping:'Pary na dwóch urządzeniach (może być telefon + komputer). Tryb „Sam(a)” jest domyślny i równorzędny (te same zgłoszenia i punkty, odpowiedzi zgłaszającego odsłaniają się automatycznie) — dla osoby bez pary albo gdy para się nie składa.',
   methods:[
    {name:'Problem, projekt i przypadek',url:'https://metodyka.covepolska.pl/metoda-problem-projekt-przypadek.html'},
    {name:'Tutoring rówieśniczy',url:'https://metodyka.covepolska.pl/metoda-peer-tutoring.html'},
@@ -18,7 +18,7 @@ export default {
   ]
  },
  objectives:['Opisuję rolę routera, przełącznika, punktu dostępowego, zapory i serwera NAS w sieci szkoły.','Przewiduję, które urządzenia stracą sieć przy awarii konkretnego elementu.','Diagnozuję typowe usterki szkolnego sprzętu: zadaję trafne pytania i wybieram rozwiązanie.','Stosuję zasady bezpieczeństwa: nie obchodzę filtra, zgłaszam incydenty, rozmawiam rzeczowo i uprzejmie.'],
- materials:['Dwa urządzenia na parę z przeglądarką (komputer, telefon lub tablet)','Opcjonalnie: projektor lub monitor interaktywny w sali do pokazania źródła wejścia i skrótu Win+P'],
+ materials:['Przeglądarka — jedno urządzenie na osobę; para w helpdesku siedzi obok siebie (może być telefon + komputer)','Opcjonalnie: projektor lub monitor interaktywny w sali do pokazania źródła wejścia i skrótu Win+P'],
  teacherGuide:{
   preparation:'Sprawdź, jak w Twojej szkole wygląda zgłaszanie usterek (zeszyt, e-mail, formularz) i kto jest administratorem — przyda się w rozmowie o zasadach. Klucz awarii: AP 2. p. → laptop w sali 21 i tablety; przełącznik pracowni → komputery i monitor; przełącznik główny → działają tylko drukarka 3D i e-dziennik w chmurze; router → wydruk idzie przez przełącznik pracowni, przełącznik główny i drukarkę. Poprawne diagnozy: 101 B, 102 D, 103 B, 104 C, 105 D, 106 B.',
   summary:'Uczeń wyjaśnia, dlaczego przy awarii routera drukowanie w sieci lokalnej nadal działa, a internet nie. Zadaje pytania o objawy i połączenia, zanim coś zmieni. Wie, że filtra OSE się nie obchodzi, tylko zgłasza stronę do odblokowania, a podejrzany pendrive oznacza: odłączyć od sieci i zgłosić. Maks. 26 pkt na karcie wyniku.'
@@ -49,12 +49,12 @@ export default {
     ]}
    ]},
   {id:'helpdesk',label:'Helpdesk',title:'Helpdesk: 6 zgłoszeń',grouping:'pair',
-   intro:'Jedna osoba zgłasza, druga diagnozuje. Technik zadaje maks. 3 pytania, wybiera rozwiązanie i mówi zgłaszającemu, co się stało. Po 3 zgłoszeniach zamiana ról. Punkty: rozwiązanie za 1. razem 2 pkt (po poprawce 1), trafne pytania 1 pkt.',
+   intro:'W parze: jedna osoba zgłasza, druga diagnozuje. Bez pary? Zostań w trybie „Sam(a)” — odpowiedzi zgłaszającego odsłonią się same. Technik zadaje maks. 3 pytania, wybiera rozwiązanie i mówi zgłaszającemu, co się stało. W parze po 3 zgłoszeniach zamiana ról. Punkty: rozwiązanie za 1. razem 2 pkt (po poprawce 1), trafne pytania 1 pkt.',
    reading:{title:'Jak pracuje dobry technik?',paragraphs:[
     'Najpierw pytania, potem działanie. Pytaj o objawy („co dokładnie widać?”), połączenia („do którego gniazda?”) i zakres („czy innym też nie działa?”). Pytanie o kolor pendrive’a nic nie wnosi — a zabiera czas, którego przy „lekcji za 5 minut” nie masz.',
     'Rozwiązanie ma być najprostsze skuteczne i bezpieczne: wybór źródła HDMI zamiast reinstalacji sterowników, zgłoszenie strony do odblokowania zamiast VPN-a. A na koniec krótko i po ludzku: co było, co zrobiłeś, co zrobić następnym razem.'
    ]},
-   ...note(17,'Ustaw pary. Każdy wybiera w symulatorze „W parze”; jedna osoba „Technikiem”, druga „Zgłaszającym” — to samo zgłoszenie na obu urządzeniach. Zgłaszający czyta tylko to, o co technik zapyta. Po 3 zgłoszeniach zamiana ról. Na koniec każdy domyka u siebie zgłoszenia, w których był zgłaszającym (idzie szybko — zna sytuację). Krąż i słuchaj pytań technika, nie podpowiadaj rozwiązań.','Które pytanie najszybciej doprowadziło Was do rozwiązania i dlaczego?','Pytania o to, co dokładnie widać na ekranie, o połączenie (gniazdo, sieć) i czy problem dotyczy też innych — zawężają przyczynę.','Technicy od razu wybierają rozwiązanie „radykalne” (reinstalacja, restart routera). Zgłaszający podpowiadają technikowi. Odpowiedzi w żargonie lub z wyższością.','Poproś pary o wymyślenie siódmego zgłoszenia z własnej szkoły (np. „tablica nie reaguje na dotyk”) i odegranie go przed klasą.'),
+   ...note(17,'Pary z sąsiadem wybierają w symulatorze „W parze” (osoby bez pary zostają w domyślnym trybie „Sam(a)”); jedna osoba „Technikiem”, druga „Zgłaszającym” — to samo zgłoszenie na obu urządzeniach. Zgłaszający czyta tylko to, o co technik zapyta. Po 3 zgłoszeniach zamiana ról. Na koniec każdy domyka u siebie zgłoszenia, w których był zgłaszającym (idzie szybko — zna sytuację). Krąż i słuchaj pytań technika, nie podpowiadaj rozwiązań.','Które pytanie najszybciej doprowadziło Was do rozwiązania i dlaczego?','Pytania o to, co dokładnie widać na ekranie, o połączenie (gniazdo, sieć) i czy problem dotyczy też innych — zawężają przyczynę.','Technicy od razu wybierają rozwiązanie „radykalne” (reinstalacja, restart routera). Zgłaszający podpowiadają technikowi. Odpowiedzi w żargonie lub z wyższością.','Poproś pary o wymyślenie siódmego zgłoszenia z własnej szkoły (np. „tablica nie reaguje na dotyk”) i odegranie go przed klasą.'),
    activities:[{type:'helpdesk',id:'hd-tickets',mode:'tickets',points:18,label:'Helpdesk: 6 zgłoszeń'}]},
   {id:'rules',label:'Zasady',title:'Zasady, które chronią sprzęt i ludzi',grouping:'class',
    intro:'Krótka rozmowa: czy technik może obejść filtr OSE, jeśli prosi o to nauczyciel? Potem dwie sytuacje i jedno Twoje postanowienie.',

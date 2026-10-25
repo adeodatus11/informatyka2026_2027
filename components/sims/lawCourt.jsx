@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {Icon} from '../icons.jsx';
-import {cases,verdicts,rolesFor,chooseVerdict,chooseLaw,chooseReason,verdictFeedback,caseScore,caseSolved,courtResult} from '../../content/sims/lawCourt.js';
+import {cases,verdicts,chooseVerdict,chooseLaw,chooseReason,verdictFeedback,caseScore,caseSolved,courtResult} from '../../content/sims/lawCourt.js';
 import {orderOptions,optionKey} from './optionOrder.js';
 import './lawCourt.css';
 
@@ -19,7 +19,6 @@ export default function LawCourt({data,value={},onChange}){
  const [idx,setIdx]=useState(firstOpen<0?0:firstOpen);
  const c=cases[idx],st=all[c.id]||{};
  const res=courtResult(value);
- const roleNames=rolesFor(idx);
  function save(next){const cs={...all,[c.id]:next};onChange({...value,cases:cs,...courtResult({cases:cs})});}
  const nextOpen=cases.findIndex((k,i)=>i>idx&&!caseSolved(all[k.id]));
  return <div className="lc-sim">
@@ -33,11 +32,10 @@ export default function LawCourt({data,value={},onChange}){
     <h3 id="lc-file-title">{c.title}</h3>
     <p className="lc-story">{c.story}</p>
    </article>
-   <aside className="lc-roles" aria-label="Role w trójce">
-    <p className="lc-label"><Icon name="group" size={20}/> Role w tej sprawie</p>
-    <ul>{roleNames.map((r,p)=><li key={r}><b>Osoba {p+1}: {r}</b>
-     <small>{r==='Sędzia'?'Prowadzi rozprawę, pilnuje czasu (2 min), klika werdykt po wysłuchaniu stron.':r==='Prokurator'?`Pyta: ${c.prosecutor}`:`Pyta: ${c.defense}`}</small></li>)}</ul>
-    <p className="small muted">Następna sprawa: role przesuwają się o jedno miejsce. Pracujesz sam? Odpowiedz sobie na oba pytania (prokuratora i obrońcy), zanim klikniesz.</p>
+   <aside className="lc-roles" aria-label="Pytania przed werdyktem">
+    <p className="lc-label"><Icon name="group" size={20}/> Zanim wydacie werdykt</p>
+    <ul><li><b>Pytanie oskarżenia</b><small>{c.prosecutor}</small></li><li><b>Pytanie obrony</b><small>{c.defense}</small></li></ul>
+    <p className="small muted">W parze: jedna osoba zadaje pytanie oskarżenia, druga obrony; przy następnej sprawie zamiana. Pracujesz sam? Odpowiedz sobie na oba pytania, zanim klikniesz.</p>
    </aside>
   </div>
   <fieldset className="lc-step">

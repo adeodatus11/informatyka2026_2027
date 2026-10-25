@@ -46,8 +46,8 @@ export function ExitTicket({children}){return <div className="exit-ticket">{chil
 export function Activity({data,value,onChange,base,answers,lesson}){
  const Sim=simComponents[data.type];if(Sim)return <Suspense fallback={<p role="status">Przygotowuję symulator…</p>}><Sim data={data} value={value} onChange={onChange} answers={answers} lesson={lesson} base={base}/></Suspense>;
  switch(data.type){
- case 'wordSteps':return <WordSteps data={data}/>;
- case 'wordRubric':return <WordRubric data={data} value={value} onChange={onChange}/>;
+ case 'wordSteps':return <WordSteps data={data} lesson={lesson}/>;
+ case 'wordRubric':return <WordRubric data={data} value={value} onChange={onChange} lesson={lesson}/>;
  case 'reportGuide':return <ReportGuide data={data}/>;
  case 'resultCard':return <ResultCard data={data} value={value} onChange={onChange} answers={answers} lesson={lesson}/>;
  case 'dentalSimulator':return <DentalSimulator data={data} value={value} onChange={onChange}/>;

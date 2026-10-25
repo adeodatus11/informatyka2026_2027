@@ -96,7 +96,7 @@ function Module({mod,ms,save,onBack}){
   {mod.id==='health'&&<Health mod={mod} ms={ms} tryStep={tryStep} cur={cur}/>}
   {mod.id==='travel'&&<Travel mod={mod} ms={ms}/>}
   {mod.id==='money'&&<Money mod={mod} ms={ms} cur={cur} tryStep={tryStep}/>}
-  {done&&<section className="es-expert" aria-labelledby={`es-exp-${mod.id}`}><h4 id={`es-exp-${mod.id}`}><Icon name="trophy" size={22}/>Karta eksperta: {mod.title}</h4><p className="small">Te 3 zdania przekażesz swojej trójce. Zapamiętaj je albo przepisz.</p><ol>{mod.expert.map(x=><li key={x}>{x}</li>)}</ol><button className="btn secondary" onClick={onBack}><Icon name="left" size={18}/>Wróć do wyboru modułów</button></section>}
+  {done&&<section className="es-expert" aria-labelledby={`es-exp-${mod.id}`}><h4 id={`es-exp-${mod.id}`}><Icon name="trophy" size={22}/>Karta eksperta: {mod.title}</h4><p className="small">Te 3 zdania przekażesz partnerowi (albo zapamiętasz na test). Zapamiętaj je albo przepisz.</p><ol>{mod.expert.map(x=><li key={x}>{x}</li>)}</ol><button className="btn secondary" onClick={onBack}><Icon name="left" size={18}/>Wróć do wyboru modułów</button></section>}
  </div>;
 }
 
@@ -107,7 +107,7 @@ function Expert({value={},onChange}){
  const mod=active&&moduleById(active);
  return <div className="es-sim">
   <div className="es-top"><span className="es-brand"><Icon name="idcard" size={22}/>e-usługi: login.gov.pl, IKP, e-PIT <small>(symulacja)</small></span><span className="es-score" aria-live="polite">Najlepszy moduł: <b>{fmt(res.score)}</b>/4</span></div>
-  {!mod?<><p className="es-jigsaw"><Icon name="group" size={22}/><span><b>W trójce każdy bierze inny moduł</b> (A, B albo C). W parze jedna osoba robi dwa. Pracujesz sam? Zrób wszystkie trzy — liczy się najlepszy.</span></p>
+  {!mod?<><p className="es-jigsaw"><Icon name="group" size={22}/><span><b>W parze każdy bierze inny moduł</b> (A, B albo C), trzeci przejdziecie razem. Pracujesz sam? Zrób wszystkie trzy — liczy się najlepszy.</span></p>
    <div className="es-module-grid">{modules.map(m=>{const ms=mods[m.id]||{};const d=moduleDone(ms,m);return <button key={m.id} className={`es-module-card ${d?'done':''}`} onClick={()=>setActive(m.id)}><span className="es-letter">{m.letter}</span><b>{m.title}</b><small>{m.lead}</small><span className="es-chip">{d?`Ukończony · ${fmt(moduleScore(ms,m))}/4`:Object.keys(ms).length?`W trakcie · ${fmt(moduleScore(ms,m))}/4`:'4 kroki · ok. 8 min'}</span></button>;})}</div></>
   :<><button className="text-button" onClick={()=>setActive(null)}><Icon name="left" size={18}/>Wszystkie moduły</button><Module key={mod.id} mod={mod} ms={mods[mod.id]||{}} save={ms=>save(mod.id,ms)} onBack={()=>setActive(null)}/></>}
  </div>;

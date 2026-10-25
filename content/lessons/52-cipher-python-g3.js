@@ -24,7 +24,7 @@ const fix = s => typeof s === 'string' ? REPLACE.reduce((t, [a, b]) => t.split(a
 const sections = base.sections.map(s => ({
  ...s,
  grouping: s.grouping === 'pair' ? 'solo' : s.grouping,
- intro: fix(s.intro),
+ intro: fix(s.intro) + (s.id === 'parsons' && !fix(s.intro).includes('napisów w Pythonie') ? ' Klasa uczyła się już napisów w Pythonie — dziś to samo w służbie szyfru.' : ''),
  teacherNotes: fix(s.teacherNotes),
 }));
 

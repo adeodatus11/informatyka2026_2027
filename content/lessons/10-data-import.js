@@ -9,7 +9,7 @@ export default {
   name:'Przykłady rozwiązane + feedback do poprawy',
   student:'Najpierw oglądasz import krok po kroku, potem robisz go sam, a na końcu poprawiasz błędy według raportu. Efekt: 11 nowych pacjentów w bazie gabinetu, zero literówek — i umiejętność, o którą pytają na praktykach w każdym biurze.',
   teacher:'Schemat „model → wersja z lukami → samodzielnie”. W etapie 2 prowadzisz pokaz przy projektorze: uczniowie klikają razem z Tobą i sami uzupełniają dwie luki (opcja „Dołącz kopię rekordów” i ogranicznik). W etapie 3 każdy przechodzi kreator sam; symulator daje natychmiastową informację zwrotną przy każdym „Dalej”. W etapie 4 uczniowie poprawiają plik według raportu błędów i notatki recepcji, a potem ponawiają import — punkty rosną z każdym rozwiązanym typem problemu. Twoja rola: krążysz po sali i pytasz „co mówi raport?”, zamiast podpowiadać kliknięcia.',
-  grouping:'Etapy 1–3 i 5 samodzielnie. W etapie 4 opcjonalnie pary „operator + kontroler” (operator poprawia, kontroler czyta notatkę recepcji i sprawdza); przy nieparzystej liczbie osób jedna para to trójka z dwoma kontrolerami albo ktoś pracuje sam — symulator na to pozwala.',
+  grouping:'Etapy 1–3 i 5 samodzielnie. W etapie 4 opcjonalnie pary „operator + kontroler” (operator poprawia, kontroler czyta notatkę recepcji i sprawdza); kto nie ma pary albo woli pracować sam, robi obie czynności po kolei — punkty są te same.',
   methods:[
    {name:'Przykłady rozwiązane',url:'https://metodyka.covepolska.pl/metoda-przyklady-rozwiazane.html'},
    {name:'Feedback prowadzący do poprawy',url:'https://metodyka.covepolska.pl/metoda-feedback-poprawa.html'},

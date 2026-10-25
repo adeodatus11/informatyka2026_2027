@@ -9,7 +9,7 @@ export default {
   name:'Problem → model → program',
   student:'Zaczynasz od prawdziwego problemu: ile pieniędzy uzbierasz. Zapisujesz go jako regułę „następny = poprzedni + coś” (model), a potem jako pętlę w Pythonie (program). Tak samo rozgryziesz ciąg Fibonacciego. Efekt: Twój kalkulator oszczędności i funkcja fib(n), która liczy 50. wyraz w ułamku sekundy.',
   teacher:'Każdy blok ma ten sam rytm: problem z życia ucznia → model (reguła rekurencyjna: aₙ = aₙ₋₁ + 50, kₙ = kₙ₋₁ · 1,05, Fₙ = Fₙ₋₁ + Fₙ₋₂) → program iteracyjny (pętla aktualizuje zmienne). Na starcie retrieval practice z lekcji o sortowaniu. Twoja rola: przy każdym problemie najpierw pytasz „co się zmienia z miesiąca na miesiąc?” i zapisujesz regułę na tablicy, zanim uczniowie zaczną pisać kod. Bonus (rekurencja) pokazuje, dlaczego iteracja jest szybsza — licznik wywołań rośnie lawinowo.',
-  grouping:'Samodzielnie, każdy przy swoim komputerze. Etap Fibonacciego (model) można robić w parach przy jednym zadaniu, ale odpowiedzi każdy wpisuje u siebie.',
+  grouping:'Samodzielnie, każdy przy swoim komputerze. Przy przewidywaniu w etapie Fibonacciego sąsiedzi mogą porównać odpowiedzi, ale każdy wpisuje swoją u siebie.',
   methods:[
    {name:'Problem, projekt i przypadek',url:'https://metodyka.covepolska.pl/metoda-problem-projekt-przypadek.html'},
    {name:'Retrieval practice',url:'https://metodyka.covepolska.pl/metoda-retrieval-practice.html'},
@@ -88,13 +88,13 @@ export default {
      hints:['Pętla: `while stan < cel:` (z dwukropkiem).','W pętli dwie linie z wcięciem: `stan = stan + wplata` i `miesiac = miesiac + 1`.'],
      summary:'Kalkulator oszczędności działa: {passed}/{total} testów'}
    ]},
-  {id:'fibmodel',label:'Fibonacci',title:'Króliki, słoneczniki i ciąg Fibonacciego',grouping:'pair',
+  {id:'fibmodel',label:'Fibonacci',title:'Króliki, słoneczniki i ciąg Fibonacciego',grouping:'solo',
    intro:'W 1202 roku Fibonacci zapytał: ile par królików będzie po roku, jeśli każda dorosła para co miesiąc rodzi nową? Wychodzi ciąg 0, 1, 1, 2, 3, 5, 8… — każdy wyraz to suma dwóch poprzednich. Prześledź program, a potem przewidź wynik podchwytliwej wersji.',
    reading:{title:'Dwa poprzednie wyrazy',paragraphs:[
     'Ciąg Fibonacciego: F₀ = 0, F₁ = 1, a każdy kolejny to suma dwóch poprzednich: Fₙ = Fₙ₋₁ + Fₙ₋₂. Program pamięta tylko dwa ostatnie wyrazy: a i b. W każdym kroku przesuwa je o jeden: nowe a to stare b, nowe b to stare a + b.',
     'Liczby Fibonacciego naprawdę pojawiają się w przyrodzie: pestki w tarczy słonecznika układają się w spirale, których liczba to zwykle dwie sąsiednie liczby Fibonacciego (np. 34 i 55). Podobnie łuski szyszek i ananasa.'
    ]},
-   ...note(7,'Pary mogą pracować przy jednym ekranie, ale każdy wpisuje odpowiedzi u siebie. Najpierw śledzenie (3 min), potem przewidywanie — to kluczowy moment: większość wpisze 0 1 1 2 3 5. Po uruchomieniu zapytaj, skąd się wzięły potęgi dwójki. Wyjaśnij zamianę jednoczesną: Python liczy całą prawą stronę, zanim cokolwiek przypisze.','Dlaczego wersja z dwiema osobnymi liniami a = b i b = a + b daje 0 1 2 4 8 16?','Bo po a = b stara wartość a przepada. b = a + b to wtedy b + b — liczba się podwaja. W wersji a, b = b, a + b prawa strona jest liczona ze starych wartości.','Uczniowie liczą Fibonacciego od 1, 1 (też spotykane), a w programie start to 0, 1 — to tylko przesunięcie numeracji.','Zapytaj o przykład z przyrody i o to, czy „złota proporcja” jest wszędzie — wiele przykładów z internetu (np. Mona Lisa) to mity, ale spirale słonecznika są faktem.'),
+   ...note(7,'Każdy pracuje u siebie. Najpierw śledzenie (3 min), potem przewidywanie — to kluczowy moment: większość wpisze 0 1 1 2 3 5. Po uruchomieniu zapytaj, skąd się wzięły potęgi dwójki. Wyjaśnij zamianę jednoczesną: Python liczy całą prawą stronę, zanim cokolwiek przypisze.','Dlaczego wersja z dwiema osobnymi liniami a = b i b = a + b daje 0 1 2 4 8 16?','Bo po a = b stara wartość a przepada. b = a + b to wtedy b + b — liczba się podwaja. W wersji a, b = b, a + b prawa strona jest liczona ze starych wartości.','Uczniowie liczą Fibonacciego od 1, 1 (też spotykane), a w programie start to 0, 1 — to tylko przesunięcie numeracji.','Zapytaj o przykład z przyrody i o to, czy „złota proporcja” jest wszędzie — wiele przykładów z internetu (np. Mona Lisa) to mity, ale spirale słonecznika są faktem.'),
    activities:[
     {type:'pythonLab',id:'cf-fib-trace',mode:'trace',points:0,file:'fibonacci.py',title:'Fibonacci krok po kroku',
      prompt:'Przejdź program kroki. Obserwuj, jak a i b „przesuwają się” po ciągu.',

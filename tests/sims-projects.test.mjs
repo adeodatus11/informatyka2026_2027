@@ -101,10 +101,11 @@ test('licenseLab audyt: werdykt i rozstrzygający element, różne werdykty i el
 });
 
 // ---------- lekcje ----------
-for (const lesson of [lesson40]) test(`${lesson.id}: projekt ma role, kryteria, wariant solo i kartę wyniku z poprawnymi źródłami`, () => {
+for (const lesson of [lesson40]) test(`${lesson.id}: projekt w parach (bez trójek z rolami), kryteria, wariant solo i kartę wyniku z poprawnymi źródłami`, () => {
  assert.equal(lesson.grade, 1); assert.equal(lesson.duration, 45);
  assert.equal(lesson.sections.reduce((s, x) => s + x.duration, 0), 45);
- assert.match(lesson.format.grouping, /trój/i); assert.match(lesson.format.grouping, /parze|parach/i); assert.match(lesson.format.grouping, /samodziel|sam /i);
+ // decyzja nauczyciela (10.2026): pary zamiast trójek z rolami, bez oceny koleżeńskiej między grupami
+ assert.doesNotMatch(JSON.stringify(lesson), /trój|ocen[aęy] koleżeńsk/i); assert.match(lesson.format.grouping, /par[yaz]/i); assert.match(lesson.format.grouping, /samodziel|sam /i);
  assert.ok(lesson.format.methods.length >= 4);
  const all = lesson.sections.flatMap(s => s.activities);
  const card = all.find(a => a.type === 'resultCard');
@@ -113,7 +114,7 @@ for (const lesson of [lesson40]) test(`${lesson.id}: projekt ma role, kryteria, 
  const empty = lessonScore(lesson, card, {});
  assert.ok(empty.max >= 15); assert.equal(empty.score, 0);
  assert.ok(lesson.sections[0].activities.filter(a => a.type === 'choice').length >= 2, 'retrieval na starcie');
- assert.ok(all.some(a => a.type === 'checklist'), 'ocena koleżeńska wg kryteriów');
+ assert.ok(all.some(a => a.type === 'checklist'), 'sprawdzenie karty wg kryteriów');
  assert.ok(all.some(a => a.type === 'text'), 'refleksja / poprawka');
  for (const a of sources.filter(a => a.points)) assert.equal(lessonScore(lesson, card, {}).rows.find(r => r.id === a.id).max, a.points);
  const ids = all.map(a => a.id); assert.equal(new Set(ids).size, ids.length);

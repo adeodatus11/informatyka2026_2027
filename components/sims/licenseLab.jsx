@@ -97,7 +97,7 @@ function Card({value,save}){
   <div className="lic-card-grid">
    <div className="lic-card-form">
     <label htmlFor="lic-card-name">Nazwa projektu</label><input id="lic-card-name" maxLength={60} value={card.name||''} placeholder="np. Plan lekcji 1C" onChange={e=>set('name',e.target.value)}/>
-    <label htmlFor="lic-card-team">Autorzy (imiona lub nazwa trójki)</label><input id="lic-card-team" maxLength={60} value={card.team||''} placeholder="np. Ola, Kuba, Wiktor" onChange={e=>set('team',e.target.value)}/>
+    <label htmlFor="lic-card-team">Autor lub autorzy (imiona)</label><input id="lic-card-team" maxLength={60} value={card.team||''} placeholder="np. Ola i Kuba" onChange={e=>set('team',e.target.value)}/>
     <Questions answers={card.answers||{}} idPrefix="lic-card" onAnswer={(q,v)=>{const a={...(card.answers||{}),[q]:v};const vis=new Set(visibleQuestions(a).map(x=>x.id));for(const k of Object.keys(a))if(!vis.has(k))delete a[k];save({card:{...card,answers:a}});}}/>
     <label htmlFor="lic-card-reason">Dlaczego ta licencja? Co odbiorca może, a czego nie? (min. 15 znaków)</label><textarea id="lic-card-reason" rows={3} maxLength={300} value={card.reason||''} placeholder="np. Chcemy, żeby klasa mogła poprawiać aplikację, ale poprawki mają zostać otwarte." onChange={e=>set('reason',e.target.value)}/>
    </div>
@@ -112,7 +112,7 @@ function Card({value,save}){
    </article>
   </div>
   <div className="inline-actions"><button className="btn secondary" disabled={!id} onClick={()=>copyText(text,setMsg)}><Icon name="file" size={18}/>Kopiuj kartę</button>{msg&&<span className="lic-pending" role="status">{msg}</span>}</div>
-  {ok?<Feedback ok>Karta kompletna. Pokażcie ją trójce, która będzie Was oceniać.{!value.footer?.ok&&' Brakuje jeszcze poprawnej stopki cudzego zdjęcia (zakładka Stopka).'}</Feedback>:<p className="muted small">Karta jest kompletna, gdy ma nazwę, autorów, odpowiedzi kreatora i uzasadnienie.</p>}
+  {ok?<Feedback ok>Karta kompletna. Sprawdźcie ją według kryteriów w etapie „Sprawdzenie” i pokażcie nauczycielowi.{!value.footer?.ok&&' Brakuje jeszcze poprawnej stopki cudzego zdjęcia (zakładka Stopka).'}</Feedback>:<p className="muted small">Karta jest kompletna, gdy ma nazwę, autorów, odpowiedzi kreatora i uzasadnienie.</p>}
  </div>;
 }
 function Creator({value={},onChange}){

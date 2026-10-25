@@ -1,6 +1,6 @@
 // Klasa 3: ponowne użycie lekcji 05 (klasa 2) — ta sama treść i ten sam symulator gabinetu.
-// Pliku 05 nie zmieniamy: kopiujemy sekcje, dodajemy schemat pracy, pytanie powtórkowe z lekcji
-// o zawodach pływackich, wyjaśnienia (z notatek lekcji 05) i kartę wyniku.
+// Kopiujemy sekcje lekcji 05, dodajemy schemat pracy, pytanie powtórkowe z lekcji o zawodach
+// pływackich, wyjaśnienia (z notatek lekcji 05) i własną kartę wyniku (zastępuje kartę z lekcji 05).
 import base from './05-dental-database.js';
 import {additionalNotes} from '../notes-grades-2-3.js';
 import {choice} from '../schema.js';
@@ -12,11 +12,12 @@ const sections=base.sections.map(s=>{
  const copy={...s,activities:[...s.activities],grouping:s.grouping||({start:'class',model:'class',check:'solo',create:'solo',query:'solo',summary:'solo'})[s.id]};
  if(notes[s.id])copy.reading=notes[s.id];
  if(s.id==='start'){copy.activities=[recall,...copy.activities];copy.teacherNotes=s.teacherNotes+' Najpierw pytanie powtórkowe z lekcji o zawodach pływackich (klucz obcy), potem pytanie o gabinet.';}
- if(s.id==='summary')copy.activities=[...copy.activities,{type:'resultCard',id:'result',title:'Karta wyniku: baza gabinetu',sources:['db-g3-recall','db-problem','db-fields','db-result','db-relation','db-exit'],badges:[
+ // Lekcja 05 ma już własną kartę wyniku — w klasie 3 zastępujemy ją kartą z pytaniem powtórkowym (jedna karta).
+ if(s.id==='summary')copy.activities=[...copy.activities.filter(a=>a.type!=='resultCard'),{type:'resultCard',id:'result',title:'Karta wyniku: baza gabinetu',sources:['db-g3-recall','db-problem','db-fields','db-result','db-relation','db-exit'],badges:[
   {min:0,name:'Recepcja na zastępstwie',text:'Pacjenci się mieszają z terminami. Wróć do etapu „Sprawdź” — tam się rozdzielają.'},
   {min:0.5,name:'Rejestratorka/rejestrator',text:'Tabele i relacja działają. Jeszcze pewność przy kluczach i gabinet jest Twój.'},
   {min:0.85,name:'Szef recepcji',text:'Pacjent raz, wizyty wiele razy, relacja pilnuje porządku. Poniedziałkowy plan w sekundę.'}
- ],selfCheck:base.objectives}];
+ ],selfCheck:base.objectives,note:base.sections.find(x=>x.id==='summary').activities.find(a=>a.type==='resultCard')?.note}];
  return copy;
 });
 
