@@ -16,7 +16,7 @@ export default {
   "materials": [
     "Komputer z Microsoft Word dla Windows 2019/2021/2024 lub Microsoft 365; polecenia mogą mieć nieco inne etykiety w poszczególnych wydaniach.",
     "Przeglądarka z tą lekcją oraz pobrany dokument DOCX. Internet służy pobraniu materiałów; edycja odbywa się w Wordzie na komputerze.",
-    "Własny folder roboczy. Zapisuj Ctrl+S; do oddania plików użyj kanału wskazanego przez nauczyciela. Platforma nie przesyła i nie sprawdza plików Word."
+    "Własny folder roboczy. Zapisuj Ctrl+S; do oddania plików użyj kanału wskazanego przez nauczyciela. Platforma nie przesyła plików — sprawdza je lokalnie w Twojej przeglądarce."
   ],
   "format": {
     "methods": [
@@ -245,6 +245,7 @@ export default {
       "duration": 6,
       "intro": "Rubryka dotyczy rzeczywistego pliku. Zaznaczenia są samooceną; nauczyciel sprawdza DOCX. Quiz nie ocenia poprawności dokumentu.",
       "activities": [
+        {type:'docxCheck',id:'w31-docx',title:'Sprawdź swój plik',filename:'31-sekcje.docx',expect:['Plan szkolnego wydarzenia'],points:8,checks:[{id:'sections',label:'Dokument podzielony na sekcje (co najmniej 4)',points:1,kind:'sections',min:4},{id:'landscape',label:'Harmonogram w osobnej sekcji poziomej, reszta pionowo',points:3,kind:'landscapeSection',name:'harmonogram (tabela)',contains:'Godzina',only:true},{id:'columns',label:'Porady w dwóch kolumnach, granice Ciągłe',points:2,kind:'columnsSection',name:'porady dla organizatorów',contains:'Cel wydarzenia. Turniej',cols:2,outside:['Porady dla organizatorów','Od tego nagłówka','Zamknięcie dokumentu'],continuous:true},{id:'headers',label:'„PLAN WYDARZENIA” tylko w sekcji harmonogramu',points:2,kind:'sectionHeaders',name:'harmonogram',contains:'Godzina',text:'PLAN WYDARZENIA',othersText:'PORADNIK ORGANIZATORA'}]},
         {
           "type": "wordRubric",
           "id": "w31-rubric",
@@ -284,9 +285,10 @@ export default {
         {
           "type": "resultCard",
           "id": "w31-result",
-          "title": "Sprawdzenie wiedzy — quiz",
+          "title": "Wiedza i plik",
           "hideGrade": true,
           "sources": [
+            "w31-docx",
             "w31-q1",
             "w31-q2",
             "w31-q3"

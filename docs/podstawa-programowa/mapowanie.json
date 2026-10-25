@@ -159,9 +159,10 @@
       "activityIds": [
         "w28-style-steps",
         "w28-page-steps",
-        "w28-rubric"
+        "w28-rubric",
+        "w28-docx"
       ],
-      "evidence": "Uczeń stosuje i modyfikuje style, buduje hierarchię nagłówków oraz wstawia nagłówek strony i automatyczną numerację w stopce rzeczywistego DOCX.",
+      "evidence": "Uczeń stosuje i modyfikuje style, buduje hierarchię nagłówków oraz wstawia nagłówek strony i automatyczną numerację w stopce rzeczywistego DOCX. Plik DOCX ucznia sprawdzany automatycznie lokalnie w przeglądarce (docxCheck).",
       "limitations": "Wprowadzenie do struktury dokumentu; spisy, sekcje i recenzję rozwijają 29–33. Samoocena nie sprawdza zawartości pliku.",
       "migraReference": "M1"
     },
@@ -177,9 +178,10 @@
       "activityIds": [
         "w29-build",
         "w29-change",
-        "w29-rubric"
+        "w29-rubric",
+        "w29-docx"
       ],
-      "evidence": "Automatyczny spis treści na podstawie stylów; dodanie i zmiana tytułów oraz kontrola aktualizacji całego spisu i numerów stron w Wordzie.",
+      "evidence": "Automatyczny spis treści na podstawie stylów; dodanie i zmiana tytułów oraz kontrola aktualizacji całego spisu i numerów stron w Wordzie. Plik DOCX ucznia sprawdzany automatycznie lokalnie w przeglądarce (docxCheck).",
       "limitations": "Realizuje spis treści i jego aktualizację; nie zastępuje spisów obiektów, sekcji, recenzji ani korespondencji seryjnej. Działanie pola potwierdza nauczyciel w DOCX.",
       "migraReference": "M1"
     },
@@ -196,9 +198,10 @@
         "w30-caption-steps",
         "w30-list-steps",
         "w30-update",
-        "w30-rubric"
+        "w30-rubric",
+        "w30-docx"
       ],
-      "evidence": "Automatyczne podpisy ilustracji, tabel i wykresów; trzy osobne spisy według etykiet i sprawdzenie aktualizacji po zmianie podpisu.",
+      "evidence": "Automatyczne podpisy ilustracji, tabel i wykresów; trzy osobne spisy według etykiet i sprawdzenie aktualizacji po zmianie podpisu. Plik DOCX ucznia sprawdzany automatycznie lokalnie w przeglądarce (docxCheck).",
       "limitations": "Realizuje spisy obiektów. Gotowe ilustracje i wykresy nie dowodzą projektowania grafiki II.3.a ani pracy w arkuszu II.3.c. Nauczyciel sprawdza pola w pliku.",
       "migraReference": "M1"
     },
@@ -215,9 +218,10 @@
         "w31-model",
         "w31-work",
         "w31-header",
-        "w31-rubric"
+        "w31-rubric",
+        "w31-docx"
       ],
-      "evidence": "Podziały stron i sekcji, sekcja pozioma z harmonogramem, kolumny oraz niezależny nagłówek wybranej sekcji w Wordzie.",
+      "evidence": "Podziały stron i sekcji, sekcja pozioma z harmonogramem, kolumny oraz niezależny nagłówek wybranej sekcji w Wordzie. Plik DOCX ucznia sprawdzany automatycznie lokalnie w przeglądarce (docxCheck).",
       "limitations": "Realizuje sekcje i kolumny; pozostałe funkcje II.3.b są w innych lekcjach. Obejrzenie podglądu nie zastępuje sprawdzenia granic sekcji i ustawień w DOCX.",
       "migraReference": "M1"
     },
@@ -234,9 +238,11 @@
       "activityIds": [
         "w32-edit",
         "w32-feedback",
-        "w32-rubric"
+        "w32-rubric",
+        "w32-docx",
+        "w32-docx-pub"
       ],
-      "evidence": "Redakcja zaproszenia według karty faktów: śledzone zmiany, komentarze, uzasadnione akceptowanie i odrzucanie propozycji, poprawa po informacji zwrotnej oraz oddzielna wersja do publikacji.",
+      "evidence": "Redakcja zaproszenia według karty faktów: śledzone zmiany, komentarze, uzasadnione akceptowanie i odrzucanie propozycji, poprawa po informacji zwrotnej oraz oddzielna wersja do publikacji. Plik DOCX ucznia sprawdzany automatycznie lokalnie w przeglądarce (docxCheck).",
       "limitations": "Tryb recenzji sprawdzany w prawdziwym dokumencie; IV.1 wspiera krótki projekt redakcyjny z poprawą, nie samo zaznaczenie quizu. Nie jest to ćwiczenie publikowania ani praw autorskich.",
       "migraReference": "M1"
     },
@@ -256,9 +262,11 @@
         "w33-save",
         "w33-reader",
         "w33-publish",
-        "w33-rubric"
+        "w33-rubric",
+        "w33-docx-review",
+        "w33-docx"
       ],
-      "evidence": "Projekt poradnika organizatora: plan, style, nagłówek i stopka, cztery spisy, sekcja pozioma, test czytelnika, śledzona poprawa oraz końcowe DOCX i sprawdzony PDF.",
+      "evidence": "Projekt poradnika organizatora: plan, style, nagłówek i stopka, cztery spisy, sekcja pozioma, test czytelnika, śledzona poprawa oraz końcowe DOCX i sprawdzony PDF. Plik DOCX ucznia sprawdzany automatycznie lokalnie w przeglądarce (docxCheck).",
       "limitations": "Dwie sesje po 45 minut. Nie zawiera korespondencji seryjnej (12/27) ani obowiązkowych kolumn (31). Zachowanie gotowej informacji o źródłach nie dowodzi sprawdzenia licencji V.2. Nauczyciel ocenia rzeczywiste pliki.",
       "migraReference": "M1"
     },

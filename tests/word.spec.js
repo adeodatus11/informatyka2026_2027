@@ -47,9 +47,15 @@ test('Word: poprawa błędu, komplet aktywności i samoocena nie zmieniają wyni
     await g.locator(`button[data-option="${a.correct[0]}"]`).click();
    }
    if(a.type==='checklist')for(const item of a.items)await page.getByRole('checkbox',{name:item,exact:true}).check();
+   if(a.type==='docxCheck'){
+    await page.locator('.dxc-input').first().setInputFiles(`tests/fixtures/docx/${lesson.id}-solved.docx`);
+    const max=a.checks.reduce((t,c)=>t+(c.points||0),0);
+    await expect(page.locator('.dxc-score').first()).toHaveText(`Punkty: ${max}/${max}`);
+   }
    if(a.type==='wordRubric'){
     const before=await page.locator('.result-score').innerText();
-    for(const select of await page.locator('.word-rubric select').all())await select.selectOption('0');
+    const selects=await page.locator('.word-rubric select').all();
+    for(const [k,select] of selects.entries()){await select.selectOption('0');await expect(page.locator('.word-rubric [role=status]')).toContainText(k===selects.length-1?'Twoja samoocena':`${k+1}/${selects.length}`);}
     await expect(page.locator('.word-rubric [role=status]')).toContainText('Twoja samoocena: 0/10');
     expect(await page.locator('.result-score').innerText()).toBe(before);
    }

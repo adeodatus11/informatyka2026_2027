@@ -16,7 +16,7 @@ export default {
   "materials": [
     "Komputer z Microsoft Word dla Windows 2019/2021/2024 lub Microsoft 365; polecenia mogą mieć nieco inne etykiety w poszczególnych wydaniach.",
     "Przeglądarka z tą lekcją oraz pobrany dokument DOCX. Internet służy pobraniu materiałów; edycja odbywa się w Wordzie na komputerze.",
-    "Własny folder roboczy. Zapisuj Ctrl+S; do oddania plików użyj kanału wskazanego przez nauczyciela. Platforma nie przesyła i nie sprawdza plików Word."
+    "Własny folder roboczy. Zapisuj Ctrl+S; do oddania plików użyj kanału wskazanego przez nauczyciela. Platforma nie przesyła plików — sprawdza je lokalnie w Twojej przeglądarce."
   ],
   "format": {
     "methods": [
@@ -300,6 +300,7 @@ export default {
             }
           ]
         },
+        {type:'docxCheck',id:'w33-docx-review',title:'Sprawdź kopię z recenzją (33-poradnik-recenzja.docx)',filename:'33-poradnik-recenzja.docx',expect:['Poradnik organizacji'],points:3,checks:[{id:'comments',label:'Dwa konkretne komentarze',points:2,kind:'comments',min:2},{id:'tracked',label:'Co najmniej jedna śledzona poprawa',points:1,kind:'trackedChanges',min:1}]},{type:'docxCheck',id:'w33-docx',title:'Sprawdź poradnik (33-poradnik.docx)',filename:'33-poradnik.docx',expect:['Poradnik organizacji'],points:20,checks:[{id:'title',label:'Nazwa poradnika w stylu Tytuł',points:1,kind:'styleCount',style:'title',min:1,max:1},{id:'h1',label:'Sześć działów w stylu Nagłówek 1 (z nowym tytułem podsumowania)',points:2,kind:'styleCount',style:'heading 1',min:6,texts:['Cel wydarzenia','Przygotowanie sali','Podział zadań','Przebieg turnieju','Zasady punktacji','Podsumowanie wydarzenia i wnioski']},{id:'h2',label:'Co najmniej 4 śródtytuły w stylu Nagłówek 2',points:1,kind:'styleCount',style:'heading 2',min:4},{id:'no-fake',label:'Bez „udawanych nagłówków”',points:1,kind:'noFakeHeadings'},{id:'header',label:'Nagłówek PORADNIK ORGANIZATORA na każdej stronie',points:1,kind:'headerText',text:'PORADNIK ORGANIZATORA'},{id:'footer',label:'Automatyczny numer strony w stopce',points:1,kind:'footerPage'},{id:'manual',label:'Bez ręcznie wpisanych numerów stron',points:1,kind:'noManualPageNumbers'},{id:'toc',label:'Automatyczny spis treści',points:1,kind:'toc',levels:[1,2]},{id:'toc-current',label:'Spis treści aktualny po zmianie tytułów',points:2,kind:'tocCurrent'},{id:'cap-ill',label:'Podpis „Ilustracja” pod ilustracją',points:1,kind:'captions',seq:'Ilustracja',min:1,position:'below'},{id:'cap-tab',label:'Podpis „Tabela” nad tabelą',points:1,kind:'captions',seq:'Tabela',min:1,position:'above'},{id:'cap-chart',label:'Podpis „Wykres” pod wykresem',points:1,kind:'captions',seq:'Wykres',min:1,position:'below'},{id:'list-ill',label:'Spis ilustracji zgodny z podpisami',points:1,kind:'figureList',seq:'Ilustracja',min:1},{id:'list-tab',label:'Spis tabel zgodny z podpisami',points:1,kind:'figureList',seq:'Tabela',min:1},{id:'list-chart',label:'Spis wykresów zgodny z podpisami',points:1,kind:'figureList',seq:'Wykres',min:1},{id:'landscape',label:'Harmonogram w sekcji poziomej, reszta pionowo',points:2,kind:'landscapeSection',name:'harmonogram roboczy',contains:'Harmonogram roboczy',only:true},{id:'clean',label:'Wersja końcowa bez komentarzy i zmian śledzonych',points:1,kind:'cleanCopy'}]},
         {
           "type": "wordRubric",
           "id": "w33-rubric",
@@ -369,9 +370,11 @@ export default {
         {
           "type": "resultCard",
           "id": "w33-result",
-          "title": "Sprawdzenie wiedzy — quiz",
+          "title": "Wiedza i plik",
           "hideGrade": true,
           "sources": [
+            "w33-docx-review",
+            "w33-docx",
             "w33-q1",
             "w33-q2",
             "w33-q3"
