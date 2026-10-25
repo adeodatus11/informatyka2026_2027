@@ -245,6 +245,7 @@ export default {
           "explanation": "Dane źródłowe są podstawą decyzji; odrzucenie przywraca wcześniejszy zapis.",
           "hint": "Porównaj propozycję z kartą danych."
         },
+        {type:'docxCheck',id:'w32-docx',title:'Sprawdź plik z recenzją (32-recenzja.docx)',filename:'32-recenzja.docx',expect:['Zaproszenie na warsztaty'],points:7,checks:[{id:'comments',label:'Co najmniej 3 komentarze z decyzjami i pytaniem',points:2,kind:'comments',min:3},{id:'comment-materials',label:'Komentarz przy „Przynieś materiały”',points:1,kind:'comments',min:1,anchor:'materiały'},{id:'free',label:'„płatny” → „bezpłatny” ze śledzeniem zmian',points:1,kind:'trackedEdit',from:'Tekst zaproszenia',edits:[{before:'Udział jest płatny',after:'Udział jest bezpłatny'}]},{id:'date',label:'Zapisy: 17 → 16 listopada ze śledzeniem zmian',points:1,kind:'trackedEdit',from:'Tekst zaproszenia',edits:[{before:'do 17 listopada',after:'do 16 listopada'}]},{id:'typo',label:'„sie” → „się” ze śledzeniem zmian',points:1,kind:'trackedEdit',from:'Tekst zaproszenia',edits:[{before:'nauczysz sie',after:'nauczysz się'}]},{id:'cert',label:'Usunięta obietnica certyfikatu (śledzone)',points:1,kind:'trackedEdit',from:'Tekst zaproszenia',edits:[{before:'certyfikat'}]}]},{type:'docxCheck',id:'w32-docx-pub',title:'Sprawdź kopię publikacyjną (32-publikacja.docx)',filename:'32-publikacja.docx',expect:['Zaproszenie na warsztaty'],points:6,checks:[{id:'clean',label:'Bez komentarzy i nierozstrzygniętych zmian',points:2,kind:'cleanCopy'},{id:'facts',label:'Dane zgodne z ustaleniami',points:2,kind:'text',from:'Tekst zaproszenia',contains:['18 listopada 2026','14.00','sali 12','60 minut',{word:'bezpłatny'},'do 16 listopada'],hint:'Porównaj zaproszenie z tabelą „Uzgodnione dane”: sala 12 (zaakceptuj), 60 minut (odrzuć 90), udział bezpłatny, zapisy do 16 listopada.'},{id:'removed',label:'Bez błędów i niepotwierdzonych obietnic',points:2,kind:'text',from:'Tekst zaproszenia',absent:['90 minut',{word:'płatny'},'17 listopada',{word:'sie'},'certyfikat','Przynieś materiały'],hint:'W kopii publikacyjnej odrzuć zmianę 60→90, popraw „płatny”, datę zapisów i „sie”; usuń obietnicę certyfikatu i niejasną prośbę o materiały.'}]},
         {
           "type": "wordRubric",
           "id": "w32-rubric",
@@ -287,6 +288,8 @@ export default {
           "title": "Sprawdzenie wiedzy — quiz",
           "hideGrade": true,
           "sources": [
+            "w32-docx",
+            "w32-docx-pub",
             "w32-q1",
             "w32-q2",
             "w32-q3"
