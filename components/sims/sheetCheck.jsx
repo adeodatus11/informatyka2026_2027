@@ -34,9 +34,9 @@ function Bars({chart}){
  </svg>{chart.caption&&<figcaption className="small muted">{chart.caption}</figcaption>}</figure>;
 }
 
-function Task({task,index,st={},onAnswer,onReveal}){
+function Task({task,index,st={},onAnswer,onReveal,scope}){
  const [draft,setDraft]=useState(st.input??'');
- const closed=st.solved||st.revealed;const inputId=`sc-${task.id}`;
+ const closed=st.solved||st.revealed;const inputId=`sc-${scope}-${task.id}`;
  const formula=task.kind==='formula';
  return <li className={`sc-task ${st.solved?'is-solved':st.revealed?'is-revealed':''}`}>
   <div className="sc-task-head"><span className="sc-num" aria-hidden="true">{st.solved?<Icon name="check" size={16}/>:index+1}</span>
@@ -68,7 +68,7 @@ export default function SheetCheck({data,value,onChange}){
    {data.intro&&<p className="sc-intro">{data.intro}</p>}
    {!predict&&<p className="sc-how small"><Icon name="search" size={16}/> Wykonaj zadanie w swoim pliku, odczytaj wartość z komórki i wpisz ją tutaj. Strona nie otwiera Twojego pliku — porównuje tylko wpisany wynik.</p>}
    {data.grid&&<Grid grid={data.grid} id={data.id}/>}
-   <ol className="sc-tasks">{data.tasks.map((t,i)=><Task key={t.id} task={t} index={i} st={tasks[t.id]} onAnswer={raw=>save(t,answerTask(tasks[t.id],t,raw))} onReveal={()=>save(t,revealTask(tasks[t.id]))}/>)}</ol>
+   <ol className="sc-tasks">{data.tasks.map((t,i)=><Task key={t.id} scope={data.id} task={t} index={i} st={tasks[t.id]} onAnswer={raw=>save(t,answerTask(tasks[t.id],t,raw))} onReveal={()=>save(t,revealTask(tasks[t.id]))}/>)}</ol>
    <p className="sc-progress small">{res.done?`Gotowe: ${data.tasks.filter(t=>tasks[t.id]?.solved).length} z ${res.max} poprawnie, ${fmt(res.score)} pkt.`:`Sprawdzone: ${data.tasks.filter(t=>tasks[t.id]?.solved||tasks[t.id]?.revealed).length}/${res.max}. Pełny punkt za pierwszą próbę, pół — po poprawce.`}</p>
   </div>
  </section>;

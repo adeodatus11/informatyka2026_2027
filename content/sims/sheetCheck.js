@@ -18,8 +18,8 @@ export function parseNumber(raw) {
  if (raw === null || raw === undefined) return null;
  let s = String(raw).trim().toLowerCase()
   .replace(/[−–—]/g, '-')
-  .replace(/zł|zl|pln|°c|kwh|mm|%|osób\/km²|os\.\/km²|szt\.?|pkt/g, '')
-  .replace(/[\s  ]/g, '');
+  .replace(/[\s  ]/g, '')
+  .replace(/[^\d]+$/, ''); // jednostka na końcu: zł, %, °C, h, mm…
  if (!s) return null;
  if (s.includes(',') && s.includes('.')) s = s.replace(/\./g, '').replace(',', '.');
  else s = s.replace(',', '.');
