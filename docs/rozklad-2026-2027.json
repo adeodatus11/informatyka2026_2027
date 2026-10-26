@@ -1426,8 +1426,10 @@
   "nr": 24,
   "temat": "Programowanie zamiany liczby dziesiętnej na dwójkową",
   "pp": "I.1, I.2.a, I.3, II.1, II.2",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "87"
+  ],
   "note": "",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  },
@@ -1438,8 +1440,10 @@
   "nr": 25,
   "temat": "Zamiana liczb między systemami pozycyjnymi",
   "pp": "I.1, I.2.a, I.3, II.1, II.2",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "88"
+  ],
   "note": "",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  },
@@ -1450,11 +1454,11 @@
   "nr": 26,
   "temat": "Działania na ułamkach z wykorzystaniem NWD i NWW",
   "pp": "I.1, I.2.a, I.3, II.1, II.2",
-  "status": "do ponownego użycia",
+  "status": "jest",
   "ids": [
-   "49 (kl. 2)"
+   "89"
   ],
-  "note": "koncepcja bez kodu; w kl. 3 temat zakłada też Python → razem z 50",
+  "note": "",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  },
  {
@@ -1464,11 +1468,11 @@
   "nr": 27,
   "temat": "Skracanie i działania arytmetyczne na ułamkach",
   "pp": "I.1, I.2.a, I.3, II.1, II.2",
-  "status": "do ponownego użycia",
+  "status": "jest",
   "ids": [
-   "50 (kl. 2)"
+   "90"
   ],
-  "note": "kalkulator ułamków w Pythonie",
+  "note": "",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  },
  {
@@ -1490,8 +1494,10 @@
   "nr": 29,
   "temat": "Projekt sterowania nawadnianiem ogrodu",
   "pp": "I.1, II.2, IV.1",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "106"
+  ],
   "note": "",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  },
@@ -1502,8 +1508,10 @@
   "nr": 30,
   "temat": "Budowanie robota i inne zadania projektowe",
   "pp": "I.1, II.2, IV.1",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "107"
+  ],
   "note": "",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  },
@@ -1514,12 +1522,11 @@
   "nr": 31,
   "temat": "Etapy tworzenia strony internetowej",
   "pp": "I.1, II.2, II.3.f, IV.1",
-  "status": "do ponownego użycia",
+  "status": "jest",
   "ids": [
-   "35 (kl. 1)",
-   "36 (kl. 1)"
+   "91"
   ],
-  "note": "częściowo: podstawy HTML i etapy (plan → kod → sprawdzenie) są w 35–36 i 38; w kl. 3 można podpiąć wersję skróconą",
+  "note": "",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  },
  {
@@ -1529,11 +1536,11 @@
   "nr": 32,
   "temat": "Nowy wygląd strony internetowej o Wyspach Kanaryjskich",
   "pp": "I.1, II.2, II.3.f, IV.1",
-  "status": "do ponownego użycia",
+  "status": "jest",
   "ids": [
-   "37 (kl. 1)"
+   "108"
   ],
-  "note": "częściowo: CSS i motywy w 37 (htmlLab); potrzebny inny szablon strony (Wyspy Kanaryjskie)",
+  "note": "",
   "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
  }
 ]
