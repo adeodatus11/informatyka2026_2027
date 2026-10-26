@@ -37,3 +37,12 @@ test('lekcje: tematy, 45 min, retrieval, odrębne zadania, maksimum karty',()=>{
  for(const l of lessons){const row=rows.find(x=>x.klasa===2&&x.lp===l.order);assert.equal(l.title,row.temat);assert.equal(l.duration,45);assert.equal(l.sections.reduce((s,x)=>s+x.duration,0),45);assert.ok(l.sections.length>=4&&l.sections.length<=7);assert.ok(l.sections[0].activities.some(a=>a.type==='choice'));assert.match(l.teacherGuide.preparation,/DO WERYFIKACJI ze sprzętem w pracowni/);const acts=l.sections.flatMap(s=>s.activities);assert.equal(new Set(acts.map(a=>a.id)).size,acts.length);const lab=acts.find(a=>a.type==='robotLab');assert.ok(lab);assert.equal(lab.points,8);const card=acts.find(a=>a.type==='resultCard');const answers=Object.fromEntries(acts.map(a=>[a.id,a.type==='choice'?{done:true,first:true}:{done:true,score:8,max:8}]));const score=lessonScore(l,card,answers);assert.equal(score.score,10);assert.equal(score.max,10);assert.equal(lessonScore(l,card,{}).score,0);assert.ok(!card.sources.includes(acts[0].id));}
  const robot=lessons.at(-1).sections.flatMap(s=>s.activities).find(a=>a.type==='robotLab');assert.equal(robot.requiresWiring,true);
 });
+
+
+test('Rzeczywisty błąd składni i nazwy dostaje wskazówkę po polsku',()=>{
+ const execute=(code,project)=>parseRobotOutput(run({code:robotProgram(code,project)}));
+ const syntax=execute('for i in range(2)\n    pass\n','garden');
+ assert.match(syntax.cases[0].error,/dwukrop|składni|programie/i);
+ const name=execute('nieznana_funkcja()','garden');
+ assert.match(name.cases[0].error,/nazw|zmienn|zdefiniowan|programie/i);
+});
