@@ -615,8 +615,10 @@
   "sem": "II półrocze",
   "temat": "Funkcje zwracające wartość w języku Python",
   "pp": "I.1., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "77"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -626,8 +628,10 @@
   "sem": "II półrocze",
   "temat": "Funkcje niezwracające wartości w języku Python",
   "pp": "I.1., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "78"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -637,8 +641,10 @@
   "sem": "II półrocze",
   "temat": "Definiowanie i stosowanie listy w języku Python",
   "pp": "I.1., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "79"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -648,8 +654,10 @@
   "sem": "II półrocze",
   "temat": "Wykonywanie operacji na elementach listy w języku Python",
   "pp": "I.1., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "80"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -659,8 +667,10 @@
   "sem": "II półrocze",
   "temat": "Dane tekstowe w języku Python",
   "pp": "I.1., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "81"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -670,8 +680,10 @@
   "sem": "II półrocze",
   "temat": "Wybrane algorytmy na tekstach",
   "pp": "I.1., I.2b., I.3., II.1.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "92"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -681,8 +693,10 @@
   "sem": "II półrocze",
   "temat": "Programowanie wybranych algorytmów na tekstach",
   "pp": "I.1., I.2b., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "93"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -692,8 +706,10 @@
   "sem": "II półrocze",
   "temat": "Wyszukiwanie wzorca w tekście metodą naiwną",
   "pp": "I.1., I.2b., I.3., II.1.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "94"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -703,8 +719,10 @@
   "sem": "II półrocze",
   "temat": "Programowanie algorytmu wyszukiwania wzorca w tekście metodą naiwną",
   "pp": "I.1., I.2b., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "95"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -714,11 +732,11 @@
   "sem": "II półrocze",
   "temat": "System dwójkowy",
   "pp": "I.2a.",
-  "status": "do ponownego użycia",
+  "status": "jest",
   "ids": [
-   "06 (kl. 3)"
+   "96"
   ],
-  "note": "06 łączy model komputera i system dwójkowy",
+  "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
  {
@@ -727,9 +745,9 @@
   "sem": "II półrocze",
   "temat": "System szesnastkowy",
   "pp": "I.2a.",
-  "status": "do ponownego użycia",
+  "status": "jest",
   "ids": [
-   "13 (kl. 3)"
+   "97"
   ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
@@ -740,8 +758,10 @@
   "sem": "II półrocze",
   "temat": "Programowanie zamiany reprezentacji liczb między pozycyjnymi systemami liczbowymi",
   "pp": "I.1., I.2a., I.3., II.1., II.2.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "98"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
