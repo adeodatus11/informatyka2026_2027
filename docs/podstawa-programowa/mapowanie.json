@@ -1,7 +1,7 @@
 {
   "basis": "PP2024-LO-TECH-P",
   "reviewedCommit": "91bffa3",
-  "reviewedOn": "2026-10-01",
+  "reviewedOn": "2026-10-25",
   "meaning": "Powiązanie tematyczne i dowód ćwiczenia; nie deklaracja pełnej realizacji wszystkich wskazanych punktów.",
   "lessons": [
     {
@@ -1210,6 +1210,141 @@
       "evidence": "Funkcje na ułamkach jako krotkach (skracanie, dodawanie, odejmowanie, kalkulator) z kontrolą mianownika 0 i porównaniem z fractions.Fraction.",
       "limitations": "—",
       "migraReference": "M2"
+    },
+    {
+      "lessonId": "82",
+      "grade": 2,
+      "title": "Sterowanie nawadnianiem ogrodu – wprowadzenie do robotyki i zadanie projektowe",
+      "file": "content/lessons/82-robotics-g2.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "r82-recall",
+        "r82-model",
+        "r82-lab",
+        "r82-transfer"
+      ],
+      "evidence": "Odróżniam czujnik od elementu wykonawczego. Piszę pętlę czytaj → decyduj → działaj. Testuję próg, deszcz, noc i brak wody. Dowód: Z poprzedniej lekcji o ułamkach: dlaczego testowaliśmy mianownik 0?; Wilgotność wynosi dokładnie 30%. Warunek to wilgotnosc < 30. Co zrobi pompa?; Program i próby; Wilgotność 10%, dzień, nie pada, ale zbiornik jest pusty. Co jest ważniejsze?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 18
+    },
+    {
+      "lessonId": "83",
+      "grade": 2,
+      "title": "Sterowanie nawadnianiem ogrodu – zadania szczegółowe",
+      "file": "content/lessons/83-robotics-g2.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2",
+        "IV.1"
+      ],
+      "activityIds": [
+        "r83-recall",
+        "r83-model",
+        "r83-lab",
+        "r83-transfer"
+      ],
+      "evidence": "Wyjaśniam histerezę na dwóch progach. Zachowuję stan między odczytami. Nadaję zabezpieczeniom pierwszeństwo. Dowód: Z lekcji o nawadnianiu: czujnik wilgotności to…; Pompa już działa. Wilgotność wzrosła z 29% do 31%. Co robi w modelu z progami 30/50?; Program i próby; Po deszczu pompa jest wyłączona, wilgotność 35%. Czy ma się włączyć?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 19
+    },
+    {
+      "lessonId": "84",
+      "grade": 2,
+      "title": "Projekt „Zamknij okno”",
+      "file": "content/lessons/84-robotics-g2.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "r84-recall",
+        "r84-model",
+        "r84-lab",
+        "r84-transfer"
+      ],
+      "evidence": "Łączę odczyty deszczu i kontaktronu. Steruję serwem i buzzerem. Testuję STOP i zamknięte okno. Dowód: Z lekcji 83: co robi histereza?; Pada, ale kontaktron zgłasza zamknięte okno. Jakie polecenie jest właściwe?; Program i próby; Pada i okno jest otwarte, ale ktoś nacisnął STOP. Co wyślesz?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 20
+    },
+    {
+      "lessonId": "85",
+      "grade": 2,
+      "title": "Projekt „Wycisz radio”",
+      "file": "content/lessons/85-robotics-g2.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "r85-recall",
+        "r85-model",
+        "r85-lab",
+        "r85-transfer"
+      ],
+      "evidence": "Steruję przekaźnikiem na podstawie odczytu. Stosuję histerezę i STOP. Odróżniam symulację logiczną od instalacji elektrycznej. Dowód: Z projektu okna: jaki warunek ma pierwszeństwo przed ruchem serwa?; Radio jest wyciszone, odczyt spada do 60. Co się stanie?; Program i próby; Dlaczego w prawdziwej pracowni nie podłączasz przekaźnika do sieci 230 V w ramach tego ćwiczenia?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 21
+    },
+    {
+      "lessonId": "86",
+      "grade": 2,
+      "title": "Budowanie robota – przygotowanie pomocy i montowanie układu",
+      "file": "content/lessons/86-robotics-g2.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2",
+        "IV.1"
+      ],
+      "activityIds": [
+        "r86-recall",
+        "r86-model",
+        "r86-lab",
+        "r86-transfer"
+      ],
+      "evidence": "Rozróżniam zasilanie, masę i sygnał. Łączę czujniki i sterownik według schematu. Diagnozuję błędy i zapisuję konfigurację Rover-2. Dowód: Z lekcji o radiu: przekaźnik jest…; Sygnał czujnika jest podłączony do A0, ale brakuje wspólnej masy. Co zrobisz najpierw?; Połączenia Rover-2; Po co zachowujesz konfigurację Rover-2?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 22
+    },
+    {
+      "lessonId": "105",
+      "grade": 2,
+      "title": "Budowanie robota – tworzenie oprogramowania",
+      "file": "content/lessons/105-robotics-g2.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2",
+        "IV.1"
+      ],
+      "activityIds": [
+        "r105-recall",
+        "r105-model",
+        "r105-lab",
+        "r105-transfer"
+      ],
+      "evidence": "Programuję ten sam model Rover-2. Ustalam priorytety STOP, przeszkody i linii. Testuję granicę 20 cm i analizuję tabelę działań. Dowód: Z lekcji montażu: dlaczego silnik jest podłączony przez sterownik?; STOP jest wciśnięty i czujnik widzi przeszkodę 10 cm. Co ma pierwszeństwo?; Program i próby; Przeszkoda jest dokładnie 20 cm od robota. Jaka decyzja pasuje do specyfikacji?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 23
     },
     {
       "lessonId": "06",
