@@ -1,7 +1,7 @@
 {
   "basis": "PP2024-LO-TECH-P",
   "reviewedCommit": "91bffa3",
-  "reviewedOn": "2026-10-01",
+  "reviewedOn": "2026-10-25",
   "meaning": "Powiązanie tematyczne i dowód ćwiczenia; nie deklaracja pełnej realizacji wszystkich wskazanych punktów.",
   "lessons": [
     {
@@ -1555,6 +1555,203 @@
       "evidence": "Zamiana dwójkowy→dziesiętny metodą pozycyjną i schematem Hornera, walidacja wejścia, porównanie z int(x, 2).",
       "limitations": "I.2.a częściowo — tylko zamiana 2→10; pozostałe w tematach 24–25.",
       "migraReference": "M3"
+    },
+    {
+      "lessonId": "87",
+      "grade": 3,
+      "title": "Programowanie zamiany liczby dziesiętnej na dwójkową",
+      "file": "content/lessons/87-decimal-to-binary-g3.js",
+      "requirements": [
+        "I.1",
+        "I.2.a",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "g3-87-r1",
+        "g3-87-r2",
+        "g3-87-predict",
+        "g3-87-change",
+        "g3-87-parsons",
+        "g3-87-fix",
+        "g3-87-byte"
+      ],
+      "evidence": "Zamieniam liczbę dziesiętną na dwójkową przez dzielenie z resztą. Obsługuję zero i odwróconą kolejność reszt. Sprawdzam zakres bajtu i porównuję wynik z format. Dowód: Z lekcji 57: Horner dla 101 to:; Jak poprzednio odrzucaliśmy zapis 102 jako dwójkowy?; Przewidź przed uruchomieniem; Zmień liczbę na 10; na_dwojkowy(n); Nie zgub zera; bajt(n)",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 18
+    },
+    {
+      "lessonId": "88",
+      "grade": 3,
+      "title": "Zamiana liczb między systemami pozycyjnymi",
+      "file": "content/lessons/88-positional-systems-g3.js",
+      "requirements": [
+        "I.1",
+        "I.2.a",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "g3-88-r1",
+        "g3-88-r2",
+        "g3-88-predict",
+        "g3-88-to",
+        "g3-88-from",
+        "g3-88-rgb"
+      ],
+      "evidence": "Uogólniam dzielenie z resztą dla podstaw 2–16. Odrzucam cyfry niedozwolone w wybranej podstawie. Zamieniam zapis hex na trzy składowe RGB. Dowód: Z lekcji 87: dlaczego dopisujesz resztę z lewej?; Co na_dwojkowy(0) ma zwrócić?; Przewidź przed uruchomieniem; na_system(n, p); z_systemu(s, p); rgb(kod)",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 19
+    },
+    {
+      "lessonId": "89",
+      "grade": 3,
+      "title": "Działania na ułamkach z wykorzystaniem NWD i NWW",
+      "file": "content/lessons/89-fractions-g3.js",
+      "requirements": [
+        "I.2.a",
+        "I.1",
+        "I.3"
+      ],
+      "activityIds": [
+        "g3-89-r1",
+        "g3-89-r2",
+        "nf-simplify",
+        "nf-addsub",
+        "nf-mul",
+        "nf-mix",
+        "nf-exit"
+      ],
+      "evidence": "Skracam ułamek w jednym kroku, dzieląc licznik i mianownik przez NWD. Dodaję i odejmuję ułamki, sprowadzając je do wspólnego mianownika równego NWW mianowników. Mnożę ułamki (przepis, rabat na rabat) i skracam wynik. Zamieniam proporcję (1:50, 1:1,5) na ułamek całości i liczę ilości składników. Dowód: Z lekcji 88: 255 dziesiętnie i FF szesnastkowo to:; Dlaczego z_systemu(\"2\", 2) ma zwrócić None?; Laboratorium ułamków · skracanie przez NWD; Laboratorium ułamków · dodawanie i odejmowanie; Laboratorium ułamków · mnożenie; Laboratorium ułamków · mieszanki w zawodach; Dlaczego 1/2 + 1/3 ≠ 2/5?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 20
+    },
+    {
+      "lessonId": "90",
+      "grade": 3,
+      "title": "Skracanie i działania arytmetyczne na ułamkach",
+      "file": "content/lessons/90-fractions-python-g3.js",
+      "requirements": [
+        "I.2.a",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "g3-90-r1",
+        "g3-90-r2",
+        "fp-predict",
+        "fp-float",
+        "fp-skroc",
+        "fp-add",
+        "fp-sub",
+        "fp-calc",
+        "fp-exit"
+      ],
+      "evidence": "Zapisuję ułamek jako krotkę (licznik, mianownik) i odczytuję jej elementy. Programuję skroc z nwd, dbając o mianownik 0 i znak minus (zawsze w liczniku). Programuję dodawanie, odejmowanie (przez NWW), mnożenie i dzielenie ułamków. Sprawdzam swój kalkulator testami i porównaniem z fractions.Fraction. Dowód: Z lekcji 89: przez co skrócisz18/24 od razu do końca?; Jak dodasz1/2+1/3?; Co wypisze program z krotką?; float kontra Fraction; skroc(licznik, mianownik); Układanka: dodaj(a, b); odejmij(a, b) w jednej linii; Kalkulator ułamków; Kalkulator kolegi dla kalkulator((1, 2), \":\", (0, 3)) wysypuje się błędem ZeroDivisionError. Co poprawiasz?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 21
+    },
+    {
+      "lessonId": "106",
+      "grade": 3,
+      "title": "Projekt sterowania nawadnianiem ogrodu",
+      "file": "content/lessons/106-irrigation-g3.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2",
+        "IV.1"
+      ],
+      "activityIds": [
+        "g3-106-recall",
+        "r83-model",
+        "r83-lab",
+        "r83-transfer"
+      ],
+      "evidence": "Wyjaśniam histerezę na dwóch progach. Zachowuję stan między odczytami. Nadaję zabezpieczeniom pierwszeństwo. Dowód: Z lekcji 90: dlaczego kalkulator odrzuca mianownik 0?; Pompa już działa. Wilgotność wzrosła z 29% do 31%. Co robi w modelu z progami 30/50?; Program i próby; Po deszczu pompa jest wyłączona, wilgotność 35%. Czy ma się włączyć?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 22
+    },
+    {
+      "lessonId": "107",
+      "grade": 3,
+      "title": "Budowanie robota i inne zadania projektowe",
+      "file": "content/lessons/107-rover-g3.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2",
+        "IV.1"
+      ],
+      "activityIds": [
+        "g3-107-recall",
+        "g3-107-wire",
+        "r105-lab",
+        "r105-transfer"
+      ],
+      "evidence": "Dobieram piny zasilania, masy i sygnałów. Przenoszę konfigurację tego samego modelu do programu. Sprawdzam pierwszeństwo STOP i granicę20 cm. Dowód: Z lekcji 106: dlaczego pompa ma dwa różne progi?; Rover-2: montaż układu; Program i próby; Przeszkoda jest dokładnie 20 cm od robota. Jaka decyzja pasuje do specyfikacji?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 23
+    },
+    {
+      "lessonId": "91",
+      "grade": 3,
+      "title": "Etapy tworzenia strony internetowej",
+      "file": "content/lessons/91-website-stages-g3.js",
+      "requirements": [
+        "I.1",
+        "II.2",
+        "II.3.f",
+        "IV.1"
+      ],
+      "activityIds": [
+        "g3-91-r1",
+        "g3-91-order",
+        "g3-91-plan",
+        "g3-91-html",
+        "g3-91-css",
+        "g3-91-show",
+        "g3-91-publish"
+      ],
+      "evidence": "Planuję stronę pod konkretny cel i odbiorcę. Tworzę nagłówki, listę, tabelę i link w HTML. Oddzielam treść HTML od wyglądu CSS i sprawdzam podgląd. Dowód: Z projektu107: po co sprawdzasz STOP także wtedy, gdy jest przeszkoda?; Ułóż etapy pracy nad stroną dla pracowni.; Zapisz jedno zdanie: gdzie odbiorca znajdzie termin i po czym to sprawdzisz?; Strona pracowni: treść; Strona pracowni: czytelność; Gotowa strona pracowni; Co oznacza publikacja strony?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 24
+    },
+    {
+      "lessonId": "108",
+      "grade": 3,
+      "title": "Nowy wygląd strony internetowej o Wyspach Kanaryjskich",
+      "file": "content/lessons/108-canary-css-g3.js",
+      "requirements": [
+        "I.1",
+        "II.2",
+        "II.3.f",
+        "IV.1"
+      ],
+      "activityIds": [
+        "g3-108-r1",
+        "g3-108-r2",
+        "g3-108-select",
+        "g3-108-type",
+        "g3-108-layout",
+        "g3-108-show"
+      ],
+      "evidence": "Oddzielam treść od wyglądu strony. Poprawiam typografię, kontrast i odstępy. Układam karty w grid lub flex i testuję wąskie okno. Dowód: Z lekcji 91: gdzie zmienisz kolor i odstępy wszystkich kart?; Co sprawdzasz przed publikacją?; Chcesz odstęp wewnątrz każdej karty. Co ustawisz?; Wyspy: czytelny tekst; Wyspy: własny układ CSS; Miniatlas po zmianie CSS",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 25
     }
   ],
   "reviewedScope": "27 lekcji z GitHub main 91bffa3 (audyt 30.09.2026) oraz sześć nowych lekcji Worda 28–33 (aktualizacja mapy 01.10.2026). Lekcje klasy 1: WWW 35–38, prawo/komunikacja/projekty 39–43 (aktualizacja mapy 14.10.2026)."
