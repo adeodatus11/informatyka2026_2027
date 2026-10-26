@@ -1045,8 +1045,8 @@
       "title": "Wyszukiwanie wzorca w tekście metodą naiwną",
       "file": "content/lessons/94-pattern-concept-g1.js",
       "requirements": [
-        "I.2.b",
         "I.1",
+        "I.2.b",
         "I.3"
       ],
       "activityIds": [
@@ -1115,8 +1115,8 @@
       "title": "System szesnastkowy",
       "file": "content/lessons/97-reuse-g1.js",
       "requirements": [
-        "I.1",
-        "II.2"
+        "I.2.a",
+        "I.3"
       ],
       "activityIds": [
         "97-recall",

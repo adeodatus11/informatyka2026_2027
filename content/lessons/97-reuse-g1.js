@@ -10,5 +10,7 @@ start.activities=[recall,...start.activities.filter(a=>a.type!=='choice')];
 start.teacherNotes='Powtórka bez notatek z lekcji 96. Po błędzie uczeń czyta wyjaśnienie i poprawia odpowiedź. '+start.teacherNotes;
 for(const s of lesson.sections) for(const a of s.activities) if(a.type==='resultCard') a.sources=[...a.sources.filter(x=>!oldIds.includes(x)),recall.id];
 lesson.sections[1].duration += 3; lesson.duration=45; lesson.sections[2].grouping='solo'; lesson.sections[2].intro='Otwórz cztery kłódki z kodami hex. Możesz porównać tok rozumowania z sąsiadem; zadanie wykonasz także sam.';
+lesson.curriculum='PP 2024, liceum/technikum: I.2.a, I.3 — zapis szesnastkowy, grupowanie bitów i sprawdzanie reprezentacji tej samej wartości.';
+start.teacherNotes='Powtórka bez notatek z 96: 1010 to 10. Potem pokaż kolory FF0000 i 00FF00 oraz wyjaśnij, że jedna cyfra hex zastępuje cztery bity. Omów jedną błędną odpowiedź, zanim otworzysz konwerter.';
 lesson.teacherGuide.summary='Karta wyniku obejmuje powtórkę z klasy 1 i zadania wymienione na karcie; bonus pozostaje opcjonalny. '+lesson.objectives.join(' ');
 export default {...lesson,id:'97',grade:1,order:59,title:"System szesnastkowy"};
