@@ -1,7 +1,7 @@
 {
   "basis": "PP2024-LO-TECH-P",
   "reviewedCommit": "91bffa3",
-  "reviewedOn": "2026-10-01",
+  "reviewedOn": "2026-10-25",
   "meaning": "Powiązanie tematyczne i dowód ćwiczenia; nie deklaracja pełnej realizacji wszystkich wskazanych punktów.",
   "lessons": [
     {
@@ -271,9 +271,78 @@
       "migraReference": "M1"
     },
     {
+      "lessonId": "99",
+      "grade": 1,
+      "title": "Tworzenie obrazu i praca z warstwami w programie GIMP",
+      "file": "content/lessons/99-photocraft.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "g99-recall",
+        "g99-model",
+        "g99-build",
+        "g99-improve",
+        "g99-rubric",
+        "g99-export",
+        "g99-exit"
+      ],
+      "evidence": "Tworzę kompozycję z co najmniej trzech nazwanych warstw. Zmieniam kolejność i widoczność bez kasowania treści. Zapisuję edytowalną kopię i osobny eksport PNG. Dowód: Z lekcji o poradniku: po co zachować plik roboczy obok wersji do oglądania?; Tytuł zniknął pod ilustracją pada. Co sprawdzisz najpierw?; Wykonaj w PhotoCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Które dwa pliki pokażesz nauczycielowi?; Którą warstwę poprawiłeś po zmianie nazwy klubu i jak sprawdziłeś jej czytelność?",
+      "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
+      "migraReference": "M1",
+      "numberInGrade": 15
+    },
+    {
+      "lessonId": "100",
+      "grade": 1,
+      "title": "Stosowanie narzędzi selekcji w programie GIMP",
+      "file": "content/lessons/100-photocraft.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "g100-recall",
+        "g100-model",
+        "g100-build",
+        "g100-improve",
+        "g100-rubric",
+        "g100-export",
+        "g100-exit"
+      ],
+      "evidence": "Dobieram selekcję do prostego obiektu. Tworzę maskę warstwy zamiast kasować oryginał. Poprawiam brzeg i oznaczam zmienione tło. Dowód: Z lekcji 99: co robi wyłączenie widoczności warstwy?; Chcesz móc poprawić krawędź paczki po zmianie tła. Co wybrać?; Wykonaj w PhotoCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Dlaczego trzeba oznaczyć zmianę tła?; Co poprawiłeś w masce i dlaczego zmiana tła wymaga oznaczenia?",
+      "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
+      "migraReference": "M1",
+      "numberInGrade": 16
+    },
+    {
+      "lessonId": "101",
+      "grade": 1,
+      "title": "Edycja zdjęć w programie GIMP",
+      "file": "content/lessons/101-photocraft.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "g101-recall",
+        "g101-model",
+        "g101-build",
+        "g101-improve",
+        "g101-rubric",
+        "g101-export",
+        "g101-exit"
+      ],
+      "evidence": "Kadruję i poprawiam obraz na kopii. Rozróżniam rozmiar w pikselach, PPI i wagę pliku. Porównuję eksport PNG i JPEG przed wyborem wersji. Dowód: Z lekcji 100: po co zachować oryginał i robić poprawki na kopii?; Obraz ma 900 × 600 px. Zmieniasz tylko PPI, bez przeliczania pikseli. Co się stanie?; Wykonaj w PhotoCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; JPEG jest mniejszy, ale wokół krawędzi widać kwadraty i poświatę. Co zrobisz?; Dlaczego wybrany format nadaje się do Twojego obrazu? Podaj porównanie detalu i wagi pliku.",
+      "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
+      "migraReference": "M1",
+      "numberInGrade": 17
+    },
+    {
       "lessonId": "35",
       "grade": 1,
-      "numberInGrade": 15,
+      "numberInGrade": 18,
       "title": "Tworzenie stron WWW – podstawowe informacje",
       "file": "content/lessons/35-www-basics.js",
       "requirements": [
@@ -294,7 +363,7 @@
     {
       "lessonId": "36",
       "grade": 1,
-      "numberInGrade": 16,
+      "numberInGrade": 19,
       "title": "Stosowanie wybranych znaczników języka HTML",
       "file": "content/lessons/36-html-tags.js",
       "requirements": [
@@ -314,7 +383,7 @@
     {
       "lessonId": "37",
       "grade": 1,
-      "numberInGrade": 17,
+      "numberInGrade": 20,
       "title": "Kaskadowe arkusze stylów CSS",
       "file": "content/lessons/37-css.js",
       "requirements": [
@@ -334,7 +403,7 @@
     {
       "lessonId": "38",
       "grade": 1,
-      "numberInGrade": 18,
+      "numberInGrade": 21,
       "title": "Publikowanie i promowanie stron WWW w Internecie",
       "file": "content/lessons/38-publishing.js",
       "requirements": [
@@ -356,7 +425,7 @@
     {
       "lessonId": "60",
       "grade": 1,
-      "numberInGrade": 19,
+      "numberInGrade": 22,
       "title": "Sytuacje problemowe i określanie specyfikacji zadania",
       "file": "content/lessons/60-problem-specification.js",
       "requirements": [
@@ -377,7 +446,7 @@
     {
       "lessonId": "61",
       "grade": 1,
-      "numberInGrade": 20,
+      "numberInGrade": 23,
       "title": "Techniki algorytmiczne i programowanie",
       "file": "content/lessons/61-algorithms-techniques.js",
       "requirements": [
@@ -398,7 +467,7 @@
     {
       "lessonId": "62",
       "grade": 1,
-      "numberInGrade": 21,
+      "numberInGrade": 24,
       "title": "Środowisko programistyczne języka Python, stosowanie zmiennych i wyprowadzanie wyników",
       "file": "content/lessons/62-python-variables-output.js",
       "requirements": [
@@ -420,7 +489,7 @@
     {
       "lessonId": "63",
       "grade": 1,
-      "numberInGrade": 22,
+      "numberInGrade": 25,
       "title": "Algorytmy z warunkami w języku Python",
       "file": "content/lessons/63-python-conditions.js",
       "requirements": [
@@ -442,7 +511,7 @@
     {
       "lessonId": "64",
       "grade": 1,
-      "numberInGrade": 23,
+      "numberInGrade": 26,
       "title": "Sprawdzanie poprawności danych i zapisywanie rozwiązania problemu w języku Python",
       "file": "content/lessons/64-python-validation.js",
       "requirements": [
@@ -463,7 +532,7 @@
     {
       "lessonId": "65",
       "grade": 1,
-      "numberInGrade": 24,
+      "numberInGrade": 27,
       "title": "Instrukcje warunkowe zagnieżdżone i z klauzulą elif w języku Python",
       "file": "content/lessons/65-elif-nested-python.js",
       "requirements": [
@@ -485,7 +554,7 @@
     {
       "lessonId": "66",
       "grade": 1,
-      "numberInGrade": 25,
+      "numberInGrade": 28,
       "title": "Algorytmy iteracyjne w języku Python",
       "file": "content/lessons/66-loops-python.js",
       "requirements": [
@@ -508,7 +577,7 @@
     {
       "lessonId": "67",
       "grade": 1,
-      "numberInGrade": 26,
+      "numberInGrade": 29,
       "title": "Instrukcje iteracyjne zagnieżdżone w języku Python",
       "file": "content/lessons/67-nested-loops-python.js",
       "requirements": [
@@ -531,7 +600,7 @@
     {
       "lessonId": "68",
       "grade": 1,
-      "numberInGrade": 27,
+      "numberInGrade": 30,
       "title": "Stosowanie instrukcji iteracyjnych for i while w języku Python",
       "file": "content/lessons/68-for-while-python.js",
       "requirements": [
@@ -554,7 +623,7 @@
     {
       "lessonId": "58",
       "grade": 1,
-      "numberInGrade": 28,
+      "numberInGrade": 31,
       "title": "Sieci komputerowe",
       "file": "content/lessons/58-computer-networks.js",
       "requirements": [
@@ -575,7 +644,7 @@
     {
       "lessonId": "59",
       "grade": 1,
-      "numberInGrade": 29,
+      "numberInGrade": 32,
       "title": "Bezpieczeństwo i ochrona danych w komputerach i sieciach komputerowych",
       "file": "content/lessons/59-security-data-protection.js",
       "requirements": [
@@ -596,7 +665,7 @@
     {
       "lessonId": "39",
       "grade": 1,
-      "numberInGrade": 30,
+      "numberInGrade": 33,
       "title": "Wybrane przepisy prawa dotyczące technologii informacyjno-komunikacyjnych",
       "file": "content/lessons/39-tech-law.js",
       "requirements": [
@@ -619,7 +688,7 @@
     {
       "lessonId": "40",
       "grade": 1,
-      "numberInGrade": 31,
+      "numberInGrade": 34,
       "title": "Zasady rozpowszechniania programów komputerowych – projekt",
       "file": "content/lessons/40-license-project.js",
       "requirements": [
@@ -639,7 +708,7 @@
     {
       "lessonId": "41",
       "grade": 1,
-      "numberInGrade": 32,
+      "numberInGrade": 35,
       "title": "Komunikacja i wymiana informacji w Internecie",
       "file": "content/lessons/41-online-communication.js",
       "requirements": [
@@ -660,7 +729,7 @@
     {
       "lessonId": "42",
       "grade": 1,
-      "numberInGrade": 33,
+      "numberInGrade": 36,
       "title": "Szanse i zagrożenia związane z rozwojem informatyki i technologii informacyjno-komunikacyjnych – projekt",
       "file": "content/lessons/42-tech-future-project.js",
       "requirements": [
@@ -680,9 +749,78 @@
       "migraReference": "M1"
     },
     {
+      "lessonId": "102",
+      "grade": 1,
+      "title": "Tworzenie rysunków w grafice wektorowej",
+      "file": "content/lessons/102-vectorcraft.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "g102-recall",
+        "g102-model",
+        "g102-build",
+        "g102-improve",
+        "g102-rubric",
+        "g102-export",
+        "g102-exit"
+      ],
+      "evidence": "Odróżniam raster od wektora na powiększeniu. Tworzę ikonę z oddzielnych figur. Zapisuję edytowalny wektor i eksport SVG/PNG. Dowód: Z projektu o rozwoju IT: co jest lepszym uzasadnieniem wyboru narzędzia?; Ikona ma być na małym przycisku i dużej tablicy. Który plik zachowa opisy figur?; Wykonaj w VectorCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Po powiększeniu PNG widać piksele. Czy zmiana nazwy pliku na .svg naprawi kształt?; Który fragment Twojej ikony uprościłeś i co pokazało porównanie PNG z SVG?",
+      "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
+      "migraReference": "M1",
+      "numberInGrade": 37
+    },
+    {
+      "lessonId": "103",
+      "grade": 1,
+      "title": "Rysowanie figur i ścieżek w programie Inkscape",
+      "file": "content/lessons/103-vectorcraft.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "g103-recall",
+        "g103-model",
+        "g103-build",
+        "g103-improve",
+        "g103-rubric",
+        "g103-export",
+        "g103-exit"
+      ],
+      "evidence": "Odróżniam figurę od otwartej i zamkniętej ścieżki. Rysuję zamkniętą ścieżkę i poprawiam jej punkt. Łączę ścieżkę z figurą w czytelny znak. Dowód: Z lekcji 102: czym jest obrys figury?; Chcesz wydłużyć tylko czubek strzałki. Co wybierzesz?; Wykonaj w VectorCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Co jest lepszym dowodem, że strzałka jest edytowalną ścieżką?; Który punkt zmieniłeś i po czym poznajesz, że ścieżka nadal jest zamknięta?",
+      "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
+      "migraReference": "M1",
+      "numberInGrade": 38
+    },
+    {
+      "lessonId": "104",
+      "grade": 1,
+      "title": "Rysowanie przestrzenne, przekształcenia i warstwy w programie Inkscape",
+      "file": "content/lessons/104-vectorcraft.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "g104-recall",
+        "g104-model",
+        "g104-build",
+        "g104-improve",
+        "g104-rubric",
+        "g104-export",
+        "g104-exit"
+      ],
+      "evidence": "Buduję wrażenie przestrzeni z płaskich figur. Kopiuję, skaluję i obracam obiekt bez utraty edytowalności. Porządkuję rysunek na nazwanych warstwach i eksportuję SVG. Dowód: Z lekcji 103: czym różni się przesunięcie punktu od przesunięcia obiektu?; Pudełko po zmniejszeniu wygląda na rozciągnięte. Co poprawić?; Wykonaj w VectorCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Czy ten rysunek nadaje się jako gotowy model do drukarki 3D?; Jaką kolejność obiektów wybrałeś i dlaczego ten rysunek nadal jest grafiką 2D?",
+      "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
+      "migraReference": "M1",
+      "numberInGrade": 39
+    },
+    {
       "lessonId": "69",
       "grade": 1,
-      "numberInGrade": 34,
+      "numberInGrade": 40,
       "title": "Tworzenie formuł, formaty danych i formatowanie tabeli arkusza",
       "file": "content/lessons/69-excel-formulas.js",
       "requirements": [
@@ -702,7 +840,7 @@
     {
       "lessonId": "70",
       "grade": 1,
-      "numberInGrade": 35,
+      "numberInGrade": 41,
       "title": "Stosowanie funkcji arkusza kalkulacyjnego",
       "file": "content/lessons/70-excel-functions.js",
       "requirements": [
@@ -723,7 +861,7 @@
     {
       "lessonId": "71",
       "grade": 1,
-      "numberInGrade": 36,
+      "numberInGrade": 42,
       "title": "Przedstawianie danych w postaci wykresu",
       "file": "content/lessons/71-excel-charts.js",
       "requirements": [
@@ -744,7 +882,7 @@
     {
       "lessonId": "72",
       "grade": 1,
-      "numberInGrade": 37,
+      "numberInGrade": 43,
       "title": "Tworzenie wykresu – projekt z geografii",
       "file": "content/lessons/72-excel-geography.js",
       "requirements": [
@@ -765,7 +903,7 @@
     {
       "lessonId": "73",
       "grade": 1,
-      "numberInGrade": 38,
+      "numberInGrade": 44,
       "title": "Korzystanie z filtrów, tabele i wykresy przestawne",
       "file": "content/lessons/73-excel-pivot.js",
       "requirements": [
@@ -785,7 +923,7 @@
     {
       "lessonId": "74",
       "grade": 1,
-      "numberInGrade": 39,
+      "numberInGrade": 45,
       "title": "Stosowanie filtru w tabeli przestawnej i praktyczny poradnik",
       "file": "content/lessons/74-excel-pivot-guide.js",
       "requirements": [
@@ -805,7 +943,7 @@
     {
       "lessonId": "75",
       "grade": 1,
-      "numberInGrade": 40,
+      "numberInGrade": 46,
       "title": "Zasady tworzenia prezentacji multimedialnej",
       "file": "content/lessons/75-presentation-rules.js",
       "requirements": [
@@ -825,7 +963,7 @@
     {
       "lessonId": "76",
       "grade": 1,
-      "numberInGrade": 41,
+      "numberInGrade": 47,
       "title": "Tworzymy prezentację multimedialną o Fryderyku Chopinie – projekt",
       "file": "content/lessons/76-chopin-presentation.js",
       "requirements": [
@@ -847,7 +985,7 @@
     {
       "lessonId": "43",
       "grade": 1,
-      "numberInGrade": 42,
+      "numberInGrade": 48,
       "title": "Przestępczość komputerowa – projekt",
       "file": "content/lessons/43-computer-crime-project.js",
       "requirements": [

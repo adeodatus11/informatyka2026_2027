@@ -3,6 +3,8 @@
 export const DESKTOP_APPS={
  'desktop-word':{name:'Word',gen:'Worda',loc:'Wordzie',file:'dokument startowy',doc:'Dokument',docGen:'dokumentu'},
  'desktop-excel':{name:'Excel',gen:'Excela',loc:'Excelu',file:'skoroszyt startowy',doc:'Skoroszyt',docGen:'skoroszytu'},
+ 'desktop-photocraft':{name:'PhotoCraft',gen:'PhotoCrafta',loc:'PhotoCrafcie',file:'obraz startowy',doc:'Grafika',docGen:'grafiki'},
+ 'desktop-vectorcraft':{name:'VectorCraft',gen:'VectorCrafta',loc:'VectorCrafcie',file:'rysunek startowy',doc:'Grafika',docGen:'grafiki'},
  'desktop-powerpoint':{name:'PowerPoint',gen:'PowerPointa',loc:'PowerPoincie',file:'plik startowy prezentacji',doc:'Prezentacja',docGen:'prezentacji'}
 };
 export const desktopApp=workspace=>DESKTOP_APPS[workspace]||null;
