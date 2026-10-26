@@ -185,8 +185,10 @@
   "sem": "I półrocze",
   "temat": "Tworzenie obrazu i praca z warstwami w programie GIMP",
   "pp": "II.2., II.3a.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "99"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -196,8 +198,10 @@
   "sem": "I półrocze",
   "temat": "Stosowanie narzędzi selekcji w programie GIMP",
   "pp": "II.2., II.3a.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "100"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -207,8 +211,10 @@
   "sem": "I półrocze",
   "temat": "Edycja zdjęć w programie GIMP",
   "pp": "II.2., II.3a.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "101"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -465,8 +471,10 @@
   "sem": "II półrocze",
   "temat": "Tworzenie rysunków w grafice wektorowej",
   "pp": "II.2., II.3a.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "102"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -476,8 +484,10 @@
   "sem": "II półrocze",
   "temat": "Rysowanie figur i ścieżek w programie Inkscape",
   "pp": "II.2., II.3a.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "103"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -487,8 +497,10 @@
   "sem": "II półrocze",
   "temat": "Rysowanie przestrzenne, przekształcenia i warstwy w programie Inkscape",
   "pp": "II.2., II.3a.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "104"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
