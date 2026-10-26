@@ -48,3 +48,7 @@ for(const l of [l106,l107])test(`${l.id}: projekt robota jest samodzielny, ma po
  }}
  const card=all.find(a=>a.type==='resultCard');const result=lessonScore(l,card,answers);assert.equal(result.score,result.max);assert.equal(result.max,l.id==='106'?10:17);for(const id of card.sources)assert.ok(all.some(a=>a.id===id));
 });
+test('robotLab także w klasie 3 wyjaśnia błąd składni po polsku',()=>{
+ const broken=parseRobotOutput(run({code:robotProgram('for i in range(2)\n    pass\n','garden')}));
+ assert.match(broken.cases[0].error,/dwukrop|składni|programie/i);
+});
