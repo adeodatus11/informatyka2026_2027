@@ -31,7 +31,7 @@
 ## Wykonanie i weryfikacja
 
 - Zachowuj istniejącą aplikację React, nawigację etapów, widok nauczyciela i typy aktywności. Nie projektuj od zera layoutu kolejnej lekcji. Wspólne elementy rozszerzaj raz; zasady są w `docs/lesson-blueprint.md`.
-- Stałe `id` jest unikalne w całym serwisie, natomiast numer wyświetlany zaczyna się od 1 w każdej klasie. Nie zmieniaj istniejących ID.
+- Stałe `id` jest unikalne w całym serwisie, natomiast numer tematu widoczny w serwisie pochodzi z całkowitego `order` w rozkładzie danej klasy. Luki oznaczają jeszcze nieopracowane tematy; nie renumeruj kolejnych lekcji po dodaniu lub usunięciu materiału. Kursy zewnętrzne i pozycje z ułamkowym `order` to „Materiał dodatkowy”. `numberInGrade` w mapie PP pozostaje indeksem dostępnych lekcji, a nie etykietą tematu. Nie zmieniaj istniejących ID.
 - Lekcje Worda, Excela i PowerPointa zakładają **stacjonarny program zainstalowany na komputerze**, nie symulator ani wersję online. Instrukcje, wyjaśnienia i testy są na platformie, produkt ucznia powstaje w pliku. Szczegóły w `docs/word-desktop.md`, `docs/excel-desktop.md`, `docs/powerpoint-desktop.md`.
 - Samoocena, quiz i ocena rzeczywistego pliku to trzy różne rzeczy. Nie przedstawiaj zaznaczonej checklisty jako automatycznej weryfikacji dokumentu (automatyczna jest tylko `docxCheck`, czytający plik lokalnie). Nie wysyłaj prac ani korespondencji bez odrębnego polecenia użytkownika.
 - Materiały do pobrania twórz w `public/materials/`; uruchomienie build kopiuje je do katalogu publikacji. Pliki powinny być samodzielne i zawierać fikcyjne dane. Sprawdzaj strukturę DOCX oraz wygląd po renderowaniu.
