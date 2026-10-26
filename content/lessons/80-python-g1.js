@@ -20,10 +20,6 @@ export default {
   "grouping": "Samodzielnie przy komputerze. Możesz poprosić sąsiada o wyjaśnienie błędu, bez przejmowania klawiatury.",
   "methods": [
    {
-    "name": "Przypominanie i powroty",
-    "url": "https://metodyka.covepolska.pl/metoda-przypominanie-i-powroty.html"
-   },
-   {
     "name": "Modelowanie",
     "url": "https://metodyka.covepolska.pl/metoda-modelowanie.html"
    },

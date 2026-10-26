@@ -26,10 +26,6 @@ export default {
    {
     "name": "Modelowanie",
     "url": "https://metodyka.covepolska.pl/metoda-modelowanie.html"
-   },
-   {
-    "name": "Ocenianie kształtujące i poprawa",
-    "url": "https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html"
    }
   ]
  },
