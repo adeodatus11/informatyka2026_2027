@@ -1081,8 +1081,10 @@
   "sem": "cały rok",
   "temat": "Sterowanie nawadnianiem ogrodu – wprowadzenie do robotyki i zadanie projektowe",
   "pp": "I.1., II.2., IV.1.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "82"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -1092,8 +1094,10 @@
   "sem": "cały rok",
   "temat": "Sterowanie nawadnianiem ogrodu – zadania szczegółowe",
   "pp": "I.1., II.2., IV.1.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "83"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -1103,8 +1107,10 @@
   "sem": "cały rok",
   "temat": "Projekt „Zamknij okno”",
   "pp": "I.1., II.2., IV.1.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "84"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -1114,8 +1120,10 @@
   "sem": "cały rok",
   "temat": "Projekt „Wycisz radio”",
   "pp": "I.1., II.2., IV.1.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "85"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -1125,8 +1133,10 @@
   "sem": "cały rok",
   "temat": "Budowanie robota – przygotowanie pomocy i montowanie układu",
   "pp": "I.1., II.2., IV.1.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "86"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
@@ -1136,8 +1146,10 @@
   "sem": "cały rok",
   "temat": "Budowanie robota – tworzenie oprogramowania",
   "pp": "I.1., II.2., IV.1.",
-  "status": "brak",
-  "ids": [],
+  "status": "jest",
+  "ids": [
+   "105"
+  ],
   "note": "",
   "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
  },
