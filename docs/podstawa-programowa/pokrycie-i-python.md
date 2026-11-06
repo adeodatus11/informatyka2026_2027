@@ -1,74 +1,38 @@
-# Pokrycie PP i dalsza ścieżka Pythona
+# Pokrycie PP — stan 6.11.2026
 
-Stan 01.10.2026, 34 lekcje (klasy: 14/10/10). Numery poniżej to **stałe ID**, a nie numery lekcji w klasie. „Jest” oznacza zestaw ćwiczeń obejmujący treść punktu, nie zaliczenie umiejętności przez każdego ucznia. „Częściowo” oznacza dowód realizacji fragmentu; „brak” — brak odpowiednich obowiązkowych zadań w aktualnym kursie. Dodatki i zadania opcjonalne nie są automatycznie traktowane jako wymagane pokrycie.
+108 lekcji: klasy 60/23/25. Poniżej wskazano dowody ćwiczeń; przypisanie nie oznacza pełnej realizacji całego wymagania ani zaliczenia umiejętności przez ucznia. Szczegółowe ograniczenia każdej lekcji zawiera [mapa lekcji](mapa-lekcji.md).
 
-## Macierz wszystkich wymagań szczegółowych
+| Punkt PP | ID lekcji z dowodami |
+|---|---|
+| I.1 | 60, 61, 62, 63, 64, 65, 66, 67, 68, 77, 78, 79, 80, 92, 94, 98, 05, 17, 19, 20, 21, 46, 47, 48, 49, 50, 82, 83, 84, 85, 86, 105, 23, 24, 53, 55, 56, 52, 57, 87, 88, 89, 106, 107, 91, 108 |
+| I.2.a | 96, 97, 98, 47, 48, 49, 50, 06, 13, 57, 87, 88, 89, 90 |
+| I.2.b | 81, 92, 93, 94, 95, 16, 17, 53, 55, 56, 51, 52 |
+| I.2.c | 18, 19, 20 |
+| I.2.d | 21, 46 |
+| I.3 | 60, 61, 62, 63, 64, 65, 66, 67, 68, 77, 78, 79, 80, 81, 92, 93, 94, 95, 97, 98, 16, 17, 18, 19, 20, 21, 46, 47, 48, 49, 50, 82, 83, 84, 85, 86, 105, 06, 13, 53, 54, 55, 56, 51, 52, 57, 87, 88, 89, 90, 106, 107 |
+| II.1 | 62, 63, 64, 65, 66, 67, 68, 77, 78, 79, 80, 81, 93, 95, 98, 17, 19, 20, 21, 46, 48, 50, 82, 83, 84, 85, 86, 105, 54, 55, 56, 52, 57, 87, 88, 90, 106, 107 |
+| II.2 | 02, 99, 100, 101, 35, 36, 37, 61, 62, 63, 64, 65, 66, 67, 68, 102, 103, 104, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 93, 95, 98, 46, 48, 50, 82, 83, 84, 85, 86, 105, 54, 55, 56, 57, 87, 88, 90, 106, 107, 91, 108 |
+| II.3.a | 99, 100, 101, 102, 103, 104 |
+| II.3.b | 28, 29, 30, 31, 32, 33, 12, 27 |
+| II.3.c | 69, 70, 71, 72, 73, 74 |
+| II.3.d | 44, 45, 05, 10, 11, 22, 23, 24, 25, 26 |
+| II.3.e | 75, 76 |
+| II.3.f | 35, 36, 37, 38, 91, 108 |
+| II.4 | 07, 08, 34 |
+| III.1 | 01, 04, 14, 15 |
+| III.2 | 03, 04, 14, 15 |
+| III.3 | 02, 58 |
+| III.4 | 04, 35, 38, 58, 14 |
+| IV.1 | 32, 33, 40, 42, 72, 76, 43, 12, 17, 83, 86, 105, 15, 27, 106, 107, 91, 108 |
+| IV.2 | 09, 41, 42 |
+| IV.3 | 41, 42 |
+| IV.4 | 38, 39 |
+| IV.5 | Brak |
+| V.1 | 38, 59, 39, 40, 41, 14 |
+| V.2 | 39, 40, 43 |
+| V.3 | 04, 07, 09, 59, 42, 16, 17, 14, 15, 51, 52 |
+| V.4 | 39, 43 |
 
-| Punkt | Stan w materiałach | ID / czego jeszcze potrzeba |
-| --- | --- | --- |
-| I.1 | Jest | 17, 19–21: problem, rozwiązanie, kod i testy. Projekty 05/23/24 wspierają modelowanie, lecz nie cały cykl programistyczny. |
-| I.2.a | Częściowo | 06/13: systemy liczbowe. Brak badania pierwszości i działań na ułamkach z NWD/NWW. |
-| I.2.b | Częściowo | 16/17: Cezar. Brak osobnych algorytmów porównywania tekstów i naiwnego wyszukiwania wzorca. |
-| I.2.c | Jest | 18–20: bąbelkowe i przez wstawianie, także implementacje. |
-| I.2.d | Jest | 21: iteracyjne ciągi, w tym Fibonacci. |
-| I.3 | Jest | 17, 19–21: testy i debugowanie; 06/13: sprawdzenie konwersji. |
-| II.1 | Częściowo | 17, 19–21: działający Python, wejście/wyjście, warunki, pętle i funkcje z parametrami. Dopełnić wszystkie algorytmy I.2 i jawne zadanie z funkcją bez parametrów. |
-| II.2 | Częściowo | 02: dobór aplikacji. Dodać uzasadniony wybór środowiska/zasobów i elementy robotyki. Symulator domu nie dowodzi pracy z robotem. |
-| II.3.a | Brak | Uczeń nie projektuje grafiki rastrowej/wektorowej ani modeli 2D/3D i nie przekształca formatów. Oglądanie modelu komputera w 01 tego nie zastępuje. |
-| II.3.b | Jest — zakres narzędzi | 28–33: dokumenty o rozbudowanej strukturze, sekcje, kolumny, spis treści, spisy ilustracji/tabel/wykresów i recenzja; 12/27: korespondencja seryjna. Działanie mechanizmów Worda potwierdza nauczyciel w DOCX. Dla pełnego przekroju tematycznego zaplanować także opracowanie o tematyce informatycznej. |
-| II.3.c | Brak | Brak pełnego zadania w arkuszu: funkcje, dane z różnych źródeł, filtry, wykresy i tabele/wykresy przestawne. |
-| II.3.d | Jest | 05+11; 22–26: co najmniej dwie tabele, relacje, filtrowanie i samodzielne kwerendy. |
-| II.3.e | Brak | Uczeń nie tworzy własnej prezentacji multimedialnej. Oglądanie materiału nie wystarcza. |
-| II.3.f | Brak | Brak stworzenia i opublikowania przez ucznia strony z tabelami, listami i CSS. |
-| II.4 | Częściowo | 07/08: ocena źródeł i wyszukiwanie w symulatorze. Dodać obowiązkowe wyszukanie zasobów w sieci i wykorzystanie ich w rozwiązaniu. |
-| III.1 | Jest | 01/04/14/15: poznawanie możliwości urządzeń i ich oprogramowania. |
-| III.2 | Częściowo | 03/04/14/15: objaśnianie i symulacje; potrzebna potwierdzona praktyczna obsługa urządzeń. |
-| III.3 | Częściowo | 02: pliki i system; dodać to samo zadanie w dwóch różnych systemach operacyjnych. |
-| III.4 | Częściowo | 04/07/13/14: usługi, sieć, MAC. Uzupełnić spójne zadanie o ogólnej budowie Internetu oraz identyfikacji przez IP i nazwy/DNS. |
-| IV.1 | Jest | 12/15/17/27/32/33: projekty rozwiązujące problem; w 15/32/33 także informacja zwrotna i poprawa. W 33 plan pracy, test czytelnika i końcowe wydanie. |
-| IV.2 | Częściowo | 09 i konteksty zawodowe: e-usługi; uzupełnić społeczne skutki technologii i komunikację. |
-| IV.3 | Brak | Potrzebne zadanie o wykluczeniu/włączeniu cyfrowym i korzyściach dla osób o specjalnych potrzebach. Dostępność samej strony nie wystarcza. |
-| IV.4 | Brak | Potrzebne zadanie o świadomym, bezpiecznym budowaniu wizerunku w mediach. |
-| IV.5 | Częściowo | Kurs jest zasobem do e-nauczania; dodać samodzielny wybór zasobu i wykazanie, czego uczeń się dzięki niemu nauczył. |
-| V.1 | Częściowo | 04/07/09/14/15: dane, bezpieczeństwo i komunikacja. Dodać prawo autorskie, konsekwencje naruszeń i szerszą netykietę. |
-| V.2 | Brak | Brak obowiązkowego zadania wymagającego sprawdzenia licencji oraz legalnego udostępnienia własnego/cudzego programu i dokumentu. Zachowanie informacji o źródłach w 33 jest dobrym nawykiem, lecz nie zastępuje tego zadania. |
-| V.3 | Częściowo | 04/07/09/14–17: uprawnienia, phishing, 2FA, IoT i rola szyfrowania. Utrwalić praktyczną ochronę danych i systemu, odzyskiwanie dostępu/kopie. |
-| V.4 | Częściowo | 07/14 pokazują ryzyka dla osoby i szkoły. Dodać jawne omówienie szkód działań pirackich dla instytucji i społeczeństwa. |
+## Otwarte ograniczenia
 
-## Python: wykorzystać istniejący ciąg, uzupełnić luki
-
-Nie tworzymy ponownie lekcji, które już istnieją. Punkt startowy: 16 → 17 → 18 → 19 → 20 → 21. Testy w `pythonLab` sprawdzają wykonany kod, a nie tylko zaznaczenie odpowiedzi. Funkcje bez parametrów powinny mieć osobny dowód: użycie `print()` lub `input()` nie dowodzi napisania własnej takiej funkcji.
-
-| Kolejny moduł do przygotowania | Powiązanie | Minimalny rezultat ucznia |
-| --- | --- | --- |
-| Pierwszość liczby | I.2.a, I.3, II.1 | Własna funkcja, próby dla liczb <2, liczby pierwszej i złożonej; uzasadnienie warunku końca. |
-| NWD/NWW i ułamki | I.2.a, I.3, II.1 | Skracanie i dodawanie ułamków, kontrola zerowego mianownika; Euklides jako wybrany sposób obliczenia NWD. |
-| Konwersje w Pythonie | I.2.a, I.3, II.1; rozwinięcie 06/13 | Własna konwersja między systemami, test dla zera, wynik porównany z funkcją biblioteczną. Samo `bin()` nie pokazuje algorytmu. |
-| Porównywanie tekstów i naiwny wzorzec | I.2.b, I.3, II.1 | Porównanie znaków oraz pętla szukająca wzorca; testy braku dopasowania, dopasowania na końcu i nakładania się wystąpień. |
-| Mały projekt zamykający konstrukcje języka | I.1, II.1, IV.1 | Program z własną funkcją bez parametrów, funkcją z parametrami, wejściem/wyjściem, warunkiem, iteracją i zestawem testów. |
-
-To propozycje autorskie realizacji PP, nie dodatkowe wymagania prawne ani skopiowane scenariusze Migry. Rekurencyjny Fibonacci, GA-DE-RY-PO-LU-KI czy formalna analiza złożoności mogą zostać jako dodatki; nie zastępują obowiązkowych brakujących algorytmów.
-
-## Pozostałe priorytety
-
-1. Arkusz: dane z kilku źródeł, funkcje, filtrowanie, wykres i tabela/wykres przestawny — możliwy kontekst zawodów lub kosztów energii.
-2. Prezentacja i transfer pracy z dokumentem: własna prezentacja multimedialna oraz zastosowanie narzędzi z 28–33 do opracowania o tematyce informatycznej. Sekcje, spisy, kolumny i recenzja mają już obowiązkowe zadania.
-3. Grafika i strona: własne pliki rastrowe/wektorowe, model 2D/3D, przekształcenie formatów; następnie strona z CSS, tabelą i listą oraz publikacja.
-4. Uzupełnienia przekrojowe: robotyka, różne systemy operacyjne, licencje, wizerunek cyfrowy, wykluczenie i dostępność.
-
-Kontrolować transfer z symulatorów na rzeczywiste narzędzia. Nie wymaga to prawdziwych danych pacjentów, płatności, logowania do banku ani wysyłania korespondencji — zadania powinny wykorzystywać fikcyjne dane i bezpieczne środowiska.
-
-Lekcja ID 34 (klasa 1, numer 7) jest odsyłaczem do kursu Demagoga. Nie zwiększa automatycznie pokrycia PP: ukończenie i ćwiczenia odbywają się poza platformą szkolną.
-
-## Aktualizacja 25.10.2026
-
-Aktualny rejestr: 88 lekcji; klasy 1: 54, 2: 17, 3: 17. Poniższa macierz uzupełnia historyczny audyt powyżej.
-
-| Punkt | Dowody w bieżącym kursie | Ograniczenia |
-|---|---|---|
-| I.2.a | 96, 97, 98, 47, 48, 49, 50, 06, 13, 57 | Ocena dotyczy konkretnych czynności i testów, nie wszystkich treści całego wymagania. |
-| I.2.b | 81, 92, 93, 94, 95, 16, 17, 53, 55, 56, 51, 52 | Ocena dotyczy konkretnych czynności i testów, nie wszystkich treści całego wymagania. |
-| II.1 | 62, 63, 64, 65, 66, 67, 68, 77, 78, 79, 80, 81, 93, 95, 98, 17, 19, 20, 21, 46, 48, 50, 54, 55, 56, 52, 57 | Ocena dotyczy konkretnych czynności i testów, nie wszystkich treści całego wymagania. |
-| II.2 | 02, 35, 36, 37, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 93, 95, 98, 46, 48, 50, 54, 55, 56, 57 | Symulator nie zastępuje montażu fizycznego zestawu. |
-| II.3.a |  | Grafika 3D czeka na wybór narzędzia; grafika 2D wymaga obejrzenia plików. |
-| II.3.f | 35, 36, 37, 38 | Strony działają w podglądzie lokalnym; brak publikacji ucznia na serwerze. |
+Grafika 3D pozostaje nieopracowana. Grafika 2D i dokumenty wymagają oceny rzeczywistych plików; wersje alfa ArtCraft wymagają próby w pracowni. RobotLab to model edukacyjny, bez weryfikacji fizycznego montażu. Strony uczniów działają lokalnie, bez publikacji w internecie. Praktyczna obsługa urządzeń i różnych systemów operacyjnych wymaga potwierdzenia na sprzęcie. Kurs Demagoga jest zewnętrzny i jego ukończenie nie jest śledzone.
