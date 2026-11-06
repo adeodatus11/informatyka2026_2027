@@ -1,7 +1,7 @@
 {
   "basis": "PP2024-LO-TECH-P",
   "reviewedCommit": "91bffa3",
-  "reviewedOn": "2026-10-01",
+  "reviewedOn": "2026-10-25",
   "meaning": "Powiązanie tematyczne i dowód ćwiczenia; nie deklaracja pełnej realizacji wszystkich wskazanych punktów.",
   "lessons": [
     {
@@ -271,9 +271,78 @@
       "migraReference": "M1"
     },
     {
+      "lessonId": "99",
+      "grade": 1,
+      "title": "Tworzenie obrazu i praca z warstwami w programie GIMP",
+      "file": "content/lessons/99-photocraft.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "g99-recall",
+        "g99-model",
+        "g99-build",
+        "g99-improve",
+        "g99-rubric",
+        "g99-export",
+        "g99-exit"
+      ],
+      "evidence": "Tworzę kompozycję z co najmniej trzech nazwanych warstw. Zmieniam kolejność i widoczność bez kasowania treści. Zapisuję edytowalną kopię i osobny eksport PNG. Dowód: Z lekcji o poradniku: po co zachować plik roboczy obok wersji do oglądania?; Tytuł zniknął pod ilustracją pada. Co sprawdzisz najpierw?; Wykonaj w PhotoCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Które dwa pliki pokażesz nauczycielowi?; Którą warstwę poprawiłeś po zmianie nazwy klubu i jak sprawdziłeś jej czytelność?",
+      "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
+      "migraReference": "M1",
+      "numberInGrade": 15
+    },
+    {
+      "lessonId": "100",
+      "grade": 1,
+      "title": "Stosowanie narzędzi selekcji w programie GIMP",
+      "file": "content/lessons/100-photocraft.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "g100-recall",
+        "g100-model",
+        "g100-build",
+        "g100-improve",
+        "g100-rubric",
+        "g100-export",
+        "g100-exit"
+      ],
+      "evidence": "Dobieram selekcję do prostego obiektu. Tworzę maskę warstwy zamiast kasować oryginał. Poprawiam brzeg i oznaczam zmienione tło. Dowód: Z lekcji 99: co robi wyłączenie widoczności warstwy?; Chcesz móc poprawić krawędź paczki po zmianie tła. Co wybrać?; Wykonaj w PhotoCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Dlaczego trzeba oznaczyć zmianę tła?; Co poprawiłeś w masce i dlaczego zmiana tła wymaga oznaczenia?",
+      "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
+      "migraReference": "M1",
+      "numberInGrade": 16
+    },
+    {
+      "lessonId": "101",
+      "grade": 1,
+      "title": "Edycja zdjęć w programie GIMP",
+      "file": "content/lessons/101-photocraft.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "g101-recall",
+        "g101-model",
+        "g101-build",
+        "g101-improve",
+        "g101-rubric",
+        "g101-export",
+        "g101-exit"
+      ],
+      "evidence": "Kadruję i poprawiam obraz na kopii. Rozróżniam rozmiar w pikselach, PPI i wagę pliku. Porównuję eksport PNG i JPEG przed wyborem wersji. Dowód: Z lekcji 100: po co zachować oryginał i robić poprawki na kopii?; Obraz ma 900 × 600 px. Zmieniasz tylko PPI, bez przeliczania pikseli. Co się stanie?; Wykonaj w PhotoCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; JPEG jest mniejszy, ale wokół krawędzi widać kwadraty i poświatę. Co zrobisz?; Dlaczego wybrany format nadaje się do Twojego obrazu? Podaj porównanie detalu i wagi pliku.",
+      "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
+      "migraReference": "M1",
+      "numberInGrade": 17
+    },
+    {
       "lessonId": "35",
       "grade": 1,
-      "numberInGrade": 15,
+      "numberInGrade": 18,
       "title": "Tworzenie stron WWW – podstawowe informacje",
       "file": "content/lessons/35-www-basics.js",
       "requirements": [
@@ -294,7 +363,7 @@
     {
       "lessonId": "36",
       "grade": 1,
-      "numberInGrade": 16,
+      "numberInGrade": 19,
       "title": "Stosowanie wybranych znaczników języka HTML",
       "file": "content/lessons/36-html-tags.js",
       "requirements": [
@@ -314,7 +383,7 @@
     {
       "lessonId": "37",
       "grade": 1,
-      "numberInGrade": 17,
+      "numberInGrade": 20,
       "title": "Kaskadowe arkusze stylów CSS",
       "file": "content/lessons/37-css.js",
       "requirements": [
@@ -334,7 +403,7 @@
     {
       "lessonId": "38",
       "grade": 1,
-      "numberInGrade": 18,
+      "numberInGrade": 21,
       "title": "Publikowanie i promowanie stron WWW w Internecie",
       "file": "content/lessons/38-publishing.js",
       "requirements": [
@@ -356,7 +425,7 @@
     {
       "lessonId": "60",
       "grade": 1,
-      "numberInGrade": 19,
+      "numberInGrade": 22,
       "title": "Sytuacje problemowe i określanie specyfikacji zadania",
       "file": "content/lessons/60-problem-specification.js",
       "requirements": [
@@ -377,7 +446,7 @@
     {
       "lessonId": "61",
       "grade": 1,
-      "numberInGrade": 20,
+      "numberInGrade": 23,
       "title": "Techniki algorytmiczne i programowanie",
       "file": "content/lessons/61-algorithms-techniques.js",
       "requirements": [
@@ -398,7 +467,7 @@
     {
       "lessonId": "62",
       "grade": 1,
-      "numberInGrade": 21,
+      "numberInGrade": 24,
       "title": "Środowisko programistyczne języka Python, stosowanie zmiennych i wyprowadzanie wyników",
       "file": "content/lessons/62-python-variables-output.js",
       "requirements": [
@@ -420,7 +489,7 @@
     {
       "lessonId": "63",
       "grade": 1,
-      "numberInGrade": 22,
+      "numberInGrade": 25,
       "title": "Algorytmy z warunkami w języku Python",
       "file": "content/lessons/63-python-conditions.js",
       "requirements": [
@@ -442,7 +511,7 @@
     {
       "lessonId": "64",
       "grade": 1,
-      "numberInGrade": 23,
+      "numberInGrade": 26,
       "title": "Sprawdzanie poprawności danych i zapisywanie rozwiązania problemu w języku Python",
       "file": "content/lessons/64-python-validation.js",
       "requirements": [
@@ -463,7 +532,7 @@
     {
       "lessonId": "65",
       "grade": 1,
-      "numberInGrade": 24,
+      "numberInGrade": 27,
       "title": "Instrukcje warunkowe zagnieżdżone i z klauzulą elif w języku Python",
       "file": "content/lessons/65-elif-nested-python.js",
       "requirements": [
@@ -485,7 +554,7 @@
     {
       "lessonId": "66",
       "grade": 1,
-      "numberInGrade": 25,
+      "numberInGrade": 28,
       "title": "Algorytmy iteracyjne w języku Python",
       "file": "content/lessons/66-loops-python.js",
       "requirements": [
@@ -508,7 +577,7 @@
     {
       "lessonId": "67",
       "grade": 1,
-      "numberInGrade": 26,
+      "numberInGrade": 29,
       "title": "Instrukcje iteracyjne zagnieżdżone w języku Python",
       "file": "content/lessons/67-nested-loops-python.js",
       "requirements": [
@@ -531,7 +600,7 @@
     {
       "lessonId": "68",
       "grade": 1,
-      "numberInGrade": 27,
+      "numberInGrade": 30,
       "title": "Stosowanie instrukcji iteracyjnych for i while w języku Python",
       "file": "content/lessons/68-for-while-python.js",
       "requirements": [
@@ -554,7 +623,7 @@
     {
       "lessonId": "58",
       "grade": 1,
-      "numberInGrade": 28,
+      "numberInGrade": 31,
       "title": "Sieci komputerowe",
       "file": "content/lessons/58-computer-networks.js",
       "requirements": [
@@ -575,7 +644,7 @@
     {
       "lessonId": "59",
       "grade": 1,
-      "numberInGrade": 29,
+      "numberInGrade": 32,
       "title": "Bezpieczeństwo i ochrona danych w komputerach i sieciach komputerowych",
       "file": "content/lessons/59-security-data-protection.js",
       "requirements": [
@@ -596,7 +665,7 @@
     {
       "lessonId": "39",
       "grade": 1,
-      "numberInGrade": 30,
+      "numberInGrade": 33,
       "title": "Wybrane przepisy prawa dotyczące technologii informacyjno-komunikacyjnych",
       "file": "content/lessons/39-tech-law.js",
       "requirements": [
@@ -619,7 +688,7 @@
     {
       "lessonId": "40",
       "grade": 1,
-      "numberInGrade": 31,
+      "numberInGrade": 34,
       "title": "Zasady rozpowszechniania programów komputerowych – projekt",
       "file": "content/lessons/40-license-project.js",
       "requirements": [
@@ -639,7 +708,7 @@
     {
       "lessonId": "41",
       "grade": 1,
-      "numberInGrade": 32,
+      "numberInGrade": 35,
       "title": "Komunikacja i wymiana informacji w Internecie",
       "file": "content/lessons/41-online-communication.js",
       "requirements": [
@@ -660,7 +729,7 @@
     {
       "lessonId": "42",
       "grade": 1,
-      "numberInGrade": 33,
+      "numberInGrade": 36,
       "title": "Szanse i zagrożenia związane z rozwojem informatyki i technologii informacyjno-komunikacyjnych – projekt",
       "file": "content/lessons/42-tech-future-project.js",
       "requirements": [
@@ -680,9 +749,78 @@
       "migraReference": "M1"
     },
     {
+      "lessonId": "102",
+      "grade": 1,
+      "title": "Tworzenie rysunków w grafice wektorowej",
+      "file": "content/lessons/102-vectorcraft.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "g102-recall",
+        "g102-model",
+        "g102-build",
+        "g102-improve",
+        "g102-rubric",
+        "g102-export",
+        "g102-exit"
+      ],
+      "evidence": "Odróżniam raster od wektora na powiększeniu. Tworzę ikonę z oddzielnych figur. Zapisuję edytowalny wektor i eksport SVG/PNG. Dowód: Z projektu o rozwoju IT: co jest lepszym uzasadnieniem wyboru narzędzia?; Ikona ma być na małym przycisku i dużej tablicy. Który plik zachowa opisy figur?; Wykonaj w VectorCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Po powiększeniu PNG widać piksele. Czy zmiana nazwy pliku na .svg naprawi kształt?; Który fragment Twojej ikony uprościłeś i co pokazało porównanie PNG z SVG?",
+      "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
+      "migraReference": "M1",
+      "numberInGrade": 37
+    },
+    {
+      "lessonId": "103",
+      "grade": 1,
+      "title": "Rysowanie figur i ścieżek w programie Inkscape",
+      "file": "content/lessons/103-vectorcraft.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "g103-recall",
+        "g103-model",
+        "g103-build",
+        "g103-improve",
+        "g103-rubric",
+        "g103-export",
+        "g103-exit"
+      ],
+      "evidence": "Odróżniam figurę od otwartej i zamkniętej ścieżki. Rysuję zamkniętą ścieżkę i poprawiam jej punkt. Łączę ścieżkę z figurą w czytelny znak. Dowód: Z lekcji 102: czym jest obrys figury?; Chcesz wydłużyć tylko czubek strzałki. Co wybierzesz?; Wykonaj w VectorCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Co jest lepszym dowodem, że strzałka jest edytowalną ścieżką?; Który punkt zmieniłeś i po czym poznajesz, że ścieżka nadal jest zamknięta?",
+      "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
+      "migraReference": "M1",
+      "numberInGrade": 38
+    },
+    {
+      "lessonId": "104",
+      "grade": 1,
+      "title": "Rysowanie przestrzenne, przekształcenia i warstwy w programie Inkscape",
+      "file": "content/lessons/104-vectorcraft.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "g104-recall",
+        "g104-model",
+        "g104-build",
+        "g104-improve",
+        "g104-rubric",
+        "g104-export",
+        "g104-exit"
+      ],
+      "evidence": "Buduję wrażenie przestrzeni z płaskich figur. Kopiuję, skaluję i obracam obiekt bez utraty edytowalności. Porządkuję rysunek na nazwanych warstwach i eksportuję SVG. Dowód: Z lekcji 103: czym różni się przesunięcie punktu od przesunięcia obiektu?; Pudełko po zmniejszeniu wygląda na rozciągnięte. Co poprawić?; Wykonaj w VectorCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Czy ten rysunek nadaje się jako gotowy model do drukarki 3D?; Jaką kolejność obiektów wybrałeś i dlaczego ten rysunek nadal jest grafiką 2D?",
+      "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
+      "migraReference": "M1",
+      "numberInGrade": 39
+    },
+    {
       "lessonId": "69",
       "grade": 1,
-      "numberInGrade": 34,
+      "numberInGrade": 40,
       "title": "Tworzenie formuł, formaty danych i formatowanie tabeli arkusza",
       "file": "content/lessons/69-excel-formulas.js",
       "requirements": [
@@ -702,7 +840,7 @@
     {
       "lessonId": "70",
       "grade": 1,
-      "numberInGrade": 35,
+      "numberInGrade": 41,
       "title": "Stosowanie funkcji arkusza kalkulacyjnego",
       "file": "content/lessons/70-excel-functions.js",
       "requirements": [
@@ -723,7 +861,7 @@
     {
       "lessonId": "71",
       "grade": 1,
-      "numberInGrade": 36,
+      "numberInGrade": 42,
       "title": "Przedstawianie danych w postaci wykresu",
       "file": "content/lessons/71-excel-charts.js",
       "requirements": [
@@ -744,7 +882,7 @@
     {
       "lessonId": "72",
       "grade": 1,
-      "numberInGrade": 37,
+      "numberInGrade": 43,
       "title": "Tworzenie wykresu – projekt z geografii",
       "file": "content/lessons/72-excel-geography.js",
       "requirements": [
@@ -765,7 +903,7 @@
     {
       "lessonId": "73",
       "grade": 1,
-      "numberInGrade": 38,
+      "numberInGrade": 44,
       "title": "Korzystanie z filtrów, tabele i wykresy przestawne",
       "file": "content/lessons/73-excel-pivot.js",
       "requirements": [
@@ -785,7 +923,7 @@
     {
       "lessonId": "74",
       "grade": 1,
-      "numberInGrade": 39,
+      "numberInGrade": 45,
       "title": "Stosowanie filtru w tabeli przestawnej i praktyczny poradnik",
       "file": "content/lessons/74-excel-pivot-guide.js",
       "requirements": [
@@ -805,7 +943,7 @@
     {
       "lessonId": "75",
       "grade": 1,
-      "numberInGrade": 40,
+      "numberInGrade": 46,
       "title": "Zasady tworzenia prezentacji multimedialnej",
       "file": "content/lessons/75-presentation-rules.js",
       "requirements": [
@@ -825,7 +963,7 @@
     {
       "lessonId": "76",
       "grade": 1,
-      "numberInGrade": 41,
+      "numberInGrade": 47,
       "title": "Tworzymy prezentację multimedialną o Fryderyku Chopinie – projekt",
       "file": "content/lessons/76-chopin-presentation.js",
       "requirements": [
@@ -847,7 +985,7 @@
     {
       "lessonId": "43",
       "grade": 1,
-      "numberInGrade": 42,
+      "numberInGrade": 48,
       "title": "Przestępczość komputerowa – projekt",
       "file": "content/lessons/43-computer-crime-project.js",
       "requirements": [
@@ -865,6 +1003,294 @@
       "evidence": "Symulowane rozmowy z oszustem (scamChat): rozpoznawanie czerwonych flag i przerywanie oszustwa w 3 scenariuszach; przepisy kk do scenek, ocena adresów (Lista Ostrzeżeń), plan reakcji „Pomóż Mai” i zgłaszanie incydentu.",
       "limitations": "IV.1 częściowo: lekcja nie ma już projektu zespołowego (decyzja nauczyciela — praca samodzielna). Fakty prawne i dane CERT Polska oznaczone w panelu nauczyciela do weryfikacji.",
       "migraReference": "M1"
+    },
+    {
+      "lessonId": "77",
+      "grade": 1,
+      "title": "Funkcje zwracające wartość w języku Python",
+      "file": "content/lessons/77-python-g1.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "77-recall",
+        "77-predict",
+        "77-change",
+        "77-par",
+        "77-fix",
+        "77-own"
+      ],
+      "evidence": "Definiuję funkcję z parametrem i return. Odróżniam wyświetlenie wyniku od zwrócenia wartości. Testuję funkcję dla różnych danych. Dowód: Z lekcji 68: co kończy pętlę while?; Przewidź wynik; Zmień rabat na 20%; Ułóż działający kod; Napraw None zamiast ceny; Policz koszt biletów dla grupy",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 49
+    },
+    {
+      "lessonId": "78",
+      "grade": 1,
+      "title": "Funkcje niezwracające wartości w języku Python",
+      "file": "content/lessons/78-python-g1.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "78-recall",
+        "78-predict",
+        "78-change",
+        "78-par",
+        "78-fix",
+        "78-own"
+      ],
+      "evidence": "Definiuję funkcję bez parametrów. Wywołuję funkcję wykonującą czynność. Wyjaśniam skąd bierze się None. Dowód: Z poprzedniej lekcji: co robi return 5?; Przewidź wynik; Zmień komunikat na Gotowe; Ułóż działający kod; Usuń niepotrzebne None; Komunikat dla gracza",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 50
+    },
+    {
+      "lessonId": "79",
+      "grade": 1,
+      "title": "Definiowanie i stosowanie listy w języku Python",
+      "file": "content/lessons/79-python-g1.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "79-recall",
+        "79-predict",
+        "79-change",
+        "79-par",
+        "79-fix",
+        "79-own"
+      ],
+      "evidence": "Tworzę listę i dopisuję element. Odczytuję indeks, długość i wycinek. Sprawdzam obecność elementu przez in. Dowód: Z lekcji 78: jak wywołasz funkcję baner bez parametrów?; Przewidź wynik; Dopisz chleb do zakupów; Ułóż działający kod; Napraw indeks poza zakresem; Sprawdź czy produkt jest na liście",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 51
+    },
+    {
+      "lessonId": "80",
+      "grade": 1,
+      "title": "Wykonywanie operacji na elementach listy w języku Python",
+      "file": "content/lessons/80-python-g1.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "80-recall",
+        "80-predict",
+        "80-change",
+        "80-par",
+        "80-fix",
+        "80-own"
+      ],
+      "evidence": "Liczę sumę, minimum, maksimum i średnią. Sortuję listę bez zmiany oryginału. Filtruję listę pętlą i warunkiem. Dowód: Z lekcji 79: jaki indeks ma pierwszy element listy?; Przewidź wynik; Zrób ranking malejąco; Ułóż działający kod; Średnia także dla pustej listy; Wybierz wyniki od progu",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 52
+    },
+    {
+      "lessonId": "81",
+      "grade": 1,
+      "title": "Dane tekstowe w języku Python",
+      "file": "content/lessons/81-reuse-g1.js",
+      "requirements": [
+        "II.1",
+        "I.2.b",
+        "I.3",
+        "II.2"
+      ],
+      "activityIds": [
+        "81-recall",
+        "ps-predict1",
+        "ps-first",
+        "ps-predict2",
+        "ps-mask",
+        "ps-name",
+        "ps-initials",
+        "ps-trace",
+        "ps-digits",
+        "ps-nick"
+      ],
+      "evidence": "Odczytuję znaki i fragmenty napisu przez indeksy i wycinki, także ujemne. Używam len, upper, lower, strip, split, find, count i replace i wiem, co zwracają. Przechodzę pętlą for po znakach napisu i zamieniam znaki na kody (ord, chr). Piszę funkcje do maskowania numeru, poprawiania imion i sprawdzania nicku, które przechodzą testy. Dowód: Z lekcji 80: Co daje sorted([3, 1, 2])?; Co wypisze ten program?; Imię wielkimi literami i jego długość; Przewidź: indeksy i wycinki; Maskowanie numeru karty; Poprawianie imienia i nazwiska; Układanka: inicjały „J.K.”; Przykład rozwiązany: liczę cyfry w haśle; Ile cyfr ma hasło?; Walidator nicku: nick_ok(nick)",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 53
+    },
+    {
+      "lessonId": "92",
+      "grade": 1,
+      "title": "Wybrane algorytmy na tekstach",
+      "file": "content/lessons/92-reuse-g1.js",
+      "requirements": [
+        "I.2.b",
+        "I.1",
+        "I.3"
+      ],
+      "activityIds": [
+        "92-recall",
+        "tl-compare",
+        "tl-detective",
+        "tl-pattern",
+        "ta-match",
+        "ta-badminton"
+      ],
+      "evidence": "Porównuję dwa teksty znak po znaku i wyjaśniam, dlaczego komputer stawia „Zosia” przed „adam”. Przewiduję wynik zliczania znaku, sprawdzania palindromu i anagramu dla podanych słów. Wykonuję krok po kroku wyszukiwanie wzorca metodą naiwną i liczę okna oraz porównania. Rozpoznaję, który algorytm na tekstach działa w Ctrl+F, filtrze nicków i liście kontaktów. Dowód: Z lekcji 81: Co oznacza napis[0]?; Porównywanie tekstów (kontakty); Detektyw tekstów: 7 zagadek; Wyszukiwanie wzorca: 2 rundy i koszt; Dopasuj sytuację do algorytmu, który wykonuje najważniejszą pracę.; Gra odrzuca każdy nick, w którym występuje słowo „admin” (bez względu na wielkość liter). Który nick zostanie odrzucony, choć nikt się pod admina nie podszywa?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 54
+    },
+    {
+      "lessonId": "93",
+      "grade": 1,
+      "title": "Programowanie wybranych algorytmów na tekstach",
+      "file": "content/lessons/93-reuse-g1.js",
+      "requirements": [
+        "I.2.b",
+        "II.1",
+        "I.3",
+        "II.2"
+      ],
+      "activityIds": [
+        "93-recall",
+        "pc-bug",
+        "pc-zlicz",
+        "pc-less",
+        "pc-less-q",
+        "pc-pal",
+        "pc-pal2",
+        "pc-anagram"
+      ],
+      "evidence": "Piszę funkcję zliczającą znak w pętli i porównuję jej wynik z metodą count. Programuję porównanie leksykograficzne znak po znaku i wyjaśniam wynik dla wielkich liter i polskich znaków. Sprawdzam palindrom dwoma wskaźnikami, także dla zdań (bez spacji i wielkości liter). Dobieram testy brzegowe: pusty tekst, brak znaku, wielkość liter, spacje, polskie znaki. Dowód: Z lekcji 92: Jak sprawdzasz palindrom?; Znajdź błąd: co wypisze ten program?; Poziom 1: zlicz(tekst, znak); Układanka: mniejszy(a, b); Sprawdź: kontakty po kodach; Poziom 3a: czy_palindrom(t); Poziom 3b: palindrom zdaniowy; Poziom 4: czy_anagram(a, b)",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 55
+    },
+    {
+      "lessonId": "94",
+      "grade": 1,
+      "title": "Wyszukiwanie wzorca w tekście metodą naiwną",
+      "file": "content/lessons/94-pattern-concept-g1.js",
+      "requirements": [
+        "I.1",
+        "I.2.b",
+        "I.3"
+      ],
+      "activityIds": [
+        "94-recall",
+        "94-windows",
+        "94-overlap",
+        "tl-pattern",
+        "94-edge"
+      ],
+      "evidence": "Wyznaczam możliwe okna wzorca. Wykonuję porównania od lewej i zatrzymuję się na różnicy. Znajduję nakładające się wystąpienia. Dowód: Z lekcji 93: kiedy porównywanie dwóch napisów może się skończyć?; Tekst ma 5 znaków, wzorzec 2. Ile okien mieści cały wzorzec?; Wzorzec aa w tekście aaaa pasuje na pozycjach:; Wyszukiwanie wzorca: 2 rundy i koszt; Co, gdy wzorzec jest dłuższy od tekstu?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 56
+    },
+    {
+      "lessonId": "95",
+      "grade": 1,
+      "title": "Programowanie algorytmu wyszukiwania wzorca w tekście metodą naiwną",
+      "file": "content/lessons/95-reuse-g1.js",
+      "requirements": [
+        "I.2.b",
+        "II.1",
+        "I.3",
+        "II.2"
+      ],
+      "activityIds": [
+        "95-recall",
+        "pw-trace",
+        "pw-parsons",
+        "pw-count",
+        "pw-builtin",
+        "pw-chat",
+        "pw-find"
+      ],
+      "evidence": "Śledzę algorytm naiwny i wskazuję okna, w których znaleziono wzorzec. Układam funkcję zwracającą listę wszystkich wystąpień, także nakładających się i na końcu tekstu. Mierzę liczbę porównań i wyjaśniam, dlaczego wyniki różnią się od count. Wykorzystuję własne wyszukiwanie w wyszukiwarce wiadomości bez względu na wielkość liter. Dowód: Z lekcji 94: Ile okien dla tekstu 4-znakowego i wzorca 2-znakowego?; Algorytm naiwny krok po kroku; Układanka: znajdz_wszystkie; Licznik porównań: ile_porownan(tekst, wzorzec); Przewidź: find i count w logach serwera; Wyszukiwarka czatu: szukaj(czat, fraza); Bonus: moje_find — pokonaj str.find",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 57
+    },
+    {
+      "lessonId": "96",
+      "grade": 1,
+      "title": "System dwójkowy",
+      "file": "content/lessons/96-binary-g1.js",
+      "requirements": [
+        "I.2.a"
+      ],
+      "activityIds": [
+        "96-recall",
+        "binary-read",
+        "binary-zero",
+        "binary-write",
+        "binary-second",
+        "binary-method",
+        "binary-range",
+        "binary-byte"
+      ],
+      "evidence": "Odczytuję wagi bitów od prawej. Zapisuję liczbę jako sumę potęg dwójki. Rozpoznaję zakres jednego bajtu. Dowód: Z lekcji 95: co zwraca znajdz_wszystkie, gdy nie ma trafień?; Ile wynosi 00010110₂ w systemie dziesiętnym?; Czy 00101₂ i 101₂ mają tę samą wartość?; Który zapis ośmiobitowy oznacza 19₁₀?; 42 = 32 + 8 + 2. Który zapis jest poprawny?; Rozpisz zamianę 26₁₀ na system dwójkowy i sprawdź wynik sumą wag.; Jaka jest największa liczba całkowita bez znaku na 8 bitach?; Ile bitów zawierają 3 bajty?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 58
+    },
+    {
+      "lessonId": "97",
+      "grade": 1,
+      "title": "System szesnastkowy",
+      "file": "content/lessons/97-reuse-g1.js",
+      "requirements": [
+        "I.2.a",
+        "I.3"
+      ],
+      "activityIds": [
+        "97-recall",
+        "hex-nibble",
+        "hex-escape",
+        "hex-color"
+      ],
+      "evidence": "Zamieniam liczby między systemami dziesiętnym, dwójkowym i szesnastkowym. Wyjaśniam, dlaczego jedna cyfra szesnastkowa odpowiada czterem bitom, a dwie — bajtowi. Odczytuję kolor zapisany jako #RRGGBB i rozpoznaję producenta w adresie MAC. Odszyfrowuję krótki tekst zapisany jako bajty ASCII w hex. Dowód: Z lekcji 96: Ile dziesiętnie wynosi 1010 w systemie dwójkowym?; Konwerter czwórek: 4 zadania; Ucieczka z serwerowni: 4 kłódki; Gra: Trafisz kolor?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 59
+    },
+    {
+      "lessonId": "98",
+      "grade": 1,
+      "title": "Programowanie zamiany reprezentacji liczb między pozycyjnymi systemami liczbowymi",
+      "file": "content/lessons/98-python-g1.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2",
+        "I.2.a"
+      ],
+      "activityIds": [
+        "98-recall",
+        "98-predict",
+        "98-change",
+        "98-par",
+        "98-fix",
+        "98-own"
+      ],
+      "evidence": "Odczytuję liczbę metodą mnożenia i dodawania. Tworzę zapis z reszt dzielenia. Sprawdzam zero, błędną cyfrę i podstawę. Dowód: Z lekcji 97: ile wynosi FF szesnastkowo?; Przewidź wynik; Odczytaj zapis o podstawie 2, 10 lub 16; Ułóż działający kod; Napraw zero w zapisie dwójkowym; Zapisz liczbę w wybranym systemie",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 60
     },
     {
       "lessonId": "44",
@@ -1212,6 +1638,141 @@
       "migraReference": "M2"
     },
     {
+      "lessonId": "82",
+      "grade": 2,
+      "title": "Sterowanie nawadnianiem ogrodu – wprowadzenie do robotyki i zadanie projektowe",
+      "file": "content/lessons/82-robotics-g2.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "r82-recall",
+        "r82-model",
+        "r82-lab",
+        "r82-transfer"
+      ],
+      "evidence": "Odróżniam czujnik od elementu wykonawczego. Piszę pętlę czytaj → decyduj → działaj. Testuję próg, deszcz, noc i brak wody. Dowód: Z poprzedniej lekcji o ułamkach: dlaczego testowaliśmy mianownik 0?; Wilgotność wynosi dokładnie 30%. Warunek to wilgotnosc < 30. Co zrobi pompa?; Program i próby; Wilgotność 10%, dzień, nie pada, ale zbiornik jest pusty. Co jest ważniejsze?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 18
+    },
+    {
+      "lessonId": "83",
+      "grade": 2,
+      "title": "Sterowanie nawadnianiem ogrodu – zadania szczegółowe",
+      "file": "content/lessons/83-robotics-g2.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2",
+        "IV.1"
+      ],
+      "activityIds": [
+        "r83-recall",
+        "r83-model",
+        "r83-lab",
+        "r83-transfer"
+      ],
+      "evidence": "Wyjaśniam histerezę na dwóch progach. Zachowuję stan między odczytami. Nadaję zabezpieczeniom pierwszeństwo. Dowód: Z lekcji o nawadnianiu: czujnik wilgotności to…; Pompa już działa. Wilgotność wzrosła z 29% do 31%. Co robi w modelu z progami 30/50?; Program i próby; Po deszczu pompa jest wyłączona, wilgotność 35%. Czy ma się włączyć?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 19
+    },
+    {
+      "lessonId": "84",
+      "grade": 2,
+      "title": "Projekt „Zamknij okno”",
+      "file": "content/lessons/84-robotics-g2.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "r84-recall",
+        "r84-model",
+        "r84-lab",
+        "r84-transfer"
+      ],
+      "evidence": "Łączę odczyty deszczu i kontaktronu. Steruję serwem i buzzerem. Testuję STOP i zamknięte okno. Dowód: Z lekcji 83: co robi histereza?; Pada, ale kontaktron zgłasza zamknięte okno. Jakie polecenie jest właściwe?; Program i próby; Pada i okno jest otwarte, ale ktoś nacisnął STOP. Co wyślesz?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 20
+    },
+    {
+      "lessonId": "85",
+      "grade": 2,
+      "title": "Projekt „Wycisz radio”",
+      "file": "content/lessons/85-robotics-g2.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "r85-recall",
+        "r85-model",
+        "r85-lab",
+        "r85-transfer"
+      ],
+      "evidence": "Steruję przekaźnikiem na podstawie odczytu. Stosuję histerezę i STOP. Odróżniam symulację logiczną od instalacji elektrycznej. Dowód: Z projektu okna: jaki warunek ma pierwszeństwo przed ruchem serwa?; Radio jest wyciszone, odczyt spada do 60. Co się stanie?; Program i próby; Dlaczego w prawdziwej pracowni nie podłączasz przekaźnika do sieci 230 V w ramach tego ćwiczenia?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 21
+    },
+    {
+      "lessonId": "86",
+      "grade": 2,
+      "title": "Budowanie robota – przygotowanie pomocy i montowanie układu",
+      "file": "content/lessons/86-robotics-g2.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2",
+        "IV.1"
+      ],
+      "activityIds": [
+        "r86-recall",
+        "r86-model",
+        "r86-lab",
+        "r86-transfer"
+      ],
+      "evidence": "Rozróżniam zasilanie, masę i sygnał. Łączę czujniki i sterownik według schematu. Diagnozuję błędy i zapisuję konfigurację Rover-2. Dowód: Z lekcji o radiu: przekaźnik jest…; Sygnał czujnika jest podłączony do A0, ale brakuje wspólnej masy. Co zrobisz najpierw?; Połączenia Rover-2; Po co zachowujesz konfigurację Rover-2?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 22
+    },
+    {
+      "lessonId": "105",
+      "grade": 2,
+      "title": "Budowanie robota – tworzenie oprogramowania",
+      "file": "content/lessons/105-robotics-g2.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2",
+        "IV.1"
+      ],
+      "activityIds": [
+        "r105-recall",
+        "r105-model",
+        "r105-lab",
+        "r105-transfer"
+      ],
+      "evidence": "Programuję ten sam model Rover-2. Ustalam priorytety STOP, przeszkody i linii. Testuję granicę 20 cm i analizuję tabelę działań. Dowód: Z lekcji montażu: dlaczego silnik jest podłączony przez sterownik?; STOP jest wciśnięty i czujnik widzi przeszkodę 10 cm. Co ma pierwszeństwo?; Program i próby; Przeszkoda jest dokładnie 20 cm od robota. Jaka decyzja pasuje do specyfikacji?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 23
+    },
+    {
       "lessonId": "06",
       "grade": 3,
       "numberInGrade": 1,
@@ -1555,6 +2116,203 @@
       "evidence": "Zamiana dwójkowy→dziesiętny metodą pozycyjną i schematem Hornera, walidacja wejścia, porównanie z int(x, 2).",
       "limitations": "I.2.a częściowo — tylko zamiana 2→10; pozostałe w tematach 24–25.",
       "migraReference": "M3"
+    },
+    {
+      "lessonId": "87",
+      "grade": 3,
+      "title": "Programowanie zamiany liczby dziesiętnej na dwójkową",
+      "file": "content/lessons/87-decimal-to-binary-g3.js",
+      "requirements": [
+        "I.1",
+        "I.2.a",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "g3-87-r1",
+        "g3-87-r2",
+        "g3-87-predict",
+        "g3-87-change",
+        "g3-87-parsons",
+        "g3-87-fix",
+        "g3-87-byte"
+      ],
+      "evidence": "Zamieniam liczbę dziesiętną na dwójkową przez dzielenie z resztą. Obsługuję zero i odwróconą kolejność reszt. Sprawdzam zakres bajtu i porównuję wynik z format. Dowód: Z lekcji 57: Horner dla 101 to:; Jak poprzednio odrzucaliśmy zapis 102 jako dwójkowy?; Przewidź przed uruchomieniem; Zmień liczbę na 10; na_dwojkowy(n); Nie zgub zera; bajt(n)",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 18
+    },
+    {
+      "lessonId": "88",
+      "grade": 3,
+      "title": "Zamiana liczb między systemami pozycyjnymi",
+      "file": "content/lessons/88-positional-systems-g3.js",
+      "requirements": [
+        "I.1",
+        "I.2.a",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "g3-88-r1",
+        "g3-88-r2",
+        "g3-88-predict",
+        "g3-88-to",
+        "g3-88-from",
+        "g3-88-rgb"
+      ],
+      "evidence": "Uogólniam dzielenie z resztą dla podstaw 2–16. Odrzucam cyfry niedozwolone w wybranej podstawie. Zamieniam zapis hex na trzy składowe RGB. Dowód: Z lekcji 87: dlaczego dopisujesz resztę z lewej?; Co na_dwojkowy(0) ma zwrócić?; Przewidź przed uruchomieniem; na_system(n, p); z_systemu(s, p); rgb(kod)",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 19
+    },
+    {
+      "lessonId": "89",
+      "grade": 3,
+      "title": "Działania na ułamkach z wykorzystaniem NWD i NWW",
+      "file": "content/lessons/89-fractions-g3.js",
+      "requirements": [
+        "I.2.a",
+        "I.1",
+        "I.3"
+      ],
+      "activityIds": [
+        "g3-89-r1",
+        "g3-89-r2",
+        "nf-simplify",
+        "nf-addsub",
+        "nf-mul",
+        "nf-mix",
+        "nf-exit"
+      ],
+      "evidence": "Skracam ułamek w jednym kroku, dzieląc licznik i mianownik przez NWD. Dodaję i odejmuję ułamki, sprowadzając je do wspólnego mianownika równego NWW mianowników. Mnożę ułamki (przepis, rabat na rabat) i skracam wynik. Zamieniam proporcję (1:50, 1:1,5) na ułamek całości i liczę ilości składników. Dowód: Z lekcji 88: 255 dziesiętnie i FF szesnastkowo to:; Dlaczego z_systemu(\"2\", 2) ma zwrócić None?; Laboratorium ułamków · skracanie przez NWD; Laboratorium ułamków · dodawanie i odejmowanie; Laboratorium ułamków · mnożenie; Laboratorium ułamków · mieszanki w zawodach; Dlaczego 1/2 + 1/3 ≠ 2/5?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 20
+    },
+    {
+      "lessonId": "90",
+      "grade": 3,
+      "title": "Skracanie i działania arytmetyczne na ułamkach",
+      "file": "content/lessons/90-fractions-python-g3.js",
+      "requirements": [
+        "I.2.a",
+        "I.3",
+        "II.1",
+        "II.2"
+      ],
+      "activityIds": [
+        "g3-90-r1",
+        "g3-90-r2",
+        "fp-predict",
+        "fp-float",
+        "fp-skroc",
+        "fp-add",
+        "fp-sub",
+        "fp-calc",
+        "fp-exit"
+      ],
+      "evidence": "Zapisuję ułamek jako krotkę (licznik, mianownik) i odczytuję jej elementy. Programuję skroc z nwd, dbając o mianownik 0 i znak minus (zawsze w liczniku). Programuję dodawanie, odejmowanie (przez NWW), mnożenie i dzielenie ułamków. Sprawdzam swój kalkulator testami i porównaniem z fractions.Fraction. Dowód: Z lekcji 89: przez co skrócisz18/24 od razu do końca?; Jak dodasz1/2+1/3?; Co wypisze program z krotką?; float kontra Fraction; skroc(licznik, mianownik); Układanka: dodaj(a, b); odejmij(a, b) w jednej linii; Kalkulator ułamków; Kalkulator kolegi dla kalkulator((1, 2), \":\", (0, 3)) wysypuje się błędem ZeroDivisionError. Co poprawiasz?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 21
+    },
+    {
+      "lessonId": "106",
+      "grade": 3,
+      "title": "Projekt sterowania nawadnianiem ogrodu",
+      "file": "content/lessons/106-irrigation-g3.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2",
+        "IV.1"
+      ],
+      "activityIds": [
+        "g3-106-recall",
+        "r83-model",
+        "r83-lab",
+        "r83-transfer"
+      ],
+      "evidence": "Wyjaśniam histerezę na dwóch progach. Zachowuję stan między odczytami. Nadaję zabezpieczeniom pierwszeństwo. Dowód: Z lekcji 90: dlaczego kalkulator odrzuca mianownik 0?; Pompa już działa. Wilgotność wzrosła z 29% do 31%. Co robi w modelu z progami 30/50?; Program i próby; Po deszczu pompa jest wyłączona, wilgotność 35%. Czy ma się włączyć?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 22
+    },
+    {
+      "lessonId": "107",
+      "grade": 3,
+      "title": "Budowanie robota i inne zadania projektowe",
+      "file": "content/lessons/107-rover-g3.js",
+      "requirements": [
+        "I.1",
+        "I.3",
+        "II.1",
+        "II.2",
+        "IV.1"
+      ],
+      "activityIds": [
+        "g3-107-recall",
+        "g3-107-wire",
+        "r105-lab",
+        "r105-transfer"
+      ],
+      "evidence": "Dobieram piny zasilania, masy i sygnałów. Przenoszę konfigurację tego samego modelu do programu. Sprawdzam pierwszeństwo STOP i granicę20 cm. Dowód: Z lekcji 106: dlaczego pompa ma dwa różne progi?; Rover-2: montaż układu; Program i próby; Przeszkoda jest dokładnie 20 cm od robota. Jaka decyzja pasuje do specyfikacji?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 23
+    },
+    {
+      "lessonId": "91",
+      "grade": 3,
+      "title": "Etapy tworzenia strony internetowej",
+      "file": "content/lessons/91-website-stages-g3.js",
+      "requirements": [
+        "I.1",
+        "II.2",
+        "II.3.f",
+        "IV.1"
+      ],
+      "activityIds": [
+        "g3-91-r1",
+        "g3-91-order",
+        "g3-91-plan",
+        "g3-91-html",
+        "g3-91-css",
+        "g3-91-show",
+        "g3-91-publish"
+      ],
+      "evidence": "Planuję stronę pod konkretny cel i odbiorcę. Tworzę nagłówki, listę, tabelę i link w HTML. Oddzielam treść HTML od wyglądu CSS i sprawdzam podgląd. Dowód: Z projektu107: po co sprawdzasz STOP także wtedy, gdy jest przeszkoda?; Ułóż etapy pracy nad stroną dla pracowni.; Zapisz jedno zdanie: gdzie odbiorca znajdzie termin i po czym to sprawdzisz?; Strona pracowni: treść; Strona pracowni: czytelność; Gotowa strona pracowni; Co oznacza publikacja strony?",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 24
+    },
+    {
+      "lessonId": "108",
+      "grade": 3,
+      "title": "Nowy wygląd strony internetowej o Wyspach Kanaryjskich",
+      "file": "content/lessons/108-canary-css-g3.js",
+      "requirements": [
+        "I.1",
+        "II.2",
+        "II.3.f",
+        "IV.1"
+      ],
+      "activityIds": [
+        "g3-108-r1",
+        "g3-108-r2",
+        "g3-108-select",
+        "g3-108-type",
+        "g3-108-layout",
+        "g3-108-show"
+      ],
+      "evidence": "Oddzielam treść od wyglądu strony. Poprawiam typografię, kontrast i odstępy. Układam karty w grid lub flex i testuję wąskie okno. Dowód: Z lekcji 91: gdzie zmienisz kolor i odstępy wszystkich kart?; Co sprawdzasz przed publikacją?; Chcesz odstęp wewnątrz każdej karty. Co ustawisz?; Wyspy: czytelny tekst; Wyspy: własny układ CSS; Miniatlas po zmianie CSS",
+      "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
+      "migraReference": "M1",
+      "numberInGrade": 25
     }
   ],
   "reviewedScope": "27 lekcji z GitHub main 91bffa3 (audyt 30.09.2026) oraz sześć nowych lekcji Worda 28–33 (aktualizacja mapy 01.10.2026). Lekcje klasy 1: WWW 35–38, prawo/komunikacja/projekty 39–43 (aktualizacja mapy 14.10.2026)."

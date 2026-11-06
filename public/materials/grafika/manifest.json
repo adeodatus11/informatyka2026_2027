@@ -1,0 +1,92 @@
+[
+  {
+    "file": "99-tlo.png",
+    "width": 1200,
+    "height": 675,
+    "bytes": 26948,
+    "sha256": "e4c02cc6bb2d3dd671bef37055d51a94c13823d702e713b925e86adfa7383a54",
+    "license": "CC0-1.0",
+    "author": "Informatyka praktycznie — autorska grafika przygotowana do lekcji"
+  },
+  {
+    "file": "99-pad.png",
+    "width": 500,
+    "height": 500,
+    "bytes": 15182,
+    "sha256": "f1ef1e8b9fe2c46c6a0f9b7f4664e1aa4978c137136e62282c9f2b811245d23f",
+    "license": "CC0-1.0",
+    "author": "Informatyka praktycznie — autorska grafika przygotowana do lekcji"
+  },
+  {
+    "file": "100-paczka.png",
+    "width": 900,
+    "height": 600,
+    "bytes": 19369,
+    "sha256": "0ce692fec22ec21acf399e8c0da4ad6d19649fcb8141bd94940f38a0948123b9",
+    "license": "CC0-1.0",
+    "author": "Informatyka praktycznie — autorska grafika przygotowana do lekcji"
+  },
+  {
+    "file": "100-tlo.png",
+    "width": 900,
+    "height": 600,
+    "bytes": 18673,
+    "sha256": "d995f34889af4f14d60ce94b377012c2935f953b1e92e66d14af5ae8987c19be",
+    "license": "CC0-1.0",
+    "author": "Informatyka praktycznie — autorska grafika przygotowana do lekcji"
+  },
+  {
+    "file": "101-produkt.png",
+    "width": 1500,
+    "height": 1000,
+    "bytes": 160082,
+    "sha256": "9b16b442daf51780bbcf165a9c280c94ccd4bb8f042ab99ded3f968328d1f92d",
+    "license": "CC0-1.0",
+    "author": "Informatyka praktycznie — autorska grafika przygotowana do lekcji"
+  },
+  {
+    "file": "102-figury.svg",
+    "width": 900,
+    "height": 600,
+    "bytes": 447,
+    "sha256": "620e0519852504a606d3b0ee2f35f05d39412b8bb6118eb10af5be72553015a7",
+    "license": "CC0-1.0",
+    "author": "Informatyka praktycznie — autorska grafika przygotowana do lekcji"
+  },
+  {
+    "file": "103-sciezka.svg",
+    "width": 900,
+    "height": 600,
+    "bytes": 466,
+    "sha256": "f2f2d3053c89b919c65c0f57dd0c38bb166ca019bfc2b8a03514c8134c970946",
+    "license": "CC0-1.0",
+    "author": "Informatyka praktycznie — autorska grafika przygotowana do lekcji"
+  },
+  {
+    "file": "104-przestrzen.svg",
+    "width": 900,
+    "height": 600,
+    "bytes": 501,
+    "sha256": "b408bbc4727310bd27f2ee4fdfbd7f3d215e8bcd38fee93866820b1917270d74",
+    "license": "CC0-1.0",
+    "author": "Informatyka praktycznie — autorska grafika przygotowana do lekcji"
+  },
+  {
+    "file": "102-ikona.svg",
+    "width": 64,
+    "height": 64,
+    "bytes": 381,
+    "sha256": "4050e80a5994d3d36c62242d75b52c97b9ad3fb16f0acc8edb604c66f0d3d957",
+    "license": "CC0-1.0",
+    "author": "Informatyka praktycznie — autorska grafika przygotowana do lekcji"
+  },
+  {
+    "file": "102-ikona.png",
+    "width": 64,
+    "height": 64,
+    "bytes": 1345,
+    "sha256": "83f33fc6dd7ce85cd933539edea0e3b3b7a31b7e8df88e53c8a8a46df21c4b4d",
+    "license": "CC0-1.0",
+    "author": "Informatyka praktycznie — autorska grafika przygotowana do lekcji"
+  }
+]

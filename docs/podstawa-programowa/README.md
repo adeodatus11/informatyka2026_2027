@@ -1,6 +1,6 @@
 # Stały punkt odniesienia: informatyka PP 2024 + Python
 
-**Zakres podstawowy, liceum i technikum; źródła prawne sprawdzono 30 września 2026, mapę uaktualniono 1 października 2026.** Mapa obejmuje 34 lekcje: 14 w klasie 1, 10 w klasie 2, 10 w klasie 3. Audyt 27 istniejących lekcji oparto na GitHub `main`, commit `91bffa3`; następnie dodano sześć lekcji Worda (ID 28–33).
+**Zakres podstawowy, liceum i technikum; źródła prawne sprawdzono 30 września 2026.** Mapa ćwiczeń zaktualizowana 6.11.2026: 108 lekcji (klasy 1/2/3: 60/23/25). Starszy audyt z 1.10 pozostaje opisem historycznym; aktualne dowody i ograniczenia są w mapie JSON oraz czytelnej mapie lekcji.
 
 ## Zawartość
 
@@ -8,7 +8,7 @@
 
 - [Podstawa 2024 — wymagania szczegółowe](podstawa-2024.md): pełne brzmienie zakresu podstawowego, z numerami do mapowania.
 - [Tekst urzędowy — cały dział Informatyka](tekst-urzedowy-2024.txt): cele ogólne, oba zakresy i warunki realizacji; wyciąg z PDF Dziennika Ustaw, strony 341–351.
-- [Mapa wszystkich 34 lekcji](mapa-lekcji.md): numer w klasie, stałe ID, wymagania, dowody w ćwiczeniach i ograniczenia.
+- [Mapa wszystkich aktualnych lekcji](mapa-lekcji.md): numer w klasie, stałe ID, wymagania, dowody w ćwiczeniach i ograniczenia.
 - [Pokrycie wymagań i dalsza ścieżka Pythona](pokrycie-i-python.md): co już jest, czego brakuje, czego nie należy zaliczać na wyrost.
 - [Materiały Migry](migra.md): konkretne programy i rozkłady, wersje z Pythonem oraz sposób wykorzystania.
 - [Wymagania JSON](wymagania.json), [mapowanie JSON](mapowanie.json), [rejestr źródeł](zrodla.json): dane do dalszego rozwijania repozytorium.
@@ -37,6 +37,6 @@ Starsze `archiwum/wersja-2026-09-13/podstawa.html` jest materiałem historycznym
 
 ## Zasada dalszej pracy
 
-Przed tworzeniem lekcji sprawdź wymaganie i istniejące pokrycie. Po zmianie aktualizuj mapę wraz z ograniczeniami. Zachowuj stałe ID; numery widoczne dla ucznia zaczynają się od 1 w każdej klasie. Używaj słów „częściowo” i „brak” tam, gdzie nie ma dowodów pełnego zakresu. Nie wyliczaj procentowej realizacji PP z liczby tematów lub ekranów.
+Przed tworzeniem lekcji sprawdź wymaganie i istniejące pokrycie. Po zmianie aktualizuj mapę wraz z ograniczeniami. Zachowuj stałe ID; numery tematów widoczne dla ucznia pochodzą z `order` w rozkładzie danej klasy, z zachowaniem luk; dodatki nie zajmują numeru. Używaj słów „częściowo” i „brak” tam, gdzie nie ma dowodów pełnego zakresu. Nie wyliczaj procentowej realizacji PP z liczby tematów lub ekranów.
 
 Walidacja: `node scripts/check-curriculum.mjs` (z katalogu głównego repozytorium).
