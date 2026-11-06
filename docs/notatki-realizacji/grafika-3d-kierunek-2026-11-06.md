@@ -2,6 +2,12 @@
 
 Klasy 2 i 3: łatwo, lekko, przyjemnie, najlepiej online. Najlepsze prace nauczyciel może wydrukować na szkolnej drukarce 3D. Dotychczasowa propozycja Sweet Home 3D/FreeCAD pozostaje analizą alternatyw.
 
+## Drukarka docelowa — doprecyzowanie nauczyciela
+
+Nauczyciel ma lokalną **Bambu Lab H2C**. Materiały obu klas przygotowujemy z myślą o tej drukarce. Model drukarki to wymaganie sprzętowe, a nie nazwa formatu pliku. W planie uczeń oddaje model STL; nauczyciel przygotowuje wydruk w Bambu Studio z właściwym profilem H2C. Projekt slicera można dołączyć jako 3MF po sprawdzeniu obsługi i ustawień w używanej wersji programu.
+
+Przed opracowaniem instrukcji wydruku zweryfikować oficjalną specyfikację H2C i profil Bambu Studio. Nie zakładać wymiarów stołu, dyszy, materiału ani wyposażenia wielokolorowego na podstawie samej nazwy urządzenia. Ćwiczenia zaczynamy od małych, prostych modeli; parametry wydruku i podgląd warstw zatwierdza nauczyciel. Druk lokalny najlepszych prac, bez obowiązkowej obsługi drukarki przez każdego ucznia.
+
 Preferowane narzędzie do dalszego opracowania: **Tinkercad**, proste składanie i odejmowanie brył, wymiarowanie i eksport STL. Nauczyciel zakłada Classroom; uczniowie dołączają nadanym pseudonimem bez osobnej rejestracji. Dostępność w sieci szkolnej i organizację klasy trzeba sprawdzić przed zajęciami.
 
 Canva może służyć do pokazania projektu, ale elementy 3D eksportuje jako statyczne obrazy, więc nie zastępuje edytora modeli do druku.
