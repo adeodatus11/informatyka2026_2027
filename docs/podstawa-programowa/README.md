@@ -37,6 +37,6 @@ Starsze `archiwum/wersja-2026-09-13/podstawa.html` jest materiałem historycznym
 
 ## Zasada dalszej pracy
 
-Przed tworzeniem lekcji sprawdź wymaganie i istniejące pokrycie. Po zmianie aktualizuj mapę wraz z ograniczeniami. Zachowuj stałe ID; numery widoczne dla ucznia zaczynają się od 1 w każdej klasie. Używaj słów „częściowo” i „brak” tam, gdzie nie ma dowodów pełnego zakresu. Nie wyliczaj procentowej realizacji PP z liczby tematów lub ekranów.
+Przed tworzeniem lekcji sprawdź wymaganie i istniejące pokrycie. Po zmianie aktualizuj mapę wraz z ograniczeniami. Zachowuj stałe ID; numery tematów widoczne dla ucznia pochodzą z `order` w rozkładzie danej klasy, z zachowaniem luk; dodatki nie zajmują numeru. Używaj słów „częściowo” i „brak” tam, gdzie nie ma dowodów pełnego zakresu. Nie wyliczaj procentowej realizacji PP z liczby tematów lub ekranów.
 
 Walidacja: `node scripts/check-curriculum.mjs` (z katalogu głównego repozytorium).
