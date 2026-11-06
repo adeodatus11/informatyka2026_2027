@@ -21,4 +21,4 @@ Pierwszy sukces w kilka minut. Bez obowiązku wydruku każdej pracy. Do druku wy
 - [Tinkercad](https://www.tinkercad.com/)
 - [Canva — elementy 3D](https://www.canva.com/help/3d-elements/)
 
-To kierunek kolejnego opracowania, nie gotowe lekcje. Rozkład nadal oznacza 12 tematów 3D jako brakujące. Projekt e-usług klasy 1 pomijamy zgodnie z decyzją nauczyciela.
+Realizacja 6.11.2026: dodano 12 scenariuszy 110–121, odpowiednio 7 dla klasy 2 i 5 dla klasy 3. Tematy zmieniono za zgodą nauczyciela, zachowując cele modelowania II.3.a. Dawne tytuły zapisano w originalTitle rozkładu. Przygotowanie usługi i H2C: [instrukcja](../tinkercad-h2c.md). Gotowość scenariuszy nie zastępuje próby Classroom w szkole ani testu fizycznego wydruku. Projekt e-usług klasy 1 pomijamy zgodnie z decyzją nauczyciela.

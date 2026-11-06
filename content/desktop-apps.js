@@ -1,6 +1,7 @@
 // Lekcje z programem pakietu Office zainstalowanym na komputerze (workspace w danych lekcji).
 // name — mianownik, gen — dopełniacz („obok Worda”), loc — miejscownik („w Wordzie”).
 export const DESKTOP_APPS={
+ 'online-tinkercad':{name:'Tinkercad',gen:'Tinkercada',loc:'Tinkercadzie',file:'model',doc:'Model',docGen:'modelu',online:true},
  'desktop-word':{name:'Word',gen:'Worda',loc:'Wordzie',file:'dokument startowy',doc:'Dokument',docGen:'dokumentu'},
  'desktop-excel':{name:'Excel',gen:'Excela',loc:'Excelu',file:'skoroszyt startowy',doc:'Skoroszyt',docGen:'skoroszytu'},
  'desktop-photocraft':{name:'PhotoCraft',gen:'PhotoCrafta',loc:'PhotoCrafcie',file:'obraz startowy',doc:'Grafika',docGen:'grafiki'},

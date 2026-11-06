@@ -1,10 +1,10 @@
 # Informatyka praktycznie
 
-Interaktywne materiały dla klas 1–3 technikum: **108 lekcji — 60 w klasie 1, 23 w klasie 2 i 25 w klasie 3** (stan 6.11.2026). Aktualny katalog powstaje automatycznie z `content/lessons/`; numer tematu odpowiada szkolnemu rozkładowi, a kurs Demagoga jest materiałem dodatkowym.
+Interaktywne materiały dla klas 1–3 technikum: **120 lekcji — 60 w klasie 1, 30 w klasie 2 i 30 w klasie 3** (stan 6.11.2026). Aktualny katalog powstaje automatycznie z `content/lessons/`; numer tematu odpowiada szkolnemu rozkładowi, a kurs Demagoga jest materiałem dodatkowym.
 
 Nowy dział Worda (klasa 1, tematy 9–14) obejmuje style, nagłówki i stopki, spisy treści i obiektów, sekcje, recenzję oraz projekt poradnika. Instrukcje, sprawdzenie wiedzy i samoocena są na platformie, a uczniowie pracują w stacjonarnym Wordzie na sześciu przygotowanych plikach DOCX. Pięć lekcji trwa po 45 minut, projekt końcowy 2 × 45 minut. Każda ma plan nauczyciela, kryteria produktu i ewaluację.
 
-Materiał dodatkowy klasy 1 (ID 34) prowadzi bezpośrednio do kursu Demagoga w nowej karcie (około 120 minut za cały kurs, praca na komputerze). Kolejność kontroluje `order` niezależnie od trwałego ID. Osobny projekt e-usług pomijamy decyzją nauczyciela. Do opracowania pozostaje 12 tematów grafiki 3D klas 2–3; kierunek: prosty edytor online i modele do druku 3D, zobacz [notatkę](docs/notatki-realizacji/grafika-3d-kierunek-2026-11-06.md).
+Materiał dodatkowy klasy 1 (ID 34) prowadzi bezpośrednio do kursu Demagoga w nowej karcie (około 120 minut za cały kurs, praca na komputerze). Kolejność kontroluje `order` niezależnie od trwałego ID. Osobny projekt e-usług pomijamy decyzją nauczyciela. Blok 3D (110–121) prowadzi w Tinkercad od brył i wymiarów do własnego modelu oraz eksportu STL. Nauczyciel może przygotować wydruk najlepszych prac na lokalnej Bambu Lab H2C. [Przygotowanie pracowni i drukarki](docs/tinkercad-h2c.md).
 
 ## Zasoby do projektowania lekcji
 
