@@ -11,6 +11,8 @@
 
 ## Skrót decyzji nauczyciela (stan 25.10.2026)
 
+Aktualizacja 6.11.2026: grafika 3D klas 2–3 w Tinkercad online (Classroom przygotowane przez nauczyciela, pseudonimy uczniów, projekty w chmurze Autodesk). To zatwierdzony wyjątek od pracy lokalnej i bez zewnętrznych usług. Tematy można zmieniać przy zachowaniu dowodów realizacji PP; dawne nazwy zachowujemy w originalTitle rozkładu. Wybrane prace do lokalnego wydruku przez nauczyciela na Bambu Lab H2C, po kontroli w Bambu Studio. Szczegóły: docs/tinkercad-h2c.md. Projekt e-usług klasy 1 pomijamy.
+
 - Grupa docelowa: technikum 15–18 lat, niska motywacja — realna korzyść, szybkie sukcesy, krótko. Szczegóły: `docs/profil-ucznia.md`.
 - 45 min, 4–7 etapów, retrieval na starcie, karta wyniku na końcu. Bez pracy domowej, bez logowania, wszystko w przeglądarce (wyjątki: Word/Excel/PowerPoint stacjonarne przez `workspace:'desktop-word'|'desktop-excel'|'desktop-powerpoint'`, wiersz poleceń Windows 11).
 - Pary: tak, ale nie na każdej lekcji (ok. co trzecia) i tylko gdy naturalnie coś dają; pary zamiast trójek; bez sztywnych ról i ocen koleżeńskich na siłę; zawsze wariant solo.

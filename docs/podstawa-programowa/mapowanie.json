@@ -1,7 +1,7 @@
 {
   "basis": "PP2024-LO-TECH-P",
   "reviewedCommit": "91bffa3",
-  "reviewedOn": "2026-10-25",
+  "reviewedOn": "2026-11-06",
   "meaning": "Powiązanie tematyczne i dowód ćwiczenia; nie deklaracja pełnej realizacji wszystkich wskazanych punktów.",
   "lessons": [
     {
@@ -1295,7 +1295,7 @@
     {
       "lessonId": "44",
       "grade": 2,
-      "numberInGrade": 1,
+      "numberInGrade": 8,
       "title": "Podstawowe pojęcia i przykłady bazy danych – obsługa szkolnych zawodów pływackich",
       "file": "content/lessons/44-swimming-database-g2.js",
       "requirements": [
@@ -1312,7 +1312,7 @@
     {
       "lessonId": "45",
       "grade": 2,
-      "numberInGrade": 2,
+      "numberInGrade": 9,
       "title": "Zasady tworzenia kwerend na przykładzie bazy Zawody",
       "file": "content/lessons/45-queries-zawody-g2.js",
       "requirements": [
@@ -1330,7 +1330,7 @@
     {
       "lessonId": "05",
       "grade": 2,
-      "numberInGrade": 3,
+      "numberInGrade": 10,
       "title": "Tworzenie bazy danych – obsługa gabinetu stomatologicznego",
       "file": "content/lessons/05-dental-database.js",
       "requirements": [
@@ -1349,7 +1349,7 @@
     {
       "lessonId": "10",
       "grade": 2,
-      "numberInGrade": 4,
+      "numberInGrade": 11,
       "title": "Importowanie danych z innych dokumentów do tabeli bazy danych",
       "file": "content/lessons/10-data-import.js",
       "requirements": [
@@ -1366,7 +1366,7 @@
     {
       "lessonId": "11",
       "grade": 2,
-      "numberInGrade": 5,
+      "numberInGrade": 12,
       "title": "Przygotowanie kwerend w bazie Stomatolog",
       "file": "content/lessons/11-queries.js",
       "requirements": [
@@ -1384,7 +1384,7 @@
     {
       "lessonId": "12",
       "grade": 2,
-      "numberInGrade": 6,
+      "numberInGrade": 13,
       "title": "Przygotowanie korespondencji seryjnej",
       "file": "content/lessons/12-mail-merge.js",
       "requirements": [
@@ -1402,7 +1402,7 @@
     {
       "lessonId": "16",
       "grade": 2,
-      "numberInGrade": 7,
+      "numberInGrade": 14,
       "title": "Szyfrowanie tekstu metodą podstawieniową",
       "file": "content/lessons/16-substitution-cipher.js",
       "requirements": [
@@ -1422,7 +1422,7 @@
     {
       "lessonId": "17",
       "grade": 2,
-      "numberInGrade": 8,
+      "numberInGrade": 15,
       "title": "Programowanie algorytmu szyfrowania tekstu metodą podstawieniową",
       "file": "content/lessons/17-cipher-python.js",
       "requirements": [
@@ -1445,7 +1445,7 @@
     {
       "lessonId": "18",
       "grade": 2,
-      "numberInGrade": 9,
+      "numberInGrade": 16,
       "title": "Algorytmy porządkowania liczb",
       "file": "content/lessons/18-sorting-algorithms.js",
       "requirements": [
@@ -1464,7 +1464,7 @@
     {
       "lessonId": "19",
       "grade": 2,
-      "numberInGrade": 10,
+      "numberInGrade": 17,
       "title": "Programowanie algorytmów porządkowania metodą bąbelkową",
       "file": "content/lessons/19-bubble-sort.js",
       "requirements": [
@@ -1485,7 +1485,7 @@
     {
       "lessonId": "20",
       "grade": 2,
-      "numberInGrade": 11,
+      "numberInGrade": 18,
       "title": "Programowanie algorytmów porządkowania przez wstawianie",
       "file": "content/lessons/20-insertion-sort.js",
       "requirements": [
@@ -1508,7 +1508,7 @@
     {
       "lessonId": "21",
       "grade": 2,
-      "numberInGrade": 12,
+      "numberInGrade": 19,
       "title": "Obliczanie wartości elementów ciągu metodą iteracyjną, w tym wartości elementów ciągu Fibonacciego",
       "file": "content/lessons/21-sequences-fibonacci.js",
       "requirements": [
@@ -1529,7 +1529,7 @@
     {
       "lessonId": "46",
       "grade": 2,
-      "numberInGrade": 13,
+      "numberInGrade": 20,
       "title": "Programowanie algorytmów iteracyjnych",
       "file": "content/lessons/46-iterative-python.js",
       "requirements": [
@@ -1552,7 +1552,7 @@
     {
       "lessonId": "47",
       "grade": 2,
-      "numberInGrade": 14,
+      "numberInGrade": 21,
       "title": "Wybrane algorytmy na liczbach",
       "file": "content/lessons/47-number-algorithms.js",
       "requirements": [
@@ -1573,7 +1573,7 @@
     {
       "lessonId": "48",
       "grade": 2,
-      "numberInGrade": 15,
+      "numberInGrade": 22,
       "title": "Programowanie wybranych algorytmów na liczbach",
       "file": "content/lessons/48-number-algorithms-python.js",
       "requirements": [
@@ -1596,7 +1596,7 @@
     {
       "lessonId": "49",
       "grade": 2,
-      "numberInGrade": 16,
+      "numberInGrade": 23,
       "title": "Działania na ułamkach zwykłych z wykorzystaniem NWD i NWW",
       "file": "content/lessons/49-fractions.js",
       "requirements": [
@@ -1617,7 +1617,7 @@
     {
       "lessonId": "50",
       "grade": 2,
-      "numberInGrade": 17,
+      "numberInGrade": 24,
       "title": "Programowanie działań na ułamkach z wykorzystaniem NWD i NWW",
       "file": "content/lessons/50-fractions-python.js",
       "requirements": [
@@ -1657,7 +1657,7 @@
       "evidence": "Odróżniam czujnik od elementu wykonawczego. Piszę pętlę czytaj → decyduj → działaj. Testuję próg, deszcz, noc i brak wody. Dowód: Z poprzedniej lekcji o ułamkach: dlaczego testowaliśmy mianownik 0?; Wilgotność wynosi dokładnie 30%. Warunek to wilgotnosc < 30. Co zrobi pompa?; Program i próby; Wilgotność 10%, dzień, nie pada, ale zbiornik jest pusty. Co jest ważniejsze?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 18
+      "numberInGrade": 25
     },
     {
       "lessonId": "83",
@@ -1680,7 +1680,7 @@
       "evidence": "Wyjaśniam histerezę na dwóch progach. Zachowuję stan między odczytami. Nadaję zabezpieczeniom pierwszeństwo. Dowód: Z lekcji o nawadnianiu: czujnik wilgotności to…; Pompa już działa. Wilgotność wzrosła z 29% do 31%. Co robi w modelu z progami 30/50?; Program i próby; Po deszczu pompa jest wyłączona, wilgotność 35%. Czy ma się włączyć?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 19
+      "numberInGrade": 26
     },
     {
       "lessonId": "84",
@@ -1702,7 +1702,7 @@
       "evidence": "Łączę odczyty deszczu i kontaktronu. Steruję serwem i buzzerem. Testuję STOP i zamknięte okno. Dowód: Z lekcji 83: co robi histereza?; Pada, ale kontaktron zgłasza zamknięte okno. Jakie polecenie jest właściwe?; Program i próby; Pada i okno jest otwarte, ale ktoś nacisnął STOP. Co wyślesz?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 20
+      "numberInGrade": 27
     },
     {
       "lessonId": "85",
@@ -1724,7 +1724,7 @@
       "evidence": "Steruję przekaźnikiem na podstawie odczytu. Stosuję histerezę i STOP. Odróżniam symulację logiczną od instalacji elektrycznej. Dowód: Z projektu okna: jaki warunek ma pierwszeństwo przed ruchem serwa?; Radio jest wyciszone, odczyt spada do 60. Co się stanie?; Program i próby; Dlaczego w prawdziwej pracowni nie podłączasz przekaźnika do sieci 230 V w ramach tego ćwiczenia?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 21
+      "numberInGrade": 28
     },
     {
       "lessonId": "86",
@@ -1747,7 +1747,7 @@
       "evidence": "Rozróżniam zasilanie, masę i sygnał. Łączę czujniki i sterownik według schematu. Diagnozuję błędy i zapisuję konfigurację Rover-2. Dowód: Z lekcji o radiu: przekaźnik jest…; Sygnał czujnika jest podłączony do A0, ale brakuje wspólnej masy. Co zrobisz najpierw?; Połączenia Rover-2; Po co zachowujesz konfigurację Rover-2?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 22
+      "numberInGrade": 29
     },
     {
       "lessonId": "105",
@@ -1770,7 +1770,7 @@
       "evidence": "Programuję ten sam model Rover-2. Ustalam priorytety STOP, przeszkody i linii. Testuję granicę 20 cm i analizuję tabelę działań. Dowód: Z lekcji montażu: dlaczego silnik jest podłączony przez sterownik?; STOP jest wciśnięty i czujnik widzi przeszkodę 10 cm. Co ma pierwszeństwo?; Program i próby; Przeszkoda jest dokładnie 20 cm od robota. Jaka decyzja pasuje do specyfikacji?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 23
+      "numberInGrade": 30
     },
     {
       "lessonId": "06",
@@ -1966,7 +1966,7 @@
     {
       "lessonId": "53",
       "grade": 3,
-      "numberInGrade": 11,
+      "numberInGrade": 16,
       "title": "Wybrane algorytmy na tekstach",
       "file": "content/lessons/53-text-algorithms.js",
       "requirements": [
@@ -1987,7 +1987,7 @@
     {
       "lessonId": "54",
       "grade": 3,
-      "numberInGrade": 12,
+      "numberInGrade": 17,
       "title": "Praca z danymi tekstowymi w języku Python",
       "file": "content/lessons/54-python-strings.js",
       "requirements": [
@@ -2009,7 +2009,7 @@
     {
       "lessonId": "55",
       "grade": 3,
-      "numberInGrade": 13,
+      "numberInGrade": 18,
       "title": "Programowanie algorytmów na tekstach w języku Python – porównywanie tekstów i zliczanie znaku w tekście",
       "file": "content/lessons/55-compare-count-python.js",
       "requirements": [
@@ -2032,7 +2032,7 @@
     {
       "lessonId": "56",
       "grade": 3,
-      "numberInGrade": 14,
+      "numberInGrade": 19,
       "title": "Programowanie algorytmów na tekstach w języku Python – wyszukiwanie wzorca w tekście",
       "file": "content/lessons/56-pattern-search-python.js",
       "requirements": [
@@ -2055,7 +2055,7 @@
     {
       "lessonId": "51",
       "grade": 3,
-      "numberInGrade": 15,
+      "numberInGrade": 20,
       "title": "Podstawowe pojęcia dotyczące szyfrowania i szyfrowanie tekstu metodą podstawieniową",
       "file": "content/lessons/51-substitution-cipher-g3.js",
       "requirements": [
@@ -2075,7 +2075,7 @@
     {
       "lessonId": "52",
       "grade": 3,
-      "numberInGrade": 16,
+      "numberInGrade": 21,
       "title": "Programowanie algorytmu szyfrowania podstawieniowego",
       "file": "content/lessons/52-cipher-python-g3.js",
       "requirements": [
@@ -2097,7 +2097,7 @@
     {
       "lessonId": "57",
       "grade": 3,
-      "numberInGrade": 17,
+      "numberInGrade": 22,
       "title": "Programowanie zamiany liczby dwójkowej na dziesiętną",
       "file": "content/lessons/57-binary-to-decimal.js",
       "requirements": [
@@ -2141,7 +2141,7 @@
       "evidence": "Zamieniam liczbę dziesiętną na dwójkową przez dzielenie z resztą. Obsługuję zero i odwróconą kolejność reszt. Sprawdzam zakres bajtu i porównuję wynik z format. Dowód: Z lekcji 57: Horner dla 101 to:; Jak poprzednio odrzucaliśmy zapis 102 jako dwójkowy?; Przewidź przed uruchomieniem; Zmień liczbę na 10; na_dwojkowy(n); Nie zgub zera; bajt(n)",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 18
+      "numberInGrade": 23
     },
     {
       "lessonId": "88",
@@ -2166,7 +2166,7 @@
       "evidence": "Uogólniam dzielenie z resztą dla podstaw 2–16. Odrzucam cyfry niedozwolone w wybranej podstawie. Zamieniam zapis hex na trzy składowe RGB. Dowód: Z lekcji 87: dlaczego dopisujesz resztę z lewej?; Co na_dwojkowy(0) ma zwrócić?; Przewidź przed uruchomieniem; na_system(n, p); z_systemu(s, p); rgb(kod)",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 19
+      "numberInGrade": 24
     },
     {
       "lessonId": "89",
@@ -2190,7 +2190,7 @@
       "evidence": "Skracam ułamek w jednym kroku, dzieląc licznik i mianownik przez NWD. Dodaję i odejmuję ułamki, sprowadzając je do wspólnego mianownika równego NWW mianowników. Mnożę ułamki (przepis, rabat na rabat) i skracam wynik. Zamieniam proporcję (1:50, 1:1,5) na ułamek całości i liczę ilości składników. Dowód: Z lekcji 88: 255 dziesiętnie i FF szesnastkowo to:; Dlaczego z_systemu(\"2\", 2) ma zwrócić None?; Laboratorium ułamków · skracanie przez NWD; Laboratorium ułamków · dodawanie i odejmowanie; Laboratorium ułamków · mnożenie; Laboratorium ułamków · mieszanki w zawodach; Dlaczego 1/2 + 1/3 ≠ 2/5?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 20
+      "numberInGrade": 25
     },
     {
       "lessonId": "90",
@@ -2217,7 +2217,7 @@
       "evidence": "Zapisuję ułamek jako krotkę (licznik, mianownik) i odczytuję jej elementy. Programuję skroc z nwd, dbając o mianownik 0 i znak minus (zawsze w liczniku). Programuję dodawanie, odejmowanie (przez NWW), mnożenie i dzielenie ułamków. Sprawdzam swój kalkulator testami i porównaniem z fractions.Fraction. Dowód: Z lekcji 89: przez co skrócisz18/24 od razu do końca?; Jak dodasz1/2+1/3?; Co wypisze program z krotką?; float kontra Fraction; skroc(licznik, mianownik); Układanka: dodaj(a, b); odejmij(a, b) w jednej linii; Kalkulator ułamków; Kalkulator kolegi dla kalkulator((1, 2), \":\", (0, 3)) wysypuje się błędem ZeroDivisionError. Co poprawiasz?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 21
+      "numberInGrade": 26
     },
     {
       "lessonId": "106",
@@ -2240,7 +2240,7 @@
       "evidence": "Wyjaśniam histerezę na dwóch progach. Zachowuję stan między odczytami. Nadaję zabezpieczeniom pierwszeństwo. Dowód: Z lekcji 90: dlaczego kalkulator odrzuca mianownik 0?; Pompa już działa. Wilgotność wzrosła z 29% do 31%. Co robi w modelu z progami 30/50?; Program i próby; Po deszczu pompa jest wyłączona, wilgotność 35%. Czy ma się włączyć?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 22
+      "numberInGrade": 27
     },
     {
       "lessonId": "107",
@@ -2263,7 +2263,7 @@
       "evidence": "Dobieram piny zasilania, masy i sygnałów. Przenoszę konfigurację tego samego modelu do programu. Sprawdzam pierwszeństwo STOP i granicę20 cm. Dowód: Z lekcji 106: dlaczego pompa ma dwa różne progi?; Rover-2: montaż układu; Program i próby; Przeszkoda jest dokładnie 20 cm od robota. Jaka decyzja pasuje do specyfikacji?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 23
+      "numberInGrade": 28
     },
     {
       "lessonId": "91",
@@ -2288,7 +2288,7 @@
       "evidence": "Planuję stronę pod konkretny cel i odbiorcę. Tworzę nagłówki, listę, tabelę i link w HTML. Oddzielam treść HTML od wyglądu CSS i sprawdzam podgląd. Dowód: Z projektu107: po co sprawdzasz STOP także wtedy, gdy jest przeszkoda?; Ułóż etapy pracy nad stroną dla pracowni.; Zapisz jedno zdanie: gdzie odbiorca znajdzie termin i po czym to sprawdzisz?; Strona pracowni: treść; Strona pracowni: czytelność; Gotowa strona pracowni; Co oznacza publikacja strony?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 24
+      "numberInGrade": 29
     },
     {
       "lessonId": "108",
@@ -2312,7 +2312,223 @@
       "evidence": "Oddzielam treść od wyglądu strony. Poprawiam typografię, kontrast i odstępy. Układam karty w grid lub flex i testuję wąskie okno. Dowód: Z lekcji 91: gdzie zmienisz kolor i odstępy wszystkich kart?; Co sprawdzasz przed publikacją?; Chcesz odstęp wewnątrz każdej karty. Co ustawisz?; Wyspy: czytelny tekst; Wyspy: własny układ CSS; Miniatlas po zmianie CSS",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
-      "numberInGrade": 25
+      "numberInGrade": 30
+    },
+    {
+      "lessonId": "110",
+      "grade": 2,
+      "numberInGrade": 1,
+      "title": "Od bryły do breloka — pierwszy model 3D",
+      "file": "content/lessons/110-first-keytag.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "m110-build",
+        "m110-transfer",
+        "m110-rubric"
+      ],
+      "evidence": "Ustawiam trzy wymiary bryły w milimetrach. Wycinam otwór przez połączenie bryły i bryły typu Hole. Zachowuję projekt do edycji i eksportuję osobny STL. Praktyka: model w edytorze, własna zmiana i eksport STL.",
+      "limitations": "Quiz sprawdza pojęcia; rubryka jest samooceną. Model, wymiary i podgląd warstw ocenia nauczyciel. Nie potwierdzono wydruku na fizycznej H2C ani działania Classroom w szkolnej sieci."
+    },
+    {
+      "lessonId": "111",
+      "grade": 2,
+      "numberInGrade": 2,
+      "title": "Mała ławka — kopiowanie, wyrównanie i połączenia",
+      "file": "content/lessons/111-small-bench.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "m111-build",
+        "m111-transfer",
+        "m111-rubric"
+      ],
+      "evidence": "Powielam bryły bez zmiany ich wymiarów. Wyrównuję elementy i kontroluję wysokość z różnych widoków. Rozpoznaję szczelinę, której nie naprawia samo Group. Praktyka: model w edytorze, własna zmiana i eksport STL.",
+      "limitations": "Quiz sprawdza pojęcia; rubryka jest samooceną. Model, wymiary i podgląd warstw ocenia nauczyciel. Nie potwierdzono wydruku na fizycznej H2C ani działania Classroom w szkolnej sieci."
+    },
+    {
+      "lessonId": "112",
+      "grade": 2,
+      "numberInGrade": 3,
+      "title": "Ogród na planie — skala i wymagania projektu",
+      "file": "content/lessons/112-garden-plan.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "m112-build",
+        "m112-transfer",
+        "m112-rubric"
+      ],
+      "evidence": "Przeliczam rzeczywisty wymiar na model w skali 1:100. Układam plan z widoku z góry według wymagań odbiorcy. Wprowadzam poprawkę po sprawdzeniu szerokości przejścia. Praktyka: model w edytorze, własna zmiana i eksport STL.",
+      "limitations": "Quiz sprawdza pojęcia; rubryka jest samooceną. Model, wymiary i podgląd warstw ocenia nauczyciel. Nie potwierdzono wydruku na fizycznej H2C ani działania Classroom w szkolnej sieci."
+    },
+    {
+      "lessonId": "113",
+      "grade": 2,
+      "numberInGrade": 4,
+      "title": "Ogród w miniaturze — od planu 2D do modelu 3D",
+      "file": "content/lessons/113-garden-model.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "m113-build",
+        "m113-transfer",
+        "m113-rubric"
+      ],
+      "evidence": "Rozróżniam plan z góry i przestrzenny model. Nadaję elementom wysokość i kontroluję połączenie z podstawą. Wybieram zakres eksportu STL i zachowuję projekt do poprawy. Praktyka: model w edytorze, własna zmiana i eksport STL.",
+      "limitations": "Quiz sprawdza pojęcia; rubryka jest samooceną. Model, wymiary i podgląd warstw ocenia nauczyciel. Nie potwierdzono wydruku na fizycznej H2C ani działania Classroom w szkolnej sieci."
+    },
+    {
+      "lessonId": "114",
+      "grade": 2,
+      "numberInGrade": 5,
+      "title": "Mój pokój w skali — przestrzeń, której nie zabiera kamera",
+      "file": "content/lessons/114-room-scale.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "m114-build",
+        "m114-transfer",
+        "m114-rubric"
+      ],
+      "evidence": "Przeliczam wymiary pokoju i wyposażenia w skali 1:50. Tworzę uproszczony model z podłogą i dwiema ścianami. Sprawdzam układ z góry i poprawiam przejście. Praktyka: model w edytorze, własna zmiana i eksport STL.",
+      "limitations": "Quiz sprawdza pojęcia; rubryka jest samooceną. Model, wymiary i podgląd warstw ocenia nauczyciel. Nie potwierdzono wydruku na fizycznej H2C ani działania Classroom w szkolnej sieci."
+    },
+    {
+      "lessonId": "115",
+      "grade": 2,
+      "numberInGrade": 6,
+      "title": "Własny mebel — moduł z bryły i otworu",
+      "file": "content/lessons/115-own-furniture.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "m115-build",
+        "m115-transfer",
+        "m115-rubric"
+      ],
+      "evidence": "Tworzę wnękę przez odjęcie bryły typu Hole. Obliczam grubość ścian z dwóch wymiarów. Sprawdzam mebel w osobnym projekcie i w układzie pokoju. Praktyka: model w edytorze, własna zmiana i eksport STL.",
+      "limitations": "Quiz sprawdza pojęcia; rubryka jest samooceną. Model, wymiary i podgląd warstw ocenia nauczyciel. Nie potwierdzono wydruku na fizycznej H2C ani działania Classroom w szkolnej sieci."
+    },
+    {
+      "lessonId": "116",
+      "grade": 2,
+      "numberInGrade": 7,
+      "title": "Od modelu do wydruku — poprawa, STL i podgląd warstw",
+      "file": "content/lessons/116-model-to-print.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "m116-build",
+        "m116-transfer",
+        "m116-rubric"
+      ],
+      "evidence": "Sprawdzam geometrię i wymiary przed oddaniem modelu. Odróżniam projekt edytowalny, STL i projekt slicera 3MF. Uzasadniam poprawkę na podstawie podglądu warstw pokazanego przez nauczyciela. Praktyka: model w edytorze, własna zmiana i eksport STL.",
+      "limitations": "Quiz sprawdza pojęcia; rubryka jest samooceną. Model, wymiary i podgląd warstw ocenia nauczyciel. Nie potwierdzono wydruku na fizycznej H2C ani działania Classroom w szkolnej sieci."
+    },
+    {
+      "lessonId": "117",
+      "grade": 3,
+      "numberInGrade": 11,
+      "title": "Pierwszy model 3D: tabliczka z otworem",
+      "file": "content/lessons/117-tinkercad-first-g3.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "m117-build",
+        "m117-transfer",
+        "m117-rubric"
+      ],
+      "evidence": "Ustawiam wymiary i położenie bryły w milimetrach. Odejmuję otwór od bryły i sprawdzam model z kilku stron. Zachowuję projekt edytowalny oraz eksport STL. Praktyka: model w edytorze, własna zmiana i eksport STL.",
+      "limitations": "Quiz sprawdza pojęcia; rubryka jest samooceną. Model, wymiary i podgląd warstw ocenia nauczyciel. Nie potwierdzono wydruku na fizycznej H2C ani działania Classroom w szkolnej sieci."
+    },
+    {
+      "lessonId": "118",
+      "grade": 3,
+      "numberInGrade": 12,
+      "title": "Mała ławka: powtarzalne bryły i połączenia",
+      "file": "content/lessons/118-tinkercad-bench-g3.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "m118-build",
+        "m118-transfer",
+        "m118-rubric"
+      ],
+      "evidence": "Duplikuję i ustawiam elementy według wymiarów. Łączę bryły z kontrolowaną zakładką. Sprawdzam model z boku i od spodu przed eksportem. Praktyka: model w edytorze, własna zmiana i eksport STL.",
+      "limitations": "Quiz sprawdza pojęcia; rubryka jest samooceną. Model, wymiary i podgląd warstw ocenia nauczyciel. Nie potwierdzono wydruku na fizycznej H2C ani działania Classroom w szkolnej sieci."
+    },
+    {
+      "lessonId": "119",
+      "grade": 3,
+      "numberInGrade": 13,
+      "title": "Ogród w miniaturze: od planu 2D do modelu 3D",
+      "file": "content/lessons/119-tinkercad-garden-g3.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "m119-build",
+        "m119-transfer",
+        "m119-rubric"
+      ],
+      "evidence": "Przeliczam wybrane wymiary w skali 1:100. Rozmieszczam obiekty na planie 2D i nadaję im wysokość. Poprawiam projekt według wymagań użytkownika. Praktyka: model w edytorze, własna zmiana i eksport STL.",
+      "limitations": "Quiz sprawdza pojęcia; rubryka jest samooceną. Model, wymiary i podgląd warstw ocenia nauczyciel. Nie potwierdzono wydruku na fizycznej H2C ani działania Classroom w szkolnej sieci."
+    },
+    {
+      "lessonId": "120",
+      "grade": 3,
+      "numberInGrade": 14,
+      "title": "Pokój w skali: własny mebel zamiast gotowca",
+      "file": "content/lessons/120-tinkercad-room-g3.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "m120-build",
+        "m120-transfer",
+        "m120-rubric"
+      ],
+      "evidence": "Stosuję skalę 1:50 w modelu pokoju. Tworzę własny mebel przez odejmowanie brył. Sprawdzam przejście i poprawiam układ. Praktyka: model w edytorze, własna zmiana i eksport STL.",
+      "limitations": "Quiz sprawdza pojęcia; rubryka jest samooceną. Model, wymiary i podgląd warstw ocenia nauczyciel. Nie potwierdzono wydruku na fizycznej H2C ani działania Classroom w szkolnej sieci."
+    },
+    {
+      "lessonId": "121",
+      "grade": 3,
+      "numberInGrade": 15,
+      "title": "Od pomysłu do pliku: mały projekt do druku 3D",
+      "file": "content/lessons/121-tinkercad-print-project-g3.js",
+      "requirements": [
+        "II.2",
+        "II.3.a"
+      ],
+      "activityIds": [
+        "m121-build",
+        "m121-transfer",
+        "m121-rubric"
+      ],
+      "evidence": "Zapisuję wymagania małego przedmiotu i buduję własny model. Sprawdzam wymiary, połączenia i orientację na płaszczyźnie. Eksportuję STL i wyjaśniam, co nauczyciel sprawdza w Bambu Studio. Praktyka: model w edytorze, własna zmiana i eksport STL.",
+      "limitations": "Quiz sprawdza pojęcia; rubryka jest samooceną. Model, wymiary i podgląd warstw ocenia nauczyciel. Nie potwierdzono wydruku na fizycznej H2C ani działania Classroom w szkolnej sieci."
     }
   ],
   "reviewedScope": "27 lekcji z GitHub main 91bffa3 (audyt 30.09.2026) oraz sześć nowych lekcji Worda 28–33 (aktualizacja mapy 01.10.2026). Lekcje klasy 1: WWW 35–38, prawo/komunikacja/projekty 39–43 (aktualizacja mapy 14.10.2026)."

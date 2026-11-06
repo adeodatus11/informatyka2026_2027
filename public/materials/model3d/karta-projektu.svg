@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 1122 794" role="img" aria-labelledby="title desc">
+  <title id="title">Karta projektu 3D — plan, wymiary i poprawka</title>
+  <desc id="desc">Pusta karta A4 w poziomie: duże pole na rzut z góry, pole na widok z boku, kod i cel projektu, skala, trzy wymiary w milimetrach, kryterium poprawki i kontrola eksportu.</desc>
+  <defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#d9dfe4" stroke-width="1"/></pattern></defs>
+  <rect width="1122" height="794" fill="white"/>
+  <g font-family="Arial, sans-serif" fill="#17332b">
+    <text x="44" y="57" font-size="28" font-weight="700">Najpierw plan. Potem model.</text>
+    <text x="44" y="84" font-size="14">KARTA PROJEKTU 3D · TINKERCAD → STL → PODGLĄD NAUCZYCIELA</text>
+    <text x="44" y="122" font-size="16">Kod projektu:</text><path d="M150 126H340" stroke="#596d67"/>
+    <text x="373" y="122" font-size="16">Dla kogo i po co?</text><path d="M510 126H1078" stroke="#596d67"/>
+    <text x="44" y="165" font-size="18" font-weight="700">Rzut z góry</text>
+    <text x="645" y="165" font-size="18" font-weight="700">Widok z boku / detal połączenia</text>
+    <rect x="44" y="180" width="563" height="410" fill="url(#grid)" stroke="#7d8d87"/>
+    <rect x="645" y="180" width="433" height="230" fill="url(#grid)" stroke="#7d8d87"/>
+    <text x="58" y="570" font-size="13">Wpisz skalę: __________  1 kratka = __________ mm modelu</text>
+    <text x="645" y="444" font-size="18" font-weight="700">Wymiary modelu — milimetry</text>
+    <text x="645" y="475" font-size="16">Szerokość: __________ mm</text>
+    <text x="645" y="504" font-size="16">Głębokość: __________ mm</text>
+    <text x="645" y="533" font-size="16">Wysokość: __________ mm</text>
+    <text x="645" y="565" font-size="13">Limit zadania: 120 × 120 × 60 mm (nie limit H2C).</text>
+    <text x="44" y="628" font-size="18" font-weight="700">Jedna poprawka po sprawdzeniu</text>
+    <text x="44" y="658" font-size="15">Kryterium: __________  Zmienię: _________________________________________________________________</text>
+    <text x="44" y="691" font-size="15">Sprawdzę efekt tak: ____________________________________________________________________________</text>
+    <g fill="white" stroke="#17332b"><rect x="44" y="714" width="14" height="14"/><rect x="322" y="714" width="14" height="14"/><rect x="657" y="714" width="14" height="14"/></g>
+    <text x="65" y="726" font-size="14">Mam projekt do dalszej edycji.</text>
+    <text x="343" y="726" font-size="14">Eksport STL obejmuje właściwe bryły.</text>
+    <text x="678" y="726" font-size="14">Wymiary porównano po imporcie.</text>
+    <text x="44" y="763" font-size="12">To zapis planu i samooceny. Geometrię oraz warstwy przed drukiem na Bambu Lab H2C sprawdza nauczyciel w Bambu Studio.</text>
+    <text x="1078" y="779" text-anchor="end" font-size="10" fill="#68766f">Informatyka praktycznie · własny materiał CC0 · 2026</text>
+  </g>
+</svg>

@@ -781,78 +781,99 @@
     "klasa": 2,
     "lp": 1,
     "sem": "cały rok",
-    "temat": "Wybrane możliwości programu SketchUp przydatne do projektowania ogrodu",
+    "temat": "Od bryły do breloka — pierwszy model 3D",
     "pp": "I.1., II.2., II.3a.",
-    "status": "brak",
-    "ids": [],
-    "note": "",
-    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+    "status": "jest",
+    "ids": [
+      "110"
+    ],
+    "note": "Autorska realizacja II.3.a w Tinkercad zamiast wcześniejszego tematu SketchUp; zmiana zaakceptowana przez nauczyciela 6.11.2026. Model i eksport sprawdza nauczyciel.",
+    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)",
+    "originalTitle": "Wybrane możliwości programu SketchUp przydatne do projektowania ogrodu"
   },
   {
     "klasa": 2,
     "lp": 2,
     "sem": "cały rok",
-    "temat": "Projektowanie trójwymiarowego modelu ławki",
+    "temat": "Mała ławka — kopiowanie, wyrównanie i połączenia",
     "pp": "I.1., II.2., II.3a.",
-    "status": "brak",
-    "ids": [],
-    "note": "",
-    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+    "status": "jest",
+    "ids": [
+      "111"
+    ],
+    "note": "Autorska realizacja II.3.a w Tinkercad zamiast wcześniejszego tematu SketchUp; zmiana zaakceptowana przez nauczyciela 6.11.2026. Model i eksport sprawdza nauczyciel.",
+    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)",
+    "originalTitle": "Projektowanie trójwymiarowego modelu ławki"
   },
   {
     "klasa": 2,
     "lp": 3,
     "sem": "cały rok",
-    "temat": "Określanie wymagań projektu ogrodu i rysowanie rzutu 2D ogrodu",
+    "temat": "Ogród na planie — skala i wymagania projektu",
     "pp": "I.1., II.2., II.3a.",
-    "status": "brak",
-    "ids": [],
-    "note": "",
-    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+    "status": "jest",
+    "ids": [
+      "112"
+    ],
+    "note": "Autorska realizacja II.3.a w Tinkercad zamiast wcześniejszego tematu SketchUp; zmiana zaakceptowana przez nauczyciela 6.11.2026. Model i eksport sprawdza nauczyciel.",
+    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)",
+    "originalTitle": "Określanie wymagań projektu ogrodu i rysowanie rzutu 2D ogrodu"
   },
   {
     "klasa": 2,
     "lp": 4,
     "sem": "cały rok",
-    "temat": "Tworzenie projektu ogrodu",
+    "temat": "Ogród w miniaturze — od planu 2D do modelu 3D",
     "pp": "I.1., II.2., II.3a.",
-    "status": "brak",
-    "ids": [],
-    "note": "",
-    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+    "status": "jest",
+    "ids": [
+      "113"
+    ],
+    "note": "Autorska realizacja II.3.a w Tinkercad zamiast wcześniejszego tematu SketchUp; zmiana zaakceptowana przez nauczyciela 6.11.2026. Model i eksport sprawdza nauczyciel.",
+    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)",
+    "originalTitle": "Tworzenie projektu ogrodu"
   },
   {
     "klasa": 2,
     "lp": 5,
     "sem": "cały rok",
-    "temat": "Projektowanie własnego pokoju",
+    "temat": "Mój pokój w skali — przestrzeń, której nie zabiera kamera",
     "pp": "I.1., II.2., II.3a.",
-    "status": "brak",
-    "ids": [],
-    "note": "",
-    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+    "status": "jest",
+    "ids": [
+      "114"
+    ],
+    "note": "Autorska realizacja II.3.a w Tinkercad zamiast wcześniejszego tematu SketchUp; zmiana zaakceptowana przez nauczyciela 6.11.2026. Model i eksport sprawdza nauczyciel.",
+    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)",
+    "originalTitle": "Projektowanie własnego pokoju"
   },
   {
     "klasa": 2,
     "lp": 6,
     "sem": "cały rok",
-    "temat": "Urządzanie pokoju modelami 3D",
+    "temat": "Własny mebel — moduł z bryły i otworu",
     "pp": "I.1., II.2., II.3a.",
-    "status": "brak",
-    "ids": [],
-    "note": "",
-    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+    "status": "jest",
+    "ids": [
+      "115"
+    ],
+    "note": "Autorska realizacja II.3.a w Tinkercad zamiast wcześniejszego tematu SketchUp; zmiana zaakceptowana przez nauczyciela 6.11.2026. Model i eksport sprawdza nauczyciel.",
+    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)",
+    "originalTitle": "Urządzanie pokoju modelami 3D"
   },
   {
     "klasa": 2,
     "lp": 7,
     "sem": "cały rok",
-    "temat": "Doskonalenie umiejętności projektowania modeli trójwymiarowych – zadania",
+    "temat": "Od modelu do wydruku — poprawa, STL i podgląd warstw",
     "pp": "I.1., II.2., II.3a.",
-    "status": "brak",
-    "ids": [],
-    "note": "",
-    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)"
+    "status": "jest",
+    "ids": [
+      "116"
+    ],
+    "note": "Autorska realizacja II.3.a w Tinkercad zamiast wcześniejszego tematu SketchUp; zmiana zaakceptowana przez nauczyciela 6.11.2026. Model i eksport sprawdza nauczyciel.",
+    "zrodlo": "cykl 2-letni (technikum od 1.09.2025)",
+    "originalTitle": "Doskonalenie umiejętności projektowania modeli trójwymiarowych – zadania"
   },
   {
     "klasa": 2,
@@ -1298,60 +1319,75 @@
     "lp": 11,
     "sem": "Temat B4. Projektowanie modeli dwuwymiarowych i trójwymiarowych",
     "nr": 11,
-    "temat": "Wybrane możliwości programu SketchUp przydatne do projektowania ogrodu",
+    "temat": "Pierwszy model 3D: tabliczka z otworem",
     "pp": "I.1, II.2, II.3.a",
-    "status": "brak",
-    "ids": [],
-    "note": "",
-    "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
+    "status": "jest",
+    "ids": [
+      "117"
+    ],
+    "note": "Autorska realizacja II.3.a w Tinkercad zamiast wcześniejszego tematu SketchUp; zmiana zaakceptowana przez nauczyciela 6.11.2026. Model i eksport sprawdza nauczyciel.",
+    "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni",
+    "originalTitle": "Wybrane możliwości programu SketchUp przydatne do projektowania ogrodu"
   },
   {
     "klasa": 3,
     "lp": 12,
     "sem": "Temat B4. Projektowanie modeli dwuwymiarowych i trójwymiarowych",
     "nr": 12,
-    "temat": "Projektowanie trójwymiarowego modelu ławki",
+    "temat": "Mała ławka: powtarzalne bryły i połączenia",
     "pp": "I.1, II.2, II.3.a",
-    "status": "brak",
-    "ids": [],
-    "note": "",
-    "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
+    "status": "jest",
+    "ids": [
+      "118"
+    ],
+    "note": "Autorska realizacja II.3.a w Tinkercad zamiast wcześniejszego tematu SketchUp; zmiana zaakceptowana przez nauczyciela 6.11.2026. Model i eksport sprawdza nauczyciel.",
+    "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni",
+    "originalTitle": "Projektowanie trójwymiarowego modelu ławki"
   },
   {
     "klasa": 3,
     "lp": 13,
     "sem": "Temat B4. Projektowanie modeli dwuwymiarowych i trójwymiarowych",
     "nr": 13,
-    "temat": "Tworzenie projektu ogrodu",
+    "temat": "Ogród w miniaturze: od planu 2D do modelu 3D",
     "pp": "I.1, II.2, II.3.a",
-    "status": "brak",
-    "ids": [],
-    "note": "",
-    "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
+    "status": "jest",
+    "ids": [
+      "119"
+    ],
+    "note": "Autorska realizacja II.3.a w Tinkercad zamiast wcześniejszego tematu SketchUp; zmiana zaakceptowana przez nauczyciela 6.11.2026. Model i eksport sprawdza nauczyciel.",
+    "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni",
+    "originalTitle": "Tworzenie projektu ogrodu"
   },
   {
     "klasa": 3,
     "lp": 14,
     "sem": "Temat B4. Projektowanie modeli dwuwymiarowych i trójwymiarowych",
     "nr": 14,
-    "temat": "Projektowanie własnego pokoju",
+    "temat": "Pokój w skali: własny mebel zamiast gotowca",
     "pp": "I.1, II.2, II.3.a",
-    "status": "brak",
-    "ids": [],
-    "note": "",
-    "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
+    "status": "jest",
+    "ids": [
+      "120"
+    ],
+    "note": "Autorska realizacja II.3.a w Tinkercad zamiast wcześniejszego tematu SketchUp; zmiana zaakceptowana przez nauczyciela 6.11.2026. Model i eksport sprawdza nauczyciel.",
+    "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni",
+    "originalTitle": "Projektowanie własnego pokoju"
   },
   {
     "klasa": 3,
     "lp": 15,
     "sem": "Temat B4. Projektowanie modeli dwuwymiarowych i trójwymiarowych",
     "nr": 15,
-    "temat": "Doskonalenie umiejętności projektowania modeli trójwymiarowych – zadania",
+    "temat": "Od pomysłu do pliku: mały projekt do druku 3D",
     "pp": "I.1, II.2, II.3.a",
-    "status": "brak",
-    "ids": [],
-    "note": "",
-    "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni"
+    "status": "jest",
+    "ids": [
+      "121"
+    ],
+    "note": "Autorska realizacja II.3.a w Tinkercad zamiast wcześniejszego tematu SketchUp; zmiana zaakceptowana przez nauczyciela 6.11.2026. Model i eksport sprawdza nauczyciel.",
+    "zrodlo": "rozkład klasy 3 z dziennika (VULCAN), cykl 3-letni",
+    "originalTitle": "Doskonalenie umiejętności projektowania modeli trójwymiarowych – zadania"
   },
   {
     "klasa": 3,

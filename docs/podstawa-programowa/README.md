@@ -1,6 +1,6 @@
 # Stały punkt odniesienia: informatyka PP 2024 + Python
 
-**Zakres podstawowy, liceum i technikum; źródła prawne sprawdzono 30 września 2026.** Mapa ćwiczeń zaktualizowana 6.11.2026: 108 lekcji (klasy 1/2/3: 60/23/25). Starszy audyt z 1.10 pozostaje opisem historycznym; aktualne dowody i ograniczenia są w mapie JSON oraz czytelnej mapie lekcji.
+**Zakres podstawowy, liceum i technikum; źródła prawne sprawdzono 30 września 2026.** Mapa ćwiczeń zaktualizowana 6.11.2026: 120 lekcji (klasy 1/2/3: 60/30/30). Starszy audyt z 1.10 pozostaje opisem historycznym; aktualne dowody i ograniczenia są w mapie JSON oraz czytelnej mapie lekcji.
 
 ## Zawartość
 
