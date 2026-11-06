@@ -59,3 +59,16 @@ To propozycje autorskie realizacji PP, nie dodatkowe wymagania prawne ani skopio
 Kontrolować transfer z symulatorów na rzeczywiste narzędzia. Nie wymaga to prawdziwych danych pacjentów, płatności, logowania do banku ani wysyłania korespondencji — zadania powinny wykorzystywać fikcyjne dane i bezpieczne środowiska.
 
 Lekcja ID 34 (klasa 1, numer 7) jest odsyłaczem do kursu Demagoga. Nie zwiększa automatycznie pokrycia PP: ukończenie i ćwiczenia odbywają się poza platformą szkolną.
+
+## Aktualizacja 25.10.2026
+
+Aktualny rejestr: 88 lekcji; klasy 1: 54, 2: 17, 3: 17. Poniższa macierz uzupełnia historyczny audyt powyżej.
+
+| Punkt | Dowody w bieżącym kursie | Ograniczenia |
+|---|---|---|
+| I.2.a | 96, 97, 98, 47, 48, 49, 50, 06, 13, 57 | Ocena dotyczy konkretnych czynności i testów, nie wszystkich treści całego wymagania. |
+| I.2.b | 81, 92, 93, 94, 95, 16, 17, 53, 55, 56, 51, 52 | Ocena dotyczy konkretnych czynności i testów, nie wszystkich treści całego wymagania. |
+| II.1 | 62, 63, 64, 65, 66, 67, 68, 77, 78, 79, 80, 81, 93, 95, 98, 17, 19, 20, 21, 46, 48, 50, 54, 55, 56, 52, 57 | Ocena dotyczy konkretnych czynności i testów, nie wszystkich treści całego wymagania. |
+| II.2 | 02, 35, 36, 37, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 93, 95, 98, 46, 48, 50, 54, 55, 56, 57 | Symulator nie zastępuje montażu fizycznego zestawu. |
+| II.3.a |  | Grafika 3D czeka na wybór narzędzia; grafika 2D wymaga obejrzenia plików. |
+| II.3.f | 35, 36, 37, 38 | Strony działają w podglądzie lokalnym; brak publikacji ucznia na serwerze. |
