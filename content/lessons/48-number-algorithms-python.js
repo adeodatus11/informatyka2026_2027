@@ -34,7 +34,8 @@ const NWD = `def nwd(a, b):
 const GCD_ALL = 'all(nwd(x, y) == __import__("math").gcd(x, y) for x in range(30) for y in range(30))';
 const LCM_ALL = 'all(nww(x, y) == __import__("math").lcm(x, y) for x in range(30) for y in range(30))';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'48',grade:2,order:22,title:'Programowanie wybranych algorytmów na liczbach',
  subtitle:'Python ma gotowe math.gcd. Napiszesz własne nwd, czy_pierwsza, rozklad i nww — i udowodnisz testami, że liczą tak samo jak biblioteka.',
  topic:'czy_pierwsza, nwd (dwie wersje), rozklad i nww w Pythonie',icon:'code',tags:['Pokonaj bibliotekę','testy brzegowe','math.gcd'],duration:45,
@@ -202,3 +203,4 @@ export default {
  ],
  exitTicket:'Masz własną mini-bibliotekę: czy_pierwsza, nwd (dwie wersje), rozklad i nww — sprawdzoną testami brzegowymi i porównaniem z math.gcd i math.lcm. Wiesz, dlaczego reszta z dzielenia wygrywa z odejmowaniem.'
 };
+export default normalizeLessonReferences(referencedLesson);

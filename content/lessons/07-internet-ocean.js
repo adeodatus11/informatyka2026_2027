@@ -1,6 +1,7 @@
 import {note, choice} from '../schema.js';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'07',grade:1,order:5,title:'Internet jako ocean informacji',
  subtitle:'Nie dasz się nabrać — ani na fake newsa, ani na oszustwo, które kosztuje pieniądze albo konto.',
  topic:'Internet jako ocean informacji',icon:'globe',tags:['SIFT','Fake?','Bańka'],duration:35,
@@ -79,3 +80,4 @@ export default {
  ],
  exitTicket:'Twoja zasada detektywa: STOP → kto to? → co piszą inni? → oryginał. SMS z podejrzanym linkiem przekazujesz na 8080 (bezpłatnie), podejrzaną stronę zgłaszasz na incydent.cert.pl.'
 };
+export default normalizeLessonReferences(referencedLesson);

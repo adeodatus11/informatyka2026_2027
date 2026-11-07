@@ -6,7 +6,8 @@ import {sheetCheck} from '../sims/sheetCheck.js';
 // Plik: public/materials/excel/lesson-73-start.xlsx. Oczekiwane wartości liczy test z pliku.
 const FILE = 'materials/excel/lesson-73-start.xlsx';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'73',grade:1,order:44,workspace:'desktop-excel',
  title:'Korzystanie z filtrów, tabele i wykresy przestawne',
  subtitle:'Praktyki w sklepie internetowym: szef pyta, co się sprzedaje, a co tylko zajmuje półkę. 40 zamówień — odpowiedź w 3 minuty, bez liczenia na kartce.',
@@ -81,3 +82,4 @@ export default {
  ],
  exitTicket:'Masz plik z tabelą, filtrami, tabelą i wykresem przestawnym. Umiesz odpowiedzieć szefowi liczbami, która kategoria przynosi pieniądze.'
 };
+export default normalizeLessonReferences(referencedLesson);

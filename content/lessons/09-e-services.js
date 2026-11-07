@@ -1,6 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'09',grade:1,order:7,title:'Korzystanie z wybranych e-usług',
  subtitle:'Załatwisz receptę, bilet ze zniżką i zwrot podatku z wakacyjnej pracy bez kolejki — i nie dasz się okraść po drodze.',
  topic:'Korzystanie z wybranych e-usług',icon:'idcard',tags:['e-recepta','ulga 37%','PIT-0'],duration:44,
@@ -91,3 +92,6 @@ export default {
  ],
  exitTicket:'Zapamiętaj: adres kończy się na .gov.pl przed pierwszym „/”; e-recepta = PESEL + 4-cyfrowy kod; uczeń = 37% (jednorazowy) i 49% (miesięczny); do 26 lat ulga dla młodych, zaliczka wraca w Twoim e-PIT; zastrzeż PESEL w mObywatelu.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

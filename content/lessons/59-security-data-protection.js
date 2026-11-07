@@ -5,7 +5,8 @@ import {note, choice} from '../schema.js';
 // (WPA2/WPA3) i dysku/telefonu, blokada ekranu, kopia zdjęć. Logika: content/sims/securityCheck.js.
 // Nie dublujemy: 2FA i fałszywe logowanie (09), oszustwa na czacie (43), kopie/ransomware w grze firmy (42).
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'59',grade:1,order:32,
  title:'Bezpieczeństwo i ochrona danych w komputerach i sieciach komputerowych',
  subtitle:'Sprawdzisz, czy hasło padnie w sekundę, skąd się bierze wirus w „darmowym” cracku i co włączyć w telefonie, żeby zgubienie go nie kosztowało Cię kont i zdjęć.',
@@ -93,3 +94,6 @@ export default {
  ],
  exitTicket:'Zapamiętaj: długość bije złożoność — fraza z kilku przypadkowych słów, do każdego konta inne hasło (menedżer haseł) i 2FA. Blokada ekranu, aktualizacje automatyczne, kopia zdjęć, szyfrowanie dysku i WPA2/WPA3 w domu. Programy tylko z oficjalnych źródeł — crack, który każe wyłączyć antywirusa, to pułapka.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

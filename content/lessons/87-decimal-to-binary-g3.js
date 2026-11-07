@@ -1,4 +1,5 @@
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  "id": "87",
  "grade": 3,
  "order": 24,
@@ -420,3 +421,4 @@ export default {
  ],
  "exitTicket": "Pokaż test dla zera oraz jeden test, który wykrył błędny algorytm."
 };
+export default normalizeLessonReferences(referencedLesson);

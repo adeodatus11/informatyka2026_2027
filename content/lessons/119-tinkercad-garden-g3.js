@@ -1,5 +1,6 @@
 import {makeModelLesson} from '../model3d-lesson.js';
-export default makeModelLesson({
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = makeModelLesson({
  id:'119',grade:3,order:13,title:'Ogród w miniaturze: od planu 2D do modelu 3D',filename:'K3-119-pseudonim-v2.stl',subtitle:'Sprawdzisz układ małego ogrodu na rzucie z góry, a potem dodasz wysokość.',
  objectives:['Przeliczam wybrane wymiary w skali 1:100.','Rozmieszczam obiekty na planie 2D i nadaję im wysokość.','Poprawiam projekt według wymagań użytkownika.'],
  recall:{question:'Na poprzedniej lekcji podpory i siedzisko musiały zachodzić na siebie. Dlaczego?',options:['Aby model miał więcej kolorów','Aby plik miał dłuższą nazwę','Aby nie zostały rozdzielone szczeliną'],correct:[2],explanation:'Połączenie trzeba sprawdzić w przestrzeni. Tę zasadę wykorzystasz przy elementach makiety.'},
@@ -17,3 +18,6 @@ export default makeModelLesson({
  teacherSummary:'PP II.3.a: plan dwuwymiarowy i model trójwymiarowy; I.1 częściowo: wymagania, model, test i poprawa, bez programowania. Nauczyciel daje jedną uwagę do kolizji lub skali, a uczeń poprawia własny plik. Nie zaliczać pełnego I.1 wyłącznie na podstawie tej pracy.',
  methods:[{name:'Ocenianie kształtujące i poprawa',url:'https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html'},{name:'Modelowanie',url:'https://metodyka.covepolska.pl/metoda-modelowanie.html'}]
 });
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

@@ -1,5 +1,6 @@
 import {makeModelLesson} from '../model3d-lesson.js';
-export default makeModelLesson({
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = makeModelLesson({
  id:'121',grade:3,order:15,title:'Od pomysłu do pliku: mały projekt do druku 3D',filename:'K3-121-pseudonim-v2.stl',subtitle:'Zrobisz własny organizer, poprawisz go po teście i przekażesz model do przygotowania na H2C.',
  objectives:['Zapisuję wymagania małego przedmiotu i buduję własny model.','Sprawdzam wymiary, połączenia i orientację na płaszczyźnie.','Eksportuję STL i wyjaśniam, co nauczyciel sprawdza w Bambu Studio.'],
  recall:{question:'W projekcie pokoju model wyglądał dobrze z góry. Dlaczego oglądaliśmy go również z boku?',options:['Żeby sprawdzić połączenia i wysokości niewidoczne z góry','Żeby zmienić jednostkę z mm na m','Żeby automatycznie uruchomić drukarkę'],correct:[0],explanation:'Kontrola przestrzenna wykrywa szczeliny i wiszące elementy. Tę kontrolę wykonasz przed oddaniem własnego modelu.'},
@@ -18,3 +19,6 @@ export default makeModelLesson({
  teacherSummary:'Projekt zamyka blok: problem → ograniczenia → model → kontrola → jedna uwaga → poprawa → eksport. Uczeń nie musi wysyłać pracy do publicznej galerii ani obsługiwać drukarki. Oceniaj efekt i uzasadnienie. Gdy uczeń pokazuje tylko quiz, poproś o projekt i STL; rubryka nie jest automatycznym odczytem modelu.',
  methods:[{name:'Ocenianie kształtujące i poprawa',url:'https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html'},{name:'Przypominanie i powroty',url:'https://metodyka.covepolska.pl/metoda-przypominanie-i-powroty.html'}]
 });
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

@@ -17,7 +17,8 @@ tygodniowo = int(input("Kieszonkowe na tydzień (zł): "))
 
 `;
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'62',grade:1,order:24,title:'Środowisko programistyczne języka Python, stosowanie zmiennych i wyprowadzanie wyników',
  subtitle:'Pierwszy własny program w 3 minuty: karta gracza, bilety do kina, godziny gry w minutach i kalkulator kieszonkowego.',
  topic:'Środowisko Pythona; print; zmienne; typy int, float, str; input(), int(), float(); f-stringi; typowe błędy',icon:'code',tags:['print i zmienne','input()','f-string'],duration:45,
@@ -136,3 +137,6 @@ export default {
  ],
  exitTicket:'Umiesz uruchomić program w Pythonie, wypisać tekst i liczby przez print, przechowywać dane w zmiennych (int, float, str), wczytać je przez input() z zamianą na liczbę i ładnie wypisać wynik f-stringiem. Następnym razem: program podejmuje decyzje.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

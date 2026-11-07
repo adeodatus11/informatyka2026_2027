@@ -1,4 +1,5 @@
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
   "id": "31",
   "grade": 1,order:12,
   "title": "Dzielenie dokumentu tekstowego",
@@ -333,3 +334,4 @@ export default {
   },
   "exitTicket": "Potrafisz wybrać granicę do celu: nowa strona, inny układ lub kolumny. Oddaj 31-sekcje.docx i pokaż nauczycielowi dowód spełnienia kryteriów."
 };
+export default normalizeLessonReferences(referencedLesson);

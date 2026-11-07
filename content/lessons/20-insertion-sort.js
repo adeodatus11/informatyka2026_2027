@@ -52,7 +52,8 @@ print("losowa             ", babelkowe(losowa[:]), "      ", wstawianie(losowa[:
 print("prawie posortowana ", babelkowe(prawie[:]), "      ", wstawianie(prawie[:]))
 `;
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'20',grade:2,order:18,title:'Programowanie algorytmów porządkowania przez wstawianie',
  subtitle:'Układasz karty w ręce dokładnie tak, jak ten algorytm. Nauczysz się go pisać — i naprawiać, gdy się psuje.',
  topic:'Sortowanie przez wstawianie w Pythonie',icon:'sort',tags:['while','przesuwanie','karty'],duration:45,
@@ -192,3 +193,4 @@ export default {
  ],
  exitTicket:'Umiesz napisać sortowanie przez wstawianie, znajdujesz błędy dzięki testom i wiesz, że pętla while musi zmieniać zmienną z warunku. Wiesz też, kiedy wstawianie wygrywa: gdy dane są prawie posortowane.'
 };
+export default normalizeLessonReferences(referencedLesson);

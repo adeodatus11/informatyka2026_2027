@@ -93,7 +93,8 @@ else:
     print(f"Do zapłaty: {kwota} zł")
 `;
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'65',grade:1,order:27,title:'Instrukcje warunkowe zagnieżdżone i z klauzulą elif w języku Python',
  subtitle:'Program sam wystawi ocenę za punkty, policzy cenę biletu i rabat w sklepie. Wystarczy, że ułożysz warunki w dobrej kolejności.',
  topic:'if – elif – else, kolejność warunków, if w if, = i ==, wcięcia',icon:'sort',tags:['elif','if w if','progi'],duration:45,
@@ -219,3 +220,4 @@ export default {
  ],
  exitTicket:'Umiesz zbudować drabinkę if – elif – else, ułożyć progi w dobrej kolejności, wstawić if w if i poprawić = na ==. Każdy program sprawdzasz na granicach: 75, 90, 100 zł.'
 };
+export default normalizeLessonReferences(referencedLesson);

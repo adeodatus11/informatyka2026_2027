@@ -1,5 +1,6 @@
 import {makeModelLesson} from '../model3d-lesson.js';
-export default makeModelLesson({
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = makeModelLesson({
  id:'120',grade:3,order:14,title:'Pokój w skali: własny mebel zamiast gotowca',filename:'K3-120-pseudonim-v2.stl',subtitle:'Zaprojektujesz prosty układ pokoju i zrobisz własne biurko z bryły i otworu.',
  objectives:['Stosuję skalę 1:50 w modelu pokoju.','Tworzę własny mebel przez odejmowanie brył.','Sprawdzam przejście i poprawiam układ.'],
  recall:{question:'W makiecie ogrodu szerokość ścieżki sprawdzaliśmy z góry. Co jeszcze trzeba było sprawdzić z boku?',options:['Kolor nazwy projektu','Czy pień rzeczywiście łączy się z koroną i podłożem','Liczbę otwartych kart przeglądarki'],correct:[1],explanation:'Rzut z góry nie ujawnia szczelin w pionie. W pokoju wykorzystasz oba widoki.'},
@@ -17,3 +18,4 @@ export default makeModelLesson({
  teacherSummary:'Uczeń wykonuje plan 2D, model 3D, własny mebel i poprawia układ według liczbowego ograniczenia. Oddziel makietę od projektu technicznego realnego pokoju. Ocenę opieraj na projekcie i wymiarach, nie na dekoracjach ani wyniku quizu.',
  methods:[{name:'Modelowanie',url:'https://metodyka.covepolska.pl/metoda-modelowanie.html'},{name:'Ocenianie kształtujące i poprawa',url:'https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html'}]
 });
+export default normalizeLessonReferences(referencedLesson);

@@ -2,7 +2,8 @@ import {note, choice, reveal} from '../schema.js';
 
 const lab=(level,label,question,criteria)=>({type:'queryDesigner',id:`zq-l${level}`,stateKey:'query-lab',mode:`l${level}`,level,dataset:'zawody',points:6,label,question,criteria});
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'25',grade:3,order:8,title:'Zasady tworzenia kwerend na przykładzie bazy Zawody',
  subtitle:'Sędzia prosi o podium, protokół dyskwalifikacji i rekordy. Jedna kwerenda = wynik w sekundę, bez przepisywania.',
  topic:'Zasady tworzenia kwerend na przykładzie bazy Zawody',icon:'funnel',
@@ -80,3 +81,4 @@ export default {
  ],
  exitTicket:'Umiesz zadać bazie pytanie: wybrać kolumny i wiersze, połączyć trzy tabele, ułożyć ranking, policzyć starty, znaleźć rekordy i zbudować kwerendę, która sama pyta o klasę.'
 };
+export default normalizeLessonReferences(referencedLesson);

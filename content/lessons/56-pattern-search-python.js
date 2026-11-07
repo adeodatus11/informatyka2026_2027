@@ -24,7 +24,8 @@ const CZAT = `czat = [
 // Liczby porównań wyliczone tym samym algorytmem co w symulatorze textLab (lekcja 53).
 const cmp = (t, p) => String(patternTrace(t, p).comparisons);
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'56',grade:3,order:20,title:'Programowanie algorytmów na tekstach w języku Python – wyszukiwanie wzorca w tekście',
  subtitle:'Zbudujesz własną wyszukiwarkę wiadomości w czacie i policzysz, ile pracy ma komputer przy każdym Ctrl+F.',
  topic:'Wyszukiwanie wzorca w Pythonie',icon:'search',tags:['metoda naiwna','Ctrl+F','licznik porównań'],duration:45,
@@ -166,3 +167,4 @@ export default {
  ],
  exitTicket:'Metoda naiwna sprawdza każde z n − m + 1 okien i porównuje znaki do pierwszej różnicy. W najgorszym razie to (n − m + 1) · m porównań. find zwraca pierwszą pozycję albo −1, count liczy wystąpienia rozłączne, a Twoja funkcja — wszystkie, także nakładające się.'
 };
+export default normalizeLessonReferences(referencedLesson);

@@ -2,7 +2,7 @@ import {test,expect} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import {createDentalProject,prepareDentalRecords,fillDentalVisit,performDentalQueries} from './dental-helpers.js';
 const stage=(page,i)=>page.getByRole('navigation',{name:'Etapy lekcji'}).getByRole('button').nth(i).click();
-const saved=page=>page.evaluate(()=>JSON.parse(localStorage.getItem('informatyka-praktycznie-v1'))['05'].answers['db-simulator']);
+const saved=page=>page.evaluate(()=>JSON.parse(localStorage.getItem('informatyka-praktycznie-v1'))?.['05']?.answers?.['db-simulator']);
 
 test('Dental simulation checks real data, persists across stages and invalidates reset progress',async({page})=>{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
@@ -21,9 +21,10 @@ test('Dental simulation checks real data, persists across stages and invalidates
  await page.getByRole('button',{name:'Dodaj wizytę',exact:true}).click();
  await expect(page.getByRole('alert')).toContainText('Nie ma pacjenta o ID 99');
  expect((await saved(page)).visits).toHaveLength(5);
- await page.reload();await page.getByRole('button',{name:'2. Dane',exact:true}).click();
- await expect(page.getByLabel('ID pacjenta wizyty',{exact:true})).toHaveValue('99');
- await expect(page.getByRole('region',{name:'Wizyty',exact:true})).toContainText('5 rekordów');
+ // Odświeżenie celowo czyści postęp na współdzielonym komputerze.
+ await page.reload();await stage(page,3);
+ expect(await saved(page)).toBeUndefined();
+ await createDentalProject(page);await prepareDentalRecords(page);
  await page.getByRole('button',{name:'Przejdź dalej',exact:true}).click();
  await expect(page.getByRole('progressbar')).toHaveAttribute('aria-valuenow','1');
  await page.getByLabel('Dzień wyszukiwania',{exact:true}).fill('2026-09-25');

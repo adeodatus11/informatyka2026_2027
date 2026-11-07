@@ -1,5 +1,6 @@
 import {makeModelLesson} from '../model3d-lesson.js';
-export default makeModelLesson({
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = makeModelLesson({
  id:'113',grade:2,order:4,title:'Ogród w miniaturze — od planu 2D do modelu 3D',subtitle:'Podniesiesz wybrane pola planu i sprawdzisz, czy mała makieta jest spójna.',
  objectives:['Rozróżniam plan z góry i przestrzenny model.','Nadaję elementom wysokość i kontroluję połączenie z podstawą.','Wybieram zakres eksportu STL i zachowuję projekt do poprawy.'],
  recall:{question:'W skali 1:100 rzeczywiste 2 m mają w modelu:',options:['200 mm','2 mm','20 mm'],correct:[2],explanation:'2 m to 2000 mm; po podzieleniu przez 100 otrzymujesz 20 mm.'},
@@ -15,3 +16,4 @@ export default makeModelLesson({
  exitQuestion:'Który szczegół uprościłeś i dlaczego w małej makiecie to pomaga?',teacherPreparation:'Pokaż na jednym polu różnicę między wysokością bryły a jej położeniem Z. Nie buduj całego ogrodu za uczniów. Zachowaj 7 minut na poprawę wskazanego połączenia. Jeśli projekt bazowy zaginął, uczeń odtwarza minimum z pierwszego kroku.',teacherSummary:'Dowód II.3.a: przekształcenie planu w model 3D, pozycjonowanie, uproszczenie i STL. Drukowalność nie jest automatycznie potwierdzona. Nauczyciel wybiera prace i sprawdza je w Bambu Studio z profilem H2C; nie drukujemy wszystkich makiet podczas lekcji.',pair:false,
  methods:[{name:'Przypominanie i powroty',url:'https://metodyka.covepolska.pl/metoda-przypominanie-i-powroty.html'},{name:'Modelowanie',url:'https://metodyka.covepolska.pl/metoda-modelowanie.html'},{name:'Ocenianie kształtujące i poprawa',url:'https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html'}]
 });
+export default normalizeLessonReferences(referencedLesson);

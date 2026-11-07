@@ -1,5 +1,6 @@
 import {makeModelLesson} from '../model3d-lesson.js';
-export default makeModelLesson({
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = makeModelLesson({
  id:'111',grade:2,order:2,title:'Mała ławka — kopiowanie, wyrównanie i połączenia',subtitle:'Z kilku brył złożysz model ławki. Sprawdzisz, czy części naprawdę się łączą.',
  objectives:['Powielam bryły bez zmiany ich wymiarów.','Wyrównuję elementy i kontroluję wysokość z różnych widoków.','Rozpoznaję szczelinę, której nie naprawia samo Group.'],
  recall:{question:'Co zmienia rozmiar modelu zapisany w milimetrach?',options:['Obrócenie kamery','Przybliżenie widoku','Zmiana liczby przy wymiarze bryły'],correct:[2],explanation:'Kamera zmienia widok, a wpisana liczba zmienia geometrię. Dzisiaj ustawiamy też wysokość części nad płaszczyzną.'},
@@ -15,3 +16,4 @@ export default makeModelLesson({
  exitQuestion:'Który widok najlepiej ujawnił połączenie podpory z siedziskiem? Co w nim sprawdziłeś?',teacherPreparation:'Przygotuj przykład z jedną podporą kończącą się 1 mm za nisko i pokaż decyzję, nie całą gotową ławkę. Po pytaniu diagnostycznym zbierz odpowiedź każdej osoby. Przy częstym błędzie wróć tylko do osi Z i zakładki. Jeśli uczeń nie zna Linijki, wskaż kontrolę wysokości, nie przejmuj myszki.',teacherSummary:'Model jest ćwiczeniem geometrii. Nie oznaczaj go jako sprawdzony wydruk; orientację, podpory i ewentualny podział na części ocenia nauczyciel w Bambu Studio/H2C. Sama grupa nie jest dowodem wspólnej bryły.',pair:false,
  methods:[{name:'Przypominanie i powroty',url:'https://metodyka.covepolska.pl/metoda-przypominanie-i-powroty.html'},{name:'Modelowanie',url:'https://metodyka.covepolska.pl/metoda-modelowanie.html'},{name:'Ocenianie kształtujące i poprawa',url:'https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html'}]
 });
+export default normalizeLessonReferences(referencedLesson);

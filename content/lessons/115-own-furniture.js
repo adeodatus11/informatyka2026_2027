@@ -1,5 +1,6 @@
 import {makeModelLesson} from '../model3d-lesson.js';
-export default makeModelLesson({
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = makeModelLesson({
  id:'115',grade:2,order:6,title:'Własny mebel — moduł z bryły i otworu',subtitle:'Zaprojektujesz mały regał do makiety pokoju i sprawdzisz grubość jego ścian.',
  objectives:['Tworzę wnękę przez odjęcie bryły typu Hole.','Obliczam grubość ścian z dwóch wymiarów.','Sprawdzam mebel w osobnym projekcie i w układzie pokoju.'],
  recall:{question:'Co zachowujesz, aby później poprawić osobno części modelu?',options:['Wyłącznie zrzut ekranu','Edytowalny projekt w Tinkercad','Tylko powiększony widok STL'],correct:[1],explanation:'Edytowalny projekt zachowuje kształty i operacje. STL jest przydatny do wymiany geometrii, ale nie zastępuje wygodnego projektu źródłowego.'},
@@ -15,3 +16,6 @@ export default makeModelLesson({
  exitQuestion:'Dlaczego powiększenie samej wnęki może osłabić model, mimo że z zewnątrz wygląda tak samo?',teacherPreparation:'Sprawdź z klasą rachunek grubości ścian. Pokaż tylko przykład Hole, który przebił tył; uczeń wyjaśnia poprawkę. W parze sąsiad ogląda model od tyłu i daje jedną uwagę do kryterium; autor sam poprawia. Solo odwraca kamerę i robi tę samą kontrolę. Nie obiecuj, że podane ściany zawsze wydrukują się każdą dyszą.',teacherSummary:'Produkt: własny moduł z rzeczywistą wnęką, dwa warianty grubości oraz eksport. Ocena po obejrzeniu projektu i obliczeń. Import/eksport STL jest ćwiczeniem formatów, a nie dowodem zachowania historii edycji.',pair:true,
  methods:[{name:'Przypominanie i powroty',url:'https://metodyka.covepolska.pl/metoda-przypominanie-i-powroty.html'},{name:'Ocenianie kształtujące i poprawa',url:'https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html'}]
 });
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

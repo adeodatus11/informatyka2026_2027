@@ -1,6 +1,7 @@
 import {note, choice} from '../schema.js';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'10',grade:2,order:11,title:'Importowanie danych z innych dokumentów do tabeli bazy danych',
  subtitle:'12 zgłoszeń z formularza w bazie w minutę zamiast 20 minut przepisywania — i bez literówek.',
  topic:'Importowanie danych z innych dokumentów do tabeli bazy danych',icon:'table',
@@ -67,3 +68,4 @@ export default {
  ],
  exitTicket:'Umiesz zaimportować CSV do istniejącej tabeli, przeczytać ImportErrors i poprawić dane u źródła. W pracy to często pierwsze zadanie stażysty — teraz zrobisz je w minutę.'
 };
+export default normalizeLessonReferences(referencedLesson);

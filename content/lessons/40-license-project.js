@@ -2,7 +2,8 @@ import {note, choice, reveal} from '../schema.js';
 
 // Lekcja 40 (klasa 1, temat 34): licencje programów i treści — projekt w parach (decyzja nauczyciela 10.2026: pary zamiast trójek z rolami).
 // Fakty o licencjach konkretnych programów: content/sims/licenseLab.js (stan 2026, do sprawdzenia przed lekcją).
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'40',grade:1,order:34,
  title:'Zasady rozpowszechniania programów komputerowych – projekt',
  subtitle:'„Darmowe” nie znaczy „wolno wszystko”. Wydasz własną pracę na jasnych zasadach i legalnie użyjesz cudzej — bez cracków i bez wirusów.',
@@ -101,3 +102,4 @@ export default {
  ],
  exitTicket:'Licencja to warunki, nie cena. Przed użyciem cudzego zdjęcia sprawdź licencję u autora i podpisz TASL; swoją pracę wydaj na licencji, która mówi innym, co wolno. A „crack” to najdroższy darmowy program.'
 };
+export default normalizeLessonReferences(referencedLesson);

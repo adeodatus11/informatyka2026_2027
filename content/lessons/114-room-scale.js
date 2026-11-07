@@ -1,5 +1,6 @@
 import {makeModelLesson} from '../model3d-lesson.js';
-export default makeModelLesson({
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = makeModelLesson({
  id:'114',grade:2,order:5,title:'Mój pokój w skali — przestrzeń, której nie zabiera kamera',subtitle:'Sprawdzisz na miniaturze, czy biurko i łóżko zmieszczą się z przejściem.',
  objectives:['Przeliczam wymiary pokoju i wyposażenia w skali 1:50.','Tworzę uproszczony model z podłogą i dwiema ścianami.','Sprawdzam układ z góry i poprawiam przejście.'],
  recall:{question:'Dlaczego model ogrodu sprawdzaliśmy z góry i z boku?',options:['Aby zmienić jego wymiary','Aby znaleźć nakładanie pól oraz unoszące się części','Aby automatycznie zapisać STL'],correct:[1],explanation:'Różne widoki ujawniają różne błędy. Widok z góry pomaga w układzie, z boku w wysokości i połączeniach.'},
@@ -15,3 +16,4 @@ export default makeModelLesson({
  exitQuestion:'Co sprawdzasz po obrocie mebla, żeby nie pomylić poprawnego wyglądu z poprawnym układem?',teacherPreparation:'Na tablicy przelicz pokój, drugie przeliczenie zostaw uczniom. Pokaż błędny obrót biurka i poprawną oś. Oceń najpierw skalę i przejście, nie dekoracje. Nie proś uczniów o prywatne plany mieszkań. Każdy może pracować na fikcyjnym pokoju z instrukcji.',teacherSummary:'Produkt: dwa warianty układu w skali 1:50, edytowalny projekt i STL bez sprawdzianu. Czynność modelowania 2D/3D jest dowodem II.3.a; druk i porady budowlane nie są wynikiem tej lekcji.',pair:false,
  methods:[{name:'Przypominanie i powroty',url:'https://metodyka.covepolska.pl/metoda-przypominanie-i-powroty.html'},{name:'Modelowanie',url:'https://metodyka.covepolska.pl/metoda-modelowanie.html'}]
 });
+export default normalizeLessonReferences(referencedLesson);

@@ -329,7 +329,8 @@ const plan = [
   ]
  }
 ];
-export default {...{
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {...{
  "id": "102",
  "grade": 1,
  "order": 37,
@@ -383,3 +384,4 @@ export default {...{
 },
  sections:plan.map(({time,notes,...section})=>({...section,...note(time,...notes)}))
 };
+export default normalizeLessonReferences(referencedLesson);

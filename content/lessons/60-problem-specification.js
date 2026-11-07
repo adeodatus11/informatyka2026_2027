@@ -1,6 +1,7 @@
 import {note, choice} from '../schema.js';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'60',grade:1,order:22,title:'Sytuacje problemowe i określanie specyfikacji zadania',
  subtitle:'Zanim ktoś napisze program, musi wiedzieć, co program dostaje, co ma oddać i kiedy powiedzieć „to bez sensu”. Tak samo działa każde zlecenie — u grafika, mechanika i na praktykach.',
  topic:'Specyfikacja zadania: dane wejściowe, wynik, warunki; zła specyfikacja; przypadki testowe',icon:'search',tags:['specyfikacja','przypadki testowe','dane i wynik'],duration:45,
@@ -93,3 +94,4 @@ export default {
  ],
  exitTicket:'Umiesz rozłożyć problem na dane wejściowe, wynik i warunki, znajdujesz dziury w specyfikacji (brak danych, sprzeczność, niejasność) i układasz przypadki testowe: typowe, brzegowe i z błędnymi danymi. Następny krok: algorytm.'
 };
+export default normalizeLessonReferences(referencedLesson);

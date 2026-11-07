@@ -27,7 +27,8 @@ export const BIKE = `<!DOCTYPE html>
 </html>
 `;
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'38',grade:1,order:21,title:'Publikowanie i promowanie stron WWW w Internecie',
  subtitle:'Dowiesz się, jak strona trafia do internetu i do wyników wyszukiwania, co wolno na niej pokazać — i przygotujesz stronę serwisu rowerowego tak, żeby klienci ją znaleźli.',
  topic:'Hosting, domena, DNS, SEO i bezpieczna publikacja',icon:'search',tags:['domena i DNS','<title> + opis','RODO i licencje'],duration:45,
@@ -149,3 +150,4 @@ export default {
  ],
  exitTicket:'Wiesz, że strona trafia do internetu przez hosting i domenę, a DNS prowadzi do serwera. Umiesz napisać tytuł i opis, które ktoś kliknie, i sprawdzić stronę przed publikacją: ścieżki, alt, brak prywatnych danych i haseł, licencje i stopka.'
 };
+export default normalizeLessonReferences(referencedLesson);

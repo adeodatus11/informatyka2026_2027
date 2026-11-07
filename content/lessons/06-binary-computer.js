@@ -1,6 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'06',grade:3,order:1,title:'Logiczny model komputera i system dwójkowy',
  subtitle:'Prześledź wykonanie programu i odczytaj liczby zapisane zerami i jedynkami.',
  topic:'Logiczny model komputera i system dwójkowy',icon:'cpu',duration:45,
@@ -23,3 +24,4 @@ export default {
   {id:'summary',label:'Podsumuj',title:'Osiem bitów: 256 różnych układów.',intro:'Liczba możliwych układów i największa wartość to dwie różne rzeczy.',...note(6,'Zacznij od dwóch bitów: wartości 0, 1, 2, 3. Przenieś rozumowanie na osiem bitów.','Dlaczego największa liczba nie wynosi 256?','Ponieważ jeden z 256 układów oznacza zero; zakres bez znaku to 0–255.','Zakres dotyczy liczb bez znaku. Te same bity mogą mieć inne znaczenie zależnie od kodowania.','Dodaj 1 do 11111111₂: matematyczny wynik 100000000₂ wymaga 9 bitów.'),activities:[choice('binary-range','Jaka jest największa liczba całkowita bez znaku na 8 bitach?',['8','255','256'],[1],'11111111₂ = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255. Układów jest 2⁸ = 256, wliczając zero.','Policz sumę ośmiu wag, zaczynając od 1.'),choice('binary-byte','Ile bitów zawierają 3 bajty?',['3','11','24'],[2],'Jeden bajt to 8 bitów, zatem 3 × 8 = 24 bity.','Pomnóż liczbę bajtów przez 8.'),choice('cpu-exit','Co przechowuje pamięć w modelu z przechowywanym programem?',['Wyłącznie gotowe wyniki','Dane i instrukcje programu','Wyłącznie obraz ekranu'],[1],'Pamięć przechowuje dane oraz instrukcje, które procesor pobiera, dekoduje i wykonuje.','Przypomnij sobie pierwszy krok cyklu instrukcji.'),{type:'resultCard',id:'result',title:'Karta wyniku: komputer w zerach i jedynkach',sources:['cpu-start','cpu-match','cpu-cycle','binary-read','binary-zero','binary-write','binary-second','binary-range','binary-byte','cpu-exit'],badges:[{min:0,name:'Kalkulator na korbkę',text:'Zera i jedynki jeszcze się mieszają. Wróć do wag: 128, 64, 32, 16, 8, 4, 2, 1.'},{min:0.5,name:'Tłumacz binarny',text:'Czytasz i zapisujesz liczby dwójkowo. Jeszcze pewność przy cyklu instrukcji.'},{min:0.85,name:'Procesor w ludzkiej skórze',text:'Pobierz, zdekoduj, wykonaj — i to w zerach i jedynkach. 255 to dla Ciebie 11111111.'}]}]}
  ],exitTicket:'Potrafisz wyjaśnić wykonanie instrukcji, odczytać zapis dwójkowy i zapisać liczbę za pomocą bitów. Zachowaj obliczenia jako notatkę do powtórki.'
 };
+export default normalizeLessonReferences(referencedLesson);

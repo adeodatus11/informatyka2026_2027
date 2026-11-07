@@ -1,5 +1,6 @@
 // Projekt korzysta z tego samego robotLab i Rover-2 co zadanie B.
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  "id": "106",
  "grade": 3,
  "order": 29,
@@ -250,3 +251,4 @@ export default {
  ],
  "exitTicket": "Pokaż przebieg pomiędzy progami i próbę bez wody. Wyjaśnij, który warunek ma pierwszeństwo."
 };
+export default normalizeLessonReferences(referencedLesson);

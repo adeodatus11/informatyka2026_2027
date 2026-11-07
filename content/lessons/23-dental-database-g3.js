@@ -21,7 +21,8 @@ const sections=base.sections.map(s=>{
  return copy;
 });
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  ...base,
  id:'23',grade:3,order:6,
  tags:['Tabele','Klucze','Relacje'],
@@ -38,3 +39,4 @@ export default {
  },
  sections
 };
+export default normalizeLessonReferences(referencedLesson);

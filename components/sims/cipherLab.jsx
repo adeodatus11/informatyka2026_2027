@@ -134,8 +134,8 @@ function Breaker({cipher,st,set,solvedLabel}){
   {st.all&&<div className="cl-all" role="region" aria-label="Wszystkie klucze Cezara" tabIndex={0}><p className="small muted">Komputer sprawdza wszystkie klucze w ułamku sekundy. Znajdź wiersz, który ma sens.</p><ol>{allShifts(cipher).map(r=><li key={r.key}><span>{r.key}</span><code>{r.text}</code></li>)}</ol></div>}
  </div>;
 }
-function Duel({value={},onChange}){
- const role=value.role||'A';const a=value.a||{method:'caesar',key:5,text:''};const b=value.b||{};const s=value.solo||{puzzle:0};
+function Duel({data={},value={},onChange}){
+ const role=data.soloOnly&&value.role==='B'?'solo':value.role||'A';const a=value.a||{method:'caesar',key:5,text:''};const b=value.b||{};const s=value.solo||{puzzle:0};
  const res=duelResult(value);
  function save(next){onChange({...next,...duelResult(next)});}
  const setA=x=>save({...value,a:{...a,...x}}),setB=x=>save({...value,b:{...b,...x}}),setS=x=>save({...value,solo:{...s,...x}});
@@ -149,12 +149,12 @@ function Duel({value={},onChange}){
   if(ok){st.done=true;st.ms=s.startedAt?Date.now()-s.startedAt:0;if(s.recTries==null){st.recTries=s.keyTries||0;st.recMs=st.ms;}st.msg={ok:true,text:`Złamane w ${s.keyTries||0} próbach (${formatTime(st.ms)})! Klucz to ${puzzle.key}. ${s.recTries!=null?'Zagadka bonusowa — bez punktów, tylko rekord.':st.solvedAt===1?'+4 pkt.':'+3 pkt.'} Komputer zrobiłby to w ułamek sekundy — 25 kluczy to nic.`};}
   else st.msg={ok:false,text:'To nie ta wiadomość. Szukaj klucza, przy którym wszystkie słowa mają sens, i przepisz tekst dokładnie.'};
   save({...value,solo:st});}
- return <Window title="Pojedynek: szyfrant i łamacz" score={res.score} max={res.max}>
+ return <Window title={data.soloOnly?'Twój szyfrogram i niezależna zagadka':'Pojedynek: szyfrant i łamacz'} score={res.score} max={res.max}>
   <div className="cl-roles" role="tablist" aria-label="Wybierz rolę">
-   {[['A','Szyfrant (osoba A)',`${res.aPts}/2`],['B','Łamacz (osoba B)',`${res.bPts}/4`],['solo','Gram sam: zagadka',`${res.bPts}/4`]].map(([id,l,p])=><button type="button" role="tab" key={id} aria-selected={role===id} className={role===id?'is-on':''} onClick={()=>save({...value,role:id})}><b>{l}</b><small>{p} pkt</small></button>)}
+   {(data.soloOnly?[['A','Twój szyfrogram',`${res.aPts}/2`],['solo','Samodzielna zagadka',`${res.bPts}/4`]]:[['A','Szyfrant (osoba A)',`${res.aPts}/2`],['B','Łamacz (osoba B)',`${res.bPts}/4`],['solo','Gram sam: zagadka',`${res.bPts}/4`]]).map(([id,l,p])=><button type="button" role="tab" key={id} aria-selected={role===id} className={role===id?'is-on':''} onClick={()=>save({...value,role:id})}><b>{l}</b><small>{p} pkt</small></button>)}
   </div>
   {role==='A'&&<div className="cl-panel" role="tabpanel" aria-label="Szyfrant">
-   <p><b>Twoje zadanie:</b> zaszyfruj krótką wiadomość dla partnera (min. {MIN_LETTERS} liter). Nie zdradzaj klucza! Potem zamieńcie się rolami.</p>
+   <p><b>Twoje zadanie:</b> {data.soloOnly?`zaszyfruj własną wiadomość (min. ${MIN_LETTERS} liter), a potem przejdź do niezależnej zagadki.`:`zaszyfruj krótką wiadomość dla partnera (min. ${MIN_LETTERS} liter). Nie zdradzaj klucza! Potem zamieńcie się rolami.`}</p>
    <div className="cl-seg" role="group" aria-label="Metoda">
     <button type="button" aria-pressed={a.method==='caesar'} disabled={a.locked} onClick={()=>setA({method:'caesar'})}>Cezar</button>
     <button type="button" aria-pressed={a.method==='gadery'} disabled={a.locked} onClick={()=>setA({method:'gadery'})}>GA-DE-RY-PO-LU-KI</button>
@@ -162,10 +162,10 @@ function Duel({value={},onChange}){
    {a.method==='caesar'&&<label className="cl-range-label">Tajny klucz: <b>{a.key}</b><input className="cl-range" type="range" min="1" max="25" value={a.key} disabled={a.locked} onChange={e=>setA({key:Number(e.target.value)})}/></label>}
    <label className="cl-field"><span>Wiadomość (tekst jawny)</span><textarea className="cl-textarea" rows={2} maxLength={100} disabled={a.locked} value={a.text} placeholder="Np. Spotkajmy się przy automacie z kawą" onChange={e=>setA({text:e.target.value})}/></label>
    {a.text&&<p className={`small ${vm.ok?'cl-okc':'cl-badc'}`} role="status">{vm.ok?'✓ ':'✗ '}{vm.message}</p>}
-   <div className="cl-output cl-output-big"><span>Szyfrogram do podyktowania</span><b>{a.text?aCipher:'—'}</b></div>
+   <div className="cl-output cl-output-big"><span>{data.soloOnly?'Twój szyfrogram':'Szyfrogram do podyktowania'}</span><b>{a.text?aCipher:'—'}</b></div>
    <PlNote text={a.text}/>
-   {!a.locked?<button type="button" className="btn" disabled={!vm.ok} onClick={()=>setA({locked:true})}>Gotowe — przekazuję szyfrogram partnerowi (+2 pkt)</button>
-   :<div className="cl-msg is-ok" role="status"><Icon name="check" size={20}/><span>Szyfrogram gotowy (+2 pkt). Podyktuj go albo pokaż ekran. Partner wpisuje go u siebie w roli „Łamacz”. {a.method==='gadery'?'Uwaga: GA-DE-RY-PO-LU-KI zna każdy harcerz — ciekawe, jak szybko padnie.':'Klucz zostaje w Twojej głowie.'} <button type="button" className="cl-link" onClick={()=>setA({locked:false})}>Zmień wiadomość</button></span></div>}
+   {!a.locked?<button type="button" className="btn" disabled={!vm.ok} onClick={()=>setA({locked:true})}>{data.soloOnly?'Zatwierdź własny szyfrogram (+2 pkt)':'Gotowe — przekazuję szyfrogram partnerowi (+2 pkt)'}</button>
+   :<div className="cl-msg is-ok" role="status"><Icon name="check" size={20}/><span>{data.soloOnly?'Szyfrogram gotowy (+2 pkt). Teraz otwórz zakładkę Samodzielna zagadka i rozwiąż inny przypadek z nieznanym kluczem.':'Szyfrogram gotowy (+2 pkt). Przekaż go partnerowi w roli Łamacz.'} <button type="button" className="cl-link" onClick={()=>setA({locked:false})}>Zmień wiadomość</button></span></div>}
   </div>}
   {role==='B'&&<div className="cl-panel" role="tabpanel" aria-label="Łamacz">
    <p><b>Twoje zadanie:</b> przepisz szyfrogram od partnera i złam go bez klucza. Klikaj strzałki — każda to kolejny klucz. Stoper rusza przy pierwszej próbie.</p>
@@ -180,14 +180,14 @@ function Duel({value={},onChange}){
    </>}
   </div>}
   {role==='solo'&&<div className="cl-panel" role="tabpanel" aria-label="Zagadka">
-   <p><b>Nie masz pary?</b> Przechwyciłeś szyfrogram zapisany szyfrem Cezara. Klucza nie znasz. Złam go i wpisz treść.</p>
+   <p>Przechwyciłeś szyfrogram zapisany szyfrem Cezara. Klucza nie znasz. Złam go i wpisz treść.</p>
    <p className="cl-cipher-line">{puzzle.cipher}</p>
    <Breaker cipher={puzzle.cipher} st={s} set={setS} solvedLabel={`klucz ${puzzle.key}`}/>
    {!s.done?<div className="cl-row"><label className="cl-field cl-grow"><span>Odczytana wiadomość</span><input className="cl-input cl-input-wide" value={s.answer||''} autoComplete="off" spellCheck={false} maxLength={100} onChange={e=>setS({answer:e.target.value})} onKeyDown={e=>{if(e.key==='Enter')checkS();}}/></label><button type="button" className="btn" onClick={checkS}>Sprawdź</button></div>
    :<button type="button" className="btn secondary cl-small" onClick={()=>setS({puzzle:(s.puzzle||0)+1,key:0,mode:'caesar',keyTries:0,startedAt:null,done:false,answer:'',msg:null,all:false})}>Następna zagadka (na rekord czasu, bez punktów)</button>}
    <Msg m={s.msg}/>
   </div>}
-  <p className="small muted">Punkty: szyfrant 2 pkt (poprawna wiadomość) + łamacz 4 pkt (3 pkt, jeśli była pomyłka). W parze zamieńcie się rolami — każdy zdobywa punkty u siebie.</p>
+  <p className="small muted">Punkty: własny szyfrogram 2 pkt + rozwiązanie zagadki 4 pkt (3 pkt po pomyłce). Obie części wykonujesz samodzielnie.</p>
  </Window>;
 }
 

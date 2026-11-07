@@ -5,7 +5,8 @@ import {sheetCheck} from '../sims/sheetCheck.js';
 // Plik: public/materials/excel/lesson-70-start.xlsx. Oczekiwane wartości liczy test z pliku (tests/sims-g1-excel.test.mjs).
 const FILE = 'materials/excel/lesson-70-start.xlsx';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'70',grade:1,order:41,workspace:'desktop-excel',
  title:'Stosowanie funkcji arkusza kalkulacyjnego',
  subtitle:'Statystyki turnieju klasowego i rachunek za prąd Twojej konsoli. Jedna funkcja zamiast liczenia na palcach — i jeden znak $, który ratuje cały rachunek.',
@@ -94,3 +95,4 @@ export default {
  ],
  exitTicket:'Masz plik z funkcjami turnieju i rachunkiem za prąd z adresem $B$4. Wiesz, czym różni się pusta komórka od zera i kiedy blokować adres.'
 };
+export default normalizeLessonReferences(referencedLesson);

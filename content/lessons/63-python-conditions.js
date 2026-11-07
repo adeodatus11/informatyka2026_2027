@@ -42,7 +42,8 @@ const KINO_START = `wiek = int(input("Wiek: "))
 
 `;
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'63',grade:1,order:25,title:'Algorytmy z warunkami w języku Python',
  subtitle:'Bilet ulgowy czy normalny, stać mnie czy nie, zaliczone czy poprawka — program sam podejmie decyzję. I nie pomyli się na granicy.',
  topic:'Porównania, True/False, if/else, and/or; błędy składni w warunkach; przypadki brzegowe',icon:'code',tags:['if/else','porównania','and/or'],duration:45,
@@ -157,3 +158,4 @@ export default {
  ],
  exitTicket:'Umiesz zapisać porównanie, napisać if/else z dwukropkiem i wcięciami, połączyć warunki przez and/or i sprawdzić program na granicy. Następnym razem: program, który nie wysypie się na złych danych.'
 };
+export default normalizeLessonReferences(referencedLesson);

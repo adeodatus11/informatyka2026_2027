@@ -3,7 +3,8 @@ import {note, choice} from '../schema.js';
 // Lekcja 42 (klasa 1, temat 36): szanse i zagrożenia rozwoju informatyki i TIK — gra strategiczna „Firma 2030”.
 // Logika gry: content/sims/futureFirm.js (deterministyczna). Fakty prawne i liczby z raportów — do weryfikacji (teacherGuide).
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'42',grade:1,order:36,
  title:'Szanse i zagrożenia związane z rozwojem informatyki i technologii informacyjno-komunikacyjnych – projekt',
  subtitle:'Każda firma, w której będziesz pracować, wdraża dziś AI, płatności i systemy online. Poprowadź własną przez lata 2027–2030 i sprawdź, ile zarobisz — i czym za to zapłacisz.',
@@ -92,3 +93,4 @@ export default {
  ],
  exitTicket:'Ta sama technologia może być szansą albo zagrożeniem — decyduje wdrożenie. Zapamiętaj kolejność: najpierw bezpieczeństwo (2FA, kopie, aktualizacje), potem nowe systemy; przy każdej zmianie zapytaj, kto zyska, a kto straci; przy incydencie działaj od razu i zgłaszaj (CERT Polska, UODO w 72 h).'
 };
+export default normalizeLessonReferences(referencedLesson);

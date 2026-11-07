@@ -2,7 +2,8 @@ import {note, choice, reveal} from '../schema.js';
 
 // Lekcja 76 (klasa 1, temat 47): projekt — prezentacja o Fryderyku Chopinie w PowerPoincie + próba wystąpienia.
 // Fakty w „teczce faktów” są oznaczone w teacherGuide jako DO WERYFIKACJI przed lekcją.
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'76',grade:1,order:47,workspace:'desktop-powerpoint',
  title:'Tworzymy prezentację multimedialną o Fryderyku Chopinie – projekt',
  subtitle:'5 minut, żeby zaciekawić Chopinem kogoś, kto zna go tylko z nazwy lotniska. Zrobisz prezentację 6–8 slajdów i przećwiczysz minutę mówienia bez czytania.',
@@ -125,3 +126,6 @@ export default {
  ],
  exitTicket:'Oddajesz lesson-76-nazwisko.pptx (6–8 slajdów: hak, 3 fakty, muzyka, ciekawostka, źródła) z notatkami prelegenta i legalnie podpisaną grafiką; przećwiczyłeś minutę mówienia bez czytania.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

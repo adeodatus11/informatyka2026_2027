@@ -5,7 +5,8 @@ import {sheetCheck} from '../sims/sheetCheck.js';
 // Plik: public/materials/excel/lesson-69-start.xlsx (scripts/build-excel-materials.py). Oczekiwane wartości liczy test z pliku.
 const FILE = 'materials/excel/lesson-69-start.xlsx';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'69',grade:1,order:40,workspace:'desktop-excel',
  title:'Tworzenie formuł, formaty danych i formatowanie tabeli arkusza',
  subtitle:'Policz swoją wypłatę z pracy wakacyjnej: godziny × stawka, suma i ile zostanie po wydatkach. Excel liczy za Ciebie — i sam przelicza, gdy coś zmienisz.',
@@ -83,3 +84,4 @@ export default {
  ],
  exitTicket:'Masz plik z wypłatą liczoną formułami, naprawionymi danymi i czytelnym formatem. Umiesz wyjaśnić, jak zmieniają się adresy przy kopiowaniu.'
 };
+export default normalizeLessonReferences(referencedLesson);

@@ -1,5 +1,6 @@
 import {makeModelLesson} from '../model3d-lesson.js';
-export default makeModelLesson({
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = makeModelLesson({
  id:'118',grade:3,order:12,title:'Mała ławka: powtarzalne bryły i połączenia',filename:'K3-118-pseudonim-v2.stl',subtitle:'Z kilku prostopadłościanów zrobisz model ławki, którego części naprawdę się łączą.',
  objectives:['Duplikuję i ustawiam elementy według wymiarów.','Łączę bryły z kontrolowaną zakładką.','Sprawdzam model z boku i od spodu przed eksportem.'],
  recall:{question:'W tabliczce walec Hole miał wyciąć otwór. Kiedy odejmowanie staje się częścią modelu?',options:['Po właściwym zgrupowaniu bryły i otworu','Po zmianie tła','Po samym obróceniu kamery'],correct:[0],explanation:'Odejmowanie musi być wykonane na geometrii. Sam podgląd szarego walca nie gwarantuje otworu w eksporcie.'},
@@ -17,3 +18,4 @@ export default makeModelLesson({
  teacherSummary:'Produkt: miniatura ławki z oparciem. Uczeń duplikuje, określa położenie brył, łączy i poprawia model. Gdy ponad połowa grupy myli wysokość z grubością, zatrzymaj pracę na minutę i narysuj zakresy 2–12 i 10–13 mm. Oceniaj model, nie sam quiz.',
  methods:[{name:'Modelowanie',url:'https://metodyka.covepolska.pl/metoda-modelowanie.html'},{name:'Ocenianie kształtujące',url:'https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html'}]
 });
+export default normalizeLessonReferences(referencedLesson);

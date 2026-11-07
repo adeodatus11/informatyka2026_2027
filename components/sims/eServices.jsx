@@ -75,8 +75,8 @@ function Health({mod,ms,tryStep,cur}){
  </div>;
 }
 function Travel({mod,ms}){const d=ms.discount?.ok?37:null;return <div className="es-module-body"><Browser url="https://www.intercity.pl/" label="PKP Intercity (symulacja)"><p className="es-page-title">PKP Intercity — zakup biletu <small>(symulacja, ceny przykładowe)</small></p><div className="es-ticket"><div><small>Trasa</small><b>{mod.trip.from} → {mod.trip.to}</b></div><div><small>Bilet</small><b>jednorazowy, 2 klasa</b></div><div><small>Normalny</small><b>42,00 zł</b></div><div><small>Ulga</small><b>{d?`${d}% (uczeń)`:'—'}</b></div><div><small>Dokument</small><b>{ms.doc?.ok?'mLegitymacja / legitymacja':'—'}</b></div><div><small>Do zapłaty</small><b>{ms.price?.ok?'26,46 zł':'?'}</b></div></div></Browser></div>;}
-function Money({mod,ms,cur,tryStep}){const [relief,setRelief]=useState(!!ms.relief?.ok);const on=ms.relief?.ok;const s0=mod.steps[0];return <div className="es-module-body"><Browser url="https://www.podatki.gov.pl/" label="Twój e-PIT — e-Urząd Skarbowy (symulacja)"><p className="es-page-title">Twoje zeznanie za 2026 r. <small>(symulacja, gotowe od 15 lutego)</small></p><table className="es-pit"><tbody><tr><th scope="row">Przychód (umowa zlecenie, z PIT-11)</th><td>{mod.pit.income.toLocaleString('pl-PL')} zł</td></tr><tr><th scope="row">Koszty uzyskania przychodu (20%)</th><td>{mod.pit.costs} zł</td></tr><tr><th scope="row">Dochód</th><td>{on?'0 zł (zwolniony)':`${mod.pit.income-mod.pit.costs} zł`}</td></tr><tr><th scope="row">Zaliczki pobrane przez płatnika</th><td>{mod.pit.tax} zł</td></tr><tr><th scope="row">Podatek należny</th><td>{on?'0 zł':`${mod.pit.tax} zł`}</td></tr><tr className="es-sum"><th scope="row">Nadpłata (zwrot)</th><td>{on?`${mod.pit.tax} zł`:'0 zł'}</td></tr></tbody></table>
-  {cur===0&&<div className="es-form"><label className="es-check"><input type="checkbox" checked={relief} onChange={e=>setRelief(e.target.checked)}/>Ulga dla młodych (PIT-0) — mam mniej niż 26 lat</label><button className="btn" onClick={()=>tryStep(s0,checkStep(s0,relief))}>Przelicz</button>{ms.relief?.tries>0&&!ms.relief?.ok&&<Feedback ok={false}>Bez ulgi państwo zatrzyma Twoje 230 zł. {s0.hint}</Feedback>}</div>}
+function Money({mod,ms,cur,tryStep}){const [relief,setRelief]=useState(!!ms.relief?.ok);const on=ms.relief?.ok;const s0=mod.steps[0];return <div className="es-module-body"><Browser url="https://www.podatki.gov.pl/" label="Twój e-PIT — e-Urząd Skarbowy (symulacja)"><p className="es-page-title">Sprawdzenie przykładowego zeznania <small>(symulacja)</small></p><p>To ćwiczenie odczytu i sprawdzenia danych, nie kalkulator rzeczywistego podatku. Roczne rozliczenie może obejmować inne przychody i ulgi.</p><table className="es-pit"><tbody><tr><th scope="row">Przychód z przykładowej informacji płatnika</th><td>{mod.pit.income.toLocaleString('pl-PL')} zł</td></tr><tr><th scope="row">Zaliczki pobrane przez płatnika</th><td>{mod.pit.tax} zł</td></tr><tr><th scope="row">Prawo do ulgi w tym przykładzie</th><td>{on?'Potwierdzone w ćwiczeniu':'Do sprawdzenia'}</td></tr><tr className="es-sum"><th scope="row">Nadpłata według założeń przykładu</th><td>{on?`${mod.pit.tax} zł`:'Sprawdź dane i ulgę'}</td></tr></tbody></table>
+  {cur===0&&<div className="es-form"><label className="es-check"><input type="checkbox" checked={relief} onChange={e=>setRelief(e.target.checked)}/>Ulga dla młodych (PIT-0) — mam mniej niż 26 lat</label><button className="btn" onClick={()=>tryStep(s0,checkStep(s0,relief))}>Przelicz</button>{ms.relief?.tries>0&&!ms.relief?.ok&&<Feedback ok={false}>Sprawdź prawo do ulgi w opisanym przykładzie. {s0.hint}</Feedback>}</div>}
  </Browser></div>;}
 
 function Module({mod,ms,save,onBack}){
@@ -85,7 +85,7 @@ function Module({mod,ms,save,onBack}){
  const step=done?null:mod.steps[cur];
  return <div className="es-module">
   <div className="es-module-head"><span className="es-letter">{mod.letter}</span><div><h3>{mod.title}</h3><p className="muted small">{mod.lead}</p></div><span className="es-chip">Moduł: {fmt(moduleScore(ms,mod))}/4 pkt</span></div>
-  <p className="es-profile"><Icon name="idcard" size={18}/><span>Profil: <b>{profile.name}</b>, ur. {profile.born} ({profile.age} lat) · PESEL <b>{profile.pesel}</b></span><span className="es-example">fikcyjny, przykład</span></p>
+  <p className="es-profile"><Icon name="idcard" size={18}/>{mod.id==='money'?<span>Przykład podatkowy: osoba 20-letnia; dane i kwoty są fikcyjne.</span>:<span>Profil: <b>{profile.name}</b>, ur. {profile.born} ({profile.age} lat) · PESEL <b>{profile.pesel}</b></span>}<span className="es-example">fikcyjny, przykład</span></p>
   <ol className="es-steps">{mod.steps.map((s,i)=><li key={s.id} className={ms[s.id]?.ok?'ok':i===cur?'current':'todo'}><span className="es-step-num">{ms[s.id]?.ok?<Icon name="check" size={16}/>:i+1}</span><span>{s.title}{ms[s.id]?.ok&&<small> · +{fmt(ms[s.id].tries===1?1:0.5)} pkt</small>}</span></li>)}</ol>
   {cur>0&&!done&&<Feedback ok>Krok {cur}: zaliczony (+{fmt(ms[mod.steps[cur-1].id].tries===1?1:0.5)} pkt). Działaj dalej!</Feedback>}
   {step&&<section className="es-task" aria-labelledby={`es-task-${step.id}`}><h4 id={`es-task-${step.id}`}>Krok {cur+1}: {step.title}</h4><p>{step.task}</p>
@@ -96,19 +96,19 @@ function Module({mod,ms,save,onBack}){
   {mod.id==='health'&&<Health mod={mod} ms={ms} tryStep={tryStep} cur={cur}/>}
   {mod.id==='travel'&&<Travel mod={mod} ms={ms}/>}
   {mod.id==='money'&&<Money mod={mod} ms={ms} cur={cur} tryStep={tryStep}/>}
-  {done&&<section className="es-expert" aria-labelledby={`es-exp-${mod.id}`}><h4 id={`es-exp-${mod.id}`}><Icon name="trophy" size={22}/>Karta eksperta: {mod.title}</h4><p className="small">Te 3 zdania przekażesz partnerowi (albo zapamiętasz na test). Zapamiętaj je albo przepisz.</p><ol>{mod.expert.map(x=><li key={x}>{x}</li>)}</ol><button className="btn secondary" onClick={onBack}><Icon name="left" size={18}/>Wróć do wyboru modułów</button></section>}
+  {done&&<section className="es-expert" aria-labelledby={`es-exp-${mod.id}`}><h4 id={`es-exp-${mod.id}`}><Icon name="trophy" size={22}/>Karta eksperta: {mod.title}</h4><p className="small">Sprawdź te trzy zasady i wyjaśnij je własnymi słowami. Wrócą w samodzielnym teście.</p><ol>{mod.expert.map(x=><li key={x}>{x}</li>)}</ol><button className="btn secondary" onClick={onBack}><Icon name="left" size={18}/>Wróć do wyboru modułów</button></section>}
  </div>;
 }
 
-function Expert({value={},onChange}){
+function Expert({data={},value={},onChange}){
  const [active,setActive]=useState(value.active||null);
- const mods=value.modules||{};const res=expertResult(value);
- function save(modId,ms){const all={...mods,[modId]:ms};onChange({...value,active:modId,modules:all,...expertResult({modules:all})});}
+ const mods=value.modules||{};const res=expertResult({...value,requireAll:data.requireAll});
+ function save(modId,ms){const all={...mods,[modId]:ms};onChange({...value,active:modId,modules:all,...expertResult({modules:all,requireAll:data.requireAll})});}
  const mod=active&&moduleById(active);
  return <div className="es-sim">
-  <div className="es-top"><span className="es-brand"><Icon name="idcard" size={22}/>e-usługi: login.gov.pl, IKP, e-PIT <small>(symulacja)</small></span><span className="es-score" aria-live="polite">Najlepszy moduł: <b>{fmt(res.score)}</b>/4</span></div>
-  {!mod?<><p className="es-jigsaw"><Icon name="group" size={22}/><span><b>W parze każdy bierze inny moduł</b> (A, B albo C), trzeci przejdziecie razem. Pracujesz sam? Zrób wszystkie trzy — liczy się najlepszy.</span></p>
-   <div className="es-module-grid">{modules.map(m=>{const ms=mods[m.id]||{};const d=moduleDone(ms,m);return <button key={m.id} className={`es-module-card ${d?'done':''}`} onClick={()=>setActive(m.id)}><span className="es-letter">{m.letter}</span><b>{m.title}</b><small>{m.lead}</small><span className="es-chip">{d?`Ukończony · ${fmt(moduleScore(ms,m))}/4`:Object.keys(ms).length?`W trakcie · ${fmt(moduleScore(ms,m))}/4`:'4 kroki · ok. 8 min'}</span></button>;})}</div></>
+  <div className="es-top"><span className="es-brand"><Icon name="idcard" size={22}/>e-usługi: login.gov.pl, IKP, e-PIT <small>(symulacja)</small></span><span className="es-score" aria-live="polite">{data.requireAll?'Trzy sprawy':'Najlepszy moduł'}: <b>{fmt(res.score)}</b>/{res.max}</span></div>
+  {!mod?<><p className="es-jigsaw"><Icon name="idcard" size={22}/><span><b>Pracujesz samodzielnie.</b> Przejdź moduły A, B i C. {data.requireAll?'Do ukończenia potrzebne są wszystkie trzy sprawy.':'Każdą sprawę możesz powtórzyć i sprawdzić swoją decyzję.'}</span></p>
+   <div className="es-module-grid">{modules.map(m=>{const ms=mods[m.id]||{};const d=moduleDone(ms,m);return <button key={m.id} className={`es-module-card ${d?'done':''}`} onClick={()=>setActive(m.id)}><span className="es-letter">{m.letter}</span><b>{m.title}</b><small>{m.lead}</small><span className="es-chip">{d?`Ukończony · ${fmt(moduleScore(ms,m))}/4`:Object.keys(ms).length?`W trakcie · ${fmt(moduleScore(ms,m))}/4`:'4 kroki · ok. 6 min'}</span></button>;})}</div></>
   :<><button className="text-button" onClick={()=>setActive(null)}><Icon name="left" size={18}/>Wszystkie moduły</button><Module key={mod.id} mod={mod} ms={mods[mod.id]||{}} save={ms=>save(mod.id,ms)} onBack={()=>setActive(null)}/></>}
  </div>;
 }

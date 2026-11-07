@@ -1,6 +1,7 @@
 export const SOLUTION_HTML="<!DOCTYPE html>\n<html lang=\"pl\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>Pracownia po lekcjach</title>\n<link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n<main>\n<h1>Pracownia po lekcjach</h1>\n<p>Otwarte zajęcia dla osób, które chcą sprawdzić własny pomysł.</p>\n<h2>Co możesz zrobić</h2>\n<ul><li>przetestować program</li><li>poprawić stronę</li><li>zaprojektować prosty układ</li></ul>\n<h2>Kiedy przyjść</h2>\n<table><tr><th>Dzień</th><th>Godzina</th></tr><tr><td>Wtorek</td><td>15:00</td></tr><tr><td>Czwartek</td><td>15:00</td></tr></table>\n<p><a href=\"#kontakt\">Zobacz sposób kontaktu</a></p>\n<p id=\"kontakt\">Zapytaj nauczyciela w sali 12. Terminy są fikcyjnymi danymi ćwiczenia.</p>\n</main>\n</body>\n</html>\n";
 export const SOLUTION_CSS="body { font-family: Arial, sans-serif; font-size: 18px; color: #182f38; background-color: #f7fafc; line-height: 1.6; margin: 0; padding: 16px; }\nmain { max-width: 900px; margin: auto; }\ntable { width: 100%; border-collapse: collapse; }\nth, td { padding: 12px; border-bottom: 1px solid #64748b; text-align: left; }\na { color: #17477a; }\n";
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  "id": "91",
  "grade": 3,
  "order": 31,
@@ -64,7 +65,7 @@ export default {
     {
      "type": "choice",
      "id": "g3-91-r1",
-     "question": "Z projektu107: po co sprawdzasz STOP także wtedy, gdy jest przeszkoda?",
+     "question": "Z projektu sterowania robotem: po co sprawdzasz STOP także wtedy, gdy jest przeszkoda?",
      "options": [
       "Żeby sprawdzić priorytet w trudniejszym przypadku",
       "Żeby zmienić nazwę robota",
@@ -417,3 +418,4 @@ export default {
  ],
  "exitTicket": "Co poprawiłeś po teście i jak sprawdziłeś, że odbiorca łatwiej skorzysta ze strony?"
 };
+export default normalizeLessonReferences(referencedLesson);

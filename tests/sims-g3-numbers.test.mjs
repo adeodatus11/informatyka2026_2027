@@ -1,4 +1,5 @@
 import test from 'node:test';
+import {fileURLToPath} from 'node:url';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {loadPyodide} from 'pyodide';
@@ -12,7 +13,7 @@ import l90 from '../content/lessons/90-fractions-python-g3.js';
 const ALL=[l87,l88,l89,l90];
 const acts=l=>l.sections.flatMap(s=>s.activities);
 const rows=JSON.parse(readFileSync(new URL('../docs/rozklad-2026-2027.json',import.meta.url),'utf8'));
-const py=await loadPyodide({indexURL:new URL('../node_modules/pyodide/',import.meta.url).pathname});py.runPython(P.RUNNER_PY);
+const py=await loadPyodide({indexURL:fileURLToPath(new URL('../node_modules/pyodide/',import.meta.url))});py.runPython(P.RUNNER_PY);
 const run=req=>JSON.parse(py.globals.get('_pl_run')(JSON.stringify(req)));
 for(const l of ALL){
  test(`${l.id}: rozkład,45min,metody,powtórka i komplet źródeł`,()=>{

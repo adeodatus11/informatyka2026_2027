@@ -28,7 +28,8 @@ const sections = base.sections.map(s => ({
  teacherNotes: fix(s.teacherNotes),
 }));
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  ...base,
  id:'52',grade:3,order:22,
  title:'Programowanie algorytmu szyfrowania podstawieniowego',
@@ -43,3 +44,6 @@ export default {
  teacherGuide:{...base.teacherGuide, preparation:fix(base.teacherGuide.preparation)},
  sections
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

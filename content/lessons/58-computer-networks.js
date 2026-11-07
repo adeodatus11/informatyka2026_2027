@@ -4,7 +4,8 @@ import {note, choice} from '../schema.js';
 // ping/tracert/ipconfig w wierszu poleceń Windows 11 (decyzja nauczyciela: CMD dozwolony) + tryb zastępczy.
 // Logika: content/sims/netLab.js. Nie dublujemy: klient–serwer, URL, DNS, hosting (35, 38); sieć szkolna (14, kl. 3).
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'58',grade:1,order:31,
  title:'Sieci komputerowe',
  subtitle:'Dowiesz się, skąd się bierze lag w grze, jaki adres widzi serwer i co robi router w Twoim domu — i zmierzysz to w wierszu poleceń na tym komputerze.',
@@ -98,3 +99,4 @@ export default {
  ],
  exitTicket:'Zapamiętaj: w domu masz adres prywatny, a serwer widzi publiczny adres routera. Pliki lecą w pakietach różnymi trasami. Przy lagu: najpierw ping do bramy (Twoje Wi-Fi), potem do serwera (odległość) — i wybierz serwer gry najbliżej siebie.'
 };
+export default normalizeLessonReferences(referencedLesson);

@@ -75,14 +75,14 @@ export const modules=[
  {id:'money',letter:'C',title:'Pieniądze i praca',icon:'energy',lead:'Wakacyjna praca, podatek i zwrot na Twoje konto.',
   pit:{income:2400,costs:480,tax:230},
   steps:[
-   {id:'relief',kind:'toggle',title:'Twoje zeznanie (symulacja)',task:'W wakacje pracowałeś na umowie zlecenie: 2400 zł brutto. Nie złożyłeś pracodawcy oświadczenia o uldze, więc pobrał 230 zł zaliczki na podatek. Masz 16 lat. Uzupełnij gotowe zeznanie i kliknij „Przelicz”.',hint:'Masz mniej niż 26 lat — przysługuje Ci ulga dla młodych (PIT-0).'},
+   {id:'relief',kind:'toggle',title:'Zeznanie przykładowej osoby (symulacja)',task:'Przykładowa osoba ma 20 lat i kwalifikujące się przychody ze zlecenia poniżej limitu ulgi dla młodych. Płatnik omyłkowo pobrał zaliczkę 230 zł. Kwoty są danymi ćwiczenia. Sprawdź ulgę w gotowym zeznaniu i kliknij „Przelicz”.',hint:'Płatnik co do zasady stosuje ulgę w trakcie roku. W zeznaniu sprawdź dane i prawo do zwolnienia.'},
    {id:'refund',kind:'number',title:'Ile wróci?',task:'Po zaznaczeniu ulgi Twój podatek wynosi 0 zł. Ile pieniędzy odzyskasz?',answer:230,hint:'Państwo odda całą pobraną zaliczkę — sprawdź kwotę w polu „Zaliczki pobrane przez płatnika”.',unit:'zł'},
    {id:'account',kind:'choice',title:'Jak odbierzesz zwrot?',task:'Zeznanie gotowe. Jak bezpiecznie odebrać zwrot?',options:['Wpisuję numer swojego konta w zeznaniu i je akceptuję','Czekam na SMS „Urząd: potwierdź zwrot, zaloguj się do banku” i klikam link','Podaję numer konta w komentarzu pod postem „Zwroty podatku 2026 — pomagamy”'],correct:0,
     why:['','Urząd nie wysyła linków do logowania w banku. To phishing „na zwrot podatku”.','Obcy „pomocnicy” w komentarzach to często oszuści. Numer konta podajesz tylko w zeznaniu.']},
-   {id:'pesel',kind:'choice',title:'Zastrzeż PESEL',task:'Na koniec: w aplikacji możesz bezpłatnie zastrzec PESEL. Po co?',options:['Żeby nikt nie wziął kredytu ani nie założył konta na moje dane — bank musi to sprawdzić','Żeby nie płacić podatku','Żeby nikt nie mógł wysłać mi SMS-a'],correct:0,
+   {id:'pesel',kind:'choice',title:'Zastrzeżenie PESEL po pełnoletności',task:'Przykładowa osoba ma 20 lat. Może bezpłatnie zastrzec swój PESEL. Po co?',options:['Aby ograniczyć ryzyko wyłudzenia kredytu — instytucja sprawdza status w wymaganych prawem sytuacjach','Żeby nie płacić podatku','Żeby nikt nie mógł wysłać mi SMS-a'],correct:0,
     why:['','Zastrzeżenie PESEL nie ma nic wspólnego z podatkami.','SMS-y dalej będą przychodzić. Zastrzeżenie chroni przed kredytem lub umową na Twoje dane.']}
   ],
-  expert:['Do 26 lat masz ulgę dla młodych (PIT-0): przychody z pracy do 85 528 zł rocznie bez podatku. Złóż pracodawcy oświadczenie, to nie pobierze zaliczki.','Jeśli pobrał — odzyskasz ją w zeznaniu (Twój e-PIT, od 15 lutego): zaznacz ulgę, podaj swój numer konta. Zwrot do 45 dni.','Zastrzeż PESEL w mObywatelu (bezpłatnie, możesz czasowo cofnąć) — oszust nie weźmie kredytu na Ciebie.']}
+  expert:['Ulga dla młodych obejmuje wskazane ustawowo przychody osób przed 26. urodzinami, do 85 528 zł rocznie. Płatnik co do zasady stosuje ją automatycznie; nie jest to zwolnienie z każdego podatku i składki.','W Twój e-PIT sprawdź dane i ulgę uwzględnianą na podstawie informacji płatnika. Jeśli powstała nadpłata, sprawdź sposób zwrotu; dane ćwiczenia nie wyliczają rzeczywistego podatku konkretnej osoby.','PESEL może zastrzec osoba pełnoletnia. Ogranicza to skutki wybranych wyłudzeń, ale nie usuwa wszystkich zagrożeń kradzieży tożsamości.']}
 ];
 
 export function moduleById(id){return modules.find(m=>m.id===id);}
@@ -105,6 +105,7 @@ export function moduleDone(ms={},mod){return mod.steps.every(st=>ms[st.id]?.ok);
 export function expertResult(state={}){
  const mods=state.modules||{};
  const finished=modules.filter(m=>moduleDone(mods[m.id],m));
+ if(state.requireAll){const score=modules.reduce((sum,m)=>sum+moduleScore(mods[m.id],m),0);return {done:finished.length===modules.length,score,max:12,summary:`Wykonane sprawy: ${finished.length}/${modules.length} · ${score}/12 pkt`};}
  const best=Math.max(0,...modules.map(m=>moduleDone(mods[m.id],m)?moduleScore(mods[m.id],m):0));
  const bestMod=modules.find(m=>moduleDone(mods[m.id],m)&&moduleScore(mods[m.id],m)===best);
  return {done:finished.length>=1,score:best,max:4,summary:finished.length?`Ekspert: ${bestMod.title} (${String(best).replace('.',',')}/4)${finished.length>1?` · ukończone moduły: ${finished.map(m=>m.title).join(', ')}`:''}`:undefined};

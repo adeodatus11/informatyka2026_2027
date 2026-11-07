@@ -311,7 +311,7 @@
         "g100-export",
         "g100-exit"
       ],
-      "evidence": "Dobieram selekcję do prostego obiektu. Tworzę maskę warstwy zamiast kasować oryginał. Poprawiam brzeg i oznaczam zmienione tło. Dowód: Z lekcji 99: co robi wyłączenie widoczności warstwy?; Chcesz móc poprawić krawędź paczki po zmianie tła. Co wybrać?; Wykonaj w PhotoCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Dlaczego trzeba oznaczyć zmianę tła?; Co poprawiłeś w masce i dlaczego zmiana tła wymaga oznaczenia?",
+      "evidence": "Dobieram selekcję do prostego obiektu. Tworzę maskę warstwy zamiast kasować oryginał. Poprawiam brzeg i oznaczam zmienione tło. Dowód: Z lekcji „Tworzenie obrazu i praca z warstwami w programie GIMP”: co robi wyłączenie widoczności warstwy?; Chcesz móc poprawić krawędź paczki po zmianie tła. Co wybrać?; Wykonaj w PhotoCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Dlaczego trzeba oznaczyć zmianę tła?; Co poprawiłeś w masce i dlaczego zmiana tła wymaga oznaczenia?",
       "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
       "migraReference": "M1",
       "numberInGrade": 16
@@ -334,7 +334,7 @@
         "g101-export",
         "g101-exit"
       ],
-      "evidence": "Kadruję i poprawiam obraz na kopii. Rozróżniam rozmiar w pikselach, PPI i wagę pliku. Porównuję eksport PNG i JPEG przed wyborem wersji. Dowód: Z lekcji 100: po co zachować oryginał i robić poprawki na kopii?; Obraz ma 900 × 600 px. Zmieniasz tylko PPI, bez przeliczania pikseli. Co się stanie?; Wykonaj w PhotoCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; JPEG jest mniejszy, ale wokół krawędzi widać kwadraty i poświatę. Co zrobisz?; Dlaczego wybrany format nadaje się do Twojego obrazu? Podaj porównanie detalu i wagi pliku.",
+      "evidence": "Kadruję i poprawiam obraz na kopii. Rozróżniam rozmiar w pikselach, PPI i wagę pliku. Porównuję eksport PNG i JPEG przed wyborem wersji. Dowód: Z lekcji „Stosowanie narzędzi selekcji w programie GIMP”: po co zachować oryginał i robić poprawki na kopii?; Obraz ma 900 × 600 px. Zmieniasz tylko PPI, bez przeliczania pikseli. Co się stanie?; Wykonaj w PhotoCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; JPEG jest mniejszy, ale wokół krawędzi widać kwadraty i poświatę. Co zrobisz?; Dlaczego wybrany format nadaje się do Twojego obrazu? Podaj porównanie detalu i wagi pliku.",
       "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
       "migraReference": "M1",
       "numberInGrade": 17
@@ -789,7 +789,7 @@
         "g103-export",
         "g103-exit"
       ],
-      "evidence": "Odróżniam figurę od otwartej i zamkniętej ścieżki. Rysuję zamkniętą ścieżkę i poprawiam jej punkt. Łączę ścieżkę z figurą w czytelny znak. Dowód: Z lekcji 102: czym jest obrys figury?; Chcesz wydłużyć tylko czubek strzałki. Co wybierzesz?; Wykonaj w VectorCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Co jest lepszym dowodem, że strzałka jest edytowalną ścieżką?; Który punkt zmieniłeś i po czym poznajesz, że ścieżka nadal jest zamknięta?",
+      "evidence": "Odróżniam figurę od otwartej i zamkniętej ścieżki. Rysuję zamkniętą ścieżkę i poprawiam jej punkt. Łączę ścieżkę z figurą w czytelny znak. Dowód: Z lekcji „Tworzenie rysunków w grafice wektorowej”: czym jest obrys figury?; Chcesz wydłużyć tylko czubek strzałki. Co wybierzesz?; Wykonaj w VectorCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Co jest lepszym dowodem, że strzałka jest edytowalną ścieżką?; Który punkt zmieniłeś i po czym poznajesz, że ścieżka nadal jest zamknięta?",
       "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
       "migraReference": "M1",
       "numberInGrade": 38
@@ -812,7 +812,7 @@
         "g104-export",
         "g104-exit"
       ],
-      "evidence": "Buduję wrażenie przestrzeni z płaskich figur. Kopiuję, skaluję i obracam obiekt bez utraty edytowalności. Porządkuję rysunek na nazwanych warstwach i eksportuję SVG. Dowód: Z lekcji 103: czym różni się przesunięcie punktu od przesunięcia obiektu?; Pudełko po zmniejszeniu wygląda na rozciągnięte. Co poprawić?; Wykonaj w VectorCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Czy ten rysunek nadaje się jako gotowy model do drukarki 3D?; Jaką kolejność obiektów wybrałeś i dlaczego ten rysunek nadal jest grafiką 2D?",
+      "evidence": "Buduję wrażenie przestrzeni z płaskich figur. Kopiuję, skaluję i obracam obiekt bez utraty edytowalności. Porządkuję rysunek na nazwanych warstwach i eksportuję SVG. Dowód: Z lekcji „Rysowanie figur i ścieżek w programie Inkscape”: czym różni się przesunięcie punktu od przesunięcia obiektu?; Pudełko po zmniejszeniu wygląda na rozciągnięte. Co poprawić?; Wykonaj w VectorCraft; Popraw, wyeksportuj i otwórz wynik; Samoocena pliku — 0–8 pkt; Czy ten rysunek nadaje się jako gotowy model do drukarki 3D?; Jaką kolejność obiektów wybrałeś i dlaczego ten rysunek nadal jest grafiką 2D?",
       "limitations": "Quiz sprawdza wiedzę, samoocena jest deklaracją. Nauczyciel ogląda rzeczywisty plik; brak automatycznej analizy grafiki.",
       "migraReference": "M1",
       "numberInGrade": 39
@@ -897,7 +897,7 @@
         "x72-good"
       ],
       "evidence": "Projekt z geografii: klimatogram z danych publicznych (IMGW), wykres kombi i 2–3 wnioski z liczbami.",
-      "limitations": "Dane IMGW i GUS wpisane do weryfikacji przez nauczyciela; IV.1 częściowo (projekt samodzielny lub w parze).",
+      "limitations": "Dane IMGW i GUS wpisane do weryfikacji przez nauczyciela; IV.1 częściowo (projekt samodzielny).",
       "migraReference": "M1"
     },
     {
@@ -979,7 +979,7 @@
         "p76-rehearse-steps"
       ],
       "evidence": "Projekt: prezentacja o Fryderyku Chopinie dla konkretnego odbiorcy (6–8 slajdów), prompt do grafiki AI jako opcja z oznaczeniem, próba wystąpienia.",
-      "limitations": "Fakty biograficzne do weryfikacji; IV.1 częściowo (projekt samodzielny lub w parze).",
+      "limitations": "Fakty biograficzne do weryfikacji; IV.1 częściowo (projekt samodzielny).",
       "migraReference": "M1"
     },
     {
@@ -1023,7 +1023,7 @@
         "77-fix",
         "77-own"
       ],
-      "evidence": "Definiuję funkcję z parametrem i return. Odróżniam wyświetlenie wyniku od zwrócenia wartości. Testuję funkcję dla różnych danych. Dowód: Z lekcji 68: co kończy pętlę while?; Przewidź wynik; Zmień rabat na 20%; Ułóż działający kod; Napraw None zamiast ceny; Policz koszt biletów dla grupy",
+      "evidence": "Definiuję funkcję z parametrem i return. Odróżniam wyświetlenie wyniku od zwrócenia wartości. Testuję funkcję dla różnych danych. Dowód: Z lekcji „Stosowanie instrukcji iteracyjnych for i while w języku Python”: co kończy pętlę while?; Przewidź wynik; Zmień rabat na 20%; Ułóż działający kod; Napraw None zamiast ceny; Policz koszt biletów dla grupy",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 49
@@ -1071,7 +1071,7 @@
         "79-fix",
         "79-own"
       ],
-      "evidence": "Tworzę listę i dopisuję element. Odczytuję indeks, długość i wycinek. Sprawdzam obecność elementu przez in. Dowód: Z lekcji 78: jak wywołasz funkcję baner bez parametrów?; Przewidź wynik; Dopisz chleb do zakupów; Ułóż działający kod; Napraw indeks poza zakresem; Sprawdź czy produkt jest na liście",
+      "evidence": "Tworzę listę i dopisuję element. Odczytuję indeks, długość i wycinek. Sprawdzam obecność elementu przez in. Dowód: Z lekcji „Funkcje niezwracające wartości w języku Python”: jak wywołasz funkcję baner bez parametrów?; Przewidź wynik; Dopisz chleb do zakupów; Ułóż działający kod; Napraw indeks poza zakresem; Sprawdź czy produkt jest na liście",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 51
@@ -1095,7 +1095,7 @@
         "80-fix",
         "80-own"
       ],
-      "evidence": "Liczę sumę, minimum, maksimum i średnią. Sortuję listę bez zmiany oryginału. Filtruję listę pętlą i warunkiem. Dowód: Z lekcji 79: jaki indeks ma pierwszy element listy?; Przewidź wynik; Zrób ranking malejąco; Ułóż działający kod; Średnia także dla pustej listy; Wybierz wyniki od progu",
+      "evidence": "Liczę sumę, minimum, maksimum i średnią. Sortuję listę bez zmiany oryginału. Filtruję listę pętlą i warunkiem. Dowód: Z lekcji „Definiowanie i stosowanie listy w języku Python”: jaki indeks ma pierwszy element listy?; Przewidź wynik; Zrób ranking malejąco; Ułóż działający kod; Średnia także dla pustej listy; Wybierz wyniki od progu",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 52
@@ -1123,7 +1123,7 @@
         "ps-digits",
         "ps-nick"
       ],
-      "evidence": "Odczytuję znaki i fragmenty napisu przez indeksy i wycinki, także ujemne. Używam len, upper, lower, strip, split, find, count i replace i wiem, co zwracają. Przechodzę pętlą for po znakach napisu i zamieniam znaki na kody (ord, chr). Piszę funkcje do maskowania numeru, poprawiania imion i sprawdzania nicku, które przechodzą testy. Dowód: Z lekcji 80: Co daje sorted([3, 1, 2])?; Co wypisze ten program?; Imię wielkimi literami i jego długość; Przewidź: indeksy i wycinki; Maskowanie numeru karty; Poprawianie imienia i nazwiska; Układanka: inicjały „J.K.”; Przykład rozwiązany: liczę cyfry w haśle; Ile cyfr ma hasło?; Walidator nicku: nick_ok(nick)",
+      "evidence": "Odczytuję znaki i fragmenty napisu przez indeksy i wycinki, także ujemne. Używam len, upper, lower, strip, split, find, count i replace i wiem, co zwracają. Przechodzę pętlą for po znakach napisu i zamieniam znaki na kody (ord, chr). Piszę funkcje do maskowania numeru, poprawiania imion i sprawdzania nicku, które przechodzą testy. Dowód: Z lekcji „Wykonywanie operacji na elementach listy w języku Python”: Co daje sorted([3, 1, 2])?; Co wypisze ten program?; Imię wielkimi literami i jego długość; Przewidź: indeksy i wycinki; Maskowanie numeru karty; Poprawianie imienia i nazwiska; Układanka: inicjały „J.K.”; Przykład rozwiązany: liczę cyfry w haśle; Ile cyfr ma hasło?; Walidator nicku: nick_ok(nick)",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 53
@@ -1146,7 +1146,7 @@
         "ta-match",
         "ta-badminton"
       ],
-      "evidence": "Porównuję dwa teksty znak po znaku i wyjaśniam, dlaczego komputer stawia „Zosia” przed „adam”. Przewiduję wynik zliczania znaku, sprawdzania palindromu i anagramu dla podanych słów. Wykonuję krok po kroku wyszukiwanie wzorca metodą naiwną i liczę okna oraz porównania. Rozpoznaję, który algorytm na tekstach działa w Ctrl+F, filtrze nicków i liście kontaktów. Dowód: Z lekcji 81: Co oznacza napis[0]?; Porównywanie tekstów (kontakty); Detektyw tekstów: 7 zagadek; Wyszukiwanie wzorca: 2 rundy i koszt; Dopasuj sytuację do algorytmu, który wykonuje najważniejszą pracę.; Gra odrzuca każdy nick, w którym występuje słowo „admin” (bez względu na wielkość liter). Który nick zostanie odrzucony, choć nikt się pod admina nie podszywa?",
+      "evidence": "Porównuję dwa teksty znak po znaku i wyjaśniam, dlaczego komputer stawia „Zosia” przed „adam”. Przewiduję wynik zliczania znaku, sprawdzania palindromu i anagramu dla podanych słów. Wykonuję krok po kroku wyszukiwanie wzorca metodą naiwną i liczę okna oraz porównania. Rozpoznaję, który algorytm na tekstach działa w Ctrl+F, filtrze nicków i liście kontaktów. Dowód: Z lekcji „Dane tekstowe w języku Python”: Co oznacza napis[0]?; Porównywanie tekstów (kontakty); Detektyw tekstów: 7 zagadek; Wyszukiwanie wzorca: 2 rundy i koszt; Dopasuj sytuację do algorytmu, który wykonuje najważniejszą pracę.; Gra odrzuca każdy nick, w którym występuje słowo „admin” (bez względu na wielkość liter). Który nick zostanie odrzucony, choć nikt się pod admina nie podszywa?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 54
@@ -1172,7 +1172,7 @@
         "pc-pal2",
         "pc-anagram"
       ],
-      "evidence": "Piszę funkcję zliczającą znak w pętli i porównuję jej wynik z metodą count. Programuję porównanie leksykograficzne znak po znaku i wyjaśniam wynik dla wielkich liter i polskich znaków. Sprawdzam palindrom dwoma wskaźnikami, także dla zdań (bez spacji i wielkości liter). Dobieram testy brzegowe: pusty tekst, brak znaku, wielkość liter, spacje, polskie znaki. Dowód: Z lekcji 92: Jak sprawdzasz palindrom?; Znajdź błąd: co wypisze ten program?; Poziom 1: zlicz(tekst, znak); Układanka: mniejszy(a, b); Sprawdź: kontakty po kodach; Poziom 3a: czy_palindrom(t); Poziom 3b: palindrom zdaniowy; Poziom 4: czy_anagram(a, b)",
+      "evidence": "Piszę funkcję zliczającą znak w pętli i porównuję jej wynik z metodą count. Programuję porównanie leksykograficzne znak po znaku i wyjaśniam wynik dla wielkich liter i polskich znaków. Sprawdzam palindrom dwoma wskaźnikami, także dla zdań (bez spacji i wielkości liter). Dobieram testy brzegowe: pusty tekst, brak znaku, wielkość liter, spacje, polskie znaki. Dowód: Z lekcji „Wybrane algorytmy na tekstach”: Jak sprawdzasz palindrom?; Znajdź błąd: co wypisze ten program?; Poziom 1: zlicz(tekst, znak); Układanka: mniejszy(a, b); Sprawdź: kontakty po kodach; Poziom 3a: czy_palindrom(t); Poziom 3b: palindrom zdaniowy; Poziom 4: czy_anagram(a, b)",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 55
@@ -1194,7 +1194,7 @@
         "tl-pattern",
         "94-edge"
       ],
-      "evidence": "Wyznaczam możliwe okna wzorca. Wykonuję porównania od lewej i zatrzymuję się na różnicy. Znajduję nakładające się wystąpienia. Dowód: Z lekcji 93: kiedy porównywanie dwóch napisów może się skończyć?; Tekst ma 5 znaków, wzorzec 2. Ile okien mieści cały wzorzec?; Wzorzec aa w tekście aaaa pasuje na pozycjach:; Wyszukiwanie wzorca: 2 rundy i koszt; Co, gdy wzorzec jest dłuższy od tekstu?",
+      "evidence": "Wyznaczam możliwe okna wzorca. Wykonuję porównania od lewej i zatrzymuję się na różnicy. Znajduję nakładające się wystąpienia. Dowód: Z lekcji „Programowanie wybranych algorytmów na tekstach”: kiedy porównywanie dwóch napisów może się skończyć?; Tekst ma 5 znaków, wzorzec 2. Ile okien mieści cały wzorzec?; Wzorzec aa w tekście aaaa pasuje na pozycjach:; Wyszukiwanie wzorca: 2 rundy i koszt; Co, gdy wzorzec jest dłuższy od tekstu?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 56
@@ -1219,7 +1219,7 @@
         "pw-chat",
         "pw-find"
       ],
-      "evidence": "Śledzę algorytm naiwny i wskazuję okna, w których znaleziono wzorzec. Układam funkcję zwracającą listę wszystkich wystąpień, także nakładających się i na końcu tekstu. Mierzę liczbę porównań i wyjaśniam, dlaczego wyniki różnią się od count. Wykorzystuję własne wyszukiwanie w wyszukiwarce wiadomości bez względu na wielkość liter. Dowód: Z lekcji 94: Ile okien dla tekstu 4-znakowego i wzorca 2-znakowego?; Algorytm naiwny krok po kroku; Układanka: znajdz_wszystkie; Licznik porównań: ile_porownan(tekst, wzorzec); Przewidź: find i count w logach serwera; Wyszukiwarka czatu: szukaj(czat, fraza); Bonus: moje_find — pokonaj str.find",
+      "evidence": "Śledzę algorytm naiwny i wskazuję okna, w których znaleziono wzorzec. Układam funkcję zwracającą listę wszystkich wystąpień, także nakładających się i na końcu tekstu. Mierzę liczbę porównań i wyjaśniam, dlaczego wyniki różnią się od count. Wykorzystuję własne wyszukiwanie w wyszukiwarce wiadomości bez względu na wielkość liter. Dowód: Z lekcji „Wyszukiwanie wzorca w tekście metodą naiwną”: Ile okien dla tekstu 4-znakowego i wzorca 2-znakowego?; Algorytm naiwny krok po kroku; Układanka: znajdz_wszystkie; Licznik porównań: ile_porownan(tekst, wzorzec); Przewidź: find i count w logach serwera; Wyszukiwarka czatu: szukaj(czat, fraza); Bonus: moje_find — pokonaj str.find",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 57
@@ -1242,7 +1242,7 @@
         "binary-range",
         "binary-byte"
       ],
-      "evidence": "Odczytuję wagi bitów od prawej. Zapisuję liczbę jako sumę potęg dwójki. Rozpoznaję zakres jednego bajtu. Dowód: Z lekcji 95: co zwraca znajdz_wszystkie, gdy nie ma trafień?; Ile wynosi 00010110₂ w systemie dziesiętnym?; Czy 00101₂ i 101₂ mają tę samą wartość?; Który zapis ośmiobitowy oznacza 19₁₀?; 42 = 32 + 8 + 2. Który zapis jest poprawny?; Rozpisz zamianę 26₁₀ na system dwójkowy i sprawdź wynik sumą wag.; Jaka jest największa liczba całkowita bez znaku na 8 bitach?; Ile bitów zawierają 3 bajty?",
+      "evidence": "Odczytuję wagi bitów od prawej. Zapisuję liczbę jako sumę potęg dwójki. Rozpoznaję zakres jednego bajtu. Dowód: Z lekcji „Programowanie algorytmu wyszukiwania wzorca w tekście metodą naiwną”: co zwraca znajdz_wszystkie, gdy nie ma trafień?; Ile wynosi 00010110₂ w systemie dziesiętnym?; Czy 00101₂ i 101₂ mają tę samą wartość?; Który zapis ośmiobitowy oznacza 19₁₀?; 42 = 32 + 8 + 2. Który zapis jest poprawny?; Rozpisz zamianę 26₁₀ na system dwójkowy i sprawdź wynik sumą wag.; Jaka jest największa liczba całkowita bez znaku na 8 bitach?; Ile bitów zawierają 3 bajty?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 58
@@ -1262,7 +1262,7 @@
         "hex-escape",
         "hex-color"
       ],
-      "evidence": "Zamieniam liczby między systemami dziesiętnym, dwójkowym i szesnastkowym. Wyjaśniam, dlaczego jedna cyfra szesnastkowa odpowiada czterem bitom, a dwie — bajtowi. Odczytuję kolor zapisany jako #RRGGBB i rozpoznaję producenta w adresie MAC. Odszyfrowuję krótki tekst zapisany jako bajty ASCII w hex. Dowód: Z lekcji 96: Ile dziesiętnie wynosi 1010 w systemie dwójkowym?; Konwerter czwórek: 4 zadania; Ucieczka z serwerowni: 4 kłódki; Gra: Trafisz kolor?",
+      "evidence": "Zamieniam liczby między systemami dziesiętnym, dwójkowym i szesnastkowym. Wyjaśniam, dlaczego jedna cyfra szesnastkowa odpowiada czterem bitom, a dwie — bajtowi. Odczytuję kolor zapisany jako #RRGGBB i rozpoznaję producenta w adresie MAC. Odszyfrowuję krótki tekst zapisany jako bajty ASCII w hex. Dowód: Z lekcji „System dwójkowy”: Ile dziesiętnie wynosi 1010 w systemie dwójkowym?; Konwerter czwórek: 4 zadania; Ucieczka z serwerowni: 4 kłódki; Gra: Trafisz kolor?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 59
@@ -1287,7 +1287,7 @@
         "98-fix",
         "98-own"
       ],
-      "evidence": "Odczytuję liczbę metodą mnożenia i dodawania. Tworzę zapis z reszt dzielenia. Sprawdzam zero, błędną cyfrę i podstawę. Dowód: Z lekcji 97: ile wynosi FF szesnastkowo?; Przewidź wynik; Odczytaj zapis o podstawie 2, 10 lub 16; Ułóż działający kod; Napraw zero w zapisie dwójkowym; Zapisz liczbę w wybranym systemie",
+      "evidence": "Odczytuję liczbę metodą mnożenia i dodawania. Tworzę zapis z reszt dzielenia. Sprawdzam zero, błędną cyfrę i podstawę. Dowód: Z lekcji „System szesnastkowy”: ile wynosi FF szesnastkowo?; Przewidź wynik; Odczytaj zapis o podstawie 2, 10 lub 16; Ułóż działający kod; Napraw zero w zapisie dwójkowym; Zapisz liczbę w wybranym systemie",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 60
@@ -1305,8 +1305,8 @@
         "zw-explore",
         "zw-board"
       ],
-      "evidence": "Ponowne użycie lekcji 22 (klasa 3): odczyt relacji i integralność danych w bazie zawodów.",
-      "limitations": "Wprowadzenie do baz; dalsze tematy baz danych w lekcjach 05, 10–12.",
+      "evidence": "Ponowne użycie lekcji „Podstawowe pojęcia i przykład bazy danych – obsługa szkolnych zawodów pływackich” (klasa 3): odczyt relacji i integralność danych w bazie zawodów.",
+      "limitations": "Wprowadzenie do baz; dalsze tematy baz danych w lekcjach „Tworzenie bazy danych – obsługa gabinetu stomatologicznego”, 10–12.",
       "migraReference": "M2"
     },
     {
@@ -1323,7 +1323,7 @@
         "zq-l2",
         "zq-l3"
       ],
-      "evidence": "Ponowne użycie lekcji 25 (klasa 3): kwerendy z kryteriami, sortowaniem, relacjami i podsumowaniem.",
+      "evidence": "Ponowne użycie lekcji „Zasady tworzenia kwerend na przykładzie bazy Zawody” (klasa 3): kwerendy z kryteriami, sortowaniem, relacjami i podsumowaniem.",
       "limitations": "SQL jest podglądem projektu, nie osobnym edytorem języka.",
       "migraReference": "M2"
     },
@@ -1699,7 +1699,7 @@
         "r84-lab",
         "r84-transfer"
       ],
-      "evidence": "Łączę odczyty deszczu i kontaktronu. Steruję serwem i buzzerem. Testuję STOP i zamknięte okno. Dowód: Z lekcji 83: co robi histereza?; Pada, ale kontaktron zgłasza zamknięte okno. Jakie polecenie jest właściwe?; Program i próby; Pada i okno jest otwarte, ale ktoś nacisnął STOP. Co wyślesz?",
+      "evidence": "Łączę odczyty deszczu i kontaktronu. Steruję serwem i buzzerem. Testuję STOP i zamknięte okno. Dowód: Z lekcji „Sterowanie nawadnianiem ogrodu – zadania szczegółowe”: co robi histereza?; Pada, ale kontaktron zgłasza zamknięte okno. Jakie polecenie jest właściwe?; Program i próby; Pada i okno jest otwarte, ale ktoś nacisnął STOP. Co wyślesz?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 27
@@ -2068,8 +2068,8 @@
         "cipher-duel",
         "cipher-crack"
       ],
-      "evidence": "Ponowne użycie lekcji 16 (klasa 2): szyfrowanie, deszyfrowanie i sprawdzanie kluczy.",
-      "limitations": "Jak w lekcji 16; pojedynek w parze opcjonalny.",
+      "evidence": "Ponowne użycie lekcji „Szyfrowanie tekstu metodą podstawieniową” (klasa 2): szyfrowanie, deszyfrowanie i sprawdzanie kluczy.",
+      "limitations": "Jak w lekcji o szyfrach podstawieniowych; samodzielne szyfrowanie i niezależna zagadka do odszyfrowania.",
       "migraReference": "M3"
     },
     {
@@ -2090,8 +2090,8 @@
         "cp-cipher",
         "cp-crack"
       ],
-      "evidence": "Ponowne użycie lekcji 17 (klasa 2): program szyfrujący w Pythonie z testami.",
-      "limitations": "Jak w lekcji 17; praca samodzielna.",
+      "evidence": "Ponowne użycie lekcji „Programowanie algorytmu szyfrowania tekstu metodą podstawieniową” (klasa 2): program szyfrujący w Pythonie z testami.",
+      "limitations": "Jak w lekcji „Programowanie algorytmu szyfrowania tekstu metodą podstawieniową”; praca samodzielna.",
       "migraReference": "M3"
     },
     {
@@ -2138,7 +2138,7 @@
         "g3-87-fix",
         "g3-87-byte"
       ],
-      "evidence": "Zamieniam liczbę dziesiętną na dwójkową przez dzielenie z resztą. Obsługuję zero i odwróconą kolejność reszt. Sprawdzam zakres bajtu i porównuję wynik z format. Dowód: Z lekcji 57: Horner dla 101 to:; Jak poprzednio odrzucaliśmy zapis 102 jako dwójkowy?; Przewidź przed uruchomieniem; Zmień liczbę na 10; na_dwojkowy(n); Nie zgub zera; bajt(n)",
+      "evidence": "Zamieniam liczbę dziesiętną na dwójkową przez dzielenie z resztą. Obsługuję zero i odwróconą kolejność reszt. Sprawdzam zakres bajtu i porównuję wynik z format. Dowód: Z lekcji „Programowanie zamiany liczby dwójkowej na dziesiętną”: Horner dla 101 to:; Jak poprzednio odrzucaliśmy zapis 102 jako dwójkowy?; Przewidź przed uruchomieniem; Zmień liczbę na 10; na_dwojkowy(n); Nie zgub zera; bajt(n)",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 23
@@ -2163,7 +2163,7 @@
         "g3-88-from",
         "g3-88-rgb"
       ],
-      "evidence": "Uogólniam dzielenie z resztą dla podstaw 2–16. Odrzucam cyfry niedozwolone w wybranej podstawie. Zamieniam zapis hex na trzy składowe RGB. Dowód: Z lekcji 87: dlaczego dopisujesz resztę z lewej?; Co na_dwojkowy(0) ma zwrócić?; Przewidź przed uruchomieniem; na_system(n, p); z_systemu(s, p); rgb(kod)",
+      "evidence": "Uogólniam dzielenie z resztą dla podstaw 2–16. Odrzucam cyfry niedozwolone w wybranej podstawie. Zamieniam zapis hex na trzy składowe RGB. Dowód: Z lekcji „Programowanie zamiany liczby dziesiętnej na dwójkową”: dlaczego dopisujesz resztę z lewej?; Co na_dwojkowy(0) ma zwrócić?; Przewidź przed uruchomieniem; na_system(n, p); z_systemu(s, p); rgb(kod)",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 24
@@ -2187,7 +2187,7 @@
         "nf-mix",
         "nf-exit"
       ],
-      "evidence": "Skracam ułamek w jednym kroku, dzieląc licznik i mianownik przez NWD. Dodaję i odejmuję ułamki, sprowadzając je do wspólnego mianownika równego NWW mianowników. Mnożę ułamki (przepis, rabat na rabat) i skracam wynik. Zamieniam proporcję (1:50, 1:1,5) na ułamek całości i liczę ilości składników. Dowód: Z lekcji 88: 255 dziesiętnie i FF szesnastkowo to:; Dlaczego z_systemu(\"2\", 2) ma zwrócić None?; Laboratorium ułamków · skracanie przez NWD; Laboratorium ułamków · dodawanie i odejmowanie; Laboratorium ułamków · mnożenie; Laboratorium ułamków · mieszanki w zawodach; Dlaczego 1/2 + 1/3 ≠ 2/5?",
+      "evidence": "Skracam ułamek w jednym kroku, dzieląc licznik i mianownik przez NWD. Dodaję i odejmuję ułamki, sprowadzając je do wspólnego mianownika równego NWW mianowników. Mnożę ułamki (przepis, rabat na rabat) i skracam wynik. Zamieniam proporcję (1:50, 1:1,5) na ułamek całości i liczę ilości składników. Dowód: Z lekcji „Zamiana liczb między systemami pozycyjnymi”: 255 dziesiętnie i FF szesnastkowo to:; Dlaczego z_systemu(\"2\", 2) ma zwrócić None?; Laboratorium ułamków · skracanie przez NWD; Laboratorium ułamków · dodawanie i odejmowanie; Laboratorium ułamków · mnożenie; Laboratorium ułamków · mieszanki w zawodach; Dlaczego 1/2 + 1/3 ≠ 2/5?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 25
@@ -2214,7 +2214,7 @@
         "fp-calc",
         "fp-exit"
       ],
-      "evidence": "Zapisuję ułamek jako krotkę (licznik, mianownik) i odczytuję jej elementy. Programuję skroc z nwd, dbając o mianownik 0 i znak minus (zawsze w liczniku). Programuję dodawanie, odejmowanie (przez NWW), mnożenie i dzielenie ułamków. Sprawdzam swój kalkulator testami i porównaniem z fractions.Fraction. Dowód: Z lekcji 89: przez co skrócisz18/24 od razu do końca?; Jak dodasz1/2+1/3?; Co wypisze program z krotką?; float kontra Fraction; skroc(licznik, mianownik); Układanka: dodaj(a, b); odejmij(a, b) w jednej linii; Kalkulator ułamków; Kalkulator kolegi dla kalkulator((1, 2), \":\", (0, 3)) wysypuje się błędem ZeroDivisionError. Co poprawiasz?",
+      "evidence": "Zapisuję ułamek jako krotkę (licznik, mianownik) i odczytuję jej elementy. Programuję skroc z nwd, dbając o mianownik 0 i znak minus (zawsze w liczniku). Programuję dodawanie, odejmowanie (przez NWW), mnożenie i dzielenie ułamków. Sprawdzam swój kalkulator testami i porównaniem z fractions.Fraction. Dowód: Z lekcji „Działania na ułamkach z wykorzystaniem NWD i NWW”: przez co skrócisz18/24 od razu do końca?; Jak dodasz1/2+1/3?; Co wypisze program z krotką?; float kontra Fraction; skroc(licznik, mianownik); Układanka: dodaj(a, b); odejmij(a, b) w jednej linii; Kalkulator ułamków; Kalkulator kolegi dla kalkulator((1, 2), \":\", (0, 3)) wysypuje się błędem ZeroDivisionError. Co poprawiasz?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 26
@@ -2237,7 +2237,7 @@
         "r83-lab",
         "r83-transfer"
       ],
-      "evidence": "Wyjaśniam histerezę na dwóch progach. Zachowuję stan między odczytami. Nadaję zabezpieczeniom pierwszeństwo. Dowód: Z lekcji 90: dlaczego kalkulator odrzuca mianownik 0?; Pompa już działa. Wilgotność wzrosła z 29% do 31%. Co robi w modelu z progami 30/50?; Program i próby; Po deszczu pompa jest wyłączona, wilgotność 35%. Czy ma się włączyć?",
+      "evidence": "Wyjaśniam histerezę na dwóch progach. Zachowuję stan między odczytami. Nadaję zabezpieczeniom pierwszeństwo. Dowód: Z lekcji „Skracanie i działania arytmetyczne na ułamkach”: dlaczego kalkulator odrzuca mianownik 0?; Pompa już działa. Wilgotność wzrosła z 29% do 31%. Co robi w modelu z progami 30/50?; Program i próby; Po deszczu pompa jest wyłączona, wilgotność 35%. Czy ma się włączyć?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 27
@@ -2260,7 +2260,7 @@
         "r105-lab",
         "r105-transfer"
       ],
-      "evidence": "Dobieram piny zasilania, masy i sygnałów. Przenoszę konfigurację tego samego modelu do programu. Sprawdzam pierwszeństwo STOP i granicę20 cm. Dowód: Z lekcji 106: dlaczego pompa ma dwa różne progi?; Rover-2: montaż układu; Program i próby; Przeszkoda jest dokładnie 20 cm od robota. Jaka decyzja pasuje do specyfikacji?",
+      "evidence": "Dobieram piny zasilania, masy i sygnałów. Przenoszę konfigurację tego samego modelu do programu. Sprawdzam pierwszeństwo STOP i granicę20 cm. Dowód: Z lekcji „Projekt sterowania nawadnianiem ogrodu”: dlaczego pompa ma dwa różne progi?; Rover-2: montaż układu; Program i próby; Przeszkoda jest dokładnie 20 cm od robota. Jaka decyzja pasuje do specyfikacji?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 28
@@ -2285,7 +2285,7 @@
         "g3-91-show",
         "g3-91-publish"
       ],
-      "evidence": "Planuję stronę pod konkretny cel i odbiorcę. Tworzę nagłówki, listę, tabelę i link w HTML. Oddzielam treść HTML od wyglądu CSS i sprawdzam podgląd. Dowód: Z projektu107: po co sprawdzasz STOP także wtedy, gdy jest przeszkoda?; Ułóż etapy pracy nad stroną dla pracowni.; Zapisz jedno zdanie: gdzie odbiorca znajdzie termin i po czym to sprawdzisz?; Strona pracowni: treść; Strona pracowni: czytelność; Gotowa strona pracowni; Co oznacza publikacja strony?",
+      "evidence": "Planuję stronę pod konkretny cel i odbiorcę. Tworzę nagłówki, listę, tabelę i link w HTML. Oddzielam treść HTML od wyglądu CSS i sprawdzam podgląd. Dowód: Z projektu sterowania robotem: po co sprawdzasz STOP także wtedy, gdy jest przeszkoda?; Ułóż etapy pracy nad stroną dla pracowni.; Zapisz jedno zdanie: gdzie odbiorca znajdzie termin i po czym to sprawdzisz?; Strona pracowni: treść; Strona pracowni: czytelność; Gotowa strona pracowni; Co oznacza publikacja strony?",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 29
@@ -2309,7 +2309,7 @@
         "g3-108-layout",
         "g3-108-show"
       ],
-      "evidence": "Oddzielam treść od wyglądu strony. Poprawiam typografię, kontrast i odstępy. Układam karty w grid lub flex i testuję wąskie okno. Dowód: Z lekcji 91: gdzie zmienisz kolor i odstępy wszystkich kart?; Co sprawdzasz przed publikacją?; Chcesz odstęp wewnątrz każdej karty. Co ustawisz?; Wyspy: czytelny tekst; Wyspy: własny układ CSS; Miniatlas po zmianie CSS",
+      "evidence": "Oddzielam treść od wyglądu strony. Poprawiam typografię, kontrast i odstępy. Układam karty w grid lub flex i testuję wąskie okno. Dowód: Z lekcji „Etapy tworzenia strony internetowej”: gdzie zmienisz kolor i odstępy wszystkich kart?; Co sprawdzasz przed publikacją?; Chcesz odstęp wewnątrz każdej karty. Co ustawisz?; Wyspy: czytelny tekst; Wyspy: własny układ CSS; Miniatlas po zmianie CSS",
       "limitations": "Ćwiczenia obejmują wskazany fragment PP, nie całość wymagania. Wynik symulacji nie potwierdza obsługi fizycznego urządzenia ani publikacji w internecie.",
       "migraReference": "M1",
       "numberInGrade": 30

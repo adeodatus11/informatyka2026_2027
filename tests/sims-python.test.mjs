@@ -2,6 +2,7 @@
 // Uruchom: node --test tests/sims-python.test.mjs
 // Kod Pythona wykonuje prawdziwe Pyodide (z node_modules) — ten sam RUNNER_PY co Web Worker w przeglądarce.
 import test from 'node:test';
+import {fileURLToPath} from 'node:url';
 import assert from 'node:assert/strict';
 import {readFileSync, existsSync} from 'node:fs';
 import {loadPyodide} from 'pyodide';
@@ -14,7 +15,7 @@ for (const f of LESSONS) {
   const url = new URL(`../content/lessons/${f}.js`, import.meta.url);
   if (existsSync(url)) lessons.push((await import(url)).default);
 }
-const py = await loadPyodide({indexURL: new URL('../node_modules/pyodide/', import.meta.url).pathname});
+const py = await loadPyodide({indexURL: fileURLToPath(new URL('../node_modules/pyodide/', import.meta.url))});
 py.runPython(P.RUNNER_PY);
 const runFn = py.globals.get('_pl_run');
 const run = req => JSON.parse(runFn(JSON.stringify(req)));

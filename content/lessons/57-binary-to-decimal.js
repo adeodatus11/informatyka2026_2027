@@ -7,7 +7,8 @@ const HORNER = `def horner(s):
     return wynik
 `;
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'57',grade:3,order:23,title:'Programowanie zamiany liczby dwójkowej na dziesiętną',
  subtitle:'Twój program odczyta maskę sieci 255.255.255.0 z bitów, uprawnienia plików „chmod 755” i wyłapie błędne dane, zanim popsują wynik.',
  topic:'Dwójkowy → dziesiętny w Pythonie',icon:'hash',tags:['wagi 2ⁿ','schemat Hornera','int(x, 2)'],duration:45,
@@ -161,3 +162,4 @@ export default {
  ],
  exitTicket:'Liczbę dwójkową zamieniasz na dziesiętną sumą wag (cyfra · 2 do potęgi) albo schematem Hornera (wynik = wynik · 2 + cyfra). Przed zamianą sprawdzasz dane: niepusty napis z samych 0 i 1. Tak program czyta adresy IP, maski i uprawnienia plików.'
 };
+export default normalizeLessonReferences(referencedLesson);

@@ -1,6 +1,7 @@
 import {note, choice} from '../schema.js';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'54',grade:3,order:18,title:'Praca z danymi tekstowymi w języku Python',
  subtitle:'Napiszesz kawałki kodu, które działają w każdej aplikacji: maskowanie karty „**** 1234”, poprawianie imion z formularza, inicjały i sprawdzanie nicku.',
  topic:'Napisy w Pythonie',icon:'idcard',tags:['indeksy','wycinki','metody str'],duration:45,
@@ -175,3 +176,4 @@ export default {
  ],
  exitTicket:'Napis to ciąg znaków z indeksami od 0. Wycinki [a:b] nie biorą końca, ujemne indeksy liczą od końca. Metody str tworzą nowe napisy, find zwraca −1, gdy nie znajdzie fragmentu, a pętla for przechodzi po znakach — tak liczysz cyfry, sprawdzasz nick i (wkrótce) szyfrujesz.'
 };
+export default normalizeLessonReferences(referencedLesson);

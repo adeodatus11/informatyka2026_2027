@@ -1,6 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'18',grade:2,order:16,title:'Algorytmy porządkowania liczb',
  subtitle:'Ranking w grze, ceny od najtańszej, playlista od najnowszej — sprawdź, czy posortujesz szybciej niż komputer.',
  topic:'Algorytmy porządkowania liczb',icon:'sort',tags:['Porównanie','Zamiana','n²'],duration:45,
@@ -89,3 +90,4 @@ export default {
  ],
  exitTicket:'Sortowanie to porównania i zamiany. Bąbelkowe robi n(n − 1)/2 porównań — 10 razy więcej danych to około 100 razy więcej pracy. Wstawianie jest świetne dla danych prawie posortowanych. Na lekcji 19 zapiszesz bąbelkowe w Pythonie.'
 };
+export default normalizeLessonReferences(referencedLesson);

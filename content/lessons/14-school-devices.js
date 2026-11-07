@@ -1,6 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'14',grade:3,order:3,title:'Urządzenia cyfrowe w szkole',
  subtitle:'Na praktykach i w pierwszej pracy to Ty będziesz „tym od komputerów”. Poćwicz na sieci szkoły i prawdziwych zgłoszeniach.',
  topic:'Urządzenia cyfrowe w szkole',icon:'board',tags:['Sieć szkoły','Helpdesk','OSE'],duration:40,
@@ -80,3 +81,6 @@ export default {
  ],
  exitTicket:'Wiesz, co robi router, przełącznik i punkt dostępowy, i umiesz przewidzieć skutki awarii. Przy zgłoszeniu najpierw pytasz, potem działasz — i nie obchodzisz zabezpieczeń.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

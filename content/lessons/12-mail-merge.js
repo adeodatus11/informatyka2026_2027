@@ -1,6 +1,7 @@
 import {note, choice} from '../schema.js';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'12',grade:2,order:13,title:'Przygotowanie korespondencji seryjnej',
  subtitle:'Jeden szablon → dziesiątki spersonalizowanych przypomnień i listów o praktyki w minutę.',
  topic:'Przygotowanie korespondencji seryjnej',icon:'mail',
@@ -74,3 +75,4 @@ export default {
  ],
  exitTicket:'Umiesz połączyć szablon z danymi z bazy lub arkusza, dodać reguły i sprawdzić wynik. Twój list o praktyki jest gotowy do wysłania — wystarczy przepisać go do Worda.'
 };
+export default normalizeLessonReferences(referencedLesson);

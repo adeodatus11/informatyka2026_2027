@@ -2,7 +2,8 @@ import {note, choice} from '../schema.js';
 
 const order=(n,label,question,criteria)=>({type:'schemaDesigner',id:`sd-z${n}`,stateKey:'schema-lab',mode:`z${n}`,points:4,label,question,criteria});
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'24',grade:3,order:7,title:'Tworzenie bazy danych – zadania',
  subtitle:'Trzy zlecenia z prawdziwych firm: wypożyczalnia, warsztat, biblioteka. Projektujesz bazę, a symulator sprawdza ją jak szef na praktykach.',
  topic:'Tworzenie bazy danych – zadania',icon:'table',
@@ -72,3 +73,4 @@ export default {
  ],
  exitTicket:'Umiesz zamienić opis klienta w bazę: tabele bez powtórzeń, klucze, typy i relacje — także w łańcuchu. Tak zaczyna się każda aplikacja: sklep, rezerwacje, e-dziennik.'
 };
+export default normalizeLessonReferences(referencedLesson);

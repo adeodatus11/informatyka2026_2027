@@ -1,6 +1,7 @@
 import {note, choice} from '../schema.js';
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'41',grade:1,order:35,title:'Komunikacja i wymiana informacji w Internecie',
  subtitle:'Jeden e-mail może dać Ci praktyki albo trafić do kosza. Napiszesz taki, na który pracodawca odpisze, i ogarniesz kłótnię na grupie bez dramy.',
  topic:'Komunikacja w sieci: dobór kanału, profesjonalny e-mail, netykieta i asertywność',icon:'mail',tags:['E-mail o praktyki','Netykieta','Asertywnie'],duration:45,
@@ -90,3 +91,6 @@ export default {
  ],
  exitTicket:'Pracodawca i szkoła: e-mail z tematem, „Dzień dobry”, kto/co/kiedy, CV w PDF, „Z poważaniem” i imię z nazwiskiem. Konflikt: prywatnie, fakt bez oceny, komunikat „ja”, prośba z terminem. Pilne łańcuszki: najpierw źródło, potem ewentualnie przekaż.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

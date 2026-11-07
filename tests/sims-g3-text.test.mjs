@@ -2,6 +2,7 @@
 // Uruchom: node --test tests/sims-g3-text.test.mjs
 // Logika textLab (czysty JS) + zadania pythonLab wykonywane w prawdziwym Pyodide (jak tests/sims-python.test.mjs).
 import test from 'node:test';
+import {fileURLToPath} from 'node:url';
 import assert from 'node:assert/strict';
 import {loadPyodide} from 'pyodide';
 import * as T from '../content/sims/textLab.js';
@@ -16,7 +17,7 @@ const B16 = await load('16-substitution-cipher'), B17 = await load('17-cipher-py
 const acts = l => l.sections.flatMap(s => s.activities);
 const labs = l => acts(l).filter(a => a.type === 'pythonLab');
 
-const py = await loadPyodide({indexURL: new URL('../node_modules/pyodide/', import.meta.url).pathname});
+const py = await loadPyodide({indexURL: fileURLToPath(new URL('../node_modules/pyodide/', import.meta.url))});
 py.runPython(P.RUNNER_PY);
 const runFn = py.globals.get('_pl_run');
 const run = req => JSON.parse(runFn(JSON.stringify(req)));

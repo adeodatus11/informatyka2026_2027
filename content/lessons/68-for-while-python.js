@@ -88,7 +88,8 @@ while proba != tajna:
 print(f"Trafione! Liczba prób: {licznik}")
 `;
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'68',grade:1,order:30,title:'Stosowanie instrukcji iteracyjnych for i while w języku Python',
  subtitle:'PIN z trzema próbami, kalkulator „ile tygodni do celu” i gra w zgadywanie liczby. Na koniec lekcji masz działający program, który sam pyta i sam odpowiada.',
  topic:'for czy while, pętla while z warunkiem, licznik prób, break, pętla nieskończona',icon:'lock',tags:['while','PIN i break','mini-gra'],duration:45,
@@ -222,3 +223,4 @@ export default {
  ],
  exitTicket:'Umiesz wybrać pętlę: for, gdy znasz liczbę powtórzeń, while, gdy czekasz na warunek. Rozpoznajesz pętlę nieskończoną po zmiennej, która nie zmienia się w warunku, kończysz pętlę przez break i masz działający kalkulator oszczędzania oraz grę.'
 };
+export default normalizeLessonReferences(referencedLesson);

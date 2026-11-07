@@ -68,7 +68,8 @@ for a in range(1, n + 1):
     print()
 `;
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'67',grade:1,order:29,title:'Instrukcje iteracyjne zagnieżdżone w języku Python',
  subtitle:'Terminarz turnieju „każdy z każdym”, tabliczka mnożenia i wzorki w terminalu: pętla w pętli robi całą tabelę jednym ruchem.',
  topic:'Pętla w pętli: wiersze i kolumny, end="", licznik wykonań, pary meczów',icon:'table',tags:['pętla w pętli','wzorki z *','turniej'],duration:45,
@@ -193,3 +194,6 @@ export default {
  ],
  exitTicket:'Umiesz zbudować pętlę w pętli: zewnętrzna przechodzi po wierszach, wewnętrzna po kolumnach. Liczysz wykonania (wiersze × kolumny), piszesz w jednym wierszu przez end="", a pary bez powtórek robisz przez range(a + 1, …).'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);
