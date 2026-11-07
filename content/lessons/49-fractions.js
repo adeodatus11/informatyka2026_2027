@@ -2,7 +2,8 @@ import {note, choice} from '../schema.js';
 
 const lab=(mode,id,label)=>({type:'numberLab',id,mode,label});
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'49',grade:2,order:23,title:'Działania na ułamkach zwykłych z wykorzystaniem NWD i NWW',
  subtitle:'Przepis na 4 osoby, a gości 6. Mieszanka 1:50 do kosiarki. Rabat na rabat, który wcale nie daje 45%. Ułamki z NWD i NWW ogarniesz na prawdziwych przykładach.',
  topic:'Skracanie przez NWD, wspólny mianownik przez NWW, dodawanie, odejmowanie i mnożenie ułamków',icon:'hash',tags:['skracanie','wspólny mianownik','proporcje'],duration:45,
@@ -68,3 +69,4 @@ export default {
  ],
  exitTicket:'Skracasz ułamki przez NWD, dodajesz i odejmujesz przez wspólny mianownik = NWW, mnożysz licznik przez licznik i mianownik przez mianownik. Umiesz przeliczyć przepis, sprawdzić podwójny rabat i policzyć mieszankę 1:50.'
 };
+export default normalizeLessonReferences(referencedLesson);

@@ -44,7 +44,8 @@ const FR = '(F := __import__("fractions").Fraction)';
 const SKROC_ALL = `${FR} and all(skroc(a, b) == (F(a, b).numerator, F(a, b).denominator) for a in range(-12, 13) for b in range(-12, 13) if b != 0)`;
 const MUL_ALL = `${FR} and all(pomnoz((a, b), (c, d)) == (F(a * c, b * d).numerator, F(a * c, b * d).denominator) for a in range(-4, 5) for b in range(1, 5) for c in range(-4, 5) for d in range(1, 5))`;
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'50',grade:2,order:24,title:'Programowanie działań na ułamkach z wykorzystaniem NWD i NWW',
  subtitle:'Python liczy 1/2 + 1/3 jako 0.8333333333333333. Przepis potrzebuje 5/6. Zbudujesz kalkulator ułamków zwykłych z własnym nwd — i sprawdzisz go biblioteką fractions.',
  topic:'Ułamki jako krotki (licznik, mianownik): skroc, dodaj, odejmij, pomnoz, podziel, kalkulator',icon:'code',tags:['krotki','kalkulator','Fraction'],duration:45,
@@ -189,3 +190,4 @@ export default {
  ],
  exitTicket:'Masz własny kalkulator ułamków zwykłych na krotkach: skroc z nwd, dodaj i odejmij przez NWW, pomnoz i podziel — z obsługą mianownika 0 i minusa, sprawdzony biblioteką fractions.'
 };
+export default normalizeLessonReferences(referencedLesson);

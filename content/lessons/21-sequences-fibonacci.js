@@ -1,6 +1,7 @@
 import {note, choice} from '../schema.js';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'21',grade:2,order:19,title:'Obliczanie wartości elementów ciągu metodą iteracyjną, w tym wartości elementów ciągu Fibonacciego',
  subtitle:'Ile uzbierasz, odkładając 50 zł miesięcznie? Ile da lokata po 10 latach? Napiszesz kalkulator, który to policzy — a przy okazji odkryjesz ciąg Fibonacciego.',
  topic:'Ciągi i Fibonacci w Pythonie',icon:'code',tags:['iteracja','Fibonacci','φ ≈ 1,618'],duration:45,
@@ -166,3 +167,4 @@ export default {
  ],
  exitTicket:'Umiesz zamienić problem z życia na regułę ciągu i policzyć kolejne wyrazy w pętli: skarbonkę, lokatę z procentem składanym i ciąg Fibonacciego. Wiesz też, dlaczego iteracja liczy fib(50) w ułamku sekundy, a prosta rekurencja by się zadławiła.'
 };
+export default normalizeLessonReferences(referencedLesson);

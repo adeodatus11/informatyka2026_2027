@@ -1,5 +1,6 @@
 export const SOLUTION_CSS="body { font-family: Arial, sans-serif; font-size:18px; line-height:1.6; background-color:#f3f6f8; color:#182f38; margin:0; padding:20px; }\nheader, main, footer { max-width:1100px; margin:0 auto; }\nmain { width:auto; }\nnav ul { display:flex; flex-wrap:wrap; gap:16px; list-style:none; padding:0; }\na { color:#17477a; }\na:focus-visible { outline:3px solid #17477a; outline-offset:3px; }\n.wyspy { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:24px; }\narticle { background-color:#ffffff; padding:20px; border-radius:12px; }\nfigure { margin:0; }\nsvg { width:100%; max-width:100%; height:auto; }\nfigcaption { font-size:14px; color:#344b56; }\nh1 { font-size:36px; line-height:1.2; }\nh2 { color:#17477a; }\n";
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  "id": "108",
  "grade": 3,
  "order": 32,
@@ -445,3 +446,4 @@ export default {
  ],
  "exitTicket": "Co poprawiłeś po teście i jak sprawdziłeś, że odbiorca łatwiej skorzysta ze strony?"
 };
+export default normalizeLessonReferences(referencedLesson);

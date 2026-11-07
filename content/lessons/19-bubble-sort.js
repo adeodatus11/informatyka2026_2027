@@ -9,7 +9,8 @@ const SORTUJ = `def sortuj(lista):
     return lista
 `;
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'19',grade:2,order:17,title:'Programowanie algorytmów porządkowania metodą bąbelkową',
  subtitle:'Ranking graczy, ceny od najtańszej, tabela wyników — napiszesz sortowanie, które robi to za Ciebie.',
  topic:'Sortowanie bąbelkowe w Pythonie',icon:'sort',tags:['for w for','zamiana','flaga'],duration:45,
@@ -154,3 +155,4 @@ export default {
  ],
  exitTicket:'Umiesz napisać sortowanie bąbelkowe: pętla w pętli, porównanie sąsiadów i zamiana a, b = b, a. Wiesz też, dlaczego dla dużych danych potrzebne są szybsze algorytmy — liczba porównań rośnie jak n².'
 };
+export default normalizeLessonReferences(referencedLesson);

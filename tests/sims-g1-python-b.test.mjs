@@ -2,6 +2,7 @@
 // Uruchom: node --test tests/sims-g1-python-b.test.mjs
 // Zadania pythonLab są wykonywane w prawdziwym Pyodide (node_modules) tym samym RUNNER_PY co w przeglądarce.
 import test from 'node:test';
+import {fileURLToPath} from 'node:url';
 import assert from 'node:assert/strict';
 import {loadPyodide} from 'pyodide';
 import * as P from '../content/sims/pythonLab.js';
@@ -93,7 +94,7 @@ test('Karty wyniku: pełne odpowiedzi = 100% i najwyższa odznaka; pusto = 0', (
 });
 
 /* ───────── Zadania pythonLab w prawdziwym Pythonie ───────── */
-const py = await loadPyodide({indexURL: new URL('../node_modules/pyodide/', import.meta.url).pathname});
+const py = await loadPyodide({indexURL: fileURLToPath(new URL('../node_modules/pyodide/', import.meta.url))});
 py.runPython(P.RUNNER_PY);
 const runFn = py.globals.get('_pl_run');
 const run = req => JSON.parse(runFn(JSON.stringify(req)));

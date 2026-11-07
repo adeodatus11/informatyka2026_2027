@@ -24,7 +24,8 @@ const RATY = `def ile_miesiecy(dlug, procent, rata):
 print(ile_miesiecy(2400, 0, 200))    # telefon na raty 0%: 12 miesięcy
 `;
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'46',grade:2,order:20,title:'Programowanie algorytmów iteracyjnych',
  subtitle:'Ile kombinacji ma PIN, ile miesięcy spłacasz telefon na raty i po ilu dniach post dobije do miliona wyświetleń? Pętla policzy to za Ciebie.',
  topic:'Pętle for i while w Pythonie: potęga, silnia, raty, licznik powtórzeń',icon:'code',tags:['for i while','licznik','raty'],duration:45,
@@ -176,3 +177,4 @@ export default {
  ],
  exitTicket:'Umiesz liczyć w pętli: potęgę (PIN, hasło), silnię (kolejności), spłatę rat i zasięg z licznikiem powtórzeń oraz sumę cyfr. Wiesz, kiedy for, kiedy while — i dlaczego rata mniejsza od odsetek to pętla nieskończona także w życiu.'
 };
+export default normalizeLessonReferences(referencedLesson);

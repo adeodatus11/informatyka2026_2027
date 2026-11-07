@@ -7,4 +7,6 @@ const fix=s=>typeof s==='string'?s.replace('Dwa pytania powtórkowe z lekcji 11'
 
 const sections=base.sections.map(s=>({...s,teacherNotes:fix(s.teacherNotes),activities:s.activities.map(a=>a.id==='m-crit'?{...a,question:fix(a.question)}:a.id==='m-param'?{...a,question:'Powtórka z kwerend (baza Zawody: [Podaj klasę:]): co robi kwerenda parametryczna?'}:a)}));
 
-export default {...base,id:'27',grade:3,order:10,sections};
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {...base,id:'27',grade:3,order:10,sections};
+export default normalizeLessonReferences(referencedLesson);

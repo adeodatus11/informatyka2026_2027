@@ -2,7 +2,8 @@ import {note, choice, reveal} from '../schema.js';
 
 // Lekcja 75 (klasa 1, temat 46): zasady prezentacji — diagnoza błędów na platformie, naprawa złej prezentacji w PowerPoincie.
 // Materiały: public/materials/powerpoint/ (generator scripts/build-powerpoint-materials.py, opis docs/powerpoint-desktop.md).
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'75',grade:1,order:46,workspace:'desktop-powerpoint',
  title:'Zasady tworzenia prezentacji multimedialnej',
  subtitle:'Prezentacja na praktykach, w szkole albo na rozmowie: naprawisz najgorszą prezentację świata i nauczysz się mówić, a nie czytać ze slajdów.',
@@ -128,3 +129,4 @@ export default {
  ],
  exitTicket:'Oddajesz lesson-75-nazwisko.pptx: motyw i wzorzec zamiast ręcznego formatowania, 1 slajd = 1 myśl, czytelny kontrast, legalna grafika z podpisem, slajd Źródła i notatki prelegenta.'
 };
+export default normalizeLessonReferences(referencedLesson);

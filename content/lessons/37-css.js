@@ -105,7 +105,8 @@ const flex = {id:'flex',type:'css',sel:['nav ul','nav','header nav ul','header n
 const contrast = {id:'contrast',type:'contrast',sel:'body',needBg:true,min:4.5,label:'Kontrast tekstu do tła co najmniej 4,5:1',hint:['Kontrast liczy się z koloru tekstu (`color`) i tła (`background-color`) w body. Na ciemnym tle ustaw jasny tekst, na jasnym — ciemny.','Bezpieczne pary: `#f2f2f2` na `#121212` albo `#2b2118` na `#f4ecd8`.']};
 const bgDark = {id:'bg',type:'css',sel:'body',props:['background-color','background'],test:'dark',label:'Ciemne tło strony (body)',hint:['`body { background-color: #121212; }` — im mniejsze liczby w kodzie koloru, tym ciemniej.']};
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'37',grade:1,order:20,title:'Kaskadowe arkusze stylów CSS',
  subtitle:'Ten sam HTML, trzy zupełnie różne strony: „przebierzesz” stronę drużyny w retro, dark mode albo gaming — i nauczysz się, dlaczego kontrast to nie fanaberia.',
  topic:'CSS: reguły, selektory, kolory, kontrast i prosty układ',icon:'palette',tags:['selektor { }','kontrast 4,5:1','dark mode'],duration:45,
@@ -225,3 +226,4 @@ export default {
  ],
  exitTicket:'Umiesz podłączyć arkusz style.css, napisać regułę selektor { właściwość: wartość; }, naprawić brakujący średnik lub klamrę i dobrać kolory z kontrastem co najmniej 4,5:1. Ten sam HTML może wyglądać na sto sposobów.'
 };
+export default normalizeLessonReferences(referencedLesson);

@@ -6,7 +6,8 @@ import {sheetCheck} from '../sims/sheetCheck.js';
 // Plik: public/materials/excel/lesson-74-start.xlsx. Oczekiwane wartości liczy test z pliku.
 const FILE = 'materials/excel/lesson-74-start.xlsx';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'74',grade:1,order:45,workspace:'desktop-excel',
  title:'Stosowanie filtru w tabeli przestawnej i praktyczny poradnik',
  subtitle:'Po wyjeździe klasowym: kto ile wyłożył, ile kosztowała sobota i ile wychodzi na osobę. Rozliczysz to tabelą przestawną i zostawisz poradnik dla następnego skarbnika.',
@@ -81,3 +82,4 @@ export default {
  ],
  exitTicket:'Masz rozliczenie wyjazdu w tabeli przestawnej z filtrem i fragmentatorem oraz poradnik, według którego ktoś inny zrobi to samo.'
 };
+export default normalizeLessonReferences(referencedLesson);

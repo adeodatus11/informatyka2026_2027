@@ -1,6 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'08',grade:1,order:6,title:'Przykłady wyszukiwania informacji',
  subtitle:'Znajdziesz w minutę to, czego inni szukają kwadrans — tani bilet, regulamin praktyk, instrukcję, pracę na wakacje.',
  topic:'Przykłady wyszukiwania informacji',icon:'search',tags:['"…"','site:','filetype:'],duration:43,
@@ -85,3 +86,6 @@ export default {
  ],
  exitTicket:'Twoja ściąga: "dokładna fraza", -śmieci, site:gov.pl lub strona szkoły, filetype:pdf, "A" OR "B". Zawsze sprawdź domenę i datę, a odpowiedź AI — w źródle.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

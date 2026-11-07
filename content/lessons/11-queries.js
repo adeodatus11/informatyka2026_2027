@@ -2,7 +2,8 @@ import {note, choice, reveal} from '../schema.js';
 
 const lab=(level,label,question,criteria)=>({type:'queryDesigner',id:`q-l${level}`,stateKey:'query-lab',mode:`l${level}`,level,points:6,label,question,criteria});
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'11',grade:2,order:12,title:'Przygotowanie kwerend w bazie Stomatolog',
  subtitle:'Jedno pytanie do bazy i recepcja ma listę do SMS-ów, dzienny utarg i pacjentów bez e-maila.',
  topic:'Przygotowanie kwerend w bazie Stomatolog',icon:'funnel',
@@ -79,3 +80,4 @@ export default {
  ],
  exitTicket:'Umiesz zadać bazie pytanie: wybrać kolumny i wiersze, połączyć tabele, policzyć i zsumować, a nawet zbudować kwerendę, która sama pyta o nazwisko. Tak pracują recepcje, sklepy i działy sprzedaży.'
 };
+export default normalizeLessonReferences(referencedLesson);

@@ -2,6 +2,7 @@
 // Uruchom: node --test tests/sims-g2-numbers.test.mjs
 // Zadania pythonLab są wykonywane w prawdziwym Pyodide (node_modules) tym samym RUNNER_PY co w przeglądarce.
 import test from 'node:test';
+import {fileURLToPath} from 'node:url';
 import assert from 'node:assert/strict';
 import {loadPyodide} from 'pyodide';
 import * as N from '../content/sims/numberLab.js';
@@ -189,8 +190,20 @@ test('Karty wyniku: pełne odpowiedzi = 100% i najwyższa odznaka; pusto = 0', (
 });
 
 /* ───────── Zadania pythonLab w prawdziwym Pythonie ───────── */
-const py = await loadPyodide({indexURL: new URL('../node_modules/pyodide/', import.meta.url).pathname});
-py.runPython(P.RUNNER_PY);
+const py = await loadPyodide({indexURL: fileURLToPath(new URL('../node_modules/pyodide/', import.meta.url))});
+// Błędne klocki mogą tworzyć nieskończoną pętlę w funkcji wywołanej przez test.
+// W przeglądarce zatrzymuje ją Worker; tutaj ograniczamy wykonanie ocenianego wywołania.
+py.runPython(`
+_test_ticks = 0
+def _test_budget(frame, event, arg):
+    global _test_ticks
+    if frame.f_code.co_filename == 'twoj_kod.py' and event == 'line':
+        _test_ticks += 1
+        if _test_ticks > 2000000:
+            raise RuntimeError('Limit kroków testu: prawdopodobna pętla nieskończona')
+    return _test_budget
+`);
+py.runPython(P.RUNNER_PY.replace("got = eval(t['call'], g)","global _test_ticks\n                _test_ticks = 0\n                sys.settrace(_test_budget)\n                got = eval(t['call'], g)").replace('sys.stdout = old\n        else:', 'sys.settrace(None)\n                sys.stdout = old\n        else:'));
 const runFn = py.globals.get('_pl_run');
 const run = req => JSON.parse(runFn(JSON.stringify(req)));
 

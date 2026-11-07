@@ -1,4 +1,5 @@
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  "id": "86",
  "grade": 2,
  "order": 29,
@@ -244,3 +245,4 @@ export default {
  ],
  "exitTicket": "Który odczyt lub przewód ujawnił błąd? Co zmieniłeś i jak sprawdziłeś poprawę?"
 };
+export default normalizeLessonReferences(referencedLesson);

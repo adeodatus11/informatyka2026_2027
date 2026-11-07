@@ -1,7 +1,8 @@
 import {note, choice} from '../schema.js';
 import {COMPARE_MAX, DETECTIVE_MAX, PATTERN_MAX} from '../sims/textLab.js';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'53',grade:3,order:17,title:'Wybrane algorytmy na tekstach',
  subtitle:'Dowiesz się, jak działa Ctrl+F, dlaczego „adam” ląduje na końcu listy kontaktów i jak filtr nicków może odrzucić niewinny „badminton”.',
  topic:'Algorytmy na tekstach bez kodu',icon:'search',tags:['Ctrl+F','palindrom','wzorzec'],duration:45,
@@ -88,3 +89,4 @@ export default {
  ],
  exitTicket:'Komputer porównuje teksty znak po znaku według kodów, a nie alfabetu. Zliczanie, palindrom i anagram to proste pętle po znakach. Metoda naiwna sprawdza każde z n − m + 1 okien i znajduje także wystąpienia, które na siebie zachodzą.'
 };
+export default normalizeLessonReferences(referencedLesson);

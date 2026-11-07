@@ -77,7 +77,8 @@ print("Suma punktów:", suma)
 print("Rundy MVP (100+):", mvp)
 `;
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'66',grade:1,order:28,title:'Algorytmy iteracyjne w języku Python',
  subtitle:'Średnia ocen, punkty w grze, odliczanie do wakacji: jedna pętla zrobi to, na co trzeba by stu linii z print.',
  topic:'Pętla for z range: powtarzanie, suma, licznik, średnia, odliczanie',icon:'reset',tags:['pętla for','suma i licznik','średnia ocen'],duration:45,
@@ -196,3 +197,4 @@ export default {
  ],
  exitTicket:'Umiesz napisać pętlę for z range: sumujesz (start 0 przed pętlą), liczysz średnią, odliczasz w dół z krokiem -1 i liczysz zdarzenia licznikiem z if w środku pętli.'
 };
+export default normalizeLessonReferences(referencedLesson);

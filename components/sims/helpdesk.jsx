@@ -7,8 +7,8 @@ import {tickets,MAX_QUESTIONS,questionFeedback,checkSolution,checkReply,ticketRe
 function Msg({m}){if(!m)return null;return <div className={`hd-msg ${m.ok?'is-ok':'is-retry'}`} role="status"><Icon name={m.ok?'check':'warning'} size={20}/><span>{m.text}</span></div>;}
 function Seg({label,options,value,onPick}){return <div className="hd-seg" role="group" aria-label={label}><span>{label}</span>{options.map(([k,l])=><button type="button" key={k} aria-pressed={value===k} onClick={()=>onPick(k)}>{l}</button>)}</div>;}
 
-export default function Helpdesk({value,onChange}){
- const v=value||{};const mode=v.mode||'solo';const role=mode==='pair'?(v.role||'tech'):'tech';const tk=v.tickets||{};
+export default function Helpdesk({data={},value,onChange}){
+ const v=value||{};const mode=data.soloOnly?'solo':v.mode||'solo';const role=mode==='pair'?(v.role||'tech'):'tech';const tk=v.tickets||{};
  const cur=Math.min(v.current??0,tickets.length-1);const t=tickets[cur];const st=tk[t.id]||{};const res=helpdeskResult(v);
  function save(next){const r=helpdeskResult(next);onChange({...next,done:r.done,score:r.score,max:r.max,summary:r.summary});}
  function set(patch){save({...v,tickets:{...tk,[t.id]:{...st,...patch}}});}
@@ -20,10 +20,10 @@ export default function Helpdesk({value,onChange}){
  const tr=ticketResult(t,st);const closed=tr.closed;
  return <section className="hd" aria-label="System zgłoszeń helpdesku">
   <header className="hd-bar"><Icon name="settings" size={20}/><strong>HelpDesk ZS · zgłoszenia</strong><span className="hd-sim">symulacja</span><span className="hd-stats"><span>Zamknięte {res.closed}/6</span><b>{res.score}/18 pkt</b></span></header>
-  <div className="hd-settings">
+  {!data.soloOnly&&<div className="hd-settings">
    <Seg label="Pracuję" options={[['solo','Sam(a)'],['pair','W parze']]} value={mode} onPick={k=>save({...v,mode:k})}/>
    {mode==='pair'&&<Seg label="Jestem" options={[['tech','Technikiem'],['reporter','Zgłaszającym']]} value={role} onPick={k=>save({...v,role:k})}/>}
-  </div>
+  </div>}
   {mode==='pair'&&<p className="hd-pairnote"><Icon name="group" size={18}/><span>{role==='tech'?'Zadajesz pytania na głos. Partner czyta odpowiedzi ze swojej karty zgłaszającego. Po 3 zgłoszeniach zamieńcie się rolami.':'Odgrywasz osobę zgłaszającą: czytaj opis, odpowiadaj tylko na zadane pytania i nie podpowiadaj. Po rozmowie rozwiąż to zgłoszenie u siebie — punkty liczą się tak samo.'}</span></p>}
   {mode==='pair'&&res.closed===3&&<p className="hd-swap" role="status"><Icon name="reset" size={18}/>3 zgłoszenia za Wami — czas na zamianę ról!</p>}
   <ol className="hd-queue" aria-label="Kolejka zgłoszeń">{tickets.map((x,i)=>{const s=tk[x.id]||{};const r=ticketResult(x,s);return <li key={x.id}><button type="button" aria-current={i===cur?'true':undefined} className={`${i===cur?'is-current':''} ${r.closed?'is-closed':''}`} onClick={()=>save({...v,current:i})}>

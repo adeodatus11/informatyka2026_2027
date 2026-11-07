@@ -1,5 +1,6 @@
 import {makeModelLesson} from '../model3d-lesson.js';
-export default makeModelLesson({
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = makeModelLesson({
  id:'110',grade:2,order:1,title:'Od bryły do breloka — pierwszy model 3D',
  subtitle:'Zaprojektujesz własną zawieszkę do klucza z szafki. Mały model, prawdziwe wymiary i plik do pokazania.',
  objectives:['Ustawiam trzy wymiary bryły w milimetrach.','Wycinam otwór przez połączenie bryły i bryły typu Hole.','Zachowuję projekt do edycji i eksportuję osobny STL.'],
@@ -23,3 +24,4 @@ export default makeModelLesson({
  teacherSummary:'Produkt: własna zawieszka i wariant o zmienionej szerokości, projekt w Classroom i lokalny STL. Obejrzyj przekrój otworu, wymiary oraz połączenie znaku. Nie uruchamiaj drukarki w ramach ćwiczenia ucznia. Wydruk wybranych prac dopiero po sprawdzeniu w profilu Bambu Lab H2C.',pair:false,
  methods:[{name:'Modelowanie',url:'https://metodyka.covepolska.pl/metoda-modelowanie.html'},{name:'Ocenianie kształtujące i poprawa',url:'https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html'}]
 });
+export default normalizeLessonReferences(referencedLesson);

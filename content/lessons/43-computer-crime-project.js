@@ -1,6 +1,7 @@
 import {note, choice} from '../schema.js';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'43',grade:1,order:48,title:'Przestępczość komputerowa – projekt',
  subtitle:'Porozmawiasz z oszustem w symulowanym czacie i nauczysz się przerywać rozmowę, zanim stracisz pieniądze z wakacyjnej pracy albo konto.',
  topic:'Przestępczość komputerowa: rozmowa z oszustem, schemat oszustwa, przepisy kodeksu karnego, Lista Ostrzeżeń i reakcja po oszustwie',icon:'warning',tags:['Rozmowa z oszustem','Kodeks karny','Plan pomocy'],duration:45,
@@ -90,3 +91,4 @@ export default {
  ],
  exitTicket:'STOP, gdy: ktoś przenosi rozmowę poza serwis, ponagla, przysyła link „odbioru płatności”, prosi o BLIK, CVV albo kod z SMS-a, nie chce rozmawiać przez telefon. Znajomego sprawdzasz innym kanałem. Czytaj adres od końca i powiadomienie z banku do końca. Po oszustwie: bank, dowody, opiekun i policja, 8080 lub incydent.cert.pl. Brak na Liście Ostrzeżeń nie znaczy „bezpieczne”.'
 };
+export default normalizeLessonReferences(referencedLesson);

@@ -1,6 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'39',grade:1,order:33,title:'Wybrane przepisy prawa dotyczące technologii informacyjno-komunikacyjnych',
  subtitle:'Screen, mem, cudze hasło, deepfake: wiesz, co Ci wolno, zanim ktoś Cię pozwie albo zgłosi na policję.',
  topic:'Prawo w sieci: prawo autorskie, wizerunek, RODO, kodeks karny i AI Act',icon:'shield',tags:['Sąd klasowy','RODO','AI Act'],duration:45,
@@ -101,3 +102,4 @@ export default {
  ],
  exitTicket:'Zanim coś wrzucisz lub użyjesz: czyje to jest? Czy mam zgodę albo licencję? Czy mam uprawnienie? Komu to pokazuję? Cudze konto bez zgody = art. 267 kk. Wizerunek wymaga zgody. Od 16 lat sam zgadzasz się na dane w aplikacjach, od 17 odpowiadasz karnie jak dorosły.'
 };
+export default normalizeLessonReferences(referencedLesson);

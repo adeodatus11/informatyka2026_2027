@@ -59,7 +59,8 @@ export const CARD = `<!DOCTYPE html>
 </html>
 `;
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'36',grade:1,order:19,title:'Stosowanie wybranych znaczników języka HTML',
  subtitle:'Naprawisz zepsutą stronę pizzerii i zbudujesz własną wizytówkę z listą, tabelą i linkiem — taką, którą przeczyta też czytnik ekranu.',
  topic:'Znaczniki HTML: listy, tabele, linki, obrazki i dostępność',icon:'code',tags:['<table>','alt','napraw stronę'],duration:45,
@@ -181,3 +182,6 @@ export default {
  ],
  exitTicket:'Umiesz zbudować stronę z listą, tabelą, linkiem i obrazkiem z alt, a w zepsutym kodzie znajdziesz niezamknięty znacznik, złą ścieżkę i pominięty poziom nagłówka. Twoja strona jest czytelna także dla czytnika ekranu.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

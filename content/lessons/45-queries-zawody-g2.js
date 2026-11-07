@@ -15,7 +15,8 @@ const sections=base.sections.map(s=>{
  return s;
 });
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  ...base,
  id:'45',grade:2,order:9,
  format:{...base.format,
@@ -25,3 +26,4 @@ export default {
   summary:'Karta wyniku: maks. 22 pkt (4 pytania + 3 poziomy po 6 pkt). Poproś ucznia o Widok SQL podium (zlecenie 2A) i wskazanie ORDER BY oraz warunku na dyskwalifikacji. Kto zaliczył poziom 3, może — jeśli chce — podpowiedzieć innym pytaniem, bez klikania za nich. Produkt lekcji to „Oficjalne wyniki zawodów” na karcie wyniku.'},
  sections
 };
+export default normalizeLessonReferences(referencedLesson);

@@ -11,4 +11,6 @@ start.teacherNotes='Powtórka bez notatek z lekcji 94. Po błędzie uczeń czyta
 for(const s of lesson.sections) for(const a of s.activities) if(a.type==='resultCard') a.sources=[...a.sources.filter(x=>!oldIds.includes(x)),recall.id];
 
 lesson.teacherGuide.summary='Karta wyniku obejmuje powtórkę z klasy 1 i zadania wymienione na karcie; bonus pozostaje opcjonalny. '+lesson.objectives.join(' ');
-export default {...lesson,id:'95',grade:1,order:57,title:"Programowanie algorytmu wyszukiwania wzorca w tekście metodą naiwną"};
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {...lesson,id:'95',grade:1,order:57,title:"Programowanie algorytmu wyszukiwania wzorca w tekście metodą naiwną"};
+export default normalizeLessonReferences(referencedLesson);

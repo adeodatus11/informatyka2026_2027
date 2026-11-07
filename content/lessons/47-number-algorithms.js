@@ -2,7 +2,8 @@ import {note, choice} from '../schema.js';
 
 const lab=(mode,id,label)=>({type:'numberLab',id,mode,label});
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'47',grade:2,order:21,title:'Wybrane algorytmy na liczbach',
  subtitle:'Jaka największa płytka zmieści się na ścianie bez docinania? Kiedy dwa autobusy znów odjadą razem? Dlaczego szyfry w bankach stoją na liczbach pierwszych? Policzysz to krok po kroku — bez kodu.',
  topic:'Pierwszość, rozkład na czynniki, NWD (Euklides) i NWW',icon:'hash',tags:['liczby pierwsze','Euklides','NWD i NWW'],duration:45,
@@ -68,3 +69,4 @@ export default {
  ],
  exitTicket:'Umiesz sprawdzić, czy liczba jest pierwsza (do pierwiastka), rozłożyć ją na czynniki, policzyć NWD Euklidesem w dwóch wersjach i NWW ze wzoru. Wiesz, dlaczego reszta z dzielenia wygrywa z odejmowaniem — i że na liczbach pierwszych stoi szyfrowanie.'
 };
+export default normalizeLessonReferences(referencedLesson);

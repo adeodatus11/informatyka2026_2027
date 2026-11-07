@@ -32,7 +32,8 @@ razem = koszyk + dostawa
 print("Do zapłaty:", razem, "zł")
 `;
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'61',grade:1,order:23,title:'Techniki algorytmiczne i programowanie',
  subtitle:'Algorytm to przepis, który wykona każdy — nawet komputer. Zapiszesz go listą kroków, schematem blokowym i pseudokodem, a na koniec uruchomisz swój pierwszy program w Pythonie.',
  topic:'Algorytm: lista kroków, schemat blokowy, pseudokod; sekwencja, warunek, iteracja; śledzenie; pierwszy program w Pythonie',icon:'list',tags:['schemat blokowy','pseudokod','pierwszy program'],duration:45,
@@ -144,3 +145,4 @@ export default {
  ],
  exitTicket:'Wiesz, że algorytm to skończony przepis z krokami po kolei, warunkami i powtarzaniem. Czytasz i śledzisz schemat blokowy, uzupełniasz go tak, by przechodził testy, i uruchomiłeś pierwszy program w Pythonie. Następnym razem: zmienne, print i input.'
 };
+export default normalizeLessonReferences(referencedLesson);

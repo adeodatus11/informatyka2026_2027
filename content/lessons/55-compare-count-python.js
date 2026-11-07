@@ -19,7 +19,8 @@ const PALINDROM = `def czy_palindrom(t):
     return True
 `;
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'55',grade:3,order:19,title:'Programowanie algorytmów na tekstach w języku Python – porównywanie tekstów i zliczanie znaku w tekście',
  subtitle:'Napiszesz od zera to, co robią count, == i < — i sprawdzisz testami, czy Twoje funkcje nie wywracają się na pustym tekście, wielkich literach i polskich znakach.',
  topic:'Własne funkcje na tekstach',icon:'code',tags:['zlicz','palindrom','anagram'],duration:45,
@@ -179,3 +180,6 @@ export default {
  ],
  exitTicket:'Zliczanie to licznik przed pętlą i warunek w pętli. Porównanie tekstów kończy się na pierwszej różnicy, a przy zgodnym początku wygrywa krótszy. Palindrom sprawdzasz dwoma wskaźnikami, a zdania najpierw przygotowujesz (lower, bez spacji). Zawsze testujesz pusty tekst, wielkość liter i polskie znaki.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

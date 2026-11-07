@@ -1,4 +1,5 @@
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  "id": "05",
  "grade": 2,
  "order": 10,
@@ -22,3 +23,4 @@ export default {
  ],
  "exitTicket": "Potrafisz utworzyć prostą bazę, powiązać wizyty z pacjentami i odczytać plan przyjęć. Twoja baza jest zapisana razem z postępem w tej przeglądarce."
 };
+export default normalizeLessonReferences(referencedLesson);

@@ -133,6 +133,6 @@ export function checkPseudo(order){
  const wrong=order.map((id,i)=>id!==PSEUDO_STEPS[i].id?i:-1).filter(i=>i>=0);
  const ok=order.length===PSEUDO_STEPS.length&&wrong.length===0;
  const tips={rep:'Na zewnątrz jest pętla przejść — ona obejmuje wszystko inne.',pairs:'W każdym przejściu idziesz po parach sąsiadów.',cmp:'Zanim zamienisz, musisz porównać.',swap:'Zamiana jest warunkowa i następuje po porównaniu.',end:'Koniec jest na samym dole, po wszystkich przejściach.'};
- return {ok,wrong,message:ok?'Tak wygląda sortowanie bąbelkowe. Zauważ wcięcia: pętla w pętli — stąd n · n, czyli n². Na lekcji 19 zapiszesz to w Pythonie.':`Złe pozycje: ${wrong.map(i=>i+1).join(', ')}. ${tips[PSEUDO_STEPS[wrong[0]].id]}`};
+ return {ok,wrong,message:ok?'Tak wygląda sortowanie bąbelkowe. Zauważ wcięcia: pętla w pętli — stąd n · n, czyli n². Na zajęciach z programowania sortowania bąbelkowego zapiszesz to w Pythonie.':`Złe pozycje: ${wrong.map(i=>i+1).join(', ')}. ${tips[PSEUDO_STEPS[wrong[0]].id]}`};
 }
 export function pseudoResult(v={}){const score=v.solved?(v.solvedAt===1?2:1):0;return {done:!!v.solved,score,max:2,summary:v.solved?'Pseudokod bąbelkowego ułożony':undefined};}

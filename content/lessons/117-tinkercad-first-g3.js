@@ -1,5 +1,6 @@
 import {makeModelLesson} from '../model3d-lesson.js';
-export default makeModelLesson({
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = makeModelLesson({
  id:'117',grade:3,order:11,title:'Pierwszy model 3D: tabliczka z otworem',filename:'K3-117-pseudonim-v2.stl',
  subtitle:'W kilkanaście minut zbudujesz mały przedmiot, który można przygotować do wydruku.',
  objectives:['Ustawiam wymiary i położenie bryły w milimetrach.','Odejmuję otwór od bryły i sprawdzam model z kilku stron.','Zachowuję projekt edytowalny oraz eksport STL.'],
@@ -18,3 +19,4 @@ export default makeModelLesson({
  teacherSummary:'Produkt: tabliczka z odejmowanym otworem, kopia v2 i STL. PP II.3.a: własny model 3D; II.2: dobór edytora i formatu. Punktacja pytań nie ocenia pliku. Przed wejściem do pracy własnej zbierz odpowiedzi; jeśli mylone są jednostki lub obrót, pokaż jeszcze jeden przykład i ponów pytanie.',
  methods:[{name:'Modelowanie',url:'https://metodyka.covepolska.pl/metoda-modelowanie.html'},{name:'Przypominanie i powroty',url:'https://metodyka.covepolska.pl/metoda-przypominanie-i-powroty.html'}]
 });
+export default normalizeLessonReferences(referencedLesson);

@@ -11,7 +11,7 @@
 2. `node scripts/check-curriculum.mjs`, `npm test`, testy `tests/sims-*.test.mjs` dotyczące zmienianych symulatorów.
 3. `npm run build` (buduje i kopiuje cały `dist/` do katalogu głównego — wyniki budowy trzeba zatwierdzić razem ze zmianami).
 4. Testy przeglądarkowe: `npx playwright test`. W środowisku chmurowym bez Chrome użyj konfiguracji z `launchOptions.executablePath` wskazującym Chromium (np. `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`) i `channel: undefined`. Każda nowa lekcja (id > 06) przechodzi przez wszystkie etapy, kartę wyniku i axe (WCAG 2.1 AA).
-5. Znany, starszy błąd testu: `tests/dental.spec.js:7` (przycisk „2. Dane”) — nie blokuje publikacji, do naprawy osobno.
+5. Test bazy danych sprawdza czyszczenie postępu po odświeżeniu na współdzielonym komputerze. Dawny wyjątek dla `tests/dental.spec.js` został usunięty; test musi przechodzić.
 6. Obejrzyj zrzuty ekranu kluczowych widoków (1366 i 1280 px; 390 px tylko brak poziomego przewijania).
 
 ## Po dodaniu lekcji

@@ -19,7 +19,8 @@ const DESZYFRUJ = `def deszyfruj(tekst, klucz):
 
 const TAJNA = 'SLDWZ OZ DKLQVT H ACLNZHYT EZ ATYRHTY';
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'17',grade:2,order:15,title:'Programowanie algorytmu szyfrowania tekstu metodą podstawieniową',
  subtitle:'Napiszesz program, który szyfruje całą wiadomość w tysięcznej części sekundy — i łamie szyfr Cezara, sprawdzając wszystkie klucze.',
  topic:'Szyfr Cezara w Pythonie',icon:'code',tags:['ord/chr','% 26','pętla for'],duration:45,
@@ -173,3 +174,6 @@ export default {
  ],
  exitTicket:'Umiesz zamienić literę na liczbę (ord), przesunąć ją z zawinięciem (% 26) i wrócić do litery (chr). Twój program szyfruje całe zdania i łamie szyfr Cezara w ułamku sekundy — dlatego prawdziwe dane chroni się dziś dużo silniejszymi szyframi.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

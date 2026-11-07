@@ -1,6 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'13',grade:3,order:2,title:'System szesnastkowy',
  subtitle:'Kolory w grach, adresy kart sieciowych i kody błędów Windowsa — przeczytasz je bez wyszukiwarki.',
  topic:'System szesnastkowy',icon:'hash',tags:['#FF8800','0xDEADBEEF','MAC'],duration:42,
@@ -67,3 +68,6 @@ export default {
  ],
  exitTicket:'Umiesz zamienić bajt na dwie cyfry hex, odczytać kolor #RRGGBB i znaleźć producenta w adresie MAC. Następnym razem, gdy Windows pokaże 0x80070005, wiesz, że to liczba — i to całkiem konkretna.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

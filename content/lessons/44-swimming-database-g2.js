@@ -17,10 +17,12 @@ const sections=base.sections.map(s=>{
  return s;
 });
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  ...base,
  id:'44',grade:2,order:8,title:TITLE,topic:TITLE,
  format:{...base.format,
   grouping:'Samodzielnie przy komputerze — każdy ma swój symulator i swój wynik. Para jest tylko opcją: w etapie „Relacje” można porównać odpowiedzi z sąsiadem, ale każdy klika u siebie.'},
  sections
 };
+export default normalizeLessonReferences(referencedLesson);

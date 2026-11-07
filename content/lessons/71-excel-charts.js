@@ -6,7 +6,8 @@ import {sheetCheck} from '../sims/sheetCheck.js';
 const FILE = 'materials/excel/lesson-71-start.xlsx';
 const OFFERS = {labels:['Fala','Zasięg','Pikseł'],values:[1176,1224,1296]};
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'71',grade:1,order:42,workspace:'desktop-excel',
  title:'Przedstawianie danych w postaci wykresu',
  subtitle:'Który abonament naprawdę jest tańszy, na co idzie kieszonkowe i jak reklama robi z 10% różnicy „trzy razy drożej”. Zrobisz wykresy, które mówią prawdę.',
@@ -84,3 +85,4 @@ export default {
  ],
  exitTicket:'Masz trzy czytelne wykresy z tytułami i uczciwą osią. Umiesz dobrać typ wykresu i rozpoznać przesadzoną różnicę.'
 };
+export default normalizeLessonReferences(referencedLesson);

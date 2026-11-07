@@ -1,4 +1,5 @@
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
   "id": "32",
   "grade": 1,order:13,
   "title": "Praca w trybie recenzji",
@@ -334,3 +335,6 @@ export default {
   },
   "exitTicket": "Recenzja kończy się decyzją i poprawą. Oddaj 32-recenzja.docx oraz 32-publikacja.docx; wynik quizu nie zastępuje oceny tych plików."
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

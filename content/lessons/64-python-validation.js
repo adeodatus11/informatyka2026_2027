@@ -47,7 +47,8 @@ else:
 const BLAD = 'Błąd: wpisz cenę i rabat cyframi, rabat od 0 do 90';
 const io = (c, r, last) => `Cena (zł): ${c}\nRabat (%): ${r}\n${last}`;
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'64',grade:1,order:26,title:'Sprawdzanie poprawności danych i zapisywanie rozwiązania problemu w języku Python',
  subtitle:'Użytkownik wpisze „dziesięć”, −50 albo nic. Twój kalkulator rabatu się nie wysypie — i będzie gotowym programem z opisem, który da się pokazać i zapisać.',
  topic:'Walidacja danych: isdigit(), zakres, pusty tekst; komunikaty dla użytkownika; przypadki brzegowe; komentarz i zapis programu',icon:'shield',tags:['walidacja danych','isdigit()','gotowy program'],duration:45,
@@ -153,3 +154,4 @@ export default {
  ],
  exitTicket:'Umiesz zepsuć program złymi danymi i zabezpieczyć go: isdigit() przed int(), zakres w warunku, czytelny komunikat. Twój kalkulator rabatu przechodzi testy typowe, brzegowe i z błędnymi danymi i ma komentarz z opisem. Następnym razem: elif — program powie dokładnie, co jest źle.'
 };
+export default normalizeLessonReferences(referencedLesson);

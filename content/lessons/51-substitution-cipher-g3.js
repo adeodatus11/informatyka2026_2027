@@ -22,7 +22,8 @@ const sections = base.sections.map(s => {
  return copy;
 });
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  ...base,
  id:'51',grade:3,order:21,
  title:'Podstawowe pojęcia dotyczące szyfrowania i szyfrowanie tekstu metodą podstawieniową',
@@ -37,3 +38,6 @@ export default {
  exitTicket:base.exitTicket.replace('Na lekcji 17 napiszesz szyfrator Cezara w Pythonie.', 'Na następnej lekcji napiszesz szyfrator Cezara w Pythonie.'),
  sections
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

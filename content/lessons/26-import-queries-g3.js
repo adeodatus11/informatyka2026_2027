@@ -2,7 +2,8 @@ import {note, choice} from '../schema.js';
 
 const lab=(level,label,question,criteria)=>({type:'queryDesigner',id:`q-l${level}`,stateKey:'query-lab',mode:`l${level}`,level,maxLevel:2,dataset:'stomatolog',points:6,label,question,criteria});
 
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  id:'26',grade:3,order:9,title:'Importowanie danych i przygotowywanie kwerend w bazie Stomatolog',
  subtitle:'Gabinet przysyła plik z zapisami i listę pytań recepcji. Importujesz dane w minutę, czyścisz błędy i odpowiadasz kwerendami — jak na praktykach w biurze.',
  topic:'Importowanie danych i przygotowywanie kwerend w bazie Stomatolog',icon:'table',
@@ -60,3 +61,4 @@ export default {
  ],
  exitTicket:'Przeszedłeś/-aś całe zlecenie: import CSV, kontrola jakości danych i kwerendy z jednej i wielu tabel. To zestaw umiejętności, o który pytają na praktykach w każdym biurze.'
 };
+export default normalizeLessonReferences(referencedLesson);

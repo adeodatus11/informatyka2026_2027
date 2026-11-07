@@ -1,5 +1,6 @@
 // Ten sam robotLab i Rover-2 co w zadaniu B; osobny zwięzły projekt klasy 3.
-export default {
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = {
  "id": "107",
  "grade": 3,
  "order": 30,
@@ -240,3 +241,4 @@ export default {
  ],
  "exitTicket": "Pokaż własne połączenia i test STOP razem z przeszkodą. Dlaczego jedna drabinka if/elif/else jest tu potrzebna?"
 };
+export default normalizeLessonReferences(referencedLesson);

@@ -1,5 +1,6 @@
 import {makeModelLesson} from '../model3d-lesson.js';
-export default makeModelLesson({
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = makeModelLesson({
  id:'116',grade:2,order:7,title:'Od modelu do wydruku — poprawa, STL i podgląd warstw',subtitle:'Przygotujesz mały model do oceny na Bambu Lab H2C. Najpierw geometria, potem decyzja nauczyciela o druku.',
  objectives:['Sprawdzam geometrię i wymiary przed oddaniem modelu.','Odróżniam projekt edytowalny, STL i projekt slicera 3MF.','Uzasadniam poprawkę na podstawie podglądu warstw pokazanego przez nauczyciela.'],
  recall:{question:'W regale powiększasz wnękę, nie zmieniając bryły zewnętrznej. Co musisz sprawdzić?',options:['Czy ściany nie stały się zbyt cienkie','Czy nazwa projektu ma wielkie litery','Czy kamera jest bliżej'],correct:[0],explanation:'Pozostaje mniej materiału. Kontrola grubości i połączeń jest ważniejsza od wyglądu w wygodnej perspektywie.'},
@@ -15,3 +16,4 @@ export default makeModelLesson({
  exitQuestion:'Co oddajesz nauczycielowi i czego jeszcze nie potwierdza sam poprawny eksport STL?',teacherPreparation:'Przed zajęciami otwórz lokalnie Bambu Studio i sprawdź profil rzeczywistej H2C, dyszę i materiał. Przygotuj krótki pokaz jednego modelu, który ma zbyt cienki detal, oraz poprawionej wersji. Nie instaluj slicera uczniom w czasie zajęć. Drukarka pozostaje obsługiwana przez nauczyciela; nie uruchamiaj zdalnego wysyłania z kont uczniów. Jeśli pokazu nie da się wykonać, jawnie oznacz etap slicera jako oczekujący.',teacherSummary:'Produkt: własny mały model v 1/v 2, STL i krótka karta wymiarów/poprawki; kontrola slicera potwierdzona albo jawnie oczekująca. Wybór najlepszych prac i fizyczny wydruk poza 45min. Nie stawiaj oceny za quiz jako oceny drukowalności; ocena produktu po obejrzeniu projektu, a praktyczna kontrola po podglądzie H2C.',pair:false,
  methods:[{name:'Przypominanie i powroty',url:'https://metodyka.covepolska.pl/metoda-przypominanie-i-powroty.html'},{name:'Ocenianie kształtujące i poprawa',url:'https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html'}]
 });
+export default normalizeLessonReferences(referencedLesson);

@@ -1,5 +1,6 @@
 import {makeModelLesson} from '../model3d-lesson.js';
-export default makeModelLesson({
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = makeModelLesson({
  id:'112',grade:2,order:3,title:'Ogród na planie — skala i wymagania projektu',subtitle:'Zamienisz pomysł ogrodu na czytelny plan. Sprawdzisz, czy przejście rzeczywiście ma miejsce.',
  objectives:['Przeliczam rzeczywisty wymiar na model w skali 1:100.','Układam plan z widoku z góry według wymagań odbiorcy.','Wprowadzam poprawkę po sprawdzeniu szerokości przejścia.'],
  recall:{question:'Dwie donice na planie wyglądają tak samo. Jak sprawdzisz, czy naprawdę mają taki sam rozmiar?',options:['Porównam ich kolor','Odczytam wpisane wymiary','Powiększę jedną kamerą'],correct:[1],explanation:'Kamera i kolor nie określają wymiaru. Odczytaj długość i szerokość każdej bryły.'},
@@ -15,3 +16,6 @@ export default makeModelLesson({
  exitQuestion:'Jakie dwie rzeczy musisz sprawdzić po poszerzeniu ścieżki, żeby plan nadal spełniał wymagania?',teacherPreparation:'Narysuj na tablicy ogród 12 × 8 m i przeprowadź jedno przeliczenie; drugie z luką rozwiązuje każdy uczeń. Przy błędach jednostek wróć do 1 m = 1000 mm. Para sprawdza tylko przejście, bez sztywnych ról i przejmowania projektu. Podaj wariant solo. Nie deklaruj, że 1,2 m jest uniwersalną normą prawną — to założenie ćwiczenia.',teacherSummary:'Produkt to wymiarowany plan 2D wykonany w narzędziu 3D, edytowalny projekt i zrzut z góry. Nie drukujemy płaskiego zrzutu ani nie zaliczamy go jako gotowej makiety 3D. Następna lekcja nadaje wybranym obiektom wysokość.',pair:true,
  methods:[{name:'Modelowanie',url:'https://metodyka.covepolska.pl/metoda-modelowanie.html'},{name:'Ocenianie kształtujące i poprawa',url:'https://metodyka.covepolska.pl/metoda-ocenianie-ksztaltujace.html'}]
 });
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

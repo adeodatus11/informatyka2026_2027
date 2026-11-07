@@ -64,7 +64,8 @@ export const HOBBY = `<!DOCTYPE html>
 </html>
 `;
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'35',grade:1,order:18,title:'Tworzenie stron WWW – podstawowe informacje',
  subtitle:'Zajrzysz za kulisy każdej strony, przestaniesz wierzyć w „screeny jako dowód” i w 15 minut zrobisz własną stronę.',
  topic:'Jak działa strona WWW i pierwsza strona w HTML',icon:'globe',tags:['F12','<h1>…</h1>','klient–serwer'],duration:45,
@@ -201,3 +202,6 @@ export default {
  ],
  exitTicket:'Wiesz, że strona to tekst w HTML, który serwer wysyła, a przeglądarka rysuje. Umiesz zapisać tytuł i rozdziały jako <h1> i <h2>, dodać listę i obrazek z opisem alt — i wiesz, że zrzut ekranu strony niczego nie dowodzi.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

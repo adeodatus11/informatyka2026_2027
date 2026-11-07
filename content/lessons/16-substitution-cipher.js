@@ -1,6 +1,7 @@
 import {note, choice, reveal} from '../schema.js';
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'16',grade:2,order:14,title:'Szyfrowanie tekstu metodą podstawieniową',
  subtitle:'Zaszyfrujesz wiadomość dla kumpla, złamiesz cudzą bez klucza — i zrozumiesz, czemu Twojego WhatsAppa nie da się złamać tak samo.',
  topic:'Szyfrowanie tekstu metodą podstawieniową',icon:'lock',tags:['Cezar','GA-DE-RY-PO-LU-KI','Częstość liter'],duration:45,
@@ -88,3 +89,6 @@ export default {
  ],
  exitTicket:'Szyfr podstawieniowy zamienia każdą literę zawsze tak samo — dlatego łamie się go w minuty: Cezara przez sprawdzenie 25 kluczy, dowolne podstawienie przez częstość liter. Do prawdziwych danych używasz sprawdzonych narzędzi, a nie własnych szyfrów. Na lekcji 17 napiszesz szyfrator Cezara w Pythonie.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);

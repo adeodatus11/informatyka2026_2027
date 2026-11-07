@@ -6,7 +6,8 @@ import {sheetCheck} from '../sims/sheetCheck.js';
 // Plik: public/materials/excel/lesson-72-start.xlsx. Oczekiwane wartości liczy test z pliku.
 const FILE = 'materials/excel/lesson-72-start.xlsx';
 
-export default {
+import {organizeSolo} from '../solo-organization.js';
+const lessonForSolo = {
  id:'72',grade:1,order:43,workspace:'desktop-excel',
  title:'Tworzenie wykresu – projekt z geografii',
  subtitle:'Zrób klimatogram Warszawy z danych IMGW — taki jak w atlasie, tylko Twój. Policz, opisz i wyciągnij wnioski, które obronisz liczbami.',
@@ -82,3 +83,6 @@ export default {
  ],
  exitTicket:'Masz klimatogram z danych IMGW z opisanymi osiami, źródłem i wnioskami opartymi na liczbach.'
 };
+import {normalizeLessonReferences} from '../lesson-references.js';
+const referencedLesson = organizeSolo(lessonForSolo);
+export default normalizeLessonReferences(referencedLesson);
