@@ -8,6 +8,8 @@ Materiał dodatkowy klasy 1 (ID 34) prowadzi bezpośrednio do kursu Demagoga w n
 
 ## Zasoby do projektowania lekcji
 
+Zakładka [Lekcje dodatkowe](https://informatyka.szkolamistrzow.info/lekcje-dodatkowe/) zawiera pozaplanowe kursy dla uczniów wszystkich klas. Linki i krótkie opisy są w `content/additional-courses.js`; nie wchodzą do numeracji tematów ani liczby lekcji klas 1–3. Opisy trzech kursów OSE IT Szkoła sprawdzono na stronach organizatora 7.11.2026.
+
 - [Audyt kompletności 6.11.2026](docs/audyt-kompletnosci-2026-11-06.md) — wszystkie lekcje, poprawki pracy solo i odwołań, wyniki testów oraz granice weryfikacji.
 - [Podstawa programowa 2024, źródła i opracowania Migra](docs/podstawa-programowa/README.md) — tekst urzędowy, wymagania, mapowanie wszystkich lekcji i jawne luki; Python jako język realizacji.
 - [Metody COVE Polska](docs/metodyka-cove.md) — obowiązkowy punkt odniesienia dla kolejnych scenariuszy.

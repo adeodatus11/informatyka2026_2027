@@ -108,3 +108,17 @@ dialog{border:1px solid var(--line);color:var(--ink);background:#fff}dialog::bac
 .rg-submit{display:inline-block;margin-top:12px;background:var(--accent);color:#fff;font-weight:700;border-radius:8px;padding:8px 14px}
 @media(max-width:900px){.rg-phones{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.rg-phones{grid-template-columns:1fr}}
+
+/* Kursy pozaplanowe mają własny katalog, wspólny dla wszystkich klas. */
+.site-header .brand{min-width:0;flex:0 1 640px;margin-right:24px}
+.site-header .brand img{width:100%;max-width:640px}
+.site-header nav{flex-shrink:0}
+.additional-heading{max-width:800px;padding:52px 0 28px}
+.additional-heading h1{font-size:clamp(2.3rem,5vw,3.7rem);line-height:1.08;letter-spacing:-.045em;margin:16px 0 20px}
+.additional-heading .muted{font-size:.9rem;line-height:1.6}
+.additional-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding-bottom:40px}
+.additional-grid h2{font-size:1.5rem;line-height:1.22;letter-spacing:-.035em;margin:0 0 18px}
+.additional-grid .card-meta{color:var(--accent)}
+.additional-provider{display:block;margin-top:12px;color:var(--muted);font-size:.75rem}
+@media(max-width:1100px){.additional-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.site-header .brand{flex:1 1 100%;margin-right:0}.site-header nav{flex-wrap:wrap;justify-content:flex-end;gap:10px;max-width:100%}.additional-heading{padding-top:32px}.additional-grid{grid-template-columns:1fr}}
