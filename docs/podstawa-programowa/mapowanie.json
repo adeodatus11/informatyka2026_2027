@@ -242,8 +242,8 @@
         "w32-docx",
         "w32-docx-pub"
       ],
-      "evidence": "Redakcja zaproszenia według karty faktów: śledzone zmiany, komentarze, uzasadnione akceptowanie i odrzucanie propozycji, poprawa po informacji zwrotnej oraz oddzielna wersja do publikacji. Plik DOCX ucznia sprawdzany automatycznie lokalnie w przeglądarce (docxCheck).",
-      "limitations": "Tryb recenzji sprawdzany w prawdziwym dokumencie; IV.1 wspiera krótki projekt redakcyjny z poprawą, nie samo zaznaczenie quizu. Nie jest to ćwiczenie publikowania ani praw autorskich.",
+      "evidence": "Samodzielna redakcja fikcyjnego komunikatu studniówkowego: cztery komentarze, śledzone korekty i zastosowanie odpowiedzi komitetu, decyzje na podstawie danych oraz oddzielna czysta kopia. Lokalne sprawdzarki DOCX weryfikują zapisane elementy; nauczyciel ocenia sens komentarzy.",
+      "limitations": "IV.1 częściowo: symulowany obieg redakcyjny, bez rzeczywistej współpracy uczniów. Brak publikacji w internecie. Instrukcje dla LTSC 2024, zrzuty z dokumentacji Microsoftu; szkolna instalacja Windows wymaga próby w pracowni.",
       "migraReference": "M1"
     },
     {

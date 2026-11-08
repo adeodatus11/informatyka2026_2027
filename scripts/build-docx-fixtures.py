@@ -377,31 +377,45 @@ def comment(doc, p, run_index, text):
 
 def lesson32(variant='review'):
     d = start(32)
-    p_place = para(d, 'Zapraszamy uczniów', exact=False)
-    p_time = para(d, 'Warsztaty potrwają', exact=False)
-    p_cert = para(d, 'Każdy uczestnik', exact=False)
+    p_place = para(d, 'Studniówka 2027 odbedzie', exact=False)
+    p_time = para(d, 'Cena wynosi', exact=False)
+    p_transport = para(d, 'Transport autokarem', exact=False)
+    p_diet = para(d, 'Zgłoś szczególną dietę.', exact=False)
     if variant == 'review':
-        clear_runs(p_time)
-        append_xml(p_time, run_xml('Warsztaty potrwają ') + dele('60 minut', 'Redaktor ćwiczeniowy') + ins('90 minut', 'Redaktor ćwiczeniowy')
-                   + run_xml('. Udział jest ') + dele('płatny') + ins('bezpłatny') + run_xml('. Zgłoszenia przyjmuje opiekun koła do ')
-                   + dele('17') + ins('16') + run_xml(' listopada.'))
-        clear_runs(p_cert)
-        append_xml(p_cert, dele('Każdy uczestnik otrzyma profesjonalny certyfikat. ') + run_xml('Na spotkaniu nauczysz ') + dele('sie') + ins('się')
-                   + run_xml(' przygotowywać przejrzyste dokumenty. ') + run_xml('Przynieś materiały.'))
-        comment(d, p_place, -2, 'Sala 12 — zgodna z ustaleniami. Akceptuję w wersji publicznej.')
-        comment(d, p_time, 1, '90 minut jest niezgodne z kartą danych: ma zostać 60. Odrzucam.')
-        comment(d, p_cert, -1, 'Do wyjaśnienia z organizatorem; do tego czasu usuńmy niepotwierdzoną prośbę z wersji publicznej.')
-        comment(d, p_cert, 1, 'Po informacji zwrotnej poprawię zdanie o materiałach — usunę je z wersji publicznej.')
-    else:  # kopia publikacyjna: zmiany rozstrzygnięte, komentarze usunięte, śledzenie wyłączone
         clear_runs(p_place)
-        append_xml(p_place, run_xml('Zapraszamy uczniów klas pierwszych na warsztaty tworzenia dokumentów. Spotkanie odbędzie się 18 listopada 2026 o godzinie 14.00 w sali 12.'))
+        append_xml(p_place, run_xml('Studniówka 2027 ') + dele('odbedzie') + ins('odbędzie') + run_xml(' się 23 stycznia 2027 o godzinie 19.00. Miejsce: ')
+                   + dele('Sala Bursztynowa', 'Komitet ćwiczeniowy') + ins('Sala Ogrodowa', 'Komitet ćwiczeniowy') + run_xml('.'))
         clear_runs(p_time)
-        append_xml(p_time, run_xml('Warsztaty potrwają 60 minut. Udział jest bezpłatny. Zgłoszenia przyjmuje opiekun koła do 16 listopada.'))
-        clear_runs(p_cert)
-        append_xml(p_cert, run_xml('Na spotkaniu nauczysz się przygotowywać przejrzyste dokumenty.'))
+        append_xml(p_time, run_xml('Cena wynosi ') + dele('490 zł', 'Komitet ćwiczeniowy') + ins('590 zł', 'Komitet ćwiczeniowy')
+                   + run_xml(' od osoby. Zaliczka wynosi ') + dele('200 zł') + ins('150 zł') + run_xml('. Wpłatę przekaż ')
+                   + dele('do 10 grudnia') + ins('do 8 grudnia') + run_xml(' u wychowawcy.'))
+        clear_runs(p_transport)
+        append_xml(p_transport, dele('Transport autokarem jest wliczony w cenę.'))
+        clear_runs(p_diet)
+        append_xml(p_diet, dele('Zgłoś szczególną dietę.') + ins('Szczególną dietę zgłoś do 8 grudnia u wychowawcy.'))
+        comment(d, p_place, -1, 'Sala Ogrodowa jest zgodna z potwierdzoną rezerwacją.')
+        comment(d, p_time, 1, 'Odrzucam podwyżkę: potwierdzona oferta wskazuje 490 zł.')
+        transport_run = next(p_transport._p.iter(qn('w:r')))
+        d.add_comment(Run(transport_run, p_transport), text='Transport nie został zamówiony; usuwam obietnicę po odpowiedzi komitetu.', author='Uczeń Testowy', initials='UT')
+        comment(d, p_diet, 0, 'Komu i do kiedy zgłosić dietę? Doprecyzowuję po odpowiedzi komitetu.')
+    else:
+        clear_runs(p_place)
+        append_xml(p_place, run_xml('Studniówka 2027 odbędzie się 23 stycznia 2027 o godzinie 19.00. Miejsce: Sala Ogrodowa.'))
+        clear_runs(p_time)
+        append_xml(p_time, run_xml('Cena wynosi 490 zł od osoby. Zaliczka wynosi 150 zł. Wpłatę przekaż do 8 grudnia u wychowawcy.'))
+        clear_runs(p_transport)
+        clear_runs(p_diet)
+        append_xml(p_diet, run_xml('Szczególną dietę zgłoś do 8 grudnia u wychowawcy.'))
         tr = d.settings.element.find(qn('w:trackRevisions'))
         if tr is not None:
             d.settings.element.remove(tr)
+        # The participant copy keeps the title and communication, without the internal brief.
+        body = d.element.body
+        heading = para(d, 'Komunikat do recenzji')
+        for child in list(body)[1:]:
+            if child == heading._p:
+                break
+            body.remove(child)
     return d
 
 

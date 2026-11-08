@@ -1,340 +1,75 @@
-import {organizeSolo} from '../solo-organization.js';
-const lessonForSolo = {
-  "id": "32",
-  "grade": 1,order:13,
-  "title": "Praca w trybie recenzji",
-  "topic": "Praca w trybie recenzji",
-  "subtitle": "Redakcja dostała zaproszenie z błędami. Popraw treść, zachowaj ślad decyzji i przygotuj wersję do publikacji.",
-  "icon": "doc",
-  "tags": [
-    "Word na komputerze",
-    "Dokument DOCX",
-    "Praktyka"
-  ],
-  "duration": 45,
-  "workspace": "desktop-word",
-  "curriculum": "PP 2024 · zakres podstawowy · II.3.b — opracowanie dokumentów o różnorodnej tematyce; IV.1 — współpraca przy realizacji projektów i wymiana informacji.",
-  "materials": [
-    "Komputer z Microsoft Word dla Windows 2019/2021/2024 lub Microsoft 365; polecenia mogą mieć nieco inne etykiety w poszczególnych wydaniach.",
-    "Przeglądarka z tą lekcją oraz pobrany dokument DOCX. Internet służy pobraniu materiałów; edycja odbywa się w Wordzie na komputerze.",
-    "Własny folder roboczy. Zapisuj Ctrl+S; do oddania plików użyj kanału wskazanego przez nauczyciela. Platforma nie przesyła plików — sprawdza je lokalnie w Twojej przeglądarce."
-  ],
-  "format": {
-    "methods": [
-      {
-        "name": "Nauczanie jawne",
-        "url": "https://metodyka.covepolska.pl/metoda-nauczanie-jawne.html"
-      },
-      {
-        "name": "Feedback prowadzący do poprawy",
-        "url": "https://metodyka.covepolska.pl/metoda-feedback-poprawa.html"
-      },
-      {
-        "name": "Tutoring rówieśniczy",
-        "url": "https://metodyka.covepolska.pl/metoda-peer-tutoring.html"
-      }
-    ],
-    "name": "Dyżur redakcyjny: autor → recenzent → poprawa",
-    "student": "Porównasz zaproszenie z kartą ustaleń. Zachowasz recenzję, wymienisz konkretną wskazówkę z partnerem i przygotujesz drugą wersję. Każdy oddaje własne dwa pliki.",
-    "teacher": "Najpierw pokaż różnicę: komentarz pyta, zmiana proponuje nowy zapis. Uczniowie przeglądają dwie gotowe propozycje, potem tworzą własną recenzję. Partner daje wskazówkę względem kryterium i autor obowiązkowo poprawia tekst. Zachowaj osobny czas na poprawę.",
-    "grouping": "Praca indywidualna i dwie krótkie rundy w parze. Recenzent mówi lub dopisuje komentarz przy komputerze autora, bez kont online. Przy braku partnera rolę recenzenta pełni nauczyciel lub uczeń korzysta z ramy pytań i zaznacza samokontrolę."
-  },
-  "sections": [
-    {
-      "id": "brief",
-      "label": "Zlecenie",
-      "title": "Zlecenie — redaktor sprawdza fakty",
-      "duration": 5,
-      "intro": "W starterze są uzgodnione dane i zaproszenie z usterkami. Dwie propozycje już czekają w trybie śledzenia zmian. Ty jesteś redaktorem odpowiedzialnym za publikację.",
-      "activities": [
-        {
-          "type": "download",
-          "id": "w32-download-start.docx",
-          "file": "materials/word/lesson-32-start.docx",
-          "label": "Pobierz dokument startowy DOCX",
-          "description": "Materiał do pracy w zainstalowanym Wordzie. Zapisz kopię w swoim folderze lekcji."
-        },
-        {
-          "type": "choice",
-          "id": "w32-q1",
-          "question": "Zdanie „Przynieś materiały” jest niejasne, a karta ustaleń nie podaje jakich. Co robisz?",
-          "options": [
-            "Dopisuję wymyśloną listę",
-            "Komentuję: „Jakie materiały i kto je zapewnia? Proszę potwierdzić przed publikacją.”",
-            "Usuwam cały dokument"
-          ],
-          "correct": [
-            1
-          ],
-          "explanation": "Komentarz pozwala poprosić o brakującą informację. Nie uzupełniamy faktów domysłem.",
-          "hint": "Czy znasz prawdziwą odpowiedź, czy dopiero musisz o nią zapytać?"
-        }
-      ],
-      "grouping": "solo",
-      "teacherNotes": "Uczniowie czytają kartę danych przed edycją. Podkreśl brak obowiązku logowania i współpracy online.",
-      "askStudents": "Co jest źródłem rozstrzygnięcia daty i sali?",
-      "expectedAnswers": "Tabela uzgodnionych danych w starterze.",
-      "commonMistakes": "Redagowanie na podstawie pamięci zamiast danych.",
-      "optionalExtension": "Dla chętnych: wyjaśnij partnerowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
-      "skipIfShortOnTime": false
-    },
-    {
-      "id": "model",
-      "label": "Instruktaż",
-      "title": "Instruktaż — trzy różne czynności",
-      "duration": 8,
-      "intro": "Recenzowanie to propozycja, rozmowa i decyzja. Każda z tych czynności ma własne narzędzie.",
-      "activities": [
-        {
-          "type": "wordSteps",
-          "id": "w32-model",
-          "title": "Zobacz recenzję w Wordzie",
-          "steps": [
-            {
-              "title": "Pokaż pełny zapis",
-              "instruction": "Otwórz starter w Wordzie i zapisz jako 32-recenzja.docx. W Recenzja wybierz Wszystkie adiustacje. W Pokaż adiustację zaznacz wstawienia i usunięcia oraz wszystkich recenzentów. Otwórz Okienko recenzowania, jeżeli zmiany są trudne do zauważenia.",
-              "check": "Widzisz propozycję sali 21→12 i czasu 60→90 minut.",
-              "help": "Nie widzisz zmian? Sprawdź Wszystkie adiustacje oraz filtry autorów. „Bez adiustacji” ukrywa oznaczenia."
-            },
-            {
-              "title": "Komentarz kontra zmiana",
-              "instruction": "Zaznacz „Przynieś materiały”, wybierz Recenzja → Nowy komentarz i zapytaj jakie materiały należy przynieść. Jeśli komentarz ma przycisk Wyślij/Opublikuj, kliknij go, aby zapisać komentarz w pliku. Następnie wybierz Recenzja → Śledź zmiany (lub Śledzenie zmian).",
-              "check": "Komentarz odnosi się do zaznaczenia, a śledzenie jest włączone.",
-              "help": "W nowoczesnych komentarzach użyj przycisku zatwierdzającego lub Ctrl+Enter. Nie musisz używać @wzmianek ani wysyłać wiadomości innym osobom."
-            }
-          ]
-        }
-      ],
-      "grouping": "class",
-      "teacherNotes": "Na kopii pokaż krótkie dopisanie słowa przy włączonym śledzeniu. Przełącz Bez adiustacji i z powrotem. Uczniowie przewidują, czy zmiana zniknęła.",
-      "askStudents": "Czy wyłączenie śledzenia usuwa poprzednie propozycje?",
-      "expectedAnswers": "Nie, tylko kończy oznaczanie kolejnych edycji.",
-      "commonMistakes": "Mylenie wyłączenia śledzenia, ukrycia znaczników i rozstrzygnięcia zmian.",
-      "optionalExtension": "Dla chętnych: wyjaśnij partnerowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
-      "skipIfShortOnTime": false,
-      "reading": {
-        "title": "Komentarz nie poprawia zdania",
-        "paragraphs": [
-          "Śledzenie zmian zachowuje propozycje dodania, usunięcia i zmiany formatowania. Komentarz zapisuje uwagę lub pytanie przy fragmencie. Autor dokumentu podejmuje decyzję: Akceptuj utrwala propozycję, Odrzuć ją cofa. Nie akceptuj automatycznie wszystkich zmian tylko dlatego, że są oznaczone jako recenzja.",
-          "Widok Bez adiustacji pokazuje tekst z uwzględnieniem proponowanych zmian, ale nie usuwa śladów recenzji. Oryginał również jest widokiem, nie poleceniem cofnięcia propozycji. Wyłączenie śledzenia nie rozstrzyga już istniejących zmian.",
-          "Rozwiązanie wątku komentarza oznacza zakończenie rozmowy, ale komentarz może nadal pozostać w pliku. Do czystej kopii usuń komentarze po wykorzystaniu uwag; wcześniej zachowaj kopię z recenzją."
-        ]
-      }
-    },
-    {
-      "id": "edit",
-      "label": "Recenzja",
-      "title": "Recenzja — popraw i uzasadnij",
-      "duration": 13,
-      "intro": "Zachowaj ślad swojej pracy. Na razie nie akceptuj ani nie odrzucaj propozycji; decyzje zastosujesz w kopii do publikacji.",
-      "activities": [
-        {
-          "type": "wordSteps",
-          "id": "w32-edit",
-          "title": "Pierwsza wersja recenzji",
-          "steps": [
-            {
-              "title": "Sprawdź dwie propozycje",
-              "instruction": "Porównaj salę oraz czas z tabelą danych. Przy każdej dopisz komentarz z decyzją i uzasadnieniem: sala 12 — zgodna z ustaleniami; 90 minut — niezgodne, ma zostać 60. Zostaw propozycje nierozstrzygnięte w tym pliku.",
-              "check": "Masz decyzje oparte na karcie, nie na kolorze znacznika.",
-              "help": "Przy zamianie Word może pokazywać usunięcie i wstawienie jako osobne zmiany. Później rozstrzygnij obie części zamiany."
-            },
-            {
-              "title": "Własne poprawki pod kontrolą",
-              "instruction": "Przy włączonym śledzeniu zmień „płatny” na „bezpłatny”, termin zapisów 17 listopada na 16 listopada, „sie” na „się”. Usuń obietnicę niepotwierdzonego certyfikatu. Nie zmieniaj daty warsztatów: 18 listopada 2026, godz. 14.00.",
-              "check": "Wszystkie własne poprawki mają ślad recenzji, a daty zgadzają się z tabelą.",
-              "help": "Jeśli zmiany nie są oznaczone, cofnij własną ostatnią edycję, włącz śledzenie i powtórz. Nie używaj kolorowania jako zastępstwa recenzji."
-            },
-            {
-              "title": "Komentarz, który pomaga",
-              "instruction": "Przy niejasnych materiałach dopisz propozycję bez wymyślania faktu: „Do wyjaśnienia z organizatorem; do tego czasu usuńmy niepotwierdzoną prośbę z wersji publicznej”. Zapisz Ctrl+S.",
-              "check": "Odbiorca wie, jaka decyzja jest potrzebna i co zrobić przed publikacją.",
-              "help": "„Źle” ani „Popraw” nie mówią autorowi, jak zmienić tekst."
-            }
-          ]
-        }
-      ],
-      "grouping": "solo",
-      "teacherNotes": "Sprawdź po trzech minutach, czy każdy ma włączone śledzenie. Pomagaj pytaniem: „Który wiersz tabeli potwierdza tę decyzję?”.",
-      "askStudents": "Czy recenzent zawsze ma rację?",
-      "expectedAnswers": "Nie; propozycje trzeba sprawdzić z uzgodnionymi danymi.",
-      "commonMistakes": "Przyjmowanie 90 min, bo to nowszy zapis.",
-      "optionalExtension": "Dla chętnych: wyjaśnij partnerowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
-      "skipIfShortOnTime": false
-    },
-    {
-      "id": "feedback",
-      "label": "Poprawa",
-      "title": "Poprawa — od uwagi do publikacji",
-      "duration": 13,
-      "intro": "Przez pierwsze 4 minuty pracujcie w parze z sąsiadem (po 2 minuty na osobę). Recenzent wskazuje jeden spełniony warunek i jeden konkretny następny krok. Bez pary: przejdź ramę pytań sam albo poproś nauczyciela o uwagę. Potem każdy ma 9 minut na zastosowanie uwagi i przygotowanie kopii.",
-      "activities": [
-        {
-          "type": "wordSteps",
-          "id": "w32-feedback",
-          "title": "Druga wersja z dowodem poprawy",
-          "steps": [
-            {
-              "title": "Wskazówka partnera",
-              "instruction": "Pokaż dokument partnerowi. Partner sprawdza zgodność z kartą danych i czytelność komentarza. Dopisz komentarz „Po informacji zwrotnej poprawię…” ze wskazaniem konkretnego miejsca. Popraw to miejsce, nadal przy włączonym śledzeniu. Zapisz 32-recenzja.docx.",
-              "check": "Widać wskazówkę i odpowiadającą jej poprawę.",
-              "help": "Jeśli wszystko działa, partner proponuje uściślenie jednego zdania bez zmiany uzgodnionych faktów."
-            },
-            {
-              "title": "Osobna kopia do publikacji",
-              "instruction": "Plik → Zapisz jako → 32-publikacja.docx. Dopiero w tej kopii w Recenzja przejdź przez zmiany przyciskami Następna/Poprzednia. Zaakceptuj salę 21→12. Odrzuć czas 60→90 (obie części zamiany). Zaakceptuj poprawne własne korekty.",
-              "check": "Ostateczny tekst podaje salę 12 i 60 minut, udział bezpłatny i zapisy do 16 listopada.",
-              "help": "Jeżeli jedna zamiana składa się z usunięcia i wstawienia, przejrzyj obie. Kontroluj końcowe zdanie po decyzji."
-            },
-            {
-              "title": "Domknij pytania",
-              "instruction": "Dopóki organizator nie potwierdzi materiałów, usuń z wersji publicznej niejasną prośbę o ich przyniesienie. Rozstrzygnij także tę zmianę. Wyłącz śledzenie. Wykorzystane komentarze usuń poleceniami Recenzja → Usuń (w grupie Komentarze), nie tylko Rozwiąż.",
-              "check": "Kopia publiczna nie zawiera niepotwierdzonych obietnic ani komentarzy.",
-              "help": "Nie kasuj całej tabeli danych przed kontrolą faktów; możesz zostawić ją jako załącznik roboczy albo po kontroli usunąć z kopii publikacyjnej."
-            },
-            {
-              "title": "Ostatnia kontrola",
-              "instruction": "Ustaw Wszystkie adiustacje i wszystkich recenzentów; sprawdź Okienko recenzowania oraz panel komentarzy. Powinno nie być nierozstrzygniętych zmian ani komentarzy. Przeczytaj cały tekst i zapisz. Zachowaj oba pliki.",
-              "check": "Wersja z recenzją zachowała ślad pracy, kopia publikacyjna jest czysta.",
-              "help": "Sam brak czerwonych podkreśleń lub widok Bez adiustacji nie jest dowodem czystości."
-            }
-          ]
-        }
-      ],
-      "grouping": "pair",
-      "teacherNotes": "Wymagaj czasu na poprawę: nie kończ na wymianie pochwał. Sprawdź dwa pliki u losowo wybranej pary.",
-      "askStudents": "Po czym sprawdzisz, że uwaga została wykorzystana?",
-      "expectedAnswers": "Porównam konkretny fragment w recenzji i wersji publicznej.",
-      "commonMistakes": "Nadpisanie kopii recenzenckiej czystym plikiem.",
-      "optionalExtension": "Dla chętnych: wyjaśnij partnerowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
-      "skipIfShortOnTime": false
-    },
-    {
-      "id": "check",
-      "label": "Ocena",
-      "title": "Ocena — dwa pliki, jeden proces",
-      "duration": 6,
-      "intro": "Oddaj oba pliki kanałem ustalonym z nauczycielem. Najpierw wgraj oba pliki do sprawdzarki (plik czyta tylko Twoja przeglądarka), potem uzupełnij samoocenę tego, czego automat nie zmierzy.",
-      "activities": [
-        {
-          "type": "choice",
-          "id": "w32-q2",
-          "question": "Włączasz Bez adiustacji i zapisujesz dokument. Czy odbiorca może zobaczyć stare propozycje?",
-          "options": [
-            "Nie, zapis je usunął",
-            "Tak, jeśli nie zostały zaakceptowane lub odrzucone",
-            "Tylko po zakupie innej wersji Worda"
-          ],
-          "correct": [
-            1
-          ],
-          "explanation": "Ukryte propozycje pozostają w dokumencie. Trzeba je rozstrzygnąć, a komentarze usunąć z kopii publikacyjnej.",
-          "hint": "Widok zmienia wyświetlanie czy zawartość historii zmian?"
-        },
-        {
-          "type": "choice",
-          "id": "w32-q3",
-          "question": "Karta ustaleń mówi 60 minut, recenzent proponuje 90. Jaka decyzja jest uzasadniona?",
-          "options": [
-            "Akceptuj, bo recenzent jest ważniejszy",
-            "Odrzuć propozycję 90 i sprawdź, czy wróciło 60",
-            "Ukryj propozycję, to wystarczy"
-          ],
-          "correct": [
-            1
-          ],
-          "explanation": "Dane źródłowe są podstawą decyzji; odrzucenie przywraca wcześniejszy zapis.",
-          "hint": "Porównaj propozycję z kartą danych."
-        },
-        {type:'docxCheck',id:'w32-docx',title:'Sprawdź plik z recenzją (32-recenzja.docx)',filename:'32-recenzja.docx',expect:['Zaproszenie na warsztaty'],points:7,checks:[{id:'comments',label:'Co najmniej 3 komentarze z decyzjami i pytaniem',points:2,kind:'comments',min:3},{id:'comment-materials',label:'Komentarz przy „Przynieś materiały”',points:1,kind:'comments',min:1,anchor:'materiały'},{id:'free',label:'„płatny” → „bezpłatny” ze śledzeniem zmian',points:1,kind:'trackedEdit',from:'Tekst zaproszenia',edits:[{before:'Udział jest płatny',after:'Udział jest bezpłatny'}]},{id:'date',label:'Zapisy: 17 → 16 listopada ze śledzeniem zmian',points:1,kind:'trackedEdit',from:'Tekst zaproszenia',edits:[{before:'do 17 listopada',after:'do 16 listopada'}]},{id:'typo',label:'„sie” → „się” ze śledzeniem zmian',points:1,kind:'trackedEdit',from:'Tekst zaproszenia',edits:[{before:'nauczysz sie',after:'nauczysz się'}]},{id:'cert',label:'Usunięta obietnica certyfikatu (śledzone)',points:1,kind:'trackedEdit',from:'Tekst zaproszenia',edits:[{before:'certyfikat'}]}]},{type:'docxCheck',id:'w32-docx-pub',title:'Sprawdź kopię publikacyjną (32-publikacja.docx)',filename:'32-publikacja.docx',expect:['Zaproszenie na warsztaty'],points:6,checks:[{id:'clean',label:'Bez komentarzy i nierozstrzygniętych zmian',points:2,kind:'cleanCopy'},{id:'facts',label:'Dane zgodne z ustaleniami',points:2,kind:'text',from:'Tekst zaproszenia',contains:['18 listopada 2026','14.00','sali 12','60 minut',{word:'bezpłatny'},'do 16 listopada'],hint:'Porównaj zaproszenie z tabelą „Uzgodnione dane”: sala 12 (zaakceptuj), 60 minut (odrzuć 90), udział bezpłatny, zapisy do 16 listopada.'},{id:'removed',label:'Bez błędów i niepotwierdzonych obietnic',points:2,kind:'text',from:'Tekst zaproszenia',absent:['90 minut',{word:'płatny'},'17 listopada',{word:'sie'},'certyfikat','Przynieś materiały'],hint:'W kopii publikacyjnej odrzuć zmianę 60→90, popraw „płatny”, datę zapisów i „sie”; usuń obietnicę certyfikatu i niejasną prośbę o materiały.'}]},
-        {
-          "type": "wordRubric",
-          "id": "w32-rubric",
-          "title": "Kryteria pliku — sprawdź w Wordzie",
-          "filename": "32-recenzja.docx + 32-publikacja.docx",
-          "criteria": [
-            {
-              "label": "Zgodność informacji",
-              "points": 3,
-              "description": "0: co najmniej trzy istotne błędy. 1: dwa błędy. 2: jeden błąd. 3: sala 12, 60 minut, bezpłatny udział, zapisy 16 listopada, warsztaty 18 listopada o 14.00; brak niepotwierdzonego certyfikatu."
-            },
-            {
-              "label": "Widoczna recenzja",
-              "points": 3,
-              "description": "0: brak wersji z recenzją. 1: tylko komentarz albo tylko śledzone korekty. 2: oba narzędzia są, lecz brak uzasadnienia jednej decyzji. 3: własne śledzone korekty, rzeczowy komentarz i uzasadnione decyzje dotyczące dwóch gotowych propozycji."
-            },
-            {
-              "label": "Wykorzystanie feedbacku",
-              "points": 2,
-              "description": "0: brak wskazówki i poprawy. 1: jest konkretna uwaga, ale bez widocznego zastosowania. 2: komentarz wskazuje miejsce i działanie, a późniejszy tekst pokazuje odpowiadającą mu poprawę."
-            },
-            {
-              "label": "Kopia publikacyjna",
-              "points": 2,
-              "description": "0: brak osobnej kopii. 1: kopia istnieje, ale ma nierozstrzygniętą zmianę lub komentarz. 2: osobna kopia bez nierozstrzygniętych zmian i komentarzy; wersja recenzencka zachowana."
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "w32-exit",
-          "question": "Bilet wyjścia: podaj jedną decyzję Akceptuj/Odrzuć z jej źródłem oraz jedną zmianę po uwadze partnera. Oceń: samodzielnie / ze wskazówką / potrzebuję próby.",
-          "placeholder": "Wpisz konkretny przykład ze swojego dokumentu…",
-          "minLength": 12,
-          "explanation": "Przykład: odrzuciłem 90 minut, bo karta mówi 60; po uwadze doprecyzowałem komentarz o materiałach. Samoocena służy planowaniu kolejnej próby."
-        },
-        {
-          "type": "resultCard",
-          "id": "w32-result",
-          "title": "Wiedza i plik",
-          "hideGrade": true,
-          "sources": [
-            "w32-docx",
-            "w32-docx-pub",
-            "w32-q1",
-            "w32-q2",
-            "w32-q3"
-          ],
-          "badges": [
-            {
-              "min": 0,
-              "name": "Wróć do wskazówki",
-              "text": "Przeczytaj wyjaśnienia i sprawdź zasadę na swoim pliku."
-            },
-            {
-              "min": 0.6,
-              "name": "Rozumiem narzędzia",
-              "text": "Pokaż w Wordzie dowód spełnienia kryteriów."
-            },
-            {
-              "min": 1,
-              "name": "Decyzje z uzasadnieniem",
-              "text": "Wynik dotyczy quizu. Dokument ocenia nauczyciel osobno."
-            }
-          ]
-        }
-      ],
-      "grouping": "solo",
-      "teacherNotes": "Nie przeliczaj quizu automatycznie na ocenę produktu. Zbierz krótką refleksję i obejrzyj pliki z recenzją i bez niej.",
-      "askStudents": "Dlaczego zachowujemy dwa pliki?",
-      "expectedAnswers": "Aby pokazać proces poprawy i osobno gotową publikację.",
-      "commonMistakes": "Oddawanie samego zrzutu ekranu zamiast edytowalnych plików.",
-      "optionalExtension": "Dla chętnych: wyjaśnij partnerowi przyczynę jednego błędu i pokaż bezpieczną korektę na kopii pliku.",
-      "skipIfShortOnTime": false
-    }
-  ],
-  "objectives": [
-    "Odróżniam komentarz od proponowanej zmiany treści.",
-    "Włączam śledzenie zmian, a następnie świadomie akceptuję lub odrzucam propozycje.",
-    "Weryfikuję zaproszenie na podstawie danych w dokumencie, nie według własnego domysłu.",
-    "Zachowuję wersję z recenzją i przygotowuję czystą kopię po rozstrzygnięciu zmian."
-  ],
-  "teacherGuide": {
-    "preparation": "Sprawdź wyświetlanie gotowych zmian w starterze: Recenzja → Wszystkie adiustacje, Pokaż adiustację → wstawienia i usunięcia oraz wszyscy recenzenci. Klucz: sala 12 (zaakceptuj propozycję 21→12), czas 60 min (odrzuć propozycję 60→90), bezpłatnie, zapisy do 16 listopada, popraw „sie”, usuń niepotwierdzony certyfikat. Nie dopowiadaj listy materiałów — komentarz ma zapytać organizatora.",
-    "summary": "Oceń parę plików 32-recenzja.docx oraz 32-publikacja.docx: poprawność względem tabeli, widoczna praca recenzencka, użycie feedbacku i świadome rozstrzygnięcia. Quiz jest osobną diagnozą. Jeśli uczniowie mylą ukrycie z usunięciem, zacznij następną lekcję od ponownego wyświetlenia adiustacji w kopii."
-  },
-  "exitTicket": "Recenzja kończy się decyzją i poprawą. Oddaj 32-recenzja.docx oraz 32-publikacja.docx; wynik quizu nie zastępuje oceny tych plików."
+import {note,choice} from '../schema.js';
+const guide=(id,title,steps)=>({type:'wordSteps',id,title,steps});
+const step=(title,instruction,check,help,image)=>({title,instruction,check,help,...image&&{image}});
+const picture=(file,alt,sourceUrl)=>({src:`materials/word/review-guide/${file}`,alt,caption:'Zrzut z dokumentacji Microsoftu dla Worda. To ilustracja przycisków, nie zrzut szkolnej instalacji LTSC 2024; układ i etykiety mogą się różnić.',sourceUrl});
+const stage=(id,label,title,duration,intro,activities,teacherNotes)=>({id,label,title,intro,activities,grouping:'solo',...note(duration,teacherNotes,'Na jakiej informacji opierasz decyzję?','Na potwierdzonych ustaleniach lub nowej odpowiedzi komitetu.','Ukrywanie zmian zamiast rozstrzygnięcia; nadpisanie recenzji czystą kopią.','Dla chętnych: opisz konsekwencję opublikowania niepotwierdzonej obietnicy.')});
+const tracked=(id,label,before,after,points=1)=>({id,label,points,kind:'trackedEdit',from:'Komunikat do recenzji',edits:[{before,...after&&{after}}]});
+export default {
+ id:'32',grade:1,order:13,title:'Praca w trybie recenzji',topic:'Praca w trybie recenzji',
+ subtitle:'Komitet studniówkowy potrzebuje wiarygodnego komunikatu. Sprawdź ustalenia, skomentuj wątpliwości i przygotuj wersję dla uczestników.',icon:'doc',tags:['Studniówka','Word LTSC 2024','Samodzielnie'],duration:45,workspace:'desktop-word',
+ curriculum:'PP 2024 · II.3.b — opracowanie dokumentów tekstowych; IV.1 częściowo — samodzielna praca w symulowanym obiegu redakcyjnym. Nie jest to dowód współpracy uczniów online.',
+ materials:['Word LTSC 2024 dla Windows, aktywowany na szkolnym komputerze. Konto Microsoft ucznia nie jest potrzebne.','Pobrany DOCX i własny folder. Edytujesz lokalnie w Wordzie, nie w przeglądarce.','Dwa końcowe pliki: 32-recenzja.docx i 32-publikacja.docx. Wszystkie dane wydarzenia są fikcyjne.'],
+ format:{name:'Komitet studniówkowy — samodzielna redakcja',grouping:'Praca samodzielna: każdy przy swoim komputerze i na własnej kopii pliku.',student:'Czytasz historię, wykonujesz kroki w Wordzie i sprawdzasz efekt. Nie czekasz na partnera ani pokaz nauczyciela. Odpowiedź na brakującą informację otrzymasz w kolejnym etapie.',teacher:'Możesz przeczytać historię w minutę lub od razu skierować uczniów do samodzielnej pracy. Instrukcje są na stronie. Pomagaj po sprawdzeniu przez ucznia sekcji „Gdy coś nie działa”. Na końcu obejrzyj dwa pliki i uzasadnienie decyzji.',methods:[{name:'Problem, przypadek, projekt',url:'https://metodyka.covepolska.pl/metoda-problem-projekt-przypadek.html'},{name:'Modelowanie i przykład rozwiązany',url:'https://metodyka.covepolska.pl/metoda-modelowanie.html'}]},
+ sections:[
+ stage('brief','Historia','Do wieczora ma wyjść jeden komunikat',5,'Wyobraź sobie, że organizujesz studniówkę. Komitet ma wysłać uczestnikom komunikat, lecz ktoś zmienił salę, ktoś podniósł cenę, a transport obiecano bez potwierdzenia. Przejmujesz redakcję: oddziel fakty od propozycji i pytań. Organizujemy fikcyjny bal — nie wysyłasz prawdziwych zaproszeń.',[
+ {type:'download',id:'w32-download-start.docx',file:'materials/word/lesson-32-start.docx',label:'Pobierz dokument komitetu studniówkowego',description:'Karta potwierdzonych ustaleń i komunikat z dwiema gotowymi propozycjami zmian. Otwórz w Wordzie na komputerze.'},
+ guide('w32-start','Zacznij od własnej kopii',[step('Zapisz plik i przeczytaj ustalenia','Pobierz DOCX i otwórz w Wordzie. Wybierz Plik → Zapisz jako → Przeglądaj. Zapisz w swoim folderze jako 32-recenzja.docx. Jeśli widzisz żółty pasek Widoku chronionego, wybierz Włącz edytowanie dla tego pobranego materiału. Przeczytaj tabelę „Potwierdzone ustalenia”.','Na pasku tytułu jest 32-recenzja.docx. Znasz datę, salę, cenę, zaliczkę i termin wpłaty.','Nie loguj się do OneDrive; wybierz folder na komputerze. Nie wyłączaj Widoku chronionego w ustawieniach całego Worda. Samo otwarcie pobranego pliku nie tworzy Twojej kopii.')]),
+ choice('w32-q1','Transport jest obiecany w komunikacie, ale niepotwierdzony w ustaleniach. Co robisz?',['Zakładam, że transport jest pewny','Dodaję komentarz z pytaniem do komitetu; nie traktuję obietnicy jako faktu','Akceptuję wszystko, bo to plik komitetu'],[1],'Komentarz zapisuje pytanie i powód wątpliwości. Sam zapis obietnicy nie potwierdza zamówienia transportu.')
+ ],'Historia jest dostępna uczniowi. Nie dopowiadaj faktów spoza karty. Edycja Worda odbywa się lokalnie.'),
+ stage('model','Narzędzia','Pierwszy komentarz i pierwsza poprawka',9,'Komentarz zapisuje pytanie lub uzasadnienie, a śledzenie zmian pokazuje poprawiony tekst. Wykonaj ten przykład, potem kolejne decyzje podejmiesz sam.',[
+ guide('w32-model','Word LTSC 2024 — wykonaj po kolei',[
+ step('Pokaż wszystkie propozycje','Kliknij kartę Recenzja. W grupie Śledzenie rozwiń listę z nazwą Prosta adiustacja lub Bez adiustacji i wybierz Wszystkie adiustacje (w niektórych wydaniach: Cała adiustacja). W Pokaż adiustację zaznacz Wstawienia i usunięcia oraz wszystkich recenzentów. Nie rozstrzygaj jeszcze zmian.','W komunikacie widzisz zamianę sali Bursztynowej na Ogrodową oraz ceny 490 zł na 590 zł.','Zmaksymalizuj okno Worda, jeśli grupa Śledzenie jest zwinięta. Otwórz Okienko recenzowania. Kolor oznaczenia nie mówi, czy propozycja jest poprawna.'),
+ step('Skomentuj obietnicę transportu','Zaznacz zdanie „Transport autokarem jest wliczony w cenę.”. Wybierz Recenzja → Nowy komentarz albo Ctrl+Alt+M. Wpisz: „Brak potwierdzenia transportu w ustaleniach. Kto potwierdzi rezerwację i koszt? Do wyjaśnienia nie publikujemy tej obietnicy.” Kliknij tekst dokumentu. Jeśli panel ma przycisk opublikowania komentarza, zatwierdź go. Zapisz Ctrl+S.','Komentarz jest połączony z zaznaczonym zdaniem. Nie znajduje się między zdaniami komunikatu.','Nie potrzeba konta, @wzmianki ani e-maila. Autor może mieć ogólną nazwę, np. Uczeń. Nie zmieniaj ustawień konta Office.',picture('comment.png','Przycisk nowego komentarza na karcie Recenzja i komentarz przy tekście.','https://support.microsoft.com/pl-pl/word/give-and-receive-feedback-in-word')),
+ step('Włącz śledzenie i popraw literę','Na karcie Recenzja włącz Śledź zmiany / Śledzenie zmian. Skrót Ctrl+Shift+E przełącza tę funkcję — nie naciskaj go kilka razy. Sprawdź, czy przycisk jest włączony. W komunikacie zamień ręcznie „odbedzie” na „odbędzie”.','W widoku Wszystkie adiustacje stara forma jest usunięciem, nowa — wstawieniem. Komentarz i poprawka są osobnymi elementami.','Brak śladu? Cofnij tę poprawkę przez Ctrl+Z, włącz śledzenie i wykonaj ją ponownie. Nie zastępuj śledzenia czerwonym kolorem tekstu.')
+ ])
+ ],'Uczeń sam wykonuje model. W razie problemu poproś o sprawdzenie stanu przycisku i widoku adiustacji, zamiast przejmować edycję.'),
+ stage('edit','Twoja redakcja','Sprawdź fakty z kartą komitetu',12,'W tej wersji zostaw gotowe propozycje sali i ceny nierozstrzygnięte. Komitet potrzebuje zobaczyć, co zaproponowano i jak to oceniasz.',[
+ guide('w32-edit','Samodzielne decyzje redaktora',[
+ step('Oceń salę i cenę','Porównaj obie propozycje z tabelą. Przy sali dodaj komentarz: czy zmiana zgadza się z rezerwacją i dlaczego? Przy cenie dopisz drugi komentarz: przyjąć czy odrzucić propozycję i jaka kwota wynika z ustaleń? Nie klikaj jeszcze Akceptuj ani Odrzuć.','Masz dwa uzasadnienia odwołujące się do danych. Samo „OK” albo „Źle” nie wystarcza.','Karta wskazuje Salę Ogrodową i cenę 490 zł. Nowszy wpis nie ma pierwszeństwa tylko dlatego, że ktoś go później dopisał.'),
+ step('Popraw zaliczkę i termin','Przy włączonym śledzeniu porównaj komunikat z tabelą. Popraw kwotę zaliczki i termin jej wpłaty. Sprawdź też poprawioną wcześniej literę. Daty balu i godziny nie zmieniaj.','Tekst po zmianach zawiera zaliczkę 150 zł i wpłatę do 8 grudnia. Własne korekty mają ślad wstawienia i usunięcia.','Poprawiaj część pod nagłówkiem „Komunikat do recenzji”, nie tabelę źródłową. Zaliczka to część ceny, nie pełna cena balu.'),
+ step('Zapytaj o zgłoszenie diety','Zaznacz „Zgłoś szczególną dietę.” i dodaj komentarz własnymi słowami. Zapytaj, komu i do kiedy zgłosić dietę. Nie wymyślaj odpowiedzi. Zapisz Ctrl+S.','Masz co najmniej cztery komentarze: transport, sala, cena i dieta. Gotowe propozycje nadal są widoczne.','Komentarz powinien wskazywać brakującą informację i potrzebną decyzję. Odpowiedź komitetu otrzymasz w kolejnym etapie.')
+ ])
+ ],'Sprawdź obecność komentarzy przy fragmencie i własnych śledzonych korekt. Nie rozstrzygaj za ucznia faktów.'),
+ stage('feedback','Nowa wiadomość','Komitet odpowiada na pytania',7,'Nowe dane symulacji: „Szczególną dietę zgłoś do 8 grudnia u wychowawcy. Transportu nie zamawialiśmy i nie ma go w cenie. Cenę 490 zł potwierdza aktualna oferta.” To tekst ćwiczenia, nie wiadomość wysyłana z platformy.',[
+ guide('w32-feedback','Wykorzystaj odpowiedź w dokumencie',[
+ step('Doprecyzuj dietę','Przy włączonym śledzeniu zastąp całe zdanie „Zgłoś szczególną dietę.” zdaniem „Szczególną dietę zgłoś do 8 grudnia u wychowawcy.”. Zostaw komentarz, aby było widać, na jakie pytanie odpowiada ta zmiana.','Nowe zdanie ma termin i odbiorcę zgłoszenia, a zmiana jest śledzona.','Nie wpisuj prawdziwych informacji zdrowotnych ani danych uczestników. Redagujesz tylko fikcyjny komunikat.'),
+ step('Usuń niepotwierdzony transport','Ze śledzeniem usuń zdanie „Transport autokarem jest wliczony w cenę.”. Zachowaj komentarz z uzasadnieniem. Zapisz 32-recenzja.docx przez Ctrl+S. Nie rozstrzygaj tu propozycji sali i ceny.','Recenzja zachowuje pytania i własne korekty, a tekst po zmianach nie obiecuje transportu.','To ostatni zapis wersji recenzenckiej. Następny etap wykonasz w nowej kopii, aby nie stracić śladu pracy.')
+ ])
+ ],'Nowa wiadomość jest na stronie. Uczeń nie potrzebuje odegrania roli komitetu przez nauczyciela.'),
+ stage('publish','Czysta kopia','Przygotuj komunikat dla uczestników',7,'Komitet potrzebuje śladu decyzji, a uczestnicy czytelnego tekstu. Zachowasz więc dwie różne wersje.',[
+ guide('w32-publish','Rozstrzygaj wyłącznie w kopii',[
+ step('Utwórz drugi plik','Plik → Zapisz jako → Przeglądaj: zapisz 32-publikacja.docx. Sprawdź nazwę na pasku tytułu i obecność obu plików w folderze. Od tego momentu pracuj w kopii.','Istnieją 32-recenzja.docx oraz 32-publikacja.docx. Aktywna jest kopia publikacyjna.','Ctrl+S nie tworzy drugiego pliku. Nie nadpisuj recenzji — potrzebujesz jej do pokazania procesu.'),
+ step('Zaakceptuj lub odrzuć każdą propozycję','W Recenzja używaj Następna / Poprzednia, żeby wybrać konkretną zmianę. Zaakceptuj zamianę Bursztynowej na Ogrodową. Odrzuć podwyżkę 490 zł → 590 zł. Word może pokazywać osobno usunięcie i wstawienie — rozstrzygnij obie części zamiany. Zaakceptuj poprawne własne korekty.','W tekście jest Sala Ogrodowa i cena 490 zł. Pozostałe poprawki zgadzają się z ustaleniami i nową wiadomością.','Nie zaczynaj od „Zaakceptuj wszystkie”: utrwaliłoby to błędną cenę. Po decyzji przeczytaj całe zdanie, żeby nie zostały dwie kwoty lub dwie nazwy.',picture('decisions.png','Przyciski Zaakceptuj, Odrzuć, Poprzedni i Następny w grupie Zmiany.','https://support.microsoft.com/pl-pl/word/training/track-changes-in-word')),
+ step('Usuń uwagi i skontroluj całość','Wyłącz śledzenie. W Recenzja, w grupie Komentarze, rozwiń Usuń → Usuń wszystkie komentarze w dokumencie. Jeśli opcji brak, usuń każdy osobno; samo Rozwiąż nie usuwa komentarza. Włącz Wszystkie adiustacje, sprawdź Okienko recenzowania i panel komentarzy. Gdy nie ma już zmian ani komentarzy, usuń wewnętrzne ustalenia i zasady komitetu przed nagłówkiem „Komunikat do recenzji”; zostaw tytuł i komunikat. Zapisz Ctrl+S.','Kopia zawiera sam komunikat: 23 stycznia 2027, 19.00, Sala Ogrodowa, 490 zł, zaliczka 150 zł do 8 grudnia, dieta do 8 grudnia u wychowawcy. Bez obietnicy transportu i uwag.','Bez adiustacji tylko ukrywa oznaczenia. Nie usuwaj uwag z 32-recenzja.docx. Po każdej poprawce zapisz plik przed ponownym sprawdzaniem na stronie.')
+ ])
+ ],'Pomagaj tylko w nietypowym interfejsie. Obejrzyj oba pliki, nie sam wygląd w widoku Bez adiustacji.'),
+ stage('check','Sprawdź','Czy oba pliki są gotowe?',5,'Wczytaj pliki do odpowiednich sprawdzarek. Po błędzie wróć do Worda, popraw, zapisz i wczytaj ponownie. Sprawdzanie odbywa się lokalnie w tej przeglądarce.',[
+ choice('w32-q2','Włączasz Bez adiustacji i zapisujesz dokument. Czy odbiorca może zobaczyć stare propozycje?',['Nie, zapis je usunął','Tak, jeśli nie zostały zaakceptowane lub odrzucone','Tylko po zalogowaniu do konta'],[1],'Widok zmienia wyświetlanie. Zmiany trzeba rozstrzygnąć, a komentarze usunąć z kopii końcowej.'),
+ choice('w32-q3','Oferta i potwierdzenie komitetu wskazują 490 zł, recenzent proponuje 590 zł. Co robisz?',['Akceptuję, bo to nowszy wpis','Odrzucam zmianę i sprawdzam, czy tekst podaje 490 zł','Ukrywam propozycję'],[1],'Podstawą jest potwierdzone ustalenie. Odrzucenie podwyżki przywraca cenę 490 zł.'),
+ {type:'docxCheck',id:'w32-docx',title:'Sprawdź plik z recenzją (32-recenzja.docx)',filename:'32-recenzja.docx',expect:['Studniówka 2027'],points:9,checks:[
+ {id:'comments',label:'Co najmniej 4 komentarze do decyzji i pytań',points:2,kind:'comments',min:4},
+ {id:'comment-materials',label:'Komentarz przy zdaniu o diecie',points:1,kind:'comments',min:1,anchor:'dietę'},
+ tracked('free','Zaliczka 200 zł → 150 zł ze śledzeniem','200 zł','150 zł'),
+ tracked('date','Wpłata: 10 → 8 grudnia ze śledzeniem','do 10 grudnia','do 8 grudnia'),
+ tracked('typo','„odbedzie” → „odbędzie” ze śledzeniem','odbedzie','odbędzie'),
+ tracked('cert','Usunięta obietnica transportu (śledzona)','Transport autokarem jest wliczony w cenę.'),
+ tracked('diet','Zastosowana odpowiedź komitetu (śledzona)','Zgłoś szczególną dietę.','Szczególną dietę zgłoś do 8 grudnia u wychowawcy.',2)
+ ]},
+ {type:'docxCheck',id:'w32-docx-pub',title:'Sprawdź kopię publikacyjną (32-publikacja.docx)',filename:'32-publikacja.docx',expect:['Studniówka 2027'],points:6,checks:[
+ {id:'clean',label:'Bez komentarzy i nierozstrzygniętych zmian',points:2,kind:'cleanCopy'},
+ {id:'facts',label:'Dane zgodne z ustaleniami',points:2,kind:'text',from:'Komunikat do recenzji',contains:['23 stycznia 2027','19.00','Ogrodowa','490 zł','150 zł','do 8 grudnia','Szczególną dietę zgłoś do 8 grudnia u wychowawcy.'],hint:'Sprawdź komunikat: Sala Ogrodowa, 490 zł, zaliczka 150 zł do 8 grudnia oraz odpowiedź komitetu dotycząca diety.'},
+ {id:'removed',label:'Bez błędnych danych i obietnicy transportu',points:2,kind:'text',from:'Komunikat do recenzji',absent:['Bursztynowa','590 zł','200 zł','10 grudnia','odbedzie','Transport autokarem'],hint:'Odrzuć podwyżkę i zaakceptuj salę oraz własne poprawki. Sprawdź obie części zamian, a także usunięcie obietnicy transportu.'}
+ ]},
+ {type:'wordRubric',id:'w32-rubric',title:'Oceń sens swoich decyzji',filename:'32-recenzja.docx + 32-publikacja.docx',criteria:[
+ {label:'Uzasadnienia w komentarzach',points:3,description:'0: brak. 1: ogólne oceny. 2: tylko jedna decyzja ma źródło. 3: sala i cena mają uzasadnienia zgodne z kartą, a pytania dotyczą brakujących informacji.'},
+ {label:'Zastosowanie nowej informacji',points:2,description:'0: brak zmiany. 1: wykorzystano część odpowiedzi. 2: dieta ma termin i odbiorcę, a komentarz wyjaśnia potrzebę tej poprawki.'},
+ {label:'Czytelny komunikat',points:3,description:'0: tekst nie nadaje się dla odbiorcy. 1: zostały dwa problemy. 2: został jeden problem. 3: sam komunikat jest zrozumiały, bez wewnętrznych notatek i sprzecznych kwot.'},
+ {label:'Dwie wersje do okazania',points:2,description:'0: brak plików. 1: jest tylko jedna wersja. 2: recenzja zachowuje ślad pracy, a oddzielna kopia końcowa jest czysta.'}]},
+ {type:'text',id:'w32-exit',question:'Którą propozycję odrzuciłeś i na jakiej podstawie? Po co komitet zachowuje plik z recenzją?',placeholder:'Odrzuciłem…, ponieważ… Recenzja pozwala…',minLength:16,explanation:'Wskaż potwierdzone źródło decyzji i korzyść z zachowania śladu poprawek.'},
+ {type:'resultCard',id:'w32-result',title:'Twoje narzędzia i dokumenty',hideGrade:true,sources:['w32-docx','w32-docx-pub','w32-q1','w32-q2','w32-q3'],badges:[{min:0,name:'Wróć do wskazówki',text:'Popraw dokument według wyniku sprawdzarki i wczytaj go ponownie.'},{min:0.6,name:'Recenzja nabiera sensu',text:'Sprawdź brakujące elementy i uzasadnienia w komentarzach.'},{min:1,name:'Pliki sprawdzone technicznie',text:'Automat sprawdził zapisane elementy. Sens komentarzy i czytelność ocenia nauczyciel.'}]}
+ ],'Końcówka służy zapisowi i kontroli. Nie przyznawaj oceny za samą samoocenę. W razie braku czasu uczeń zachowuje pliki, żeby dokończyć później w pracowni.')
+ ],
+ objectives:['Dodaję komentarz do fragmentu bez konta online.','Poprawiam tekst z włączonym śledzeniem zmian.','Rozstrzygam propozycje na podstawie potwierdzonych danych.','Zachowuję recenzję i przygotowuję oddzielną czystą kopię.'],
+ teacherGuide:{preparation:'Przetestuj starter na szkolnym LTSC 2024 i przygotuj folder prac. Historia i instrukcje są na stronie; nie wymagają pokazu. Klucz: Sala Ogrodowa (zaakceptuj), 490 zł (odrzuć 590), zaliczka 150 zł do 8 grudnia, bal 23 stycznia 2027 o 19.00; dieta do 8 grudnia u wychowawcy; brak transportu. Zrzuty pochodzą z dokumentacji Microsoftu, nie ze szkolnej instalacji. Wygląd LTSC może się różnić.',summary:'Obejrzyj dwie wersje i uzasadnienia sali oraz ceny. Sprawdzarka odczytuje plik lokalnie i nie ocenia sensu komentarzy. Przypadek jest fikcyjny; nie zbieramy danych uczestników ani informacji zdrowotnych.'},
+ exitTicket:'Zachowaj 32-recenzja.docx i 32-publikacja.docx. Pokaż je nauczycielowi lub oddaj kanałem wskazanym w pracowni; strona niczego sama nie wysyła.'
 };
-import {normalizeLessonReferences} from '../lesson-references.js';
-const referencedLesson = organizeSolo(lessonForSolo);
-export default normalizeLessonReferences(referencedLesson);

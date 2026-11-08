@@ -56,22 +56,24 @@
     {
       "lesson": 32,
       "filename": "lesson-32-start.docx",
-      "topic": "Zaproszenie na warsztaty",
+      "topic": "Studniówka 2027",
       "expectedOperations": [
-        "Accept room correction 21 to 12",
-        "Reject duration correction 60 to 90",
-        "Track own factual and language corrections",
-        "Add comment for missing materials detail"
+        "Accept venue correction",
+        "Reject price increase",
+        "Track deposit, deadline and spelling corrections",
+        "Comment on missing details",
+        "Apply committee response about diets",
+        "Save review and clean publication"
       ],
       "trackedInsertions": 2,
       "trackedDeletions": 2,
       "truth": {
-        "date": "18 listopada 2026",
-        "time": "14.00",
-        "room": "12",
-        "minutes": 60,
-        "cost": "bezpłatny",
-        "deadline": "16 listopada"
+        "date": "23 stycznia 2027",
+        "time": "19.00",
+        "venue": "Sala Ogrodowa",
+        "price": 490,
+        "deposit": 150,
+        "deadline": "8 grudnia"
       },
       "initialComments": 0
     },
