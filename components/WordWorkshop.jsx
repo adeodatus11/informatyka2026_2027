@@ -10,6 +10,7 @@ export function WordSteps({data,lesson}){const app=desktopApp(lesson?.workspace)
   <ol className="word-steps">{data.steps.map((step,i)=><li key={`${data.id}-${i}`}>
    <div className="word-step-heading"><span aria-hidden="true">{i+1}</span><h4>{step.title}</h4></div>
    <p className="word-instruction">{step.instruction}</p>
+   {step.image&&<figure className="word-step-image"><a href={new URL(step.image.src,document.baseURI).href} target="_blank" rel="noopener noreferrer" aria-label={`Otwórz zrzut: ${step.image.alt}`}><img src={new URL(step.image.src,document.baseURI).href} alt={step.image.alt} loading="lazy"/></a><figcaption>{step.image.caption} <a href={step.image.sourceUrl} target="_blank" rel="noopener noreferrer">Źródło: Microsoft</a></figcaption></figure>}
    {step.check&&<p className="word-check"><Icon name="check" size={18}/><span><b>Sprawdź efekt:</b> {step.check}</span></p>}
    {step.help&&<details className="word-help"><summary>Gdy coś nie działa</summary><p>{step.help}</p></details>}
   </li>)}</ol>

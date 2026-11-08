@@ -18,3 +18,7 @@
 .word-teacher-materials{margin:22px 0}.word-teacher-materials ul{line-height:1.8}.word-teacher-criteria li{margin-bottom:10px}
 @media(max-width:600px){.word-criterion{grid-template-columns:1fr;gap:10px}.word-workspace-notice{padding:16px;gap:10px}.word-workshop,.word-rubric{padding:17px}.word-step-heading h4{font-size:1rem}}
 @media print{.word-help{display:none}.word-workshop,.word-rubric{break-inside:auto}.word-steps>li,.word-criterion{break-inside:avoid}.word-workshop,.word-rubric{box-shadow:none}.word-workspace-notice{display:none}}
+.word-step-image{margin:20px 0;max-width:640px}
+.word-step-image img{display:block;max-width:100%;height:auto;border:1px solid var(--line);background:#fff}
+.word-step-image figcaption{font-size:.8rem;line-height:1.5;color:var(--muted);margin-top:10px}
+.word-step-image figcaption a{text-decoration:underline}

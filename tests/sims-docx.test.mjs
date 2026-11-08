@@ -89,7 +89,7 @@ test('Pogrubiony Normalny zamiast Nagłówka 1 → ✗ nagłówki i „udawane n
 test('Recenzja to nie kopia publikacyjna: komentarze i zmiany → ✗ cleanCopy', async () => {
  const r = await run('w32-docx-pub', await fx('32-recenzja.docx'));
  assert.ok(failed(r).includes('clean'));
- assert.match(r.results.find(x => x.id === 'clean').detail, /4 komentarze, 11 zmian śledzonych/);
+ assert.match(r.results.find(x => x.id === 'clean').detail, /4 komentarze, 13 zmian śledzonych/);
 });
 test('Poprawka bez śledzenia zmian jest rozpoznana (kopia publikacyjna jako recenzja)', async () => {
  const r = await run('w32-docx', await fx('32-publikacja.docx'));
@@ -164,7 +164,7 @@ test('Model: sekcje, nagłówki z dziedziczeniem, pola, komentarze, zmiany', asy
  assert.equal(KINDS.ref.run(c, {min: 1, text: 'Tabela 1'}).ok, true, 'odsyłacz REF do zakładki');
  assert.equal(KINDS.ref.run(await readDocx(await starter(30)), {min: 1}).ok, false);
  const r = await readDocx(await fx('32-recenzja.docx'));
- assert.equal(r.comments.find(x => /materiał/i.test(x.anchor))?.author, 'Uczeń Testowy');
+ assert.equal(r.comments.find(x => /dietę/i.test(x.anchor))?.author, 'Uczeń Testowy');
  assert.ok(r.paragraphs.some(p => p.segs.some(g => g.ins) && p.segs.some(g => g.del)));
 });
 

@@ -102,31 +102,7 @@ h(d,'Porady dla organizatorów');p(d,'Od tego nagłówka dokument ma ponownie uk
 for title,txt in DRAFTS:
  p(d,title+'. '+txt+' Sprawdź ustalenie przed wydarzeniem i przekaż je pozostałym osobom w zespole. Jeżeli pojawi się trudność, opisz ją konkretnie i zaproponuj możliwe rozwiązanie.')
 h(d,'Zamknięcie dokumentu');p(d,'Ten akapit ma być znów jednokolumnowy. Użyj podziału sekcji Ciągły po poradach. Włącz znaki niedrukowane i sprawdź położenie wszystkich podziałów.');save(d,31)
-#32
-d=base('Zaproszenie na warsztaty','Pakiet recenzyjny. Pierwsza część zawiera uzgodnione dane, a druga tekst do korekty. Korzystaj z Recenzja i Wszystkie adiustacje. Plik zawiera już dwie propozycje zmian; każdą rozpatrz oddzielnie.')
-h(d,'Uzgodnione dane do sprawdzenia');table(d,['Pole','Obowiązujące ustalenie'],[['Termin','18 listopada 2026, godzina 14.00'],['Miejsce','Sala 12'],['Czas','60 minut'],['Koszt','Udział bezpłatny'],['Zapisy','Do 16 listopada u opiekuna koła'],['Uczestnicy','Uczniowie klas pierwszych']])
-p(d,'Zasady redakcji: pisz uprzejmie i konkretnie. Nie dodawaj obietnic niepotwierdzonych w ustaleniach. Popraw błędy z włączonym śledzeniem zmian. Zostaw komentarz tam, gdzie brakuje informacji, zamiast ją wymyślać. Dane opisują fikcyjne wydarzenie ćwiczeniowe.')
-h(d,'Tekst zaproszenia do recenzji');p(d,'Zapraszamy uczniów klas pierwszych na warsztaty tworzenia dokumentów. Spotkanie odbędzie się 18 listopada 2026 o godzinie 14.00 w sali 21.');p(d,'Warsztaty potrwają 60 minut. Udział jest płatny. Zgłoszenia przyjmuje opiekun koła do 17 listopada.');p(d,'Każdy uczestnik otrzyma profesjonalny certyfikat. Na spotkaniu nauczysz sie przygotowywać przejrzyste dokumenty. Przynieś materiały.');p(d,'Serdecznie zapraszamy do wspólnej pracy. Pytania możesz przekazać opiekunowi koła.');save(d,32)
-# Add tracked replacements in exactly two runs, preserving real accepting/rejecting workflow.
-path=OUT/'lesson-32-start.docx'
-with zipfile.ZipFile(path) as z: members={n:z.read(n) for n in z.namelist()}
-ns={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'};root=etree.fromstring(members['word/document.xml']);cid=1
-for old,new in [('sali 21','sali 12'),('60 minut','90 minut')]:
- # target invitation only: last occurrence, never edit source brief
- node=[n for n in root.findall('.//w:t',ns) if old in (n.text or '')][-1];run=node.getparent();parent=run.getparent();idx=parent.index(run);a,b=node.text.split(old,1);repl=[]
- for kind,txt in [('r',a),('del',old),('ins',new),('r',b)]:
-  if not txt:continue
-  e=etree.Element(qn('w:'+kind))
-  if kind=='r':rr=e
-  else:
-   e.set(qn('w:id'),str(cid));cid+=1;e.set(qn('w:author'),'Redaktor ćwiczeniowy');e.set(qn('w:date'),'2026-09-30T08:00:00Z');rr=etree.SubElement(e,qn('w:r'))
-  tt=etree.SubElement(rr,qn('w:delText' if kind=='del' else 'w:t'));tt.set('{http://www.w3.org/XML/1998/namespace}space','preserve');tt.text=txt;repl.append(e)
- parent.remove(run)
- for off,e in enumerate(repl):parent.insert(idx+off,e)
-settings=etree.fromstring(members['word/settings.xml']);settings.append(etree.Element(qn('w:trackRevisions')))
-members['word/document.xml']=etree.tostring(root,xml_declaration=True,encoding='UTF-8',standalone=True);members['word/settings.xml']=etree.tostring(settings,xml_declaration=True,encoding='UTF-8',standalone=True)
-with zipfile.ZipFile(path,'w',zipfile.ZIP_DEFLATED) as z:
- for n,b in members.items():z.writestr(n,b)
+#32 is built by the isolated generator below, after writing the common manifest.
 #33
 d=base('Poradnik organizacji szkolnego wydarzenia','Materiał startowy do samodzielnego opracowania poradnika dla uczniowskiego zespołu. Zredaguj tekst i przygotuj 4–6 czytelnych stron. Połącz style, spis treści, podpisy i spisy obiektów, sekcje oraz recenzję. Informacje dotyczą przykładowego wydarzenia.')
 p(d,'Odbiorca: uczeń, który organizuje wydarzenie po raz pierwszy. Cel: po przeczytaniu poradnika potrafi zaplanować zadania, przygotować salę i zebrać wnioski. Uzupełnij własny tytuł, autora oraz opis wydarzenia.')
@@ -147,3 +123,5 @@ manifest={'version':1,'target':'Microsoft Word na komputerze, domyślnie Windows
  {'lesson':33,'filename':'lesson-33-start.docx','topic':'Poradnik organizacji szkolnego wydarzenia','expectedOperations':['Create 4–6 page guide','Apply heading hierarchy','Insert header and PAGE footer field','Insert TOC and caption lists','Landscape table section','Peer review with tracked change and comments'],'illustrations':1,'tables':1,'chartImages':1}]}
 (OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 print('Built six DOCX starters and manifest in',OUT)
+import runpy
+runpy.run_path(str(ROOT/'scripts/build-word32-material.py'), run_name='__main__')
